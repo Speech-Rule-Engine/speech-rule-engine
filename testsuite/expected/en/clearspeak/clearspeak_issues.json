@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "EnglishClearspeakIssues",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "English Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5 and, 3 over 224"
+    },
+    "Issue230_2": {
+      "expected": "5 and three fourths"
+    },
+    "IssueNumbers_1": {
+      "expected": "number t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "number number sign F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "number number sign F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partial differential"
+    },
+    "Issue320_2": {
+      "expected": "x factorial"
+    },
+    "Issue320_3": {
+      "expected": "minus minus x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "sine sine x"
+    },
+    "Issue320_6": {
+      "expected": "partial differential partial differential x"
+    },
+    "Issue320_7": {
+      "expected": "open paren, the fraction with numerator partial differential squared, and denominator partial differential x squared, plus, the fraction with numerator partial differential squared, and denominator partial differential y squared, close paren, times, the absolute value of phi times, open paren, x plus normal i, y, close paren, squared equals 0"
+    },
+    "Issue301_1": {
+      "expected": "4 millimeters"
+    },
+    "Issue301_2": {
+      "expected": "1 millimeter"
+    },
+    "Issue301_3": {
+      "expected": "4 millimeters"
+    },
+    "Issue301_4": {
+      "expected": "1 millimeter"
+    },
+    "Issue_442_0": {
+      "expected": "9 divided by 3 is not equal to 9 times 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 divided by 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 divided by 3 is not equal to 9 times 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 divided by 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "the integral of f of x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "the integral of f of x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "the integral of f of x, d x, equals 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 lines, Line 1:, 2 lines, Line 1: 100. Line 2: 200. Line 2:, 2 lines, Line 1: 300. Line 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 lines, Line 1: a; b. Line 2:, 2 lines, Line 1:, c sub 1; c sub 2. Line 2:, c sub 3; c sub 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 cases, Case 1:, 2 cases, Case 1: b. Case 2: c. Case 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, a; Column 2, b. Row 2: Column 1, the 2 by 2 matrix. Row 1: c sub 1, c sub 2 Row 2: c sub 3, c sub 4. end matrix; Column 2, d. end matrix"
+    },
+    "Issue_689_4": {
+      "expected": "the 2 by 2 matrix. Row 1: Column 1, a; Column 2, b. Row 2: Column 1, the 2 by 2 matrix. Row 1: Column 1,, c sub 1; Column 2,, c sub 2. Row 2: Column 1,, c sub 3, plus a plus b; Column 2,, c sub 4. end matrix; Column 2, d. end matrix"
+    }
+  }
+}

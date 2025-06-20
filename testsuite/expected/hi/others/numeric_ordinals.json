@@ -1,0 +1,644 @@
+{
+  "locale": "hi",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Hindi numeric ordinal tests.",
+  "kind": "numericOrdinal",
+  "active": "NumbersHindi",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "०वाँ"
+    },
+    "Number_1": {
+      "expected": "१ला"
+    },
+    "Number_2": {
+      "expected": "२रा"
+    },
+    "Number_3": {
+      "expected": "३रा"
+    },
+    "Number_4": {
+      "expected": "४था"
+    },
+    "Number_5": {
+      "expected": "५वाँ"
+    },
+    "Number_6": {
+      "expected": "६ठा"
+    },
+    "Number_7": {
+      "expected": "७वाँ"
+    },
+    "Number_8": {
+      "expected": "८वाँ"
+    },
+    "Number_9": {
+      "expected": "९वाँ"
+    },
+    "Number_10": {
+      "expected": "१०वाँ"
+    },
+    "Number_11": {
+      "expected": "११वाँ"
+    },
+    "Number_12": {
+      "expected": "१२वाँ"
+    },
+    "Number_13": {
+      "expected": "१३वाँ"
+    },
+    "Number_14": {
+      "expected": "१४वाँ"
+    },
+    "Number_15": {
+      "expected": "१५वाँ"
+    },
+    "Number_16": {
+      "expected": "१६वाँ"
+    },
+    "Number_17": {
+      "expected": "१७वाँ"
+    },
+    "Number_18": {
+      "expected": "१८वाँ"
+    },
+    "Number_19": {
+      "expected": "१९वाँ"
+    },
+    "Number_20": {
+      "expected": "२०वाँ"
+    },
+    "Number_21": {
+      "expected": "२१वाँ"
+    },
+    "Number_22": {
+      "expected": "२२वाँ"
+    },
+    "Number_23": {
+      "expected": "२३वाँ"
+    },
+    "Number_24": {
+      "expected": "२४वाँ"
+    },
+    "Number_25": {
+      "expected": "२५वाँ"
+    },
+    "Number_26": {
+      "expected": "२६वाँ"
+    },
+    "Number_27": {
+      "expected": "२७वाँ"
+    },
+    "Number_28": {
+      "expected": "२८वाँ"
+    },
+    "Number_29": {
+      "expected": "२९वाँ"
+    },
+    "Number_30": {
+      "expected": "३०वाँ"
+    },
+    "Number_31": {
+      "expected": "३१वाँ"
+    },
+    "Number_32": {
+      "expected": "३२वाँ"
+    },
+    "Number_33": {
+      "expected": "३३वाँ"
+    },
+    "Number_34": {
+      "expected": "३४वाँ"
+    },
+    "Number_35": {
+      "expected": "३५वाँ"
+    },
+    "Number_36": {
+      "expected": "३६वाँ"
+    },
+    "Number_37": {
+      "expected": "३७वाँ"
+    },
+    "Number_38": {
+      "expected": "३८वाँ"
+    },
+    "Number_39": {
+      "expected": "३९वाँ"
+    },
+    "Number_40": {
+      "expected": "४०वाँ"
+    },
+    "Number_41": {
+      "expected": "४१वाँ"
+    },
+    "Number_42": {
+      "expected": "४२वाँ"
+    },
+    "Number_43": {
+      "expected": "४३वाँ"
+    },
+    "Number_44": {
+      "expected": "४४वाँ"
+    },
+    "Number_45": {
+      "expected": "४५वाँ"
+    },
+    "Number_46": {
+      "expected": "४६वाँ"
+    },
+    "Number_47": {
+      "expected": "४७वाँ"
+    },
+    "Number_48": {
+      "expected": "४८वाँ"
+    },
+    "Number_49": {
+      "expected": "४९वाँ"
+    },
+    "Number_50": {
+      "expected": "५०वाँ"
+    },
+    "Number_51": {
+      "expected": "५१वाँ"
+    },
+    "Number_52": {
+      "expected": "५२वाँ"
+    },
+    "Number_53": {
+      "expected": "५३वाँ"
+    },
+    "Number_54": {
+      "expected": "५४वाँ"
+    },
+    "Number_55": {
+      "expected": "५५वाँ"
+    },
+    "Number_56": {
+      "expected": "५६वाँ"
+    },
+    "Number_57": {
+      "expected": "५७वाँ"
+    },
+    "Number_58": {
+      "expected": "५८वाँ"
+    },
+    "Number_59": {
+      "expected": "५९वाँ"
+    },
+    "Number_60": {
+      "expected": "६०वाँ"
+    },
+    "Number_61": {
+      "expected": "६१वाँ"
+    },
+    "Number_62": {
+      "expected": "६२वाँ"
+    },
+    "Number_63": {
+      "expected": "६३वाँ"
+    },
+    "Number_64": {
+      "expected": "६४वाँ"
+    },
+    "Number_65": {
+      "expected": "६५वाँ"
+    },
+    "Number_66": {
+      "expected": "६६वाँ"
+    },
+    "Number_67": {
+      "expected": "६७वाँ"
+    },
+    "Number_68": {
+      "expected": "६८वाँ"
+    },
+    "Number_69": {
+      "expected": "६९वाँ"
+    },
+    "Number_70": {
+      "expected": "७०वाँ"
+    },
+    "Number_71": {
+      "expected": "७१वाँ"
+    },
+    "Number_72": {
+      "expected": "७२वाँ"
+    },
+    "Number_73": {
+      "expected": "७३वाँ"
+    },
+    "Number_74": {
+      "expected": "७४वाँ"
+    },
+    "Number_75": {
+      "expected": "७५वाँ"
+    },
+    "Number_76": {
+      "expected": "७६वाँ"
+    },
+    "Number_77": {
+      "expected": "७७वाँ"
+    },
+    "Number_78": {
+      "expected": "७८वाँ"
+    },
+    "Number_79": {
+      "expected": "७९वाँ"
+    },
+    "Number_80": {
+      "expected": "८०वाँ"
+    },
+    "Number_81": {
+      "expected": "८१वाँ"
+    },
+    "Number_82": {
+      "expected": "८२वाँ"
+    },
+    "Number_83": {
+      "expected": "८३वाँ"
+    },
+    "Number_84": {
+      "expected": "८४वाँ"
+    },
+    "Number_85": {
+      "expected": "८५वाँ"
+    },
+    "Number_86": {
+      "expected": "८६वाँ"
+    },
+    "Number_87": {
+      "expected": "८७वाँ"
+    },
+    "Number_88": {
+      "expected": "८८वाँ"
+    },
+    "Number_89": {
+      "expected": "८९वाँ"
+    },
+    "Number_90": {
+      "expected": "९०वाँ"
+    },
+    "Number_91": {
+      "expected": "९१वाँ"
+    },
+    "Number_92": {
+      "expected": "९२वाँ"
+    },
+    "Number_93": {
+      "expected": "९३वाँ"
+    },
+    "Number_94": {
+      "expected": "९४वाँ"
+    },
+    "Number_95": {
+      "expected": "९५वाँ"
+    },
+    "Number_96": {
+      "expected": "९६वाँ"
+    },
+    "Number_97": {
+      "expected": "९७वाँ"
+    },
+    "Number_98": {
+      "expected": "९८वाँ"
+    },
+    "Number_99": {
+      "expected": "९९वाँ"
+    },
+    "Number_100": {
+      "expected": "१००वाँ"
+    },
+    "Number_101": {
+      "expected": "१०१वाँ"
+    },
+    "Number_102": {
+      "expected": "१०२वाँ"
+    },
+    "Number_103": {
+      "expected": "१०३वाँ"
+    },
+    "Number_104": {
+      "expected": "१०४वाँ"
+    },
+    "Number_105": {
+      "expected": "१०५वाँ"
+    },
+    "Number_106": {
+      "expected": "१०६वाँ"
+    },
+    "Number_107": {
+      "expected": "१०७वाँ"
+    },
+    "Number_108": {
+      "expected": "१०८वाँ"
+    },
+    "Number_109": {
+      "expected": "१०९वाँ"
+    },
+    "Number_110": {
+      "expected": "११०वाँ"
+    },
+    "Number_200": {
+      "expected": "२००वाँ"
+    },
+    "Number_201": {
+      "expected": "२०१वाँ"
+    },
+    "Number_300": {
+      "expected": "३००वाँ"
+    },
+    "Number_301": {
+      "expected": "३०१वाँ"
+    },
+    "Number_400": {
+      "expected": "४००वाँ"
+    },
+    "Number_401": {
+      "expected": "४०१वाँ"
+    },
+    "Number_500": {
+      "expected": "५००वाँ"
+    },
+    "Number_501": {
+      "expected": "५०१वाँ"
+    },
+    "Number_600": {
+      "expected": "६००वाँ"
+    },
+    "Number_601": {
+      "expected": "६०१वाँ"
+    },
+    "Number_700": {
+      "expected": "७००वाँ"
+    },
+    "Number_701": {
+      "expected": "७०१वाँ"
+    },
+    "Number_800": {
+      "expected": "८००वाँ"
+    },
+    "Number_801": {
+      "expected": "८०१वाँ"
+    },
+    "Number_900": {
+      "expected": "९००वाँ"
+    },
+    "Number_901": {
+      "expected": "९०१वाँ"
+    },
+    "Number_1000": {
+      "expected": "१०००वाँ"
+    },
+    "Number_1001": {
+      "expected": "१००१वाँ"
+    },
+    "Number_2000": {
+      "expected": "२०००वाँ"
+    },
+    "Number_2001": {
+      "expected": "२००१वाँ"
+    },
+    "Number_3000": {
+      "expected": "३०००वाँ"
+    },
+    "Number_3001": {
+      "expected": "३००१वाँ"
+    },
+    "Number_4000": {
+      "expected": "४०००वाँ"
+    },
+    "Number_4001": {
+      "expected": "४००१वाँ"
+    },
+    "Number_5000": {
+      "expected": "५०००वाँ"
+    },
+    "Number_5001": {
+      "expected": "५००१वाँ"
+    },
+    "Number_6000": {
+      "expected": "६०००वाँ"
+    },
+    "Number_6001": {
+      "expected": "६००१वाँ"
+    },
+    "Number_7000": {
+      "expected": "७०००वाँ"
+    },
+    "Number_7001": {
+      "expected": "७००१वाँ"
+    },
+    "Number_8000": {
+      "expected": "८०००वाँ"
+    },
+    "Number_8001": {
+      "expected": "८००१वाँ"
+    },
+    "Number_9000": {
+      "expected": "९०००वाँ"
+    },
+    "Number_9001": {
+      "expected": "९००१वाँ"
+    },
+    "Number_10000": {
+      "expected": "१००००वाँ"
+    },
+    "Number_10001": {
+      "expected": "१०००१वाँ"
+    },
+    "Number_20000": {
+      "expected": "२००००वाँ"
+    },
+    "Number_20001": {
+      "expected": "२०००१वाँ"
+    },
+    "Number_30000": {
+      "expected": "३००००वाँ"
+    },
+    "Number_30001": {
+      "expected": "३०००१वाँ"
+    },
+    "Number_40000": {
+      "expected": "४००००वाँ"
+    },
+    "Number_40001": {
+      "expected": "४०००१वाँ"
+    },
+    "Number_50000": {
+      "expected": "५००००वाँ"
+    },
+    "Number_50001": {
+      "expected": "५०००१वाँ"
+    },
+    "Number_60000": {
+      "expected": "६००००वाँ"
+    },
+    "Number_60001": {
+      "expected": "६०००१वाँ"
+    },
+    "Number_70000": {
+      "expected": "७००००वाँ"
+    },
+    "Number_70001": {
+      "expected": "७०००१वाँ"
+    },
+    "Number_80000": {
+      "expected": "८००००वाँ"
+    },
+    "Number_80001": {
+      "expected": "८०००१वाँ"
+    },
+    "Number_90000": {
+      "expected": "९००००वाँ"
+    },
+    "Number_90001": {
+      "expected": "९०००१वाँ"
+    },
+    "Number_100000": {
+      "expected": "१०००००वाँ"
+    },
+    "Number_1000000": {
+      "expected": "१००००००वाँ"
+    },
+    "Number_10000000": {
+      "expected": "१०००००००वाँ"
+    },
+    "Number_100000000": {
+      "expected": "१००००००००वाँ"
+    },
+    "Number_1000000000": {
+      "expected": "१०००००००००वाँ"
+    },
+    "Number_10000000000": {
+      "expected": "१००००००००००वाँ"
+    },
+    "Number_100000000000": {
+      "expected": "१०००००००००००वाँ"
+    },
+    "Number_1000000000000": {
+      "expected": "१००००००००००००वाँ"
+    },
+    "Number_10000000000000": {
+      "expected": "१०००००००००००००वाँ"
+    },
+    "Number_100000000000000": {
+      "expected": "१००००००००००००००वाँ"
+    },
+    "Number_1000000000000000": {
+      "expected": "१०००००००००००००००वाँ"
+    },
+    "Number_10000000000000000": {
+      "expected": "१००००००००००००००००वाँ"
+    },
+    "Number_100001": {
+      "expected": "१००००१वाँ"
+    },
+    "Number_200000": {
+      "expected": "२०००००वाँ"
+    },
+    "Number_200001": {
+      "expected": "२००००१वाँ"
+    },
+    "Number_1000001": {
+      "expected": "१०००००१वाँ"
+    },
+    "Number_2000000": {
+      "expected": "२००००००वाँ"
+    },
+    "Number_2000001": {
+      "expected": "२०००००१वाँ"
+    },
+    "Number_10000001": {
+      "expected": "१००००००१वाँ"
+    },
+    "Number_20000000": {
+      "expected": "२०००००००वाँ"
+    },
+    "Number_20000001": {
+      "expected": "२००००००१वाँ"
+    },
+    "Number_100000001": {
+      "expected": "१०००००००१वाँ"
+    },
+    "Number_200000000": {
+      "expected": "२००००००००वाँ"
+    },
+    "Number_200000001": {
+      "expected": "२०००००००१वाँ"
+    },
+    "Number_1000000001": {
+      "expected": "१००००००००१वाँ"
+    },
+    "Number_2000000000": {
+      "expected": "२०००००००००वाँ"
+    },
+    "Number_2000000001": {
+      "expected": "२००००००००१वाँ"
+    },
+    "Number_10000000001": {
+      "expected": "१०००००००००१वाँ"
+    },
+    "Number_20000000000": {
+      "expected": "२००००००००००वाँ"
+    },
+    "Number_20000000001": {
+      "expected": "२०००००००००१वाँ"
+    },
+    "Number_100000000001": {
+      "expected": "१००००००००००१वाँ"
+    },
+    "Number_200000000000": {
+      "expected": "२०००००००००००वाँ"
+    },
+    "Number_200000000001": {
+      "expected": "२००००००००००१वाँ"
+    },
+    "Number_1000000000001": {
+      "expected": "१०००००००००००१वाँ"
+    },
+    "Number_2000000000000": {
+      "expected": "२००००००००००००वाँ"
+    },
+    "Number_2000000000001": {
+      "expected": "२०००००००००००१वाँ"
+    },
+    "Number_10000000000001": {
+      "expected": "१००००००००००००१वाँ"
+    },
+    "Number_20000000000000": {
+      "expected": "२०००००००००००००वाँ"
+    },
+    "Number_20000000000001": {
+      "expected": "२००००००००००००१वाँ"
+    },
+    "Number_100000000000001": {
+      "expected": "१०००००००००००००१वाँ"
+    },
+    "Number_200000000000000": {
+      "expected": "२००००००००००००००वाँ"
+    },
+    "Number_200000000000001": {
+      "expected": "२०००००००००००००१वाँ"
+    },
+    "Number_1000000000000001": {
+      "expected": "१००००००००००००००१वाँ"
+    },
+    "Number_2000000000000000": {
+      "expected": "२०००००००००००००००वाँ"
+    },
+    "Number_2000000000000001": {
+      "expected": "२००००००००००००००१वाँ"
+    },
+    "Number_10000000000000001": {
+      "expected": "१००००००००००००००००वाँ"
+    },
+    "Number_20000000000000000": {
+      "expected": "२००००००००००००००००वाँ"
+    },
+    "Number_20000000000000001": {
+      "expected": "२००००००००००००००००वाँ"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "locale": "fr",
+  "name": "FrenchExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsFrench",
+  "information": "French Extra Character tests.",
+  "tests": {
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "Delta majuscule"
+    },
+    "0028-default-alternative": {
+      "key": "(",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "parenthèse ouvrante"
+    },
+    "0029-default-alternative": {
+      "key": ")",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "parenthèse fermante"
+    },
+    "005B-default-alternative": {
+      "key": "[",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "crochet ouvrant"
+    },
+    "005D-default-alternative": {
+      "key": "]",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "crochet fermant"
+    },
+    "007B-default-alternative": {
+      "key": "{",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "accolade ouvrante"
+    },
+    "007D-default-alternative": {
+      "key": "}",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "accolade fermante"
+    },
+    "0027-default-alternative": {
+      "key": "'",
+      "domain": "default",
+      "style": "alternative",
+      "expected": "apostrophe"
+    }
+  }
+}

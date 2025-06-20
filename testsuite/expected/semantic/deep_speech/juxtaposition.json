@@ -1,0 +1,5 @@
+{
+  "factory": "deepSpeech",
+  "tests": "ALL",
+  "base": "input/semantic/juxtaposition.json"
+}

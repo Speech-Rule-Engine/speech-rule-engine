@@ -1,0 +1,517 @@
+{
+  "name": "AfrikaansMathspeakEmbellish",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "Afrikaans Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "af",
+  "active": "EmbellishedSymbolsAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a plus Onderskrif 2 Basislyn b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a plus Onderskrif 2 Basis b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a plus Onderskrif 2 Basis b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a plus Superskrif 2 Basislyn b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a plus Sup 2 Basis b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a plus Sup 2 Basis b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a plus Superskrif 3 Basislyn b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a plus Sup 3 Basis b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a plus Sup 3 Basis b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a plus Superskrif n Basislyn b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a plus Sup n Basis b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a plus Sup n Basis b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a plus priem b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a plus priem b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a plus priem b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a plus Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a plus Onderskrif m Superskrif 3 Basislyn b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a plus Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a plus Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a plus Onderskrif m Superskrif n Basislyn b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a plus Onderskrif m Sup n Basis b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a plus Onderskrif m Sup n Basis b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a plus priem Onderskrif m Basislyn b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a plus priem Onderskrif m Basis b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a plus priem Onderskrif m Basis b"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "a plus priem Onderskrif m Basislyn b plus priem Onderskrif m Basislyn c"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "a plus priem Onderskrif m Basis b plus priem Onderskrif m Basis c"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "a plus priem Onderskrif m Basis b plus priem Onderskrif m Basis c"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a plus Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a Superskrif 3 Basislyn plus Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a Sup 3 Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a Sup 3 Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a Onderskrif 3 Basislyn plus Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a Onderskrif 3 Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a Onderskrif 3 Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a Onderskrif 3 Superskrif n Basislyn plus Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a Onderskrif 3 Sup n Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a Onderskrif 3 Sup n Basis plus Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a is gelyk aan Onderskrif 2 Basislyn b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a is gelyk aan Onderskrif 2 Basis b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a is gelyk aan Onderskrif 2 Basis b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a is gelyk aan Superskrif 2 Basislyn b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a is gelyk aan Sup 2 Basis b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a is gelyk aan Sup 2 Basis b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a is gelyk aan Superskrif 3 Basislyn b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a is gelyk aan Sup 3 Basis b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a is gelyk aan Sup 3 Basis b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a is gelyk aan Superskrif n Basislyn b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a is gelyk aan Sup n Basis b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a is gelyk aan Sup n Basis b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a is gelyk aan priem b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a is gelyk aan priem b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a is gelyk aan priem b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a is gelyk aan Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a is gelyk aan Onderskrif m Superskrif 3 Basislyn b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a is gelyk aan Onderskrif m Superskrif n Basislyn b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a is gelyk aan Onderskrif m Sup n Basis b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a is gelyk aan Onderskrif m Sup n Basis b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a is gelyk aan priem Onderskrif m Basislyn b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a is gelyk aan priem Onderskrif m Basis b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a is gelyk aan priem Onderskrif m Basis b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a is gelyk aan Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a Superskrif 3 Basislyn is gelyk aan Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a Sup 3 Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a Sup 3 Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a Onderskrif 3 Basislyn is gelyk aan Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a Onderskrif 3 Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a Onderskrif 3 Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a Onderskrif 3 Superskrif n Basislyn is gelyk aan Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a Onderskrif 3 Sup n Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a Onderskrif 3 Sup n Basis is gelyk aan Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a is gelyk aan Onderskrif 2 Basislyn b is gelyk aan c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a is gelyk aan Onderskrif 2 Basis b is gelyk aan c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a is gelyk aan Onderskrif 2 Basis b is gelyk aan c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a dubbelpunt Onderskrif 2 Basislyn b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a dubbelpunt Onderskrif 2 Basis b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a dubbelpunt Onderskrif 2 Basis b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a dubbelpunt Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a dubbelpunt Sup 2 Basis b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a dubbelpunt Sup 2 Basis b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a dubbelpunt Superskrif 3 Basislyn b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a dubbelpunt Sup 3 Basis b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a dubbelpunt Sup 3 Basis b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a dubbelpunt Superskrif n Basislyn b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a dubbelpunt Sup n Basis b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a dubbelpunt Sup n Basis b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a dubbelpunt priem b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a dubbelpunt priem b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a dubbelpunt priem b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a dubbelpunt Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a dubbelpunt Onderskrif m Superskrif 3 Basislyn b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 3 Basis b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a dubbelpunt Onderskrif m Superskrif n Basislyn b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a dubbelpunt Onderskrif m Sup n Basis b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a dubbelpunt Onderskrif m Sup n Basis b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a dubbelpunt priem Onderskrif m Basislyn b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a dubbelpunt priem Onderskrif m Basis b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a dubbelpunt priem Onderskrif m Basis b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a dubbelpunt Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a Superskrif 3 Basislyn dubbelpunt Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a Sup 3 Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a Sup 3 Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a Onderskrif 3 Basislyn dubbelpunt Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a Onderskrif 3 Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a Onderskrif 3 Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a Onderskrif 3 Superskrif n Basislyn dubbelpunt Onderskrif m Superskrif 2 Basislyn b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a Onderskrif 3 Sup n Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a Onderskrif 3 Sup n Basis dubbelpunt Onderskrif m Sup 2 Basis b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a dubbelpunt Onderskrif 2 Basislyn b dubbelpunt c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a dubbelpunt Onderskrif 2 Basis b dubbelpunt c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a dubbelpunt Onderskrif 2 Basis b dubbelpunt c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a plus b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a plus b"
+    }
+  }
+}

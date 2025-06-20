@@ -1,0 +1,285 @@
+{
+  "name": "NynorskClearspeakCoverage",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Nynorsk Clearspeak Coverage tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f av, g av x"
+    },
+    "ApplSimple_1": {
+      "expected": "f av, g av x, er lik f av x, pluss g av x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "sinus x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Line_1": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Line_2": {
+      "expected": "2 rader, rad 1: a. rad 2: tom"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 rader, rad 1: a; er lik; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 rader, rad 1: a; er lik; b. rad 2: tom"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 rader, rad 1: a; er lik; b. rad 2: tom"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 rader, rad 1: a; er lik; b. rad 2: 1; tom; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 grader, 10 minutter, 20 sekunder"
+    },
+    "Angle_1_default": {
+      "expected": "1 grad, 10 minutter, 20 sekunder"
+    },
+    "Angle_2_default": {
+      "expected": "45 grader, 1 minutt, 20 sekunder"
+    },
+    "Angle_3_default": {
+      "expected": "45 grader, 10 minutter, 1 sekund"
+    },
+    "Angle_4_default": {
+      "expected": "1 fot, 20 in"
+    },
+    "Angle_5_default": {
+      "expected": "10 fot, 1 in"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 grader, 10 minutter, 20 sekunder"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 grad, 10 minutter, 20 sekunder"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 grader, 1 minutt, 20 sekunder"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 grader, 10 minutter, 1 sekund"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minutt, 20 sekunder"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minutter, 1 sekund"
+    },
+    "Angle_0_Length": {
+      "expected": "45 grader, 10 minutter, 20 sekunder"
+    },
+    "Angle_1_Length": {
+      "expected": "1 grad, 10 minutter, 20 sekunder"
+    },
+    "Angle_2_Length": {
+      "expected": "45 grader, 1 minutt, 20 sekunder"
+    },
+    "Angle_3_Length": {
+      "expected": "45 grader, 10 minutter, 1 sekund"
+    },
+    "Angle_4_Length": {
+      "expected": "1 fot, 20 in"
+    },
+    "Angle_5_Length": {
+      "expected": "10 fot, 1 in"
+    },
+    "Enclose_0": {
+      "expected": "omslutta av boks 12"
+    },
+    "Enclose_1": {
+      "expected": "utkryssa 12"
+    },
+    "Enclose_2": {
+      "expected": "12 utkryssa med 2"
+    },
+    "Enclose_3": {
+      "expected": "12 utkryssa med 2"
+    },
+    "Enclose_4": {
+      "expected": "12 utkryssa med 2"
+    },
+    "Enclose_5": {
+      "expected": "12 utkryssa med 2"
+    },
+    "Enclose_6": {
+      "expected": "omslutta av boks 12 slutt omslutta"
+    },
+    "Enclose_7": {
+      "expected": "utkryssa 12 slutt utkryssa"
+    },
+    "Enclose_8": {
+      "expected": "12 utkrysset med 2 slutt utkryssa"
+    },
+    "Enclose_9": {
+      "expected": "12 utkryssa med 2 slutt utkryssa"
+    },
+    "Enclose_10": {
+      "expected": "12 utkryssa med 2 slutt utkryssa"
+    },
+    "Enclose_11": {
+      "expected": "12 utkrysset med 2 slutt utkryssa"
+    },
+    "EncloseSpecial_0": {
+      "expected": "vertikal strek A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A horisontal strek"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A vertikal strek"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A over horisontal strek"
+    },
+    "NestedRoots_0": {
+      "expected": "kvadratrota av, kubikkrota av a, pluss b"
+    },
+    "NestedRoots_1": {
+      "expected": "kvadratrota av, fjerde rota av a, pluss b"
+    },
+    "NestedRoots_2": {
+      "expected": "kvadratrota av, kvadratrota av a, pluss b"
+    },
+    "NestedRoots_3": {
+      "expected": "den positive kvadratrota av, den positive kvadratrota av a, pluss b"
+    },
+    "NestedRoots_4": {
+      "expected": "den positive kvadratrota av, den positive kvadratrota av a, pluss b, slutt rot"
+    },
+    "NestedRoots_5": {
+      "expected": "den positive kvadratrota av, den negative kvadratrota av a, slutt rot, pluss b, slutt rot"
+    },
+    "Tensor_0": {
+      "expected": "venstre nedre indeks a venstre øvre indeks b x høgre nedre indeks c høgre øvre indeks d"
+    },
+    "Tensor_1": {
+      "expected": "venstre nedre indeks a b venstre øvre indeks g h x høgre nedre indeks c d høgre øvre indeks e f"
+    },
+    "Tensor_2": {
+      "expected": "venstre nedre indeks a venstre øvre indeks b x; høgre øvre indeks d"
+    },
+    "Tensor_3": {
+      "expected": "venstre nedre indeks a venstre øvre indeks b x høgre nedre indeks c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; venstre øvre indeks b x høgre nedre indeks c høgre øvre indeks d"
+    },
+    "Tensor_5": {
+      "expected": "venstre nedre indeks a; x høgre nedre indeks c høgre øvre indeks d"
+    },
+    "Set_0": {
+      "expected": "heile mengda x ikkje i A med B"
+    },
+    "Set_1": {
+      "expected": "heile mengda x tilhøyrer ikkje A med B"
+    },
+    "Set_2": {
+      "expected": "heile mengda x ikkje eit element av A med B"
+    },
+    "Set_3": {
+      "expected": "heile mengda x ikkje eit element av A med B"
+    },
+    "Set_4": {
+      "expected": "mengda B"
+    },
+    "Set_5": {
+      "expected": "den tomme mengda"
+    },
+    "NamedSet_0": {
+      "expected": "de positive rasjonale tala"
+    },
+    "NamedSet_1": {
+      "expected": "de positive rasjonale tala"
+    },
+    "NamedSet_2": {
+      "expected": "de negative rasjonale tala"
+    },
+    "NamedSet_3": {
+      "expected": "de negative rasjonale tala"
+    },
+    "NamedSet_4": {
+      "expected": "q-to"
+    },
+    "NamedSet_5": {
+      "expected": "q-to"
+    },
+    "NamedSet_6": {
+      "expected": "n-to"
+    },
+    "NamedSet_7": {
+      "expected": "n-to"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 tilfelle, tilfelle 1: f av x, er lik minus x, if x er mindre enn 0. tilfelle 2: f av x, er lik x, if x er større enn eller er lik 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 føresetnadar, betingelse 1: f av x, er lik minus x; if x er mindre enn 0. betingelse 2: f av x, er lik x, if x er større enn eller er lik 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 delt på 20"
+    },
+    "UnitFraction": {
+      "expected": "2 kilometer delt på b"
+    },
+    "Decimal": {
+      "expected": "desimalbrøk 1 komma 4 etterfølgt av gjentatt siffer 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 slik at 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "determinanten til 2 ganger 2 matrisa. rad 1: 2, 1 rad 2: 7, 5. slutt determinant"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 heva til 2 kvadrat"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 heva til i kvadrat"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 heva til to tredje kvadrat"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 heva til 2 kubikk"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 heva til i kubikk"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 heva til to tredje kubikk"
+    },
+    "MultiRel": {
+      "expected": "a er mindre enn eller er lik b er lik c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 heva til sinus av, venstreparentes, 2 pluss x, høgreparentes"
+    },
+    "CompositeFunctionFences": {
+      "expected": "venstreparentes, f pluss g, høgreparentes, av, venstreparentes, 2 pluss x, høgreparentes"
+    },
+    "LimUpper": {
+      "expected": "sum under I"
+    },
+    "Overscript": {
+      "expected": "A under B"
+    },
+    "DetFemale": {
+      "expected": "det A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x opphøgd i A"
+    }
+  }
+}

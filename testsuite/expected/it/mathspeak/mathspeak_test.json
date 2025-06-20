@@ -1,0 +1,1129 @@
+{
+  "name": "ItalianMathspeak",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_test.json",
+  "information": "Italian Mathspeak tests.",
+  "domain": "mathspeak",
+  "compare": true,
+  "active": "MathspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Sample_1_1_1_default": {
+      "expected": "pi greco circa uguale a 3,14159"
+    },
+    "Sample_1_1_1_brief": {
+      "expected": "pi greco circa uguale a 3,14159"
+    },
+    "Sample_1_1_1_sbrief": {
+      "expected": "pi greco circa uguale a 3,14159"
+    },
+    "Sample_1_1_2_default": {
+      "expected": "102 più 2,214 più 15 uguale a 2,331"
+    },
+    "Sample_1_1_2_brief": {
+      "expected": "102 più 2,214 più 15 uguale a 2,331"
+    },
+    "Sample_1_1_2_sbrief": {
+      "expected": "102 più 2,214 più 15 uguale a 2,331"
+    },
+    "Sample_1_1_3_default": {
+      "expected": "59 per 0 uguale a 0"
+    },
+    "Sample_1_1_3_brief": {
+      "expected": "59 per 0 uguale a 0"
+    },
+    "Sample_1_1_3_sbrief": {
+      "expected": "59 per 0 uguale a 0"
+    },
+    "Sample_1_2_1_default": {
+      "expected": "3 meno meno 2"
+    },
+    "Sample_1_2_1_brief": {
+      "expected": "3 meno meno 2"
+    },
+    "Sample_1_2_1_sbrief": {
+      "expected": "3 meno meno 2"
+    },
+    "Sample_1_2_2_default": {
+      "expected": "meno y"
+    },
+    "Sample_1_2_2_brief": {
+      "expected": "meno y"
+    },
+    "Sample_1_2_2_sbrief": {
+      "expected": "meno y"
+    },
+    "Sample_1_2_3_default": {
+      "expected": "meno 32"
+    },
+    "Sample_1_2_3_brief": {
+      "expected": "meno 32"
+    },
+    "Sample_1_2_3_sbrief": {
+      "expected": "meno 32"
+    },
+    "Sample_1_4_1_default": {
+      "expected": "numero t 2 e 4"
+    },
+    "Sample_1_4_1_brief": {
+      "expected": "num t 2 e 4"
+    },
+    "Sample_1_4_1_sbrief": {
+      "expected": "num t 2 e 4"
+    },
+    "Sample_1_4_2_default": {
+      "expected": "numero cancelletto F F 0 0 0 0"
+    },
+    "Sample_1_4_2_brief": {
+      "expected": "num cancelletto F F 0 0 0 0"
+    },
+    "Sample_1_4_2_sbrief": {
+      "expected": "num cancelletto F F 0 0 0 0"
+    },
+    "Sample_1_4_3_default": {
+      "expected": "numero 0 x 1 5 F F più numero 0 x 2 B 0 1 uguale a numero 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_brief": {
+      "expected": "num 0 x 1 5 F F più num 0 x 2 B 0 1 uguale a num 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_sbrief": {
+      "expected": "num 0 x 1 5 F F più num 0 x 2 B 0 1 uguale a num 0 x 4 1 0 0"
+    },
+    "Sample_1_5_1_default": {
+      "expected": "I maiuscola virgola parolaMaiuscolo I I virgola parolaMaiuscolo I I I virgola parolaMaiuscolo I V virgola V maiuscola punto"
+    },
+    "Sample_1_5_1_brief": {
+      "expected": "I maiuscola virgola parolaMaiuscolo I I virgola parolaMaiuscolo I I I virgola parolaMaiuscolo I V virgola V maiuscola punto"
+    },
+    "Sample_1_5_1_sbrief": {
+      "expected": "I maiuscola virgola parolaMaiuscolo I I virgola parolaMaiuscolo I I I virgola parolaMaiuscolo I V virgola V maiuscola punto"
+    },
+    "Sample_1_6_1_default": {
+      "expected": "inizio frazione 22 fratto 7 fine frazione uguale a 3,142857"
+    },
+    "Sample_1_6_1_brief": {
+      "expected": "inizio frazione 22 fratto 7 fine frazione uguale a 3,142857"
+    },
+    "Sample_1_6_1_sbrief": {
+      "expected": "frazione 22 fratto 7 fine frazione uguale a 3,142857"
+    },
+    "Sample_2_1_1_default": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta X maiuscola meno x parentesi tonda chiusa quadrato meno parentesi tonda aperta Y maiuscola meno y parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_2_1_1_brief": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta X maiuscola meno x parentesi tonda chiusa quadrato meno parentesi tonda aperta Y maiuscola meno y parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_2_1_1_sbrief": {
+      "expected": "d uguale a radice parentesi tonda aperta X maiuscola meno x parentesi tonda chiusa quadrato meno parentesi tonda aperta Y maiuscola meno y parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_2_3_1_default": {
+      "expected": "If A maiuscola freccia verso destra B maiuscola and B maiuscola freccia verso destra C maiuscola then A maiuscola freccia verso destra C maiuscola punto"
+    },
+    "Sample_2_3_1_brief": {
+      "expected": "If A maiuscola freccia verso destra B maiuscola and B maiuscola freccia verso destra C maiuscola then A maiuscola freccia verso destra C maiuscola punto"
+    },
+    "Sample_2_3_1_sbrief": {
+      "expected": "If A maiuscola freccia verso destra B maiuscola and B maiuscola freccia verso destra C maiuscola then A maiuscola freccia verso destra C maiuscola punto"
+    },
+    "Sample_2_6_1_default": {
+      "expected": "parentesi quadra aperta grassetto x parentesi quadra chiusa grassetto"
+    },
+    "Sample_2_6_1_brief": {
+      "expected": "parentesi quadra aperta grassetto x parentesi quadra chiusa grassetto"
+    },
+    "Sample_2_6_1_sbrief": {
+      "expected": "parentesi quadra aperta grassetto x parentesi quadra chiusa grassetto"
+    },
+    "Sample_2_6_2_default": {
+      "expected": "integrale di contorno E maiuscola puntino nel mezzo d l grassetto uguale a meno inizio frazione d Phi maiuscola B maiuscola fratto d t fine frazione"
+    },
+    "Sample_2_6_2_brief": {
+      "expected": "integrale di contorno E maiuscola puntino nel mezzo d l grassetto uguale a meno inizio frazione d Phi maiuscola B maiuscola fratto d t fine frazione"
+    },
+    "Sample_2_6_2_sbrief": {
+      "expected": "integrale di contorno E maiuscola puntino nel mezzo d l grassetto uguale a meno frazione d Phi maiuscola B maiuscola fratto d t fine frazione"
+    },
+    "NegativeVsMinus_0": {
+      "expected": "meno inizio frazione 1 fratto b fine frazione"
+    },
+    "NegativeVsMinus_1": {
+      "expected": "meno inizio frazione a fratto b fine frazione"
+    },
+    "NegativeVsMinus_2": {
+      "expected": "meno 3 e un mezzo"
+    },
+    "Sample_4_2_1_default": {
+      "expected": "Uppercase parentesi tonda aperta inizio insieme alfa virgola beta virgola gamma virgola delta virgola epsilon virgola phi fine insieme parentesi tonda chiusa uguale a inizio insieme Alfa maiuscola virgola Beta maiuscola virgola Gamma maiuscola virgola Delta maiuscola virgola Epsilon maiuscola virgola Phi maiuscola fine insieme"
+    },
+    "Sample_4_2_1_brief": {
+      "expected": "Uppercase parentesi tonda aperta inizio insieme alfa virgola beta virgola gamma virgola delta virgola epsilon virgola phi fine insieme parentesi tonda chiusa uguale a inizio insieme Alfa maiuscola virgola Beta maiuscola virgola Gamma maiuscola virgola Delta maiuscola virgola Epsilon maiuscola virgola Phi maiuscola fine insieme"
+    },
+    "Sample_4_2_1_sbrief": {
+      "expected": "Uppercase parentesi tonda aperta insieme alfa virgola beta virgola gamma virgola delta virgola epsilon virgola phi fine insieme parentesi tonda chiusa uguale a insieme Alfa maiuscola virgola Beta maiuscola virgola Gamma maiuscola virgola Delta maiuscola virgola Epsilon maiuscola virgola Phi maiuscola fine insieme"
+    },
+    "Sample_5_1_1_default": {
+      "expected": "y meno 1"
+    },
+    "Sample_5_1_1_brief": {
+      "expected": "y meno 1"
+    },
+    "Sample_5_1_1_sbrief": {
+      "expected": "y meno 1"
+    },
+    "Sample_5_1_2_default": {
+      "expected": "parentesi tonda aperta 1 meno to meno 1 parentesi tonda chiusa"
+    },
+    "Sample_5_1_2_brief": {
+      "expected": "parentesi tonda aperta 1 meno to meno 1 parentesi tonda chiusa"
+    },
+    "Sample_5_1_2_sbrief": {
+      "expected": "parentesi tonda aperta 1 meno to meno 1 parentesi tonda chiusa"
+    },
+    "Sample_5_1_3_default": {
+      "expected": "meno 1"
+    },
+    "Sample_5_1_3_brief": {
+      "expected": "meno 1"
+    },
+    "Sample_5_1_3_sbrief": {
+      "expected": "meno 1"
+    },
+    "Sample_6_1_1_default": {
+      "expected": "The Fibonacci numbers are due punti inizio insieme 0 virgola 1 virgola 1 virgola 2 virgola 3 virgola 5 virgola 8 virgola punti di sospensione fine insieme"
+    },
+    "Sample_6_1_1_brief": {
+      "expected": "The Fibonacci numbers are due punti inizio insieme 0 virgola 1 virgola 1 virgola 2 virgola 3 virgola 5 virgola 8 virgola punti di sospensione fine insieme"
+    },
+    "Sample_6_1_1_sbrief": {
+      "expected": "The Fibonacci numbers are due punti insieme 0 virgola 1 virgola 1 virgola 2 virgola 3 virgola 5 virgola 8 virgola punti di sospensione fine insieme"
+    },
+    "Sample_6_2_1_default": {
+      "expected": "inizio valore assoluto 4 meno 7 fine valore assoluto uguale a 3"
+    },
+    "Sample_6_2_1_brief": {
+      "expected": "inizio valore assoluto 4 meno 7 fine valore assoluto uguale a 3"
+    },
+    "Sample_6_2_1_sbrief": {
+      "expected": "valore assoluto 4 meno 7 fine valore assoluto uguale a 3"
+    },
+    "Sample_6_2_2_old_default": {
+      "expected": "inizio valore assoluto a inizio valore assoluto più o meno b fine valore assoluto meno 15 fine valore assoluto diverso da inizio valore assoluto a fine valore assoluto più o meno b inizio valore assoluto meno 15 fine valore assoluto"
+    },
+    "Sample_6_2_2_old_brief": {
+      "expected": "inizio valore assoluto a inizio valore assoluto più o meno b fine valore assoluto meno 15 fine valore assoluto diverso da inizio valore assoluto a fine valore assoluto più o meno b inizio valore assoluto meno 15 fine valore assoluto"
+    },
+    "Sample_6_2_2_old_sbrief": {
+      "expected": "valore assoluto a valore assoluto più o meno b fine valore assoluto meno 15 fine valore assoluto diverso da valore assoluto a fine valore assoluto più o meno b valore assoluto meno 15 fine valore assoluto"
+    },
+    "Sample_6_2_2_default": {
+      "expected": "inizio valore assoluto a più o meno inizio valore assoluto b meno c fine valore assoluto fine valore assoluto diverso da inizio valore assoluto a fine valore assoluto più o meno inizio valore assoluto b meno c fine valore assoluto"
+    },
+    "Sample_6_2_2_brief": {
+      "expected": "inizio valore assoluto a più o meno inizio valore assoluto b meno c fine valore assoluto fine valore assoluto diverso da inizio valore assoluto a fine valore assoluto più o meno inizio valore assoluto b meno c fine valore assoluto"
+    },
+    "Sample_6_2_2_sbrief": {
+      "expected": "valore assoluto a più o meno valore assoluto b meno c fine valore assoluto fine valore assoluto diverso da valore assoluto a fine valore assoluto più o meno valore assoluto b meno c fine valore assoluto"
+    },
+    "Sample_7_1_1_default": {
+      "expected": "inizio frazione 1 fratto x fine frazione"
+    },
+    "Sample_7_1_1_brief": {
+      "expected": "inizio frazione 1 fratto x fine frazione"
+    },
+    "Sample_7_1_1_sbrief": {
+      "expected": "frazione 1 fratto x fine frazione"
+    },
+    "Sample_7_1_2_default": {
+      "expected": "a meno inizio frazione b più c fratto d meno e fine frazione per f"
+    },
+    "Sample_7_1_2_brief": {
+      "expected": "a meno inizio frazione b più c fratto d meno e fine frazione per f"
+    },
+    "Sample_7_1_2_sbrief": {
+      "expected": "a meno frazione b più c fratto d meno e fine frazione per f"
+    },
+    "Sample_7_2_1_default": {
+      "expected": "inizio inizio frazione inizio frazione x fratto y fine frazione fratto fratto z fine fine frazione diverso da inizio inizio frazione x fratto fratto inizio frazione y fratto z fine frazione fine fine frazione"
+    },
+    "Sample_7_2_1_brief": {
+      "expected": "inizio inizio frazione inizio frazione x fratto y fine frazione fratto fratto z fine fine frazione diverso da inizio inizio frazione x fratto fratto inizio frazione y fratto z fine frazione fine fine frazione"
+    },
+    "Sample_7_2_1_sbrief": {
+      "expected": "frazioneuna voltaannidamento frazione x fratto y fine frazione frattouna voltaannidamento z fine frazioneuna voltaannidamento diverso da frazioneuna voltaannidamento x frattouna voltaannidamento frazione y fratto z fine frazione fine frazioneuna voltaannidamento"
+    },
+    "Sample_7_3_1_default": {
+      "expected": "inizio inizio inizio frazione inizio inizio frazione parentesi tonda aperta 1 meno x parentesi tonda chiusa inizio frazione d fratto d x fine frazione parentesi tonda aperta 2 x parentesi tonda chiusa meno 2 x inizio frazione d fratto d x fine frazione parentesi tonda aperta 1 meno x parentesi tonda chiusa fratto fratto parentesi tonda aperta 1 meno x parentesi tonda chiusa quadrato fine fine frazione fratto fratto fratto 1 più parentesi tonda aperta inizio frazione 2 x fratto 1 meno x fine frazione parentesi tonda chiusa quadrato fine fine fine frazione"
+    },
+    "Sample_7_3_1_brief": {
+      "expected": "inizio inizio inizio frazione inizio inizio frazione parentesi tonda aperta 1 meno x parentesi tonda chiusa inizio frazione d fratto d x fine frazione parentesi tonda aperta 2 x parentesi tonda chiusa meno 2 x inizio frazione d fratto d x fine frazione parentesi tonda aperta 1 meno x parentesi tonda chiusa fratto fratto parentesi tonda aperta 1 meno x parentesi tonda chiusa quadrato fine fine frazione fratto fratto fratto 1 più parentesi tonda aperta inizio frazione 2 x fratto 1 meno x fine frazione parentesi tonda chiusa quadrato fine fine fine frazione"
+    },
+    "Sample_7_3_1_sbrief": {
+      "expected": "frazionedue volteannidamento frazioneuna voltaannidamento parentesi tonda aperta 1 meno x parentesi tonda chiusa frazione d fratto d x fine frazione parentesi tonda aperta 2 x parentesi tonda chiusa meno 2 x frazione d fratto d x fine frazione parentesi tonda aperta 1 meno x parentesi tonda chiusa frattouna voltaannidamento parentesi tonda aperta 1 meno x parentesi tonda chiusa quadrato fine frazioneuna voltaannidamento frattodue volteannidamento 1 più parentesi tonda aperta frazione 2 x fratto 1 meno x fine frazione parentesi tonda chiusa quadrato fine frazionedue volteannidamento"
+    },
+    "Sample_7_3_2_default": {
+      "expected": "a 0 più inizio inizio inizio inizio frazione 1 fratto fratto fratto fratto a 1 più inizio inizio inizio frazione 1 fratto fratto fratto a 2 più inizio inizio frazione 1 fratto fratto punti di sospensione più inizio frazione 1 fratto a pedice n linea di base fine frazione fine fine frazione fine fine fine frazione fine fine fine fine frazione"
+    },
+    "Sample_7_3_2_brief": {
+      "expected": "a 0 più inizio inizio inizio inizio frazione 1 fratto fratto fratto fratto a 1 più inizio inizio inizio frazione 1 fratto fratto fratto a 2 più inizio inizio frazione 1 fratto fratto punti di sospensione più inizio frazione 1 fratto a sub n base fine frazione fine fine frazione fine fine fine frazione fine fine fine fine frazione"
+    },
+    "Sample_7_3_2_sbrief": {
+      "expected": "a 0 più frazione3annidamento 1 fratto3annidamento a 1 più frazionedue volteannidamento 1 frattodue volteannidamento a 2 più frazioneuna voltaannidamento 1 frattouna voltaannidamento punti di sospensione più frazione 1 fratto a sub n base fine frazione fine frazioneuna voltaannidamento fine frazionedue volteannidamento fine frazione3annidamento"
+    },
+    "Sample_7_4_1_default": {
+      "expected": "un mezzo più due mezzi più tre mezzi più quattro mezzi più punti di sospensione uguale a sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script inizio frazione n fratto 2 fine frazione"
+    },
+    "Sample_7_4_1_brief": {
+      "expected": "un mezzo più due mezzi più tre mezzi più quattro mezzi più punti di sospensione uguale a sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script inizio frazione n fratto 2 fine frazione"
+    },
+    "Sample_7_4_1_sbrief": {
+      "expected": "un mezzo più due mezzi più tre mezzi più quattro mezzi più punti di sospensione uguale a sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script frazione n fratto 2 fine frazione"
+    },
+    "Sample_7_4_2_default": {
+      "expected": "inizio frazione 20 fratto 5 fine frazione per inizio frazione 1 fratto 100 fine frazione uguale a un venticinquesimo"
+    },
+    "Sample_7_4_2_brief": {
+      "expected": "inizio frazione 20 fratto 5 fine frazione per inizio frazione 1 fratto 100 fine frazione uguale a un venticinquesimo"
+    },
+    "Sample_7_4_2_sbrief": {
+      "expected": "frazione 20 fratto 5 fine frazione per frazione 1 fratto 100 fine frazione uguale a un venticinquesimo"
+    },
+    "Sample_7_4_3_default": {
+      "expected": "inizio frazione tre quinti fratto 8 fine frazione uguale a tre quinti per un ottavo"
+    },
+    "Sample_7_4_3_brief": {
+      "expected": "inizio frazione tre quinti fratto 8 fine frazione uguale a tre quinti per un ottavo"
+    },
+    "Sample_7_4_3_sbrief": {
+      "expected": "frazione tre quinti fratto 8 fine frazione uguale a tre quinti per un ottavo"
+    },
+    "Sample_7_5_1_default": {
+      "expected": "3 e cinque ottavi uguale a inizio frazione 29 fratto 8 fine frazione"
+    },
+    "Sample_7_5_1_brief": {
+      "expected": "3 e cinque ottavi uguale a inizio frazione 29 fratto 8 fine frazione"
+    },
+    "Sample_7_5_1_sbrief": {
+      "expected": "3 e cinque ottavi uguale a frazione 29 fratto 8 fine frazione"
+    },
+    "Sample_7_6_1_default": {
+      "expected": "a 0 più continuo frazione b 1 fratto a 1 più inizio frazione b 2 fratto a 2 più inizio frazione b 3 fratto a 3 più punti di sospensione uguale a a 0 più inizio frazione b 1 fratto a 1 fine frazione più inizio frazione b 2 fratto a 2 fine frazione più punti di sospensione"
+    },
+    "Sample_7_6_1_brief": {
+      "expected": "a 0 più continuo frazione b 1 fratto a 1 più inizio frazione b 2 fratto a 2 più inizio frazione b 3 fratto a 3 più punti di sospensione uguale a a 0 più inizio frazione b 1 fratto a 1 fine frazione più inizio frazione b 2 fratto a 2 fine frazione più punti di sospensione"
+    },
+    "Sample_7_6_1_sbrief": {
+      "expected": "a 0 più continuo frazione b 1 fratto a 1 più frazione b 2 fratto a 2 più frazione b 3 fratto a 3 più punti di sospensione uguale a a 0 più frazione b 1 fratto a 1 fine frazione più frazione b 2 fratto a 2 fine frazione più punti di sospensione"
+    },
+    "Sample_8_1_1_default": {
+      "expected": "x cubo più 6 x quadrato meno x uguale a 30"
+    },
+    "Sample_8_1_1_brief": {
+      "expected": "x cubo più 6 x quadrato meno x uguale a 30"
+    },
+    "Sample_8_1_1_sbrief": {
+      "expected": "x cubo più 6 x quadrato meno x uguale a 30"
+    },
+    "Sample_8_1_2_default": {
+      "expected": "inizio frazione d quadrato y fratto d x quadrato fine frazione più parentesi tonda aperta a x quadrato più b x più c parentesi tonda chiusa y uguale a 0"
+    },
+    "Sample_8_1_2_brief": {
+      "expected": "inizio frazione d quadrato y fratto d x quadrato fine frazione più parentesi tonda aperta a x quadrato più b x più c parentesi tonda chiusa y uguale a 0"
+    },
+    "Sample_8_1_2_sbrief": {
+      "expected": "frazione d quadrato y fratto d x quadrato fine frazione più parentesi tonda aperta a x quadrato più b x più c parentesi tonda chiusa y uguale a 0"
+    },
+    "Sample_8_2_1_default": {
+      "expected": "x apice un mezzo"
+    },
+    "Sample_8_2_1_brief": {
+      "expected": "x sup un mezzo"
+    },
+    "Sample_8_2_1_sbrief": {
+      "expected": "x sup un mezzo"
+    },
+    "Sample_8_2_2_default": {
+      "expected": "x pedice n"
+    },
+    "Sample_8_2_2_brief": {
+      "expected": "x sub n"
+    },
+    "Sample_8_2_2_sbrief": {
+      "expected": "x sub n"
+    },
+    "Sample_8_2_3_default": {
+      "expected": "x apice a"
+    },
+    "Sample_8_2_3_brief": {
+      "expected": "x sup a"
+    },
+    "Sample_8_2_3_sbrief": {
+      "expected": "x sup a"
+    },
+    "Sample_8_3_1_default": {
+      "expected": "x apice m più n"
+    },
+    "Sample_8_3_1_brief": {
+      "expected": "x sup m più n"
+    },
+    "Sample_8_3_1_sbrief": {
+      "expected": "x sup m più n"
+    },
+    "Sample_8_3_2_default": {
+      "expected": "T maiuscola pedice n meno 1 linea di base più 5 uguale a 0"
+    },
+    "Sample_8_3_2_brief": {
+      "expected": "T maiuscola sub n meno 1 base più 5 uguale a 0"
+    },
+    "Sample_8_3_2_sbrief": {
+      "expected": "T maiuscola sub n meno 1 base più 5 uguale a 0"
+    },
+    "Sample_8_3_3_default": {
+      "expected": "x apice m più n linea di base uguale a x apice m linea di base x apice n"
+    },
+    "Sample_8_3_3_brief": {
+      "expected": "x sup m più n base uguale a x sup m base x sup n"
+    },
+    "Sample_8_3_3_sbrief": {
+      "expected": "x sup m più n base uguale a x sup m base x sup n"
+    },
+    "Sample_8_4_1_default": {
+      "expected": "x apice a super pedice n apice più a super pedice n meno 1"
+    },
+    "Sample_8_4_1_brief": {
+      "expected": "x sup a sup sub n sup più a sup sub n meno 1"
+    },
+    "Sample_8_4_1_sbrief": {
+      "expected": "x sup a sup sub n sup più a sup sub n meno 1"
+    },
+    "Sample_8_4_2_default": {
+      "expected": "x apice a super pedice b"
+    },
+    "Sample_8_4_2_brief": {
+      "expected": "x sup a sup sub b"
+    },
+    "Sample_8_4_2_sbrief": {
+      "expected": "x sup a sup sub b"
+    },
+    "Sample_8_4_3_default": {
+      "expected": "x pedice a sub apice b"
+    },
+    "Sample_8_4_3_brief": {
+      "expected": "x sub a sub sup b"
+    },
+    "Sample_8_4_3_sbrief": {
+      "expected": "x sub a sub sup b"
+    },
+    "Sample_8_4_4_default": {
+      "expected": "y apice a super apice b super super pedice c linea di base diverso da y apice a super apice b apice c"
+    },
+    "Sample_8_4_4_brief": {
+      "expected": "y sup a sup sup b sup sup sub c base diverso da y sup a sup sup b sup c"
+    },
+    "Sample_8_4_4_sbrief": {
+      "expected": "y sup a sup sup b sup sup sub c base diverso da y sup a sup sup b sup c"
+    },
+    "Sample_8_4_5_default": {
+      "expected": "y apice a super super pedice c super apice b"
+    },
+    "Sample_8_4_5_brief": {
+      "expected": "y sup a sup sup sub c sup sup b"
+    },
+    "Sample_8_4_5_sbrief": {
+      "expected": "y sup a sup sup sub c sup sup b"
+    },
+    "Sample_8_4_5Short_default": {
+      "expected": "y apice a super super pedice c"
+    },
+    "Sample_8_4_5Short_brief": {
+      "expected": "y sup a sup sup sub c"
+    },
+    "Sample_8_4_5Short_sbrief": {
+      "expected": "y sup a sup sup sub c"
+    },
+    "Sample_8_4_5Inv_default": {
+      "expected": "y pedice a sub sub apice c"
+    },
+    "Sample_8_4_5Inv_brief": {
+      "expected": "y sub a sub sub sup c"
+    },
+    "Sample_8_4_5Inv_sbrief": {
+      "expected": "y sub a sub sub sup c"
+    },
+    "Sample_8_4_5InvShort_default": {
+      "expected": "y pedice a sub sub apice c sub pedice b"
+    },
+    "Sample_8_4_5InvShort_brief": {
+      "expected": "y sub a sub sub sup c sub sub b"
+    },
+    "Sample_8_4_5InvShort_sbrief": {
+      "expected": "y sub a sub sub sup c sub sub b"
+    },
+    "Sample_8_4_6_default": {
+      "expected": "x apice a super apice b"
+    },
+    "Sample_8_4_6_brief": {
+      "expected": "x sup a sup sup b"
+    },
+    "Sample_8_4_6_sbrief": {
+      "expected": "x sup a sup sup b"
+    },
+    "Sample_8_4_7_default": {
+      "expected": "x pedice a sub pedice b"
+    },
+    "Sample_8_4_7_brief": {
+      "expected": "x sub a sub sub b"
+    },
+    "Sample_8_4_7_sbrief": {
+      "expected": "x sub a sub sub b"
+    },
+    "Sample_8_4_8_default": {
+      "expected": "T maiuscola apice parentesi tonda aperta x super apice a apice più y super apice b apice parentesi tonda chiusa"
+    },
+    "Sample_8_4_8_brief": {
+      "expected": "T maiuscola sup parentesi tonda aperta x sup sup a sup più y sup sup b sup parentesi tonda chiusa"
+    },
+    "Sample_8_4_8_sbrief": {
+      "expected": "T maiuscola sup parentesi tonda aperta x sup sup a sup più y sup sup b sup parentesi tonda chiusa"
+    },
+    "Sample_8_5_1_default": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_brief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_sbrief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_2_default": {
+      "expected": "x pedice meno 1"
+    },
+    "Sample_8_5_2_brief": {
+      "expected": "x sub meno 1"
+    },
+    "Sample_8_5_2_sbrief": {
+      "expected": "x sub meno 1"
+    },
+    "Sample_8_5_3_default": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_brief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_sbrief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_4_default": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_4_brief": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_4_sbrief": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_5_default": {
+      "expected": "4 F maiuscola e più 3 O maiuscola 2 freccia verso destra 2 F maiuscola e 2 O maiuscola 3"
+    },
+    "Sample_8_5_5_brief": {
+      "expected": "4 F maiuscola e più 3 O maiuscola 2 freccia verso destra 2 F maiuscola e 2 O maiuscola 3"
+    },
+    "Sample_8_5_5_sbrief": {
+      "expected": "4 F maiuscola e più 3 O maiuscola 2 freccia verso destra 2 F maiuscola e 2 O maiuscola 3"
+    },
+    "Sample_8_5_6_default": {
+      "expected": "a pedice 2 virgola 3"
+    },
+    "Sample_8_5_6_brief": {
+      "expected": "a sub 2 virgola 3"
+    },
+    "Sample_8_5_6_sbrief": {
+      "expected": "a sub 2 virgola 3"
+    },
+    "Sample_8_5_7_default": {
+      "expected": "T maiuscola pedice n 1 più n 0"
+    },
+    "Sample_8_5_7_brief": {
+      "expected": "T maiuscola sub n 1 più n 0"
+    },
+    "Sample_8_5_7_sbrief": {
+      "expected": "T maiuscola sub n 1 più n 0"
+    },
+    "Sample_8_5_8_default": {
+      "expected": "logaritmo base 2 parentesi tonda aperta x parentesi tonda chiusa uguale a inizio frazione logaritmo base 10 parentesi tonda aperta x parentesi tonda chiusa fratto logaritmo base 10 parentesi tonda aperta 2 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_8_5_8_brief": {
+      "expected": "logaritmo base 2 parentesi tonda aperta x parentesi tonda chiusa uguale a inizio frazione logaritmo base 10 parentesi tonda aperta x parentesi tonda chiusa fratto logaritmo base 10 parentesi tonda aperta 2 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_8_5_8_sbrief": {
+      "expected": "logaritmo base 2 parentesi tonda aperta x parentesi tonda chiusa uguale a frazione logaritmo base 10 parentesi tonda aperta x parentesi tonda chiusa fratto logaritmo base 10 parentesi tonda aperta 2 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_8_5_9_default": {
+      "expected": "Phi maiuscola 5"
+    },
+    "Sample_8_5_9_brief": {
+      "expected": "Phi maiuscola 5"
+    },
+    "Sample_8_5_9_sbrief": {
+      "expected": "Phi maiuscola 5"
+    },
+    "Sample_8_5_10_default": {
+      "expected": "logaritmo naturale x uguale a integrale pedice 1 apice x linea di base inizio frazione d t fratto t fine frazione"
+    },
+    "Sample_8_5_10_brief": {
+      "expected": "logaritmo naturale x uguale a integrale sub 1 sup x base inizio frazione d t fratto t fine frazione"
+    },
+    "Sample_8_5_10_sbrief": {
+      "expected": "logaritmo naturale x uguale a integrale sub 1 sup x base frazione d t fratto t fine frazione"
+    },
+    "Sample_8_6_1_default": {
+      "expected": "dollaro n linea di base 2 uguale a 2 asterisco dollaro n più 1 punto e virgola"
+    },
+    "Sample_8_6_1_brief": {
+      "expected": "dollaro n base 2 uguale a 2 asterisco dollaro n più 1 punto e virgola"
+    },
+    "Sample_8_6_1_sbrief": {
+      "expected": "dollaro n base 2 uguale a 2 asterisco dollaro n più 1 punto e virgola"
+    },
+    "BaselineNumberFont_default": {
+      "expected": "n linea di base 2 grassetto"
+    },
+    "BaselineNumberFont_brief": {
+      "expected": "n base 2 grassetto"
+    },
+    "BaselineNumberFont_sbrief": {
+      "expected": "n base 2 grassetto"
+    },
+    "Sample_8_8_1_naive_default": {
+      "expected": "pedice c d apice a b linea di base x pedice e f apice g h"
+    },
+    "Sample_8_8_1_naive_brief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_naive_sbrief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_default": {
+      "expected": "pedice c d apice a b linea di base x pedice e f apice g h"
+    },
+    "Sample_8_8_1_brief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "Sample_8_8_1_sbrief": {
+      "expected": "sub c d sup a b base x sub e f sup g h"
+    },
+    "SampleSimpleSquare_default": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleSquare_brief": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleSquare_sbrief": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleSquare_2_default": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleSquare_2_brief": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleSquare_2_sbrief": {
+      "expected": "T maiuscola 0 quadrato"
+    },
+    "SampleSimpleCube_default": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "SampleSimpleCube_brief": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "SampleSimpleCube_sbrief": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "SampleSimpleCube_2_default": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "SampleSimpleCube_2_brief": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "SampleSimpleCube_2_sbrief": {
+      "expected": "T maiuscola 0 cubo"
+    },
+    "Sample_8_8_2_default": {
+      "expected": "T maiuscola pedice n meno 1 apice 2"
+    },
+    "Sample_8_8_2_brief": {
+      "expected": "T maiuscola sub n meno 1 sup 2"
+    },
+    "Sample_8_8_2_sbrief": {
+      "expected": "T maiuscola sub n meno 1 sup 2"
+    },
+    "Sample_8_9_1_default": {
+      "expected": "x apostrofo"
+    },
+    "Sample_8_9_1_brief": {
+      "expected": "x apostrofo"
+    },
+    "Sample_8_9_1_sbrief": {
+      "expected": "x apostrofo"
+    },
+    "Sample_8_9_2_default": {
+      "expected": "f triplo primo parentesi tonda aperta y parentesi tonda chiusa uguale a inizio frazione d f doppio primo parentesi tonda aperta y parentesi tonda chiusa fratto d y fine frazione"
+    },
+    "Sample_8_9_2_brief": {
+      "expected": "f triplo primo parentesi tonda aperta y parentesi tonda chiusa uguale a inizio frazione d f doppio primo parentesi tonda aperta y parentesi tonda chiusa fratto d y fine frazione"
+    },
+    "Sample_8_9_2_sbrief": {
+      "expected": "f triplo primo parentesi tonda aperta y parentesi tonda chiusa uguale a frazione d f doppio primo parentesi tonda aperta y parentesi tonda chiusa fratto d y fine frazione"
+    },
+    "Sample_8_10_1_default": {
+      "expected": "rho apostrofo uguale a rho apostrofo pedice più linea di base più rho apostrofo pedice meno"
+    },
+    "Sample_8_10_1_brief": {
+      "expected": "rho apostrofo uguale a rho apostrofo sub più base più rho apostrofo sub meno"
+    },
+    "Sample_8_10_1_sbrief": {
+      "expected": "rho apostrofo uguale a rho apostrofo sub più base più rho apostrofo sub meno"
+    },
+    "Sample_8_10_2_default": {
+      "expected": "x apostrofo 10"
+    },
+    "Sample_8_10_2_brief": {
+      "expected": "x apostrofo 10"
+    },
+    "Sample_8_10_2_sbrief": {
+      "expected": "x apostrofo 10"
+    },
+    "Sample_8_10_3_default": {
+      "expected": "T maiuscola apostrofo pedice n"
+    },
+    "Sample_8_10_3_brief": {
+      "expected": "T maiuscola apostrofo sub n"
+    },
+    "Sample_8_10_3_sbrief": {
+      "expected": "T maiuscola apostrofo sub n"
+    },
+    "Sample_8_11_1_default": {
+      "expected": "inizio 2 per 3 matrice 1a riga 1a colonna x apice n 2a colonna y apice n 3a colonna z apice n 2a riga 1a colonna x apice n più 1 2a colonna y apice n più 1 3a colonna z apice n più 1 fine matrice"
+    },
+    "Sample_8_11_1_brief": {
+      "expected": "inizio 2 per 3 matrice 1a riga 1a colonna x sup n 2a colonna y sup n 3a colonna z sup n 2a riga 1a colonna x sup n più 1 2a colonna y sup n più 1 3a colonna z sup n più 1 fine matrice"
+    },
+    "Sample_8_11_1_sbrief": {
+      "expected": "2 per 3 matrice 1a riga 1a colonna x sup n 2a colonna y sup n 3a colonna z sup n 2a riga 1a colonna x sup n più 1 2a colonna y sup n più 1 3a colonna z sup n più 1 fine matrice"
+    },
+    "Sample_8_12_1_default": {
+      "expected": "x pedice a linea di base apice b"
+    },
+    "Sample_8_12_1_brief": {
+      "expected": "x sub a base sup b"
+    },
+    "Sample_8_12_1_sbrief": {
+      "expected": "x sub a base sup b"
+    },
+    "Sample_8_12_2_default": {
+      "expected": "x apice b linea di base pedice a"
+    },
+    "Sample_8_12_2_brief": {
+      "expected": "x sup b base sub a"
+    },
+    "Sample_8_12_2_sbrief": {
+      "expected": "x sup b base sub a"
+    },
+    "Sample_8_13_1_default": {
+      "expected": "logaritmo apice 4 apice b linea di base x"
+    },
+    "Sample_8_13_1_brief": {
+      "expected": "logaritmo sup 4 sup b base x"
+    },
+    "Sample_8_13_1_sbrief": {
+      "expected": "logaritmo sup 4 sup b base x"
+    },
+    "Sample_8_13_2_default": {
+      "expected": "T maiuscola pedice n pedice a linea di base y"
+    },
+    "Sample_8_13_2_brief": {
+      "expected": "T maiuscola sub n sub a base y"
+    },
+    "Sample_8_13_2_sbrief": {
+      "expected": "T maiuscola sub n sub a base y"
+    },
+    "Sample_9_1_1_default": {
+      "expected": "inizio radice 2 fine radice"
+    },
+    "Sample_9_1_1_brief": {
+      "expected": "inizio radice 2 fine radice"
+    },
+    "Sample_9_1_1_sbrief": {
+      "expected": "radice 2 fine radice"
+    },
+    "Sample_9_1_2_default": {
+      "expected": "inizio radice m più n fine radice"
+    },
+    "Sample_9_1_2_brief": {
+      "expected": "inizio radice m più n fine radice"
+    },
+    "Sample_9_1_2_sbrief": {
+      "expected": "radice m più n fine radice"
+    },
+    "Sample_9_2_1_default": {
+      "expected": "indice radice m più n inizio radice x più y fine radice"
+    },
+    "Sample_9_2_1_brief": {
+      "expected": "indice radice m più n inizio radice x più y fine radice"
+    },
+    "Sample_9_2_1_sbrief": {
+      "expected": "indice Radice m più n radice x più y fine radice"
+    },
+    "Sample_9_2_2_default": {
+      "expected": "indice radice n inizio radice x apice m linea di base fine radice uguale a parentesi tonda aperta indice radice n inizio radice x fine radice parentesi tonda chiusa apice m linea di base uguale a x apice inizio frazione m fratto n fine frazione linea di base virgola x maggiore di 0"
+    },
+    "Sample_9_2_2_brief": {
+      "expected": "indice radice n inizio radice x sup m base fine radice uguale a parentesi tonda aperta indice radice n inizio radice x fine radice parentesi tonda chiusa sup m base uguale a x sup inizio frazione m fratto n fine frazione base virgola x maggiore di 0"
+    },
+    "Sample_9_2_2_sbrief": {
+      "expected": "indice Radice n radice x sup m base fine radice uguale a parentesi tonda aperta indice Radice n radice x fine radice parentesi tonda chiusa sup m base uguale a x sup frazione m fratto n fine frazione base virgola x maggiore di 0"
+    },
+    "Sample_9_2_3_default": {
+      "expected": "indice radice 3 inizio radice x fine radice uguale a x apice un terzo"
+    },
+    "Sample_9_2_3_brief": {
+      "expected": "indice radice 3 inizio radice x fine radice uguale a x sup un terzo"
+    },
+    "Sample_9_2_3_sbrief": {
+      "expected": "indice Radice 3 radice x fine radice uguale a x sup un terzo"
+    },
+    "Sample_9_3_1_default": {
+      "expected": "inizio radice annidato inizio radice x più 1 fine radice più inizio radice y più 1 fine radice fine radice annidato"
+    },
+    "Sample_9_3_1_brief": {
+      "expected": "inizio radice annidamento inizio radice x più 1 fine radice più inizio radice y più 1 fine radice fine radice annidamento"
+    },
+    "Sample_9_3_1_sbrief": {
+      "expected": "radice annidamento radice x più 1 fine radice più radice y più 1 fine radice fine radice annidamento"
+    },
+    "Sample_9_3_2_default": {
+      "expected": "indice radice annidato n inizio radice annidato indice radice m inizio radice x fine radice fine radice annidato uguale a indice radice annidato m inizio radice annidato indice radice n inizio radice x fine radice fine radice annidato"
+    },
+    "Sample_9_3_2_brief": {
+      "expected": "indice radice annidamento n inizio radice annidamento indice radice m inizio radice x fine radice fine radice annidamento uguale a indice radice annidamento m inizio radice annidamento indice radice n inizio radice x fine radice fine radice annidamento"
+    },
+    "Sample_9_3_2_sbrief": {
+      "expected": "indice Radice annidamento n radice annidamento indice Radice m radice x fine radice fine radice annidamento uguale a indice Radice annidamento m radice annidamento indice Radice n radice x fine radice fine radice annidamento"
+    },
+    "Sample_9_3_3_default": {
+      "expected": "x apice e meno 2 linea di base uguale a inizio radice annidato x indice radice annidato 3 inizio radice annidato x indice radice annidato 4 inizio radice annidato x indice radice 5 inizio radice x punti di sospensione fine radice fine radice annidato fine radice annidato fine radice annidato virgola x appartenente a R maiuscola grassetto da lavagna"
+    },
+    "Sample_9_3_3_brief": {
+      "expected": "x sup e meno 2 base uguale a inizio radice annidamento x indice radice annidamento 3 inizio radice annidamento x indice radice annidamento 4 inizio radice annidamento x indice radice 5 inizio radice x punti di sospensione fine radice fine radice annidamento fine radice annidamento fine radice annidamento virgola x appartenente a R maiuscola grassetto da lavagna"
+    },
+    "Sample_9_3_3_sbrief": {
+      "expected": "x sup e meno 2 base uguale a radice annidamento x indice Radice annidamento 3 radice annidamento x indice Radice annidamento 4 radice annidamento x indice Radice 5 radice x punti di sospensione fine radice fine radice annidamento fine radice annidamento fine radice annidamento virgola x appartenente a R maiuscola grassetto da lavagna"
+    },
+    "Sample_9_3_4_default": {
+      "expected": "inizio frazione 2 fratto pi greco fine frazione uguale a inizio frazione inizio radice 2 fine radice fratto 2 fine frazione inizio frazione inizio radice annidato 2 più inizio radice 2 fine radice fine radice annidato fratto 2 fine frazione inizio frazione inizio radice annidato 2 più inizio radice annidato 2 più inizio radice 2 fine radice fine radice annidato fine radice annidato fratto 2 fine frazione punti di sospensione"
+    },
+    "Sample_9_3_4_brief": {
+      "expected": "inizio frazione 2 fratto pi greco fine frazione uguale a inizio frazione inizio radice 2 fine radice fratto 2 fine frazione inizio frazione inizio radice annidamento 2 più inizio radice 2 fine radice fine radice annidamento fratto 2 fine frazione inizio frazione inizio radice annidamento 2 più inizio radice annidamento 2 più inizio radice 2 fine radice fine radice annidamento fine radice annidamento fratto 2 fine frazione punti di sospensione"
+    },
+    "Sample_9_3_4_sbrief": {
+      "expected": "frazione 2 fratto pi greco fine frazione uguale a frazione radice 2 fine radice fratto 2 fine frazione frazione radice annidamento 2 più radice 2 fine radice fine radice annidamento fratto 2 fine frazione frazione radice annidamento 2 più radice annidamento 2 più radice 2 fine radice fine radice annidamento fine radice annidamento fratto 2 fine frazione punti di sospensione"
+    },
+    "Sample_10_1_1_default": {
+      "expected": "inizio frazione 5 x cancellato y fine cancellato fratto 2 cancellato y fine cancellato fine frazione uguale a cinque mezzi x"
+    },
+    "Sample_10_1_1_brief": {
+      "expected": "inizio frazione 5 x cancellato y fine cancellato fratto 2 cancellato y fine cancellato fine frazione uguale a cinque mezzi x"
+    },
+    "Sample_10_1_1_sbrief": {
+      "expected": "frazione 5 x cancellato y fine cancellato fratto 2 cancellato y fine cancellato fine frazione uguale a cinque mezzi x"
+    },
+    "Sample_10_2_1_default": {
+      "expected": "inizio frazione 12 fratto 18 fine frazione uguale a inizio frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_10_2_1_brief": {
+      "expected": "inizio frazione 12 fratto 18 fine frazione uguale a inizio frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_10_2_1_sbrief": {
+      "expected": "frazione 12 fratto 18 fine frazione uguale a frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_10_2_2_default": {
+      "expected": "inizio frazione 12 fratto 18 fine frazione uguale a inizio frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_10_2_2_brief": {
+      "expected": "inizio frazione 12 fratto 18 fine frazione uguale a inizio frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_10_2_2_sbrief": {
+      "expected": "frazione 12 fratto 18 fine frazione uguale a frazione cancellato 12 con 2 fine cancellato fratto cancellato 18 con 3 fine cancellato fine frazione uguale a due terzi"
+    },
+    "Sample_11_1_1_default": {
+      "expected": "modificante sopra x con dieresi"
+    },
+    "Sample_11_1_1_brief": {
+      "expected": "mod sopra x con dieresi"
+    },
+    "Sample_11_1_1_sbrief": {
+      "expected": "mod sopra x con dieresi"
+    },
+    "Sample_11_1_2_default": {
+      "expected": "modificante sopra x più y con freccia verso destra"
+    },
+    "Sample_11_1_2_brief": {
+      "expected": "mod sopra x più y con freccia verso destra"
+    },
+    "Sample_11_1_2_sbrief": {
+      "expected": "mod sopra x più y con freccia verso destra"
+    },
+    "Sample_11_1_3_default": {
+      "expected": "modificante sopra x con accento circonflesso"
+    },
+    "Sample_11_1_3_brief": {
+      "expected": "mod sopra x con accento circonflesso"
+    },
+    "Sample_11_1_3_sbrief": {
+      "expected": "mod sopra x con accento circonflesso"
+    },
+    "Sample_11_2_1_default": {
+      "expected": "modificanteSotto x con punto sopra"
+    },
+    "Sample_11_2_1_brief": {
+      "expected": "modSotto x con punto sopra"
+    },
+    "Sample_11_2_1_sbrief": {
+      "expected": "modSotto x con punto sopra"
+    },
+    "Sample_11_3_1_default": {
+      "expected": "x con tilde sopra"
+    },
+    "Sample_11_3_1_brief": {
+      "expected": "x con tilde sopra"
+    },
+    "Sample_11_3_1_sbrief": {
+      "expected": "x con tilde sopra"
+    },
+    "Sample_11_3_2_default": {
+      "expected": "x con barra sopra"
+    },
+    "Sample_11_3_2_brief": {
+      "expected": "x con barra sopra"
+    },
+    "Sample_11_3_2_sbrief": {
+      "expected": "x con barra sopra"
+    },
+    "Sample_11_3_3_default": {
+      "expected": "y con tilde sotto"
+    },
+    "Sample_11_3_3_brief": {
+      "expected": "y con tilde sotto"
+    },
+    "Sample_11_3_3_sbrief": {
+      "expected": "y con tilde sotto"
+    },
+    "Sample_11_4_1_default": {
+      "expected": "x con barra sopra con barra sopra"
+    },
+    "Sample_11_4_1_brief": {
+      "expected": "x con barra sopra con barra sopra"
+    },
+    "Sample_11_4_1_sbrief": {
+      "expected": "x con barra sopra con barra sopra"
+    },
+    "Sample_11_4_2_default": {
+      "expected": "y con barra sopra con barra sopra con barra sotto con barra sotto"
+    },
+    "Sample_11_4_2_brief": {
+      "expected": "y con barra sopra con barra sopra con barra sotto con barra sotto"
+    },
+    "Sample_11_4_2_sbrief": {
+      "expected": "y con barra sopra con barra sopra con barra sotto con barra sotto"
+    },
+    "Sample_11_6_1_default": {
+      "expected": "modificanteSotto sotto modificanteSotto a più b con barra sotto con asterisco"
+    },
+    "Sample_11_6_1_brief": {
+      "expected": "modSotto sotto modSotto a più b con barra sotto con asterisco"
+    },
+    "Sample_11_6_1_sbrief": {
+      "expected": "modSotto sotto modSotto a più b con barra sotto con asterisco"
+    },
+    "Sample_11_6_2_default": {
+      "expected": "modificanteSotto sotto modificanteSotto modificante sopra sopra modificante sopra a più b con freccia verso destra con punto sopra con freccia verso sinistra con punto sopra"
+    },
+    "Sample_11_6_2_brief": {
+      "expected": "modSotto sotto modSotto mod sopra sopra mod sopra a più b con freccia verso destra con punto sopra con freccia verso sinistra con punto sopra"
+    },
+    "Sample_11_6_2_sbrief": {
+      "expected": "modSotto sotto modSotto mod sopra sopra mod sopra a più b con freccia verso destra con punto sopra con freccia verso sinistra con punto sopra"
+    },
+    "Sample_11_6_3_default": {
+      "expected": "modificante sopra sopra modificante sopra x più y con tilde con barra sopra"
+    },
+    "Sample_11_6_3_brief": {
+      "expected": "mod sopra sopra mod sopra x più y con tilde con barra sopra"
+    },
+    "Sample_11_6_3_sbrief": {
+      "expected": "mod sopra sopra mod sopra x più y con tilde con barra sopra"
+    },
+    "Sample_11_7_1_default": {
+      "expected": "sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script a pedice n"
+    },
+    "Sample_11_7_1_brief": {
+      "expected": "sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script a sub n"
+    },
+    "Sample_11_7_1_sbrief": {
+      "expected": "sommatoria sottoscritto n uguale a 1 soprascritto infinito fine script a sub n"
+    },
+    "Sample_11_8_1_default": {
+      "expected": "modificanteSotto x più y con barra sotto sottoscritto a uguale a 5 sottosottoscritto b uguale a 3 fine script"
+    },
+    "Sample_11_8_1_brief": {
+      "expected": "modSotto x più y con barra sotto sottoscritto a uguale a 5 sottosottoscritto b uguale a 3 fine script"
+    },
+    "Sample_11_8_1_sbrief": {
+      "expected": "modSotto x più y con barra sotto sottoscritto a uguale a 5 sottosottoscritto b uguale a 3 fine script"
+    },
+    "Sample_11_8_2_default": {
+      "expected": "modificante sopra x più y con barra sopra soprascritto n uguale a 1 soprasoprascritto m uguale a 2 fine script"
+    },
+    "Sample_11_8_2_brief": {
+      "expected": "mod sopra x più y con barra sopra soprascritto n uguale a 1 soprasoprascritto m uguale a 2 fine script"
+    },
+    "Sample_11_8_2_sbrief": {
+      "expected": "mod sopra x più y con barra sopra soprascritto n uguale a 1 soprasoprascritto m uguale a 2 fine script"
+    },
+    "Sample_11_9_1_default": {
+      "expected": "sette dodicesime uguale a ,58 modificante sopra 3 con punto sopra modificante sopra 3 con punto sopra modificante sopra 3 con punto sopra"
+    },
+    "Sample_11_9_1_brief": {
+      "expected": "sette dodicesime uguale a ,58 mod sopra 3 con punto sopra mod sopra 3 con punto sopra mod sopra 3 con punto sopra"
+    },
+    "Sample_11_9_1_sbrief": {
+      "expected": "sette dodicesime uguale a ,58 mod sopra 3 con punto sopra mod sopra 3 con punto sopra mod sopra 3 con punto sopra"
+    },
+    "Sample_12_1_1_default": {
+      "expected": "logaritmo base b x"
+    },
+    "Sample_12_1_1_brief": {
+      "expected": "logaritmo base b x"
+    },
+    "Sample_12_1_1_sbrief": {
+      "expected": "logaritmo base b x"
+    },
+    "Sample_12_1_2_default": {
+      "expected": "coseno y"
+    },
+    "Sample_12_1_2_brief": {
+      "expected": "coseno y"
+    },
+    "Sample_12_1_2_sbrief": {
+      "expected": "coseno y"
+    },
+    "Sample_12_1_3_default": {
+      "expected": "seno x"
+    },
+    "Sample_12_1_3_brief": {
+      "expected": "seno x"
+    },
+    "Sample_12_1_3_sbrief": {
+      "expected": "seno x"
+    },
+    "Sample_13_1_1_default": {
+      "expected": "inizio frazione 60 cancellato miglia fine cancellato fratto cancellato ore fine cancellato fine frazione per inizio frazione 5,280 piedi fratto 1 cancellato miglia fine cancellato fine frazione per inizio frazione 1 cancellato ore fine cancellato fratto 60 minuti fine frazione uguale a inizio frazione 5,280 piedi fratto minuti fine frazione"
+    },
+    "Sample_13_1_1_brief": {
+      "expected": "inizio frazione 60 cancellato miglia fine cancellato fratto cancellato ore fine cancellato fine frazione per inizio frazione 5,280 piedi fratto 1 cancellato miglia fine cancellato fine frazione per inizio frazione 1 cancellato ore fine cancellato fratto 60 minuti fine frazione uguale a inizio frazione 5,280 piedi fratto minuti fine frazione"
+    },
+    "Sample_13_1_1_sbrief": {
+      "expected": "frazione 60 cancellato miglia fine cancellato fratto cancellato ore fine cancellato fine frazione per frazione 5,280 piedi fratto 1 cancellato miglia fine cancellato fine frazione per frazione 1 cancellato ore fine cancellato fratto 60 minuti fine frazione uguale a frazione 5,280 piedi fratto minuti fine frazione"
+    },
+    "Sample_13_1_2_default": {
+      "expected": "1 joule uguale a 1 chilogrammi puntino nel mezzo metri quadrato puntino nel mezzo secondi apice meno 2"
+    },
+    "Sample_13_1_2_brief": {
+      "expected": "1 joule uguale a 1 chilogrammi puntino nel mezzo metri quadrato puntino nel mezzo secondi sup meno 2"
+    },
+    "Sample_13_1_2_sbrief": {
+      "expected": "1 joule uguale a 1 chilogrammi puntino nel mezzo metri quadrato puntino nel mezzo secondi sup meno 2"
+    },
+    "Sample_13_1_3_default": {
+      "expected": "m metri uguale a 100 m centimetri uguale a inizio frazione m fratto 1,000 fine frazione chilometri"
+    },
+    "Sample_13_1_3_brief": {
+      "expected": "m metri uguale a 100 m centimetri uguale a inizio frazione m fratto 1,000 fine frazione chilometri"
+    },
+    "Sample_13_1_3_sbrief": {
+      "expected": "m metri uguale a 100 m centimetri uguale a frazione m fratto 1,000 fine frazione chilometri"
+    },
+    "Sample_13_1_4_default": {
+      "expected": "1 miglia circa uguale a 1,6 chilometri"
+    },
+    "Sample_13_1_4_brief": {
+      "expected": "1 miglia circa uguale a 1,6 chilometri"
+    },
+    "Sample_13_1_4_sbrief": {
+      "expected": "1 miglia circa uguale a 1,6 chilometri"
+    },
+    "Sample_13_1_5_default": {
+      "expected": "1 pollici uguale a 2,54 centimetri"
+    },
+    "Sample_13_1_5_brief": {
+      "expected": "1 pollici uguale a 2,54 centimetri"
+    },
+    "Sample_13_1_5_sbrief": {
+      "expected": "1 pollici uguale a 2,54 centimetri"
+    },
+    "Sample_14_1_1_default": {
+      "expected": "inizio layout 1a row 1a colonna H maiuscola 2 2a colonna più 3a colonna F maiuscola 2 4a colonna freccia verso destra 5a colonna 2 H maiuscola F maiuscola 2a row 1a colonna hydrogen 2a colonna vuoto 3a colonna fluorine 4a colonna vuoto 5a colonna hydrogen fluoride fine layout"
+    },
+    "Sample_14_1_1_brief": {
+      "expected": "inizio layout 1a row 1a colonna H maiuscola 2 2a colonna più 3a colonna F maiuscola 2 4a colonna freccia verso destra 5a colonna 2 H maiuscola F maiuscola 2a row 1a colonna hydrogen 2a colonna vuoto 3a colonna fluorine 4a colonna vuoto 5a colonna hydrogen fluoride fine layout"
+    },
+    "Sample_14_1_1_sbrief": {
+      "expected": "layout 1a row 1a colonna H maiuscola 2 2a colonna più 3a colonna F maiuscola 2 4a colonna freccia verso destra 5a colonna 2 H maiuscola F maiuscola 2a row 1a colonna hydrogen 2a colonna vuoto 3a colonna fluorine 4a colonna vuoto 5a colonna hydrogen fluoride fine layout"
+    },
+    "Sample_14_3_1_default": {
+      "expected": "x uguale a inizio layout allargato parentesi graffa aperta 1a row 1a colonna y minore di 0 2a colonna 0 2a row 1a colonna y maggiore o uguale a 0 2a colonna 2 y fine layout"
+    },
+    "Sample_14_3_1_brief": {
+      "expected": "x uguale a inizio layout allargato parentesi graffa aperta 1a row 1a colonna y minore di 0 2a colonna 0 2a row 1a colonna y maggiore o uguale a 0 2a colonna 2 y fine layout"
+    },
+    "Sample_14_3_1_sbrief": {
+      "expected": "x uguale a layout allargato parentesi graffa aperta 1a row 1a colonna y minore di 0 2a colonna 0 2a row 1a colonna y maggiore o uguale a 0 2a colonna 2 y fine layout"
+    },
+    "Sample_15_1_1_default": {
+      "expected": "inizio 3 per 3 matrice 1a riga 1a colonna x più a 2a colonna x più b 3a colonna x più c 2a riga 1a colonna y più a 2a colonna y più b 3a colonna y più c 3a riga 1a colonna z più a 2a colonna z più b 3a colonna z più c fine matrice"
+    },
+    "Sample_15_1_1_brief": {
+      "expected": "inizio 3 per 3 matrice 1a riga 1a colonna x più a 2a colonna x più b 3a colonna x più c 2a riga 1a colonna y più a 2a colonna y più b 3a colonna y più c 3a riga 1a colonna z più a 2a colonna z più b 3a colonna z più c fine matrice"
+    },
+    "Sample_15_1_1_sbrief": {
+      "expected": "3 per 3 matrice 1a riga 1a colonna x più a 2a colonna x più b 3a colonna x più c 2a riga 1a colonna y più a 2a colonna y più b 3a colonna y più c 3a riga 1a colonna z più a 2a colonna z più b 3a colonna z più c fine matrice"
+    },
+    "Sample_15_2_1_default": {
+      "expected": "inizio 2 per 2 determinante 1a riga 1a colonna a più 1 2a colonna b 2a riga 1a colonna c 2a colonna d fine determinante uguale a parentesi tonda aperta a più 1 parentesi tonda chiusa d meno b c"
+    },
+    "Sample_15_2_1_brief": {
+      "expected": "inizio 2 per 2 determinante 1a riga 1a colonna a più 1 2a colonna b 2a riga 1a colonna c 2a colonna d fine determinante uguale a parentesi tonda aperta a più 1 parentesi tonda chiusa d meno b c"
+    },
+    "Sample_15_2_1_sbrief": {
+      "expected": "2 per 2 determinante 1a riga 1a colonna a più 1 2a colonna b 2a riga 1a colonna c 2a colonna d fine determinante uguale a parentesi tonda aperta a più 1 parentesi tonda chiusa d meno b c"
+    },
+    "Sample_15_4_1_default": {
+      "expected": "inizio 2 per 2 determinante 1a riga a b 2a riga c d fine determinante uguale a a d meno b c"
+    },
+    "Sample_15_4_1_brief": {
+      "expected": "inizio 2 per 2 determinante 1a riga a b 2a riga c d fine determinante uguale a a d meno b c"
+    },
+    "Sample_15_4_1_sbrief": {
+      "expected": "2 per 2 determinante 1a riga a b 2a riga c d fine determinante uguale a a d meno b c"
+    },
+    "Sample_15_6_1_default": {
+      "expected": "inizio binomiale o matrice x scelta y fine binomiale o matrice"
+    },
+    "Sample_15_6_1_brief": {
+      "expected": "inizio binomiale o matrice x scelta y fine binomiale o matrice"
+    },
+    "Sample_15_6_1_sbrief": {
+      "expected": "bInomiale o matrice x scelta y fine binomiale o matrice"
+    }
+  }
+}

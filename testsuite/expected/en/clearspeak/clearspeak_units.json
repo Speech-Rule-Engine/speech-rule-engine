@@ -1,0 +1,319 @@
+{
+  "name": "EnglishClearspeakUnits",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "English Clearspeak Units tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "UnitSquare_0_brief",
+    "UnitSquare_0_sbrief",
+    "UnitSquare_1_brief",
+    "UnitSquare_1_sbrief",
+    "UnitSquare_2_brief",
+    "UnitSquare_2_sbrief",
+    "UnitCube_0_brief",
+    "UnitCube_0_sbrief",
+    "UnitCube_1_brief",
+    "UnitCube_1_sbrief",
+    "UnitCube_2_brief",
+    "UnitCube_2_sbrief",
+    "UnitInverse_brief",
+    "UnitInverse_sbrief",
+    "UnitDoubleInverse_brief",
+    "UnitDoubleInverse_sbrief",
+    "UnitDivide_brief",
+    "UnitDivide_sbrief"
+  ],
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "square inches"
+    },
+    "UnitSquare_1_default": {
+      "expected": "seconds to the second power"
+    },
+    "UnitSquare_2_default": {
+      "expected": "square meters"
+    },
+    "UnitCube_0_default": {
+      "expected": "cubic inches"
+    },
+    "UnitCube_1_default": {
+      "expected": "seconds to the third power"
+    },
+    "UnitCube_2_default": {
+      "expected": "cubic meters"
+    },
+    "UnitInverse_default": {
+      "expected": "reciprocal inches"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "reciprocal inches per millimeter"
+    },
+    "UnitDivide_default": {
+      "expected": "inches per millimeter"
+    },
+    "UnitsSingle_0": {
+      "expected": "kilometers"
+    },
+    "UnitsSingle_1": {
+      "expected": "amperes"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohms"
+    },
+    "UnitsSingle_3": {
+      "expected": "kilohms"
+    },
+    "UnitsSingle_4": {
+      "expected": "Celsius"
+    },
+    "UnitsSimple_0": {
+      "expected": "min of minutes"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 kilometers"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilometers plus seconds"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "square kilometers"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "cubic meters"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilometers to the fourth power"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "reciprocal meters"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "seconds per meter"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "seconds per meter to the negative 1 power"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "seconds per meter to the negative 1 power"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 reciprocal meters"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "kilometers per hour"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newtons kilometers per hour"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "m over kilometers"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 kilometers hours"
+    },
+    "UnitsExpressions_0": {
+      "expected": "seconds 3 m kilometers hours"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilometers seconds to the second power 3 m kilometers hours"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m kilometers hours the fraction with numerator N and denominator seconds to the second power"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m kilometers hours Newtons per second to the second power"
+    },
+    "UnitPlural_1": {
+      "expected": "4 millimeters"
+    },
+    "UnitPlural_2": {
+      "expected": "1 millimeter"
+    },
+    "UnitPlural_3": {
+      "expected": "4 millimeters"
+    },
+    "UnitPlural_4": {
+      "expected": "1 millimeter"
+    },
+    "UnitCombine_0": {
+      "expected": "meters seconds"
+    },
+    "UnitCombine_1": {
+      "expected": "m seconds"
+    },
+    "UnitCombine_2": {
+      "expected": "meters s"
+    },
+    "UnitCombine_3": {
+      "expected": "meters seconds"
+    },
+    "UnitCombine_4": {
+      "expected": "m seconds"
+    },
+    "UnitCombine_5": {
+      "expected": "meters s"
+    },
+    "UnitCombine_6": {
+      "expected": "meters seconds liters"
+    },
+    "issue_364_1": {
+      "expected": "63360 inches equals 63360 inches equals 63360 inches equals 63360 inches equals 5280 feet equals 5280 feet equals 5280 feet equals 5280 feet equals 1760 yards equals 1760 yards equals 1760 yards equals 1 mile equals 1 mile equals 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 links equals 8000 links equals 8000 links equals 320 rods equals 320 rods equals 320 rods equals 80 chains equals 80 chains equals 80 chains equals 8 furlongs equals 8 furlongs equals 8 furlongs equals 1 mile equals 1 mile equals 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 square feet equals 43560 square feet equals 43560 square feet equals 43560 feet squared equals 43560 square feet equals 4840 square yards equals 4840 square yards equals 4840 square yards equals 4840 square yards equals 160 square rods equals 160 square rods equals 160 square rods equals 160 square rods equals 1 acre equals 1 acre equals 1 acre equals 1 over 640 square miles equals 1 over 640 square miles equals 1 over 640 square miles equals 1 over 640 square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 cubic inches equals 46656 cubic inches equals 46656 cubic inches equals 46656 inches cubed equals 46656 cubic inches equals 27 cubic feet equals 27 cubic feet equals 27 cubic feet equals 27 feet cubed equals 27 cubic feet equals 1 cubic yard equals 1 cubic yard equals 1 cubic yard equals 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 fluid drams equals 1024 fluid drams equals 1024 fluid drams equals 768 teaspoons equals 768 teaspoons equals 768 teaspoons equals 256 tablespoons equals 256 tablespoons equals 256 tablespoons equals 128 fluid ounces equals 128 fluid ounces equals 128 fluid ounces equals 16 cups equals 16 cups equals 16 cups equals 8 pints equals 8 pints equals 8 pints equals 4 quarts equals 4 quarts equals 4 quarts equals 1 gallon equals 1 gallon equals 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 drams equals 256 drams equals 256 drams equals 16 ounces equals 16 ounces equals 16 ounces equals 1 # equals 1 pound equals 1 pound equals 1 pounds equals 100 hundredweights equals 100 hundredweights equals 100 hundredweights equals 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 inches equals 63360 inches equals 63360 inches equals 63360 inches equals 5280 feet equals 5280 feet equals 5280 feet equals 5280 feet equals 1760 yards equals 1760 yards equals 1760 yards equals 1 mile equals 1 mile equals 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule equals 1 kilogram times square meters times seconds to the negative 2 power"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule equals 1 kilogram square meters seconds to the negative 2 power"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule equals 1 kilogram square meters seconds to the negative 2 power"
+    },
+    "unit_cube": {
+      "expected": "cubic inches"
+    },
+    "UnitDiv_0": {
+      "expected": "kilometers kilograms seconds to the second power per joule"
+    },
+    "UnitDiv_1": {
+      "expected": "3 kilometers 1 kilogram seconds to the second power over joules"
+    },
+    "UnitDiv_2": {
+      "expected": "1 kilometer kilograms seconds to the second power over joules"
+    },
+    "UnitDiv_3": {
+      "expected": "1 kilometer kilograms seconds to the second power over 5 joules"
+    },
+    "UnitKm": {
+      "expected": "kilometers"
+    },
+    "UnitLong_1": {
+      "expected": "3 kilometers kilograms seconds to the second power joules"
+    },
+    "UnitLong_2": {
+      "expected": "3 kilometers kilograms seconds to the second power joules"
+    },
+    "UnitLong_3": {
+      "expected": "3 kilometers 4 kilograms seconds to the second power joules"
+    },
+    "UnitLong_4": {
+      "expected": "3 kilometers 1 kilogram seconds to the second power joules"
+    },
+    "UnitMultiple": {
+      "expected": "1 kilometer seconds plus 2 kilometers seconds plus 0 kilometers seconds plus a kilometers seconds plus"
+    },
+    "UnitMultitude": {
+      "expected": "1 kilometer plus 2 kilometers plus 0 kilometers plus a kilometers"
+    },
+    "UnitNumb_0": {
+      "expected": "1 and two thirds kilograms"
+    },
+    "UnitNumb_1": {
+      "expected": "1 and two thirds kilograms kilometers"
+    },
+    "UnitNumb_2": {
+      "expected": "1 kilometer 2 kilograms kilometers"
+    },
+    "UnitTriple": {
+      "expected": "1 kilometer kilograms seconds plus 2 kilometers kilograms seconds plus 0 kilometers kilograms seconds plus a kilometers kilograms seconds plus"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dollar"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "expected": "1 dollars"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "1 dollars"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "expected": "dollars"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "expected": "dollars 2"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "expected": "dollars 2"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "expected": "dollars 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dollar plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "expected": "1 dollars plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "expected": "dollars 1 plus dollars 2 plus dollars 0 plus dollars a"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dollar plus 2 dollars plus 0 dollars plus a dollars"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "expected": "1 dollars plus dollars 2 plus 0 dollars plus dollars a"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "expected": "dollars 1 plus dollars 2 plus dollars 0 plus dollars a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro plus 2 euros plus 0 euros plus a euros"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 pound plus 2 pounds plus 0 pounds plus a pounds"
+    }
+  }
+}

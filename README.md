@@ -2,8 +2,8 @@ Speech Rule Engine
 ==================
 [![Dependencies](https://img.shields.io/librariesio/release/npm/speech-rule-engine)](https://img.shields.io/librariesio/release/npm/speech-rule-engine) [![NPM version](https://img.shields.io/npm/v/speech-rule-engine.svg?style=flat)](https://www.npmjs.com/package/speech-rule-engine) [![NPM monthly downloads](https://img.shields.io/npm/dm/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![NPM total downloads](https://img.shields.io/npm/dt/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![](https://data.jsdelivr.com/v1/package/npm/speech-rule-engine/badge)](https://www.jsdelivr.com/package/npm/speech-rule-engine)
 [![jsdelivr rank](https://flat.badgen.net/jsdelivr/rank/npm/speech-rule-engine)](https://www.jsdelivr.com/package/npm/speech-rule-engine)
-![example workflow](https://github.com/zorkow/speech-rule-engine/actions/workflows/node.js.yml/badge.svg?branch=develop)
-
+![example workflow](https://github.com/zorkow/speech-rule-engine/actions/workflows/test.yml/badge.svg?branch=develop)
+[![codecov](https://codecov.io/gh/speech-rule-engine/speech-rule-engine/branch/develop/graph/badge.svg)](https://codecov.io/gh/speech-rule-engine/speech-rule-engine/tree/develop)
 
 ***
 

@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakNamedSets",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Italian Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "NumSys001": {
+      "expected": "i numeri reali"
+    },
+    "NumSys001a": {
+      "expected": "i numeri reali"
+    },
+    "NumSys002": {
+      "expected": "i numeri complessi"
+    },
+    "NumSys002a": {
+      "expected": "i numeri complessi"
+    },
+    "NumSys003": {
+      "expected": "gli interi"
+    },
+    "NumSys003a": {
+      "expected": "gli interi"
+    },
+    "NumSys004": {
+      "expected": "i numeri razionali"
+    },
+    "NumSys004a": {
+      "expected": "i numeri razionali"
+    },
+    "NumSys005": {
+      "expected": "i numeri naturali"
+    },
+    "NumSys005a": {
+      "expected": "i numeri naturali"
+    },
+    "NumSys005_1": {
+      "expected": "i numeri naturali con lo zero"
+    },
+    "NumSys005_1a": {
+      "expected": "i numeri naturali con lo zero"
+    },
+    "NumSys006": {
+      "expected": "gli interi positivi"
+    },
+    "NumSys006a": {
+      "expected": "gli interi positivi"
+    },
+    "NumSys006_1": {
+      "expected": "gli interi negativi"
+    },
+    "NumSys006_1a": {
+      "expected": "gli interi negativi"
+    },
+    "NumSys007": {
+      "expected": "r-due"
+    },
+    "NumSys007a": {
+      "expected": "r-due"
+    },
+    "NumSys008": {
+      "expected": "z-tre"
+    },
+    "NumSys008a": {
+      "expected": "z-tre"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-infinito"
+    },
+    "NumSys010a": {
+      "expected": "r-infinito"
+    }
+  }
+}

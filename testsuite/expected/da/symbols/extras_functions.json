@@ -1,0 +1,53 @@
+{
+  "locale": "da",
+  "name": "DanishExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsDanish",
+  "information": "Danish Extra Function tests.",
+  "compare": true,
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "naturlig logaritme"
+    },
+    "arccos-clearspeak-Trig_TrigInverse": {
+      "key": "arccos",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus cosinus"
+    },
+    "arccot-clearspeak-Trig_TrigInverse": {
+      "key": "arccot",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus cotangens"
+    },
+    "arccsc-clearspeak-Trig_TrigInverse": {
+      "key": "arccsc",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus cosecans"
+    },
+    "arcsec-clearspeak-Trig_TrigInverse": {
+      "key": "arcsec",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus secans"
+    },
+    "arcsin-clearspeak-Trig_TrigInverse": {
+      "key": "arcsin",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus sinus"
+    },
+    "arctan-clearspeak-Trig_TrigInverse": {
+      "key": "arctan",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "arcus tangens"
+    }
+  }
+}

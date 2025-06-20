@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic Api Tests for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json"
+}

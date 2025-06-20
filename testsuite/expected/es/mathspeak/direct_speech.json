@@ -1,0 +1,66 @@
+{
+  "name": "SpanishMathspeakDirectSpeech",
+  "domain": "mathspeak",
+  "locale": "es",
+  "factory": "speech",
+  "base": "input/common/direct_speech.json",
+  "information": "Spanish Mathspeak Direct speech attributes.",
+  "active": "DirectSpeechSpanish",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "modificando superior mayúscula A mayúscula C con line"
+    },
+    "AriaLabels_1": {
+      "expected": "derivative of x is equal to sigma left parenthesis y menos x right parenthesis"
+    },
+    "AltText_0": {
+      "expected": "A C under line"
+    },
+    "AltText_1": {
+      "expected": "modificando superior mayúscula A mayúscula C con line"
+    },
+    "ExactSpeech_0": {
+      "expected": "A C under line"
+    },
+    "ExactSpeech_1": {
+      "expected": "modificando superior mayúscula A mayúscula C con line"
+    },
+    "MglyphTokens_0": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_1": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_2": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_3": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_4": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_5": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_6": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_7": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_8": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_9": {
+      "expected": "your glyph"
+    },
+    "MglyphGeneral_0": {
+      "expected": "23braid más 132braid igual 13braid"
+    },
+    "MglyphGeneral_1": {
+      "expected": "mayúscula N mayúscula M subíndice 1 incluido en mfin"
+    }
+  }
+}

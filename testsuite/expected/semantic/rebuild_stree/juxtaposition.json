@@ -1,0 +1,5 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "base": "input/semantic/juxtaposition.json"
+}

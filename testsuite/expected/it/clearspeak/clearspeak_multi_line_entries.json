@@ -1,0 +1,244 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakMultiLineEntries",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_multi_line_entries.json",
+  "information": "Italian Clearspeak MultiLineEntries rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Multiline001": {
+      "expected": "2 linee, Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline002": {
+      "expected": "2 linee, Riga 1: x più y; uguale a; 7. Riga 2: 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline003": {
+      "expected": "2 linee, Riga 1: x; più; y; uguale a; 7. Riga 2: 2 x; più; 3 y; uguale a; 17"
+    },
+    "Multiline004": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti x più y uguale a 7. Riga 2: Equation 2 due punti 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline005": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti; x più y uguale a 7. Riga 2: Equation 2 due punti; 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline006": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti; x più y; uguale a; 7. Riga 2: Equation 2 due punti; 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline007": {
+      "expected": "3 linee, Riga 1: 4 x, più 3 y, più 2 z, uguale a 17. Riga 2: 2 x, più 4 y, più 6 z, uguale a 6. Riga 3: 3 x, più 2 y, più 5 z, uguale a 1"
+    },
+    "Multiline008": {
+      "expected": "3 linee, Riga 1: 4 x; più; 3 y; più; 2 z; uguale a; 1. Riga 2: 2 x; più; 4 y; più; 6 z; uguale a; 6. Riga 3: 3 x; più; 2 y; più; 5 z; uguale a; 1"
+    },
+    "Multiline009": {
+      "expected": "3 linee, Riga 1: Equation 1 due punti 4 x, più 3 y, più 2 z, uguale a 17. Riga 2: Equation 2 due punti 2 x, più 4 y, più 6 z, uguale a 6. Riga 3: Equation 3 due punti 3 x, più 2 y, più 5 z, uguale a 1"
+    },
+    "Multiline010": {
+      "expected": "3 linee, Riga 1: x maggiore o uguale a 0. Riga 2: y maggiore o uguale a 0. Riga 3: 3 x, meno 5 y, minore o uguale a 30"
+    },
+    "Multiline011": {
+      "expected": "4 linee, Riga 1: 3 x, più 8 uguale a 5 x. Riga 2: 8 uguale a 5 x, meno 3 x. Riga 3: 8 uguale a 2 x. Riga 4: 4 uguale a x"
+    },
+    "Multiline012": {
+      "expected": "4 linee, Riga 1: 3 x; più; 8; uguale a; 5 x; vuoto; vuoto. Riga 2: vuoto; vuoto; 8; uguale a; 5 x; meno; 3 x. Riga 3: vuoto; vuoto; 8; uguale a; 2 x; vuoto; vuoto. Riga 4: vuoto; vuoto; 4; uguale a; x; vuoto; vuoto"
+    },
+    "Multiline013": {
+      "expected": "4 linee, Riga 1: Step 1 due punti 3 x, più 8 uguale a 5 x. Riga 2: Step 2 due punti 8 uguale a 5 x, meno 3 x. Riga 3: Step 3 due punti 8 uguale a 2 x. Riga 4: Step 4 due punti 4 uguale a x"
+    },
+    "Multiline014": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x if x minore di 0. Caso 2: x if x maggiore o uguale a 0"
+    },
+    "Multiline015": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x; if x minore di 0. Caso 2: x; if x maggiore o uguale a 0"
+    },
+    "Multiline016": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x if x minore di 0. Caso 2: x if x maggiore o uguale a 0"
+    },
+    "Multiline017": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x; if x minore di 0. Caso 2: x; if x maggiore o uguale a 0"
+    },
+    "Multiline018": {
+      "expected": "2 caso, Caso 1: f di x, uguale a meno x; if x minore di 0. Caso 2: f di x, uguale a x; if x maggiore o uguale a 0"
+    },
+    "Multiline019": {
+      "expected": "2 equazioni, Equazioni 1: x più y uguale a 7. Equazioni 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline019a": {
+      "expected": "2 equazioni, Equazioni 1: x più y; uguale a; 7. Equazioni 2: 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline020": {
+      "expected": "2 linee, Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline021": {
+      "expected": "2 linee, Riga 1: x più y; uguale a; 7. Riga 2: 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline022": {
+      "expected": "2 riga, Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline023": {
+      "expected": "2 riga, Riga 1: x più y; uguale a; 7. Riga 2: 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline024": {
+      "expected": "4 passi, Passo 1: 3 x, più 8 uguale a 5 x. Passo 2: 8 uguale a 5 x, meno 3 x. Passo 3: 8 uguale a 2 x. Passo 4: 4 uguale a x"
+    },
+    "Multiline025": {
+      "expected": "4 passi, Passo 1: 3 x; più; 8; uguale a; 5 x; vuoto; vuoto. Passo 2: vuoto; vuoto; 8; uguale a; 5 x; meno; 3 x. Passo 3: vuoto; vuoto; 8; uguale a; 2 x; vuoto; vuoto. Passo 4: vuoto; vuoto; 4; uguale a; x; vuoto; vuoto"
+    },
+    "Multiline026": {
+      "expected": "3 vincoli, Vincoli 1: x maggiore o uguale a 0. Vincoli 2: y maggiore o uguale a 0. Vincoli 3: 3 x, meno 5 y, minore o uguale a 30"
+    },
+    "Multiline026a": {
+      "expected": "3 linee, x maggiore o uguale a 0. y maggiore o uguale a 0. 3 x, meno 5 y, minore o uguale a 30"
+    },
+    "Multiline026b": {
+      "expected": "4 linee, 3 x; più; 8; uguale a; 5 x; vuoto; vuoto. vuoto; vuoto; 8; uguale a; 5 x; meno; 3 x. vuoto; vuoto; 8; uguale a; 2 x; vuoto; vuoto. vuoto; vuoto; 4; uguale a; x; vuoto; vuoto"
+    },
+    "Multiline026c": {
+      "expected": "f di x, uguale a, 2 casi, meno x if x minore di 0. x if x maggiore o uguale a 0"
+    },
+    "Multiline027": {
+      "expected": "2 linee, Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline028": {
+      "expected": "2 linee, Riga 1: x più y. uguale a. 7. Riga 2: 2 x, più 3 y. uguale a. 17"
+    },
+    "Multiline029": {
+      "expected": "2 linee, Riga 1: x. più. y. uguale a. 7. Riga 2: 2 x. più. 3 y. uguale a. 17"
+    },
+    "Multiline030": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti. x più y uguale a 7. Riga 2: Equation 2 due punti. 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline031": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti. x più y. uguale a. 7. Riga 2: Equation 2 due punti. 2 x, più 3 y. uguale a. 17"
+    },
+    "Multiline032": {
+      "expected": "3 linee, Riga 1: 4 x. più. 3 y. più. 2 z. uguale a. 1. Riga 2: 2 x. più. 4 y. più. 6 z. uguale a. 6. Riga 3: 3 x. più. 2 y. più. 5 z. uguale a. 1"
+    },
+    "Multiline033": {
+      "expected": "4 linee, Riga 1: 3 x. più. 8. uguale a. 5 x. vuoto. vuoto. Riga 2: vuoto. vuoto. 8. uguale a. 5 x. meno. 3 x. Riga 3: vuoto. vuoto. 8. uguale a. 2 x. vuoto. vuoto. Riga 4: vuoto. vuoto. 4. uguale a. x. vuoto. vuoto"
+    },
+    "Multiline034": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x. if x minore di 0. Caso 2: x. if x maggiore o uguale a 0"
+    },
+    "Multiline035": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x. if x minore di 0. Caso 2: x. if x maggiore o uguale a 0"
+    },
+    "Multiline036": {
+      "expected": "2 caso, Caso 1: f di x, uguale a meno x. if x minore di 0. Caso 2: f di x, uguale a x. if x maggiore o uguale a 0"
+    },
+    "Multiline037": {
+      "expected": "2 equazioni, Equazioni 1: x più y. uguale a. 7. Equazioni 2: 2 x, più 3 y. uguale a. 17"
+    },
+    "Multiline038": {
+      "expected": "2 linee, Riga 1: x più y. uguale a. 7. Riga 2: 2 x, più 3 y. uguale a. 17"
+    },
+    "Multiline039": {
+      "expected": "2 riga, Riga 1: x più y. uguale a. 7. Riga 2: 2 x, più 3 y. uguale a. 17"
+    },
+    "Multiline040": {
+      "expected": "4 passi, Passo 1: 3 x. più. 8. uguale a. 5 x. vuoto. vuoto. Passo 2: vuoto. vuoto. 8. uguale a. 5 x. meno. 3 x. Passo 3: vuoto. vuoto. 8. uguale a. 2 x. vuoto. vuoto. Passo 4: vuoto. vuoto. 4. uguale a. x. vuoto. vuoto"
+    },
+    "Multiline041": {
+      "expected": "2 linee, Riga 1: x più y, uguale a, 7. Riga 2: 2 x, più 3 y, uguale a, 17"
+    },
+    "Multiline042": {
+      "expected": "2 linee, Riga 1: x, più, y, uguale a, 7. Riga 2: 2 x, più, 3 y, uguale a, 17"
+    },
+    "Multiline043": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti, x più y uguale a 7. Riga 2: Equation 2 due punti, 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline044": {
+      "expected": "2 linee, Riga 1: Equation 1 due punti, x più y, uguale a, 7. Riga 2: Equation 2 due punti, 2 x, più 3 y, uguale a, 17"
+    },
+    "Multiline045": {
+      "expected": "3 linee, Riga 1: 4 x, più, 3 y, più, 2 z, uguale a, 1. Riga 2: 2 x, più, 4 y, più, 6 z, uguale a, 6. Riga 3: 3 x, più, 2 y, più, 5 z, uguale a, 1"
+    },
+    "Multiline046": {
+      "expected": "4 linee, Riga 1: 3 x, più, 8, uguale a, 5 x, vuoto, vuoto. Riga 2: vuoto, vuoto, 8, uguale a, 5 x, meno, 3 x. Riga 3: vuoto, vuoto, 8, uguale a, 2 x, vuoto, vuoto. Riga 4: vuoto, vuoto, 4, uguale a, x, vuoto, vuoto"
+    },
+    "Multiline047": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x, if x minore di 0. Caso 2: x, if x maggiore o uguale a 0"
+    },
+    "Multiline048": {
+      "expected": "f di x, uguale a, 2 casi, Caso 1: meno x, if x minore di 0. Caso 2: x, if x maggiore o uguale a 0"
+    },
+    "Multiline049": {
+      "expected": "2 caso, Caso 1: f di x, uguale a meno x, if x minore di 0. Caso 2: f di x, uguale a x, if x maggiore o uguale a 0"
+    },
+    "Multiline050": {
+      "expected": "2 equazioni, Equazioni 1: x più y, uguale a, 7. Equazioni 2: 2 x, più 3 y, uguale a, 17"
+    },
+    "Multiline051": {
+      "expected": "2 linee, Riga 1: x più y, uguale a, 7. Riga 2: 2 x, più 3 y, uguale a, 17"
+    },
+    "Multiline052": {
+      "expected": "2 riga, Riga 1: x più y, uguale a, 7. Riga 2: 2 x, più 3 y, uguale a, 17"
+    },
+    "Multiline053": {
+      "expected": "4 passi, Passo 1: 3 x, più, 8, uguale a, 5 x, vuoto, vuoto. Passo 2: vuoto, vuoto, 8, uguale a, 5 x, meno, 3 x. Passo 3: vuoto, vuoto, 8, uguale a, 2 x, vuoto, vuoto. Passo 4: vuoto, vuoto, 4, uguale a, x, vuoto, vuoto"
+    },
+    "Multiline054": {
+      "expected": "Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline055": {
+      "expected": "Riga 1: x più y; uguale a; 7. Riga 2: 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline056": {
+      "expected": "Riga 1: x; più; y; uguale a; 7. Riga 2: 2 x; più; 3 y; uguale a; 17"
+    },
+    "Multiline057": {
+      "expected": "Riga 1: Equation 1 due punti x più y uguale a 7. Riga 2: Equation 2 due punti 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline058": {
+      "expected": "Riga 1: Equation 1 due punti; x più y uguale a 7. Riga 2: Equation 2 due punti; 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline059": {
+      "expected": "Riga 1: Equation 1 due punti; x più y; uguale a; 7. Riga 2: Equation 2 due punti; 2 x, più 3 y; uguale a; 17"
+    },
+    "Multiline060": {
+      "expected": "Riga 1: 4 x, più 3 y, più 2 z, uguale a 17. Riga 2: 2 x, più 4 y, più 6 z, uguale a 6. Riga 3: 3 x, più 2 y, più 5 z, uguale a 1"
+    },
+    "Multiline061": {
+      "expected": "Riga 1: 4 x; più; 3 y; più; 2 z; uguale a; 1. Riga 2: 2 x; più; 4 y; più; 6 z; uguale a; 6. Riga 3: 3 x; più; 2 y; più; 5 z; uguale a; 1"
+    },
+    "Multiline062": {
+      "expected": "Riga 1: Equation 1 due punti 4 x, più 3 y, più 2 z, uguale a 17. Riga 2: Equation 2 due punti 2 x, più 4 y, più 6 z, uguale a 6. Riga 3: Equation 3 due punti 3 x, più 2 y, più 5 z, uguale a 1"
+    },
+    "Multiline063": {
+      "expected": "Riga 1: Step 1 due punti 3 x, più 8 uguale a 5 x. Riga 2: Step 2 due punti 8 uguale a 5 x, meno 3 x. Riga 3: Step 3 due punti 8 uguale a 2 x. Riga 4: Step 4 due punti 4 uguale a x"
+    },
+    "Multiline064": {
+      "expected": "f di x, uguale a, Caso 1: meno x if x minore di 0. Caso 2: x if x maggiore o uguale a 0"
+    },
+    "Multiline065": {
+      "expected": "f di x, uguale a, Caso 1: meno x; if x minore di 0. Caso 2: x; if x maggiore o uguale a 0"
+    },
+    "Multiline066": {
+      "expected": "f di x, uguale a, Caso 1: meno x if x minore di 0. Caso 2: x if x maggiore o uguale a 0"
+    },
+    "Multiline067": {
+      "expected": "Caso 1: f di x, uguale a meno x; if x minore di 0. Caso 2: f di x, uguale a x; if x maggiore o uguale a 0"
+    },
+    "Multiline068": {
+      "expected": "Equazioni 1: x più y uguale a 7. Equazioni 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline069": {
+      "expected": "Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline070": {
+      "expected": "Riga 1: x più y uguale a 7. Riga 2: 2 x, più 3 y, uguale a 17"
+    },
+    "Multiline071": {
+      "expected": "Passo 1: 3 x, più 8 uguale a 5 x. Passo 2: 8 uguale a 5 x, meno 3 x. Passo 3: 8 uguale a 2 x. Passo 4: 4 uguale a x"
+    },
+    "Multiline072": {
+      "expected": "Passo 1: 3 x; più; 8; uguale a; 5 x; vuoto; vuoto. Passo 2: vuoto; vuoto; 8; uguale a; 5 x; meno; 3 x. Passo 3: vuoto; vuoto; 8; uguale a; 2 x; vuoto; vuoto. Passo 4: vuoto; vuoto; 4; uguale a; x; vuoto; vuoto"
+    },
+    "Multiline073": {
+      "expected": "Vincoli 1: x maggiore o uguale a 0. Vincoli 2: y maggiore o uguale a 0. Vincoli 3: 3 x, meno 5 y, minore o uguale a 30"
+    }
+  }
+}

@@ -1,0 +1,705 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanMathspeakTensors",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "German Mathspeak Tensor tests.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "active": "MathspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment3_": " Tensor tests are named with the convention of including the indices that are",
+    "_comment4_": " present:",
+    "_comment5_": "   B      D",
+    "_comment6_": "     Base     R",
+    "_comment7_": "   A      C",
+    "_comment8_": "  Where R is the rest.",
+    "PartialTensorABCD_default": {
+      "expected": "Index a hoch b Grundlinie x Index c hoch d"
+    },
+    "PartialTensorABCD_brief": {
+      "expected": "Index a hoch b Grund x Index c hoch d"
+    },
+    "PartialTensorABCD_sbrief": {
+      "expected": "Index a hoch b Grund x Index c hoch d"
+    },
+    "PartialTensorABC_default": {
+      "expected": "Index a hoch b Grundlinie x Index c"
+    },
+    "PartialTensorABC_brief": {
+      "expected": "Index a hoch b Grund x Index c"
+    },
+    "PartialTensorABC_sbrief": {
+      "expected": "Index a hoch b Grund x Index c"
+    },
+    "PartialTensorABD_default": {
+      "expected": "Index a hoch b Grundlinie x hoch d"
+    },
+    "PartialTensorABD_brief": {
+      "expected": "Index a hoch b Grund x hoch d"
+    },
+    "PartialTensorABD_sbrief": {
+      "expected": "Index a hoch b Grund x hoch d"
+    },
+    "PartialTensorAB_default": {
+      "expected": "Index a hoch b Grundlinie x"
+    },
+    "PartialTensorAB_brief": {
+      "expected": "Index a hoch b Grund x"
+    },
+    "PartialTensorAB_sbrief": {
+      "expected": "Index a hoch b Grund x"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "Index a hoch b Grundlinie x Index c Grundlinie r"
+    },
+    "PartialTensorABCR_brief": {
+      "expected": "Index a hoch b Grund x Index c Grund r"
+    },
+    "PartialTensorABCR_sbrief": {
+      "expected": "Index a hoch b Grund x Index c Grund r"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "Index a hoch b Grundlinie x Index c hoch d Grundlinie r"
+    },
+    "PartialTensorABCDR_brief": {
+      "expected": "Index a hoch b Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "expected": "Index a hoch b Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x Index c hoch d Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Ende Bruch"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Ende Bruch"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Ende Bruch"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "_comment20_": "New completion.",
+    "PartialTensorB_default": {
+      "expected": "hoch b Grundlinie x"
+    },
+    "PartialTensorB_brief": {
+      "expected": "hoch b Grund x"
+    },
+    "PartialTensorB_sbrief": {
+      "expected": "hoch b Grund x"
+    },
+    "PartialTensorBR_default": {
+      "expected": "hoch b Grundlinie x r"
+    },
+    "PartialTensorBR_brief": {
+      "expected": "hoch b Grund x r"
+    },
+    "PartialTensorBR_sbrief": {
+      "expected": "hoch b Grund x r"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x Ende Quadratwurzel r"
+    },
+    "PartialTensorBRootR_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x r Ende Quadratwurzel"
+    },
+    "PartialTensorBRRoot_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x Ende Bruch r"
+    },
+    "PartialTensorBFracR_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x Ende Bruch r"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x Ende Bruch r"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x r Ende Bruch"
+    },
+    "PartialTensorBRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x r Ende Bruch"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x r Ende Bruch"
+    },
+    "PartialTensorBD_default": {
+      "expected": "hoch b Grundlinie x hoch d"
+    },
+    "PartialTensorBD_brief": {
+      "expected": "hoch b Grund x hoch d"
+    },
+    "PartialTensorBD_sbrief": {
+      "expected": "hoch b Grund x hoch d"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "hoch b Grundlinie x hoch d Grundlinie r"
+    },
+    "PartialTensorBDR_brief": {
+      "expected": "hoch b Grund x hoch d Grund r"
+    },
+    "PartialTensorBDR_sbrief": {
+      "expected": "hoch b Grund x hoch d Grund r"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorBDRootR_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorBDFracR_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorBC_default": {
+      "expected": "hoch b Grundlinie x Index c"
+    },
+    "PartialTensorBC_brief": {
+      "expected": "hoch b Grund x Index c"
+    },
+    "PartialTensorBC_sbrief": {
+      "expected": "hoch b Grund x Index c"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "hoch b Grundlinie x Index c Grundlinie r"
+    },
+    "PartialTensorBCR_brief": {
+      "expected": "hoch b Grund x Index c Grund r"
+    },
+    "PartialTensorBCR_sbrief": {
+      "expected": "hoch b Grund x Index c Grund r"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x Index c Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorBCRootR_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x Index c Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x Index c Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x Index c Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x Index c Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x Index c Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x Index c Grundlinie Ende Bruch r"
+    },
+    "PartialTensorBCFracR_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x Index c Grund Ende Bruch r"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x Index c Grund Ende Bruch r"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x Index c Grundlinie r Ende Bruch"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x Index c Grund r Ende Bruch"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x Index c Grund r Ende Bruch"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "hoch b Grundlinie x Index c hoch d"
+    },
+    "PartialTensorBCD_brief": {
+      "expected": "hoch b Grund x Index c hoch d"
+    },
+    "PartialTensorBCD_sbrief": {
+      "expected": "hoch b Grund x Index c hoch d"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "hoch b Grundlinie x Index c hoch d Grundlinie r"
+    },
+    "PartialTensorBCDR_brief": {
+      "expected": "hoch b Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "expected": "hoch b Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "Anfang Quadratwurzel hoch b Grundlinie x Index c hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "expected": "Anfang Quadratwurzel hoch b Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "expected": "Quadratwurzel hoch b Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x Index c hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "Anfang Bruch 1 durch hoch b Grundlinie x Index c hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch hoch b Grund x Index c hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "expected": "Bruch 1 durch hoch b Grund x Index c hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorA_default": {
+      "expected": "Index a Grundlinie x"
+    },
+    "PartialTensorA_brief": {
+      "expected": "Index a Grund x"
+    },
+    "PartialTensorA_sbrief": {
+      "expected": "Index a Grund x"
+    },
+    "PartialTensorAR_default": {
+      "expected": "Index a Grundlinie x r"
+    },
+    "PartialTensorAR_brief": {
+      "expected": "Index a Grund x r"
+    },
+    "PartialTensorAR_sbrief": {
+      "expected": "Index a Grund x r"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x Ende Quadratwurzel r"
+    },
+    "PartialTensorARootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorARootR_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x r Ende Quadratwurzel"
+    },
+    "PartialTensorARRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x Ende Bruch r"
+    },
+    "PartialTensorAFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x Ende Bruch r"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x Ende Bruch r"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x r Ende Bruch"
+    },
+    "PartialTensorARFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x r Ende Bruch"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x r Ende Bruch"
+    },
+    "PartialTensorAD_default": {
+      "expected": "Index a Grundlinie x hoch d"
+    },
+    "PartialTensorAD_brief": {
+      "expected": "Index a Grund x hoch d"
+    },
+    "PartialTensorAD_sbrief": {
+      "expected": "Index a Grund x hoch d"
+    },
+    "PartialTensorADR_default": {
+      "expected": "Index a Grundlinie x hoch d Grundlinie r"
+    },
+    "PartialTensorADR_brief": {
+      "expected": "Index a Grund x hoch d Grund r"
+    },
+    "PartialTensorADR_sbrief": {
+      "expected": "Index a Grund x hoch d Grund r"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorADRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorADRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorADFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorADRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorAC_default": {
+      "expected": "Index a Grundlinie x Index c"
+    },
+    "PartialTensorAC_brief": {
+      "expected": "Index a Grund x Index c"
+    },
+    "PartialTensorAC_sbrief": {
+      "expected": "Index a Grund x Index c"
+    },
+    "PartialTensorACR_default": {
+      "expected": "Index a Grundlinie x Index c Grundlinie r"
+    },
+    "PartialTensorACR_brief": {
+      "expected": "Index a Grund x Index c Grund r"
+    },
+    "PartialTensorACR_sbrief": {
+      "expected": "Index a Grund x Index c Grund r"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x Index c Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorACRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x Index c Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x Index c Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x Index c Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorACRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x Index c Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x Index c Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x Index c Grundlinie Ende Bruch r"
+    },
+    "PartialTensorACFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x Index c Grund Ende Bruch r"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x Index c Grund Ende Bruch r"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x Index c Grundlinie r Ende Bruch"
+    },
+    "PartialTensorACRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x Index c Grund r Ende Bruch"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x Index c Grund r Ende Bruch"
+    },
+    "PartialTensorACD_default": {
+      "expected": "Index a Grundlinie x Index c hoch d"
+    },
+    "PartialTensorACD_brief": {
+      "expected": "Index a Grund x Index c hoch d"
+    },
+    "PartialTensorACD_sbrief": {
+      "expected": "Index a Grund x Index c hoch d"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "Index a Grundlinie x Index c hoch d Grundlinie r"
+    },
+    "PartialTensorACDR_brief": {
+      "expected": "Index a Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorACDR_sbrief": {
+      "expected": "Index a Grund x Index c hoch d Grund r"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x Index c hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorACDRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x Index c hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a Grundlinie x Index c hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x Index c hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorACDFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x Index c hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a Grundlinie x Index c hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a Grund x Index c hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a Grund x Index c hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorABR_default": {
+      "expected": "Index a hoch b Grundlinie x r"
+    },
+    "PartialTensorABR_brief": {
+      "expected": "Index a hoch b Grund x r"
+    },
+    "PartialTensorABR_sbrief": {
+      "expected": "Index a hoch b Grund x r"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Ende Quadratwurzel r"
+    },
+    "PartialTensorABRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x Ende Quadratwurzel r"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x r Ende Quadratwurzel"
+    },
+    "PartialTensorABRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x r Ende Quadratwurzel"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Ende Bruch r"
+    },
+    "PartialTensorABFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Ende Bruch r"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x Ende Bruch r"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x r Ende Bruch"
+    },
+    "PartialTensorABRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x r Ende Bruch"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x r Ende Bruch"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "Index a hoch b Grundlinie x hoch d Grundlinie r"
+    },
+    "PartialTensorABDR_brief": {
+      "expected": "Index a hoch b Grund x hoch d Grund r"
+    },
+    "PartialTensorABDR_sbrief": {
+      "expected": "Index a hoch b Grund x hoch d Grund r"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x hoch d Grundlinie Ende Quadratwurzel r"
+    },
+    "PartialTensorABDRootR_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x hoch d Grund Ende Quadratwurzel r"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x hoch d Grundlinie Ende Bruch r"
+    },
+    "PartialTensorABDFracR_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x hoch d Grund Ende Bruch r"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x hoch d Grund r Ende Bruch"
+    },
+    "_comment10_": "Rest.",
+    "TensorMultiSimpleABC_default": {
+      "expected": "Index a hoch b Grundlinie x Index c Index hoch l"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "expected": "Index a hoch b Grund x Index c Index hoch l"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "expected": "Index a hoch b Grund x Index c Index hoch l"
+    },
+    "TensorMultiSub_default": {
+      "expected": "Index a hoch b Grundlinie x Index c Index Index l hoch d"
+    },
+    "TensorMultiSub_brief": {
+      "expected": "Index a hoch b Grund x Index c Index Index l hoch d"
+    },
+    "TensorMultiSub_sbrief": {
+      "expected": "Index a hoch b Grund x Index c Index Index l hoch d"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "Index a hoch b Grundlinie x Index c Index Index l Index Index hoch k Index e hoch d"
+    },
+    "TensorMultiSubSup_brief": {
+      "expected": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "expected": "Index a hoch b Grund x Index c Index Index l Index Index hoch k Index e hoch d"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "Index a hoch b Grundlinie x Index c Index hoch l hoch d"
+    },
+    "TensorMultiSimple_brief": {
+      "expected": "Index a hoch b Grund x Index c Index hoch l hoch d"
+    },
+    "TensorMultiSimple_sbrief": {
+      "expected": "Index a hoch b Grund x Index c Index hoch l hoch d"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "Index a hoch b Grundlinie x Index c k Index hoch l hoch d"
+    },
+    "TensorMultiComplex_brief": {
+      "expected": "Index a hoch b Grund x Index c k Index hoch l hoch d"
+    },
+    "TensorMultiComplex_sbrief": {
+      "expected": "Index a hoch b Grund x Index c k Index hoch l hoch d"
+    },
+    "TwoTensors_default": {
+      "expected": "Index a hoch b Grundlinie x Index c hoch d Grundlinie Index a hoch b Grundlinie x Index c hoch d"
+    },
+    "TwoTensors_brief": {
+      "expected": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
+    },
+    "TwoTensors_sbrief": {
+      "expected": "Index a hoch b Grund x Index c hoch d Grund Index a hoch b Grund x Index c hoch d"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grundlinie x Index c hoch d Grundlinie r Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "expected": "Anfang Quadratwurzel Index a hoch b Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "expected": "Quadratwurzel Index a hoch b Grund x Index c hoch d Grund r Ende Quadratwurzel"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grundlinie x Index c hoch d Grundlinie r Ende Bruch"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "expected": "Anfang Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund r Ende Bruch"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "expected": "Bruch 1 durch Index a hoch b Grund x Index c hoch d Grund r Ende Bruch"
+    }
+  }
+}

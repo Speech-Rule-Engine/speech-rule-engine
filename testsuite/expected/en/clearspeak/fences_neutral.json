@@ -1,0 +1,264 @@
+{
+  "name": "EnglishClearspeakFencesNeutral",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/common/fences_neutral.json",
+  "information": "English Clearspeak Neutral Fences rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "BarFenced_0_sbrief",
+    "BarFenced_1_sbrief",
+    "BarFenced_2_sbrief",
+    "BarFenced_3_sbrief",
+    "BarFenced_4_sbrief",
+    "BarFenced_5_sbrief",
+    "BarFenced_6_sbrief",
+    "BarFencedMixed_0_sbrief",
+    "BarFencedMixed_1_sbrief",
+    "BarFencedMixed_2_sbrief",
+    "BarFencedMixed_3_sbrief",
+    "CenterBar_0_sbrief",
+    "CenterBar_1_sbrief",
+    "CenterBar_2_sbrief",
+    "CenterBar_3_sbrief",
+    "CenterBar_4_sbrief",
+    "CenterBar_5_sbrief",
+    "Function_0_sbrief",
+    "Function_1_sbrief",
+    "Function_2_sbrief",
+    "Function_3_sbrief",
+    "Function_4_sbrief",
+    "Function_5_sbrief",
+    "FunctionMetric0_sbrief",
+    "FunctionMetric1_sbrief",
+    "FunctionMetric2_sbrief",
+    "FunctionMetric3_sbrief",
+    "FunctionMetric4_sbrief",
+    "FunctionMetric5_sbrief",
+    "CenterBarFunc_0_sbrief",
+    "CenterBarFunc_1_sbrief",
+    "CenterBarFunc_2_sbrief",
+    "CenterBarFunc_3_sbrief",
+    "CenterBarFunc_4_sbrief",
+    "CenterBarFunc_5_sbrief",
+    "CenterBarFunc_6_sbrief"
+  ],
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "the absolute value of a"
+    },
+    "BarFenced_1_default": {
+      "expected": "the absolute value of a"
+    },
+    "BarFenced_2_default": {
+      "expected": "the absolute value of a"
+    },
+    "BarFenced_3_default": {
+      "expected": "the metric of a"
+    },
+    "BarFenced_4_default": {
+      "expected": "the metric of a"
+    },
+    "BarFenced_5_default": {
+      "expected": "the metric of a"
+    },
+    "BarFenced_6_default": {
+      "expected": "the metric of a"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "divides a double vertical bar"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "parallel to a double vertical bar"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "divides a divides"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "triple vertical bar a double vertical bar"
+    },
+    "CenterBar_0_default": {
+      "expected": "a divides b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a divides b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a divides b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a double vertical bar b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a parallel to b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a triple vertical bar b"
+    },
+    "BarFenced_0_AbsoluteValue_AbsEnd": {
+      "expected": "the absolute value of a, end absolute value"
+    },
+    "BarFenced_1_AbsoluteValue_AbsEnd": {
+      "expected": "the absolute value of a, end absolute value"
+    },
+    "BarFenced_2_AbsoluteValue_AbsEnd": {
+      "expected": "the absolute value of a, end absolute value"
+    },
+    "BarFenced_3_AbsoluteValue_AbsEnd": {
+      "expected": "the metric of a, end metric"
+    },
+    "BarFenced_4_AbsoluteValue_AbsEnd": {
+      "expected": "the metric of a, end metric"
+    },
+    "BarFenced_5_AbsoluteValue_AbsEnd": {
+      "expected": "the metric of a, end metric"
+    },
+    "BarFenced_6_AbsoluteValue_AbsEnd": {
+      "expected": "the metric of a, end metric"
+    },
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd": {
+      "expected": "divides a double vertical bar"
+    },
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd": {
+      "expected": "parallel to a double vertical bar"
+    },
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd": {
+      "expected": "divides a divides"
+    },
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd": {
+      "expected": "triple vertical bar a double vertical bar"
+    },
+    "CenterBar_0_AbsoluteValue_AbsEnd": {
+      "expected": "a divides b"
+    },
+    "CenterBar_1_AbsoluteValue_AbsEnd": {
+      "expected": "a divides b"
+    },
+    "CenterBar_2_AbsoluteValue_AbsEnd": {
+      "expected": "a divides b"
+    },
+    "CenterBar_3_AbsoluteValue_AbsEnd": {
+      "expected": "a double vertical bar b"
+    },
+    "CenterBar_4_AbsoluteValue_AbsEnd": {
+      "expected": "a parallel to b"
+    },
+    "CenterBar_5_AbsoluteValue_AbsEnd": {
+      "expected": "a triple vertical bar b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f double vertical bar g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f parallel to g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f triple vertical bar g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sine triple vertical bar g"
+    },
+    "Function_0_default": {
+      "expected": "f of, the absolute value of a"
+    },
+    "Function_1_default": {
+      "expected": "g of, the absolute value of a"
+    },
+    "Function_2_default": {
+      "expected": "h of, the absolute value of a"
+    },
+    "Function_3_default": {
+      "expected": "r times, the absolute value of a"
+    },
+    "Function_4_default": {
+      "expected": "sine, the absolute value of a"
+    },
+    "Function_5_default": {
+      "expected": "the sum of, the absolute value of a"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f of, the metric of a"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g of, the metric of a"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h of, the metric of a"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r times, the metric of a"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sine, the metric of a"
+    },
+    "FunctionMetric5_default": {
+      "expected": "the sum of, the metric of a"
+    },
+    "Function_0_AbsoluteValue_AbsEnd": {
+      "expected": "f of, the absolute value of a, end absolute value"
+    },
+    "Function_1_AbsoluteValue_AbsEnd": {
+      "expected": "g of, the absolute value of a, end absolute value"
+    },
+    "Function_2_AbsoluteValue_AbsEnd": {
+      "expected": "h of, the absolute value of a, end absolute value"
+    },
+    "Function_3_AbsoluteValue_AbsEnd": {
+      "expected": "r times, the absolute value of a, end absolute value"
+    },
+    "Function_4_AbsoluteValue_AbsEnd": {
+      "expected": "sine, the absolute value of a, end absolute value"
+    },
+    "Function_5_AbsoluteValue_AbsEnd": {
+      "expected": "the sum of, the absolute value of a, end absolute value"
+    },
+    "FunctionMetric0_AbsoluteValue_AbsEnd": {
+      "expected": "f of, the metric of a, end metric"
+    },
+    "FunctionMetric1_AbsoluteValue_AbsEnd": {
+      "expected": "g of, the metric of a, end metric"
+    },
+    "FunctionMetric2_AbsoluteValue_AbsEnd": {
+      "expected": "h of, the metric of a, end metric"
+    },
+    "FunctionMetric3_AbsoluteValue_AbsEnd": {
+      "expected": "r times, the metric of a, end metric"
+    },
+    "FunctionMetric4_AbsoluteValue_AbsEnd": {
+      "expected": "sine, the metric of a, end metric"
+    },
+    "FunctionMetric5_AbsoluteValue_AbsEnd": {
+      "expected": "the sum of, the metric of a, end metric"
+    },
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd": {
+      "expected": "f divides g"
+    },
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd": {
+      "expected": "f double vertical bar g"
+    },
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd": {
+      "expected": "f parallel to g"
+    },
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd": {
+      "expected": "f triple vertical bar g"
+    },
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd": {
+      "expected": "sine triple vertical bar g"
+    }
+  }
+}

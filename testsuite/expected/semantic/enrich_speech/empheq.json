@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech empheq tests.",
+  "base": "input/semantic/empheq.json"
+}

@@ -1,0 +1,324 @@
+{
+  "name": "DanishMathspeakUnits",
+  "locale": "da",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Danish Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakDanish",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "compare": true,
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "tommer kvadreret"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "tommer kvadreret"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "tommer kvadreret"
+    },
+    "UnitSquare_1_default": {
+      "expected": "sekunder kvadreret"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "sekunder kvadreret"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "sekunder kvadreret"
+    },
+    "UnitSquare_2_default": {
+      "expected": "meter kvadreret"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "meter kvadreret"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "meter kvadreret"
+    },
+    "UnitCube_0_default": {
+      "expected": "tommer i tredje"
+    },
+    "UnitCube_0_brief": {
+      "expected": "tommer i tredje"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "tommer i tredje"
+    },
+    "UnitCube_1_default": {
+      "expected": "sekunder i tredje"
+    },
+    "UnitCube_1_brief": {
+      "expected": "sekunder i tredje"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "sekunder i tredje"
+    },
+    "UnitCube_2_default": {
+      "expected": "meter i tredje"
+    },
+    "UnitCube_2_brief": {
+      "expected": "meter i tredje"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "meter i tredje"
+    },
+    "UnitInverse_default": {
+      "expected": "tommer Hævet negativ 1"
+    },
+    "UnitInverse_brief": {
+      "expected": "tommer Hævet negativ 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "tommer Hævet negativ 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "tommer Hævet negativ 1 Grundlinje millimeter Hævet negativ 1"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "tommer Hævet negativ 1 Basis millimeter Hævet negativ 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "tommer Hævet negativ 1 Basis millimeter Hævet negativ 1"
+    },
+    "UnitDivide_default": {
+      "expected": "Start Brøk tommer Over millimeter Slut Brøk"
+    },
+    "UnitDivide_brief": {
+      "expected": "Start Brøk tommer Over millimeter Slut Brøk"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "Brøk tommer Over millimeter SlutBrøk"
+    },
+    "UnitsSingle_0": {
+      "expected": "kilometer"
+    },
+    "UnitsSingle_1": {
+      "expected": "ampere"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohm"
+    },
+    "UnitsSingle_3": {
+      "expected": "kiloohm"
+    },
+    "UnitsSingle_4": {
+      "expected": "Celsius"
+    },
+    "UnitsSimple_0": {
+      "expected": "minimum minutter"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 kilometer"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilometer plustegn sekunder"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "kilometer kvadreret"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "meter i tredje"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilometer Hævet 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "meter Hævet negativ 1"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "sekunder meter Hævet negativ 1"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "Start Brøk sekunder Over meter Slut Brøk Hævet negativ 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "Start Brøk sekunder Over meter Slut Brøk Hævet negativ 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 meter Hævet negativ 1"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "Start Brøk kilometer Over timer Slut Brøk"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newton Start Brøk kilometer Over timer Slut Brøk"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "Start Brøk m Over kilometer Slut Brøk"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 kilometer timer"
+    },
+    "UnitsExpressions_0": {
+      "expected": "sekunder 3 m kilometer timer"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilometer sekunder kvadreret 3 m kilometer timer"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m kilometer timer Start Brøk stort N Over sekunder kvadreret Slut Brøk"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m kilometer timer Start Brøk Newton Over sekunder kvadreret Slut Brøk"
+    },
+    "UnitPlural_1": {
+      "expected": "4 millimeter"
+    },
+    "UnitPlural_2": {
+      "expected": "1 millimeter"
+    },
+    "UnitPlural_3": {
+      "expected": "4 millimeter"
+    },
+    "UnitPlural_4": {
+      "expected": "1 millimeter"
+    },
+    "UnitCombine_0": {
+      "expected": "meter sekunder"
+    },
+    "UnitCombine_1": {
+      "expected": "m sekunder"
+    },
+    "UnitCombine_2": {
+      "expected": "meter s"
+    },
+    "UnitCombine_3": {
+      "expected": "meter sekunder"
+    },
+    "UnitCombine_4": {
+      "expected": "m sekunder"
+    },
+    "UnitCombine_5": {
+      "expected": "meter s"
+    },
+    "UnitCombine_6": {
+      "expected": "meter sekunder liter"
+    },
+    "issue_364_1": {
+      "expected": "63360 tommer lig med 63360 tommer lig med 63360 dobbelt mærke lig med 63360 inches lig med 5280 fod lig med 5280 fod lig med 5280 mærke lig med 5280 feet lig med 1760 yards lig med 1760 yards lig med 1760 yards lig med 1 mil lig med 1 mil lig med 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 links lig med 8000 links lig med 8000 links lig med 320 stænger lig med 320 stænger lig med 320 rods lig med 80 kæder lig med 80 kæder lig med 80 chains lig med 8 furlong lig med 8 furlong lig med 8 furlongs lig med 1 mil lig med 1 mil lig med 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 kvadratfod lig med 43560 kvadratfod lig med 43560 fod kvadreret lig med 43560 mærke kvadreret lig med 43560 square feet lig med 4840 kvadratyard lig med 4840 kvadratyard lig med 4840 yards kvadreret lig med 4840 square yards lig med 160 kvadratrødder lig med 160 kvadratrødder lig med 160 stænger kvadreret lig med 160 square rods lig med 1 acres lig med 1 acres lig med 1 acre lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil lig med Start Brøk 1 Over 640 Slut Brøk mil kvadreret lig med Start Brøk 1 Over 640 Slut Brøk square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 kubiktommer lig med 46656 kubiktommer lig med 46656 tommer i tredje lig med 46656 dobbelt mærke i tredje lig med 46656 cubic inches lig med 27 kubikfod lig med 27 kubikfod lig med 27 fod i tredje lig med 27 mærke i tredje lig med 27 cubic feet lig med 1 kubikyards lig med 1 kubikyards lig med 1 yards i tredje lig med 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 fluid drams lig med 1024 fluid drams lig med 1024 fluid drams lig med 768 teskeer lig med 768 teskeer lig med 768 teaspoons lig med 256 spiseskeer lig med 256 spiseskeer lig med 256 tablespoons lig med 128 flydende ounces lig med 128 flydende ounces lig med 128 fluid ounces lig med 16 kopper lig med 16 kopper lig med 16 cups lig med 8 pints lig med 8 pints lig med 8 pints lig med 4 quarts lig med 4 quarts lig med 4 quarts lig med 1 gallons lig med 1 gallons lig med 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 dram lig med 256 dram lig med 256 drams lig med 16 ounces lig med 16 ounces lig med 16 ounces lig med 1 # lig med 1 pund lig med 1 pund lig med 1 pounds lig med 100 hektokilogram lig med 100 hektokilogram lig med 100 hundredweights lig med 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 tommer lig med 63360 tommer lig med 63360 dobbelt mærke lig med 63360 inches lig med 5280 fod lig med 5280 fod lig med 5280 mærke lig med 5280 feet lig med 1760 yards lig med 1760 yards lig med 1760 yards lig med 1 mil lig med 1 mil lig med 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule lig med 1 kilogram prik meter kvadreret prik sekunder Hævet negativ 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
+    },
+    "unit_cube": {
+      "expected": "tommer i tredje"
+    },
+    "UnitDiv_0": {
+      "expected": "Start Brøk kilometer kilogram sekunder kvadreret Over joule Slut Brøk"
+    },
+    "UnitDiv_1": {
+      "expected": "Start Brøk 3 kilometer 1 kilogram sekunder kvadreret Over joule Slut Brøk"
+    },
+    "UnitDiv_2": {
+      "expected": "Start Brøk 1 kilometer kilogram sekunder kvadreret Over joule Slut Brøk"
+    },
+    "UnitDiv_3": {
+      "expected": "Start Brøk 1 kilometer kilogram sekunder kvadreret Over 5 joule Slut Brøk"
+    },
+    "UnitKm": {
+      "expected": "kilometer"
+    },
+    "UnitLong_1": {
+      "expected": "3 kilometer kilogram sekunder kvadreret joule"
+    },
+    "UnitLong_2": {
+      "expected": "3 kilometer kilogram sekunder kvadreret joule"
+    },
+    "UnitLong_3": {
+      "expected": "3 kilometer 4 kilogram sekunder kvadreret joule"
+    },
+    "UnitLong_4": {
+      "expected": "3 kilometer 1 kilogram sekunder kvadreret joule"
+    },
+    "UnitMultiple": {
+      "expected": "1 kilometer sekunder plustegn 2 kilometer sekunder plustegn 0 kilometer sekunder plustegn a kilometer sekunder plustegn"
+    },
+    "UnitMultitude": {
+      "expected": "1 kilometer plustegn 2 kilometer plustegn 0 kilometer plustegn a kilometer"
+    },
+    "UnitNumb_0": {
+      "expected": "1 to tredjedele kilogram"
+    },
+    "UnitNumb_1": {
+      "expected": "1 to tredjedele kilogram kilometer"
+    },
+    "UnitNumb_2": {
+      "expected": "1 kilometer 2 kilogram kilometer"
+    },
+    "UnitTriple": {
+      "expected": "1 kilometer kilogram sekunder plustegn 2 kilometer kilogram sekunder plustegn 0 kilometer kilogram sekunder plustegn a kilometer kilogram sekunder plustegn"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dollars"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "dollars 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dollars"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dollars"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dollars"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "dollars 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dollars plustegn 2 dollars plustegn 0 dollars plustegn a dollars"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dollars plustegn dollars 2 plustegn 0 dollars plustegn dollars a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro plustegn 2 euro plustegn 0 euro plustegn a euro"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 pund plustegn 2 pund plustegn 0 pund plustegn a pund"
+    }
+  }
+}

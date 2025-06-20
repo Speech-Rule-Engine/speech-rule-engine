@@ -1,0 +1,296 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakPart3Adornments",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
+  "information": "Korean Clearspeak Part3Adornments rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 3: Adornments",
+    "_comment2_": " Prime, Double Prime, and Triple Prime",
+    "Prime001": {
+      "expected": "A 프라임, B 프라임"
+    },
+    "Prime002": {
+      "expected": "A 더블 프라임, B 더블 프라임"
+    },
+    "Prime003": {
+      "expected": "A 트리플 프라임, B 트리플 프라임"
+    },
+    "Prime004": {
+      "expected": "f 프라임 의 x"
+    },
+    "Prime005": {
+      "expected": "f 더블 프라임 의 x"
+    },
+    "Prime006": {
+      "expected": "f 트리플 프라임 의 x"
+    },
+    "Prime007": {
+      "expected": "1 피트"
+    },
+    "Prime008": {
+      "expected": "2 피트"
+    },
+    "Prime009": {
+      "expected": "1 인치"
+    },
+    "Prime010": {
+      "expected": "2 인치"
+    },
+    "Prime011": {
+      "expected": "16 피트, 10 인치"
+    },
+    "_comment3_": " TODO: (Simons) Better handling of degrees.",
+    "Prime012": {
+      "expected": "45 도, 10 분"
+    },
+    "Prime013": {
+      "expected": "x 도, y 분"
+    },
+    "Prime014": {
+      "expected": "45 도, 10 분, 25 초"
+    },
+    "Prime015": {
+      "expected": "x 도, y 분, z 초"
+    },
+    "Prime016": {
+      "expected": "1 분"
+    },
+    "Prime017": {
+      "expected": "x 분"
+    },
+    "Prime018": {
+      "expected": "2 분"
+    },
+    "Prime019": {
+      "expected": "1 초"
+    },
+    "Prime020": {
+      "expected": "x 초"
+    },
+    "Prime021": {
+      "expected": "2 초"
+    },
+    "Prime022": {
+      "expected": "16 분, 10 초"
+    },
+    "Prime023": {
+      "expected": "x 분, y 초"
+    },
+    "Prime024": {
+      "expected": "45 도, 10 분"
+    },
+    "Prime025": {
+      "expected": "45 도, 10 분, 25 초"
+    },
+    "Prime026": {
+      "expected": "A 프라임, B 프라임"
+    },
+    "Prime027": {
+      "expected": "A 더블 프라임, B 더블 프라임"
+    },
+    "Prime028": {
+      "expected": "A 트리플 프라임, B 트리플 프라임"
+    },
+    "Prime029": {
+      "expected": "f 프라임 의 x"
+    },
+    "Prime030": {
+      "expected": "f 더블 프라임 의 x"
+    },
+    "Prime031": {
+      "expected": "f 트리플 프라임 의 x"
+    },
+    "Prime032": {
+      "expected": "1 피트"
+    },
+    "Prime033": {
+      "expected": "x 피트"
+    },
+    "Prime034": {
+      "expected": "2 피트"
+    },
+    "Prime035": {
+      "expected": "1 인치"
+    },
+    "Prime036": {
+      "expected": "x 인치"
+    },
+    "Prime037": {
+      "expected": "2 인치"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
+    "Prime038": {
+      "expected": "16 피트, 10 인치"
+    },
+    "Prime039": {
+      "expected": "x 피트, y 인치"
+    },
+    "Prime040": {
+      "expected": "45 도, 10 분"
+    },
+    "Prime041": {
+      "expected": "45 도, 10 분, 25 초"
+    },
+    "Prime042": {
+      "expected": "A 프라임, B 프라임"
+    },
+    "Prime043": {
+      "expected": "A 더블 프라임, B 더블 프라임"
+    },
+    "Prime044": {
+      "expected": "A 트리플 프라임, B 트리플 프라임"
+    },
+    "Prime045": {
+      "expected": "f 프라임 의 x"
+    },
+    "Prime046": {
+      "expected": "f 더블 프라임 의 x"
+    },
+    "Prime047": {
+      "expected": "f 트리플 프라임 의 x"
+    },
+    "_comment5_": " Combinations and Permutations",
+    "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
+    "_comment7_": " has a redundant use of subscripts leaving the actual correct placing of the",
+    "_comment8_": " right index in the multiscript empty.",
+    "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
+    "_comment10_": "                sub/superscripts.",
+    "CombPerm001": {
+      "expected": "조합 n 씨 r"
+    },
+    "CombPerm002": {
+      "expected": "순열 n 피 r"
+    },
+    "CombPerm003": {
+      "expected": "조합 10 씨 3"
+    },
+    "CombPerm004": {
+      "expected": "순열 10 피 3"
+    },
+    "CombPerm005": {
+      "expected": "조합 n 씨 r"
+    },
+    "CombPerm006": {
+      "expected": "순열 n 피 r"
+    },
+    "CombPerm007": {
+      "expected": "조합 10 씨 3"
+    },
+    "CombPerm008": {
+      "expected": "순열 10 피 3"
+    },
+    "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
+    "CombPerm001a": {
+      "expected": "n C r"
+    },
+    "CombPerm002a": {
+      "expected": "n P r"
+    },
+    "CombPerm003a": {
+      "expected": "10 C 3"
+    },
+    "CombPerm004a": {
+      "expected": "10 P 3"
+    },
+    "CombPerm005a": {
+      "expected": "조합 n 씨 r"
+    },
+    "CombPerm006a": {
+      "expected": "순열 n 피 r"
+    },
+    "CombPerm007a": {
+      "expected": "조합 10 씨 3"
+    },
+    "CombPerm008a": {
+      "expected": "순열 10 피 3"
+    },
+    "_comment12_": " Bar",
+    "Bar001": {
+      "expected": "f 바"
+    },
+    "Bar002": {
+      "expected": "f 바 의 x"
+    },
+    "Bar003": {
+      "expected": "f 아래첨자 1, 바"
+    },
+    "Bar004": {
+      "expected": "f 아래첨자 1, 바 의 x"
+    },
+    "Bar005": {
+      "expected": "z 바"
+    },
+    "Bar006": {
+      "expected": "순환소수 0 점 순환마디 3"
+    },
+    "Bar007": {
+      "expected": "순환소수 0 점 순환마디 1 2"
+    },
+    "Bar008": {
+      "expected": "순환소수 2 점 순환마디 1 3 4"
+    },
+    "Bar009": {
+      "expected": "순환소수 점 1 3 순환마디 4 6 7"
+    },
+    "Bar010": {
+      "expected": "순환소수 2 5 점 1 2 순환마디 6 3 2"
+    },
+    "Bar011": {
+      "expected": "z, z 바"
+    },
+    "Bar012": {
+      "expected": "선분 C D"
+    },
+    "Bar013": {
+      "expected": "선분 C 프라임 D 프라임"
+    },
+    "Bar014": {
+      "expected": "선분 C 더블 프라임 D 더블 프라임"
+    },
+    "Bar015": {
+      "expected": "선분 C 트리플 프라임 D 트리플 프라임"
+    },
+    "Bar016": {
+      "expected": "켤레복소수 z"
+    },
+    "Bar017": {
+      "expected": "z, 켤레복소수 z"
+    },
+    "Bar018": {
+      "expected": "켤레복소수 3 빼기 2 i, 는 3 더하기 2 i"
+    },
+    "_comment13_": " Added! Test that still decimal period still works.",
+    "Bar006a": {
+      "expected": "순환소수 0 점 순환마디 3"
+    },
+    "Bar007a": {
+      "expected": "순환소수 0 점 순환마디 1 2"
+    },
+    "Bar008a": {
+      "expected": "순환소수 2 점 순환마디 1 3 4"
+    },
+    "Bar009a": {
+      "expected": "순환소수 점 1 3 순환마디 4 6 7"
+    },
+    "Bar010a": {
+      "expected": "순환소수 2 5 점 1 2 순환마디 6 3 2"
+    },
+    "_comment14_": " Equals Sign with Adornments",
+    "Equal001": {
+      "expected": "다음으로 정의된다"
+    },
+    "Equal002": {
+      "expected": "괄호 열고, f 합성 함수 g, 괄호 닫고, 의 x, 다음으로 정의된다 f 의, g 의 x"
+    },
+    "Equal003": {
+      "expected": "물음표 기호가 위에 있는 같다"
+    },
+    "Equal004": {
+      "expected": "x 더하기 2 물음표 기호가 위에 있는 은 4"
+    }
+  }
+}

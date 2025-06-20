@@ -1,0 +1,286 @@
+{
+  "_comment_1": " Tests for incomplete or erroneous MathML elements.",
+  "tests": {
+    "_comment_2": "Underspecified Layout Elements",
+    "Layout_Underspec_0": {
+      "_comment_": "Issue #317",
+      "input": "<mover><mi>?</mi></mover>"
+    },
+    "Layout_Underspec_1": {
+      "input": "<munder><mi>?</mi></munder>"
+    },
+    "Layout_Underspec_2": {
+      "input": "<munderover><mi>a</mi></munderover>"
+    },
+    "Layout_Underspec_3": {
+      "input": "<munderover><mi>a</mi><mi>?</mi></munderover>"
+    },
+    "Layout_Underspec_4": {
+      "input": "<msub><mi>a</mi></msub>"
+    },
+    "Layout_Underspec_5": {
+      "input": "<msup><mi>a</mi></msup>"
+    },
+    "Layout_Underspec_6": {
+      "input": "<msubsup><mi>a</mi></msubsup>"
+    },
+    "Layout_Underspec_7": {
+      "input": "<msubsup><mi>a</mi><mi>?</mi></msubsup>"
+    },
+
+    "_comment_3": "Overspecified Layout Elements",
+
+    "Layout_Overspec_0": {
+      "input": "<mover><mi>a</mi><mi>b</mi><mi>c</mi></mover>"
+    },
+    "Layout_Overspec_1": {
+      "input": "<munder><mi>a</mi><mi>b</mi><mi>c</mi></munder>"
+    },
+    "Layout_Overspec_2": {
+      "input": "<munderover><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi></munderover>"
+    },
+    "Layout_Overspec_3": {
+      "input": "<msub><mi>a</mi><mi>b</mi><mi>c</mi></msub>"
+    },
+    "Layout_Overspec_4": {
+      "input": "<msup><mi>a</mi><mi>b</mi><mi>c</mi></msup>"
+    },
+    "Layout_Overspec_5": {
+      "input": "<msubsup><mi>a</mi><mi>b</mi><mi>c</mi><mi>d</mi></msubsup>"
+    },
+
+    "_comment_4": "Empty Layout Elements",
+
+    "Layout_Empty_0": {
+      "input": "<mover></mover>"
+    },
+    "Layout_Empty_1": {
+      "input": "<munder></munder>"
+    },
+    "Layout_Empty_2": {
+      "input": "<munderover></munderover>"
+    },
+    "Layout_Empty_3": {
+      "input": "<msub></msub>"
+    },
+    "Layout_Empty_4": {
+      "input": "<msup></msup>"
+    },
+    "Layout_Empty_5": {
+      "input": "<msubsup></msubsup>"
+    },
+
+
+    "_comment_5": "Underspecified Layout Elements with Limit functions",
+
+    "Limit_Underspec_0": {
+      "input": "<mover><mi>lim</mi></mover>"
+    },
+    "Limit_Underspec_1": {
+      "input": "<munder><mi>lim</mi></munder>"
+    },
+    "Limit_Underspec_2": {
+      "input": "<munderover><mi>lim</mi></munderover>"
+    },
+    "Limit_Underspec_3": {
+      "input": "<munderover><mi>lim</mi><mi>b</mi></munderover>"
+    },
+    "Limit_Underspec_4": {
+      "input": "<msub><mi>lim</mi></msub>"
+    },
+    "Limit_Underspec_5": {
+      "input": "<msup><mi>lim</mi></msup>"
+    },
+    "Limit_Underspec_6": {
+      "input": "<msubsup><mi>lim</mi></msubsup>"
+    },
+    "Limit_Underspec_7": {
+      "input": "<msubsup><mi>lim</mi><mi>b</mi></msubsup>"
+    },
+
+    "_comment_5a": "Overspecified Limit Elements",
+
+    "Limit_Overspec_0": {
+      "input": "<mover><mi>lim</mi><mi>b</mi><mi>c</mi></mover>"
+    },
+    "Limit_Overspec_1": {
+      "input": "<munder><mi>lim</mi><mi>b</mi><mi>c</mi></munder>"
+    },
+    "Limit_Overspec_2": {
+      "input": "<munderover><mi>lim</mi><mi>b</mi><mi>c</mi><mi>d</mi></munderover>"
+    },
+    "Limit_Overspec_3": {
+      "input": "<msub><mi>lim</mi><mi>b</mi><mi>c</mi></msub>"
+    },
+    "Limit_Overspec_4": {
+      "input": "<msup><mi>lim</mi><mi>b</mi><mi>c</mi></msup>"
+    },
+    "Limit_Overspec_5": {
+      "input": "<msubsup><mi>lim</mi><mi>b</mi><mi>c</mi><mi>d</mi></msubsup>"
+    },
+
+    "_comment_6": "Underspecified Layout Elements with Bigop",
+
+    "Bigop_Underspec_0": {
+      "input": "<mover><mi>∑</mi></mover>"
+    },
+    "Bigop_Underspec_1": {
+      "input": "<munder><mi>∑</mi></munder>"
+    },
+    "Bigop_Underspec_2": {
+      "input": "<munderover><mi>∑</mi></munderover>"
+    },
+    "Bigop_Underspec_3": {
+      "input": "<munderover><mi>∑</mi><mi>b</mi></munderover>"
+    },
+    "Bigop_Underspec_4": {
+      "input": "<msub><mi>∑</mi></msub>"
+    },
+    "Bigop_Underspec_5": {
+      "input": "<msup><mi>∑</mi></msup>"
+    },
+    "Bigop_Underspec_6": {
+      "input": "<msubsup><mi>∑</mi></msubsup>"
+    },
+    "Bigop_Underspec_7": {
+      "input": "<msubsup><mi>∑</mi><mi>b</mi></msubsup>"
+    },
+
+    "_comment_7": "Underspecified Layout Elements with Integral",
+
+
+    "Integral_Underspec_0": {
+      "input": "<mover><mi>∫</mi></mover>"
+    },
+    "Integral_Underspec_1": {
+      "input": "<munder><mi>∫</mi></munder>"
+    },
+    "Integral_Underspec_2": {
+      "input": "<munderover><mi>∫</mi></munderover>"
+    },
+    "Integral_Underspec_3": {
+      "input": "<munderover><mi>∫</mi><mi>b</mi></munderover>"
+    },
+    "Integral_Underspec_4": {
+      "input": "<msub><mi>∫</mi></msub>"
+    },
+    "Integral_Underspec_5": {
+      "input": "<msup><mi>∫</mi></msup>"
+    },
+    "Integral_Underspec_6": {
+      "input": "<msubsup><mi>∫</mi></msubsup>"
+    },
+    "Integral_Underspec_7": {
+      "input": "<msubsup><mi>∫</mi><mi>b</mi></msubsup>"
+    },
+
+
+    "_comment_8": "Underspecified Fraction",
+
+    "Fraction_Underspec": {
+      "input": "<mfrac><mi>a</mi></mfrac>"
+    },
+
+    "_comment_9": "Empty Fraction",
+    "Fraction_Empty": {
+      "input": "<mfrac></mfrac>"
+    },
+
+
+    "_comment_10": "Overspecified Fraction",
+    "Fraction_Overspec": {
+      "input": "<mfrac><mi>a</mi><mi>b</mi><mi>c</mi></mfrac>"
+    },
+
+
+    "_comment_11": "Underspecified Root",
+    "Root_Underspec": {
+      "input": "<mroot><mi>a</mi></mroot>"
+    },
+    "_comment_12": "Empty Root",
+    "Root_Empty": {
+      "input": "<mroot></mroot>"
+    },
+    "_comment_13": "Overspecified Root",
+    "Root_Overspec": {
+      "input": "<mroot><mi>a</mi><mi>b</mi><mi>c</mi></mroot>"
+    },
+    "_comment_14": "Empty display expressions that could lead to enrichment issues.",
+    "_comment_15": "Empty square root.",
+    "Sqrt_Display_0": {
+      "input": "<msqrt></msqrt>"
+    },
+    "Sqrt_Display_1": {
+      "input": "<msqrt></msqrt><mi>a</mi>"
+    },
+    "Sqrt_Display_2": {
+      "input": "<msqrt></msqrt><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Sqrt_Display_3": {
+      "input": "<msqrt><mi>a</mi></msqrt><mi>b</mi>"
+    },
+    "_comment_16": "Empty root.",
+    "Root_Display_0": {
+      "input": "<mroot></mroot><mi>a</mi>"
+    },
+    "Root_Display_1": {
+      "input": "<mroot></mroot><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Root_Display_2": {
+      "input": "<mroot><mi>a</mi></mroot><mi>b</mi>"
+    },
+    "_comment_17": "Orphaned glyph.",
+    "Orphaned_Glyph_0": {
+      "input": "<mglyph alt=\"some glyph\"/>"
+    },
+    "Orphaned_Glyph_1": {
+      "input": "<mglyph alt=\"some glyph\"/><mi>a</mi>"
+    },
+    "Orphaned_Glyph_2": {
+      "input": "<mi><mglyph alt=\"some glyph\"/></mi><mi>a</mi>"
+    },
+    "Orphaned_Glyph_3": {
+      "input": "<mglyph alt=\"some glyph\"/><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Orphaned_Glyph_4": {
+      "input": "<msqrt><mglyph alt=\"some glyph\"/></msqrt><mi>a</mi>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Rubbish_0": {
+      "input": "a"
+    },
+    "Rubbish_1": {
+      "input": "<div>a</div>"
+    },
+    "Rubbish_2": {
+      "input": "<mrow>a</mrow>"
+    },
+    "Rubbish_3": {
+      "input": "<mi>a</mi>b"
+    },
+    "Rubbish_4": {
+      "input": "b<mi>a</mi>"
+    },
+    "Rubbish_5": {
+      "input": "b<mi>a</mi>c"
+    },
+    "Rubbish_6": {
+      "input": "<msqrt>a</msqrt>"
+    },
+    "Rubbish_7": {
+      "input": "a<msqrt></msqrt>"
+    },
+    "Rubbish_8": {
+      "input": "<msqrt></msqrt>b"
+    },
+    "Rubbish_9": {
+      "input": "<msqrt>b<mi>a</mi></msqrt>"
+    },
+    "Rubbish_10": {
+      "input": "<msqrt><mi>a</mi>b</msqrt>"
+    },
+    "Rubbish_11": {
+      "input": "<msqrt>b<mi>a</mi>c</msqrt>"
+    }
+  }
+}

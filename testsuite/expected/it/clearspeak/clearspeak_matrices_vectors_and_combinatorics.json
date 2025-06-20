@@ -1,0 +1,577 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakMatricesAndCombinatorics",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
+  "information": "Italian Clearspeak Matrices, Vectors, and Combinatorics rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Matrix001": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix002": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix003": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix004": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix005": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix006": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix007": {
+      "expected": "matrice riga 1 per 2. 3, 5"
+    },
+    "Matrix008": {
+      "expected": "matrice riga 1 per 2. 3, 5"
+    },
+    "Matrix008a": {
+      "expected": "matrice 1 per 1 con valore 3"
+    },
+    "Matrix008b": {
+      "expected": "matrice 1 per 1 con valore 3"
+    },
+    "Matrix009": {
+      "expected": "matrice colonna 2 per 1. Riga 1: x più 1 Riga 2: x meno 1"
+    },
+    "Matrix010": {
+      "expected": "matrice colonna 4 per 1. Riga 1: 3 Riga 2: 6 Riga 3: 1 Riga 4: 2"
+    },
+    "Matrix011": {
+      "expected": "matrice riga 1 per 2. Colonna 1: x più 1 Colonna 2: 2 x"
+    },
+    "Matrix012": {
+      "expected": "matrice riga 1 per 4. Colonna 1: 3 Colonna 2: 6 Colonna 3: 1 Colonna 4: 2"
+    },
+    "Matrix013": {
+      "expected": "matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix014": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix015": {
+      "expected": "matrice 2 per 5. Riga 1: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 5; Colonna 5, 3. Riga 2: Colonna 1, 3; Colonna 2, 4; Colonna 3, 2; Colonna 4, 7; Colonna 5, 0"
+    },
+    "Matrix016": {
+      "expected": "matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5"
+    },
+    "Matrix017": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix018": {
+      "expected": "matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix019": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix019b": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix020": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix021": {
+      "expected": "matrice 2 per 2. Riga 1: b pedice 1 1, b pedice 1 2 Riga 2: b pedice 2 1, b pedice 2 2"
+    },
+    "Matrix022": {
+      "expected": "3 per matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. per matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix023": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. per matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix024": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. per matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5"
+    },
+    "Matrix025": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix026": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix027": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix028": {
+      "expected": "determinante di matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix029": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix030": {
+      "expected": "determinante di matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix031": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix032": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix033": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix034": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix035": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix036": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix037": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix038": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix039": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix040": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix041": {
+      "expected": "matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix042": {
+      "expected": "matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix043": {
+      "expected": "matrice colonna 3 per 1. Riga 1: 1 Riga 2: 2 Riga 3: 3"
+    },
+    "Matrix044": {
+      "expected": "matrice colonna 3 per 1. Riga 1: 1 Riga 2: 2 Riga 3: 3"
+    },
+    "Matrix045": {
+      "expected": "matrice riga 1 per 2. Colonna 1: 3 Colonna 2: 5"
+    },
+    "Matrix046": {
+      "expected": "matrice riga 1 per 2. Colonna 1: 3 Colonna 2: 5"
+    },
+    "Matrix047": {
+      "expected": "matrice riga 1 per 4. Colonna 1: 1 Colonna 2: 2 Colonna 3: 3 Colonna 4: 4"
+    },
+    "Matrix048": {
+      "expected": "matrice riga 1 per 4. Colonna 1: 1 Colonna 2: 2 Colonna 3: 3 Colonna 4: 4"
+    },
+    "Matrix049": {
+      "expected": "matrice colonna 4 per 1. Riga 1: 1 Riga 2: 2 Riga 3: 3 Riga 4: 4"
+    },
+    "Matrix050": {
+      "expected": "matrice colonna 4 per 1. Riga 1: 1 Riga 2: 2 Riga 3: 3 Riga 4: 4"
+    },
+    "Matrix051": {
+      "expected": "matrice colonna 2 per 1. Riga 1: x più 1 Riga 2: x meno 1"
+    },
+    "Matrix052": {
+      "expected": "matrice colonna 4 per 1. Riga 1: 3 Riga 2: 6 Riga 3: 1 Riga 4: 2"
+    },
+    "Matrix053": {
+      "expected": "matrice riga 1 per 2. Colonna 1: x più 1 Colonna 2: 2 x"
+    },
+    "Matrix054": {
+      "expected": "matrice riga 1 per 4. Colonna 1: 3 Colonna 2: 6 Colonna 3: 1 Colonna 4: 2"
+    },
+    "Matrix055": {
+      "expected": "matrice 3 per 3. Riga 1: Colonna 1, 2; Colonna 2, 4; Colonna 3, 1. Riga 2: Colonna 1, 3; Colonna 2, 5; Colonna 3, 2. Riga 3: Colonna 1, 1; Colonna 2, 4; Colonna 3, 7"
+    },
+    "Matrix056": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix057": {
+      "expected": "matrice 2 per 5. Riga 1: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 5; Colonna 5, 3. Riga 2: Colonna 1, 3; Colonna 2, 4; Colonna 3, 2; Colonna 4, 7; Colonna 5, 0"
+    },
+    "Matrix057a": {
+      "expected": "matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5"
+    },
+    "Matrix058": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix059": {
+      "expected": "matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix060": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix061": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, y. Riga 2: Colonna 1, un mezzo; Colonna 2, due terzi"
+    },
+    "Matrix062": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, un mezzo; Colonna 2, due terzi. Riga 2: Colonna 1, tre quarti; Colonna 2, un quinto"
+    },
+    "Matrix063": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, b pedice 1 1; Colonna 2, b pedice 1 2. Riga 2: Colonna 1, b pedice 2 1; Colonna 2, b pedice 2 2"
+    },
+    "Matrix064": {
+      "expected": "3 per matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5. per matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix065": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, un mezzo; Colonna 2, due terzi. Riga 2: Colonna 1, tre quarti; Colonna 2, un quinto. per matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6"
+    },
+    "Matrix066": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. per matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5"
+    },
+    "Matrix067": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix068": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix069": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: Colonna 1, 2; Colonna 2, 4; Colonna 3, 1. Riga 2: Colonna 1, 3; Colonna 2, 5; Colonna 3, 2. Riga 3: Colonna 1, 1; Colonna 2, 4; Colonna 3, 7"
+    },
+    "Matrix070": {
+      "expected": "determinante di matrice 3 per 3. Riga 1: Colonna 1, 2; Colonna 2, 4; Colonna 3, 1. Riga 2: Colonna 1, 3; Colonna 2, 5; Colonna 3, 2. Riga 3: Colonna 1, 1; Colonna 2, 4; Colonna 3, 7"
+    },
+    "Matrix071": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix072": {
+      "expected": "determinante di matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0"
+    },
+    "Matrix073": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix074": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x"
+    },
+    "Matrix075": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix076": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5"
+    },
+    "Matrix077": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, y. Riga 2: Colonna 1, un mezzo; Colonna 2, due terzi"
+    },
+    "Matrix078": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2 x; Colonna 2, y. Riga 2: Colonna 1, un mezzo; Colonna 2, due terzi"
+    },
+    "Matrix079": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, un mezzo; Colonna 2, due terzi. Riga 2: Colonna 1, tre quarti; Colonna 2, un quinto"
+    },
+    "Matrix080": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, un mezzo; Colonna 2, due terzi. Riga 2: Colonna 1, tre quarti; Colonna 2, un quinto"
+    },
+    "Matrix081": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix082": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix083": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix084": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix085": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix086": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix087": {
+      "expected": "matrice riga 1 per 2. 3, 5"
+    },
+    "Matrix088": {
+      "expected": "matrice riga 1 per 2. 3, 5"
+    },
+    "Matrix089": {
+      "expected": "matrice colonna 2 per 1. x più 1, x meno 1"
+    },
+    "Matrix090": {
+      "expected": "matrice colonna 4 per 1. 3, 6, 1, 2"
+    },
+    "Matrix091": {
+      "expected": "matrice riga 1 per 2. x più 1, 2 x"
+    },
+    "Matrix092": {
+      "expected": "matrice riga 1 per 4. 3, 6, 1, 2"
+    },
+    "Matrix092a": {
+      "expected": "matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix093": {
+      "expected": "matrice 4 per 4. Riga 1: 0, 3, 4, 3 Riga 2: 2, 1, 0, 9 Riga 3: 3, 0, 2, 1 Riga 4: 6, 2, 9, 0"
+    },
+    "Matrix094": {
+      "expected": "matrice 2 per 5. Riga 1: 2, 1, 0, 5, 3 Riga 2: 3, 4, 2, 7, 0"
+    },
+    "Matrix095": {
+      "expected": "matrice 4 per 2. Riga 1: 1, 3 Riga 2: 4, 2 Riga 3: 2, 1 Riga 4: 0, 5"
+    },
+    "Matrix096": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5 più x"
+    },
+    "Matrix097": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1 meno x, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix098": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix099": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix100": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix101": {
+      "expected": "matrice 2 per 2. Riga 1: b pedice 1 1, b pedice 1 2 Riga 2: b pedice 2 1, b pedice 2 2"
+    },
+    "Matrix102": {
+      "expected": "3 per matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. per matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix103": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. per matrice 2 per 3. Riga 1: 3, 1 meno x, 4 Riga 2: 0, 2, 6"
+    },
+    "Matrix104": {
+      "expected": "matrice 4 per 4. Riga 1: 0, 3, 4, 3 Riga 2: 2, 1, 0, 9 Riga 3: 3, 0, 2, 1 Riga 4: 6, 2, 9, 0. per matrice 4 per 2. Riga 1: 1, 3 Riga 2: 4, 2 Riga 3: 2, 1 Riga 4: 0, 5"
+    },
+    "Matrix105": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix106": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5"
+    },
+    "Matrix107": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix108": {
+      "expected": "determinante di matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7"
+    },
+    "Matrix109": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: 0, 3, 4, 3 Riga 2: 2, 1, 0, 9 Riga 3: 3, 0, 2, 1 Riga 4: 6, 2, 9, 0"
+    },
+    "Matrix110": {
+      "expected": "determinante di matrice 4 per 4. Riga 1: 0, 3, 4, 3 Riga 2: 2, 1, 0, 9 Riga 3: 3, 0, 2, 1 Riga 4: 6, 2, 9, 0"
+    },
+    "Matrix111": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5 più x"
+    },
+    "Matrix112": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5 più x"
+    },
+    "Matrix113": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix114": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5"
+    },
+    "Matrix115": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix116": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi"
+    },
+    "Matrix117": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix118": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto"
+    },
+    "Matrix119": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine matrice"
+    },
+    "Matrix120": {
+      "expected": "matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine matrice"
+    },
+    "Matrix121": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6. fine matrice"
+    },
+    "Matrix122": {
+      "expected": "matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6. fine matrice"
+    },
+    "Matrix123": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3. fine matrice"
+    },
+    "Matrix124": {
+      "expected": "matrice colonna 3 per 1. 1, 2, 3. fine matrice"
+    },
+    "Matrix125": {
+      "expected": "matrice riga 1 per 2. 3, 5. fine matrice"
+    },
+    "Matrix126": {
+      "expected": "matrice riga 1 per 2. 3, 5. fine matrice"
+    },
+    "Matrix127": {
+      "expected": "matrice colonna 2 per 1. Riga 1: x più 1 Riga 2: x meno 1. fine matrice"
+    },
+    "Matrix128": {
+      "expected": "matrice colonna 4 per 1. Riga 1: 3 Riga 2: 6 Riga 3: 1 Riga 4: 2. fine matrice"
+    },
+    "Matrix129": {
+      "expected": "matrice riga 1 per 2. Colonna 1: x più 1 Colonna 2: 2 x. fine matrice"
+    },
+    "Matrix130": {
+      "expected": "matrice riga 1 per 4. Colonna 1: 3 Colonna 2: 6 Colonna 3: 1 Colonna 4: 2. fine matrice"
+    },
+    "Matrix131": {
+      "expected": "matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7. fine matrice"
+    },
+    "Matrix132": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. fine matrice"
+    },
+    "Matrix133": {
+      "expected": "matrice 2 per 5. Riga 1: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 5; Colonna 5, 3. Riga 2: Colonna 1, 3; Colonna 2, 4; Colonna 3, 2; Colonna 4, 7; Colonna 5, 0. fine matrice"
+    },
+    "Matrix134": {
+      "expected": "matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5. fine matrice"
+    },
+    "Matrix135": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x. fine matrice"
+    },
+    "Matrix136": {
+      "expected": "matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6. fine matrice"
+    },
+    "Matrix137": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5. fine matrice"
+    },
+    "Matrix138": {
+      "expected": "matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi. fine matrice"
+    },
+    "Matrix139": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. fine matrice"
+    },
+    "Matrix140": {
+      "expected": "matrice 2 per 2. Riga 1: b pedice 1 1, b pedice 1 2 Riga 2: b pedice 2 1, b pedice 2 2. fine matrice"
+    },
+    "Matrix141": {
+      "expected": "3 per matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine matrice per matrice 2 per 3. Riga 1: 3, 1, 4 Riga 2: 0, 2, 6. fine matrice"
+    },
+    "Matrix142": {
+      "expected": "matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. fine matrice per matrice 2 per 3. Riga 1: Colonna 1, 3; Colonna 2, 1 meno x; Colonna 3, 4. Riga 2: Colonna 1, 0; Colonna 2, 2; Colonna 3, 6. fine matrice"
+    },
+    "Matrix143": {
+      "expected": "matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. fine matrice per matrice 4 per 2. Riga 1: Colonna 1, 1; Colonna 2, 3. Riga 2: Colonna 1, 4; Colonna 2, 2. Riga 3: Colonna 1, 2; Colonna 2, 1. Riga 4: Colonna 1, 0; Colonna 2, 5. fine matrice"
+    },
+    "Matrix144": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine determinante"
+    },
+    "Matrix145": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine matrice"
+    },
+    "Matrix146": {
+      "expected": "determinante della matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7. fine determinante"
+    },
+    "Matrix147": {
+      "expected": "determinante di matrice 3 per 3. Riga 1: 2, 4, 1 Riga 2: 3, 5, 2 Riga 3: 1, 4, 7. fine matrice"
+    },
+    "Matrix148": {
+      "expected": "determinante della matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. fine determinante"
+    },
+    "Matrix149": {
+      "expected": "determinante di matrice 4 per 4. Riga 1: Colonna 1, 0; Colonna 2, 3; Colonna 3, 4; Colonna 4, 3. Riga 2: Colonna 1, 2; Colonna 2, 1; Colonna 3, 0; Colonna 4, 9. Riga 3: Colonna 1, 3; Colonna 2, 0; Colonna 3, 2; Colonna 4, 1. Riga 4: Colonna 1, 6; Colonna 2, 2; Colonna 3, 9; Colonna 4, 0. fine matrice"
+    },
+    "Matrix150": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x. fine determinante"
+    },
+    "Matrix151": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: Colonna 1, 2; Colonna 2, 1. Riga 2: Colonna 1, 7; Colonna 2, 5 più x. fine matrice"
+    },
+    "Matrix152": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5. fine determinante"
+    },
+    "Matrix153": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, 1 Riga 2: 7, 5. fine matrice"
+    },
+    "Matrix154": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi. fine determinante"
+    },
+    "Matrix155": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: 2 x, y Riga 2: un mezzo, due terzi. fine matrice"
+    },
+    "Matrix156": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. fine determinante"
+    },
+    "Matrix157": {
+      "expected": "determinante di matrice 2 per 2. Riga 1: un mezzo, due terzi Riga 2: tre quarti, un quinto. fine matrice"
+    },
+    "Matrix158": {
+      "expected": "vettore colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix159": {
+      "expected": "vettore colonna 3 per 1. 1, 2, 3"
+    },
+    "Matrix160": {
+      "expected": "vettore riga 1 per 2. 3, 5"
+    },
+    "Matrix161": {
+      "expected": "vettore riga 1 per 2. 3, 5"
+    },
+    "Matrix162": {
+      "expected": "vettore colonna 2 per 1. Riga 1: x più 1 Riga 2: x meno 1"
+    },
+    "Matrix163": {
+      "expected": "vettore colonna 4 per 1. Riga 1: 3 Riga 2: 6 Riga 3: 1 Riga 4: 2"
+    },
+    "Matrix164": {
+      "expected": "vettore riga 1 per 2. Colonna 1: x più 1 Colonna 2: 2 x"
+    },
+    "Matrix165": {
+      "expected": "vettore riga 1 per 2. 3, 2. per matrice 2 per 2. Riga 1: 0, 5 Riga 2: 9, 4"
+    },
+    "Matrix166": {
+      "expected": "vettore riga 1 per 3. 1, 2, 7. per matrice 3 per 3. Riga 1: 3, 5, 4 Riga 2: 8, 0, 6 Riga 3: 1, 4, 2"
+    },
+    "Matrix167": {
+      "expected": "matrice 2 per 2. Riga 1: 0, 5 Riga 2: 9, 4. per vettore colonna 2 per 1. 3, 2"
+    },
+    "Matrix168": {
+      "expected": "matrice 3 per 3. Riga 1: 3, 5, 4 Riga 2: 8, 0, 6 Riga 3: 1, 4, 2. per vettore colonna 3 per 1. 1, 2, 7"
+    },
+    "Matrix169": {
+      "expected": "vettore colonna 3 per 1. 1, 2, 3. fine vettore"
+    },
+    "Matrix170": {
+      "expected": "vettore colonna 3 per 1. 1, 2, 3. fine vettore"
+    },
+    "Matrix171": {
+      "expected": "vettore riga 1 per 2. 3, 5. fine vettore"
+    },
+    "Matrix172": {
+      "expected": "vettore riga 1 per 2. 3, 5. fine vettore"
+    },
+    "Matrix173": {
+      "expected": "vettore colonna 2 per 1. Riga 1: x più 1 Riga 2: x meno 1. fine vettore"
+    },
+    "Matrix174": {
+      "expected": "vettore colonna 4 per 1. Riga 1: 3 Riga 2: 6 Riga 3: 1 Riga 4: 2. fine vettore"
+    },
+    "Matrix175": {
+      "expected": "vettore riga 1 per 2. Colonna 1: x più 1 Colonna 2: 2 x. fine vettore"
+    },
+    "Matrix176": {
+      "expected": "vettore riga 1 per 2. 3, 2. fine vettore per matrice 2 per 2. Riga 1: 0, 5 Riga 2: 9, 4. fine matrice"
+    },
+    "Matrix177": {
+      "expected": "vettore riga 1 per 3. 1, 2, 7. fine vettore per matrice 3 per 3. Riga 1: 3, 5, 4 Riga 2: 8, 0, 6 Riga 3: 1, 4, 2. fine matrice"
+    },
+    "Matrix178": {
+      "expected": "matrice 2 per 2. Riga 1: 0, 5 Riga 2: 9, 4. fine matrice per vettore colonna 2 per 1. 3, 2. fine vettore"
+    },
+    "Matrix179": {
+      "expected": "matrice 3 per 3. Riga 1: 3, 5, 4 Riga 2: 8, 0, 6 Riga 3: 1, 4, 2. fine matrice per vettore colonna 3 per 1. 1, 2, 7. fine vettore"
+    },
+    "Matrix180": {
+      "expected": "coefficiente binomiale n su r"
+    },
+    "Matrix181": {
+      "expected": "coefficiente binomiale 10 su 7"
+    },
+    "Matrix182": {
+      "expected": "coefficiente binomiale 15 su 0"
+    },
+    "Matrix183": {
+      "expected": "coefficiente binomiale 8 su 3"
+    }
+  }
+}

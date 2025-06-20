@@ -1,0 +1,586 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakFunctions",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "English Clearspeak Functions rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [
+    "Function011b",
+    "Function012b",
+    "Function013b",
+    "Function014b",
+    "Function015b",
+    "Function016b",
+    "Function017b",
+    "Function018b",
+    "Function019b",
+    "Function020b",
+    "Function021b",
+    "Function022b",
+    "Function023b",
+    "Function024b",
+    "Function025b",
+    "Function026b",
+    "Function027b",
+    "Function028b",
+    "Function029b",
+    "Function030b",
+    "Function031b",
+    "Function032b",
+    "Function033b",
+    "Function034b",
+    "Function035b",
+    "Function036b",
+    "Function037b",
+    "Function038b",
+    "Function039b",
+    "Function040b",
+    "Function041b",
+    "Function042b",
+    "Function043b",
+    "Function044b",
+    "Function045b",
+    "Function046b",
+    "Function047b",
+    "Function048b",
+    "Function049b",
+    "Function050b",
+    "Function051b",
+    "Function052b",
+    "Function053b",
+    "Function054b",
+    "Function055b",
+    "Function056b",
+    "Function057b",
+    "Function058b",
+    "Function059b",
+    "Function060b",
+    "Function061b",
+    "Function062b",
+    "Function063b",
+    "Function064b",
+    "Function065b",
+    "Function066b",
+    "Function067b",
+    "Function068b",
+    "Function069b",
+    "Function070b",
+    "Function071b",
+    "Function072b",
+    "Function073b",
+    "Function074b",
+    "Function075b",
+    "Function076b",
+    "Function077b",
+    "Function078b",
+    "Function079b"
+  ],
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> of <mark name=\"2\"/> negative <prosody rate=\"+25%\"> <mark name=\"3\"/> 2 <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\"/> of <mark name=\"2\"/> one <mark name=\"3\"/> half </prosody></speak>"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 1 <mark name=\"3\"/> over 2 <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "Function008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <mark name=\"9\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> of <mark name=\"11\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"14\"/> plus <mark name=\"15\"/> 1 </prosody></speak>"
+    },
+    "Function009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> plus <mark name=\"5\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "Function010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> squared <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "Function011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"8\"/> of <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"8\"/> of <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"8\"/> of <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"11\"/> of <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <mark name=\"6\"/> negative <prosody rate=\"+25%\"> <mark name=\"7\"/> 2 <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"6\"/> 3 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"8\"/> minus <mark name=\"9\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "Function017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"7\"/> squared <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "Function018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"6\"/> one <mark name=\"7\"/> half </prosody></speak>"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> 1 <mark name=\"7\"/> over 2 <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "Function020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> of <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function024": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"15\"/> of <mark name=\"8\"/> negative <prosody rate=\"+25%\"> <mark name=\"9\"/> 2 <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function025": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> of <mark name=\"8\"/> one <mark name=\"9\"/> half </prosody></speak>"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> 1 <mark name=\"9\"/> over 2 <break time=\"250ms\"/> <mark name=\"11\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function027": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> equals <mark name=\"19\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"20\"/> plus <mark name=\"21\"/> 1 </prosody></speak>"
+    },
+    "Function028": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"20\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> close paren </prosody></speak>"
+    },
+    "Function029": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\" kind=\"LAST\"/> inverse <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> squared <break time=\"250ms\"/> <mark name=\"11\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function030": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function031": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function032": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function033": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"13\"/> of <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function034": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"15\"/> of <mark name=\"8\"/> negative <prosody rate=\"+25%\"> <mark name=\"9\"/> 2 <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function035": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"20\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 3 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> minus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> close paren </prosody></speak>"
+    },
+    "Function036": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> squared <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function037": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"12\"/> of <mark name=\"8\"/> one <mark name=\"9\"/> half </prosody></speak>"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"10\"/> the fraction <mark name=\"8\"/> 1 <mark name=\"9\"/> over 2 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function039": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function040": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> plus <mark name=\"6\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "Function041": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function042": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"11\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"4\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> and denominator <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "Function043": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> equals <mark name=\"12\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"21\"/> of <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> plus <mark name=\"17\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"22\"/> of <mark name=\"19\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function044": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> equals <mark name=\"15\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"22\"/> of <break time=\"250ms\"/> <mark name=\"16\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"18\"/> plus <mark name=\"19\"/> 1 <break time=\"250ms\"/> <mark name=\"21\"/> close paren <break time=\"250ms\"/> <mark name=\"23\"/> plus <mark name=\"24\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"31\"/> of <break time=\"250ms\"/> <mark name=\"25\"/> open paren <break time=\"250ms\"/> <mark name=\"26\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"27\"/> plus <mark name=\"28\"/> 1 <break time=\"250ms\"/> <mark name=\"30\"/> close paren </prosody></speak>"
+    },
+    "Function045": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function046": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 5 <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function047": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> over <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> of <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"10\"/> equals <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"11\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> of <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"24\"/> over <mark name=\"18\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"22\"/> of <mark name=\"20\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function048": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> over <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> of <break time=\"250ms\"/> <mark name=\"6\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"7\"/> 2 <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> 5 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> equals <break time=\"250ms\"/> <mark name=\"43\"/> the <mark name=\"29\"/> fraction with numerator <mark name=\"17\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"27\"/> of <break time=\"250ms\"/> <mark name=\"18\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"19\"/> 2 <mark name=\"20\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"21\"/> plus <mark name=\"22\"/> 5 <break time=\"250ms\"/> <mark name=\"26\"/> close paren <break time=\"250ms\"/> <mark name=\"42\"/> and denominator <mark name=\"30\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"40\"/> of <break time=\"250ms\"/> <mark name=\"31\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"32\"/> 2 <mark name=\"33\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"34\"/> plus <mark name=\"35\"/> 5 <break time=\"250ms\"/> <mark name=\"39\"/> close paren </prosody></speak>"
+    },
+    "Function049": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> composed with <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> equals <mark name=\"12\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"22\"/> of <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"18\"/> of <mark name=\"16\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function050": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function051": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function052": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> squared <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function053": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> squared <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function054": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> cubed <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function055": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> cubed <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function056": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fourth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function057": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fourth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function058": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fifth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function059": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fifth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function060": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the n-th <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function061": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the n-th <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function062": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> squared <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function063": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> squared <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function064": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> cubed <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function065": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> cubed <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function066": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fourth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function067": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fourth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function068": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fifth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function069": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the fifth <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function070": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the n-th <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function071": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> the n-th <mark name=\"0\"/> power of <break time=\"250ms\"/> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function072": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function073": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 2 <break time=\"250ms\"/> <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> cubed <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Function074": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> sub <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"12\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 3 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> minus <mark name=\"7\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function075": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function076": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 2 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"16\"/> of <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function077": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> sub <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"10\"/> of <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function078": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\" kind=\"LAST\"/> inverse <mark name=\"18\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> sub 2 <break time=\"250ms\"/> <mark name=\"14\"/> of <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function079": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"18\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> sub 2 <break time=\"250ms\"/> <mark name=\"10\" kind=\"LAST\"/> inverse <mark name=\"14\"/> of <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function080": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> comma <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "Function081": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> comma <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> comma <mark name=\"6\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "Function082": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"5\"/> comma <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "Function083": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> comma <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> comma <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> squared <break time=\"250ms\"/> <mark name=\"16\"/> close paren </prosody></speak>"
+    },
+    "Function084": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function085": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"4\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function086": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"4\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function087": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> times <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function088": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> times <mark name=\"2\"/> negative <prosody rate=\"+25%\"> <mark name=\"3\"/> 2 <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function089": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"6\"/> times <mark name=\"2\"/> one <mark name=\"3\"/> half </prosody></speak>"
+    },
+    "Function090": {
+      "expected": "h times, open paren, 1 over 2, close paren"
+    },
+    "Function091": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> equals <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> times <mark name=\"11\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"14\"/> plus <mark name=\"15\"/> 1 </prosody></speak>"
+    },
+    "Function092": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> plus <mark name=\"5\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "Function093": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> squared <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "Function094": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> times <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function095": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> times <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function096": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> times <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function097": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"11\"/> times <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function098": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"13\"/> times <mark name=\"6\"/> negative <prosody rate=\"+25%\"> <mark name=\"7\"/> 2 <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function099": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"6\"/> 3 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"8\"/> minus <mark name=\"9\"/> 1 <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "Function100": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"7\"/> squared <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "Function101": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"6\"/> one <mark name=\"7\"/> half </prosody></speak>"
+    },
+    "Function102": {
+      "expected": "h to the negative 1 power, times, open paren, 1 over 2, close paren"
+    },
+    "Function103": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function104": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function105": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function106": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"17\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> times <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function107": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"19\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"15\"/> times <mark name=\"8\"/> negative <prosody rate=\"+25%\"> <mark name=\"9\"/> 2 <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Function108": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"12\"/> times <mark name=\"8\"/> one <mark name=\"9\"/> half </prosody></speak>"
+    },
+    "Function109": {
+      "expected": "h to the negative 1 power, times, open paren, h times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function110": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"17\"/> times <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> close paren <break time=\"250ms\"/> <mark name=\"18\"/> equals <mark name=\"19\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"20\"/> plus <mark name=\"21\"/> 1 </prosody></speak>"
+    },
+    "Function111": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> close paren </prosody></speak>"
+    },
+    "Function112": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"3\"/> to the <mark name=\"1\"/> negative <mark name=\"2\"/> 1 <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"5\"/> open paren <break time=\"250ms\"/> <mark name=\"6\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> squared <break time=\"250ms\"/> <mark name=\"11\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function113": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "Function114": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "Function115": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"14\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> close paren </prosody></speak>"
+    },
+    "Function116": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"17\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"13\"/> times <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"16\"/> close paren </prosody></speak>"
+    },
+    "Function117": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"19\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"15\"/> times <mark name=\"8\"/> negative <prosody rate=\"+25%\"> <mark name=\"9\"/> 2 <mark name=\"10\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "Function118": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"20\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 3 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> minus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> close paren </prosody></speak>"
+    },
+    "Function119": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> squared <break time=\"250ms\"/> <mark name=\"11\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function120": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"5\"/> to the <mark name=\"3\"/> negative <mark name=\"4\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <mark name=\"8\"/> one <mark name=\"9\"/> half <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function121": {
+      "expected": "h times, open paren, h to the negative 1 power, times, open paren, 1 over 2, close paren, close paren"
+    },
+    "Function122": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function123": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> plus <mark name=\"6\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "Function124": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"10\"/> times <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function125": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"15\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"11\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"4\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> and denominator <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"10\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> close paren </prosody></speak>"
+    },
+    "Function126": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> equals <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"21\"/> times <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> plus <break time=\"250ms\"/> <mark name=\"17\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"22\"/> times <mark name=\"19\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function127": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> plus <mark name=\"10\"/> 1 <break time=\"250ms\"/> <mark name=\"12\"/> close paren <break time=\"250ms\"/> <mark name=\"14\"/> equals <break time=\"250ms\"/> <mark name=\"15\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"22\"/> times <break time=\"250ms\"/> <mark name=\"16\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"18\"/> plus <mark name=\"19\"/> 1 <break time=\"250ms\"/> <mark name=\"21\"/> close paren <break time=\"250ms\"/> <mark name=\"23\"/> plus <break time=\"250ms\"/> <mark name=\"24\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"31\"/> times <break time=\"250ms\"/> <mark name=\"25\"/> open paren <break time=\"250ms\"/> <mark name=\"26\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"27\"/> plus <mark name=\"28\"/> 1 <break time=\"250ms\"/> <mark name=\"30\"/> close paren </prosody></speak>"
+    },
+    "Function128": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function129": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 5 <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function130": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> over <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> times <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"10\"/> equals <break time=\"250ms\"/> <mark name=\"25\"/> the <mark name=\"17\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"11\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"15\"/> times <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"24\"/> and denominator <break time=\"250ms\"/> <mark name=\"18\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"22\"/> times <mark name=\"20\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function131": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> open paren <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"2\"/> over <say-as interpret-as=\"character\">g</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> close paren <break time=\"250ms\"/> <mark name=\"15\"/> times <break time=\"250ms\"/> <mark name=\"6\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"7\"/> 2 <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"9\"/> plus <mark name=\"10\"/> 5 <break time=\"250ms\"/> <mark name=\"14\"/> close paren <break time=\"250ms\"/> <mark name=\"16\"/> equals <break time=\"250ms\"/> <mark name=\"43\"/> the <mark name=\"29\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"17\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"27\"/> times <break time=\"250ms\"/> <mark name=\"18\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"19\"/> 2 <mark name=\"20\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"21\"/> plus <mark name=\"22\"/> 5 <break time=\"250ms\"/> <mark name=\"26\"/> close paren <break time=\"250ms\"/> <mark name=\"42\"/> and denominator <break time=\"250ms\"/> <mark name=\"30\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"40\"/> times <break time=\"250ms\"/> <mark name=\"31\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"32\"/> 2 <mark name=\"33\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"34\"/> plus <mark name=\"35\"/> 5 <break time=\"250ms\"/> <mark name=\"39\"/> close paren </prosody></speak>"
+    },
+    "Function132": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function133": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> times <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function134": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> squared <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function135": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> squared <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function136": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> cubed <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function137": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> cubed <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function138": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function139": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function140": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the fifth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function141": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the fifth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function142": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the n-th <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function143": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> to the n-th <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function144": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> squared <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function145": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> squared <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function146": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> cubed <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function147": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> cubed <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function148": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function149": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> to the fourth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function150": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> to the fifth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function151": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> to the fifth <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function152": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> to the n-th <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function153": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> to the n-th <mark name=\"2\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function154": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"6\"/> times <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function156": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 2 <break time=\"250ms\"/> <mark name=\"8\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> cubed <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "Function157": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> sub <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"12\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"4\"/> 3 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> minus <mark name=\"7\"/> 2 <break time=\"250ms\"/> <mark name=\"11\"/> close paren </prosody></speak>"
+    },
+    "Function158": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> to the <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function159": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 2 <break time=\"250ms\"/> <mark name=\"4\"/> to the <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"16\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"8\"/> 2 <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 <break time=\"250ms\"/> <mark name=\"15\"/> close paren </prosody></speak>"
+    },
+    "Function160": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">h</say-as> <mark name=\"1\"/> sub <say-as interpret-as=\"character\">n</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> to the <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"10\"/> times <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Function161": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"4\"/> to the <mark name=\"2\"/> negative <mark name=\"3\"/> 1 <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"7\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"9\"/> sub 2 <break time=\"250ms\"/> <mark name=\"14\"/> times <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"17\"/> close paren </prosody></speak>"
+    },
+    "Function162": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"1\"/> sub 1 <break time=\"250ms\"/> <mark name=\"18\"/> times <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">g</say-as> <mark name=\"5\"/> sub 2 <break time=\"250ms\"/> <mark name=\"8\"/> to the <mark name=\"6\"/> negative <mark name=\"7\"/> 1 <mark name=\"10\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"14\"/> times <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"17\"/> close paren </prosody></speak>"
+    },
+    "Function163": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> comma <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> close paren </prosody></speak>"
+    },
+    "Function164": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"9\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> comma <mark name=\"4\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"5\"/> comma <mark name=\"6\"/> <say-as interpret-as=\"character\">z</say-as> <break time=\"250ms\"/> <mark name=\"8\"/> close paren </prosody></speak>"
+    },
+    "Function165": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"13\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"5\"/> comma <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"12\"/> close paren </prosody></speak>"
+    },
+    "Function166": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"17\"/> times <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> comma <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> plus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> comma <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"10\"/> squared <break time=\"250ms\"/> <mark name=\"16\"/> close paren </prosody></speak>"
+    }
+  }
+}

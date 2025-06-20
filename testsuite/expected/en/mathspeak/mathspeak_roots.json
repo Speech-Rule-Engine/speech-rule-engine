@@ -1,0 +1,372 @@
+{
+  "name": "EnglishMathspeakRoots",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "English Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "StartRoot a EndRoot"
+    },
+    "sqrt_0_brief": {
+      "expected": "StartRoot a EndRoot"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "Root a EndRoot"
+    },
+    "sqrt_1_default": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "sqrt_1_brief": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "Index 2 Root a EndRoot"
+    },
+    "sqrt_2_default": {
+      "expected": "NestedStartRoot StartRoot a EndRoot NestedEndRoot"
+    },
+    "sqrt_2_brief": {
+      "expected": "NestStartRoot StartRoot a EndRoot NestEndRoot"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "NestRoot Root a EndRoot NestEndRoot"
+    },
+    "sqrt_3_default": {
+      "expected": "Nested3StartRoot NestedTwiceStartRoot NestedStartRoot StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot Nested3EndRoot"
+    },
+    "sqrt_3_brief": {
+      "expected": "Nest3StartRoot NestTwiceStartRoot NestStartRoot StartRoot a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "Nest3Root NestTwiceRoot NestRoot Root a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "roots_0_default": {
+      "expected": "RootIndex 1 StartRoot a EndRoot"
+    },
+    "roots_0_brief": {
+      "expected": "RootIndex 1 StartRoot a EndRoot"
+    },
+    "roots_0_sbrief": {
+      "expected": "Index 1 Root a EndRoot"
+    },
+    "roots_1_default": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "roots_1_brief": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "roots_1_sbrief": {
+      "expected": "Index 2 Root a EndRoot"
+    },
+    "roots_2_default": {
+      "expected": "RootIndex 3 StartRoot a EndRoot"
+    },
+    "roots_2_brief": {
+      "expected": "RootIndex 3 StartRoot a EndRoot"
+    },
+    "roots_2_sbrief": {
+      "expected": "Index 3 Root a EndRoot"
+    },
+    "roots_3_default": {
+      "expected": "RootIndex 4 StartRoot a EndRoot"
+    },
+    "roots_3_brief": {
+      "expected": "RootIndex 4 StartRoot a EndRoot"
+    },
+    "roots_3_sbrief": {
+      "expected": "Index 4 Root a EndRoot"
+    },
+    "roots_4_default": {
+      "expected": "RootIndex 5 StartRoot a EndRoot"
+    },
+    "roots_4_brief": {
+      "expected": "RootIndex 5 StartRoot a EndRoot"
+    },
+    "roots_4_sbrief": {
+      "expected": "Index 5 Root a EndRoot"
+    },
+    "roots_5_default": {
+      "expected": "RootIndex 6 StartRoot a EndRoot"
+    },
+    "roots_5_brief": {
+      "expected": "RootIndex 6 StartRoot a EndRoot"
+    },
+    "roots_5_sbrief": {
+      "expected": "Index 6 Root a EndRoot"
+    },
+    "roots_6_default": {
+      "expected": "RootIndex 7 StartRoot a EndRoot"
+    },
+    "roots_6_brief": {
+      "expected": "RootIndex 7 StartRoot a EndRoot"
+    },
+    "roots_6_sbrief": {
+      "expected": "Index 7 Root a EndRoot"
+    },
+    "roots_7_default": {
+      "expected": "RootIndex 8 StartRoot a EndRoot"
+    },
+    "roots_7_brief": {
+      "expected": "RootIndex 8 StartRoot a EndRoot"
+    },
+    "roots_7_sbrief": {
+      "expected": "Index 8 Root a EndRoot"
+    },
+    "roots_8_default": {
+      "expected": "RootIndex 9 StartRoot a EndRoot"
+    },
+    "roots_8_brief": {
+      "expected": "RootIndex 9 StartRoot a EndRoot"
+    },
+    "roots_8_sbrief": {
+      "expected": "Index 9 Root a EndRoot"
+    },
+    "roots_9_default": {
+      "expected": "RootIndex 10 StartRoot a EndRoot"
+    },
+    "roots_9_brief": {
+      "expected": "RootIndex 10 StartRoot a EndRoot"
+    },
+    "roots_9_sbrief": {
+      "expected": "Index 10 Root a EndRoot"
+    },
+    "roots_10_default": {
+      "expected": "RootIndex 11 StartRoot a EndRoot"
+    },
+    "roots_10_brief": {
+      "expected": "RootIndex 11 StartRoot a EndRoot"
+    },
+    "roots_10_sbrief": {
+      "expected": "Index 11 Root a EndRoot"
+    },
+    "nested-roots_0_default": {
+      "expected": "NestedRootIndex 1 NestedStartRoot RootIndex 1 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_0_brief": {
+      "expected": "NestRootIndex 1 NestStartRoot RootIndex 1 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "NestIndex 1 NestRoot Index 1 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_1_default": {
+      "expected": "NestedRootIndex 2 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_1_brief": {
+      "expected": "NestRootIndex 2 NestStartRoot RootIndex 2 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "NestIndex 2 NestRoot Index 2 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_2_default": {
+      "expected": "NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_2_brief": {
+      "expected": "NestRootIndex 3 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "NestIndex 3 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_3_default": {
+      "expected": "NestedRootIndex 4 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_3_brief": {
+      "expected": "NestRootIndex 4 NestStartRoot RootIndex 4 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "NestIndex 4 NestRoot Index 4 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_4_default": {
+      "expected": "NestedRootIndex 5 NestedStartRoot RootIndex 5 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_4_brief": {
+      "expected": "NestRootIndex 5 NestStartRoot RootIndex 5 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "NestIndex 5 NestRoot Index 5 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_5_default": {
+      "expected": "NestedRootIndex 6 NestedStartRoot RootIndex 6 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_5_brief": {
+      "expected": "NestRootIndex 6 NestStartRoot RootIndex 6 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "NestIndex 6 NestRoot Index 6 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_6_default": {
+      "expected": "NestedRootIndex 7 NestedStartRoot RootIndex 7 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_6_brief": {
+      "expected": "NestRootIndex 7 NestStartRoot RootIndex 7 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "NestIndex 7 NestRoot Index 7 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_7_default": {
+      "expected": "NestedRootIndex 8 NestedStartRoot RootIndex 8 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_7_brief": {
+      "expected": "NestRootIndex 8 NestStartRoot RootIndex 8 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "NestIndex 8 NestRoot Index 8 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_8_default": {
+      "expected": "NestedRootIndex 9 NestedStartRoot RootIndex 9 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_8_brief": {
+      "expected": "NestRootIndex 9 NestStartRoot RootIndex 9 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "NestIndex 9 NestRoot Index 9 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_9_default": {
+      "expected": "NestedRootIndex 10 NestedStartRoot RootIndex 10 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_9_brief": {
+      "expected": "NestRootIndex 10 NestStartRoot RootIndex 10 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "NestIndex 10 NestRoot Index 10 Root a EndRoot NestEndRoot"
+    },
+    "nested-roots_10_default": {
+      "expected": "NestedRootIndex 11 NestedStartRoot RootIndex 11 StartRoot a EndRoot NestedEndRoot"
+    },
+    "nested-roots_10_brief": {
+      "expected": "NestRootIndex 11 NestStartRoot RootIndex 11 StartRoot a EndRoot NestEndRoot"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "NestIndex 11 NestRoot Index 11 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "NestedRootIndex 1 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "NestRootIndex 1 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "NestIndex 1 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "NestedRootIndex 2 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "NestRootIndex 2 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "NestIndex 2 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "NestRootIndex 3 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "NestIndex 3 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "NestedRootIndex 4 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "NestRootIndex 4 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "NestIndex 4 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "NestedRootIndex 5 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "NestRootIndex 5 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "NestIndex 5 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "NestedRootIndex 6 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "NestRootIndex 6 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "NestIndex 6 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "NestedRootIndex 7 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "NestRootIndex 7 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "NestIndex 7 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "NestedRootIndex 8 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "NestRootIndex 8 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "NestIndex 8 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "NestedRootIndex 9 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "NestRootIndex 9 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "NestIndex 9 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "NestedRootIndex 10 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "NestRootIndex 10 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "NestIndex 10 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "NestedRootIndex 11 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "NestRootIndex 11 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "NestIndex 11 NestRoot Index 3 Root a EndRoot NestEndRoot"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "Nested3RootIndex 2 Nested3StartRoot NestedTwiceRootIndex 3 NestedTwiceStartRoot NestedRootIndex 4 NestedStartRoot RootIndex 5 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot Nested3EndRoot"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "Nest3RootIndex 2 Nest3StartRoot NestTwiceRootIndex 3 NestTwiceStartRoot NestRootIndex 4 NestStartRoot RootIndex 5 StartRoot a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "Nest3Index 2 Nest3Root NestTwiceIndex 3 NestTwiceRoot NestIndex 4 NestRoot Index 5 Root a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "Nested3RootIndex 2 Nested3StartRoot NestedTwiceRootIndex 3 NestedTwiceStartRoot NestedRootIndex 2 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot Nested3EndRoot"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "Nest3RootIndex 2 Nest3StartRoot NestTwiceRootIndex 3 NestTwiceStartRoot NestRootIndex 2 NestStartRoot RootIndex 3 StartRoot a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "Nest3Index 2 Nest3Root NestTwiceIndex 3 NestTwiceRoot NestIndex 2 NestRoot Index 3 Root a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "Nested4RootIndex 2 Nested4StartRoot Nested3RootIndex 3 Nested3StartRoot NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot Nested3EndRoot Nested4EndRoot"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "Nest4RootIndex 2 Nest4StartRoot Nest3RootIndex 3 Nest3StartRoot NestTwiceStartRoot NestRootIndex 3 NestStartRoot StartRoot a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot Nest4EndRoot"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "Nest4Index 2 Nest4Root Nest3Index 3 Nest3Root NestTwiceRoot NestIndex 3 NestRoot Root a EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot Nest4EndRoot"
+    }
+  }
+}

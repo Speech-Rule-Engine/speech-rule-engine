@@ -1,0 +1,515 @@
+{
+  "name": "GermanPluralUnit",
+  "locale": "de",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsGerman",
+  "grammar": {
+    "annotation": "unit",
+    "plural": true
+  },
+  "factory": "symbol",
+  "base": "input/common/units.json",
+  "information": "German Plural Unit tests.",
+  "tests": {
+    "sq": {
+      "expected": "Quadrat"
+    },
+    "sq.": {
+      "expected": "Quadrat"
+    },
+    "sq in": {
+      "expected": "Quadratzoll"
+    },
+    "sq. in.": {
+      "expected": "Quadratzoll"
+    },
+    "sq inch": {
+      "expected": "Quadratzoll"
+    },
+    "sq. inch": {
+      "expected": "Quadratzoll"
+    },
+    "sq rd": {
+      "expected": "Quadratruten"
+    },
+    "sq. rd.": {
+      "expected": "Quadratruten"
+    },
+    "sq ft": {
+      "expected": "Quadratfuß"
+    },
+    "sq. ft.": {
+      "expected": "Quadratfuß"
+    },
+    "sq yd": {
+      "expected": "Quadratyards"
+    },
+    "sq. yd.": {
+      "expected": "Quadratyards"
+    },
+    "sq mi": {
+      "expected": "Quadratmeilen"
+    },
+    "sq. mi.": {
+      "expected": "Quadratmeilen"
+    },
+    "ac": {
+      "expected": "Morgen"
+    },
+    "ac.": {
+      "expected": "Morgen"
+    },
+    "acr": {
+      "expected": "Morgen"
+    },
+    "acr.": {
+      "expected": "Morgen"
+    },
+    "ha": {
+      "expected": "Hektar"
+    },
+    "$": {
+      "expected": "Dollar"
+    },
+    "💲": {
+      "expected": "Dollar"
+    },
+    "＄": {
+      "expected": "Dollar"
+    },
+    "﹩": {
+      "expected": "Dollar"
+    },
+    "USD": {
+      "expected": "Dollar"
+    },
+    "£": {
+      "expected": "Pfund"
+    },
+    "￡": {
+      "expected": "Pfund"
+    },
+    "GBP": {
+      "expected": "Pfund"
+    },
+    "¥": {
+      "expected": "Yen"
+    },
+    "￥": {
+      "expected": "Yen"
+    },
+    "JPY": {
+      "expected": "Yen"
+    },
+    "€": {
+      "expected": "Euro"
+    },
+    "EUR": {
+      "expected": "Euro"
+    },
+    "₡": {
+      "expected": "Colon"
+    },
+    "CRC": {
+      "expected": "Colon"
+    },
+    "₢": {
+      "expected": "Cruzeiro"
+    },
+    "₣": {
+      "expected": "Franc"
+    },
+    "₤": {
+      "expected": "Lire"
+    },
+    "₥": {
+      "expected": "Mill"
+    },
+    "₦": {
+      "expected": "Naira"
+    },
+    "NGN": {
+      "expected": "Naira"
+    },
+    "₧": {
+      "expected": "Peseten"
+    },
+    "₨": {
+      "expected": "Rupies"
+    },
+    "₹": {
+      "expected": "Rupies"
+    },
+    "INR": {
+      "expected": "Rupies"
+    },
+    "NPR": {
+      "expected": "Rupies"
+    },
+    "PKR": {
+      "expected": "Rupies"
+    },
+    "LKR": {
+      "expected": "Rupies"
+    },
+    "₩": {
+      "expected": "Won"
+    },
+    "￦": {
+      "expected": "Won"
+    },
+    "KRW": {
+      "expected": "Won"
+    },
+    "₪": {
+      "expected": "Schekel"
+    },
+    "₫": {
+      "expected": "Dong"
+    },
+    "₭": {
+      "expected": "Kip"
+    },
+    "₮": {
+      "expected": "Tögrög"
+    },
+    "₯": {
+      "expected": "Drachmen"
+    },
+    "₰": {
+      "expected": "Pfennig"
+    },
+    "₱": {
+      "expected": "Peso"
+    },
+    "₲": {
+      "expected": "Guarani"
+    },
+    "₳": {
+      "expected": "Austral"
+    },
+    "₴": {
+      "expected": "Hrywen"
+    },
+    "UAH": {
+      "expected": "Hrywen"
+    },
+    "₵": {
+      "expected": "Cedi"
+    },
+    "GHS": {
+      "expected": "Cedi"
+    },
+    "₸": {
+      "expected": "Tenge"
+    },
+    "KZT": {
+      "expected": "Tenge"
+    },
+    "₺": {
+      "expected": "türkische Lira"
+    },
+    "TRY": {
+      "expected": "türkische Lira"
+    },
+    "元": {
+      "expected": "Yuan"
+    },
+    "￠": {
+      "expected": "Cent"
+    },
+    "¢": {
+      "expected": "Cent"
+    },
+    "kwh": {
+      "expected": "Kilowattstunden"
+    },
+    "kWh": {
+      "expected": "Kilowattstunden"
+    },
+    "Ohm": {
+      "expected": "Ohm"
+    },
+    "ohm": {
+      "expected": "Ohm"
+    },
+    "ft": {
+      "expected": "Fuß"
+    },
+    "ft.": {
+      "expected": "Fuß"
+    },
+    "in": {
+      "expected": "Zoll"
+    },
+    "in.": {
+      "expected": "Zoll"
+    },
+    "mi": {
+      "expected": "Meilen"
+    },
+    "mi.": {
+      "expected": "Meilen"
+    },
+    "yd": {
+      "expected": "Yards"
+    },
+    "yd.": {
+      "expected": "Yards"
+    },
+    "li": {
+      "expected": "Kettenglieder"
+    },
+    "li.": {
+      "expected": "Kettenglieder"
+    },
+    "rd": {
+      "expected": "Ruten"
+    },
+    "rd.": {
+      "expected": "Ruten"
+    },
+    "ch": {
+      "expected": "Ketten"
+    },
+    "ch.": {
+      "expected": "Ketten"
+    },
+    "fur": {
+      "expected": "Furchenlängen"
+    },
+    "fur.": {
+      "expected": "Furchenlängen"
+    },
+    "n.m.": {
+      "expected": "nautische Meilen"
+    },
+    "b": {
+      "expected": "Bits"
+    },
+    "KB": {
+      "expected": "Kilobytes"
+    },
+    "doz": {
+      "expected": "Dutzend"
+    },
+    "doz.": {
+      "expected": "Dutzend"
+    },
+    "dz": {
+      "expected": "Dutzend"
+    },
+    "dz.": {
+      "expected": "Dutzend"
+    },
+    "kt": {
+      "expected": "Knoten"
+    },
+    "kt.": {
+      "expected": "Knoten"
+    },
+    "mph": {
+      "expected": "Meilen pro Stunde"
+    },
+    "rpm": {
+      "expected": "Umdrehungen pro Minute"
+    },
+    "kmh": {
+      "expected": "Kilometer pro Stunde"
+    },
+    "kph": {
+      "expected": "Kilometer pro Stunde"
+    },
+    "F": {
+      "expected": "Grad Fahrenheit"
+    },
+    "F.": {
+      "expected": "Grad Fahrenheit"
+    },
+    "°F": {
+      "expected": "Grad Fahrenheit"
+    },
+    "C": {
+      "expected": "Grad Celsius"
+    },
+    "°C": {
+      "expected": "Grad Celsius"
+    },
+    "K": {
+      "expected": "Kelvin"
+    },
+    "°K": {
+      "expected": "Kelvin"
+    },
+    "″": {
+      "expected": "Sekunden"
+    },
+    "min": {
+      "expected": "Minuten"
+    },
+    "′": {
+      "expected": "Minuten"
+    },
+    "°": {
+      "expected": "Grad"
+    },
+    "h": {
+      "expected": "Stunden"
+    },
+    "hr": {
+      "expected": "Stunden"
+    },
+    "cu": {
+      "expected": "Kubik"
+    },
+    "cu.": {
+      "expected": "Kubik"
+    },
+    "cu in": {
+      "expected": "Kubikinch"
+    },
+    "cu. in.": {
+      "expected": "Kubikinch"
+    },
+    "cu ft": {
+      "expected": "Kubikfuß"
+    },
+    "cu. ft.": {
+      "expected": "Kubikfuß"
+    },
+    "cu yd": {
+      "expected": "Kubikyards"
+    },
+    "cu. yd.": {
+      "expected": "Kubikyards"
+    },
+    "bbl.": {
+      "expected": "Fass"
+    },
+    "bbl": {
+      "expected": "Fass"
+    },
+    "fl. oz.": {
+      "expected": "Fluid ounces"
+    },
+    "fl oz": {
+      "expected": "Fluid ounces"
+    },
+    "gal": {
+      "expected": "Gallonen"
+    },
+    "gal.": {
+      "expected": "Gallonen"
+    },
+    "pt": {
+      "expected": "Pint"
+    },
+    "pt.": {
+      "expected": "Pint"
+    },
+    "qt": {
+      "expected": "Quarts"
+    },
+    "qt.": {
+      "expected": "Quarts"
+    },
+    "fl dr": {
+      "expected": "Flüssigdrachmen"
+    },
+    "fl. dr.": {
+      "expected": "Flüssigdrachmen"
+    },
+    "tbsp": {
+      "expected": "Esslöffel"
+    },
+    "tbsp.": {
+      "expected": "Esslöffel"
+    },
+    "Tbsp": {
+      "expected": "Esslöffel"
+    },
+    "Tbsp.": {
+      "expected": "Esslöffel"
+    },
+    "tsp": {
+      "expected": "Teelöffel"
+    },
+    "tsp.": {
+      "expected": "Teelöffel"
+    },
+    "cp": {
+      "expected": "Tassen"
+    },
+    "cp.": {
+      "expected": "Tassen"
+    },
+    "cc": {
+      "expected": "Kubikzentimeter"
+    },
+    "ccm": {
+      "expected": "Kubikzentimeter"
+    },
+    "dr": {
+      "expected": "Drachmen"
+    },
+    "dr.": {
+      "expected": "Drachmen"
+    },
+    "oz": {
+      "expected": "Unzen"
+    },
+    "oz.": {
+      "expected": "Unzen"
+    },
+    "lb": {
+      "expected": "Pfund"
+    },
+    "lb.": {
+      "expected": "Pfund"
+    },
+    "st": {
+      "expected": "Stone"
+    },
+    "st.": {
+      "expected": "Stone"
+    },
+    "qtr": {
+      "expected": "Viertelzentner"
+    },
+    "qtr.": {
+      "expected": "Viertelzentner"
+    },
+    "cwt": {
+      "expected": "Zentner"
+    },
+    "cwt.": {
+      "expected": "Zentner"
+    },
+    "LT": {
+      "expected": "Long ton"
+    },
+    "L.T.": {
+      "expected": "Long ton"
+    },
+    "gr": {
+      "expected": "Gramm"
+    },
+    "mcg": {
+      "expected": "Mikrogramm"
+    },
+    "t": {
+      "expected": "Tonnen"
+    },
+    "T": {
+      "expected": "Tonnen"
+    },
+    "_commentAdded_": "Add for locale",
+    "Ztr.": {
+      "expected": "Zentner"
+    },
+    "Ctr.": {
+      "expected": "Zentner"
+    }
+  }
+}

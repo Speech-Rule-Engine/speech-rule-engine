@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml integrals tests.",
+  "base": "input/semantic/integrals.json"
+}

@@ -1,0 +1,251 @@
+{
+  "name": "SwedishDefaultFunction",
+  "locale": "sv",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsSwedish",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Swedish Default Function tests.",
+  "compare": true,
+  "tests": {
+    "deg": {
+      "expected": "grad"
+    },
+    "Deg": {
+      "expected": "grad"
+    },
+    "det": {
+      "expected": "determinant"
+    },
+    "Det": {
+      "expected": "determinant"
+    },
+    "dim": {
+      "expected": "dimension"
+    },
+    "Dim": {
+      "expected": "dimension"
+    },
+    "hom": {
+      "expected": "homomorfism"
+    },
+    "Hom": {
+      "expected": "homomorfism"
+    },
+    "HOM": {
+      "expected": "homomorfism"
+    },
+    "ker": {
+      "expected": "kärna"
+    },
+    "Ker": {
+      "expected": "kärna"
+    },
+    "Tr": {
+      "expected": "spår"
+    },
+    "tr": {
+      "expected": "spår"
+    },
+    "log": {
+      "expected": "logaritmen"
+    },
+    "ln": {
+      "expected": "naturliga logaritmen"
+    },
+    "lg": {
+      "expected": "tiologaritmen"
+    },
+    "exp": {
+      "expected": "exponentiell"
+    },
+    "expt": {
+      "expected": "exponentiell"
+    },
+    "gcd": {
+      "expected": "största gemensamma nämnare"
+    },
+    "GCD": {
+      "expected": "största gemensamma nämnare"
+    },
+    "lcm": {
+      "expected": "minsta gemensamma multipel"
+    },
+    "LCM": {
+      "expected": "minsta gemensamma multipel"
+    },
+    "arg": {
+      "expected": "argument"
+    },
+    "Arg": {
+      "expected": "argument"
+    },
+    "im": {
+      "expected": "imaginär del"
+    },
+    "Im": {
+      "expected": "imaginär del"
+    },
+    "re": {
+      "expected": "reell del"
+    },
+    "Re": {
+      "expected": "reell del"
+    },
+    "inf": {
+      "expected": "infimum"
+    },
+    "Inf": {
+      "expected": "infimum"
+    },
+    "lim": {
+      "expected": "gränsvärde"
+    },
+    "lim inf": {
+      "expected": "nedre gränsvärde"
+    },
+    "liminf": {
+      "expected": "nedre gränsvärde"
+    },
+    "lim sup": {
+      "expected": "övre gränsvärde"
+    },
+    "limsup": {
+      "expected": "övre gränsvärde"
+    },
+    "max": {
+      "expected": "maximum"
+    },
+    "Max": {
+      "expected": "maximum"
+    },
+    "min": {
+      "expected": "minimum"
+    },
+    "Min": {
+      "expected": "minimum"
+    },
+    "sup": {
+      "expected": "supremum"
+    },
+    "Sup": {
+      "expected": "supremum"
+    },
+    "injlim": {
+      "expected": "kolimes"
+    },
+    "inj lim": {
+      "expected": "kolimes"
+    },
+    "projlim": {
+      "expected": "inverterat gränsvärde"
+    },
+    "proj lim": {
+      "expected": "inverterat gränsvärde"
+    },
+    "mod": {
+      "expected": "modulo"
+    },
+    "Pr": {
+      "expected": "sannolikhet"
+    },
+    "cosh": {
+      "expected": "cosinus hyperbolicus"
+    },
+    "coth": {
+      "expected": "hyperbolisk kotangent"
+    },
+    "csch": {
+      "expected": "hyperbolisk kosekant"
+    },
+    "sech": {
+      "expected": "hyperbolisk sekant"
+    },
+    "sinh": {
+      "expected": "sinus hyperbolicus"
+    },
+    "tanh": {
+      "expected": "hyperbolisk tangent"
+    },
+    "arcosh": {
+      "expected": "areacosinus hyperbolicus"
+    },
+    "arccosh": {
+      "expected": "areacosinus hyperbolicus"
+    },
+    "arcoth": {
+      "expected": "areacotangens hyperbolicus"
+    },
+    "arccoth": {
+      "expected": "areacotangens hyperbolicus"
+    },
+    "arcsch": {
+      "expected": "areakosekant hyperbolicus"
+    },
+    "arccsch": {
+      "expected": "areakosekant hyperbolicus"
+    },
+    "arsech": {
+      "expected": "areasekant hyperbolicus"
+    },
+    "arcsech": {
+      "expected": "areasekant hyperbolicus"
+    },
+    "arsinh": {
+      "expected": "areasinus hyperbolicus"
+    },
+    "arcsinh": {
+      "expected": "areasinus hyperbolicus"
+    },
+    "artanh": {
+      "expected": "areatangens hyperbolicus"
+    },
+    "arctanh": {
+      "expected": "areatangens hyperbolicus"
+    },
+    "cos": {
+      "expected": "cosinus"
+    },
+    "cosine": {
+      "expected": "cosinus"
+    },
+    "cot": {
+      "expected": "kotangent"
+    },
+    "csc": {
+      "expected": "kosekant"
+    },
+    "sec": {
+      "expected": "sekant"
+    },
+    "sin": {
+      "expected": "sinus"
+    },
+    "sine": {
+      "expected": "sinus"
+    },
+    "tan": {
+      "expected": "tangens"
+    },
+    "arccos": {
+      "expected": "arcus cosinus"
+    },
+    "arccot": {
+      "expected": "arcus cotangens"
+    },
+    "arccsc": {
+      "expected": "arcus cosecans"
+    },
+    "arcsec": {
+      "expected": "arcus secans"
+    },
+    "arcsin": {
+      "expected": "arcus sinus"
+    },
+    "arctan": {
+      "expected": "arcus tangens"
+    }
+  }
+}

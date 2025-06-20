@@ -1,0 +1,514 @@
+{
+  "name": "KoreanDefaultUnit",
+  "locale": "ko",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsKorean",
+  "grammar": {
+    "annotation": "unit"
+  },
+  "factory": "symbol",
+  "base": "input/common/units.json",
+  "information": "Korean Default Unit tests.",
+  "tests": {
+    "sq": {
+      "expected": "제곱미터"
+    },
+    "sq.": {
+      "expected": "제곱미터"
+    },
+    "sq in": {
+      "expected": "제곱인치"
+    },
+    "sq. in.": {
+      "expected": "제곱인치"
+    },
+    "sq inch": {
+      "expected": "제곱인치"
+    },
+    "sq. inch": {
+      "expected": "제곱인치"
+    },
+    "sq rd": {
+      "expected": "제곱로드"
+    },
+    "sq. rd.": {
+      "expected": "제곱로드"
+    },
+    "sq ft": {
+      "expected": "제곱피트"
+    },
+    "sq. ft.": {
+      "expected": "제곱피트"
+    },
+    "sq yd": {
+      "expected": "제곱야드"
+    },
+    "sq. yd.": {
+      "expected": "제곱야드"
+    },
+    "sq mi": {
+      "expected": "제곱마일"
+    },
+    "sq. mi.": {
+      "expected": "제곱마일"
+    },
+    "ac": {
+      "expected": "에이커"
+    },
+    "ac.": {
+      "expected": "에이커"
+    },
+    "acr": {
+      "expected": "에이커"
+    },
+    "acr.": {
+      "expected": "에이커"
+    },
+    "ha": {
+      "expected": "헥타르"
+    },
+    "$": {
+      "expected": "달러"
+    },
+    "💲": {
+      "expected": "달러"
+    },
+    "＄": {
+      "expected": "달러"
+    },
+    "﹩": {
+      "expected": "달러"
+    },
+    "USD": {
+      "expected": "달러"
+    },
+    "£": {
+      "expected": "파운드"
+    },
+    "￡": {
+      "expected": "파운드"
+    },
+    "GBP": {
+      "expected": "파운드"
+    },
+    "¥": {
+      "expected": "엔"
+    },
+    "￥": {
+      "expected": "엔"
+    },
+    "JPY": {
+      "expected": "엔"
+    },
+    "€": {
+      "expected": "유로"
+    },
+    "EUR": {
+      "expected": "유로"
+    },
+    "₡": {
+      "expected": "콜론"
+    },
+    "CRC": {
+      "expected": "콜론"
+    },
+    "₢": {
+      "expected": "크루제이루"
+    },
+    "₣": {
+      "expected": "프랑"
+    },
+    "₤": {
+      "expected": "리라"
+    },
+    "₥": {
+      "expected": "밀"
+    },
+    "₦": {
+      "expected": "나이라"
+    },
+    "NGN": {
+      "expected": "나이라"
+    },
+    "₧": {
+      "expected": "페세타"
+    },
+    "₨": {
+      "expected": "루피"
+    },
+    "₹": {
+      "expected": "루피"
+    },
+    "INR": {
+      "expected": "루피"
+    },
+    "NPR": {
+      "expected": "루피"
+    },
+    "PKR": {
+      "expected": "루피"
+    },
+    "LKR": {
+      "expected": "루피"
+    },
+    "₩": {
+      "expected": "원"
+    },
+    "￦": {
+      "expected": "원"
+    },
+    "KRW": {
+      "expected": "원"
+    },
+    "₪": {
+      "expected": "세겔"
+    },
+    "₫": {
+      "expected": "동"
+    },
+    "₭": {
+      "expected": "낍"
+    },
+    "₮": {
+      "expected": "투그릭"
+    },
+    "₯": {
+      "expected": "드라크마"
+    },
+    "₰": {
+      "expected": "페니히"
+    },
+    "₱": {
+      "expected": "페소"
+    },
+    "₲": {
+      "expected": "과라니"
+    },
+    "₳": {
+      "expected": "오스트랄"
+    },
+    "₴": {
+      "expected": "그리브나"
+    },
+    "UAH": {
+      "expected": "그리브나"
+    },
+    "₵": {
+      "expected": "세디"
+    },
+    "GHS": {
+      "expected": "세디"
+    },
+    "元": {
+      "expected": "위안"
+    },
+    "￠": {
+      "expected": "센트"
+    },
+    "¢": {
+      "expected": "센트"
+    },
+    "kwh": {
+      "expected": "킬로와트시"
+    },
+    "kWh": {
+      "expected": "킬로와트시"
+    },
+    "Ohm": {
+      "expected": "옴"
+    },
+    "ohm": {
+      "expected": "옴"
+    },
+    "ft": {
+      "expected": "피트"
+    },
+    "ft.": {
+      "expected": "피트"
+    },
+    "in": {
+      "expected": "인치"
+    },
+    "in.": {
+      "expected": "인치"
+    },
+    "mi": {
+      "expected": "마일"
+    },
+    "mi.": {
+      "expected": "마일"
+    },
+    "yd": {
+      "expected": "야드"
+    },
+    "yd.": {
+      "expected": "야드"
+    },
+    "li": {
+      "expected": "링크"
+    },
+    "li.": {
+      "expected": "링크"
+    },
+    "rd": {
+      "expected": "로드"
+    },
+    "rd.": {
+      "expected": "로드"
+    },
+    "ch": {
+      "expected": "체인"
+    },
+    "ch.": {
+      "expected": "체인"
+    },
+    "fur": {
+      "expected": "펄롱"
+    },
+    "fur.": {
+      "expected": "펄롱"
+    },
+    "n.m.": {
+      "expected": "해리"
+    },
+    "b": {
+      "expected": "비트"
+    },
+    "KB": {
+      "expected": "킬로바이트"
+    },
+    "doz": {
+      "expected": "다스"
+    },
+    "doz.": {
+      "expected": "다스"
+    },
+    "dz": {
+      "expected": "다스"
+    },
+    "dz.": {
+      "expected": "다스"
+    },
+    "kt": {
+      "expected": "노트"
+    },
+    "kt.": {
+      "expected": "노트"
+    },
+    "mph": {
+      "expected": "마일 퍼 아워"
+    },
+    "rpm": {
+      "expected": "레볼루션 퍼 미닛"
+    },
+    "kmh": {
+      "expected": "킬로미터 퍼 아워"
+    },
+    "kph": {
+      "input": "kph",
+      "expected": "킬로미터 퍼 아워"
+    },
+    "F": {
+      "expected": "화씨"
+    },
+    "F.": {
+      "expected": "화씨"
+    },
+    "°F": {
+      "expected": "화씨"
+    },
+    "C": {
+      "expected": "섭씨"
+    },
+    "°C": {
+      "expected": "섭씨"
+    },
+    "K": {
+      "expected": "켈빈"
+    },
+    "°K": {
+      "expected": "켈빈"
+    },
+    "min": {
+      "expected": "분"
+    },
+    "h": {
+      "expected": "시간"
+    },
+    "hr": {
+      "expected": "시간"
+    },
+    "cu": {
+      "expected": "세제곱미터"
+    },
+    "cu.": {
+      "expected": "세제곱미터"
+    },
+    "cu in": {
+      "expected": "세제곱인치"
+    },
+    "cu. in.": {
+      "expected": "세제곱인치"
+    },
+    "cu ft": {
+      "expected": "세제곱피트"
+    },
+    "cu. ft.": {
+      "expected": "세제곱피트"
+    },
+    "cu yd": {
+      "expected": "세제곱야드"
+    },
+    "cu. yd.": {
+      "expected": "세제곱야드"
+    },
+    "bbl.": {
+      "expected": "배럴"
+    },
+    "bbl": {
+      "expected": "배럴"
+    },
+    "fl. oz.": {
+      "expected": "액량 온스"
+    },
+    "fl oz": {
+      "expected": "액량 온스"
+    },
+    "gal": {
+      "expected": "갤런"
+    },
+    "gal.": {
+      "expected": "갤런"
+    },
+    "pt": {
+      "expected": "파인트"
+    },
+    "pt.": {
+      "expected": "파인트"
+    },
+    "qt": {
+      "expected": "쿼트"
+    },
+    "qt.": {
+      "expected": "쿼트"
+    },
+    "fl dr": {
+      "expected": "액량 드램"
+    },
+    "fl. dr.": {
+      "expected": "액량 드램"
+    },
+    "tbsp": {
+      "expected": "테이블스푼"
+    },
+    "tbsp.": {
+      "expected": "테이블스푼"
+    },
+    "Tbsp": {
+      "expected": "테이블스푼"
+    },
+    "Tbsp.": {
+      "expected": "테이블스푼"
+    },
+    "tsp": {
+      "expected": "티스푼"
+    },
+    "tsp.": {
+      "expected": "티스푼"
+    },
+    "cp": {
+      "expected": "컵"
+    },
+    "cp.": {
+      "expected": "컵"
+    },
+    "cc": {
+      "expected": "세제곱센티미터"
+    },
+    "ccm": {
+      "expected": "세제곱센티미터"
+    },
+    "dr": {
+      "expected": "드램"
+    },
+    "dr.": {
+      "expected": "드램"
+    },
+    "oz": {
+      "expected": "온스"
+    },
+    "oz.": {
+      "expected": "온스"
+    },
+    "lb": {
+      "expected": "파운드"
+    },
+    "lb.": {
+      "expected": "파운드"
+    },
+    "st": {
+      "expected": "스톤"
+    },
+    "st.": {
+      "expected": "스톤"
+    },
+    "qtr": {
+      "expected": "쿼터"
+    },
+    "qtr.": {
+      "expected": "쿼터"
+    },
+    "cwt": {
+      "expected": "헌드레드웨이트"
+    },
+    "cwt.": {
+      "expected": "헌드레드웨이트"
+    },
+    "LT": {
+      "expected": "롱톤"
+    },
+    "L.T.": {
+      "expected": "롱톤"
+    },
+    "gr": {
+      "expected": "그램"
+    },
+    "mcg": {
+      "expected": "마이크로그램"
+    },
+    "t": {
+      "expected": "톤"
+    },
+    "T": {
+      "expected": "톤"
+    },
+    "₶": {
+      "expected": "리브르 투르누아"
+    },
+    "₷": {
+      "expected": "스페스밀로"
+    },
+    "₸": {
+      "expected": "텡게"
+    },
+    "KZT": {
+      "expected": "텡게"
+    },
+    "₺": {
+      "expected": "터키 리라"
+    },
+    "TRY": {
+      "expected": "터키 리라"
+    },
+    "″": {
+      "expected": "초"
+    },
+    "′": {
+      "expected": "분"
+    },
+    "°": {
+      "expected": "도"
+    }
+  }
+}

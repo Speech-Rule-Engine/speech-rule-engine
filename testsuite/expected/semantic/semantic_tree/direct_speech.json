@@ -1,0 +1,73 @@
+{
+  "factory": "stree",
+  "information": "Semantic tree direct speech tests.",
+  "base": "input/common/direct_speech.json",
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "<stree><overscore role=\"unknown\" id=\"2\"><children><identifier role=\"unknown\" font=\"normal\" id=\"0\">AC</identifier><relation role=\"overaccent\" annotation=\"accent:arrow\" id=\"1\" ext-speech=\"line\">↔</relation></children></overscore></stree>"
+    },
+    "AriaLabels_1": {
+      "expected": "<stree><relseq role=\"equality\" id=\"15\">=<content><relation role=\"equality\" id=\"4\" ext-speech=\"is equal to\">=</relation></content><children><overscore role=\"latinletter\" id=\"2\" ext-speech=\"derivative of x\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"14\">⁢<content><operator role=\"multiplication\" id=\"13\">⁢</operator></content><children><identifier role=\"greekletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\" ext-speech=\"sigma\">σ</identifier><fenced role=\"leftright\" id=\"12\"><content><fence role=\"open\" id=\"6\" ext-speech=\"left parenthesis\">(</fence><fence role=\"close\" id=\"10\" ext-speech=\"right parenthesis\">)</fence></content><children><infixop role=\"subtraction\" id=\"11\">−<content><operator role=\"subtraction\" id=\"8\" ext-speech=\"minus\">−</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"7\" ext-speech=\"y\">y</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\" ext-speech=\"x\">x</identifier></children></infixop></children></fenced></children></infixop></children></relseq></stree>"
+    },
+    "AltText_0": {
+      "expected": "<stree><overscore role=\"unknown\" id=\"2\" ext-speech=\"A C under line\"><children><identifier role=\"unknown\" font=\"normal\" id=\"0\">AC</identifier><relation role=\"overaccent\" annotation=\"accent:arrow\" id=\"1\">↔</relation></children></overscore></stree>"
+    },
+    "AltText_1": {
+      "expected": "<stree><overscore role=\"unknown\" id=\"2\"><children><identifier role=\"unknown\" font=\"normal\" id=\"0\">AC</identifier><relation role=\"overaccent\" annotation=\"accent:arrow\" id=\"1\" ext-speech=\"line\">↔</relation></children></overscore></stree>"
+    },
+    "ExactSpeech_0": {
+      "expected": "<stree><overscore role=\"unknown\" id=\"2\" ext-speech=\"A C under line\"><children><identifier role=\"unknown\" font=\"normal\" id=\"0\">AC</identifier><relation role=\"overaccent\" annotation=\"accent:arrow\" id=\"1\">↔</relation></children></overscore></stree>"
+    },
+    "ExactSpeech_1": {
+      "expected": "<stree><overscore role=\"unknown\" id=\"2\"><children><identifier role=\"unknown\" font=\"normal\" id=\"0\">AC</identifier><relation role=\"overaccent\" annotation=\"accent:arrow\" id=\"1\" ext-speech=\"line\">↔</relation></children></overscore></stree>"
+    },
+    "MglyphTokens_0": {
+      "expected": "<stree><identifier role=\"mglyph\" id=\"0\" ext-speech=\"my glyph\"/></stree>"
+    },
+    "MglyphTokens_1": {
+      "expected": "<stree><identifier role=\"mglyph\" id=\"0\" ext-speech=\"your glyph\"/></stree>"
+    },
+    "MglyphTokens_2": {
+      "expected": "<stree><operator role=\"mglyph\" id=\"0\" ext-speech=\"my glyph\"/></stree>"
+    },
+    "MglyphTokens_3": {
+      "expected": "<stree><operator role=\"mglyph\" id=\"0\" ext-speech=\"your glyph\"/></stree>"
+    },
+    "MglyphTokens_4": {
+      "expected": "<stree><number role=\"mglyph\" id=\"0\" ext-speech=\"my glyph\"/></stree>"
+    },
+    "MglyphTokens_5": {
+      "expected": "<stree><number role=\"mglyph\" id=\"0\" ext-speech=\"your glyph\"/></stree>"
+    },
+    "MglyphTokens_6": {
+      "expected": "<stree><unknown role=\"mglyph\" id=\"0\" ext-speech=\"my glyph\"/></stree>"
+    },
+    "MglyphTokens_7": {
+      "expected": "<stree><unknown role=\"mglyph\" id=\"0\" ext-speech=\"your glyph\"/></stree>"
+    },
+    "MglyphTokens_8": {
+      "expected": "<stree><unknown role=\"mglyph\" id=\"0\" ext-speech=\"my glyph\"/></stree>"
+    },
+    "MglyphTokens_9": {
+      "expected": "<stree><unknown role=\"mglyph\" id=\"0\" ext-speech=\"your glyph\"/></stree>"
+    },
+    "MglyphGeneral_0": {
+      "expected": "<stree><relseq role=\"equality\" id=\"6\">=<content><relation role=\"equality\" id=\"3\">=</relation></content><children><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"mglyph\" id=\"0\" ext-speech=\"23braid\"/><identifier role=\"mglyph\" id=\"2\" ext-speech=\"132braid\"/></children></infixop><identifier role=\"mglyph\" id=\"4\" ext-speech=\"13braid\"/></children></relseq></stree>"
+    },
+    "MglyphGeneral_1": {
+      "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">N</identifier><subscript role=\"latinletter\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">M</identifier><relseq role=\"set\" id=\"5\">⊂<content><relation role=\"set\" id=\"3\">⊂</relation></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">1</number><unknown role=\"mglyph\" id=\"4\" ext-speech=\"mfin\"/></children></relseq></children></subscript></children></infixop></stree>"
+    },
+    "Issue_635": {
+      "expected": "<stree><relseq role=\"equality\" id=\"6\">=<content><relation role=\"equality\" id=\"3\">=</relation></content><children><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"mglyph\" id=\"0\"/><identifier role=\"mglyph\" id=\"2\" ext-speech=\"132braid\"/></children></infixop><identifier role=\"mglyph\" id=\"4\" ext-speech=\"13braid\"/></children></relseq></stree>"
+    },
+    "Issue_644_0": {
+      "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">35</number><identifier role=\"unknown\" font=\"normal\" id=\"1\" ext-speech=\"mickeys per hour\">mph</identifier></children></infixop></stree>"
+    },
+    "Issue_644_1": {
+      "expected": "<stree><infixop role=\"unit\" annotation=\"clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">35</number><identifier role=\"unit\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"1\">mph</identifier></children></infixop></stree>"
+    },
+    "Issue_644_2": {
+      "expected": "<stree><infixop role=\"unit\" annotation=\"clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">35</number><identifier role=\"unit\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"1\" ext-speech=\"mickeys per hour\">mph</identifier></children></infixop></stree>"
+    }
+  }
+}

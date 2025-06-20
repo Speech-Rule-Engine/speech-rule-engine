@@ -1,0 +1,44 @@
+{
+  "name": "NemethDefaultAlphabetComma",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet comma tests.",
+  "tests": {
+    "🄁": {
+      "expected": "⠴⠠"
+    },
+    "🄂": {
+      "expected": "⠂⠠"
+    },
+    "🄃": {
+      "expected": "⠆⠠"
+    },
+    "🄄": {
+      "expected": "⠒⠠"
+    },
+    "🄅": {
+      "expected": "⠲⠠"
+    },
+    "🄆": {
+      "expected": "⠢⠠"
+    },
+    "🄇": {
+      "expected": "⠖⠠"
+    },
+    "🄈": {
+      "expected": "⠶⠠"
+    },
+    "🄉": {
+      "expected": "⠦⠠"
+    },
+    "🄊": {
+      "expected": "⠔⠠"
+    }
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "name": "DanishMathspeakRoots",
+  "locale": "da",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Danish Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "StartRod a SlutRot"
+    },
+    "sqrt_0_brief": {
+      "expected": "StartRod a SlutRot"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "Rod a SlutRot"
+    },
+    "sqrt_1_default": {
+      "expected": "RodEksponent 2 StartRod a SlutRot"
+    },
+    "sqrt_1_brief": {
+      "expected": "RodEksponent 2 StartRod a SlutRot"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "Eksponent 2 Rod a SlutRot"
+    },
+    "sqrt_2_default": {
+      "expected": "IndlejretStartRod StartRod a SlutRot IndlejretSlutRot"
+    },
+    "sqrt_2_brief": {
+      "expected": "IndlejrRodStartRod StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "IndlejrRodRod Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "sqrt_3_default": {
+      "expected": "Indlejret3StartRod IndlejretDobbeltStartRod IndlejretStartRod StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot Indlejret3SlutRot"
+    },
+    "sqrt_3_brief": {
+      "expected": "IndlejrRod3StartRod IndlejrRodDobbeltStartRod IndlejrRodStartRod StartRod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "IndlejrRod3Rod IndlejrRodDobbeltRod IndlejrRodRod Rod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "roots_0_default": {
+      "expected": "RodEksponent 1 StartRod a SlutRot"
+    },
+    "roots_0_brief": {
+      "expected": "RodEksponent 1 StartRod a SlutRot"
+    },
+    "roots_0_sbrief": {
+      "expected": "Eksponent 1 Rod a SlutRot"
+    },
+    "roots_1_default": {
+      "expected": "RodEksponent 2 StartRod a SlutRot"
+    },
+    "roots_1_brief": {
+      "expected": "RodEksponent 2 StartRod a SlutRot"
+    },
+    "roots_1_sbrief": {
+      "expected": "Eksponent 2 Rod a SlutRot"
+    },
+    "roots_2_default": {
+      "expected": "RodEksponent 3 StartRod a SlutRot"
+    },
+    "roots_2_brief": {
+      "expected": "RodEksponent 3 StartRod a SlutRot"
+    },
+    "roots_2_sbrief": {
+      "expected": "Eksponent 3 Rod a SlutRot"
+    },
+    "roots_3_default": {
+      "expected": "RodEksponent 4 StartRod a SlutRot"
+    },
+    "roots_3_brief": {
+      "expected": "RodEksponent 4 StartRod a SlutRot"
+    },
+    "roots_3_sbrief": {
+      "expected": "Eksponent 4 Rod a SlutRot"
+    },
+    "roots_4_default": {
+      "expected": "RodEksponent 5 StartRod a SlutRot"
+    },
+    "roots_4_brief": {
+      "expected": "RodEksponent 5 StartRod a SlutRot"
+    },
+    "roots_4_sbrief": {
+      "expected": "Eksponent 5 Rod a SlutRot"
+    },
+    "roots_5_default": {
+      "expected": "RodEksponent 6 StartRod a SlutRot"
+    },
+    "roots_5_brief": {
+      "expected": "RodEksponent 6 StartRod a SlutRot"
+    },
+    "roots_5_sbrief": {
+      "expected": "Eksponent 6 Rod a SlutRot"
+    },
+    "roots_6_default": {
+      "expected": "RodEksponent 7 StartRod a SlutRot"
+    },
+    "roots_6_brief": {
+      "expected": "RodEksponent 7 StartRod a SlutRot"
+    },
+    "roots_6_sbrief": {
+      "expected": "Eksponent 7 Rod a SlutRot"
+    },
+    "roots_7_default": {
+      "expected": "RodEksponent 8 StartRod a SlutRot"
+    },
+    "roots_7_brief": {
+      "expected": "RodEksponent 8 StartRod a SlutRot"
+    },
+    "roots_7_sbrief": {
+      "expected": "Eksponent 8 Rod a SlutRot"
+    },
+    "roots_8_default": {
+      "expected": "RodEksponent 9 StartRod a SlutRot"
+    },
+    "roots_8_brief": {
+      "expected": "RodEksponent 9 StartRod a SlutRot"
+    },
+    "roots_8_sbrief": {
+      "expected": "Eksponent 9 Rod a SlutRot"
+    },
+    "roots_9_default": {
+      "expected": "RodEksponent 10 StartRod a SlutRot"
+    },
+    "roots_9_brief": {
+      "expected": "RodEksponent 10 StartRod a SlutRot"
+    },
+    "roots_9_sbrief": {
+      "expected": "Eksponent 10 Rod a SlutRot"
+    },
+    "roots_10_default": {
+      "expected": "RodEksponent 11 StartRod a SlutRot"
+    },
+    "roots_10_brief": {
+      "expected": "RodEksponent 11 StartRod a SlutRot"
+    },
+    "roots_10_sbrief": {
+      "expected": "Eksponent 11 Rod a SlutRot"
+    },
+    "nested-roots_0_default": {
+      "expected": "IndlejretRodEksponent 1 IndlejretStartRod RodEksponent 1 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_0_brief": {
+      "expected": "IndlejrRodRodEksponent 1 IndlejrRodStartRod RodEksponent 1 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "IndlejrRodEksponent 1 IndlejrRodRod Eksponent 1 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_1_default": {
+      "expected": "IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_1_brief": {
+      "expected": "IndlejrRodRodEksponent 2 IndlejrRodStartRod RodEksponent 2 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "IndlejrRodEksponent 2 IndlejrRodRod Eksponent 2 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_2_default": {
+      "expected": "IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_2_brief": {
+      "expected": "IndlejrRodRodEksponent 3 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "IndlejrRodEksponent 3 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_3_default": {
+      "expected": "IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_3_brief": {
+      "expected": "IndlejrRodRodEksponent 4 IndlejrRodStartRod RodEksponent 4 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "IndlejrRodEksponent 4 IndlejrRodRod Eksponent 4 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_4_default": {
+      "expected": "IndlejretRodEksponent 5 IndlejretStartRod RodEksponent 5 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_4_brief": {
+      "expected": "IndlejrRodRodEksponent 5 IndlejrRodStartRod RodEksponent 5 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "IndlejrRodEksponent 5 IndlejrRodRod Eksponent 5 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_5_default": {
+      "expected": "IndlejretRodEksponent 6 IndlejretStartRod RodEksponent 6 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_5_brief": {
+      "expected": "IndlejrRodRodEksponent 6 IndlejrRodStartRod RodEksponent 6 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "IndlejrRodEksponent 6 IndlejrRodRod Eksponent 6 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_6_default": {
+      "expected": "IndlejretRodEksponent 7 IndlejretStartRod RodEksponent 7 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_6_brief": {
+      "expected": "IndlejrRodRodEksponent 7 IndlejrRodStartRod RodEksponent 7 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "IndlejrRodEksponent 7 IndlejrRodRod Eksponent 7 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_7_default": {
+      "expected": "IndlejretRodEksponent 8 IndlejretStartRod RodEksponent 8 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_7_brief": {
+      "expected": "IndlejrRodRodEksponent 8 IndlejrRodStartRod RodEksponent 8 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "IndlejrRodEksponent 8 IndlejrRodRod Eksponent 8 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_8_default": {
+      "expected": "IndlejretRodEksponent 9 IndlejretStartRod RodEksponent 9 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_8_brief": {
+      "expected": "IndlejrRodRodEksponent 9 IndlejrRodStartRod RodEksponent 9 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "IndlejrRodEksponent 9 IndlejrRodRod Eksponent 9 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_9_default": {
+      "expected": "IndlejretRodEksponent 10 IndlejretStartRod RodEksponent 10 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_9_brief": {
+      "expected": "IndlejrRodRodEksponent 10 IndlejrRodStartRod RodEksponent 10 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "IndlejrRodEksponent 10 IndlejrRodRod Eksponent 10 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_10_default": {
+      "expected": "IndlejretRodEksponent 11 IndlejretStartRod RodEksponent 11 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "nested-roots_10_brief": {
+      "expected": "IndlejrRodRodEksponent 11 IndlejrRodStartRod RodEksponent 11 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "IndlejrRodEksponent 11 IndlejrRodRod Eksponent 11 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "IndlejretRodEksponent 1 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "IndlejrRodRodEksponent 1 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "IndlejrRodEksponent 1 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "IndlejrRodRodEksponent 2 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "IndlejrRodEksponent 2 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "IndlejrRodRodEksponent 3 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "IndlejrRodEksponent 3 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "IndlejrRodRodEksponent 4 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "IndlejrRodEksponent 4 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "IndlejretRodEksponent 5 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "IndlejrRodRodEksponent 5 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "IndlejrRodEksponent 5 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "IndlejretRodEksponent 6 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "IndlejrRodRodEksponent 6 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "IndlejrRodEksponent 6 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "IndlejretRodEksponent 7 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "IndlejrRodRodEksponent 7 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "IndlejrRodEksponent 7 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "IndlejretRodEksponent 8 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "IndlejrRodRodEksponent 8 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "IndlejrRodEksponent 8 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "IndlejretRodEksponent 9 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "IndlejrRodRodEksponent 9 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "IndlejrRodEksponent 9 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "IndlejretRodEksponent 10 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "IndlejrRodRodEksponent 10 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "IndlejrRodEksponent 10 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "IndlejretRodEksponent 11 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "IndlejrRodRodEksponent 11 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "IndlejrRodEksponent 11 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "Indlejret3RodEksponent 2 Indlejret3StartRod IndlejretDobbeltRodEksponent 3 IndlejretDobbeltStartRod IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 5 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot Indlejret3SlutRot"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "IndlejrRod3RodEksponent 2 IndlejrRod3StartRod IndlejrRodDobbeltRodEksponent 3 IndlejrRodDobbeltStartRod IndlejrRodRodEksponent 4 IndlejrRodStartRod RodEksponent 5 StartRod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "IndlejrRod3Eksponent 2 IndlejrRod3Rod IndlejrRodDobbeltEksponent 3 IndlejrRodDobbeltRod IndlejrRodEksponent 4 IndlejrRodRod Eksponent 5 Rod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "Indlejret3RodEksponent 2 Indlejret3StartRod IndlejretDobbeltRodEksponent 3 IndlejretDobbeltStartRod IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot Indlejret3SlutRot"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "IndlejrRod3RodEksponent 2 IndlejrRod3StartRod IndlejrRodDobbeltRodEksponent 3 IndlejrRodDobbeltStartRod IndlejrRodRodEksponent 2 IndlejrRodStartRod RodEksponent 3 StartRod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "IndlejrRod3Eksponent 2 IndlejrRod3Rod IndlejrRodDobbeltEksponent 3 IndlejrRodDobbeltRod IndlejrRodEksponent 2 IndlejrRodRod Eksponent 3 Rod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "Indlejret4RodEksponent 2 Indlejret4StartRod Indlejret3RodEksponent 3 Indlejret3StartRod IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot Indlejret3SlutRot Indlejret4SlutRot"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "IndlejrRod4RodEksponent 2 IndlejrRod4StartRod IndlejrRod3RodEksponent 3 IndlejrRod3StartRod IndlejrRodDobbeltStartRod IndlejrRodRodEksponent 3 IndlejrRodStartRod StartRod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot IndlejrRod4SlutRot"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "IndlejrRod4Eksponent 2 IndlejrRod4Rod IndlejrRod3Eksponent 3 IndlejrRod3Rod IndlejrRodDobbeltRod IndlejrRodEksponent 3 IndlejrRodRod Rod a SlutRot IndlejrRodSlutRot IndlejrRodDobbeltSlutRot IndlejrRod3SlutRot IndlejrRod4SlutRot"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml postfix rewrite tests.",
+  "base": "input/semantic/postfix_rewrite.json"
+}

@@ -1,0 +1,373 @@
+{
+  "name": "ItalianMathspeakRoots",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_roots.json",
+  "information": "Italian Mathspeak Roots tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakItalian",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "sqrt_0_default": {
+      "expected": "inizio radice a fine radice"
+    },
+    "sqrt_0_brief": {
+      "expected": "inizio radice a fine radice"
+    },
+    "sqrt_0_sbrief": {
+      "expected": "radice a fine radice"
+    },
+    "sqrt_1_default": {
+      "expected": "indice radice 2 inizio radice a fine radice"
+    },
+    "sqrt_1_brief": {
+      "expected": "indice radice 2 inizio radice a fine radice"
+    },
+    "sqrt_1_sbrief": {
+      "expected": "indice Radice 2 radice a fine radice"
+    },
+    "sqrt_2_default": {
+      "expected": "inizio radice annidato inizio radice a fine radice fine radice annidato"
+    },
+    "sqrt_2_brief": {
+      "expected": "inizio radice annidamento inizio radice a fine radice fine radice annidamento"
+    },
+    "sqrt_2_sbrief": {
+      "expected": "radice annidamento radice a fine radice fine radice annidamento"
+    },
+    "sqrt_3_default": {
+      "expected": "inizio radice annidato inizio radice annidato inizio radice annidato inizio radice a fine radice fine radice annidato fine radice annidato fine radice annidato"
+    },
+    "sqrt_3_brief": {
+      "expected": "inizio radice annidamento inizio radice annidamento inizio radice annidamento inizio radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "sqrt_3_sbrief": {
+      "expected": "radice annidamento radice annidamento radice annidamento radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "roots_0_default": {
+      "expected": "indice radice 1 inizio radice a fine radice"
+    },
+    "roots_0_brief": {
+      "expected": "indice radice 1 inizio radice a fine radice"
+    },
+    "roots_0_sbrief": {
+      "expected": "indice Radice 1 radice a fine radice"
+    },
+    "roots_1_default": {
+      "expected": "indice radice 2 inizio radice a fine radice"
+    },
+    "roots_1_brief": {
+      "expected": "indice radice 2 inizio radice a fine radice"
+    },
+    "roots_1_sbrief": {
+      "expected": "indice Radice 2 radice a fine radice"
+    },
+    "roots_2_default": {
+      "expected": "indice radice 3 inizio radice a fine radice"
+    },
+    "roots_2_brief": {
+      "expected": "indice radice 3 inizio radice a fine radice"
+    },
+    "roots_2_sbrief": {
+      "expected": "indice Radice 3 radice a fine radice"
+    },
+    "roots_3_default": {
+      "expected": "indice radice 4 inizio radice a fine radice"
+    },
+    "roots_3_brief": {
+      "expected": "indice radice 4 inizio radice a fine radice"
+    },
+    "roots_3_sbrief": {
+      "expected": "indice Radice 4 radice a fine radice"
+    },
+    "roots_4_default": {
+      "expected": "indice radice 5 inizio radice a fine radice"
+    },
+    "roots_4_brief": {
+      "expected": "indice radice 5 inizio radice a fine radice"
+    },
+    "roots_4_sbrief": {
+      "expected": "indice Radice 5 radice a fine radice"
+    },
+    "roots_5_default": {
+      "expected": "indice radice 6 inizio radice a fine radice"
+    },
+    "roots_5_brief": {
+      "expected": "indice radice 6 inizio radice a fine radice"
+    },
+    "roots_5_sbrief": {
+      "expected": "indice Radice 6 radice a fine radice"
+    },
+    "roots_6_default": {
+      "expected": "indice radice 7 inizio radice a fine radice"
+    },
+    "roots_6_brief": {
+      "expected": "indice radice 7 inizio radice a fine radice"
+    },
+    "roots_6_sbrief": {
+      "expected": "indice Radice 7 radice a fine radice"
+    },
+    "roots_7_default": {
+      "expected": "indice radice 8 inizio radice a fine radice"
+    },
+    "roots_7_brief": {
+      "expected": "indice radice 8 inizio radice a fine radice"
+    },
+    "roots_7_sbrief": {
+      "expected": "indice Radice 8 radice a fine radice"
+    },
+    "roots_8_default": {
+      "expected": "indice radice 9 inizio radice a fine radice"
+    },
+    "roots_8_brief": {
+      "expected": "indice radice 9 inizio radice a fine radice"
+    },
+    "roots_8_sbrief": {
+      "expected": "indice Radice 9 radice a fine radice"
+    },
+    "roots_9_default": {
+      "expected": "indice radice 10 inizio radice a fine radice"
+    },
+    "roots_9_brief": {
+      "expected": "indice radice 10 inizio radice a fine radice"
+    },
+    "roots_9_sbrief": {
+      "expected": "indice Radice 10 radice a fine radice"
+    },
+    "roots_10_default": {
+      "expected": "indice radice 11 inizio radice a fine radice"
+    },
+    "roots_10_brief": {
+      "expected": "indice radice 11 inizio radice a fine radice"
+    },
+    "roots_10_sbrief": {
+      "expected": "indice Radice 11 radice a fine radice"
+    },
+    "nested-roots_0_default": {
+      "expected": "indice radice annidato 1 inizio radice annidato indice radice 1 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_0_brief": {
+      "expected": "indice radice annidamento 1 inizio radice annidamento indice radice 1 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_0_sbrief": {
+      "expected": "indice Radice annidamento 1 radice annidamento indice Radice 1 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_1_default": {
+      "expected": "indice radice annidato 2 inizio radice annidato indice radice 2 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_1_brief": {
+      "expected": "indice radice annidamento 2 inizio radice annidamento indice radice 2 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_1_sbrief": {
+      "expected": "indice Radice annidamento 2 radice annidamento indice Radice 2 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_2_default": {
+      "expected": "indice radice annidato 3 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_2_brief": {
+      "expected": "indice radice annidamento 3 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_2_sbrief": {
+      "expected": "indice Radice annidamento 3 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_3_default": {
+      "expected": "indice radice annidato 4 inizio radice annidato indice radice 4 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_3_brief": {
+      "expected": "indice radice annidamento 4 inizio radice annidamento indice radice 4 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_3_sbrief": {
+      "expected": "indice Radice annidamento 4 radice annidamento indice Radice 4 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_4_default": {
+      "expected": "indice radice annidato 5 inizio radice annidato indice radice 5 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_4_brief": {
+      "expected": "indice radice annidamento 5 inizio radice annidamento indice radice 5 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_4_sbrief": {
+      "expected": "indice Radice annidamento 5 radice annidamento indice Radice 5 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_5_default": {
+      "expected": "indice radice annidato 6 inizio radice annidato indice radice 6 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_5_brief": {
+      "expected": "indice radice annidamento 6 inizio radice annidamento indice radice 6 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_5_sbrief": {
+      "expected": "indice Radice annidamento 6 radice annidamento indice Radice 6 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_6_default": {
+      "expected": "indice radice annidato 7 inizio radice annidato indice radice 7 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_6_brief": {
+      "expected": "indice radice annidamento 7 inizio radice annidamento indice radice 7 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_6_sbrief": {
+      "expected": "indice Radice annidamento 7 radice annidamento indice Radice 7 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_7_default": {
+      "expected": "indice radice annidato 8 inizio radice annidato indice radice 8 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_7_brief": {
+      "expected": "indice radice annidamento 8 inizio radice annidamento indice radice 8 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_7_sbrief": {
+      "expected": "indice Radice annidamento 8 radice annidamento indice Radice 8 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_8_default": {
+      "expected": "indice radice annidato 9 inizio radice annidato indice radice 9 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_8_brief": {
+      "expected": "indice radice annidamento 9 inizio radice annidamento indice radice 9 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_8_sbrief": {
+      "expected": "indice Radice annidamento 9 radice annidamento indice Radice 9 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_9_default": {
+      "expected": "indice radice annidato 10 inizio radice annidato indice radice 10 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_9_brief": {
+      "expected": "indice radice annidamento 10 inizio radice annidamento indice radice 10 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_9_sbrief": {
+      "expected": "indice Radice annidamento 10 radice annidamento indice Radice 10 radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_10_default": {
+      "expected": "indice radice annidato 11 inizio radice annidato indice radice 11 inizio radice a fine radice fine radice annidato"
+    },
+    "nested-roots_10_brief": {
+      "expected": "indice radice annidamento 11 inizio radice annidamento indice radice 11 inizio radice a fine radice fine radice annidamento"
+    },
+    "nested-roots_10_sbrief": {
+      "expected": "indice Radice annidamento 11 radice annidamento indice Radice 11 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_0_default": {
+      "expected": "indice radice annidato 1 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_0_brief": {
+      "expected": "indice radice annidamento 1 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_0_sbrief": {
+      "expected": "indice Radice annidamento 1 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_1_default": {
+      "expected": "indice radice annidato 2 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_1_brief": {
+      "expected": "indice radice annidamento 2 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_1_sbrief": {
+      "expected": "indice Radice annidamento 2 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_2_default": {
+      "expected": "indice radice annidato 3 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_2_brief": {
+      "expected": "indice radice annidamento 3 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_2_sbrief": {
+      "expected": "indice Radice annidamento 3 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_3_default": {
+      "expected": "indice radice annidato 4 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_3_brief": {
+      "expected": "indice radice annidamento 4 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_3_sbrief": {
+      "expected": "indice Radice annidamento 4 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_4_default": {
+      "expected": "indice radice annidato 5 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_4_brief": {
+      "expected": "indice radice annidamento 5 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_4_sbrief": {
+      "expected": "indice Radice annidamento 5 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_5_default": {
+      "expected": "indice radice annidato 6 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_5_brief": {
+      "expected": "indice radice annidamento 6 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_5_sbrief": {
+      "expected": "indice Radice annidamento 6 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_6_default": {
+      "expected": "indice radice annidato 7 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_6_brief": {
+      "expected": "indice radice annidamento 7 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_6_sbrief": {
+      "expected": "indice Radice annidamento 7 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_7_default": {
+      "expected": "indice radice annidato 8 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_7_brief": {
+      "expected": "indice radice annidamento 8 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_7_sbrief": {
+      "expected": "indice Radice annidamento 8 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_8_default": {
+      "expected": "indice radice annidato 9 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_8_brief": {
+      "expected": "indice radice annidamento 9 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_8_sbrief": {
+      "expected": "indice Radice annidamento 9 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_9_default": {
+      "expected": "indice radice annidato 10 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_9_brief": {
+      "expected": "indice radice annidamento 10 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_9_sbrief": {
+      "expected": "indice Radice annidamento 10 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_10_default": {
+      "expected": "indice radice annidato 11 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato"
+    },
+    "hybrided-nested-roots_10_brief": {
+      "expected": "indice radice annidamento 11 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento"
+    },
+    "hybrided-nested-roots_10_sbrief": {
+      "expected": "indice Radice annidamento 11 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento"
+    },
+    "deep-nested-roots_0_default": {
+      "expected": "indice radice annidato 2 inizio radice annidato indice radice annidato 3 inizio radice annidato indice radice annidato 4 inizio radice annidato indice radice 5 inizio radice a fine radice fine radice annidato fine radice annidato fine radice annidato"
+    },
+    "deep-nested-roots_0_brief": {
+      "expected": "indice radice annidamento 2 inizio radice annidamento indice radice annidamento 3 inizio radice annidamento indice radice annidamento 4 inizio radice annidamento indice radice 5 inizio radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "deep-nested-roots_0_sbrief": {
+      "expected": "indice Radice annidamento 2 radice annidamento indice Radice annidamento 3 radice annidamento indice Radice annidamento 4 radice annidamento indice Radice 5 radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "deep-nested-roots_1_default": {
+      "expected": "indice radice annidato 2 inizio radice annidato indice radice annidato 3 inizio radice annidato indice radice annidato 2 inizio radice annidato indice radice 3 inizio radice a fine radice fine radice annidato fine radice annidato fine radice annidato"
+    },
+    "deep-nested-roots_1_brief": {
+      "expected": "indice radice annidamento 2 inizio radice annidamento indice radice annidamento 3 inizio radice annidamento indice radice annidamento 2 inizio radice annidamento indice radice 3 inizio radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "deep-nested-roots_1_sbrief": {
+      "expected": "indice Radice annidamento 2 radice annidamento indice Radice annidamento 3 radice annidamento indice Radice annidamento 2 radice annidamento indice Radice 3 radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "deep-nested-roots_2_default": {
+      "expected": "indice radice annidato 2 inizio radice annidato indice radice annidato 3 inizio radice annidato inizio radice annidato indice radice annidato 3 inizio radice annidato inizio radice a fine radice fine radice annidato fine radice annidato fine radice annidato fine radice annidato"
+    },
+    "deep-nested-roots_2_brief": {
+      "expected": "indice radice annidamento 2 inizio radice annidamento indice radice annidamento 3 inizio radice annidamento inizio radice annidamento indice radice annidamento 3 inizio radice annidamento inizio radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento fine radice annidamento"
+    },
+    "deep-nested-roots_2_sbrief": {
+      "expected": "indice Radice annidamento 2 radice annidamento indice Radice annidamento 3 radice annidamento radice annidamento indice Radice annidamento 3 radice annidamento radice a fine radice fine radice annidamento fine radice annidamento fine radice annidamento fine radice annidamento"
+    }
+  }
+}

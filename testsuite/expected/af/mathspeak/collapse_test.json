@@ -1,0 +1,418 @@
+{
+  "name": "AfrikaansMathspeakCollapse",
+  "locale": "af",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Afrikaans Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "active": "CollapseAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "opgesom som met 2 terme"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedBigop_default": {
+      "expected": "opgesom som"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "opgesom binomiaal"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "opgesom binomiaal"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "opgesom binomiaal"
+    },
+    "CollapsedCases_default": {
+      "expected": "opgesom gevalstelling met 2 gevalle"
+    },
+    "CollapsedCases_brief": {
+      "expected": "opgesom gevalstelling"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "opgesom gevalstelling"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "opgesom voortgesette breuk"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "opgesom voortgesette breuk"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "opgesom voortgesette breuk"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "opgesom 2 dimensionele determinant"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "opgesom determinant"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "opgesom determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "opgesom breuk"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "opgesom breuk"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "opgesom breuk"
+    },
+    "CollapsedFunction_default": {
+      "expected": "opgesom funksionele uitdrukking"
+    },
+    "CollapsedFunction_brief": {
+      "expected": "opgesom funksie"
+    },
+    "CollapsedFunction_sbrief": {
+      "expected": "opgesom funksie"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "opgesom lang identifiseerder"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "opgesom lang identifiseerder"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "opgesom lang identifiseerder"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "opgesom deling met 2 elemente"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "opgesom deling"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "opgesom deling"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "opgesom integraal"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "opgesom integraal"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "opgesom integraal"
+    },
+    "CollapsedLim_default": {
+      "expected": "opgesom limiet funksie"
+    },
+    "CollapsedLim_brief": {
+      "expected": "opgesom limïet"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "opgesom limïet"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "opgesom 3 by 2 matriks"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "opgesom matriks"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "opgesom matriks"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "opgesom lang gemengde getal"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "opgesom lang gemengde getal"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "opgesom lang gemengde getal"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "opgesom produk met 2 faktore"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "opgesom verwantskapsketting met 3 elemente"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "opgesom verwantskapsketting"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "opgesom verwantskapsketting"
+    },
+    "CollapsedNumber_default": {
+      "expected": "opgesom lang getal"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "opgesom lang getal"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "opgesom lang getal"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "opgesom komma opgebreekte lys met lengte 3"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "opgesom komma opgebreekte lys"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "opgesom komma opgebreekte lys"
+    },
+    "CollapsedRelation_default": {
+      "expected": "opgesom gelykheid"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "opgesom gelykheid"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "opgesom gelykheid"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "opgesom gelykheid ketting met 3 elemente"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "opgesom gelykheid ketting"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "opgesom gelykheid ketting"
+    },
+    "CollapsedRoot_default": {
+      "expected": "opgesom wortel van indeks 3"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "opgesom wortel"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "opgesom wortel"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "opgesom genesde wortel van indeks 3"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "opgesom genesde wortel"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "opgesom genesde wortel"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "opgesom 2 dimensionele ry vektor"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "opgesom ry vektor"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "opgesom ry vektor"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "opgesom vierkantswortel"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "opgesom vierkantswortel"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "opgesom vierkantswortel"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "opgesom genesde vierkantswortel"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "opgesom genesde vierkantswortel"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "opgesom genesde vierkantswortel"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "opgesom 2 dimensionele vierkant matriks"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "opgesom vierkant matriks"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "opgesom vierkant matriks"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "opgesom onderskrif"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "opgesom onderskrif"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "opgesom onderskrif"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "opgesom mag met onderskrif"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "opgesom mag met onderskrif"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "opgesom mag met onderskrif"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "opgesom mag"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "opgesom mag"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "opgesom mag"
+    },
+    "CollapsedTable_default": {
+      "expected": "opgesom tabêl met 2 rye en 2 kolomme"
+    },
+    "CollapsedTable_brief": {
+      "expected": "opgesom tabêl met 2 rye en 2 kolomme"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "opgesom tabêl met 2 rye en 2 kolomme"
+    },
+    "CollapsedText_default": {
+      "expected": "opgesom teks"
+    },
+    "CollapsedText_brief": {
+      "expected": "opgesom teks"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "opgesom teks"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "opgesom som met wisselende aantal terme"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "opgesom som"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "opgesom gevalstelling met wisselende hoeveelheid gevalle"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "opgesom gevalstelling"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "opgesom gevalstelling"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "opgesom n dimensional determinant"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "opgesom determinant"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "opgesom determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "opgesom n by m dimensionele matriks"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "opgesom vierkant matriks"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "opgesom vierkant matriks"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "opgesom produk met wisselende hoeveelheid faktore"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "opgesom verwantskapsketting met 'n wisselende aantal elemente"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "opgesom verwantskapsketting"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "opgesom verwantskapsketting"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "opgesom komma opgebreekte lys met wisselende lengte"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "opgesom komma opgebreekte lys"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "opgesom komma opgebreekte lys"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "opgesom gelykheid ketting met wisselende hoeveelheid elemente"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "opgesom gelykheid ketting"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "opgesom gelykheid ketting"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "opgesom n dimensionele vektor"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "opgesom vektor"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "opgesom vektor"
+    },
+    "CollapsedVector_default": {
+      "expected": "opgesom 3 dimensionele vektor"
+    },
+    "CollapsedVector_brief": {
+      "expected": "opgesom vektor"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "opgesom vektor"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "opgesom aftrekking met wisselende hoeveelheid elemente"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "opgesom aftrekking"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "opgesom aftrekking"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "opgesom produk met 3 faktore"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "opgesom produk"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "opgesom produk met wisselende hoeveelheid faktore"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "opgesom pyltjie ketting met wisselende hoeveelheid elemente"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "opgesom pyltjie"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "opgesom n dimensionele ry vektor"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "opgesom wortel van indeks 3 endindeks a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "opgesom genesde wortel van indeks 3 end indeks a"
+    }
+  }
+}

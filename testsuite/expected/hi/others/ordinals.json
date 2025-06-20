@@ -1,0 +1,644 @@
+{
+  "locale": "hi",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Hindi Ordinal word tests.",
+  "kind": "wordOrdinal",
+  "active": "NumbersHindi",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "0"
+    },
+    "Number_1": {
+      "expected": "पहला"
+    },
+    "Number_2": {
+      "expected": "दूसरा"
+    },
+    "Number_3": {
+      "expected": "तीसरा"
+    },
+    "Number_4": {
+      "expected": "चौथा"
+    },
+    "Number_5": {
+      "expected": "पांचवाँ"
+    },
+    "Number_6": {
+      "expected": "छठा"
+    },
+    "Number_7": {
+      "expected": "सातवाँ"
+    },
+    "Number_8": {
+      "expected": "आठवाँ"
+    },
+    "Number_9": {
+      "expected": "नौवाँ"
+    },
+    "Number_10": {
+      "expected": "दसवाँ"
+    },
+    "Number_11": {
+      "expected": "ग्यारहवाँ"
+    },
+    "Number_12": {
+      "expected": "बारहवाँ"
+    },
+    "Number_13": {
+      "expected": "तेरहवाँ"
+    },
+    "Number_14": {
+      "expected": "चौदहवाँ"
+    },
+    "Number_15": {
+      "expected": "पंद्रहवाँ"
+    },
+    "Number_16": {
+      "expected": "सोलहवाँ"
+    },
+    "Number_17": {
+      "expected": "सत्रहवाँ"
+    },
+    "Number_18": {
+      "expected": "अठारहवाँ"
+    },
+    "Number_19": {
+      "expected": "उन्नीसवाँ"
+    },
+    "Number_20": {
+      "expected": "बीसवाँ"
+    },
+    "Number_21": {
+      "expected": "इक्कीसवाँ"
+    },
+    "Number_22": {
+      "expected": "बाईसवाँ"
+    },
+    "Number_23": {
+      "expected": "तेइसवाँ"
+    },
+    "Number_24": {
+      "expected": "चौबीसवाँ"
+    },
+    "Number_25": {
+      "expected": "पच्चीसवाँ"
+    },
+    "Number_26": {
+      "expected": "छब्बीसवाँ"
+    },
+    "Number_27": {
+      "expected": "सताइसवाँ"
+    },
+    "Number_28": {
+      "expected": "अट्ठाइसवाँ"
+    },
+    "Number_29": {
+      "expected": "उनतीसवाँ"
+    },
+    "Number_30": {
+      "expected": "तीसवाँ"
+    },
+    "Number_31": {
+      "expected": "इकतीसवाँ"
+    },
+    "Number_32": {
+      "expected": "बतीसवाँ"
+    },
+    "Number_33": {
+      "expected": "तैंतीसवाँ"
+    },
+    "Number_34": {
+      "expected": "चौंतीसवाँ"
+    },
+    "Number_35": {
+      "expected": "पैंतीसवाँ"
+    },
+    "Number_36": {
+      "expected": "छतीसवाँ"
+    },
+    "Number_37": {
+      "expected": "सैंतीसवाँ"
+    },
+    "Number_38": {
+      "expected": "अड़तीसवाँ"
+    },
+    "Number_39": {
+      "expected": "उनतालीसवाँ"
+    },
+    "Number_40": {
+      "expected": "चालीसवाँ"
+    },
+    "Number_41": {
+      "expected": "इकतालीसवाँ"
+    },
+    "Number_42": {
+      "expected": "बयालीसवाँ"
+    },
+    "Number_43": {
+      "expected": "तैतालीसवाँ"
+    },
+    "Number_44": {
+      "expected": "चवालीसवाँ"
+    },
+    "Number_45": {
+      "expected": "पैंतालीसवाँ"
+    },
+    "Number_46": {
+      "expected": "छयालिसवाँ"
+    },
+    "Number_47": {
+      "expected": "सैंतालीसवाँ"
+    },
+    "Number_48": {
+      "expected": "अड़तालीसवाँ"
+    },
+    "Number_49": {
+      "expected": "उनचासवाँ"
+    },
+    "Number_50": {
+      "expected": "पचासवाँ"
+    },
+    "Number_51": {
+      "expected": "इक्यावनवाँ"
+    },
+    "Number_52": {
+      "expected": "बावनवाँ"
+    },
+    "Number_53": {
+      "expected": "तिरपनवाँ"
+    },
+    "Number_54": {
+      "expected": "चौवनवाँ"
+    },
+    "Number_55": {
+      "expected": "पचपनवाँ"
+    },
+    "Number_56": {
+      "expected": "छप्पनवाँ"
+    },
+    "Number_57": {
+      "expected": "सतावनवाँ"
+    },
+    "Number_58": {
+      "expected": "अठावनवाँ"
+    },
+    "Number_59": {
+      "expected": "उनसठवाँ"
+    },
+    "Number_60": {
+      "expected": "साठवाँ"
+    },
+    "Number_61": {
+      "expected": "इकसठवाँ"
+    },
+    "Number_62": {
+      "expected": "बासठवाँ"
+    },
+    "Number_63": {
+      "expected": "तिरसठवाँ"
+    },
+    "Number_64": {
+      "expected": "चौंसठवाँ"
+    },
+    "Number_65": {
+      "expected": "पैंसठवाँ"
+    },
+    "Number_66": {
+      "expected": "छियासठवाँ"
+    },
+    "Number_67": {
+      "expected": "सड़सठवाँ"
+    },
+    "Number_68": {
+      "expected": "अड़सठवाँ"
+    },
+    "Number_69": {
+      "expected": "उनहतरवाँ"
+    },
+    "Number_70": {
+      "expected": "सत्तरवाँ"
+    },
+    "Number_71": {
+      "expected": "इकहतरवाँ"
+    },
+    "Number_72": {
+      "expected": "बहतरवाँ"
+    },
+    "Number_73": {
+      "expected": "तिहतरवाँ"
+    },
+    "Number_74": {
+      "expected": "चौहतरवाँ"
+    },
+    "Number_75": {
+      "expected": "पचहतरवाँ"
+    },
+    "Number_76": {
+      "expected": "छिहतरवाँ"
+    },
+    "Number_77": {
+      "expected": "सतहतरवाँ"
+    },
+    "Number_78": {
+      "expected": "अठहतरवाँ"
+    },
+    "Number_79": {
+      "expected": "उन्नासीवाँ"
+    },
+    "Number_80": {
+      "expected": "अस्सीवाँ"
+    },
+    "Number_81": {
+      "expected": "इक्यासीवाँ"
+    },
+    "Number_82": {
+      "expected": "बयासीवाँ"
+    },
+    "Number_83": {
+      "expected": "तिरासीवाँ"
+    },
+    "Number_84": {
+      "expected": "चौरासीवाँ"
+    },
+    "Number_85": {
+      "expected": "पचासीवाँ"
+    },
+    "Number_86": {
+      "expected": "छियासीवाँ"
+    },
+    "Number_87": {
+      "expected": "सतासीवाँ"
+    },
+    "Number_88": {
+      "expected": "अट्ठासीवाँ"
+    },
+    "Number_89": {
+      "expected": "नवासीवाँ"
+    },
+    "Number_90": {
+      "expected": "नब्बेवाँ"
+    },
+    "Number_91": {
+      "expected": "इक्यानवेवाँ"
+    },
+    "Number_92": {
+      "expected": "ब्यानवेवाँ"
+    },
+    "Number_93": {
+      "expected": "तिरानवेवाँ"
+    },
+    "Number_94": {
+      "expected": "चौरानवेवाँ"
+    },
+    "Number_95": {
+      "expected": "पचानवेवाँ"
+    },
+    "Number_96": {
+      "expected": "छियानवेवाँ"
+    },
+    "Number_97": {
+      "expected": "सतानवेवाँ"
+    },
+    "Number_98": {
+      "expected": "अट्ठानवेवाँ"
+    },
+    "Number_99": {
+      "expected": "निन्यानवेवाँ"
+    },
+    "Number_100": {
+      "expected": "एक सौवाँ"
+    },
+    "Number_101": {
+      "expected": "एक सौ एकवाँ"
+    },
+    "Number_102": {
+      "expected": "एक सौ दोवाँ"
+    },
+    "Number_103": {
+      "expected": "एक सौ तीनवाँ"
+    },
+    "Number_104": {
+      "expected": "एक सौ चारवाँ"
+    },
+    "Number_105": {
+      "expected": "एक सौ पाँचवाँ"
+    },
+    "Number_106": {
+      "expected": "एक सौ छःवाँ"
+    },
+    "Number_107": {
+      "expected": "एक सौ सातवाँ"
+    },
+    "Number_108": {
+      "expected": "एक सौ आठवाँ"
+    },
+    "Number_109": {
+      "expected": "एक सौ नौवाँ"
+    },
+    "Number_110": {
+      "expected": "एक सौ दसवाँ"
+    },
+    "Number_200": {
+      "expected": "दो सौवाँ"
+    },
+    "Number_201": {
+      "expected": "दो सौ एकवाँ"
+    },
+    "Number_300": {
+      "expected": "तीन सौवाँ"
+    },
+    "Number_301": {
+      "expected": "तीन सौ एकवाँ"
+    },
+    "Number_400": {
+      "expected": "चार सौवाँ"
+    },
+    "Number_401": {
+      "expected": "चार सौ एकवाँ"
+    },
+    "Number_500": {
+      "expected": "पाँच सौवाँ"
+    },
+    "Number_501": {
+      "expected": "पाँच सौ एकवाँ"
+    },
+    "Number_600": {
+      "expected": "छः सौवाँ"
+    },
+    "Number_601": {
+      "expected": "छः सौ एकवाँ"
+    },
+    "Number_700": {
+      "expected": "सात सौवाँ"
+    },
+    "Number_701": {
+      "expected": "सात सौ एकवाँ"
+    },
+    "Number_800": {
+      "expected": "आठ सौवाँ"
+    },
+    "Number_801": {
+      "expected": "आठ सौ एकवाँ"
+    },
+    "Number_900": {
+      "expected": "नौ सौवाँ"
+    },
+    "Number_901": {
+      "expected": "नौ सौ एकवाँ"
+    },
+    "Number_1000": {
+      "expected": "एक हजारवाँ"
+    },
+    "Number_1001": {
+      "expected": "एक हजार एकवाँ"
+    },
+    "Number_2000": {
+      "expected": "दो हजारवाँ"
+    },
+    "Number_2001": {
+      "expected": "दो हजार एकवाँ"
+    },
+    "Number_3000": {
+      "expected": "तीन हजारवाँ"
+    },
+    "Number_3001": {
+      "expected": "तीन हजार एकवाँ"
+    },
+    "Number_4000": {
+      "expected": "चार हजारवाँ"
+    },
+    "Number_4001": {
+      "expected": "चार हजार एकवाँ"
+    },
+    "Number_5000": {
+      "expected": "पाँच हजारवाँ"
+    },
+    "Number_5001": {
+      "expected": "पाँच हजार एकवाँ"
+    },
+    "Number_6000": {
+      "expected": "छः हजारवाँ"
+    },
+    "Number_6001": {
+      "expected": "छः हजार एकवाँ"
+    },
+    "Number_7000": {
+      "expected": "सात हजारवाँ"
+    },
+    "Number_7001": {
+      "expected": "सात हजार एकवाँ"
+    },
+    "Number_8000": {
+      "expected": "आठ हजारवाँ"
+    },
+    "Number_8001": {
+      "expected": "आठ हजार एकवाँ"
+    },
+    "Number_9000": {
+      "expected": "नौ हजारवाँ"
+    },
+    "Number_9001": {
+      "expected": "नौ हजार एकवाँ"
+    },
+    "Number_10000": {
+      "expected": "दस हजारवाँ"
+    },
+    "Number_10001": {
+      "expected": "दस हजार एकवाँ"
+    },
+    "Number_20000": {
+      "expected": "बीस हजारवाँ"
+    },
+    "Number_20001": {
+      "expected": "बीस हजार एकवाँ"
+    },
+    "Number_30000": {
+      "expected": "तीस हजारवाँ"
+    },
+    "Number_30001": {
+      "expected": "तीस हजार एकवाँ"
+    },
+    "Number_40000": {
+      "expected": "चालीस हजारवाँ"
+    },
+    "Number_40001": {
+      "expected": "चालीस हजार एकवाँ"
+    },
+    "Number_50000": {
+      "expected": "पचास हजारवाँ"
+    },
+    "Number_50001": {
+      "expected": "पचास हजार एकवाँ"
+    },
+    "Number_60000": {
+      "expected": "साठ हजारवाँ"
+    },
+    "Number_60001": {
+      "expected": "साठ हजार एकवाँ"
+    },
+    "Number_70000": {
+      "expected": "सत्तर हजारवाँ"
+    },
+    "Number_70001": {
+      "expected": "सत्तर हजार एकवाँ"
+    },
+    "Number_80000": {
+      "expected": "अस्सी हजारवाँ"
+    },
+    "Number_80001": {
+      "expected": "अस्सी हजार एकवाँ"
+    },
+    "Number_90000": {
+      "expected": "नब्बे हजारवाँ"
+    },
+    "Number_90001": {
+      "expected": "नब्बे हजार एकवाँ"
+    },
+    "Number_100000": {
+      "expected": "एक लाखवाँ"
+    },
+    "Number_1000000": {
+      "expected": "दस लाखवाँ"
+    },
+    "Number_10000000": {
+      "expected": "एक करोड़वाँ"
+    },
+    "Number_100000000": {
+      "expected": "दस करोड़वाँ"
+    },
+    "Number_1000000000": {
+      "expected": "एक अरबवाँ"
+    },
+    "Number_10000000000": {
+      "expected": "दस अरबवाँ"
+    },
+    "Number_100000000000": {
+      "expected": "एक खरबवाँ"
+    },
+    "Number_1000000000000": {
+      "expected": "दस खरबवाँ"
+    },
+    "Number_10000000000000": {
+      "expected": "एक नीलवाँ"
+    },
+    "Number_100000000000000": {
+      "expected": "दस नीलवाँ"
+    },
+    "Number_1000000000000000": {
+      "expected": "एक पद्मावाँ"
+    },
+    "Number_10000000000000000": {
+      "expected": "दस पद्मावाँ"
+    },
+    "Number_100001": {
+      "expected": "एक लाख एकवाँ"
+    },
+    "Number_200000": {
+      "expected": "दो लाखवाँ"
+    },
+    "Number_200001": {
+      "expected": "दो लाख एकवाँ"
+    },
+    "Number_1000001": {
+      "expected": "दस लाख एकवाँ"
+    },
+    "Number_2000000": {
+      "expected": "बीस लाखवाँ"
+    },
+    "Number_2000001": {
+      "expected": "बीस लाख एकवाँ"
+    },
+    "Number_10000001": {
+      "expected": "एक करोड़ एकवाँ"
+    },
+    "Number_20000000": {
+      "expected": "दो करोड़वाँ"
+    },
+    "Number_20000001": {
+      "expected": "दो करोड़ एकवाँ"
+    },
+    "Number_100000001": {
+      "expected": "दस करोड़ एकवाँ"
+    },
+    "Number_200000000": {
+      "expected": "बीस करोड़वाँ"
+    },
+    "Number_200000001": {
+      "expected": "बीस करोड़ एकवाँ"
+    },
+    "Number_1000000001": {
+      "expected": "एक अरब एकवाँ"
+    },
+    "Number_2000000000": {
+      "expected": "दो अरबवाँ"
+    },
+    "Number_2000000001": {
+      "expected": "दो अरब एकवाँ"
+    },
+    "Number_10000000001": {
+      "expected": "दस अरब एकवाँ"
+    },
+    "Number_20000000000": {
+      "expected": "बीस अरबवाँ"
+    },
+    "Number_20000000001": {
+      "expected": "बीस अरब एकवाँ"
+    },
+    "Number_100000000001": {
+      "expected": "एक खरब एकवाँ"
+    },
+    "Number_200000000000": {
+      "expected": "दो खरबवाँ"
+    },
+    "Number_200000000001": {
+      "expected": "दो खरब एकवाँ"
+    },
+    "Number_1000000000001": {
+      "expected": "दस खरब एकवाँ"
+    },
+    "Number_2000000000000": {
+      "expected": "बीस खरबवाँ"
+    },
+    "Number_2000000000001": {
+      "expected": "बीस खरब एकवाँ"
+    },
+    "Number_10000000000001": {
+      "expected": "एक नील एकवाँ"
+    },
+    "Number_20000000000000": {
+      "expected": "दो नीलवाँ"
+    },
+    "Number_20000000000001": {
+      "expected": "दो नील एकवाँ"
+    },
+    "Number_100000000000001": {
+      "expected": "दस नील एकवाँ"
+    },
+    "Number_200000000000000": {
+      "expected": "बीस नीलवाँ"
+    },
+    "Number_200000000000001": {
+      "expected": "बीस नील एकवाँ"
+    },
+    "Number_1000000000000001": {
+      "expected": "एक पद्मा एकवाँ"
+    },
+    "Number_2000000000000000": {
+      "expected": "दो पद्मावाँ"
+    },
+    "Number_2000000000000001": {
+      "expected": "दो पद्मा एकवाँ"
+    },
+    "Number_10000000000000001": {
+      "expected": "दस पद्मावाँ"
+    },
+    "Number_20000000000000000": {
+      "expected": "बीस पद्मावाँ"
+    },
+    "Number_20000000000000001": {
+      "expected": "बीस पद्मावाँ"
+    }
+  }
+}

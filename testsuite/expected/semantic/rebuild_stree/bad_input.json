@@ -1,0 +1,7 @@
+{
+  "factory": "rebuild",
+  "base": "input/semantic/bad_input.json",
+  "information": "Semantic Tree Rebuilding tests for badly formatted input.",
+  "exclude": ["Rubbish_0", "Rubbish_2"],
+  "tests": "ALL"
+}

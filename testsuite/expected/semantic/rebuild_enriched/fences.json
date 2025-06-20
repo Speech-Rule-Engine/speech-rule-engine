@@ -1,0 +1,7 @@
+{
+  "factory": "rebuildEnriched",
+  "base": "input/semantic/fences.json",
+  "information": "Compare stree from input and enriched for fenced expressions.",
+  "exclude": [],
+  "tests": "ALL"
+}

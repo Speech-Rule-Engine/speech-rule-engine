@@ -1,0 +1,266 @@
+{
+  "name": "AfrikaansMathspeakFencesNeutral",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/common/fences_neutral.json",
+  "information": "Afrikaans Mathspeak Neutral Fences tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakAfrikaans",
+  "exclude": [
+    "BarFenced_0_AbsoluteValue_AbsEnd",
+    "BarFenced_1_AbsoluteValue_AbsEnd",
+    "BarFenced_2_AbsoluteValue_AbsEnd",
+    "BarFenced_3_AbsoluteValue_AbsEnd",
+    "BarFenced_4_AbsoluteValue_AbsEnd",
+    "BarFenced_5_AbsoluteValue_AbsEnd",
+    "BarFenced_6_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd",
+    "CenterBar_0_AbsoluteValue_AbsEnd",
+    "CenterBar_1_AbsoluteValue_AbsEnd",
+    "CenterBar_2_AbsoluteValue_AbsEnd",
+    "CenterBar_3_AbsoluteValue_AbsEnd",
+    "CenterBar_4_AbsoluteValue_AbsEnd",
+    "CenterBar_5_AbsoluteValue_AbsEnd",
+    "Function_0_AbsoluteValue_AbsEnd",
+    "Function_1_AbsoluteValue_AbsEnd",
+    "Function_2_AbsoluteValue_AbsEnd",
+    "Function_3_AbsoluteValue_AbsEnd",
+    "Function_4_AbsoluteValue_AbsEnd",
+    "Function_5_AbsoluteValue_AbsEnd",
+    "FunctionMetric0_AbsoluteValue_AbsEnd",
+    "FunctionMetric1_AbsoluteValue_AbsEnd",
+    "FunctionMetric2_AbsoluteValue_AbsEnd",
+    "FunctionMetric3_AbsoluteValue_AbsEnd",
+    "FunctionMetric4_AbsoluteValue_AbsEnd",
+    "FunctionMetric5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd"
+  ],
+  "compare": true,
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_1_default": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_2_default": {
+      "expected": "begin absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_3_default": {
+      "expected": "Begin Metries a End Metries"
+    },
+    "BarFenced_4_default": {
+      "expected": "Begin Metries a End Metries"
+    },
+    "BarFenced_5_default": {
+      "expected": "Begin Metries a End Metries"
+    },
+    "BarFenced_6_default": {
+      "expected": "Begin Metries a End Metries"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "afstreep a dubbel vertikale streep"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "paralel aan a dubbel vertikale streep"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "afstreep a gebroke afstreep"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "trippel afstreep a dubbel vertikale streep"
+    },
+    "CenterBar_0_default": {
+      "expected": "a afstreep b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a afstreep b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a gebroke afstreep b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a dubbel vertikale streep b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a paralel aan b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a trippel afstreep b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f afstreep g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f afstreep g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f gebroke afstreep g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f dubbel vertikale streep g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f paralel aan g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f trippel afstreep g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sinus trippel afstreep g"
+    },
+    "Function_0_default": {
+      "expected": "f begin absolute Waarde a End Absolute Waarde"
+    },
+    "Function_1_default": {
+      "expected": "g begin absolute Waarde a End Absolute Waarde"
+    },
+    "Function_2_default": {
+      "expected": "h begin absolute Waarde a End Absolute Waarde"
+    },
+    "Function_3_default": {
+      "expected": "r begin absolute Waarde a End Absolute Waarde"
+    },
+    "Function_4_default": {
+      "expected": "sinus begin absolute Waarde a End Absolute Waarde"
+    },
+    "Function_5_default": {
+      "expected": "som begin absolute Waarde a End Absolute Waarde"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f Begin Metries a End Metries"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g Begin Metries a End Metries"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h Begin Metries a End Metries"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r Begin Metries a End Metries"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sinus Begin Metries a End Metries"
+    },
+    "FunctionMetric5_default": {
+      "expected": "som Begin Metries a End Metries"
+    },
+    "BarFenced_0_sbrief": {
+      "expected": "Absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_1_sbrief": {
+      "expected": "Absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_2_sbrief": {
+      "expected": "Absolute Waarde a End Absolute Waarde"
+    },
+    "BarFenced_3_sbrief": {
+      "expected": "Metries a end metries"
+    },
+    "BarFenced_4_sbrief": {
+      "expected": "Metries a end metries"
+    },
+    "BarFenced_5_sbrief": {
+      "expected": "Metries a end metries"
+    },
+    "BarFenced_6_sbrief": {
+      "expected": "Metries a end metries"
+    },
+    "BarFencedMixed_0_sbrief": {
+      "expected": "afstreep a dubbel vertikale streep"
+    },
+    "BarFencedMixed_1_sbrief": {
+      "expected": "paralel aan a dubbel vertikale streep"
+    },
+    "BarFencedMixed_2_sbrief": {
+      "expected": "afstreep a gebroke afstreep"
+    },
+    "BarFencedMixed_3_sbrief": {
+      "expected": "trippel afstreep a dubbel vertikale streep"
+    },
+    "CenterBar_0_sbrief": {
+      "expected": "a afstreep b"
+    },
+    "CenterBar_1_sbrief": {
+      "expected": "a afstreep b"
+    },
+    "CenterBar_2_sbrief": {
+      "expected": "a gebroke afstreep b"
+    },
+    "CenterBar_3_sbrief": {
+      "expected": "a dubbel vertikale streep b"
+    },
+    "CenterBar_4_sbrief": {
+      "expected": "a paralel aan b"
+    },
+    "CenterBar_5_sbrief": {
+      "expected": "a trippel afstreep b"
+    },
+    "Function_0_sbrief": {
+      "expected": "f Absolute Waarde a End Absolute Waarde"
+    },
+    "Function_1_sbrief": {
+      "expected": "g Absolute Waarde a End Absolute Waarde"
+    },
+    "Function_2_sbrief": {
+      "expected": "h Absolute Waarde a End Absolute Waarde"
+    },
+    "Function_3_sbrief": {
+      "expected": "r Absolute Waarde a End Absolute Waarde"
+    },
+    "Function_4_sbrief": {
+      "expected": "sinus Absolute Waarde a End Absolute Waarde"
+    },
+    "Function_5_sbrief": {
+      "expected": "som Absolute Waarde a End Absolute Waarde"
+    },
+    "FunctionMetric0_sbrief": {
+      "expected": "f Metries a end metries"
+    },
+    "FunctionMetric1_sbrief": {
+      "expected": "g Metries a end metries"
+    },
+    "FunctionMetric2_sbrief": {
+      "expected": "h Metries a end metries"
+    },
+    "FunctionMetric3_sbrief": {
+      "expected": "r Metries a end metries"
+    },
+    "FunctionMetric4_sbrief": {
+      "expected": "sinus Metries a end metries"
+    },
+    "FunctionMetric5_sbrief": {
+      "expected": "som Metries a end metries"
+    },
+    "CenterBarFunc_0_sbrief": {
+      "expected": "f afstreep g"
+    },
+    "CenterBarFunc_1_sbrief": {
+      "expected": "f afstreep g"
+    },
+    "CenterBarFunc_2_sbrief": {
+      "expected": "f gebroke afstreep g"
+    },
+    "CenterBarFunc_3_sbrief": {
+      "expected": "f dubbel vertikale streep g"
+    },
+    "CenterBarFunc_4_sbrief": {
+      "expected": "f paralel aan g"
+    },
+    "CenterBarFunc_5_sbrief": {
+      "expected": "f trippel afstreep g"
+    },
+    "CenterBarFunc_6_sbrief": {
+      "expected": "sinus trippel afstreep g"
+    }
+  }
+}

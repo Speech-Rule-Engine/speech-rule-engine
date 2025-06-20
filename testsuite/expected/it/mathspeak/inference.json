@@ -1,0 +1,58 @@
+{
+  "name": "ItalianMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "it",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Italian Mathspeak Inference rules.",
+  "active": "InferenceItalian",
+  "exclude": [],
+  "tests": {
+    "NoLabel_0": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "NoLabel_1": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "Premise_0": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "Premise_1": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "Axiom": {
+      "expected": "assioma A maiuscola"
+    },
+    "EmptyAxiom": {
+      "expected": "assioma vuoto"
+    },
+    "RightLabel_0": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "RightLabel_1": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 2 premesse"
+    },
+    "RightLabel_2": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 3 premesse"
+    },
+    "LeftLabel_0": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "LeftLabel_1": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 2 premesse"
+    },
+    "LeftLabel_2": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 3 premesse"
+    },
+    "Premises_0": {
+      "expected": "1a premise  assioma A maiuscola"
+    },
+    "Premises_1": {
+      "expected": "1a premise  assioma A maiuscola 2a premise  assioma B maiuscola"
+    },
+    "Premises_2": {
+      "expected": "1a premise  assioma A maiuscola 2a premise  assioma B maiuscola 3a premise  assioma C maiuscola"
+    }
+  }
+}

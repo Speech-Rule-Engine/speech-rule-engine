@@ -1,0 +1,41 @@
+{
+  "locale": "sv",
+  "name": "SwedishExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsSwedish",
+  "information": "Swedish Extra Character tests.",
+  "compare": true,
+  "tests": {
+    "00B2-clearspeak-Exponent_Exponent": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "exponent två"
+    },
+    "00B2-clearspeak-Exponent_Ordinal": {
+      "key": "²",
+      "domain": "clearspeak",
+      "style": "Exponent_Ordinal",
+      "expected": "till andra"
+    },
+    "00B3-clearspeak-Exponent_Exponent": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_Exponent",
+      "expected": "till exponenten tre"
+    },
+    "00B3-clearspeak-Exponent_Ordinal": {
+      "key": "³",
+      "domain": "clearspeak",
+      "style": "Exponent_Ordinal",
+      "expected": "till tredje"
+    },
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "stort Delta"
+    }
+  }
+}

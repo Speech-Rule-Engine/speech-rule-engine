@@ -1,0 +1,566 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakFunctions",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "Bokmal Clearspeak Functions rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [
+    "Function011b",
+    "Function012b",
+    "Function013b",
+    "Function014b",
+    "Function015b",
+    "Function016b",
+    "Function017b",
+    "Function018b",
+    "Function019b",
+    "Function020b",
+    "Function021b",
+    "Function022b",
+    "Function023b",
+    "Function024b",
+    "Function025b",
+    "Function026b",
+    "Function027b",
+    "Function028b",
+    "Function029b",
+    "Function030b",
+    "Function031b",
+    "Function032b",
+    "Function033b",
+    "Function034b",
+    "Function035b",
+    "Function036b",
+    "Function037b",
+    "Function038b",
+    "Function039b",
+    "Function040b",
+    "Function041b",
+    "Function042b",
+    "Function043b",
+    "Function044b",
+    "Function045b",
+    "Function046b",
+    "Function047b",
+    "Function048b",
+    "Function049b",
+    "Function050b",
+    "Function051b",
+    "Function052b",
+    "Function053b",
+    "Function054b",
+    "Function055b",
+    "Function056b",
+    "Function057b",
+    "Function058b",
+    "Function059b",
+    "Function060b",
+    "Function061b",
+    "Function062b",
+    "Function063b",
+    "Function064b",
+    "Function065b",
+    "Function066b",
+    "Function067b",
+    "Function068b",
+    "Function069b",
+    "Function070b",
+    "Function071b",
+    "Function072b",
+    "Function073b",
+    "Function074b",
+    "Function075b",
+    "Function076b",
+    "Function077b",
+    "Function078b",
+    "Function079b"
+  ],
+  "compare": true,
+  "tests": {
+    "Function001": {
+      "expected": "f av x"
+    },
+    "Function002": {
+      "expected": "g av x"
+    },
+    "Function003": {
+      "expected": "h av x"
+    },
+    "Function004": {
+      "expected": "f av 2 x"
+    },
+    "Function005": {
+      "expected": "g av minus 2 x"
+    },
+    "Function006": {
+      "expected": "h av en andre"
+    },
+    "Function007": {
+      "expected": "h av, venstre parentes, 1 delt på 2, høyre parentes"
+    },
+    "Function008": {
+      "expected": "f av, venstre parentes, x pluss 1, høyre parentes, er lik f av x, pluss 1"
+    },
+    "Function009": {
+      "expected": "g av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function010": {
+      "expected": "g av, venstre parentes, x kvadrat, høyre parentes"
+    },
+    "Function011": {
+      "expected": "f invers av x"
+    },
+    "Function012": {
+      "expected": "g invers av x"
+    },
+    "Function013": {
+      "expected": "h invers av x"
+    },
+    "Function014": {
+      "expected": "f invers av 2 x"
+    },
+    "Function015": {
+      "expected": "g invers av minus 2 x"
+    },
+    "Function016": {
+      "expected": "f invers av, venstre parentes, 3 x, minus 1, høyre parentes"
+    },
+    "Function017": {
+      "expected": "g invers av, venstre parentes, x kvadrat, høyre parentes"
+    },
+    "Function018": {
+      "expected": "h invers av en andre"
+    },
+    "Function019": {
+      "expected": "h invers av, venstre parentes, 1 delt på 2, høyre parentes"
+    },
+    "Function020": {
+      "expected": "f invers av, f av x"
+    },
+    "Function021": {
+      "expected": "g invers av, g av x"
+    },
+    "Function022": {
+      "expected": "h invers av, h av x"
+    },
+    "Function023": {
+      "expected": "f invers av, f av 2 x"
+    },
+    "Function024": {
+      "expected": "g invers av, g av minus 2 x"
+    },
+    "Function025": {
+      "expected": "h invers av, h av en andre"
+    },
+    "Function026": {
+      "expected": "h invers av, venstre parentes, h av, venstre parentes, 1 delt på 2, høyre parentes, høyre parentes"
+    },
+    "Function027": {
+      "expected": "f invers av, venstre parentes, f av, venstre parentes, x pluss 1, høyre parentes, høyre parentes, er lik x pluss 1"
+    },
+    "Function028": {
+      "expected": "g invers av, venstre parentes, g av, venstre parentes, 2 x, pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function029": {
+      "expected": "g invers av, venstre parentes, g av, venstre parentes, x kvadrat, høyre parentes, høyre parentes"
+    },
+    "Function030": {
+      "expected": "f av, f invers av x"
+    },
+    "Function031": {
+      "expected": "g av, g invers av x"
+    },
+    "Function032": {
+      "expected": "h av, h invers av x"
+    },
+    "Function033": {
+      "expected": "f av, f invers av 2 x"
+    },
+    "Function034": {
+      "expected": "g av, g invers av minus 2 x"
+    },
+    "Function035": {
+      "expected": "f av, venstre parentes, f invers av, venstre parentes, 3 x, minus 1, høyre parentes, høyre parentes"
+    },
+    "Function036": {
+      "expected": "g av, g invers av, venstre parentes, x kvadrat, høyre parentes"
+    },
+    "Function037": {
+      "expected": "h av, h invers av en andre"
+    },
+    "Function038": {
+      "expected": "h av, h invers av, venstre parentes, brøk 1 delt på 2, høyre parentes"
+    },
+    "Function039": {
+      "expected": "f av, g av x"
+    },
+    "Function040": {
+      "expected": "f av, venstre parentes, g av, venstre parentes, x pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function041": {
+      "expected": "h av, g av x"
+    },
+    "Function042": {
+      "expected": "h av, venstre parentes, g av, venstre parentes, brøk med teller x, og nevner x pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function043": {
+      "expected": "venstre parentes, f pluss g, høyre parentes, av x, er lik f av x, pluss g av x"
+    },
+    "Function044": {
+      "expected": "venstre parentes, f pluss g, høyre parentes, av, venstre parentes, x pluss 1, høyre parentes, er lik f av, venstre parentes, x pluss 1, høyre parentes, pluss g av, venstre parentes, x pluss 1, høyre parentes"
+    },
+    "Function045": {
+      "expected": "venstre parentes, f ganger g, høyre parentes, av x"
+    },
+    "Function046": {
+      "expected": "venstre parentes, f ganger g, høyre parentes, av, venstre parentes, 2 x, pluss 5, høyre parentes"
+    },
+    "Function047": {
+      "expected": "venstre parentes, f delt på g, høyre parentes, av x, er lik, f av x, delt på g av x"
+    },
+    "Function048": {
+      "expected": "venstre parentes, f delt på g, høyre parentes, av, venstre parentes, 2 x, pluss 5, høyre parentes, er lik, brøk med teller f av, venstre parentes, 2 x, pluss 5, høyre parentes, og nevner g av, venstre parentes, 2 x, pluss 5, høyre parentes"
+    },
+    "Function049": {
+      "expected": "venstre parentes, f grad g, høyre parentes, av x, er lik f av, g av x"
+    },
+    "Function050": {
+      "expected": "2 f av x"
+    },
+    "Function051": {
+      "expected": "c f av x"
+    },
+    "Function052": {
+      "expected": "f kvadrat av x"
+    },
+    "Function053": {
+      "expected": "f kvadrat av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function054": {
+      "expected": "f kubikk av x"
+    },
+    "Function055": {
+      "expected": "f kubikk av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function056": {
+      "expected": "f med eksponent, 4 av x"
+    },
+    "Function057": {
+      "expected": "f med eksponent, 4 av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function058": {
+      "expected": "f med eksponent, 5 av x"
+    },
+    "Function059": {
+      "expected": "f med eksponent, 5 av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function060": {
+      "expected": "f med eksponent, n av x"
+    },
+    "Function061": {
+      "expected": "f med eksponent, n av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function062": {
+      "expected": "g kvadrat av x"
+    },
+    "Function063": {
+      "expected": "g kvadrat av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function064": {
+      "expected": "h kubikk av x"
+    },
+    "Function065": {
+      "expected": "h kubikk av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function066": {
+      "expected": "g med eksponent, 4 av x"
+    },
+    "Function067": {
+      "expected": "g med eksponent, 4 av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function068": {
+      "expected": "h med eksponent, 5 av x"
+    },
+    "Function069": {
+      "expected": "h med eksponent, 5 av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function070": {
+      "expected": "g med eksponent, n av x"
+    },
+    "Function071": {
+      "expected": "g med eksponent, n av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function072": {
+      "expected": "f indeks 1, av x"
+    },
+    "Function073": {
+      "expected": "g indeks 2, av, venstre parentes, x kubikk, høyre parentes"
+    },
+    "Function074": {
+      "expected": "h indeks n, av, venstre parentes, 3 x, minus 2, høyre parentes"
+    },
+    "Function075": {
+      "expected": "f indeks 1, invers av x"
+    },
+    "Function076": {
+      "expected": "g indeks 2, invers av, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function077": {
+      "expected": "h indeks n, invers av x"
+    },
+    "Function078": {
+      "expected": "g indeks 1, invers av, g indeks 2, av x"
+    },
+    "Function079": {
+      "expected": "f indeks 1, av, g indeks 2, invers av x"
+    },
+    "Function080": {
+      "expected": "f av, venstre parentes, x komma y, høyre parentes"
+    },
+    "Function081": {
+      "expected": "f av, venstre parentes, x komma y komma z, høyre parentes"
+    },
+    "Function082": {
+      "expected": "f av, venstre parentes, x pluss 1, komma, 2 y, høyre parentes"
+    },
+    "Function083": {
+      "expected": "f av, venstre parentes, 2 x, komma, x pluss 1, komma, x kvadrat, høyre parentes"
+    },
+    "Function084": {
+      "expected": "f ganger x"
+    },
+    "Function085": {
+      "expected": "g ganger x"
+    },
+    "Function086": {
+      "expected": "h ganger x"
+    },
+    "Function087": {
+      "expected": "f ganger 2 x"
+    },
+    "Function088": {
+      "expected": "g ganger minus 2 x"
+    },
+    "Function089": {
+      "expected": "h ganger en andre"
+    },
+    "Function091": {
+      "expected": "f ganger, venstre parentes, x pluss 1, høyre parentes, er lik, f ganger x, pluss 1"
+    },
+    "Function092": {
+      "expected": "g ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function093": {
+      "expected": "g ganger, venstre parentes, x kvadrat, høyre parentes"
+    },
+    "Function094": {
+      "expected": "f med eksponent minus 1, ganger x"
+    },
+    "Function095": {
+      "expected": "g med eksponent minus 1, ganger x"
+    },
+    "Function096": {
+      "expected": "h med eksponent minus 1, ganger x"
+    },
+    "Function097": {
+      "expected": "f med eksponent minus 1, ganger 2 x"
+    },
+    "Function098": {
+      "expected": "g med eksponent minus 1, ganger minus 2 x"
+    },
+    "Function099": {
+      "expected": "f med eksponent minus 1, ganger, venstre parentes, 3 x, minus 1, høyre parentes"
+    },
+    "Function100": {
+      "expected": "g med eksponent minus 1, ganger, venstre parentes, x kvadrat, høyre parentes"
+    },
+    "Function101": {
+      "expected": "h med eksponent minus 1, ganger en andre"
+    },
+    "Function103": {
+      "expected": "f med eksponent minus 1, ganger, f ganger x"
+    },
+    "Function104": {
+      "expected": "g med eksponent minus 1, ganger, g ganger x"
+    },
+    "Function105": {
+      "expected": "h med eksponent minus 1, ganger, h ganger x"
+    },
+    "Function106": {
+      "expected": "f med eksponent minus 1, ganger, f ganger 2 x"
+    },
+    "Function107": {
+      "expected": "g med eksponent minus 1, ganger, g ganger minus 2 x"
+    },
+    "Function108": {
+      "expected": "h med eksponent minus 1, ganger, h ganger en andre"
+    },
+    "Function110": {
+      "expected": "f med eksponent minus 1, ganger, venstre parentes, f ganger, venstre parentes, x pluss 1, høyre parentes, høyre parentes, er lik x pluss 1"
+    },
+    "Function111": {
+      "expected": "g med eksponent minus 1, ganger, venstre parentes, g ganger, venstre parentes, 2 x, pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function112": {
+      "expected": "g med eksponent minus 1, ganger, venstre parentes, g ganger, venstre parentes, x kvadrat, høyre parentes, høyre parentes"
+    },
+    "Function113": {
+      "expected": "f ganger, venstre parentes, f med eksponent minus 1, ganger x, høyre parentes"
+    },
+    "Function114": {
+      "expected": "g ganger, venstre parentes, g med eksponent minus 1, ganger x, høyre parentes"
+    },
+    "Function115": {
+      "expected": "h ganger, venstre parentes, h med eksponent minus 1, ganger x, høyre parentes"
+    },
+    "Function116": {
+      "expected": "f ganger, venstre parentes, f med eksponent minus 1, ganger 2 x, høyre parentes"
+    },
+    "Function117": {
+      "expected": "g ganger, venstre parentes, g med eksponent minus 1, ganger minus 2 x, høyre parentes"
+    },
+    "Function118": {
+      "expected": "f ganger, venstre parentes, f med eksponent minus 1, ganger, venstre parentes, 3 x, minus 1, høyre parentes, høyre parentes"
+    },
+    "Function119": {
+      "expected": "g ganger, venstre parentes, g med eksponent minus 1, ganger, venstre parentes, x kvadrat, høyre parentes, høyre parentes"
+    },
+    "Function120": {
+      "expected": "h ganger, venstre parentes, h med eksponent minus 1, ganger en andre, høyre parentes"
+    },
+    "Function122": {
+      "expected": "f ganger, g ganger x"
+    },
+    "Function123": {
+      "expected": "f ganger, venstre parentes, g ganger, venstre parentes, x pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function124": {
+      "expected": "h ganger, g ganger x"
+    },
+    "Function125": {
+      "expected": "h ganger, venstre parentes, g ganger, venstre parentes, brøk med teller x, og nevner x pluss 1, høyre parentes, høyre parentes"
+    },
+    "Function126": {
+      "expected": "venstre parentes, f pluss g, høyre parentes, ganger x, er lik, f ganger x, pluss, g ganger x"
+    },
+    "Function127": {
+      "expected": "venstre parentes, f pluss g, høyre parentes, ganger, venstre parentes, x pluss 1, høyre parentes, er lik, f ganger, venstre parentes, x pluss 1, høyre parentes, pluss, g ganger, venstre parentes, x pluss 1, høyre parentes"
+    },
+    "Function128": {
+      "expected": "venstre parentes, f ganger g, høyre parentes, ganger x"
+    },
+    "Function129": {
+      "expected": "venstre parentes, f ganger g, høyre parentes, ganger, venstre parentes, 2 x, pluss 5, høyre parentes"
+    },
+    "Function130": {
+      "expected": "venstre parentes, f delt på g, høyre parentes, ganger x, er lik, brøk med teller, f ganger x, og nevner, g ganger x"
+    },
+    "Function131": {
+      "expected": "venstre parentes, f delt på g, høyre parentes, ganger, venstre parentes, 2 x, pluss 5, høyre parentes, er lik, brøk med teller, f ganger, venstre parentes, 2 x, pluss 5, høyre parentes, og nevner, g ganger, venstre parentes, 2 x, pluss 5, høyre parentes"
+    },
+    "Function132": {
+      "expected": "2, f ganger x"
+    },
+    "Function133": {
+      "expected": "c, f ganger x"
+    },
+    "Function134": {
+      "expected": "f kvadrat ganger x"
+    },
+    "Function135": {
+      "expected": "f kvadrat ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function136": {
+      "expected": "f kubikk ganger x"
+    },
+    "Function137": {
+      "expected": "f kubikk ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function138": {
+      "expected": "f i fjerde potens, ganger x"
+    },
+    "Function139": {
+      "expected": "f i fjerde potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function140": {
+      "expected": "f i femte potens, ganger x"
+    },
+    "Function141": {
+      "expected": "f i femte potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function142": {
+      "expected": "f i n-te potens, ganger x"
+    },
+    "Function143": {
+      "expected": "f i n-te potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function144": {
+      "expected": "g kvadrat ganger x"
+    },
+    "Function145": {
+      "expected": "g kvadrat ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function146": {
+      "expected": "h kubikk ganger x"
+    },
+    "Function147": {
+      "expected": "h kubikk ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function148": {
+      "expected": "g i fjerde potens, ganger x"
+    },
+    "Function149": {
+      "expected": "g i fjerde potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function150": {
+      "expected": "h i femte potens, ganger x"
+    },
+    "Function151": {
+      "expected": "h i femte potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function152": {
+      "expected": "g i n-te potens, ganger x"
+    },
+    "Function153": {
+      "expected": "g i n-te potens, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function154": {
+      "expected": "f indeks 1, ganger x"
+    },
+    "Function156": {
+      "expected": "g indeks 2, ganger, venstre parentes, x kubikk, høyre parentes"
+    },
+    "Function157": {
+      "expected": "h indeks n, ganger, venstre parentes, 3 x, minus 2, høyre parentes"
+    },
+    "Function158": {
+      "expected": "f indeks 1, med eksponent minus 1, ganger x"
+    },
+    "Function159": {
+      "expected": "g indeks 2, med eksponent minus 1, ganger, venstre parentes, 2 x, pluss 1, høyre parentes"
+    },
+    "Function160": {
+      "expected": "h indeks n, med eksponent minus 1, ganger x"
+    },
+    "Function161": {
+      "expected": "g indeks 1, med eksponent minus 1, ganger, venstre parentes, g indeks 2, ganger x, høyre parentes"
+    },
+    "Function162": {
+      "expected": "f indeks 1, ganger, venstre parentes, g indeks 2, med eksponent minus 1, ganger x, høyre parentes"
+    },
+    "Function163": {
+      "expected": "f ganger, venstre parentes, x komma y, høyre parentes"
+    },
+    "Function164": {
+      "expected": "f ganger, venstre parentes, x komma y komma z, høyre parentes"
+    },
+    "Function165": {
+      "expected": "f ganger, venstre parentes, x pluss 1, komma, 2 y, høyre parentes"
+    },
+    "Function166": {
+      "expected": "f ganger, venstre parentes, 2 x, komma, x pluss 1, komma, x kvadrat, høyre parentes"
+    }
+  }
+}

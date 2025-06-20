@@ -1,0 +1,153 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "factory": "clearspeakPreferences",
+  "base": "input/base/clearspeak_preferences_test.json",
+  "information": "Clearspeak Preferences tests.",
+  "exclude": [],
+  "tests": {
+    "Abs01": {
+      "expected": "AbsoluteValue"
+    },
+    "Metric01": {
+      "expected": "AbsoluteValue"
+    },
+    "Cap001": {
+      "expected": "Caps"
+    },
+    "In_set_0": {
+      "expected": "Sets"
+    },
+    "Preferences_in_0": {
+      "expected": "SetMemberSymbol"
+    },
+    "Enclose_0": {
+      "expected": "Enclosed"
+    },
+    "NamedSet_0": {
+      "expected": "Exponent"
+    },
+    "ExponentLatinCap": {
+      "expected": "Exponent"
+    },
+    "VectorEndDeterminant": {
+      "expected": "Matrix"
+    },
+    "MultiLines_0": {
+      "expected": "MultiLineOverview"
+    },
+    "CompositeFunctionFences": {
+      "expected": "ImpliedTimes"
+    },
+    "Angle_0_Angle": {
+      "expected": "ImpliedTimes"
+    },
+    "NestedRoots_3": {
+      "expected": "Roots"
+    },
+    "Set_1": {
+      "expected": "Sets"
+    },
+    "VertLine_SuchThat": {
+      "expected": "VerticalLine"
+    },
+    "Exp001": {
+      "expected": "Exponent"
+    },
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "Caps"
+    },
+    "Frac001": {
+      "expected": "Fraction"
+    },
+    "Function007": {
+      "expected": "Functions"
+    },
+    "Function001": {
+      "expected": "Functions"
+    },
+    "ImpTimes001": {
+      "expected": "ImpliedTimes"
+    },
+    "Issue230_1": {
+      "expected": "ImpliedTimes"
+    },
+    "Issue_689_3": {
+      "expected": "Matrix"
+    },
+    "Log001": {
+      "expected": "Log"
+    },
+    "Log002": {
+      "expected": "Log"
+    },
+    "Matrix001": {
+      "expected": "Matrix"
+    },
+    "Multiline001": {
+      "expected": "MultiLineOverview"
+    },
+    "Multiline016": {
+      "expected": "MultiLineOverview"
+    },
+    "Multiline020": {
+      "expected": "MultiLineOverview"
+    },
+    "NumSys001": {
+      "expected": "ImpliedTimes"
+    },
+    "Paren001": {
+      "expected": "Paren"
+    },
+    "Sum001": {
+      "expected": "ImpliedTimes"
+    },
+    "Ellipses001": {
+      "expected": "Ellipses"
+    },
+    "Dot001": {
+      "expected": "MultsymbolDot"
+    },
+    "X001": {
+      "expected": "MultsymbolX"
+    },
+    "MembSym001": {
+      "expected": "ImpliedTimes"
+    },
+    "SetMemb001": {
+      "expected": "Sets"
+    },
+    "Triangle001": {
+      "expected": "ImpliedTimes"
+    },
+    "VertLine001": {
+      "expected": "ImpliedTimes"
+    },
+    "Bar001": {
+      "expected": "Bar"
+    },
+    "Prime001": {
+      "expected": "Prime"
+    },
+    "Root001": {
+      "expected": "Roots"
+    },
+    "Root002": {
+      "expected": "Roots"
+    },
+    "Set001": {
+      "expected": "Sets"
+    },
+    "Trig001": {
+      "expected": "Trig"
+    },
+    "Trig002": {
+      "expected": "Trig"
+    },
+    "Triangle": {
+      "expected": "TriangleSymbol"
+    },
+    "Currency001": {
+      "expected": "Currency"
+    }
+  }
+}

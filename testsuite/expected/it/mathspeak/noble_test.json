@@ -1,0 +1,1002 @@
+{
+  "name": "ItalianMathspeakNoble",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/mathspeak/noble_test.json",
+  "information": "Italian Mathspeak Steve Noble's samples.",
+  "domain": "mathspeak",
+  "active": "NobleSamplesItalian",
+  "exclude": [],
+  "tests": {
+    "Sample_1_default": {
+      "expected": "meno 5 e un quinto meno 6 e due terzi uguale a"
+    },
+    "Sample_1_brief": {
+      "expected": "meno 5 e un quinto meno 6 e due terzi uguale a"
+    },
+    "Sample_1_sbrief": {
+      "expected": "meno 5 e un quinto meno 6 e due terzi uguale a"
+    },
+    "Sample_2_default": {
+      "expected": "meno 7 e tre quarti meno parentesi tonda aperta meno 4 e sette ottavi parentesi tonda chiusa uguale a"
+    },
+    "Sample_2_brief": {
+      "expected": "meno 7 e tre quarti meno parentesi tonda aperta meno 4 e sette ottavi parentesi tonda chiusa uguale a"
+    },
+    "Sample_2_sbrief": {
+      "expected": "meno 7 e tre quarti meno parentesi tonda aperta meno 4 e sette ottavi parentesi tonda chiusa uguale a"
+    },
+    "Sample_3_default": {
+      "expected": "meno 24,15 meno parentesi tonda aperta 13,7 parentesi tonda chiusa uguale a"
+    },
+    "Sample_3_brief": {
+      "expected": "meno 24,15 meno parentesi tonda aperta 13,7 parentesi tonda chiusa uguale a"
+    },
+    "Sample_3_sbrief": {
+      "expected": "meno 24,15 meno parentesi tonda aperta 13,7 parentesi tonda chiusa uguale a"
+    },
+    "Sample_4_default": {
+      "expected": "parentesi tonda aperta meno 4 parentesi tonda chiusa per 3 uguale a meno 12"
+    },
+    "Sample_4_brief": {
+      "expected": "parentesi tonda aperta meno 4 parentesi tonda chiusa per 3 uguale a meno 12"
+    },
+    "Sample_4_sbrief": {
+      "expected": "parentesi tonda aperta meno 4 parentesi tonda chiusa per 3 uguale a meno 12"
+    },
+    "Sample_5_default": {
+      "expected": "meno 12 diviso per 3 uguale a meno 4"
+    },
+    "Sample_5_brief": {
+      "expected": "meno 12 diviso per 3 uguale a meno 4"
+    },
+    "Sample_5_sbrief": {
+      "expected": "meno 12 diviso per 3 uguale a meno 4"
+    },
+    "Sample_6_default": {
+      "expected": "meno 12 diviso per parentesi tonda aperta meno 4 parentesi tonda chiusa uguale a 3"
+    },
+    "Sample_6_brief": {
+      "expected": "meno 12 diviso per parentesi tonda aperta meno 4 parentesi tonda chiusa uguale a 3"
+    },
+    "Sample_6_sbrief": {
+      "expected": "meno 12 diviso per parentesi tonda aperta meno 4 parentesi tonda chiusa uguale a 3"
+    },
+    "Sample_7_default": {
+      "expected": "6 per 5"
+    },
+    "Sample_7_brief": {
+      "expected": "6 per 5"
+    },
+    "Sample_7_sbrief": {
+      "expected": "6 per 5"
+    },
+    "Sample_8_default": {
+      "expected": "6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_8_brief": {
+      "expected": "6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_8_sbrief": {
+      "expected": "6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_9_default": {
+      "expected": "meno 6 per 5"
+    },
+    "Sample_9_brief": {
+      "expected": "meno 6 per 5"
+    },
+    "Sample_9_sbrief": {
+      "expected": "meno 6 per 5"
+    },
+    "Sample_10_default": {
+      "expected": "meno 6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_10_brief": {
+      "expected": "meno 6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_10_sbrief": {
+      "expected": "meno 6 per parentesi tonda aperta meno 5 parentesi tonda chiusa"
+    },
+    "Sample_11_default": {
+      "expected": "meno 8 per 7"
+    },
+    "Sample_11_brief": {
+      "expected": "meno 8 per 7"
+    },
+    "Sample_11_sbrief": {
+      "expected": "meno 8 per 7"
+    },
+    "Sample_12_default": {
+      "expected": "meno 8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_12_brief": {
+      "expected": "meno 8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_12_sbrief": {
+      "expected": "meno 8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_13_default": {
+      "expected": "8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_13_brief": {
+      "expected": "8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_13_sbrief": {
+      "expected": "8 per parentesi tonda aperta meno 7 parentesi tonda chiusa"
+    },
+    "Sample_14_default": {
+      "expected": "8 per 7"
+    },
+    "Sample_14_brief": {
+      "expected": "8 per 7"
+    },
+    "Sample_14_sbrief": {
+      "expected": "8 per 7"
+    },
+    "Sample_15_default": {
+      "expected": "m angolo 1 uguale a 30 gradi"
+    },
+    "Sample_15_brief": {
+      "expected": "m angolo 1 uguale a 30 gradi"
+    },
+    "Sample_15_sbrief": {
+      "expected": "m angolo 1 uguale a 30 gradi"
+    },
+    "Sample_16_default": {
+      "expected": "m angolo 2 uguale a 60 gradi"
+    },
+    "Sample_16_brief": {
+      "expected": "m angolo 2 uguale a 60 gradi"
+    },
+    "Sample_16_sbrief": {
+      "expected": "m angolo 2 uguale a 60 gradi"
+    },
+    "Sample_17_default": {
+      "expected": "m angolo 1 più m angolo 2 uguale a 90 gradi"
+    },
+    "Sample_17_brief": {
+      "expected": "m angolo 1 più m angolo 2 uguale a 90 gradi"
+    },
+    "Sample_17_sbrief": {
+      "expected": "m angolo 1 più m angolo 2 uguale a 90 gradi"
+    },
+    "Sample_18_default": {
+      "expected": "m angolo M maiuscola più m angolo N maiuscola uguale a 180 gradi"
+    },
+    "Sample_18_brief": {
+      "expected": "m angolo M maiuscola più m angolo N maiuscola uguale a 180 gradi"
+    },
+    "Sample_18_sbrief": {
+      "expected": "m angolo M maiuscola più m angolo N maiuscola uguale a 180 gradi"
+    },
+    "Sample_19_default": {
+      "expected": "A maiuscola uguale a un mezzo b h"
+    },
+    "Sample_19_brief": {
+      "expected": "A maiuscola uguale a un mezzo b h"
+    },
+    "Sample_19_sbrief": {
+      "expected": "A maiuscola uguale a un mezzo b h"
+    },
+    "Sample_20_default": {
+      "expected": "inizio frazione area of triangle fratto area of square fine frazione uguale a inizio frazione 1 unit quadrato fratto 16 units quadrato fine frazione"
+    },
+    "Sample_20_brief": {
+      "expected": "inizio frazione area of triangle fratto area of square fine frazione uguale a inizio frazione 1 unit quadrato fratto 16 units quadrato fine frazione"
+    },
+    "Sample_20_sbrief": {
+      "expected": "frazione area of triangle fratto area of square fine frazione uguale a frazione 1 unit quadrato fratto 16 units quadrato fine frazione"
+    },
+    "Sample_21_default": {
+      "expected": "0,6 quadrato"
+    },
+    "Sample_21_brief": {
+      "expected": "0,6 quadrato"
+    },
+    "Sample_21_sbrief": {
+      "expected": "0,6 quadrato"
+    },
+    "Sample_22_default": {
+      "expected": "1,5 quadrato"
+    },
+    "Sample_22_brief": {
+      "expected": "1,5 quadrato"
+    },
+    "Sample_22_sbrief": {
+      "expected": "1,5 quadrato"
+    },
+    "Sample_23_default": {
+      "expected": "4 parentesi tonda aperta 2 x più 3 x parentesi tonda chiusa"
+    },
+    "Sample_23_brief": {
+      "expected": "4 parentesi tonda aperta 2 x più 3 x parentesi tonda chiusa"
+    },
+    "Sample_23_sbrief": {
+      "expected": "4 parentesi tonda aperta 2 x più 3 x parentesi tonda chiusa"
+    },
+    "Sample_24_default": {
+      "expected": "36 più 4 y meno 1 y quadrato più 5 y quadrato meno 2"
+    },
+    "Sample_24_brief": {
+      "expected": "36 più 4 y meno 1 y quadrato più 5 y quadrato meno 2"
+    },
+    "Sample_24_sbrief": {
+      "expected": "36 più 4 y meno 1 y quadrato più 5 y quadrato meno 2"
+    },
+    "Sample_25_default": {
+      "expected": "parentesi tonda aperta 5 più 9 parentesi tonda chiusa meno 4 più 3 uguale a"
+    },
+    "Sample_25_brief": {
+      "expected": "parentesi tonda aperta 5 più 9 parentesi tonda chiusa meno 4 più 3 uguale a"
+    },
+    "Sample_25_sbrief": {
+      "expected": "parentesi tonda aperta 5 più 9 parentesi tonda chiusa meno 4 più 3 uguale a"
+    },
+    "Sample_26_default": {
+      "expected": "modificante sopra B maiuscola C maiuscola con freccia sinistra e destra"
+    },
+    "Sample_26_brief": {
+      "expected": "mod sopra B maiuscola C maiuscola con freccia sinistra e destra"
+    },
+    "Sample_26_sbrief": {
+      "expected": "mod sopra B maiuscola C maiuscola con freccia sinistra e destra"
+    },
+    "Sample_27_default": {
+      "expected": "modificante sopra P maiuscola Q maiuscola con freccia verso destra"
+    },
+    "Sample_27_brief": {
+      "expected": "mod sopra P maiuscola Q maiuscola con freccia verso destra"
+    },
+    "Sample_27_sbrief": {
+      "expected": "mod sopra P maiuscola Q maiuscola con freccia verso destra"
+    },
+    "Sample_28_default": {
+      "expected": "modificante sopra G maiuscola H maiuscola con barra sopra"
+    },
+    "Sample_28_brief": {
+      "expected": "mod sopra G maiuscola H maiuscola con barra sopra"
+    },
+    "Sample_28_sbrief": {
+      "expected": "mod sopra G maiuscola H maiuscola con barra sopra"
+    },
+    "Sample_29_default": {
+      "expected": "modificante sopra W maiuscola X maiuscola con barra sopra approssimativamente uguale a modificante sopra Y maiuscola Z maiuscola con barra sopra"
+    },
+    "Sample_29_brief": {
+      "expected": "mod sopra W maiuscola X maiuscola con barra sopra approssimativamente uguale a mod sopra Y maiuscola Z maiuscola con barra sopra"
+    },
+    "Sample_29_sbrief": {
+      "expected": "mod sopra W maiuscola X maiuscola con barra sopra approssimativamente uguale a mod sopra Y maiuscola Z maiuscola con barra sopra"
+    },
+    "Sample_30_default": {
+      "expected": "angolo B maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_30_brief": {
+      "expected": "angolo B maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_30_sbrief": {
+      "expected": "angolo B maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_31_default": {
+      "expected": "angolo B maiuscola E maiuscola D maiuscola"
+    },
+    "Sample_31_brief": {
+      "expected": "angolo B maiuscola E maiuscola D maiuscola"
+    },
+    "Sample_31_sbrief": {
+      "expected": "angolo B maiuscola E maiuscola D maiuscola"
+    },
+    "Sample_32_default": {
+      "expected": "angolo D maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_32_brief": {
+      "expected": "angolo D maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_32_sbrief": {
+      "expected": "angolo D maiuscola E maiuscola F maiuscola"
+    },
+    "Sample_33_default": {
+      "expected": "x uguale a inizio frazione meno b più o meno inizio radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_33_brief": {
+      "expected": "x uguale a inizio frazione meno b più o meno inizio radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_33_sbrief": {
+      "expected": "x uguale a frazione meno b più o meno radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_34_default": {
+      "expected": "y uguale a x quadrato più 8 x più 16"
+    },
+    "Sample_34_brief": {
+      "expected": "y uguale a x quadrato più 8 x più 16"
+    },
+    "Sample_34_sbrief": {
+      "expected": "y uguale a x quadrato più 8 x più 16"
+    },
+    "Sample_35_default": {
+      "expected": "y uguale a un terzo parentesi tonda aperta 3 apice x linea di base parentesi tonda chiusa"
+    },
+    "Sample_35_brief": {
+      "expected": "y uguale a un terzo parentesi tonda aperta 3 sup x base parentesi tonda chiusa"
+    },
+    "Sample_35_sbrief": {
+      "expected": "y uguale a un terzo parentesi tonda aperta 3 sup x base parentesi tonda chiusa"
+    },
+    "Sample_36_default": {
+      "expected": "y uguale a 10 meno 2 x"
+    },
+    "Sample_36_brief": {
+      "expected": "y uguale a 10 meno 2 x"
+    },
+    "Sample_36_sbrief": {
+      "expected": "y uguale a 10 meno 2 x"
+    },
+    "Sample_37_default": {
+      "expected": "y uguale a 2 x cubo più 5"
+    },
+    "Sample_37_brief": {
+      "expected": "y uguale a 2 x cubo più 5"
+    },
+    "Sample_37_sbrief": {
+      "expected": "y uguale a 2 x cubo più 5"
+    },
+    "Sample_38_default": {
+      "expected": "y uguale a parentesi tonda aperta x quadrato più 1 parentesi tonda chiusa parentesi tonda aperta x quadrato più 3 parentesi tonda chiusa"
+    },
+    "Sample_38_brief": {
+      "expected": "y uguale a parentesi tonda aperta x quadrato più 1 parentesi tonda chiusa parentesi tonda aperta x quadrato più 3 parentesi tonda chiusa"
+    },
+    "Sample_38_sbrief": {
+      "expected": "y uguale a parentesi tonda aperta x quadrato più 1 parentesi tonda chiusa parentesi tonda aperta x quadrato più 3 parentesi tonda chiusa"
+    },
+    "Sample_39_default": {
+      "expected": "y uguale a 0,5 apice x"
+    },
+    "Sample_39_brief": {
+      "expected": "y uguale a 0,5 sup x"
+    },
+    "Sample_39_sbrief": {
+      "expected": "y uguale a 0,5 sup x"
+    },
+    "Sample_40_default": {
+      "expected": "y uguale a 22 meno 2 x"
+    },
+    "Sample_40_brief": {
+      "expected": "y uguale a 22 meno 2 x"
+    },
+    "Sample_40_sbrief": {
+      "expected": "y uguale a 22 meno 2 x"
+    },
+    "Sample_41_default": {
+      "expected": "y uguale a inizio frazione 3 fratto x fine frazione"
+    },
+    "Sample_41_brief": {
+      "expected": "y uguale a inizio frazione 3 fratto x fine frazione"
+    },
+    "Sample_41_sbrief": {
+      "expected": "y uguale a frazione 3 fratto x fine frazione"
+    },
+    "Sample_42_default": {
+      "expected": "y uguale a parentesi tonda aperta x più 4 parentesi tonda chiusa parentesi tonda aperta x più 4 parentesi tonda chiusa"
+    },
+    "Sample_42_brief": {
+      "expected": "y uguale a parentesi tonda aperta x più 4 parentesi tonda chiusa parentesi tonda aperta x più 4 parentesi tonda chiusa"
+    },
+    "Sample_42_sbrief": {
+      "expected": "y uguale a parentesi tonda aperta x più 4 parentesi tonda chiusa parentesi tonda aperta x più 4 parentesi tonda chiusa"
+    },
+    "Sample_43_default": {
+      "expected": "y uguale a parentesi tonda aperta 4 x meno 3 parentesi tonda chiusa parentesi tonda aperta x più 1 parentesi tonda chiusa"
+    },
+    "Sample_43_brief": {
+      "expected": "y uguale a parentesi tonda aperta 4 x meno 3 parentesi tonda chiusa parentesi tonda aperta x più 1 parentesi tonda chiusa"
+    },
+    "Sample_43_sbrief": {
+      "expected": "y uguale a parentesi tonda aperta 4 x meno 3 parentesi tonda chiusa parentesi tonda aperta x più 1 parentesi tonda chiusa"
+    },
+    "Sample_44_default": {
+      "expected": "y uguale a 20 x meno 4 x quadrato"
+    },
+    "Sample_44_brief": {
+      "expected": "y uguale a 20 x meno 4 x quadrato"
+    },
+    "Sample_44_sbrief": {
+      "expected": "y uguale a 20 x meno 4 x quadrato"
+    },
+    "Sample_45_default": {
+      "expected": "y uguale a x quadrato"
+    },
+    "Sample_45_brief": {
+      "expected": "y uguale a x quadrato"
+    },
+    "Sample_45_sbrief": {
+      "expected": "y uguale a x quadrato"
+    },
+    "Sample_46_default": {
+      "expected": "y uguale a 3 apice x meno 1"
+    },
+    "Sample_46_brief": {
+      "expected": "y uguale a 3 sup x meno 1"
+    },
+    "Sample_46_sbrief": {
+      "expected": "y uguale a 3 sup x meno 1"
+    },
+    "Sample_47_default": {
+      "expected": "y uguale a 16 meno 2 parentesi tonda aperta x più 3 parentesi tonda chiusa"
+    },
+    "Sample_47_brief": {
+      "expected": "y uguale a 16 meno 2 parentesi tonda aperta x più 3 parentesi tonda chiusa"
+    },
+    "Sample_47_sbrief": {
+      "expected": "y uguale a 16 meno 2 parentesi tonda aperta x più 3 parentesi tonda chiusa"
+    },
+    "Sample_48_default": {
+      "expected": "y uguale a 4 x quadrato meno x meno 3"
+    },
+    "Sample_48_brief": {
+      "expected": "y uguale a 4 x quadrato meno x meno 3"
+    },
+    "Sample_48_sbrief": {
+      "expected": "y uguale a 4 x quadrato meno x meno 3"
+    },
+    "Sample_49_default": {
+      "expected": "y uguale a x più inizio frazione 1 fratto x fine frazione"
+    },
+    "Sample_49_brief": {
+      "expected": "y uguale a x più inizio frazione 1 fratto x fine frazione"
+    },
+    "Sample_49_sbrief": {
+      "expected": "y uguale a x più frazione 1 fratto x fine frazione"
+    },
+    "Sample_50_default": {
+      "expected": "y uguale a 4 x parentesi tonda aperta 5 meno x parentesi tonda chiusa"
+    },
+    "Sample_50_brief": {
+      "expected": "y uguale a 4 x parentesi tonda aperta 5 meno x parentesi tonda chiusa"
+    },
+    "Sample_50_sbrief": {
+      "expected": "y uguale a 4 x parentesi tonda aperta 5 meno x parentesi tonda chiusa"
+    },
+    "Sample_51_default": {
+      "expected": "y uguale a 2 parentesi tonda aperta x meno 3 parentesi tonda chiusa più 6 parentesi tonda aperta 1 meno x parentesi tonda chiusa"
+    },
+    "Sample_51_brief": {
+      "expected": "y uguale a 2 parentesi tonda aperta x meno 3 parentesi tonda chiusa più 6 parentesi tonda aperta 1 meno x parentesi tonda chiusa"
+    },
+    "Sample_51_sbrief": {
+      "expected": "y uguale a 2 parentesi tonda aperta x meno 3 parentesi tonda chiusa più 6 parentesi tonda aperta 1 meno x parentesi tonda chiusa"
+    },
+    "Sample_52_default": {
+      "expected": "0,25 maggiore di cinque sedicesimi"
+    },
+    "Sample_52_brief": {
+      "expected": "0,25 maggiore di cinque sedicesimi"
+    },
+    "Sample_52_sbrief": {
+      "expected": "0,25 maggiore di cinque sedicesimi"
+    },
+    "Sample_53_default": {
+      "expected": "32 punto parentesi tonda aperta 5 punto 7 parentesi tonda chiusa"
+    },
+    "Sample_53_brief": {
+      "expected": "32 punto parentesi tonda aperta 5 punto 7 parentesi tonda chiusa"
+    },
+    "Sample_53_sbrief": {
+      "expected": "32 punto parentesi tonda aperta 5 punto 7 parentesi tonda chiusa"
+    },
+    "Sample_54_default": {
+      "expected": "parentesi tonda aperta un mezzo per un mezzo per pi greco per 2 parentesi tonda chiusa più parentesi tonda aperta 2 per un mezzo per pi greco per 5 parentesi tonda chiusa"
+    },
+    "Sample_54_brief": {
+      "expected": "parentesi tonda aperta un mezzo per un mezzo per pi greco per 2 parentesi tonda chiusa più parentesi tonda aperta 2 per un mezzo per pi greco per 5 parentesi tonda chiusa"
+    },
+    "Sample_54_sbrief": {
+      "expected": "parentesi tonda aperta un mezzo per un mezzo per pi greco per 2 parentesi tonda chiusa più parentesi tonda aperta 2 per un mezzo per pi greco per 5 parentesi tonda chiusa"
+    },
+    "Sample_55_default": {
+      "expected": "limite inferiore sottoscritto n freccia verso destra infinito fine script E maiuscola pedice n linea di base uguale a unione sottoscritto n maggiore o uguale a 1 fine script intersezione sottoscritto k maggiore o uguale a n fine script E maiuscola pedice k linea di base virgola limite superiore sottoscritto n freccia verso destra infinito fine script E maiuscola pedice n linea di base uguale a intersezione sottoscritto n maggiore o uguale a 1 fine script unione sottoscritto k maggiore o uguale a n fine script E maiuscola pedice k linea di base punto"
+    },
+    "Sample_55_brief": {
+      "expected": "limite inferiore sottoscritto n freccia verso destra infinito fine script E maiuscola sub n base uguale a unione sottoscritto n maggiore o uguale a 1 fine script intersezione sottoscritto k maggiore o uguale a n fine script E maiuscola sub k base virgola limite superiore sottoscritto n freccia verso destra infinito fine script E maiuscola sub n base uguale a intersezione sottoscritto n maggiore o uguale a 1 fine script unione sottoscritto k maggiore o uguale a n fine script E maiuscola sub k base punto"
+    },
+    "Sample_55_sbrief": {
+      "expected": "limite inferiore sottoscritto n freccia verso destra infinito fine script E maiuscola sub n base uguale a unione sottoscritto n maggiore o uguale a 1 fine script intersezione sottoscritto k maggiore o uguale a n fine script E maiuscola sub k base virgola limite superiore sottoscritto n freccia verso destra infinito fine script E maiuscola sub n base uguale a intersezione sottoscritto n maggiore o uguale a 1 fine script unione sottoscritto k maggiore o uguale a n fine script E maiuscola sub k base punto"
+    },
+    "Sample_56_default": {
+      "expected": "inizio layout 1a row 1a colonna parentesi tonda aperta i parentesi tonda chiusa 2a colonna S maiuscola script appartenente a A maiuscola script punto e virgola 2a row 1a colonna parentesi tonda aperta ii parentesi tonda chiusa 2a colonna if E maiuscola appartenente a A maiuscola script then E maiuscola con barra sopra appartenente a A maiuscola script punto e virgola 3a row 1a colonna parentesi tonda aperta iii parentesi tonda chiusa 2a colonna if E maiuscola 1 virgola E maiuscola 2 appartenente a A maiuscola script then E maiuscola 1 unione E maiuscola 2 appartenente a A maiuscola script punto fine layout"
+    },
+    "Sample_56_brief": {
+      "expected": "inizio layout 1a row 1a colonna parentesi tonda aperta i parentesi tonda chiusa 2a colonna S maiuscola script appartenente a A maiuscola script punto e virgola 2a row 1a colonna parentesi tonda aperta ii parentesi tonda chiusa 2a colonna if E maiuscola appartenente a A maiuscola script then E maiuscola con barra sopra appartenente a A maiuscola script punto e virgola 3a row 1a colonna parentesi tonda aperta iii parentesi tonda chiusa 2a colonna if E maiuscola 1 virgola E maiuscola 2 appartenente a A maiuscola script then E maiuscola 1 unione E maiuscola 2 appartenente a A maiuscola script punto fine layout"
+    },
+    "Sample_56_sbrief": {
+      "expected": "layout 1a row 1a colonna parentesi tonda aperta i parentesi tonda chiusa 2a colonna S maiuscola script appartenente a A maiuscola script punto e virgola 2a row 1a colonna parentesi tonda aperta ii parentesi tonda chiusa 2a colonna if E maiuscola appartenente a A maiuscola script then E maiuscola con barra sopra appartenente a A maiuscola script punto e virgola 3a row 1a colonna parentesi tonda aperta iii parentesi tonda chiusa 2a colonna if E maiuscola 1 virgola E maiuscola 2 appartenente a A maiuscola script then E maiuscola 1 unione E maiuscola 2 appartenente a A maiuscola script punto fine layout"
+    },
+    "Sample_57_default": {
+      "expected": "inizio layout 1a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 1 parentesi tonda chiusa I maiuscola f A maiuscola appartenente a F maiuscola script t h e n 0 minore o uguale a P maiuscola parentesi graffa aperta A maiuscola parentesi graffa chiusa minore o uguale a 1 punto 4a colonna parentesi tonda aperta 1 parentesi tonda chiusa 2a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 2 parentesi tonda chiusa P maiuscola parentesi graffa aperta S maiuscola script parentesi graffa chiusa uguale a 1 punto 4a colonna parentesi tonda aperta 2 parentesi tonda chiusa 3a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 3 parentesi tonda chiusa I maiuscola f parentesi graffa aperta E maiuscola pedice n linea di base virgola n maggiore o uguale a 1 parentesi graffa chiusa appartenente a F maiuscola script is a sequence of disjoint 4a colonna parentesi tonda aperta 3 parentesi tonda chiusa fine layout"
+    },
+    "Sample_57_brief": {
+      "expected": "inizio layout 1a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 1 parentesi tonda chiusa I maiuscola f A maiuscola appartenente a F maiuscola script t h e n 0 minore o uguale a P maiuscola parentesi graffa aperta A maiuscola parentesi graffa chiusa minore o uguale a 1 punto 4a colonna parentesi tonda aperta 1 parentesi tonda chiusa 2a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 2 parentesi tonda chiusa P maiuscola parentesi graffa aperta S maiuscola script parentesi graffa chiusa uguale a 1 punto 4a colonna parentesi tonda aperta 2 parentesi tonda chiusa 3a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 3 parentesi tonda chiusa I maiuscola f parentesi graffa aperta E maiuscola sub n base virgola n maggiore o uguale a 1 parentesi graffa chiusa appartenente a F maiuscola script is a sequence of disjoint 4a colonna parentesi tonda aperta 3 parentesi tonda chiusa fine layout"
+    },
+    "Sample_57_sbrief": {
+      "expected": "layout 1a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 1 parentesi tonda chiusa I maiuscola f A maiuscola appartenente a F maiuscola script t h e n 0 minore o uguale a P maiuscola parentesi graffa aperta A maiuscola parentesi graffa chiusa minore o uguale a 1 punto 4a colonna parentesi tonda aperta 1 parentesi tonda chiusa 2a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 2 parentesi tonda chiusa P maiuscola parentesi graffa aperta S maiuscola script parentesi graffa chiusa uguale a 1 punto 4a colonna parentesi tonda aperta 2 parentesi tonda chiusa 3a row 1a colonna vuoto 2a colonna vuoto 3a colonna parentesi tonda aperta A maiuscola normale punto 3 parentesi tonda chiusa I maiuscola f parentesi graffa aperta E maiuscola sub n base virgola n maggiore o uguale a 1 parentesi graffa chiusa appartenente a F maiuscola script is a sequence of disjoint 4a colonna parentesi tonda aperta 3 parentesi tonda chiusa fine layout"
+    },
+    "Sample_58_default": {
+      "expected": "P maiuscola parentesi graffa aperta B maiuscola pedice j linea di base barra verticale A maiuscola parentesi graffa chiusa uguale a inizio frazione P maiuscola parentesi graffa aperta B maiuscola pedice j linea di base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola pedice j linea di base parentesi graffa chiusa fratto sommatoria sottoscritto j primo appartenente a J maiuscola fine script P maiuscola parentesi graffa aperta B maiuscola pedice j primo linea di base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola pedice j primo linea di base parentesi graffa chiusa fine frazione punto"
+    },
+    "Sample_58_brief": {
+      "expected": "P maiuscola parentesi graffa aperta B maiuscola sub j base barra verticale A maiuscola parentesi graffa chiusa uguale a inizio frazione P maiuscola parentesi graffa aperta B maiuscola sub j base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola sub j base parentesi graffa chiusa fratto sommatoria sottoscritto j primo appartenente a J maiuscola fine script P maiuscola parentesi graffa aperta B maiuscola sub j primo base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola sub j primo base parentesi graffa chiusa fine frazione punto"
+    },
+    "Sample_58_sbrief": {
+      "expected": "P maiuscola parentesi graffa aperta B maiuscola sub j base barra verticale A maiuscola parentesi graffa chiusa uguale a frazione P maiuscola parentesi graffa aperta B maiuscola sub j base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola sub j base parentesi graffa chiusa fratto sommatoria sottoscritto j primo appartenente a J maiuscola fine script P maiuscola parentesi graffa aperta B maiuscola sub j primo base parentesi graffa chiusa P maiuscola parentesi graffa aperta A maiuscola barra verticale B maiuscola sub j primo base parentesi graffa chiusa fine frazione punto"
+    },
+    "Sample_59_default": {
+      "expected": "mu 1 parentesi tonda aperta B maiuscola parentesi tonda chiusa uguale a integrale sottoscritto B maiuscola fine script f parentesi tonda aperta x parentesi tonda chiusa d mu 2 parentesi tonda aperta x parentesi tonda chiusa"
+    },
+    "Sample_59_brief": {
+      "expected": "mu 1 parentesi tonda aperta B maiuscola parentesi tonda chiusa uguale a integrale sottoscritto B maiuscola fine script f parentesi tonda aperta x parentesi tonda chiusa d mu 2 parentesi tonda aperta x parentesi tonda chiusa"
+    },
+    "Sample_59_sbrief": {
+      "expected": "mu 1 parentesi tonda aperta B maiuscola parentesi tonda chiusa uguale a integrale sottoscritto B maiuscola fine script f parentesi tonda aperta x parentesi tonda chiusa d mu 2 parentesi tonda aperta x parentesi tonda chiusa"
+    },
+    "Sample_60_default": {
+      "expected": "limite sottoscritto n freccia verso destra infinito fine script E maiuscola parentesi graffa aperta inizio valore assoluto X maiuscola pedice n linea di base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a E maiuscola parentesi graffa aperta limite sottoscritto n freccia verso destra infinito fine script inizio valore assoluto X maiuscola pedice n linea di base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a 0 punto"
+    },
+    "Sample_60_brief": {
+      "expected": "limite sottoscritto n freccia verso destra infinito fine script E maiuscola parentesi graffa aperta inizio valore assoluto X maiuscola sub n base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a E maiuscola parentesi graffa aperta limite sottoscritto n freccia verso destra infinito fine script inizio valore assoluto X maiuscola sub n base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a 0 punto"
+    },
+    "Sample_60_sbrief": {
+      "expected": "limite sottoscritto n freccia verso destra infinito fine script E maiuscola parentesi graffa aperta valore assoluto X maiuscola sub n base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a E maiuscola parentesi graffa aperta limite sottoscritto n freccia verso destra infinito fine script valore assoluto X maiuscola sub n base meno X maiuscola fine valore assoluto parentesi graffa chiusa uguale a 0 punto"
+    },
+    "Sample_61_default": {
+      "expected": "inizio layout 1a row 1a colonna P maiuscola pedice mu virgola sigma linea di base parentesi graffa aperta Y maiuscola maggiore o uguale a l pedice beta linea di base parentesi tonda aperta Y maiuscola con barra sopra pedice n linea di base virgola S maiuscola pedice n linea di base parentesi tonda chiusa parentesi graffa chiusa uguale a P maiuscola pedice mu virgola sigma linea di base parentesi graffa aperta parentesi tonda aperta Y maiuscola meno Y maiuscola con barra sopra pedice n linea di base parentesi tonda chiusa diviso per parentesi tonda aperta S maiuscola puntino nel mezzo parentesi tonda aperta 1 più inizio frazione 1 fratto n fine frazione parentesi tonda chiusa apice 1 diviso per 2 linea di base parentesi tonda chiusa maggiore o uguale a meno t pedice beta linea di base parentesi quadra aperta n meno 1 parentesi quadra chiusa parentesi graffa chiusa uguale a beta virgola 2a row 1a colonna vuoto 2a colonna parentesi tonda aperta 1 parentesi tonda chiusa fine layout"
+    },
+    "Sample_61_brief": {
+      "expected": "inizio layout 1a row 1a colonna P maiuscola sub mu virgola sigma base parentesi graffa aperta Y maiuscola maggiore o uguale a l sub beta base parentesi tonda aperta Y maiuscola con barra sopra sub n base virgola S maiuscola sub n base parentesi tonda chiusa parentesi graffa chiusa uguale a P maiuscola sub mu virgola sigma base parentesi graffa aperta parentesi tonda aperta Y maiuscola meno Y maiuscola con barra sopra sub n base parentesi tonda chiusa diviso per parentesi tonda aperta S maiuscola puntino nel mezzo parentesi tonda aperta 1 più inizio frazione 1 fratto n fine frazione parentesi tonda chiusa sup 1 diviso per 2 base parentesi tonda chiusa maggiore o uguale a meno t sub beta base parentesi quadra aperta n meno 1 parentesi quadra chiusa parentesi graffa chiusa uguale a beta virgola 2a row 1a colonna vuoto 2a colonna parentesi tonda aperta 1 parentesi tonda chiusa fine layout"
+    },
+    "Sample_61_sbrief": {
+      "expected": "layout 1a row 1a colonna P maiuscola sub mu virgola sigma base parentesi graffa aperta Y maiuscola maggiore o uguale a l sub beta base parentesi tonda aperta Y maiuscola con barra sopra sub n base virgola S maiuscola sub n base parentesi tonda chiusa parentesi graffa chiusa uguale a P maiuscola sub mu virgola sigma base parentesi graffa aperta parentesi tonda aperta Y maiuscola meno Y maiuscola con barra sopra sub n base parentesi tonda chiusa diviso per parentesi tonda aperta S maiuscola puntino nel mezzo parentesi tonda aperta 1 più frazione 1 fratto n fine frazione parentesi tonda chiusa sup 1 diviso per 2 base parentesi tonda chiusa maggiore o uguale a meno t sub beta base parentesi quadra aperta n meno 1 parentesi quadra chiusa parentesi graffa chiusa uguale a beta virgola 2a row 1a colonna vuoto 2a colonna parentesi tonda aperta 1 parentesi tonda chiusa fine layout"
+    },
+    "Sample_62_default": {
+      "expected": "L maiuscola uguale a inizio 5 per 6 matrice 1a riga 1a colonna 1 2a colonna meno 1 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 2a riga 1a colonna vuoto 2a colonna 1 3a colonna meno 1 4a colonna vuoto 5a colonna 0 6a colonna vuoto 3a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 4a riga 1a colonna vuoto 2a colonna 0 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 5a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna 1 6a colonna meno 1 fine matrice punto"
+    },
+    "Sample_62_brief": {
+      "expected": "L maiuscola uguale a inizio 5 per 6 matrice 1a riga 1a colonna 1 2a colonna meno 1 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 2a riga 1a colonna vuoto 2a colonna 1 3a colonna meno 1 4a colonna vuoto 5a colonna 0 6a colonna vuoto 3a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 4a riga 1a colonna vuoto 2a colonna 0 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 5a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna 1 6a colonna meno 1 fine matrice punto"
+    },
+    "Sample_62_sbrief": {
+      "expected": "L maiuscola uguale a 5 per 6 matrice 1a riga 1a colonna 1 2a colonna meno 1 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 2a riga 1a colonna vuoto 2a colonna 1 3a colonna meno 1 4a colonna vuoto 5a colonna 0 6a colonna vuoto 3a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 4a riga 1a colonna vuoto 2a colonna 0 3a colonna vuoto 4a colonna vuoto 5a colonna vuoto 6a colonna vuoto 5a riga 1a colonna vuoto 2a colonna vuoto 3a colonna vuoto 4a colonna vuoto 5a colonna 1 6a colonna meno 1 fine matrice punto"
+    },
+    "Sample_63_default": {
+      "expected": "inizio radice n fine radice parentesi quadra aperta Y maiuscola con barra sopra pedice n linea di base meno parentesi tonda aperta mu più z pedice beta linea di base sigma parentesi tonda chiusa parentesi quadra chiusa diviso per S maiuscola pedice n linea di base tilde inizio frazione U maiuscola più inizio radice n fine radice z pedice 1 meno beta linea di base fratto parentesi tonda aperta chi quadrato parentesi quadra aperta n meno 1 parentesi quadra chiusa diviso per parentesi tonda aperta n meno 1 parentesi tonda chiusa parentesi tonda chiusa apice 1 diviso per 2 linea di base fine frazione tilde t parentesi quadra aperta n meno 1 punto e virgola inizio radice n fine radice z pedice 1 meno beta linea di base parentesi quadra chiusa virgola"
+    },
+    "Sample_63_brief": {
+      "expected": "inizio radice n fine radice parentesi quadra aperta Y maiuscola con barra sopra sub n base meno parentesi tonda aperta mu più z sub beta base sigma parentesi tonda chiusa parentesi quadra chiusa diviso per S maiuscola sub n base tilde inizio frazione U maiuscola più inizio radice n fine radice z sub 1 meno beta base fratto parentesi tonda aperta chi quadrato parentesi quadra aperta n meno 1 parentesi quadra chiusa diviso per parentesi tonda aperta n meno 1 parentesi tonda chiusa parentesi tonda chiusa sup 1 diviso per 2 base fine frazione tilde t parentesi quadra aperta n meno 1 punto e virgola inizio radice n fine radice z sub 1 meno beta base parentesi quadra chiusa virgola"
+    },
+    "Sample_63_sbrief": {
+      "expected": "radice n fine radice parentesi quadra aperta Y maiuscola con barra sopra sub n base meno parentesi tonda aperta mu più z sub beta base sigma parentesi tonda chiusa parentesi quadra chiusa diviso per S maiuscola sub n base tilde frazione U maiuscola più radice n fine radice z sub 1 meno beta base fratto parentesi tonda aperta chi quadrato parentesi quadra aperta n meno 1 parentesi quadra chiusa diviso per parentesi tonda aperta n meno 1 parentesi tonda chiusa parentesi tonda chiusa sup 1 diviso per 2 base fine frazione tilde t parentesi quadra aperta n meno 1 punto e virgola radice n fine radice z sub 1 meno beta base parentesi quadra chiusa virgola"
+    },
+    "Sample_64_default": {
+      "expected": "inizio layout 1a row 1a colonna gamma 2a colonna uguale a P maiuscola parentesi graffa aperta E maiuscola pedice p virgola q linea di base sottoinsieme di parentesi tonda aperta X maiuscola pedice parentesi tonda aperta r parentesi tonda chiusa linea di base virgola X maiuscola pedice parentesi tonda aperta s parentesi tonda chiusa linea di base parentesi graffa chiusa 2a row 1a colonna vuoto 2a colonna uguale a inizio frazione n fattoriale fratto parentesi tonda aperta r meno 1 parentesi tonda chiusa fattoriale fine frazione sommatoria sottoscritto j uguale a 0 soprascritto s meno r meno 1 fine script parentesi tonda aperta meno 1 parentesi tonda chiusa apice j linea di base inizio frazione p apice r più j linea di base fratto parentesi tonda aperta n meno r meno j parentesi tonda chiusa fattoriale j fattoriale fine frazione I maiuscola pedice 1 meno q linea di base parentesi tonda aperta n meno s più 1 virgola s meno r meno j parentesi tonda chiusa punto fine layout"
+    },
+    "Sample_64_brief": {
+      "expected": "inizio layout 1a row 1a colonna gamma 2a colonna uguale a P maiuscola parentesi graffa aperta E maiuscola sub p virgola q base sottoinsieme di parentesi tonda aperta X maiuscola sub parentesi tonda aperta r parentesi tonda chiusa base virgola X maiuscola sub parentesi tonda aperta s parentesi tonda chiusa base parentesi graffa chiusa 2a row 1a colonna vuoto 2a colonna uguale a inizio frazione n fattoriale fratto parentesi tonda aperta r meno 1 parentesi tonda chiusa fattoriale fine frazione sommatoria sottoscritto j uguale a 0 soprascritto s meno r meno 1 fine script parentesi tonda aperta meno 1 parentesi tonda chiusa sup j base inizio frazione p sup r più j base fratto parentesi tonda aperta n meno r meno j parentesi tonda chiusa fattoriale j fattoriale fine frazione I maiuscola sub 1 meno q base parentesi tonda aperta n meno s più 1 virgola s meno r meno j parentesi tonda chiusa punto fine layout"
+    },
+    "Sample_64_sbrief": {
+      "expected": "layout 1a row 1a colonna gamma 2a colonna uguale a P maiuscola parentesi graffa aperta E maiuscola sub p virgola q base sottoinsieme di parentesi tonda aperta X maiuscola sub parentesi tonda aperta r parentesi tonda chiusa base virgola X maiuscola sub parentesi tonda aperta s parentesi tonda chiusa base parentesi graffa chiusa 2a row 1a colonna vuoto 2a colonna uguale a frazione n fattoriale fratto parentesi tonda aperta r meno 1 parentesi tonda chiusa fattoriale fine frazione sommatoria sottoscritto j uguale a 0 soprascritto s meno r meno 1 fine script parentesi tonda aperta meno 1 parentesi tonda chiusa sup j base frazione p sup r più j base fratto parentesi tonda aperta n meno r meno j parentesi tonda chiusa fattoriale j fattoriale fine frazione I maiuscola sub 1 meno q base parentesi tonda aperta n meno s più 1 virgola s meno r meno j parentesi tonda chiusa punto fine layout"
+    },
+    "Sample_65_default": {
+      "expected": "S maiuscola pedice i linea di base inizio binomiale o matrice t scelta x fine binomiale o matrice uguale a inizio 2 per 2 matrice 1a riga 1a colonna 1 diviso per m 2a colonna 0 2a riga 1a colonna a pedice i linea di base 2a colonna r pedice i linea di base fine matrice inizio binomiale o matrice t scelta x fine binomiale o matrice più inizio binomiale o matrice parentesi tonda aperta i meno 1 parentesi tonda chiusa diviso per m scelta b pedice i linea di base fine binomiale o matrice virgola"
+    },
+    "Sample_65_brief": {
+      "expected": "S maiuscola sub i base inizio binomiale o matrice t scelta x fine binomiale o matrice uguale a inizio 2 per 2 matrice 1a riga 1a colonna 1 diviso per m 2a colonna 0 2a riga 1a colonna a sub i base 2a colonna r sub i base fine matrice inizio binomiale o matrice t scelta x fine binomiale o matrice più inizio binomiale o matrice parentesi tonda aperta i meno 1 parentesi tonda chiusa diviso per m scelta b sub i base fine binomiale o matrice virgola"
+    },
+    "Sample_65_sbrief": {
+      "expected": "S maiuscola sub i base bInomiale o matrice t scelta x fine binomiale o matrice uguale a 2 per 2 matrice 1a riga 1a colonna 1 diviso per m 2a colonna 0 2a riga 1a colonna a sub i base 2a colonna r sub i base fine matrice bInomiale o matrice t scelta x fine binomiale o matrice più bInomiale o matrice parentesi tonda aperta i meno 1 parentesi tonda chiusa diviso per m scelta b sub i base fine binomiale o matrice virgola"
+    },
+    "Sample_66_default": {
+      "expected": "c 1 h apice 4 meno 2 s linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione integrale pedice meno T maiuscola apice T maiuscola linea di base parentesi tonda aperta f parentesi tonda aperta t più h parentesi tonda chiusa meno f parentesi tonda aperta t parentesi tonda chiusa parentesi tonda chiusa quadrato d normale t minore o uguale a c 2 h apice 4 meno 2 s"
+    },
+    "Sample_66_brief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione integrale sub meno T maiuscola sup T maiuscola base parentesi tonda aperta f parentesi tonda aperta t più h parentesi tonda chiusa meno f parentesi tonda aperta t parentesi tonda chiusa parentesi tonda chiusa quadrato d normale t minore o uguale a c 2 h sup 4 meno 2 s"
+    },
+    "Sample_66_sbrief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione integrale sub meno T maiuscola sup T maiuscola base parentesi tonda aperta f parentesi tonda aperta t più h parentesi tonda chiusa meno f parentesi tonda aperta t parentesi tonda chiusa parentesi tonda chiusa quadrato d normale t minore o uguale a c 2 h sup 4 meno 2 s"
+    },
+    "Sample_67_default": {
+      "expected": "C maiuscola parentesi tonda aperta 0 parentesi tonda chiusa meno C maiuscola parentesi tonda aperta h parentesi tonda chiusa asintoticamente uguale a c h apice 4 meno 2 s"
+    },
+    "Sample_67_brief": {
+      "expected": "C maiuscola parentesi tonda aperta 0 parentesi tonda chiusa meno C maiuscola parentesi tonda aperta h parentesi tonda chiusa asintoticamente uguale a c h sup 4 meno 2 s"
+    },
+    "Sample_67_sbrief": {
+      "expected": "C maiuscola parentesi tonda aperta 0 parentesi tonda chiusa meno C maiuscola parentesi tonda aperta h parentesi tonda chiusa asintoticamente uguale a c h sup 4 meno 2 s"
+    },
+    "Sample_68_default": {
+      "expected": "S maiuscola parentesi tonda aperta omega parentesi tonda chiusa uguale a limite sottoscritto T maiuscola freccia verso destra infinito fine script inizio frazione 1 fratto 2 T maiuscola fine frazione inizio valore assoluto integrale pedice meno T maiuscola apice T maiuscola linea di base virgola f virgola parentesi tonda aperta virgola t virgola parentesi tonda chiusa virgola e normale apice i t italico omega linea di base virgola d normale virgola t fine valore assoluto quadrato punto"
+    },
+    "Sample_68_brief": {
+      "expected": "S maiuscola parentesi tonda aperta omega parentesi tonda chiusa uguale a limite sottoscritto T maiuscola freccia verso destra infinito fine script inizio frazione 1 fratto 2 T maiuscola fine frazione inizio valore assoluto integrale sub meno T maiuscola sup T maiuscola base virgola f virgola parentesi tonda aperta virgola t virgola parentesi tonda chiusa virgola e normale sup i t italico omega base virgola d normale virgola t fine valore assoluto quadrato punto"
+    },
+    "Sample_68_sbrief": {
+      "expected": "S maiuscola parentesi tonda aperta omega parentesi tonda chiusa uguale a limite sottoscritto T maiuscola freccia verso destra infinito fine script frazione 1 fratto 2 T maiuscola fine frazione valore assoluto integrale sub meno T maiuscola sup T maiuscola base virgola f virgola parentesi tonda aperta virgola t virgola parentesi tonda chiusa virgola e normale sup i t italico omega base virgola d normale virgola t fine valore assoluto quadrato punto"
+    },
+    "Sample_69_default": {
+      "expected": "integrale pedice 0 apice 1 linea di base integrale pedice 0 apice 1 linea di base parentesi quadra aperta inizio valore assoluto f parentesi tonda aperta t parentesi tonda chiusa meno f parentesi tonda aperta u parentesi tonda chiusa fine valore assoluto quadrato più inizio valore assoluto t meno u fine valore assoluto quadrato parentesi quadra chiusa apice meno s diviso per 2 linea di base d normale t d normale u minore di infinito"
+    },
+    "Sample_69_brief": {
+      "expected": "integrale sub 0 sup 1 base integrale sub 0 sup 1 base parentesi quadra aperta inizio valore assoluto f parentesi tonda aperta t parentesi tonda chiusa meno f parentesi tonda aperta u parentesi tonda chiusa fine valore assoluto quadrato più inizio valore assoluto t meno u fine valore assoluto quadrato parentesi quadra chiusa sup meno s diviso per 2 base d normale t d normale u minore di infinito"
+    },
+    "Sample_69_sbrief": {
+      "expected": "integrale sub 0 sup 1 base integrale sub 0 sup 1 base parentesi quadra aperta valore assoluto f parentesi tonda aperta t parentesi tonda chiusa meno f parentesi tonda aperta u parentesi tonda chiusa fine valore assoluto quadrato più valore assoluto t meno u fine valore assoluto quadrato parentesi quadra chiusa sup meno s diviso per 2 base d normale t d normale u minore di infinito"
+    },
+    "Sample_70_default": {
+      "expected": "E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola pedice k più 1 linea di base fine script inizio valore assoluto I maiuscola fine valore assoluto apice s linea di base parentesi tonda chiusa uguale a E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola pedice k linea di base fine script inizio valore assoluto I maiuscola fine valore assoluto apice s linea di base parentesi tonda chiusa E maiuscola senza grazie parentesi tonda aperta R maiuscola 1 apice s linea di base più R maiuscola 2 apice s linea di base parentesi tonda chiusa punto"
+    },
+    "Sample_70_brief": {
+      "expected": "E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola sub k più 1 base fine script inizio valore assoluto I maiuscola fine valore assoluto sup s base parentesi tonda chiusa uguale a E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola sub k base fine script inizio valore assoluto I maiuscola fine valore assoluto sup s base parentesi tonda chiusa E maiuscola senza grazie parentesi tonda aperta R maiuscola 1 sup s base più R maiuscola 2 sup s base parentesi tonda chiusa punto"
+    },
+    "Sample_70_sbrief": {
+      "expected": "E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola sub k più 1 base fine script valore assoluto I maiuscola fine valore assoluto sup s base parentesi tonda chiusa uguale a E maiuscola senza grazie parentesi tonda aperta sommatoria sottoscritto I maiuscola appartenente a E maiuscola sub k base fine script valore assoluto I maiuscola fine valore assoluto sup s base parentesi tonda chiusa E maiuscola senza grazie parentesi tonda aperta R maiuscola 1 sup s base più R maiuscola 2 sup s base parentesi tonda chiusa punto"
+    },
+    "Sample_71_default": {
+      "expected": "parentesi tonda aperta x 1 virgola y 1 parentesi tonda chiusa"
+    },
+    "Sample_71_brief": {
+      "expected": "parentesi tonda aperta x 1 virgola y 1 parentesi tonda chiusa"
+    },
+    "Sample_71_sbrief": {
+      "expected": "parentesi tonda aperta x 1 virgola y 1 parentesi tonda chiusa"
+    },
+    "Sample_72_default": {
+      "expected": "parentesi tonda aperta x 2 virgola y 2 parentesi tonda chiusa"
+    },
+    "Sample_72_brief": {
+      "expected": "parentesi tonda aperta x 2 virgola y 2 parentesi tonda chiusa"
+    },
+    "Sample_72_sbrief": {
+      "expected": "parentesi tonda aperta x 2 virgola y 2 parentesi tonda chiusa"
+    },
+    "Sample_73_default": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_73_brief": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_73_sbrief": {
+      "expected": "d uguale a radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_74_default": {
+      "expected": "R maiuscola grassetto da lavagna"
+    },
+    "Sample_74_brief": {
+      "expected": "R maiuscola grassetto da lavagna"
+    },
+    "Sample_74_sbrief": {
+      "expected": "R maiuscola grassetto da lavagna"
+    },
+    "Sample_75_default": {
+      "expected": "R maiuscola grassetto da lavagna uguale a parentesi tonda aperta meno infinito virgola infinito parentesi tonda chiusa"
+    },
+    "Sample_75_brief": {
+      "expected": "R maiuscola grassetto da lavagna uguale a parentesi tonda aperta meno infinito virgola infinito parentesi tonda chiusa"
+    },
+    "Sample_75_sbrief": {
+      "expected": "R maiuscola grassetto da lavagna uguale a parentesi tonda aperta meno infinito virgola infinito parentesi tonda chiusa"
+    },
+    "Sample_76_default": {
+      "expected": "inizio insieme 1 virgola 2 virgola 3 fine insieme"
+    },
+    "Sample_76_brief": {
+      "expected": "inizio insieme 1 virgola 2 virgola 3 fine insieme"
+    },
+    "Sample_76_sbrief": {
+      "expected": "insieme 1 virgola 2 virgola 3 fine insieme"
+    },
+    "Sample_77_default": {
+      "expected": "1 appartenente a S maiuscola"
+    },
+    "Sample_77_brief": {
+      "expected": "1 appartenente a S maiuscola"
+    },
+    "Sample_77_sbrief": {
+      "expected": "1 appartenente a S maiuscola"
+    },
+    "Sample_78_default": {
+      "expected": "3 appartenente a S maiuscola"
+    },
+    "Sample_78_brief": {
+      "expected": "3 appartenente a S maiuscola"
+    },
+    "Sample_78_sbrief": {
+      "expected": "3 appartenente a S maiuscola"
+    },
+    "Sample_79_default": {
+      "expected": "4 non appartenente a S maiuscola"
+    },
+    "Sample_79_brief": {
+      "expected": "4 non appartenente a S maiuscola"
+    },
+    "Sample_79_sbrief": {
+      "expected": "4 non appartenente a S maiuscola"
+    },
+    "Sample_80_default": {
+      "expected": "a uguale a inizio radice 3 x meno 1 fine radice più parentesi tonda aperta 1 più x parentesi tonda chiusa quadrato"
+    },
+    "Sample_80_brief": {
+      "expected": "a uguale a inizio radice 3 x meno 1 fine radice più parentesi tonda aperta 1 più x parentesi tonda chiusa quadrato"
+    },
+    "Sample_80_sbrief": {
+      "expected": "a uguale a radice 3 x meno 1 fine radice più parentesi tonda aperta 1 più x parentesi tonda chiusa quadrato"
+    },
+    "Sample_81_default": {
+      "expected": "a uguale a inizio frazione parentesi tonda aperta b più c parentesi tonda chiusa quadrato fratto d fine frazione più inizio frazione parentesi tonda aperta e più f parentesi tonda chiusa quadrato fratto g fine frazione"
+    },
+    "Sample_81_brief": {
+      "expected": "a uguale a inizio frazione parentesi tonda aperta b più c parentesi tonda chiusa quadrato fratto d fine frazione più inizio frazione parentesi tonda aperta e più f parentesi tonda chiusa quadrato fratto g fine frazione"
+    },
+    "Sample_81_sbrief": {
+      "expected": "a uguale a frazione parentesi tonda aperta b più c parentesi tonda chiusa quadrato fratto d fine frazione più frazione parentesi tonda aperta e più f parentesi tonda chiusa quadrato fratto g fine frazione"
+    },
+    "Sample_82_default": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi tonda aperta c meno b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta d più e parentesi tonda chiusa quadrato parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_82_brief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi tonda aperta c meno b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta d più e parentesi tonda chiusa quadrato parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_82_sbrief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi tonda aperta c meno b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta d più e parentesi tonda chiusa quadrato parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_83_default": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_83_brief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_83_sbrief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa più parentesi quadra aperta parentesi tonda aperta f meno e parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_84_default": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_84_brief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_84_sbrief": {
+      "expected": "x uguale a parentesi quadra aperta parentesi tonda aperta a più b parentesi tonda chiusa quadrato parentesi quadra chiusa"
+    },
+    "Sample_85_default": {
+      "expected": "x uguale a parentesi tonda aperta a più b parentesi tonda chiusa quadrato"
+    },
+    "Sample_85_brief": {
+      "expected": "x uguale a parentesi tonda aperta a più b parentesi tonda chiusa quadrato"
+    },
+    "Sample_85_sbrief": {
+      "expected": "x uguale a parentesi tonda aperta a più b parentesi tonda chiusa quadrato"
+    },
+    "Sample_86_default": {
+      "expected": "x uguale a a più b quadrato"
+    },
+    "Sample_86_brief": {
+      "expected": "x uguale a a più b quadrato"
+    },
+    "Sample_86_sbrief": {
+      "expected": "x uguale a a più b quadrato"
+    },
+    "Sample_87_default": {
+      "expected": "inizio frazione un mezzo fratto tre quarti fine frazione uguale a due terzi"
+    },
+    "Sample_87_brief": {
+      "expected": "inizio frazione un mezzo fratto tre quarti fine frazione uguale a due terzi"
+    },
+    "Sample_87_sbrief": {
+      "expected": "frazione un mezzo fratto tre quarti fine frazione uguale a due terzi"
+    },
+    "Sample_88_default": {
+      "expected": "2 parentesi tonda aperta parentesi tonda aperta x più 1 parentesi tonda chiusa parentesi tonda aperta x più 3 parentesi tonda chiusa meno 4 parentesi tonda aperta parentesi tonda aperta x meno 1 parentesi tonda chiusa parentesi tonda aperta x più 2 parentesi tonda chiusa meno 3 parentesi tonda chiusa parentesi tonda chiusa uguale a y"
+    },
+    "Sample_88_brief": {
+      "expected": "2 parentesi tonda aperta parentesi tonda aperta x più 1 parentesi tonda chiusa parentesi tonda aperta x più 3 parentesi tonda chiusa meno 4 parentesi tonda aperta parentesi tonda aperta x meno 1 parentesi tonda chiusa parentesi tonda aperta x più 2 parentesi tonda chiusa meno 3 parentesi tonda chiusa parentesi tonda chiusa uguale a y"
+    },
+    "Sample_88_sbrief": {
+      "expected": "2 parentesi tonda aperta parentesi tonda aperta x più 1 parentesi tonda chiusa parentesi tonda aperta x più 3 parentesi tonda chiusa meno 4 parentesi tonda aperta parentesi tonda aperta x meno 1 parentesi tonda chiusa parentesi tonda aperta x più 2 parentesi tonda chiusa meno 3 parentesi tonda chiusa parentesi tonda chiusa uguale a y"
+    },
+    "Sample_89_default": {
+      "expected": "coseno x uguale a 1 meno inizio frazione x quadrato fratto 2 fattoriale fine frazione più inizio frazione x apice 4 linea di base fratto 4 fattoriale fine frazione meno punti di sospensione"
+    },
+    "Sample_89_brief": {
+      "expected": "coseno x uguale a 1 meno inizio frazione x quadrato fratto 2 fattoriale fine frazione più inizio frazione x sup 4 base fratto 4 fattoriale fine frazione meno punti di sospensione"
+    },
+    "Sample_89_sbrief": {
+      "expected": "coseno x uguale a 1 meno frazione x quadrato fratto 2 fattoriale fine frazione più frazione x sup 4 base fratto 4 fattoriale fine frazione meno punti di sospensione"
+    },
+    "Sample_90_default": {
+      "expected": "x uguale a inizio frazione meno b più o meno inizio radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_90_brief": {
+      "expected": "x uguale a inizio frazione meno b più o meno inizio radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_90_sbrief": {
+      "expected": "x uguale a frazione meno b più o meno radice b quadrato meno 4 a c fine radice fratto 2 a fine frazione"
+    },
+    "Sample_91_default": {
+      "expected": "x più y apice inizio frazione 2 fratto k più 1 fine frazione"
+    },
+    "Sample_91_brief": {
+      "expected": "x più y sup inizio frazione 2 fratto k più 1 fine frazione"
+    },
+    "Sample_91_sbrief": {
+      "expected": "x più y sup frazione 2 fratto k più 1 fine frazione"
+    },
+    "Sample_92_default": {
+      "expected": "limite sottoscritto x freccia verso destra 0 fine script inizio frazione seno x fratto x fine frazione uguale a 1"
+    },
+    "Sample_92_brief": {
+      "expected": "limite sottoscritto x freccia verso destra 0 fine script inizio frazione seno x fratto x fine frazione uguale a 1"
+    },
+    "Sample_92_sbrief": {
+      "expected": "limite sottoscritto x freccia verso destra 0 fine script frazione seno x fratto x fine frazione uguale a 1"
+    },
+    "Sample_93_default": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_93_brief": {
+      "expected": "d uguale a inizio radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_93_sbrief": {
+      "expected": "d uguale a radice parentesi tonda aperta x 2 meno x 1 parentesi tonda chiusa quadrato più parentesi tonda aperta y 2 meno y 1 parentesi tonda chiusa quadrato fine radice"
+    },
+    "Sample_94_default": {
+      "expected": "F maiuscola pedice n linea di base uguale a F maiuscola pedice n meno 1 linea di base più F maiuscola pedice n meno 2"
+    },
+    "Sample_94_brief": {
+      "expected": "F maiuscola sub n base uguale a F maiuscola sub n meno 1 base più F maiuscola sub n meno 2"
+    },
+    "Sample_94_sbrief": {
+      "expected": "F maiuscola sub n base uguale a F maiuscola sub n meno 1 base più F maiuscola sub n meno 2"
+    },
+    "Sample_95_default": {
+      "expected": "Pi greca maiuscola grassetto uguale a inizio 6 per 6 matrice 1a riga 1a colonna pi greco 11 2a colonna pi greco 12 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 2a riga 1a colonna pi greco 12 2a colonna pi greco 11 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 3a riga 1a colonna pi greco 12 2a colonna pi greco 12 3a colonna pi greco 11 4a colonna 0 5a colonna 0 6a colonna 0 4a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna pi greco 44 5a colonna 0 6a colonna 0 5a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna pi greco 44 6a colonna 0 6a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna 0 6a colonna pi greco 44 fine matrice"
+    },
+    "Sample_95_brief": {
+      "expected": "Pi greca maiuscola grassetto uguale a inizio 6 per 6 matrice 1a riga 1a colonna pi greco 11 2a colonna pi greco 12 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 2a riga 1a colonna pi greco 12 2a colonna pi greco 11 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 3a riga 1a colonna pi greco 12 2a colonna pi greco 12 3a colonna pi greco 11 4a colonna 0 5a colonna 0 6a colonna 0 4a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna pi greco 44 5a colonna 0 6a colonna 0 5a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna pi greco 44 6a colonna 0 6a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna 0 6a colonna pi greco 44 fine matrice"
+    },
+    "Sample_95_sbrief": {
+      "expected": "Pi greca maiuscola grassetto uguale a 6 per 6 matrice 1a riga 1a colonna pi greco 11 2a colonna pi greco 12 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 2a riga 1a colonna pi greco 12 2a colonna pi greco 11 3a colonna pi greco 12 4a colonna 0 5a colonna 0 6a colonna 0 3a riga 1a colonna pi greco 12 2a colonna pi greco 12 3a colonna pi greco 11 4a colonna 0 5a colonna 0 6a colonna 0 4a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna pi greco 44 5a colonna 0 6a colonna 0 5a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna pi greco 44 6a colonna 0 6a riga 1a colonna 0 2a colonna 0 3a colonna 0 4a colonna 0 5a colonna 0 6a colonna pi greco 44 fine matrice"
+    },
+    "Sample_96_default": {
+      "expected": "s 11 uguale a inizio frazione c 11 più c 12 fratto parentesi tonda aperta c 11 meno c 12 parentesi tonda chiusa parentesi tonda aperta c 11 più 2 c 12 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_96_brief": {
+      "expected": "s 11 uguale a inizio frazione c 11 più c 12 fratto parentesi tonda aperta c 11 meno c 12 parentesi tonda chiusa parentesi tonda aperta c 11 più 2 c 12 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_96_sbrief": {
+      "expected": "s 11 uguale a frazione c 11 più c 12 fratto parentesi tonda aperta c 11 meno c 12 parentesi tonda chiusa parentesi tonda aperta c 11 più 2 c 12 parentesi tonda chiusa fine frazione"
+    },
+    "Sample_97_default": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "Sample_97_brief": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "Sample_97_sbrief": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "Sample_98_default": {
+      "expected": "inizio frazione d fratto d x fine frazione parentesi tonda aperta E maiuscola parentesi tonda aperta x parentesi tonda chiusa A maiuscola parentesi tonda aperta x parentesi tonda chiusa inizio frazione d w parentesi tonda aperta x parentesi tonda chiusa fratto d x fine frazione parentesi tonda chiusa più p parentesi tonda aperta x parentesi tonda chiusa uguale a 0"
+    },
+    "Sample_98_brief": {
+      "expected": "inizio frazione d fratto d x fine frazione parentesi tonda aperta E maiuscola parentesi tonda aperta x parentesi tonda chiusa A maiuscola parentesi tonda aperta x parentesi tonda chiusa inizio frazione d w parentesi tonda aperta x parentesi tonda chiusa fratto d x fine frazione parentesi tonda chiusa più p parentesi tonda aperta x parentesi tonda chiusa uguale a 0"
+    },
+    "Sample_98_sbrief": {
+      "expected": "frazione d fratto d x fine frazione parentesi tonda aperta E maiuscola parentesi tonda aperta x parentesi tonda chiusa A maiuscola parentesi tonda aperta x parentesi tonda chiusa frazione d w parentesi tonda aperta x parentesi tonda chiusa fratto d x fine frazione parentesi tonda chiusa più p parentesi tonda aperta x parentesi tonda chiusa uguale a 0"
+    },
+    "Sample_99_default": {
+      "expected": "TCS pedice gas linea di base uguale a meno un mezzo parentesi tonda aperta inizio frazione P maiuscola pedice seal linea di base fratto P maiuscola pedice massimo linea di base fine frazione parentesi tonda chiusa parentesi tonda aperta inizio frazione 1 fratto T maiuscola pedice seal linea di base fine frazione parentesi tonda chiusa"
+    },
+    "Sample_99_brief": {
+      "expected": "TCS sub gas base uguale a meno un mezzo parentesi tonda aperta inizio frazione P maiuscola sub seal base fratto P maiuscola sub massimo base fine frazione parentesi tonda chiusa parentesi tonda aperta inizio frazione 1 fratto T maiuscola sub seal base fine frazione parentesi tonda chiusa"
+    },
+    "Sample_99_sbrief": {
+      "expected": "TCS sub gas base uguale a meno un mezzo parentesi tonda aperta frazione P maiuscola sub seal base fratto P maiuscola sub massimo base fine frazione parentesi tonda chiusa parentesi tonda aperta frazione 1 fratto T maiuscola sub seal base fine frazione parentesi tonda chiusa"
+    },
+    "Sample_100_default": {
+      "expected": "B maiuscola pedice p linea di base uguale a inizio inizio frazione inizio frazione 7 meno v quadrato fratto 3 fine frazione parentesi tonda aperta 1 più inizio frazione c quadrato fratto a quadrato fine frazione più inizio frazione c apice 4 linea di base fratto a apice 4 linea di base fine frazione parentesi tonda chiusa più inizio frazione parentesi tonda aperta 3 meno v parentesi tonda chiusa quadrato c quadrato fratto parentesi tonda aperta 1 più v parentesi tonda chiusa a quadrato fine frazione fratto fratto parentesi tonda aperta 1 meno v parentesi tonda chiusa parentesi tonda aperta 1 meno inizio frazione c apice 4 linea di base fratto a apice 4 linea di base fine frazione parentesi tonda chiusa parentesi tonda aperta 1 meno inizio frazione c quadrato fratto a quadrato fine frazione parentesi tonda chiusa fine fine frazione"
+    },
+    "Sample_100_brief": {
+      "expected": "B maiuscola sub p base uguale a inizio inizio frazione inizio frazione 7 meno v quadrato fratto 3 fine frazione parentesi tonda aperta 1 più inizio frazione c quadrato fratto a quadrato fine frazione più inizio frazione c sup 4 base fratto a sup 4 base fine frazione parentesi tonda chiusa più inizio frazione parentesi tonda aperta 3 meno v parentesi tonda chiusa quadrato c quadrato fratto parentesi tonda aperta 1 più v parentesi tonda chiusa a quadrato fine frazione fratto fratto parentesi tonda aperta 1 meno v parentesi tonda chiusa parentesi tonda aperta 1 meno inizio frazione c sup 4 base fratto a sup 4 base fine frazione parentesi tonda chiusa parentesi tonda aperta 1 meno inizio frazione c quadrato fratto a quadrato fine frazione parentesi tonda chiusa fine fine frazione"
+    },
+    "Sample_100_sbrief": {
+      "expected": "B maiuscola sub p base uguale a frazioneuna voltaannidamento frazione 7 meno v quadrato fratto 3 fine frazione parentesi tonda aperta 1 più frazione c quadrato fratto a quadrato fine frazione più frazione c sup 4 base fratto a sup 4 base fine frazione parentesi tonda chiusa più frazione parentesi tonda aperta 3 meno v parentesi tonda chiusa quadrato c quadrato fratto parentesi tonda aperta 1 più v parentesi tonda chiusa a quadrato fine frazione frattouna voltaannidamento parentesi tonda aperta 1 meno v parentesi tonda chiusa parentesi tonda aperta 1 meno frazione c sup 4 base fratto a sup 4 base fine frazione parentesi tonda chiusa parentesi tonda aperta 1 meno frazione c quadrato fratto a quadrato fine frazione parentesi tonda chiusa fine frazioneuna voltaannidamento"
+    },
+    "Sample_101_default": {
+      "expected": "Q maiuscola pedice tank apice series linea di base uguale a inizio frazione 1 fratto R maiuscola pedice s linea di base fine frazione inizio radice inizio frazione L maiuscola pedice s linea di base fratto C maiuscola pedice s linea di base fine frazione fine radice"
+    },
+    "Sample_101_brief": {
+      "expected": "Q maiuscola sub tank sup series base uguale a inizio frazione 1 fratto R maiuscola sub s base fine frazione inizio radice inizio frazione L maiuscola sub s base fratto C maiuscola sub s base fine frazione fine radice"
+    },
+    "Sample_101_sbrief": {
+      "expected": "Q maiuscola sub tank sup series base uguale a frazione 1 fratto R maiuscola sub s base fine frazione radice frazione L maiuscola sub s base fratto C maiuscola sub s base fine frazione fine radice"
+    },
+    "Sample_102_default": {
+      "expected": "Delta maiuscola phi pedice peak linea di base uguale a tangente apice meno 1 linea di base parentesi tonda aperta k quadrato Q maiuscola pedice tank apice series linea di base parentesi tonda chiusa"
+    },
+    "Sample_102_brief": {
+      "expected": "Delta maiuscola phi sub peak base uguale a tangente sup meno 1 base parentesi tonda aperta k quadrato Q maiuscola sub tank sup series base parentesi tonda chiusa"
+    },
+    "Sample_102_sbrief": {
+      "expected": "Delta maiuscola phi sub peak base uguale a tangente sup meno 1 base parentesi tonda aperta k quadrato Q maiuscola sub tank sup series base parentesi tonda chiusa"
+    },
+    "Sample_103_default": {
+      "expected": "f uguale a 1.013 inizio frazione W maiuscola fratto L maiuscola quadrato fine frazione inizio radice inizio frazione E maiuscola fratto rho fine frazione fine radice inizio radice parentesi tonda aperta 1 più 0.293 inizio frazione L maiuscola quadrato fratto EW quadrato fine frazione sigma parentesi tonda chiusa fine radice"
+    },
+    "Sample_103_brief": {
+      "expected": "f uguale a 1.013 inizio frazione W maiuscola fratto L maiuscola quadrato fine frazione inizio radice inizio frazione E maiuscola fratto rho fine frazione fine radice inizio radice parentesi tonda aperta 1 più 0.293 inizio frazione L maiuscola quadrato fratto EW quadrato fine frazione sigma parentesi tonda chiusa fine radice"
+    },
+    "Sample_103_sbrief": {
+      "expected": "f uguale a 1.013 frazione W maiuscola fratto L maiuscola quadrato fine frazione radice frazione E maiuscola fratto rho fine frazione fine radice radice parentesi tonda aperta 1 più 0.293 frazione L maiuscola quadrato fratto EW quadrato fine frazione sigma parentesi tonda chiusa fine radice"
+    },
+    "Sample_104_default": {
+      "expected": "u pedice n linea di base parentesi tonda aperta x parentesi tonda chiusa uguale a gamma pedice n linea di base parentesi tonda aperta coseno iperbolico k pedice n linea di base x meno coseno k pedice n linea di base x parentesi tonda chiusa più parentesi tonda aperta seno iperbolico k pedice n linea di base x meno seno k pedice n linea di base x parentesi tonda chiusa"
+    },
+    "Sample_104_brief": {
+      "expected": "u sub n base parentesi tonda aperta x parentesi tonda chiusa uguale a gamma sub n base parentesi tonda aperta coseno iperbolico k sub n base x meno coseno k sub n base x parentesi tonda chiusa più parentesi tonda aperta seno iperbolico k sub n base x meno seno k sub n base x parentesi tonda chiusa"
+    },
+    "Sample_104_sbrief": {
+      "expected": "u sub n base parentesi tonda aperta x parentesi tonda chiusa uguale a gamma sub n base parentesi tonda aperta coseno iperbolico k sub n base x meno coseno k sub n base x parentesi tonda chiusa più parentesi tonda aperta seno iperbolico k sub n base x meno seno k sub n base x parentesi tonda chiusa"
+    },
+    "Sample_105_default": {
+      "expected": "inizio layout 1a row 1a colonna B maiuscola 2a colonna uguale a inizio inizio frazione inizio frazione F maiuscola 0 fratto m fine frazione fratto fratto inizio radice parentesi tonda aperta omega 0 quadrato meno omega quadrato parentesi tonda chiusa quadrato più 4 n quadrato omega quadrato fine radice fine fine frazione 2a row 1a colonna vuoto 2a colonna uguale a inizio inizio frazione inizio frazione F maiuscola 0 fratto k fine frazione fratto fratto inizio radice parentesi tonda aperta 1 meno parentesi tonda aperta omega diviso per omega 0 quadrato parentesi tonda chiusa quadrato parentesi tonda chiusa quadrato più 4 parentesi tonda aperta n diviso per omega 0 parentesi tonda chiusa quadrato parentesi tonda aperta omega diviso per omega 0 parentesi tonda chiusa quadrato fine radice fine fine frazione fine layout"
+    },
+    "Sample_105_brief": {
+      "expected": "inizio layout 1a row 1a colonna B maiuscola 2a colonna uguale a inizio inizio frazione inizio frazione F maiuscola 0 fratto m fine frazione fratto fratto inizio radice parentesi tonda aperta omega 0 quadrato meno omega quadrato parentesi tonda chiusa quadrato più 4 n quadrato omega quadrato fine radice fine fine frazione 2a row 1a colonna vuoto 2a colonna uguale a inizio inizio frazione inizio frazione F maiuscola 0 fratto k fine frazione fratto fratto inizio radice parentesi tonda aperta 1 meno parentesi tonda aperta omega diviso per omega 0 quadrato parentesi tonda chiusa quadrato parentesi tonda chiusa quadrato più 4 parentesi tonda aperta n diviso per omega 0 parentesi tonda chiusa quadrato parentesi tonda aperta omega diviso per omega 0 parentesi tonda chiusa quadrato fine radice fine fine frazione fine layout"
+    },
+    "Sample_105_sbrief": {
+      "expected": "layout 1a row 1a colonna B maiuscola 2a colonna uguale a frazioneuna voltaannidamento frazione F maiuscola 0 fratto m fine frazione frattouna voltaannidamento radice parentesi tonda aperta omega 0 quadrato meno omega quadrato parentesi tonda chiusa quadrato più 4 n quadrato omega quadrato fine radice fine frazioneuna voltaannidamento 2a row 1a colonna vuoto 2a colonna uguale a frazioneuna voltaannidamento frazione F maiuscola 0 fratto k fine frazione frattouna voltaannidamento radice parentesi tonda aperta 1 meno parentesi tonda aperta omega diviso per omega 0 quadrato parentesi tonda chiusa quadrato parentesi tonda chiusa quadrato più 4 parentesi tonda aperta n diviso per omega 0 parentesi tonda chiusa quadrato parentesi tonda aperta omega diviso per omega 0 parentesi tonda chiusa quadrato fine radice fine frazioneuna voltaannidamento fine layout"
+    },
+    "Sample_106_default": {
+      "expected": "p normale parentesi tonda aperta A maiuscola a n d B maiuscola parentesi tonda chiusa uguale a p normale parentesi tonda aperta A maiuscola parentesi tonda chiusa p normale parentesi tonda aperta B maiuscola barra verticale A maiuscola parentesi tonda chiusa"
+    },
+    "Sample_106_brief": {
+      "expected": "p normale parentesi tonda aperta A maiuscola a n d B maiuscola parentesi tonda chiusa uguale a p normale parentesi tonda aperta A maiuscola parentesi tonda chiusa p normale parentesi tonda aperta B maiuscola barra verticale A maiuscola parentesi tonda chiusa"
+    },
+    "Sample_106_sbrief": {
+      "expected": "p normale parentesi tonda aperta A maiuscola a n d B maiuscola parentesi tonda chiusa uguale a p normale parentesi tonda aperta A maiuscola parentesi tonda chiusa p normale parentesi tonda aperta B maiuscola barra verticale A maiuscola parentesi tonda chiusa"
+    },
+    "Sample_107_default": {
+      "expected": "P maiuscola M maiuscola F maiuscola parentesi tonda aperta x parentesi tonda chiusa proporzionale a parentesi tonda aperta inizio frazione 1 fratto x fine frazione parentesi tonda chiusa apice alfa"
+    },
+    "Sample_107_brief": {
+      "expected": "P maiuscola M maiuscola F maiuscola parentesi tonda aperta x parentesi tonda chiusa proporzionale a parentesi tonda aperta inizio frazione 1 fratto x fine frazione parentesi tonda chiusa sup alfa"
+    },
+    "Sample_107_sbrief": {
+      "expected": "P maiuscola M maiuscola F maiuscola parentesi tonda aperta x parentesi tonda chiusa proporzionale a parentesi tonda aperta frazione 1 fratto x fine frazione parentesi tonda chiusa sup alfa"
+    },
+    "Sample_108_default": {
+      "expected": "f parentesi tonda aperta x parentesi tonda chiusa uguale a inizio frazione 1 fratto inizio radice 2 pi greco fine radice fine frazione esponenziale parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "Sample_108_brief": {
+      "expected": "f parentesi tonda aperta x parentesi tonda chiusa uguale a inizio frazione 1 fratto inizio radice 2 pi greco fine radice fine frazione esponenziale parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "Sample_108_sbrief": {
+      "expected": "f parentesi tonda aperta x parentesi tonda chiusa uguale a frazione 1 fratto radice 2 pi greco fine radice fine frazione esponenziale parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "Sample_109_default": {
+      "expected": "inizio frazione d x fratto d theta fine frazione uguale a inizio frazione beta fratto coseno quadrato theta fine frazione"
+    },
+    "Sample_109_brief": {
+      "expected": "inizio frazione d x fratto d theta fine frazione uguale a inizio frazione beta fratto coseno quadrato theta fine frazione"
+    },
+    "Sample_109_sbrief": {
+      "expected": "frazione d x fratto d theta fine frazione uguale a frazione beta fratto coseno quadrato theta fine frazione"
+    },
+    "Sample_110_default": {
+      "expected": "s diviso per inizio radice 2 parentesi tonda aperta n meno 1 parentesi tonda chiusa fine radice"
+    },
+    "Sample_110_brief": {
+      "expected": "s diviso per inizio radice 2 parentesi tonda aperta n meno 1 parentesi tonda chiusa fine radice"
+    },
+    "Sample_110_sbrief": {
+      "expected": "s diviso per radice 2 parentesi tonda aperta n meno 1 parentesi tonda chiusa fine radice"
+    }
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "name": "NemethDefaultUnit",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "literary",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "grammar": {},
+  "factory": "symbol",
+  "base": "input/common/units.json",
+  "information": "Nemeth Default Unit tests.",
+  "exclude": [
+    "₡",
+    "₢",
+    "₣",
+    "₤",
+    "₥",
+    "₦",
+    "₧",
+    "₨",
+    "₹",
+    "₩",
+    "₪",
+    "₫",
+    "₭",
+    "₮",
+    "₯",
+    "₰",
+    "₱",
+    "₲",
+    "₳",
+    "₴",
+    "₵",
+    "元",
+    "元"
+  ],
+  "tests": {
+    "sq": {
+      "expected": "⠎⠟"
+    },
+    "sq.": {
+      "expected": "⠎⠟⠲"
+    },
+    "sq in": {
+      "expected": "⠎⠟⠀⠊⠝"
+    },
+    "sq. in.": {
+      "expected": "⠎⠟⠲⠀⠊⠝⠲"
+    },
+    "sq inch": {
+      "expected": "⠎⠟⠀⠊⠝⠉⠓"
+    },
+    "sq. inch": {
+      "expected": "⠎⠟⠲⠀⠊⠝⠉⠓"
+    },
+    "sq rd": {
+      "expected": "⠎⠟⠀⠗⠙"
+    },
+    "sq. rd.": {
+      "expected": "⠎⠟⠲⠀⠗⠙⠲"
+    },
+    "sq ft": {
+      "expected": "⠎⠟⠀⠋⠞"
+    },
+    "sq. ft.": {
+      "expected": "⠎⠟⠲⠀⠋⠞⠲"
+    },
+    "sq yd": {
+      "expected": "⠎⠟⠀⠽⠙"
+    },
+    "sq. yd.": {
+      "expected": "⠎⠟⠲⠀⠽⠙⠲"
+    },
+    "sq mi": {
+      "expected": "⠎⠟⠀⠍⠊"
+    },
+    "sq. mi.": {
+      "expected": "⠎⠟⠲⠀⠍⠊⠲"
+    },
+    "ac": {
+      "expected": "⠁⠉"
+    },
+    "ac.": {
+      "expected": "⠁⠉⠲"
+    },
+    "acr": {
+      "expected": "⠁⠉⠗"
+    },
+    "acr.": {
+      "expected": "⠁⠉⠗⠲"
+    },
+    "ha": {
+      "expected": "⠓⠁"
+    },
+    "$": {
+      "expected": "⠈⠎"
+    },
+    "💲": {
+      "expected": "⠈⠎"
+    },
+    "＄": {
+      "expected": "⠈⠎"
+    },
+    "﹩": {
+      "expected": "⠈⠎"
+    },
+    "USD": {
+      "expected": "⠠⠥⠠⠎⠠⠙"
+    },
+    "£": {
+      "expected": "⠈⠇"
+    },
+    "￡": {
+      "expected": "⠈⠇"
+    },
+    "GBP": {
+      "expected": "⠠⠛⠠⠃⠠⠏"
+    },
+    "¥": {
+      "expected": "⠈⠽"
+    },
+    "￥": {
+      "expected": "⠈⠽"
+    },
+    "JPY": {
+      "expected": "⠠⠚⠠⠏⠠⠽"
+    },
+    "€": {
+      "expected": "⠈⠑"
+    },
+    "EUR": {
+      "expected": "⠠⠑⠠⠥⠠⠗"
+    },
+    "₡": {
+      "expected": ""
+    },
+    "CRC": {
+      "expected": "⠠⠉⠠⠗⠠⠉"
+    },
+    "₢": {
+      "expected": ""
+    },
+    "₣": {
+      "expected": ""
+    },
+    "₤": {
+      "expected": ""
+    },
+    "₥": {
+      "expected": ""
+    },
+    "₦": {
+      "expected": ""
+    },
+    "NGN": {
+      "expected": "⠠⠝⠠⠛⠠⠝"
+    },
+    "₧": {
+      "expected": ""
+    },
+    "₨": {
+      "expected": ""
+    },
+    "₹": {
+      "expected": ""
+    },
+    "INR": {
+      "expected": "⠠⠊⠠⠝⠠⠗"
+    },
+    "NPR": {
+      "expected": "⠠⠝⠠⠏⠠⠗"
+    },
+    "PKR": {
+      "expected": "⠠⠏⠠⠅⠠⠗"
+    },
+    "LKR": {
+      "expected": "⠠⠇⠠⠅⠠⠗"
+    },
+    "₩": {
+      "expected": ""
+    },
+    "￦": {
+      "expected": ""
+    },
+    "KRW": {
+      "expected": "⠠⠅⠠⠗⠠⠺"
+    },
+    "₪": {
+      "expected": ""
+    },
+    "₫": {
+      "expected": ""
+    },
+    "₭": {
+      "expected": ""
+    },
+    "₮": {
+      "expected": ""
+    },
+    "₯": {
+      "expected": ""
+    },
+    "₰": {
+      "expected": ""
+    },
+    "₱": {
+      "expected": ""
+    },
+    "₲": {
+      "expected": ""
+    },
+    "₳": {
+      "expected": ""
+    },
+    "₴": {
+      "expected": ""
+    },
+    "UAH": {
+      "expected": "⠠⠥⠠⠁⠠⠓"
+    },
+    "₵": {
+      "expected": ""
+    },
+    "GHS": {
+      "expected": "⠠⠛⠠⠓⠠⠎"
+    },
+    "元": {
+      "expected": ""
+    },
+    "￠": {
+      "expected": "⠈⠉"
+    },
+    "¢": {
+      "expected": "⠈⠉"
+    },
+    "kwh": {
+      "expected": "⠅⠺⠓"
+    },
+    "kWh": {
+      "expected": "⠅⠠⠺⠓"
+    },
+    "Ohm": {
+      "expected": "⠠⠕⠓⠍"
+    },
+    "ohm": {
+      "expected": "⠕⠓⠍"
+    },
+    "ft": {
+      "expected": "⠋⠞"
+    },
+    "ft.": {
+      "expected": "⠋⠞⠲"
+    },
+    "in": {
+      "expected": "⠊⠝"
+    },
+    "in.": {
+      "expected": "⠊⠝⠲"
+    },
+    "mi": {
+      "expected": "⠍⠊"
+    },
+    "mi.": {
+      "expected": "⠍⠊⠲"
+    },
+    "yd": {
+      "expected": "⠽⠙"
+    },
+    "yd.": {
+      "expected": "⠽⠙⠲"
+    },
+    "li": {
+      "expected": "⠇⠊"
+    },
+    "li.": {
+      "expected": "⠇⠊⠲"
+    },
+    "rd": {
+      "expected": "⠗⠙"
+    },
+    "rd.": {
+      "expected": "⠗⠙⠲"
+    },
+    "ch": {
+      "expected": "⠉⠓"
+    },
+    "ch.": {
+      "expected": "⠉⠓⠲"
+    },
+    "fur": {
+      "expected": "⠋⠥⠗"
+    },
+    "fur.": {
+      "expected": "⠋⠥⠗⠲"
+    },
+    "n.m.": {
+      "expected": "⠝⠲⠍⠲"
+    },
+    "b": {
+      "expected": "⠃"
+    },
+    "KB": {
+      "expected": "⠠⠅⠠⠃"
+    },
+    "doz": {
+      "expected": "⠙⠕⠵"
+    },
+    "doz.": {
+      "expected": "⠙⠕⠵⠲"
+    },
+    "dz": {
+      "expected": "⠙⠵"
+    },
+    "dz.": {
+      "expected": "⠙⠵⠲"
+    },
+    "kt": {
+      "expected": "⠅⠞"
+    },
+    "kt.": {
+      "expected": "⠅⠞⠲"
+    },
+    "mph": {
+      "expected": "⠍⠏⠓"
+    },
+    "rpm": {
+      "expected": "⠗⠏⠍"
+    },
+    "kmh": {
+      "expected": "⠅⠍⠓"
+    },
+    "F": {
+      "expected": "⠠⠋"
+    },
+    "F.": {
+      "expected": "⠠⠋⠲"
+    },
+    "°F": {
+      "test": false,
+      "expected": "⠘⠨⠡⠐⠠⠋"
+    },
+    "C": {
+      "expected": "⠠⠉"
+    },
+    "°C": {
+      "test": false,
+      "expected": "⠘⠨⠡⠐⠠⠉"
+    },
+    "K": {
+      "expected": "⠠⠅"
+    },
+    "°K": {
+      "test": false,
+      "expected": "⠘⠨⠡⠐⠠⠅"
+    },
+    "min": {
+      "expected": "⠍⠊⠝"
+    },
+    "h": {
+      "expected": "⠓"
+    },
+    "hr": {
+      "expected": "⠓⠗"
+    },
+    "cu": {
+      "expected": "⠉⠥"
+    },
+    "cu.": {
+      "expected": "⠉⠥⠲"
+    },
+    "cu in": {
+      "expected": "⠉⠥⠀⠊⠝"
+    },
+    "cu. in.": {
+      "expected": "⠉⠥⠲⠀⠊⠝⠲"
+    },
+    "cu ft": {
+      "expected": "⠉⠥⠀⠋⠞"
+    },
+    "cu. ft.": {
+      "expected": "⠉⠥⠲⠀⠋⠞⠲"
+    },
+    "cu yd": {
+      "expected": "⠉⠥⠀⠽⠙"
+    },
+    "cu. yd.": {
+      "expected": "⠉⠥⠲⠀⠽⠙⠲"
+    },
+    "bbl.": {
+      "expected": "⠃⠃⠇⠲"
+    },
+    "bbl": {
+      "expected": "⠃⠃⠇"
+    },
+    "fl. oz.": {
+      "expected": "⠋⠇⠲⠀⠕⠵⠲"
+    },
+    "fl oz": {
+      "expected": "⠋⠇⠀⠕⠵"
+    },
+    "gal": {
+      "expected": "⠛⠁⠇"
+    },
+    "gal.": {
+      "expected": "⠛⠁⠇⠲"
+    },
+    "pt": {
+      "expected": "⠏⠞"
+    },
+    "pt.": {
+      "expected": "⠏⠞⠲"
+    },
+    "qt": {
+      "expected": "⠟⠞"
+    },
+    "qt.": {
+      "expected": "⠟⠞⠲"
+    },
+    "fl dr": {
+      "expected": "⠋⠇⠀⠙⠗"
+    },
+    "fl. dr.": {
+      "expected": "⠋⠇⠲⠀⠙⠗⠲"
+    },
+    "tbsp": {
+      "expected": "⠞⠃⠎⠏"
+    },
+    "tbsp.": {
+      "expected": "⠞⠃⠎⠏⠲"
+    },
+    "Tbsp": {
+      "expected": "⠠⠞⠃⠎⠏"
+    },
+    "Tbsp.": {
+      "expected": "⠠⠞⠃⠎⠏⠲"
+    },
+    "tsp": {
+      "expected": "⠞⠎⠏"
+    },
+    "tsp.": {
+      "expected": "⠞⠎⠏⠲"
+    },
+    "cp": {
+      "expected": "⠉⠏"
+    },
+    "cp.": {
+      "expected": "⠉⠏⠲"
+    },
+    "cc": {
+      "expected": "⠉⠉"
+    },
+    "ccm": {
+      "expected": "⠉⠉⠍"
+    },
+    "dr": {
+      "expected": "⠙⠗"
+    },
+    "dr.": {
+      "expected": "⠙⠗⠲"
+    },
+    "oz": {
+      "expected": "⠕⠵"
+    },
+    "oz.": {
+      "expected": "⠕⠵⠲"
+    },
+    "lb": {
+      "expected": "⠇⠃"
+    },
+    "lb.": {
+      "expected": "⠇⠃⠲"
+    },
+    "st": {
+      "expected": "⠎⠞"
+    },
+    "st.": {
+      "expected": "⠎⠞⠲"
+    },
+    "qtr": {
+      "expected": "⠟⠞⠗"
+    },
+    "qtr.": {
+      "expected": "⠟⠞⠗⠲"
+    },
+    "cwt": {
+      "expected": "⠉⠺⠞"
+    },
+    "cwt.": {
+      "expected": "⠉⠺⠞⠲"
+    },
+    "LT": {
+      "expected": "⠠⠇⠠⠞"
+    },
+    "L.T.": {
+      "expected": "⠠⠇⠲⠠⠞⠲"
+    },
+    "gr": {
+      "expected": "⠛⠗"
+    },
+    "mcg": {
+      "expected": "⠍⠉⠛"
+    },
+    "t": {
+      "expected": "⠞"
+    },
+    "T": {
+      "expected": "⠠⠞"
+    },
+    "′": {
+      "expected": "⠄"
+    },
+    "°": {
+      "expected": "⠘⠨⠡"
+    },
+    "″": {
+      "expected": "⠄⠄"
+    }
+  }
+}

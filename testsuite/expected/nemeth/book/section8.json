@@ -1,0 +1,741 @@
+{
+  "name": "NemethSection8",
+  "information": "Nemeth 2020 Book Section 8",
+  "factory": "speech",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Book2019",
+  "tests": {
+    "_comment_00": "8-1",
+    "superscripts_00": {
+      "tex": "10^7",
+      "brf": "#10^7",
+      "input": "<msup><mn>10</mn><mn>7</mn></msup>",
+      "expected": "⠼⠂⠴⠘⠶"
+    },
+    "superscripts_01": {
+      "tex": "y=[g(x)]^n",
+      "brf": "Y .K @(G(X)@)^N",
+      "input": "<mi>y</mi><mo>=</mo><mo stretchy=\"false\">[</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><msup><mo stretchy=\"false\">]</mo><mi>n</mi></msup>",
+      "expected": "⠽⠀⠨⠅⠀⠈⠷⠛⠷⠭⠾⠈⠾⠘⠝"
+    },
+    "superscripts_02": {
+      "tex": "3^{-0.05T}",
+      "brf": "#3^-0.05,T",
+      "input": "<msup><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>0.05</mn><mi>T</mi></mrow></msup>",
+      "expected": "⠼⠒⠘⠤⠴⠨⠴⠢⠠⠞"
+    },
+    "superscripts_03": {
+      "tex": "x\\ x^3",
+      "brf": ";x x^3",
+      "input": "<mi>x</mi><mtext>&#xA0;</mtext><msup><mi>x</mi><mn>3</mn></msup>",
+      "expected": "⠰⠭⠀⠭⠘⠒"
+    },
+    "_comment_01": "8-2",
+    "superscripts_04": {
+      "tex": "19 \\mathrm{in.}^3",
+      "brf": "#19 in4^3",
+      "input": "<mn>19</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\"  mathvariant=\"normal\" class=\"MathML-Unit\">in.</mi></mrow><mn>3</mn></msup>",
+      "expected": "⠼⠂⠔⠀⠊⠝⠲⠘⠒"
+    },
+    "superscripts_05": {
+      "tex": "\\mathrm{Fe}^{++}",
+      "brf": ",fe^++",
+      "input": "<msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">Fe</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mo>+</mo></mrow></msup>",
+      "expected": "⠠⠋⠑⠘⠬⠬"
+    },
+    "superscripts_06": {
+      "tex": "5.7m^2",
+      "brf": "#5.7 ;m^2",
+      "input": "<mn>5.7</mn><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>2</mn></msup>",
+      "expected": "⠼⠢⠨⠶⠀⠰⠍⠘⠆"
+    },
+    "_comment_02": "8-3",
+    "superscripts_07": {
+      "tex": "10^2\\ 10^3\\ 10^4",
+      "brf": "#10^2 #10^3 #10^4",
+      "input": "<msup><mn>10</mn><mn>2</mn></msup><mtext>&#xA0;</mtext><msup><mn>10</mn><mn>3</mn></msup><mtext>&#xA0;</mtext><msup><mn>10</mn><mn>4</mn></msup>",
+      "expected": "⠼⠂⠴⠘⠆⠀⠼⠂⠴⠘⠒⠀⠼⠂⠴⠘⠲"
+    },
+    "superscripts_08": {
+      "tex": "10^2\\mbox{ and }10^3",
+      "brf": "#10^2 ,'& #10^3",
+      "input": "<msup><mn>10</mn><mn>2</mn></msup><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#xA0;and&#xA0;</mtext></mstyle><msup><mn>10</mn><mn>3</mn></msup>",
+      "expected": "⠼⠂⠴⠘⠆⠀⠠⠄⠯⠀⠼⠂⠴⠘⠒"
+    },
+    "superscripts_09": {
+      "tex": "(a+b)^{12}",
+      "brf": "(A+B)^12",
+      "input": "<mo stretchy=\"false\">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><msup><mo stretchy=\"false\">)</mo><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msup>",
+      "expected": "⠷⠁⠬⠃⠾⠘⠂⠆"
+    },
+    "superscripts_10": {
+      "tex": "b^5",
+      "brf": "B^5",
+      "input": "<msup><mi>b</mi><mn>5</mn></msup>",
+      "expected": "⠃⠘⠢"
+    },
+    "superscripts_11": {
+      "tex": "5.3 \\times 10^{-3}\\ 5.3 \\times 10^{-1}\\ 5.3 \\times 10^0 5.3 \\times 10^3",
+      "brf": "#5.3@*10^-3 #5.3@*10^-1 #5.3@*10^0 #5.3@*10^3",
+      "input": "<mn>5.3</mn><mo>&#xD7;</mo><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>3</mn></mrow></msup><mtext>&#xA0;</mtext><mn>5.3</mn><mo>&#xD7;</mo><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mtext>&#xA0;</mtext><mn>5.3</mn><mo>&#xD7;</mo><msup><mn>10</mn><mn>0</mn></msup><mn>5.3</mn><mo>&#xD7;</mo><msup><mn>10</mn><mn>3</mn></msup>",
+      "expected": "⠼⠢⠨⠒⠈⠡⠂⠴⠘⠤⠒⠀⠼⠢⠨⠒⠈⠡⠂⠴⠘⠤⠂⠀⠼⠢⠨⠒⠈⠡⠂⠴⠘⠴⠀⠼⠢⠨⠒⠈⠡⠂⠴⠘⠒"
+    },
+    "superscripts_12": {
+      "tex": "3 \\mathrm{cm}^2 , 7 \\mathrm{m}^2 , 9 \\mathrm{ft.}^2",
+      "brf": "#3 cm^2, #7 ;m^2, #9 ft4^2",
+      "input": "<mn>3</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" class=\"MathML-Unit\">cm</mi></mrow><mn>2</mn></msup><mo>,</mo><mn>7</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi></mrow><mn>2</mn></msup><mo>,</mo><mn>9</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" class=\"MathML-Unit\">ft.</mi></mrow><mn>2</mn></msup>",
+      "expected": "⠼⠒⠀⠉⠍⠘⠆⠠⠀⠼⠶⠀⠰⠍⠘⠆⠠⠀⠼⠔⠀⠋⠞⠲⠘⠆"
+    },
+    "_comment_03": "8-4",
+    "superscripts_13": {
+      "tex": "90\\degree",
+      "brf": "#90^.* ",
+      "input": "<mn>90</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;</mi>",
+      "expected": "⠼⠔⠴⠘⠨⠡⠀"
+    },
+    "superscripts_14": {
+      "tex": "98.6\\degree F (37\\degree C)",
+      "brf": " #98.6^.* ;,F (37^.* ;,C)",
+      "input": "<mn>98.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;F</mi><mo stretchy=\"false\">(</mo><mn>37</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;C</mi><mo stretchy=\"false\">)</mo>",
+      "expected": "⠀⠼⠔⠦⠨⠖⠘⠨⠡⠀⠰⠠⠋⠀⠷⠒⠶⠘⠨⠡⠀⠰⠠⠉⠾"
+    },
+    "_comment_04": "8-5",
+    "superscripts_15": {
+      "tex": "a^2+b^2+c^2",
+      "brf": "A^2\"+B^2\"+C^2",
+      "input": "<msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup>",
+      "expected": "⠁⠘⠆⠐⠬⠃⠘⠆⠐⠬⠉⠘⠆"
+    },
+    "superscripts_16": {
+      "tex": "2m^3+2m^3=4m^3",
+      "brf": " #2 ;M^3\"+2 ;M^3 .K #4 ;M^3",
+      "input": "<mn>2</mn><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>3</mn></msup><mo>+</mo><mn>2</mn><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>3</mn></msup><mo>=</mo><mn>4</mn><msup><mi mathvariant=\"normal\" class=\"MathML-Unit\">m</mi><mn>3</mn></msup>",
+      "expected": "⠀⠼⠆⠀⠰⠍⠘⠒⠐⠬⠆⠀⠰⠍⠘⠒⠀⠨⠅⠀⠼⠲⠀⠰⠍⠘⠒"
+    },
+    "_comment_05": "8-6",
+    "superscripts_17": {
+      "tex": " 144 \\mathrm{ft} + 144 \\mathrm{ft}",
+      "brf": "#144 FT +144 FT",
+      "input": "<mn>144</mn><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mo>+</mo><mn>144</mn><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow>",
+      "expected": "⠼⠂⠲⠲⠀⠋⠞⠀⠬⠂⠲⠲⠀⠋⠞"
+    },
+    "superscripts_18": {
+      "tex": " 144 \\mathrm{ft}^2 + 144 \\mathrm{ft}^2",
+      "brf": "#144 ft^2\"+144 ft^2",
+      "input": "<mn>144</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mn>2</mn></msup><mo>+</mo><mn>144</mn><msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\" class=\"MathML-Unit\">ft</mi></mrow><mn>2</mn></msup>",
+      "expected": "⠼⠂⠲⠲⠀⠋⠞⠘⠆⠐⠬⠂⠲⠲⠀⠋⠞⠘⠆"
+    },
+    "superscripts_19": {
+      "tex": "n^{a^b}",
+      "brf": "N^A^^B",
+      "input": "<msup><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi>a</mi><mi>b</mi></msup></mrow></msup>",
+      "expected": "⠝⠘⠁⠘⠘⠃"
+    },
+    "superscripts_20": {
+      "tex": "n^{{a+1}^{{b+1}^{c+1}}}",
+      "brf": "N^A+1^^B+1^^^C+1",
+      "input": "<msup><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><msup><mrow data-mjx-texclass=\"ORD\"><mi>a</mi><mo>+</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mrow data-mjx-texclass=\"ORD\"><mi>b</mi><mo>+</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></msup></mrow></msup>",
+      "expected": "⠝⠘⠁⠬⠂⠘⠘⠃⠬⠂⠘⠘⠘⠉⠬⠂"
+    },
+    "_comment_06": "8-7",
+    "superscripts_21": {
+      "tex": "a^{(m^n)}",
+      "brf": "A^(M^^N^)",
+      "input": "<msup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo stretchy=\"false\">(</mo><msup><mi>m</mi><mi>n</mi></msup><mo stretchy=\"false\">)</mo></mrow></msup>",
+      "expected": "⠁⠘⠷⠍⠘⠘⠝⠘⠾"
+    },
+    "superscripts_22": {
+      "tex": "10{(^{-}4)}",
+      "brf": "#10^(^^-^4)",
+      "input": "<mn>10</mn><mrow data-mjx-texclass=\"ORD\"><msup><mo stretchy=\"false\">(</mo><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo></mrow></msup><mn>4</mn><mo stretchy=\"false\">)</mo></mrow>",
+      "expected": "⠼⠂⠴⠘⠷⠘⠘⠤⠘⠲⠾"
+    },
+    "superscripts_23": {
+      "tex": "E[x^2]=e^{2(a+b^2)}",
+      "brf": ",E@(X^2\"@) .K E^2(A+B^^2^)",
+      "input": "<mi>E</mi><mo stretchy=\"false\">[</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy=\"false\">]</mo><mo>=</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mo stretchy=\"false\">(</mo><mi>a</mi><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy=\"false\">)</mo></mrow></msup>",
+      "expected": "⠠⠑⠈⠷⠭⠘⠆⠐⠈⠾⠀⠨⠅⠀⠑⠘⠆⠷⠁⠬⠃⠘⠘⠆⠘⠾"
+    },
+    "superscripts_24": {
+      "tex": "e^{1,000}\\times e^{2,000}= e^{3,000}",
+      "brf": "E^1,000\"@*E^2,000 .K E^3,000",
+      "input": "<msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mn>1,000</mn></mrow></msup><mo>&#xD7;</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mn>2,000</mn></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mn>3,000</mn></mrow></msup>",
+      "expected": "⠑⠘⠂⠠⠴⠴⠴⠐⠈⠡⠑⠘⠆⠠⠴⠴⠴⠀⠨⠅⠀⠑⠘⠒⠠⠴⠴⠴"
+    },
+    "_comment_07": "8-8",
+    "superscripts_25": {
+      "tex": "x^{'2}",
+      "brf": "X'^2",
+      "input": "<msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi></mi><mo data-mjx-alternate=\"1\">&#x2032;</mo></msup><mn>2</mn></mrow></msup>",
+      "expected": "⠭⠄⠘⠆"
+    },
+    "superscripts_26": {
+      "tex": "A^{2^{''}}",
+      "brf": ",A^2''",
+      "input": "<msup><mi>A</mi><mrow data-mjx-texclass=\"ORD\"><msup><mn>2</mn><mrow data-mjx-texclass=\"ORD\"><msup><mi></mi><mo data-mjx-alternate=\"1\">&#x2033;</mo></msup></mrow></msup></mrow></msup>",
+      "expected": "⠠⠁⠘⠆⠄⠄"
+    },
+    "superscripts_27": {
+      "tex": "\\alpha = 30\\degree 2^\\prime 8^{\\prime\\prime}",
+      "brf": ".A .K #30^.*\"2'8'' ",
+      "input": "<mi>&#x3B1;</mi><mo>=</mo><mn>30</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;</mi><msup><mn>2</mn><mi data-mjx-alternate=\"1\">&#x2032;</mi></msup><msup><mn>8</mn><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-alternate=\"1\">&#x2032;</mi><mi data-mjx-alternate=\"1\">&#x2032;</mi></mrow></msup>",
+      "expected": "⠨⠁⠀⠨⠅⠀⠼⠒⠴⠘⠨⠡⠐⠆⠄⠦⠄⠄⠀"
+    },
+    "superscripts_28": {
+      "tex": "A^{m+m+m\\mbox{'s}}",
+      "brf": ",A^M+M+M^_'S",
+      "input": "<msup><mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mo>+</mo><mi>m</mi><mo>+</mo><mi>m</mi><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#x2019;s</mtext></mstyle></mrow></msup>",
+      "expected": "⠠⠁⠘⠍⠬⠍⠬⠍⠘⠸⠄⠎"
+    },
+    "superscripts_29": {
+      "tex": "A^{m+m+m}\\mbox{'s}",
+      "brf": ",A^M+M+M_'S",
+      "input": "<msup><mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mo>+</mo><mi>m</mi><mo>+</mo><mi>m</mi></mrow></msup><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#x2019;s</mtext></mstyle>",
+      "expected": "⠠⠁⠘⠍⠬⠍⠬⠍⠸⠄⠎"
+    },
+    "_comment0_": "Section 8_8",
+    "Section 8_8-1": {
+      "tex": "f_n",
+      "brf": "F;N",
+      "input": "<msub><mi>f</mi><mi>n</mi></msub>",
+      "expected": "⠋⠰⠝"
+    },
+    "Section 8_8-2": {
+      "tex": "a_{(k+1)}",
+      "brf": "A;(K+1)",
+      "input": "<msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo stretchy=\"false\">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></msub>",
+      "expected": "⠁⠰⠷⠅⠬⠂⠾"
+    },
+    "Section 8_8-3": {
+      "tex": "n_{x_y}",
+      "brf": "N;X;;Y",
+      "input": "<msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>x</mi><mi>y</mi></msub></mrow></msub>",
+      "expected": "⠝⠰⠭⠰⠰⠽"
+    },
+    "Section 8_8-4": {
+      "tex": "P_{x+1_{y+1_{z+1}}}",
+      "brf": ",P;X+1;;Y+1;;;Z+1",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mi>x</mi><mo>+</mo><msub><mn>1</mn><mrow data-mjx-texclass=\"ORD\"><mi>y</mi><mo>+</mo><msub><mn>1</mn><mrow data-mjx-texclass=\"ORD\"><mi>z</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub></mrow></msub>",
+      "expected": "⠠⠏⠰⠭⠬⠂⠰⠰⠽⠬⠂⠰⠰⠰⠵⠬⠂"
+    },
+    "Section 8_8-5": {
+      "tex": "3i",
+      "brf": "3i",
+      "input": "<mn>3</mn><mi>i</mi>",
+      "expected": "⠒⠊"
+    },
+    "Section 8_8-6": {
+      "tex": "3_i",
+      "brf": "3;i",
+      "input": "<msub><mn>3</mn><mi>i</mi></msub>",
+      "expected": "⠒⠰⠊"
+    },
+    "Section 8_8-7": {
+      "tex": "3𝒊",
+      "brf": "3_;i",
+      "input": "<mn>3</mn><mi>&#x1D48A;</mi>",
+      "expected": "⠒⠸⠰⠊"
+    },
+    "Section 8_8-8": {
+      "tex": "3_𝒊",
+      "brf": "#3;_;i",
+      "input": "<msub><mn>3</mn><mi>&#x1D48A;</mi></msub>",
+      "expected": "⠼⠒⠰⠸⠰⠊"
+    },
+    "_comment1_": "Section 8_9",
+    "Example 8.9-1": {
+      "tex": "27\\mathrm{TE}_{12}\\mbox{ and }\\mathrm{E5T}_{12}; \\mathrm{4E9}_{12}, \\mathrm{8T2}_{12}, \\mbox{ and }\\mathrm{T0E}_{12}",
+      "brf": "#27TE;12 ,'& #E5T;12_2 #4E9;12, #8t2;12, ,'& #t0e;12",
+      "input": "<mn>27</mn><msub><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">TE</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#xA0;and&#xA0;</mtext></mstyle><msub><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">E</mi><mn>5</mn><mi mathvariant=\"normal\">T</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mo>;</mo><msub><mrow data-mjx-texclass=\"ORD\"><mn>4</mn><mi mathvariant=\"normal\">E</mi><mn>9</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mo>,</mo><msub><mrow data-mjx-texclass=\"ORD\"><mn>8</mn><mi mathvariant=\"normal\">T</mi><mn>2</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mo>,</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&#xA0;and&#xA0;</mtext></mstyle><msub><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">T</mi><mn>0</mn><mi mathvariant=\"normal\">E</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub>",
+      "expected": "⠼⠆⠶⠞⠑⠰⠂⠆⠀⠠⠄⠯⠀⠼⠑⠢⠞⠰⠂⠆⠸⠆⠀⠼⠲⠑⠔⠰⠂⠆⠠⠀⠼⠦⠞⠆⠰⠂⠆⠠⠀⠠⠄⠯⠀⠼⠞⠴⠑⠰⠂⠆"
+    },
+    "Example 8.9-2": {
+      "tex": "27\\mathrm{TE}_{12} + \\mathrm{E5T}_{12} = \\_\\_\\_\\__{12}",
+      "brf": "#27TE;12\"+E5T;12 .K ----;12",
+      "input": "<mn>27</mn><msub><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">TE</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mo>+</mo><msub><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">E</mi><mn>5</mn><mi mathvariant=\"normal\">T</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub><mo>=</mo><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><msub><mi mathvariant=\"normal\">_</mi><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub>",
+      "expected": "⠼⠆⠶⠞⠑⠰⠂⠆⠐⠬⠑⠢⠞⠰⠂⠆⠀⠨⠅⠀⠤⠤⠤⠤⠰⠂⠆"
+    },
+    "Example 8.9-3": {
+      "tex": "(R_H T_H ) + (R_S T_S )",
+      "brf": "(,R;,H\",T;,H\")+(,R;,S\",T;,S\")",
+      "input": "<mo stretchy=\"false\">(</mo><msub><mi>R</mi><mi>H</mi></msub><msub><mi>T</mi><mi>H</mi></msub><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><msub><mi>R</mi><mi>S</mi></msub><msub><mi>T</mi><mi>S</mi></msub><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠠⠗⠰⠠⠓⠐⠠⠞⠰⠠⠓⠐⠾⠬⠷⠠⠗⠰⠠⠎⠐⠠⠞⠰⠠⠎⠐⠾"
+    },
+    "_comment2_": "Section 8_10",
+    "Example 8.10-1-a": {
+      "tex": "i_2",
+      "brf": "I2",
+      "input": "<msub><mi>i</mi><mn>2</mn></msub>",
+      "expected": "⠊⠆"
+    },
+    "Example 8.10-1-b": {
+      "tex": "I_2",
+      "brf": ",I2",
+      "input": "<msub><mi>I</mi><mn>2</mn></msub>",
+      "expected": "⠠⠊⠆"
+    },
+    "Section 8_10-2": {
+      "tex": "H_2 O",
+      "brf": ",H2,O",
+      "input": "<msub><mi>H</mi><mn>2</mn></msub><mi>O</mi>",
+      "expected": "⠠⠓⠆⠠⠕"
+    },
+    "Section 8_10-3": {
+      "tex": "a_1 a_2 + b_1 b_2 + c_1 c_2",
+      "brf": "A1A2+B1B2+C1C2",
+      "input": "<msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><msub><mi>b</mi><mn>2</mn></msub><mo>+</mo><msub><mi>c</mi><mn>1</mn></msub><msub><mi>c</mi><mn>2</mn></msub>",
+      "expected": "⠁⠂⠁⠆⠬⠃⠂⠃⠆⠬⠉⠂⠉⠆"
+    },
+    "Section 8_10-4": {
+      "tex": "Cd(NO_3 )_2",
+      "brf": ",cd(,n,o3);2",
+      "input": "<mi>C</mi><mi>d</mi><mo stretchy=\"false\">(</mo><mi>N</mi><msub><mi>O</mi><mn>3</mn></msub><msub><mo stretchy=\"false\">)</mo><mn>2</mn></msub>",
+      "expected": "⠠⠉⠙⠷⠠⠝⠠⠕⠒⠾⠰⠆"
+    },
+    "Section 8_10-5": {
+      "tex": "x_{1,000}",
+      "brf": "X1,000",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>1,000</mn></mrow></msub>",
+      "expected": "⠭⠂⠠⠴⠴⠴"
+    },
+    "Section 8_10-6": {
+      "tex": "x_{5.3}",
+      "brf": "X5.3",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>5.3</mn></mrow></msub>",
+      "expected": "⠭⠢⠨⠒"
+    },
+    "Section 8_10-7": {
+      "tex": "X'_{2}",
+      "brf": "x'2",
+      "input": "<msubsup><mi>X</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow><mo data-mjx-alternate=\"1\">&#x2032;</mo></msubsup>",
+      "expected": "⠭⠄⠆"
+    },
+    "Section 8_10-8": {
+      "tex": "ℵ_{0}",
+      "brf": ",,a0",
+      "input": "<msub><mi>&#x2135;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub>",
+      "expected": "⠠⠠⠁⠴"
+    },
+    "Section 8_10-9": {
+      "tex": "𝐢_{1}",
+      "brf": "_;I1",
+      "input": "<msub><mi>&#x1D422;</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub>",
+      "expected": "⠸⠰⠊⠂"
+    },
+    "Section 8_10-10": {
+      "tex": "Cl_{4}",
+      "brf": ",cl4",
+      "input": "<mi>C</mi><msub><mi>l</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msub>",
+      "expected": "⠠⠉⠇⠲"
+    },
+    "Section 8_10-11": {
+      "tex": "TE_{12}",
+      "brf": "#TE;12",
+      "input": "<mi>T</mi><msub><mi>E</mi><mrow data-mjx-texclass=\"ORD\"><mn>12</mn></mrow></msub>",
+      "expected": "⠼⠞⠑⠰⠂⠆"
+    },
+    "Section 8_10-12": {
+      "tex": "\\mathrm{five}_{3}",
+      "brf": "five;3",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">five</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msub>",
+      "expected": "⠋⠊⠧⠑⠰⠒"
+    },
+    "Section 8_10-13": {
+      "tex": "x_{2k}",
+      "brf": "x;2k",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>k</mi></mrow></msub>",
+      "expected": "⠭⠰⠆⠅"
+    },
+    "Section 8_10-14": {
+      "tex": "x_{2'}",
+      "brf": "x;2'",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msup><mn>2</mn><mo data-mjx-alternate=\"1\">&#x2032;</mo></msup></mrow></msub>",
+      "expected": "⠭⠰⠆⠄"
+    },
+    "Section 8_10-15": {
+      "tex": "x_{−2}",
+      "brf": "x;-2",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>2</mn></mrow></msub>",
+      "expected": "⠭⠰⠤⠆"
+    },
+    "Section 8_10-16": {
+      "tex": "x_{2_{n}}",
+      "brf": "x;2;;n",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msub><mn>2</mn><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></msub>",
+      "expected": "⠭⠰⠆⠰⠰⠝"
+    },
+    "Section 8_10-17": {
+      "tex": "P_{n_{1}}",
+      "brf": ",P;N;;1",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub></mrow></msub>",
+      "expected": "⠠⠏⠰⠝⠰⠰⠂"
+    },
+    "Section 8_10-18": {
+      "tex": "R12",
+      "brf": ",r\"12",
+      "input": "<mi>R</mi><mn>12</mn>",
+      "expected": "⠠⠗⠐⠂⠆"
+    },
+    "Section 8_10-19": {
+      "tex": "t_{R12}",
+      "brf": "T;,R12",
+      "input": "<msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mn>12</mn></mrow></msub>",
+      "expected": "⠞⠰⠠⠗⠂⠆"
+    },
+    "_comment3_": "Section 8_11",
+    "Section 8_11-1": {
+      "tex": "x_{1,000}",
+      "brf": "X1,000",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>1,000</mn></mrow></msub>",
+      "expected": "⠭⠂⠠⠴⠴⠴"
+    },
+    "Section 8_11-2": {
+      "tex": "x^2, y^2, z^2",
+      "brf": "X^2, Y^2, Z^2",
+      "input": "<msup><mi>x</mi><mn>2</mn></msup><mo>,</mo><msup><mi>y</mi><mn>2</mn></msup><mo>,</mo><msup><mi>z</mi><mn>2</mn></msup>",
+      "expected": "⠭⠘⠆⠠⠀⠽⠘⠆⠠⠀⠵⠘⠆"
+    },
+    "Section 8_11-3": {
+      "tex": "(a_1 , a_{1i} , a_{2i} )",
+      "brf": "(A1, A;1I, A;2I\")",
+      "input": "<mo stretchy=\"false\">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mi>i</mi></mrow></msub><mo>,</mo><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>i</mi></mrow></msub><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠁⠂⠠⠀⠁⠰⠂⠊⠠⠀⠁⠰⠆⠊⠐⠾"
+    },
+    "Section 8_11-4": {
+      "tex": "x^{1, 2}",
+      "brf": "X^1[2",
+      "input": "<msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msup>",
+      "expected": "⠭⠘⠂⠪⠆"
+    },
+    "Section 8_11-5": {
+      "tex": "x_{i, j, k}",
+      "brf": "X;I[J[K",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>i</mi><mo>,</mo><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub>",
+      "expected": "⠭⠰⠊⠪⠚⠪⠅"
+    },
+    "Section 8_11-6": {
+      "tex": "P_{n_1 , n_2 , n_3}",
+      "brf": ",P;N;;1;[N;;2;[N;;3",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><msub><mi>n</mi><mn>2</mn></msub><mo>,</mo><msub><mi>n</mi><mn>3</mn></msub></mrow></msub>",
+      "expected": "⠠⠏⠰⠝⠰⠰⠂⠰⠪⠝⠰⠰⠆⠰⠪⠝⠰⠰⠒"
+    },
+    "Section 8_11-7": {
+      "tex": "n_{\\mbox{obtuse angles}}",
+      "brf": "N;OBTUsE ;ANGLES",
+      "input": "<msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>obtuse angles</mtext></mstyle></mrow></msub>",
+      "expected": "⠝⠰⠕⠃⠞⠥⠎⠑⠀⠰⠁⠝⠛⠇⠑⠎"
+    },
+    "Section 8_11-8": {
+      "tex": "n_{\\mbox{st. angles}}",
+      "brf": "N;st4 ;ANGLES",
+      "input": "<msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>st. angles</mtext></mstyle></mrow></msub>",
+      "expected": "⠝⠰⠎⠞⠲⠀⠰⠁⠝⠛⠇⠑⠎"
+    },
+    "Section 8_11-9": {
+      "tex": "a^2 = a \\cdot a",
+      "brf": "A^2 .K A*A",
+      "input": "<msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mi>a</mi><mo>&#x22C5;</mo><mi>a</mi>",
+      "expected": "⠁⠘⠆⠀⠨⠅⠀⠁⠡⠁"
+    },
+    "Section 8_11-11": {
+      "tex": "S_{u = a}",
+      "brf": ",S;U ;.K A",
+      "input": "<msub><mi>S</mi><mrow data-mjx-texclass=\"ORD\"><mi>u</mi><mo>=</mo><mi>a</mi></mrow></msub>",
+      "expected": "⠠⠎⠰⠥⠀⠰⠨⠅⠀⠁"
+    },
+    "Section 8_11-12": {
+      "tex": "10^{7+3} = 10^{—}",
+      "brf": "#10^7+3 .K #10^----",
+      "input": "<msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mn>7</mn><mo>+</mo><mn>3</mn></mrow></msup><mo>=</mo><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mo>&#x2014;</mo></mrow></mrow></msup>",
+      "expected": "⠼⠂⠴⠘⠶⠬⠒⠀⠨⠅⠀⠼⠂⠴⠘⠤⠤⠤⠤"
+    },
+    "Section 8_11-13": {
+      "tex": "P_{n_1, n_2 , \\ldots}",
+      "brf": ",P;N;;1;[N;;2;[ '''",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><msub><mi>n</mi><mn>2</mn></msub><mo>,</mo><mo>&#x2026;</mo></mrow></msub>",
+      "expected": "⠠⠏⠰⠝⠰⠰⠂⠰⠪⠝⠰⠰⠆⠰⠪⠀⠄⠄⠄"
+    },
+    "Section 8_11-14": {
+      "tex": "x^{1 + 3 + 5 + \\ldots + (2n−1)}",
+      "brf": "x^1+3+5+ ''' +(2N-1)",
+      "input": "<msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>+</mo><mn>3</mn><mo>+</mo><mn>5</mn><mo>+</mo><mo>&#x2026;</mo><mo>+</mo><mo stretchy=\"false\">(</mo><mn>2</mn><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></msup>",
+      "expected": "⠭⠘⠂⠬⠒⠬⠢⠬⠀⠄⠄⠄⠀⠬⠷⠆⠝⠤⠂⠾"
+    },
+    "Section 8_11-15": {
+      "tex": "10^{7+\\_\\_\\_} = 10^{21}",
+      "brf": "#10^7+ ---- .K #10^21",
+      "input": "<msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mn>7</mn><mo>+</mo><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi></mrow></msup><mo>=</mo><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mn>21</mn></mrow></msup>",
+      "expected": "⠼⠂⠴⠘⠶⠬⠀⠤⠤⠤⠤⠀⠨⠅⠀⠼⠂⠴⠘⠆⠂"
+    },
+    "Section 8_11-16": {
+      "tex": "10^{7+\\_\\_\\_} \\mathrm{ equals } 10^{21}",
+      "brf": "#10^7+ ---- ,'EQUALS #10^21",
+      "input": "<msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mn>7</mn><mo>+</mo><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi><mi mathvariant=\"normal\">_</mi></mrow></msup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">equals</mi></mrow><msup><mn>10</mn><mrow data-mjx-texclass=\"ORD\"><mn>21</mn></mrow></msup>",
+      "expected": "⠼⠂⠴⠘⠶⠬⠀⠤⠤⠤⠤⠀⠠⠄⠑⠟⠥⠁⠇⠎⠀⠼⠂⠴⠘⠆⠂"
+    },
+    "Section 8_11-17": {
+      "tex": "a^1 b^2 c^3 d^4 \\ldots z^n",
+      "brf": "A^1\"B^2\"C^3\"D^4\"''' Z^N",
+      "input": "<msup><mi>a</mi><mn>1</mn></msup><msup><mi>b</mi><mn>2</mn></msup><msup><mi>c</mi><mn>3</mn></msup><msup><mi>d</mi><mn>4</mn></msup><mo>&#x2026;</mo><msup><mi>z</mi><mi>n</mi></msup>",
+      "expected": "⠁⠘⠂⠐⠃⠘⠆⠐⠉⠘⠒⠐⠙⠘⠲⠐⠄⠄⠄⠀⠵⠘⠝"
+    },
+    "Section 8_11-18": {
+      "tex": "r_1 \\ldots r_n",
+      "brf": "R1 ''' R;N",
+      "input": "<msub><mi>r</mi><mn>1</mn></msub><mo>&#x2026;</mo><msub><mi>r</mi><mi>n</mi></msub>",
+      "expected": "⠗⠂⠀⠄⠄⠄⠀⠗⠰⠝"
+    },
+    "Section 8_11-19": {
+      "tex": "e^{3.14159\\ 26535}",
+      "brf": "E^3.14159 26535",
+      "input": "<msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mn>3.14159</mn><mtext>&#xA0;</mtext><mn>26535</mn></mrow></msup>",
+      "expected": "⠑⠘⠒⠨⠂⠲⠂⠢⠔⠀⠆⠖⠢⠒⠢"
+    },
+    "_comment4_": "Section 8_12",
+    "Section 8_12-1": {
+      "tex": "x^{n_1}",
+      "brf": "X^N^;1",
+      "input": "<msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>n</mi><mn>1</mn></msub></mrow></msup>",
+      "expected": "⠭⠘⠝⠘⠰⠂"
+    },
+    "Section 8_12-2": {
+      "tex": "2^{Y_0} = Y_1",
+      "brf": "#2^,y^;0 .K ,y1",
+      "input": "<msup><mn>2</mn><mrow data-mjx-texclass=\"ORD\"><msub><mi>Y</mi><mn>0</mn></msub></mrow></msup><mo>=</mo><msub><mi>Y</mi><mn>1</mn></msub>",
+      "expected": "⠼⠆⠘⠠⠽⠘⠰⠴⠀⠨⠅⠀⠠⠽⠂"
+    },
+    "Section 8_12-3": {
+      "tex": "x_{n^2}",
+      "brf": ";^",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi>n</mi><mn>2</mn></msup></mrow></msub>",
+      "expected": "⠰⠘"
+    },
+    "Section 8_12-4": {
+      "tex": "P_{3^n}",
+      "brf": ",P;3;^N",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><msup><mn>3</mn><mi>n</mi></msup></mrow></msub>",
+      "expected": "⠠⠏⠰⠒⠰⠘⠝"
+    },
+    "_comment5_": "Section 8_13",
+    "Section 8_13-1": {
+      "tex": "{}_3x_1",
+      "brf": ";3\"x1",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"></mrow><mn>3</mn></msub><msub><mi>x</mi><mn>1</mn></msub>",
+      "expected": "⠰⠒⠐⠭⠂"
+    },
+    "Section 8_13-2": {
+      "tex": "{}_{48}C_9 × {}_4C_4",
+      "brf": ";48\",C9@*;4\",C4",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>48</mn></mrow></msub><msub><mi>C</mi><mn>9</mn></msub><mi>&#xD7;</mi><msub><mrow data-mjx-texclass=\"ORD\"></mrow><mn>4</mn></msub><msub><mi>C</mi><mn>4</mn></msub>",
+      "expected": "⠰⠲⠦⠐⠠⠉⠔⠈⠡⠰⠲⠐⠠⠉⠲"
+    },
+    "Section 8_13-3": {
+      "tex": "{}^{14}C",
+      "brf": "^14\",c",
+      "input": "<msup><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>14</mn></mrow></msup><mi>C</mi>",
+      "expected": "⠘⠂⠲⠐⠠⠉"
+    },
+    "Section 8_13-4": {
+      "tex": "{}^−4",
+      "brf": "^-\"4",
+      "input": "<msup><mrow data-mjx-texclass=\"ORD\"></mrow><mo>&#x2212;</mo></msup><mn>4</mn>",
+      "expected": "⠘⠤⠐⠲"
+    },
+    "Section 8_13-5": {
+      "tex": "4 + {}^−4 = 0",
+      "brf": "#4+^-\"4 .K #0",
+      "input": "<mn>4</mn><mo>+</mo><msup><mrow data-mjx-texclass=\"ORD\"></mrow><mo>&#x2212;</mo></msup><mn>4</mn><mo>=</mo><mn>0</mn>",
+      "expected": "⠼⠲⠬⠘⠤⠐⠲⠀⠨⠅⠀⠼⠴"
+    },
+    "Section 8_13-6": {
+      "tex": "x_{−2}",
+      "brf": "x;-2",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>2</mn></mrow></msub>",
+      "expected": "⠭⠰⠤⠆"
+    },
+    "Section 8_13-7": {
+      "tex": "x−_{2}",
+      "brf": "x;^-;2",
+      "input": "<mi>x</mi><msub><mo>&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub>",
+      "expected": "⠭⠰⠘⠤⠰⠆"
+    },
+    "Section 8_13-8": {
+      "tex": "98.6\\degree F",
+      "brf": "#98.6^.* ;,F",
+      "input": "<mn>98.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;F</mi>",
+      "expected": "⠼⠔⠦⠨⠖⠘⠨⠡⠀⠰⠠⠋"
+    },
+    "Section 8_13-9": {
+      "tex": "98.6\\degree F ",
+      "brf": "#98.6^.* ;,F",
+      "input": "<mn>98.6</mn><mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;F</mi>",
+      "expected": "⠼⠔⠦⠨⠖⠘⠨⠡⠀⠰⠠⠋"
+    },
+    "Section 8_13-10": {
+      "tex": "\\degree C",
+      "brf": "^.*\",C",
+      "input": "<mi mathvariant=\"normal\" class=\"MathML-Unit\">&#xB0;C</mi>",
+      "expected": "⠘⠨⠡⠐⠠⠉"
+    },
+    "_comment6_": "Section 8_14",
+    "Section 8_14-1": {
+      "tex": "{}_{{}_y}{}_xn",
+      "brf": ";Y;^X\"N",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mrow data-mjx-texclass=\"ORD\"></mrow><mi>y</mi></msub></mrow></msub><msub><mrow data-mjx-texclass=\"ORD\"></mrow><mi>x</mi></msub><mi>n</mi>",
+      "expected": "⠰⠽⠰⠘⠭⠐⠝"
+    },
+    "Section 8_14-2": {
+      "tex": "{}_{x_y}n",
+      "brf": ";;Y;X\"N",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>x</mi><mi>y</mi></msub></mrow></msub><mi>n</mi>",
+      "expected": "⠰⠰⠽⠰⠭⠐⠝"
+    },
+    "_comment7_": "Section 8_15",
+    "Section 8_15-1": {
+      "tex": "p^{b c} q",
+      "brf": "P^B^C\"Q",
+      "input": "<msup><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mi>b</mi><mi>c</mi></mrow></msup><mi>q</mi>",
+      "expected": "⠏⠘⠃⠘⠉⠐⠟"
+    },
+    "Section 8_15-2": {
+      "tex": "P_{x y}Q",
+      "brf": ",P;x;y\",Q",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mi>x</mi><mi>y</mi></mrow></msub><mi>Q</mi>",
+      "expected": "⠠⠏⠰⠭⠰⠽⠐⠠⠟"
+    },
+    "Section 8_15-3": {
+      "tex": "P_{1 2}Q",
+      "brf": ",P1;2\",Q",
+      "input": "<msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mn>2</mn></mrow></msub><mi>Q</mi>",
+      "expected": "⠠⠏⠂⠰⠆⠐⠠⠟"
+    },
+    "Section 8_15-4": {
+      "tex": "10^3_8",
+      "brf": "#10;8^3",
+      "input": "<msubsup><mn>10</mn><mn>8</mn><mn>3</mn></msubsup>",
+      "expected": "⠼⠂⠴⠰⠦⠘⠒"
+    },
+    "Section 8_15-5": {
+      "tex": "{}^{238}_{92}U",
+      "brf": ";92^238\",u",
+      "input": "<msubsup><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>92</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mn>238</mn></mrow></msubsup><mi>U</mi>",
+      "expected": "⠰⠔⠆⠘⠆⠒⠦⠐⠠⠥"
+    },
+    "Section 8_15-6": {
+      "tex": "x_1^2",
+      "brf": "X1^2",
+      "input": "<msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup>",
+      "expected": "⠭⠂⠘⠆"
+    },
+    "Section 8_15-7": {
+      "tex": "{}^n_mx",
+      "brf": ";M^N\"X",
+      "input": "<msubsup><mrow data-mjx-texclass=\"ORD\"></mrow><mi>m</mi><mi>n</mi></msubsup><mi>x</mi>",
+      "expected": "⠰⠍⠘⠝⠐⠭"
+    },
+    "Section 8_15-": {
+      "tex": "n^{x^{y^z}}_{a_{b_c}}",
+      "brf": "N;A;;B;;;C^X^^Y^^^Z",
+      "input": "<msubsup><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>b</mi><mi>c</mi></msub></mrow></msub></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi>y</mi><mi>z</mi></msup></mrow></msup></mrow></msubsup>",
+      "expected": "⠝⠰⠁⠰⠰⠃⠰⠰⠰⠉⠘⠭⠘⠘⠽⠘⠘⠘⠵"
+    },
+    "_comment8_": "Section 8_17",
+    "Section 8_17-1": {
+      "tex": "x_1{}^2",
+      "brf": "x1\"^2",
+      "input": "<msub><mi>x</mi><mn>1</mn></msub><msup><mrow data-mjx-texclass=\"ORD\"></mrow><mn>2</mn></msup>",
+      "expected": "⠭⠂⠐⠘⠆"
+    },
+    "Section 8_17-2": {
+      "tex": "a^k{}_m",
+      "brf": "A^K\";M",
+      "input": "<msup><mi>a</mi><mi>k</mi></msup><msub><mrow data-mjx-texclass=\"ORD\"></mrow><mi>m</mi></msub>",
+      "expected": "⠁⠘⠅⠐⠰⠍"
+    },
+    "Section 8_17-3": {
+      "tex": "{}_y{}^xn",
+      "brf": ";Y\"^X\"N",
+      "input": "<msub><mrow data-mjx-texclass=\"ORD\"></mrow><mi>y</mi></msub><msup><mrow data-mjx-texclass=\"ORD\"></mrow><mi>x</mi></msup><mi>n</mi>",
+      "expected": "⠰⠽⠐⠘⠭⠐⠝"
+    },
+    "Section 8_17-4": {
+      "tex": "{}^b{}_an",
+      "brf": "^B\";A\"N",
+      "input": "<msup><mrow data-mjx-texclass=\"ORD\"></mrow><mi>b</mi></msup><msub><mrow data-mjx-texclass=\"ORD\"></mrow><mi>a</mi></msub><mi>n</mi>",
+      "expected": "⠘⠃⠐⠰⠁⠐⠝"
+    },
+    "_comment9_": "Section 8_19",
+    "Section 8_19-1": {
+      "tex": "A^†",
+      "brf": ",A^_]",
+      "input": "<msup><mi>A</mi><mo>&#x2020;</mo></msup>",
+      "expected": "⠠⠁⠘⠸⠻"
+    },
+    "_comment10_": "Section 8_20",
+    "Section 8_20-1": {
+      "tex": "(R_H T_H ) + (R_S T_S )",
+      "brf": "(,R;,H\",T;,H\")+(,R;,S\",T;,S\")",
+      "input": "<mo stretchy=\"false\">(</mo><msub><mi>R</mi><mi>H</mi></msub><msub><mi>T</mi><mi>H</mi></msub><mo stretchy=\"false\">)</mo><mo>+</mo><mo stretchy=\"false\">(</mo><msub><mi>R</mi><mi>S</mi></msub><msub><mi>T</mi><mi>S</mi></msub><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠠⠗⠰⠠⠓⠐⠠⠞⠰⠠⠓⠐⠾⠬⠷⠠⠗⠰⠠⠎⠐⠠⠞⠰⠠⠎⠐⠾"
+    },
+    "Section 8_20-2": {
+      "tex": "(a_1, a_2, a_3 )",
+      "brf": "(A1, A2, A3)",
+      "input": "<mo stretchy=\"false\">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠁⠂⠠⠀⠁⠆⠠⠀⠁⠒⠾"
+    },
+    "_comment11_": "Section 8_21",
+    "Example 8.21-1": {
+      "tex": "(x^2 + y^2 ) − (x^2 + y^2)",
+      "brf": "(X^2\"+Y^2\")-(X^2\"+Y^2\")",
+      "input": "<mo stretchy=\"false\">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy=\"false\">)</mo><mo>&#x2212;</mo><mo stretchy=\"false\">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy=\"false\">)</mo>",
+      "expected": "⠷⠭⠘⠆⠐⠬⠽⠘⠆⠐⠾⠤⠷⠭⠘⠆⠐⠬⠽⠘⠆⠐⠾"
+    },
+    "Example 8.21-2": {
+      "tex": "x_{(a, b)} + y_a",
+      "brf": "X;(A[B)\"+Y;A",
+      "input": "<msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo></mrow></msub><mo>+</mo><msub><mi>y</mi><mi>a</mi></msub>",
+      "expected": "⠭⠰⠷⠁⠪⠃⠾⠐⠬⠽⠰⠁"
+    },
+    "Example 8.21-3": {
+      "tex": "(a^2 )^8 (+2b)^3",
+      "brf": "(A^2\")^8\"(+2B)^3",
+      "input": "<mo stretchy=\"false\">(</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mo stretchy=\"false\">)</mo><mn>8</mn></msup><mo stretchy=\"false\">(</mo><mo>+</mo><mn>2</mn><mi>b</mi><msup><mo stretchy=\"false\">)</mo><mn>3</mn></msup>",
+      "expected": "⠷⠁⠘⠆⠐⠾⠘⠦⠐⠷⠬⠆⠃⠾⠘⠒"
+    },
+    "_comment12_": "Section 8_22",
+    "Section 8_22-1": {
+      "tex": "s]^b_a",
+      "brf": "S@);A^B",
+      "input": "<mi>s</mi><msubsup><mo stretchy=\"false\">]</mo><mi>a</mi><mi>b</mi></msubsup>",
+      "expected": "⠎⠈⠾⠰⠁⠘⠃"
+    },
+    "Section 8_22-2": {
+      "tex": "s_a^b",
+      "brf": "S;A^B",
+      "input": "<msubsup><mi>s</mi><mi>a</mi><mi>b</mi></msubsup>",
+      "expected": "⠎⠰⠁⠘⠃"
+    },
+    "_comment13_": "Section 8_23",
+    "Section 8_23-1": {
+      "tex": "A_{n⌉i}",
+      "brf": ",A;N@^)I",
+      "input": "<msub><mi>A</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo stretchy=\"false\">&#x2309;</mo><mi>i</mi></mrow></msub>",
+      "expected": "⠠⠁⠰⠝⠈⠘⠾⠊"
+    },
+    "Section 8_23-2": {
+      "tex": "⌞x⌟",
+      "brf": "@;(X@;)",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mo>&#x231E;</mo></mrow><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x231F;</mo></mrow>",
+      "expected": "⠈⠰⠷⠭⠈⠰⠾"
+    },
+    "Example 8.23-1": {
+      "tex": " a\\backslash b ≡ ⌊a/b⌋",
+      "brf": "A_*B _L @;(A_/B@;)",
+      "input": "<mi>a</mi><mi mathvariant=\"normal\">&#x2216;</mi><mi>b</mi><mo>&#x2261;</mo><mo stretchy=\"false\">&#x230A;</mo><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>/</mo></mrow><mi>b</mi><mo stretchy=\"false\">&#x230B;</mo>",
+      "expected": "⠁⠸⠡⠃⠀⠸⠇⠀⠈⠰⠷⠁⠸⠌⠃⠈⠰⠾"
+    }
+  }
+}

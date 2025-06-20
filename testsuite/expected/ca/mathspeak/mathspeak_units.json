@@ -1,0 +1,324 @@
+{
+  "name": "CatalanMathspeakUnits",
+  "locale": "ca",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Catalan Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakCatalan",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "compare": true,
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "polzades quadrat"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "polzades quadrat"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "polzades quadrat"
+    },
+    "UnitSquare_1_default": {
+      "expected": "segons quadrat"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "segons quadrat"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "segons quadrat"
+    },
+    "UnitSquare_2_default": {
+      "expected": "metres quadrat"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "metres quadrat"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "metres quadrat"
+    },
+    "UnitCube_0_default": {
+      "expected": "polzades cúbic"
+    },
+    "UnitCube_0_brief": {
+      "expected": "polzades cúbic"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "polzades cúbic"
+    },
+    "UnitCube_1_default": {
+      "expected": "segons cúbic"
+    },
+    "UnitCube_1_brief": {
+      "expected": "segons cúbic"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "segons cúbic"
+    },
+    "UnitCube_2_default": {
+      "expected": "metres cúbic"
+    },
+    "UnitCube_2_brief": {
+      "expected": "metres cúbic"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "metres cúbic"
+    },
+    "UnitInverse_default": {
+      "expected": "recíproc polzades"
+    },
+    "UnitInverse_brief": {
+      "expected": "polzades sup menys 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "polzades sup menys 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "recíproc polzades per mil·límetres"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "polzades sup menys 1 base mil·límetres sup menys 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "polzades sup menys 1 base mil·límetres sup menys 1"
+    },
+    "UnitDivide_default": {
+      "expected": "polzades per mil·límetre"
+    },
+    "UnitDivide_brief": {
+      "expected": "començar frac polzades entre mil·límetres finalitzar frac"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "començar frac polzades entre mil·límetres finalitzar frac"
+    },
+    "UnitsSingle_0": {
+      "expected": "quilòmetres"
+    },
+    "UnitsSingle_1": {
+      "expected": "amperes"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohms"
+    },
+    "UnitsSingle_3": {
+      "expected": "quiloohms"
+    },
+    "UnitsSingle_4": {
+      "expected": "centígrads"
+    },
+    "UnitsSimple_0": {
+      "expected": "mínim minuts"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 quilòmetres"
+    },
+    "UnitsSimple_2": {
+      "expected": "quilòmetres més segons"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "quilòmetres quadrat"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "metres cúbic"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "quilòmetres superíndex 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "recíproc metres"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "segons per metres"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "segons per metre superíndex menys 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "segons per metre superíndex menys 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 recíproc metres"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "quilòmetres per hora"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "newtons quilòmetres per hora"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "començar fracció m entre quilòmetres finalitzar fracció"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 quilòmetres hores"
+    },
+    "UnitsExpressions_0": {
+      "expected": "segons 3 m quilòmetres hores"
+    },
+    "UnitsExpressions_1": {
+      "expected": "quilòmetres segons quadrat 3 m quilòmetres hores"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m quilòmetres hores començar fracció majúscula N entre segons quadrat finalitzar fracció"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m quilòmetres hores newtons per segon quadrat"
+    },
+    "UnitPlural_1": {
+      "expected": "4 mil·límetres"
+    },
+    "UnitPlural_2": {
+      "expected": "1 mil·límetre"
+    },
+    "UnitPlural_3": {
+      "expected": "4 mil·límetres"
+    },
+    "UnitPlural_4": {
+      "expected": "1 mil·límetre"
+    },
+    "UnitCombine_0": {
+      "expected": "metres segons"
+    },
+    "UnitCombine_1": {
+      "expected": "m segons"
+    },
+    "UnitCombine_2": {
+      "expected": "metres s"
+    },
+    "UnitCombine_3": {
+      "expected": "metres segons"
+    },
+    "UnitCombine_4": {
+      "expected": "m segons"
+    },
+    "UnitCombine_5": {
+      "expected": "metres s"
+    },
+    "UnitCombine_6": {
+      "expected": "metres segons litres"
+    },
+    "issue_364_1": {
+      "expected": "63360 polzades igual 63360 polzades igual 63360 dos prima igual 63360 inches igual 5280 peus igual 5280 peus igual 5280 prima igual 5280 feet igual 1760 iardes igual 1760 iardes igual 1760 yards igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 links igual 8000 links igual 8000 links igual 320 rods igual 320 rods igual 320 rods igual 80 cadenes igual 80 cadenes igual 80 chains igual 8 furlongs igual 8 furlongs igual 8 furlongs igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 polzades quadrades igual 43560 polzades quadrades igual 43560 peus quadrat igual 43560 prima al quadrat igual 43560 square feet igual 4840 iardes quadrades igual 4840 iardes quadrades igual 4840 iardes quadrat igual 4840 square yards igual 160 rods quadrats igual 160 rods quadrats igual 160 rods quadrat igual 160 square rods igual 1 acre igual 1 acre igual 1 acre igual començar fracció 1 entre 640 finalitzar fracció milles quadrades igual començar fracció 1 entre 640 finalitzar fracció milles quadrades igual començar fracció 1 entre 640 finalitzar fracció milles quadrat igual començar fracció 1 entre 640 finalitzar fracció square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 plozades cúbiques igual 46656 plozades cúbiques igual 46656 polzades cúbic igual 46656 dos prima al cub igual 46656 cubic inches igual 27 peus cúbics igual 27 peus cúbics igual 27 peus cúbic igual 27 prima al cub igual 27 cubic feet igual 1 iarda cúbica igual 1 iarda cúbica igual 1 iarda cúbic igual 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 dracmes líquides igual 1024 dracmes líquides igual 1024 fluid drams igual 768 culleradetes igual 768 culleradetes igual 768 teaspoons igual 256 cullerades igual 256 cullerades igual 256 tablespoons igual 128 unces líquides igual 128 unces líquides igual 128 fluid ounces igual 16 tasses igual 16 tasses igual 16 cups igual 8 pintes igual 8 pintes igual 8 pints igual 4 quarts igual 4 quarts igual 4 quarts igual 1 galó igual 1 galó igual 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 dracmes igual 256 dracmes igual 256 drams igual 16 unces igual 16 unces igual 16 ounces igual 1 # igual 1 lliura igual 1 lliura igual 1 pounds igual 100 centenes igual 100 centenes igual 100 hundredweights igual 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 polzades igual 63360 polzades igual 63360 dos prima igual 63360 inches igual 5280 peus igual 5280 peus igual 5280 prima igual 5280 feet igual 1760 iardes igual 1760 iardes igual 1760 yards igual 1 milla igual 1 milla igual 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule igual 1 quilogram metres quadrat segons superíndex menys 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule igual 1 quilogram per metres quadrat segons superíndex menys 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule igual 1 quilogram per metres quadrat segons superíndex menys 2"
+    },
+    "unit_cube": {
+      "expected": "polzades cúbic"
+    },
+    "UnitDiv_0": {
+      "expected": "quilòmetres quilograms segons quadrat per joule"
+    },
+    "UnitDiv_1": {
+      "expected": "començar fracció 3 quilòmetres 1 quilogram per segons quadrat entre joules finalitzar fracció"
+    },
+    "UnitDiv_2": {
+      "expected": "començar fracció 1 quilòmetre per quilograms segons quadrat entre joules finalitzar fracció"
+    },
+    "UnitDiv_3": {
+      "expected": "començar fracció 1 quilòmetre per quilograms segons quadrat entre 5 joules finalitzar fracció"
+    },
+    "UnitKm": {
+      "expected": "quilòmetres"
+    },
+    "UnitLong_1": {
+      "expected": "3 quilòmetres quilograms segons quadrat joules"
+    },
+    "UnitLong_2": {
+      "expected": "3 quilòmetres quilograms segons quadrat joules"
+    },
+    "UnitLong_3": {
+      "expected": "3 quilòmetres 4 quilograms segons quadrat joules"
+    },
+    "UnitLong_4": {
+      "expected": "3 quilòmetres 1 quilogram per segons quadrat joules"
+    },
+    "UnitMultiple": {
+      "expected": "1 quilòmetre per segons més 2 quilòmetres segons més 0 quilòmetres segons més a quilòmetres segons més"
+    },
+    "UnitMultitude": {
+      "expected": "1 quilòmetre més 2 quilòmetres més 0 quilòmetres més a quilòmetres"
+    },
+    "UnitNumb_0": {
+      "expected": "1 més començar fracció 2 entre 3 finalitzar fracció quilograms"
+    },
+    "UnitNumb_1": {
+      "expected": "1 més començar fracció 2 entre 3 finalitzar fracció quilograms quilòmetres"
+    },
+    "UnitNumb_2": {
+      "expected": "1 quilòmetre 2 quilograms quilòmetres"
+    },
+    "UnitTriple": {
+      "expected": "1 quilòmetre per quilograms segons més 2 quilòmetres quilograms segons més 0 quilòmetres quilograms segons més a quilòmetres quilograms segons més"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dòlar"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "dòlars 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dòlars"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dòlars"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dòlars"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "dòlars 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dòlar més 2 dòlars més 0 dòlars més a dòlars"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dòlar més dòlars 2 més 0 dòlars més dòlars a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro més 2 euros més 0 euros més a euros"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 penic més 2 penics més 0 penics més a penics"
+    }
+  }
+}

@@ -1,0 +1,456 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration bad input tests.",
+  "base": "input/semantic/bad_input.json",
+  "tests": {
+    "Layout_Underspec_0": {
+      "expected": 0
+    },
+    "Layout_Underspec_1": {
+      "expected": 0
+    },
+    "Layout_Underspec_2": {
+      "expected": 0
+    },
+    "Layout_Underspec_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Layout_Underspec_4": {
+      "expected": 0
+    },
+    "Layout_Underspec_5": {
+      "expected": 0
+    },
+    "Layout_Underspec_6": {
+      "expected": 0
+    },
+    "Layout_Underspec_7": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Layout_Overspec_0": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Layout_Overspec_1": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Layout_Overspec_2": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "Layout_Overspec_3": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Layout_Overspec_4": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Layout_Overspec_5": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "Layout_Empty_0": {
+      "expected": 0
+    },
+    "Layout_Empty_1": {
+      "expected": 0
+    },
+    "Layout_Empty_2": {
+      "expected": 0
+    },
+    "Layout_Empty_3": {
+      "expected": 0
+    },
+    "Layout_Empty_4": {
+      "expected": 0
+    },
+    "Layout_Empty_5": {
+      "expected": 0
+    },
+    "Limit_Underspec_0": {
+      "expected": 0
+    },
+    "Limit_Underspec_1": {
+      "expected": 0
+    },
+    "Limit_Underspec_2": {
+      "expected": 0
+    },
+    "Limit_Underspec_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Limit_Underspec_4": {
+      "expected": 0
+    },
+    "Limit_Underspec_5": {
+      "expected": 0
+    },
+    "Limit_Underspec_6": {
+      "expected": 0
+    },
+    "Limit_Underspec_7": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Limit_Overspec_0": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Limit_Overspec_1": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Limit_Overspec_2": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "Limit_Overspec_3": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Limit_Overspec_4": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Limit_Overspec_5": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "Bigop_Underspec_0": {
+      "expected": 0
+    },
+    "Bigop_Underspec_1": {
+      "expected": 0
+    },
+    "Bigop_Underspec_2": {
+      "expected": 0
+    },
+    "Bigop_Underspec_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Bigop_Underspec_4": {
+      "expected": 0
+    },
+    "Bigop_Underspec_5": {
+      "expected": 0
+    },
+    "Bigop_Underspec_6": {
+      "expected": 0
+    },
+    "Bigop_Underspec_7": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Integral_Underspec_0": {
+      "expected": 0
+    },
+    "Integral_Underspec_1": {
+      "expected": 0
+    },
+    "Integral_Underspec_2": {
+      "expected": 0
+    },
+    "Integral_Underspec_3": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Integral_Underspec_4": {
+      "expected": 0
+    },
+    "Integral_Underspec_5": {
+      "expected": 0
+    },
+    "Integral_Underspec_6": {
+      "expected": 0
+    },
+    "Integral_Underspec_7": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Fraction_Underspec": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Fraction_Empty": {
+      "expected": 0
+    },
+    "Fraction_Overspec": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Root_Underspec": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Root_Empty": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Root_Overspec": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Sqrt_Display_0": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Sqrt_Display_1": {
+      "expected": [
+        4,
+        [
+          1,
+          0
+        ],
+        3,
+        2
+      ]
+    },
+    "Sqrt_Display_2": {
+      "expected": [
+        7,
+        [
+          6,
+          [
+            1,
+            0
+          ],
+          5,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "Sqrt_Display_3": {
+      "expected": [
+        4,
+        [
+          1,
+          0
+        ],
+        3,
+        2
+      ]
+    },
+    "Root_Display_0": {
+      "expected": [
+        4,
+        [
+          1,
+          0
+        ],
+        3,
+        2
+      ]
+    },
+    "Root_Display_1": {
+      "expected": [
+        7,
+        [
+          6,
+          [
+            1,
+            0
+          ],
+          5,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "Root_Display_2": {
+      "expected": [
+        4,
+        [
+          1,
+          0
+        ],
+        3,
+        2
+      ]
+    },
+    "Orphaned_Glyph_0": {
+      "expected": 0
+    },
+    "Orphaned_Glyph_1": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "Orphaned_Glyph_2": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "Orphaned_Glyph_3": {
+      "expected": [
+        6,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2,
+        3
+      ]
+    },
+    "Orphaned_Glyph_4": {
+      "expected": [
+        4,
+        [
+          1,
+          0
+        ],
+        3,
+        2
+      ]
+    },
+    "Rubbish_0": {
+      "expected": 0
+    },
+    "Rubbish_1": {
+      "expected": 0
+    },
+    "Rubbish_2": {
+      "expected": 0
+    },
+    "Rubbish_3": {
+      "expected": 0
+    },
+    "Rubbish_4": {
+      "expected": 0
+    },
+    "Rubbish_5": {
+      "expected": 0
+    },
+    "Rubbish_6": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Rubbish_7": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Rubbish_8": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Rubbish_9": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Rubbish_10": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "Rubbish_11": {
+      "expected": [
+        1,
+        0
+      ]
+    }
+  }
+}

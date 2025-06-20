@@ -1,0 +1,421 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakFractions",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "Italian Clearspeak Fractions rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Frac001": {
+      "expected": "un mezzo"
+    },
+    "Frac002": {
+      "expected": "12 fratto 32"
+    },
+    "Frac002a": {
+      "expected": "x fratto y"
+    },
+    "Frac002b": {
+      "expected": "2 x fratto 3 y"
+    },
+    "Frac002c": {
+      "expected": "x y fratto c d"
+    },
+    "Frac002d": {
+      "expected": "un mezzo fratto un terzo"
+    },
+    "Frac002e": {
+      "expected": "meno x fratto y"
+    },
+    "Frac002f": {
+      "expected": "meno 2 x fratto 3 y"
+    },
+    "Frac002g": {
+      "expected": "x y fratto meno c d"
+    },
+    "Frac002h": {
+      "expected": "un mezzo fratto meno un terzo"
+    },
+    "Frac003": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13"
+    },
+    "Frac004": {
+      "expected": "frazione con numeratore x più y, e denominatore 2"
+    },
+    "Frac005": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y"
+    },
+    "Frac006": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, più due terzi"
+    },
+    "Frac007": {
+      "expected": "miles fratto gallon"
+    },
+    "Frac008": {
+      "expected": "2 miles fratto 3 gallons"
+    },
+    "Frac009": {
+      "expected": "1 fratto 2"
+    },
+    "Frac010": {
+      "expected": "12 fratto 32"
+    },
+    "Frac011": {
+      "expected": "2 più 3 fratto 13"
+    },
+    "Frac012": {
+      "expected": "x più y fratto 2"
+    },
+    "Frac013": {
+      "expected": "x più y fratto x meno y"
+    },
+    "Frac014": {
+      "expected": "x più y fratto x meno y, più, 2 fratto 3"
+    },
+    "Frac015": {
+      "expected": "miles fratto gallon"
+    },
+    "Frac016": {
+      "expected": "2 miles fratto 3 gallons"
+    },
+    "Frac017": {
+      "expected": "1 fratto 2, fine frazione"
+    },
+    "Frac018": {
+      "expected": "12 fratto 32, fine frazione"
+    },
+    "Frac019": {
+      "expected": "2 più 3 fratto 13, fine frazione"
+    },
+    "Frac020": {
+      "expected": "x più y fratto 2, fine frazione"
+    },
+    "Frac021": {
+      "expected": "x più y fratto x meno y, fine frazione"
+    },
+    "Frac022": {
+      "expected": "x più y fratto x meno y, fine frazione, più, 2 fratto 3, fine frazione"
+    },
+    "Frac023": {
+      "expected": "miles fratto gallons, fine frazione"
+    },
+    "Frac024": {
+      "expected": "2 miles fratto 3 gallons, fine frazione"
+    },
+    "Frac025": {
+      "expected": "frazione con numeratore 1, e denominatore 2, fine frazione"
+    },
+    "Frac026": {
+      "expected": "frazione con numeratore 12, e denominatore 32, fine frazione"
+    },
+    "Frac027": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13, fine frazione"
+    },
+    "Frac028": {
+      "expected": "frazione con numeratore x più y, e denominatore 2, fine frazione"
+    },
+    "Frac029": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, fine frazione"
+    },
+    "Frac030": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, fine frazione, più, frazione con numeratore 2, e denominatore 3, fine frazione"
+    },
+    "Frac031": {
+      "expected": "frazione con numeratore miles, e denominatore gallon, fine frazione"
+    },
+    "Frac032": {
+      "expected": "frazione con numeratore 1, e denominatore 2"
+    },
+    "Frac033": {
+      "expected": "frazione con numeratore 12, e denominatore 32"
+    },
+    "Frac034": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13"
+    },
+    "Frac035": {
+      "expected": "frazione con numeratore x più y, e denominatore 2"
+    },
+    "Frac036": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y"
+    },
+    "Frac037": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, più, frazione con numeratore 2, e denominatore 3"
+    },
+    "Frac038": {
+      "expected": "frazione con numeratore miles, e denominatore gallon"
+    },
+    "Frac039": {
+      "expected": "frazione con numeratore 2 miles, e denominatore 3 gallons"
+    },
+    "Frac040": {
+      "expected": "frazione 1 fratto 2"
+    },
+    "Frac041": {
+      "expected": "frazione 12 fratto 32"
+    },
+    "Frac042": {
+      "expected": "frazione 2 più 3 fratto 13"
+    },
+    "Frac043": {
+      "expected": "frazione x più y fratto 2"
+    },
+    "Frac044": {
+      "expected": "frazione x più y fratto x meno y"
+    },
+    "Frac045": {
+      "expected": "frazione x più y fratto x meno y, più, frazione 2 fratto 3"
+    },
+    "Frac046": {
+      "expected": "frazione miles fratto gallon"
+    },
+    "Frac047": {
+      "expected": "frazione 2 miles fratto 3 gallons"
+    },
+    "Frac048": {
+      "expected": "un mezzo"
+    },
+    "Frac049": {
+      "expected": "12 fratto 32"
+    },
+    "Frac050": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13"
+    },
+    "Frac051": {
+      "expected": "frazione con numeratore x più y, e denominatore 2"
+    },
+    "Frac052": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y"
+    },
+    "Frac053": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, più due terzi"
+    },
+    "Frac054": {
+      "expected": "miles per gallon"
+    },
+    "Frac055": {
+      "expected": "2 miles per 3 gallons"
+    },
+    "Frac056": {
+      "expected": "un mezzo"
+    },
+    "Frac057": {
+      "expected": "dodici trentaduesimi"
+    },
+    "Frac058": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13"
+    },
+    "Frac059": {
+      "expected": "frazione con numeratore x più y, e denominatore 2"
+    },
+    "Frac060": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y"
+    },
+    "Frac061": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, più due terzi"
+    },
+    "Frac062": {
+      "expected": "miles fratto gallon"
+    },
+    "Frac063": {
+      "expected": "2 miles fratto 3 gallons"
+    },
+    "Frac064": {
+      "expected": "un mezzo"
+    },
+    "Frac065": {
+      "expected": "12 fratto 32, fine frazione"
+    },
+    "Frac066": {
+      "expected": "frazione con numeratore 2 più 3, e denominatore 13, fine frazione"
+    },
+    "Frac067": {
+      "expected": "frazione con numeratore x più y, e denominatore 2, fine frazione"
+    },
+    "Frac068": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, fine frazione"
+    },
+    "Frac069": {
+      "expected": "frazione con numeratore x più y, e denominatore x meno y, fine frazione, più due terzi"
+    },
+    "Frac070": {
+      "expected": "miles fratto gallons"
+    },
+    "Frac071": {
+      "expected": "2 miles fratto 3 gallons"
+    },
+    "FrTxt001": {
+      "expected": "2 miles fratto 3 gallons"
+    },
+    "FrTxt002": {
+      "expected": "rise fratto run"
+    },
+    "FrTxt003": {
+      "expected": "successful outcomes fratto total outcomes"
+    },
+    "FrTxt004": {
+      "expected": "6 ways of rolling a 7 fratto 36 ways of rolling the pair of dice"
+    },
+    "NestFrac001": {
+      "expected": "un mezzo fratto un terzo"
+    },
+    "NestFrac002": {
+      "expected": "frazione con numeratore 1, e denominatore, 2 fratto un terzo"
+    },
+    "NestFrac003": {
+      "expected": "un mezzo fratto 3"
+    },
+    "NestFrac004": {
+      "expected": "1 fratto due terzi"
+    },
+    "NestFrac005": {
+      "expected": "frazione con numeratore, 11 fratto 32, e denominatore, 16 fratto 51"
+    },
+    "NestFrac006": {
+      "expected": "frazione con numeratore 11, e denominatore, frazione con numeratore 32, e denominatore, 16 fratto 51"
+    },
+    "NestFrac007": {
+      "expected": "frazione con numeratore 1 più, 4 fratto x, e denominatore 2"
+    },
+    "NestFrac008": {
+      "expected": "frazione con numeratore 3, e denominatore 2 più, 4 fratto x"
+    },
+    "NestFrac009": {
+      "expected": "frazione con numeratore, 10 fratto 22, e denominatore un mezzo"
+    },
+    "NestFrac010": {
+      "expected": "frazione con numeratore 1 più due terzi, e denominatore 1 meno due terzi"
+    },
+    "NestFrac011": {
+      "expected": "frazione con numeratore 1 più, x fratto 2, e denominatore 1 meno, x fratto 2"
+    },
+    "NestFrac012": {
+      "expected": "frazione con numeratore, frazione con numeratore x più 1, e denominatore x meno 1, più 1, e denominatore x più 1"
+    },
+    "NestFrac013": {
+      "expected": "frazione con numeratore, frazione con numeratore x più 1, e denominatore x meno 4, più un mezzo, e denominatore x più, 1 fratto 16"
+    },
+    "NestFrac014": {
+      "expected": "1 più, frazione con numeratore x, e denominatore 1 più, 2 fratto x"
+    },
+    "NestFrac015": {
+      "expected": "1 più, frazione con numeratore x più 3, e denominatore 1 più, frazione con numeratore 2, e denominatore x più 3"
+    },
+    "NestFrac016": {
+      "expected": "1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più 1"
+    },
+    "NestFrac017": {
+      "expected": "1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più puntini in orizzontale"
+    },
+    "NestFrac018": {
+      "expected": "a pedice 0, più, frazione con numeratore 1, e denominatore, a pedice 1, più, frazione con numeratore 1, e denominatore, a pedice 2, più, frazione con numeratore 1, e denominatore, a pedice 3, più puntini in orizzontale"
+    },
+    "NestFrac019": {
+      "expected": "un mezzo fratto un terzo"
+    },
+    "NestFrac020": {
+      "expected": "frazione con numeratore 1, e denominatore, 2 fratto un terzo, fine frazione"
+    },
+    "NestFrac021": {
+      "expected": "un mezzo fratto 3, fine frazione"
+    },
+    "NestFrac022": {
+      "expected": "1 fratto due terzi, fine frazione"
+    },
+    "NestFrac023": {
+      "expected": "frazione con numeratore, 11 fratto 32, e denominatore, 16 fratto 51, fine frazione"
+    },
+    "NestFrac024": {
+      "expected": "frazione con numeratore 11, e denominatore, frazione con numeratore 32, e denominatore, 16 fratto 51, fine frazione"
+    },
+    "NestFrac025": {
+      "expected": "frazione con numeratore 1 più, 4 fratto x, e denominatore 2, fine frazione"
+    },
+    "NestFrac026": {
+      "expected": "frazione con numeratore 3, e denominatore 2 più, 4 fratto x, fine frazione"
+    },
+    "NestFrac027": {
+      "expected": "frazione con numeratore, 10 fratto 22, e denominatore un mezzo, fine frazione"
+    },
+    "NestFrac028": {
+      "expected": "frazione con numeratore 1 più due terzi, e denominatore 1 meno due terzi, fine frazione"
+    },
+    "NestFrac029": {
+      "expected": "frazione con numeratore 1 più, x fratto 2, e denominatore 1 meno, x fratto 2, fine frazione"
+    },
+    "NestFrac030": {
+      "expected": "frazione con numeratore, frazione con numeratore x più 1, e denominatore x meno 1, più 1, e denominatore x più 1, fine frazione"
+    },
+    "NestFrac031": {
+      "expected": "frazione con numeratore, frazione con numeratore x più 1, e denominatore x meno 4, più un mezzo, e denominatore x più, 1 fratto 16, fine frazione"
+    },
+    "NestFrac032": {
+      "expected": "1 più, frazione con numeratore x, e denominatore 1 più, 2 fratto x, fine frazione"
+    },
+    "NestFrac033": {
+      "expected": "1 più, frazione con numeratore x più 3, e denominatore 1 più, frazione con numeratore 2, e denominatore x più 3, fine frazione"
+    },
+    "NestFrac034": {
+      "expected": "1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più 1, fine frazione"
+    },
+    "NestFrac035": {
+      "expected": "1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più, frazione con numeratore 1, e denominatore 1 più puntini in orizzontale, fine frazione"
+    },
+    "NestFrac036": {
+      "expected": "a pedice 0, più, frazione con numeratore 1, e denominatore, a pedice 1, più, frazione con numeratore 1, e denominatore, a pedice 2, più, frazione con numeratore 1, e denominatore, a pedice 3, più puntini in orizzontale, fine frazione"
+    },
+    "Fracfunct001": {
+      "expected": "f di x, fratto g di x"
+    },
+    "Fracfunct002": {
+      "expected": "frazione con numeratore f di x, più g di x, e denominatore g di x"
+    },
+    "Fracfunct003": {
+      "expected": "frazione con numeratore f di, parentesi tonda aperta, x più 1, parentesi tonda chiusa, e denominatore g di x"
+    },
+    "Fracfunct004": {
+      "expected": "f di x, fratto 2"
+    },
+    "Fracfunct005": {
+      "expected": "2 fratto f di x"
+    },
+    "Fracfunct006": {
+      "expected": "frazione con numeratore 2, e denominatore g di x, più g di, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "Fracfunct007": {
+      "expected": "seno di x fratto coseno di x"
+    },
+    "Fracfunct009": {
+      "expected": "frazione con numeratore seno di x più coseno di x, e denominatore coseno di x"
+    },
+    "Fracfunct010": {
+      "expected": "seno di 2 x fratto coseno di 3 x"
+    },
+    "Fracfunct011": {
+      "expected": "frazione con numeratore, seno di, parentesi tonda aperta, x più y, parentesi tonda chiusa, e denominatore, coseno di, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "Fracfunct012": {
+      "expected": "f di 2 x, fratto g di 3 x"
+    },
+    "Fracfunct013": {
+      "expected": "logaritmo di x fratto logaritmo di y"
+    },
+    "Fracfunct014": {
+      "expected": "logaritmo di 2 x fratto logaritmo di 3 y"
+    },
+    "Fracfunct015": {
+      "expected": "logaritmo base 10 di, x, fratto, logaritmo base 5 di, y"
+    },
+    "Fracfunct016": {
+      "expected": "logaritmo base 10 di, 2 x, fratto, logaritmo base 5 di, 3 y"
+    },
+    "Fracfunct017": {
+      "expected": "frazione con numeratore, logaritmo di, parentesi tonda aperta, x più 1, parentesi tonda chiusa, e denominatore logaritmo di y"
+    },
+    "Fracfunct018": {
+      "expected": "f pedice 1, di x, fratto, g pedice 1, di x"
+    }
+  }
+}

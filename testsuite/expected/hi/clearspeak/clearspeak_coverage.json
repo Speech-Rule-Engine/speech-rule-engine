@@ -1,0 +1,279 @@
+{
+  "name": "HindiClearspeakCoverage",
+  "locale": "hi",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Hindi Clearspeak Coverage tests.",
+  "active": "ClearspeakHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "एक्स का फलन जी, का फलन, एफ"
+    },
+    "ApplSimple_1": {
+      "expected": "एक्स का फलन जी, का फलन, एफ, बराबर का चिह्न, एक्स का फलन एफ, धन चिह्न, एक्स का फलन जी"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "साइन एक्स वाई"
+    },
+    "Empty_Line_0": {
+      "expected": "2 रेखाएं, रेखा 1: ए. रेखा 2: रिक्त"
+    },
+    "Empty_Line_1": {
+      "expected": "2 रेखाएं, रेखा 1: ए. रेखा 2: रिक्त"
+    },
+    "Empty_Line_2": {
+      "expected": "2 रेखाएं, रेखा 1: ए. रेखा 2: रिक्त"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 रेखाएं, रेखा 1: ए; बराबर का चिह्न; बी"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 रेखाएं, रेखा 1: ए; बराबर का चिह्न; बी. रेखा 2: रिक्त"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 रेखाएं, रेखा 1: ए; बराबर का चिह्न; बी. रेखा 2: रिक्त"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 रेखाएं, रेखा 1: ए; बराबर का चिह्न; बी. रेखा 2: 1; रिक्त; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_1_default": {
+      "expected": "1 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_2_default": {
+      "expected": "45 अंश, 1 मिनट, 20 सेकंड"
+    },
+    "Angle_3_default": {
+      "expected": "45 अंश, 10 मिनट, 1 सेकंड"
+    },
+    "Angle_4_default": {
+      "expected": "1 फुट, 20 इंच"
+    },
+    "Angle_5_default": {
+      "expected": "10 फिट, 1 इंच"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 अंश, 1 मिनट, 20 सेकंड"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 अंश, 10 मिनट, 1 सेकंड"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 मिनट, 20 सेकंड"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 मिनट, 1 सेकंड"
+    },
+    "Angle_0_Length": {
+      "expected": "45 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_1_Length": {
+      "expected": "1 अंश, 10 मिनट, 20 सेकंड"
+    },
+    "Angle_2_Length": {
+      "expected": "45 अंश, 1 मिनट, 20 सेकंड"
+    },
+    "Angle_3_Length": {
+      "expected": "45 अंश, 10 मिनट, 1 सेकंड"
+    },
+    "Angle_4_Length": {
+      "expected": "1 फुट, 20 इंच"
+    },
+    "Angle_5_Length": {
+      "expected": "10 फिट, 1 इंच"
+    },
+    "Enclose_0": {
+      "expected": "12"
+    },
+    "Enclose_1": {
+      "expected": "12"
+    },
+    "Enclose_2": {
+      "expected": "2 के हर में 12"
+    },
+    "Enclose_3": {
+      "expected": "12 के हर में 2"
+    },
+    "Enclose_4": {
+      "expected": "12 के निचे 2"
+    },
+    "Enclose_5": {
+      "expected": "2 के निचे 12"
+    },
+    "Enclose_6": {
+      "expected": "12"
+    },
+    "Enclose_7": {
+      "expected": "12"
+    },
+    "Enclose_8": {
+      "expected": "2 के हर में 12"
+    },
+    "Enclose_9": {
+      "expected": "12 के हर में 2"
+    },
+    "Enclose_10": {
+      "expected": "12 के निचे 2"
+    },
+    "Enclose_11": {
+      "expected": "2 के निचे 12"
+    },
+    "EncloseSpecial_0": {
+      "expected": "कैपिटल ए"
+    },
+    "EncloseSpecial_1": {
+      "expected": "कैपिटल ए"
+    },
+    "EncloseSpecial_2": {
+      "expected": "कैपिटल ए"
+    },
+    "EncloseSpecial_3": {
+      "expected": "कैपिटल ए"
+    },
+    "NestedRoots_0": {
+      "expected": "ए का घनमूल, धन चिह्न बी का वर्गमूल"
+    },
+    "NestedRoots_1": {
+      "expected": "ए चौथा का मूल, धन चिह्न बी का वर्गमूल"
+    },
+    "NestedRoots_2": {
+      "expected": "ए का वर्गमूल, धन चिह्न बी का वर्गमूल"
+    },
+    "NestedRoots_3": {
+      "expected": "ए का धनात्मक वर्गमूल, धन चिह्न बी का धनात्मक वर्गमूल"
+    },
+    "NestedRoots_4": {
+      "expected": "ए का धनात्मक वर्गमूल, धन चिह्न बी का धनात्मक वर्गमूल, मूल समाप्त"
+    },
+    "NestedRoots_5": {
+      "expected": "ए का ऋणात्मक वर्गमूल, मूल समाप्त, धन चिह्न बी का धनात्मक वर्गमूल, मूल समाप्त"
+    },
+    "Tensor_0": {
+      "expected": "वाम पाद ए वाम उर्ध्व बी एक्स दक्षिण पाद सी दक्षिण उर्ध्व डी"
+    },
+    "Tensor_1": {
+      "expected": "वाम पाद ए बी वाम उर्ध्व जी एच एक्स दक्षिण पाद सी डी दक्षिण उर्ध्व ई एफ"
+    },
+    "Tensor_2": {
+      "expected": "वाम पाद ए वाम उर्ध्व बी एक्स; दक्षिण उर्ध्व डी"
+    },
+    "Tensor_3": {
+      "expected": "वाम पाद ए वाम उर्ध्व बी एक्स दक्षिण पाद सी; आर"
+    },
+    "Tensor_4": {
+      "expected": "एल; वाम उर्ध्व बी एक्स दक्षिण पाद सी दक्षिण उर्ध्व डी"
+    },
+    "Tensor_5": {
+      "expected": "वाम पाद ए; एक्स दक्षिण पाद सी दक्षिण उर्ध्व डी"
+    },
+    "Set_0": {
+      "expected": "ए में नही सभीं एक्स का समुच्चय जिस में बी"
+    },
+    "Set_1": {
+      "expected": "ए में नही सभीं एक्स का समुच्चय जिस में बी"
+    },
+    "Set_2": {
+      "expected": "ए में नही सभीं एक्स का समुच्चय जिस में बी"
+    },
+    "Set_3": {
+      "expected": "ए में नही सभीं एक्स का समुच्चय जिस में बी"
+    },
+    "Set_4": {
+      "expected": "समुच्चय बी"
+    },
+    "Set_5": {
+      "expected": "रिक्त समुच्चय"
+    },
+    "NamedSet_0": {
+      "expected": "धनात्मक परिमेय संख्याएं"
+    },
+    "NamedSet_1": {
+      "expected": "धनात्मक परिमेय संख्याएं"
+    },
+    "NamedSet_2": {
+      "expected": "ऋणात्मक परिमेय संख्याएं"
+    },
+    "NamedSet_3": {
+      "expected": "ऋणात्मक परिमेय संख्याएं"
+    },
+    "NamedSet_4": {
+      "expected": "क्यू-दो"
+    },
+    "NamedSet_5": {
+      "expected": "क्यू-दो"
+    },
+    "NamedSet_6": {
+      "expected": "एन-दो"
+    },
+    "NamedSet_7": {
+      "expected": "एन-दो"
+    },
+    "Unknown": {
+      "expected": "ए"
+    },
+    "MultiLines_0": {
+      "expected": "2 फलन उपशर्त, फलन उपशर्त 1:, एक्स का फलन एफ, बराबर का चिह्न ऋण एक्स, if एक्स कम है 0. फलन उपशर्त 2:, एक्स का फलन एफ, बराबर का चिह्न एक्स, if एक्स अधिक या समान है 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 व्यवरोध, व्यवरोध 1:, एक्स का फलन एफ, बराबर का चिह्न ऋण एक्स; if एक्स कम है 0. व्यवरोध 2:, एक्स का फलन एफ, बराबर का चिह्न एक्स, if एक्स अधिक या समान है 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 के हर में 20"
+    },
+    "UnitFraction": {
+      "expected": "2 किलोमीटर के हर में बी"
+    },
+    "Decimal": {
+      "expected": "पुनरावर्तित दशमलव 1 दशमलव 4 के बाद पुनरावर्तित अंक 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 जैसा की 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "2 बाय 2 आव्यूह का सारणिक. पंक्ति 1: 2, 1 पंक्ति 2: 7, 5. सारणिक समाप्त"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 का घात 2 वर्गित घातांक"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 का घात आय वर्गित घातांक"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 का घात दो तृतीयांश वर्गित घातांक"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 का घात 2 घनित घातांक"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 का घात आय घनित घातांक"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 का घात दो तृतीयांश घनित घातांक"
+    },
+    "MultiRel": {
+      "expected": "ए से कम या बराबर बी बराबर का चिह्न सी"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 का घात साइन का फलन, कोष्ठ आरंभ, 2 धन चिह्न एक्स, कोष्ठ अंत, घातांक"
+    },
+    "CompositeFunctionFences": {
+      "expected": "कोष्ठ आरंभ, 2 धन चिह्न एक्स, कोष्ठ अंत, का फलन, कोष्ठ आरंभ, एफ धन चिह्न जी, कोष्ठ अंत"
+    },
+    "LimUpper": {
+      "expected": "योग चिह्न के निचे आय"
+    },
+    "Overscript": {
+      "expected": "ए के निचे बी"
+    }
+  }
+}

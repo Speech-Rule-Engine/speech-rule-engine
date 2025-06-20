@@ -1,0 +1,214 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakPart2Symbols",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "Swedish Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "X001": {
+      "expected": "6 gånger 8"
+    },
+    "X002": {
+      "expected": "m gånger n"
+    },
+    "X003": {
+      "expected": "3 gånger 3"
+    },
+    "X004": {
+      "expected": "6 gånger 8"
+    },
+    "X005": {
+      "expected": "m gånger n"
+    },
+    "X006": {
+      "expected": "3 gånger 3"
+    },
+    "X007": {
+      "expected": "u gånger v"
+    },
+    "Dot001": {
+      "expected": "6 punkt 8"
+    },
+    "Dot002": {
+      "expected": "m punkt n"
+    },
+    "Dot003": {
+      "expected": "3 punkt 3"
+    },
+    "Dot004": {
+      "expected": "6 punkt 8"
+    },
+    "Dot005": {
+      "expected": "m punkt n"
+    },
+    "Dot006": {
+      "expected": "3 punkt 3"
+    },
+    "Triangle001": {
+      "expected": "triangel A B C"
+    },
+    "Triangle002": {
+      "expected": "triangel D E F"
+    },
+    "Triangle003": {
+      "expected": "Delta x"
+    },
+    "Triangle004": {
+      "expected": "f av, öppna, x plus Delta x, stäng"
+    },
+    "Ellipses001": {
+      "expected": "1 komma 2 komma 3 komma punkt punkt punkt"
+    },
+    "Ellipses002": {
+      "expected": "1 komma 2 komma 3 komma punkt punkt punkt komma 20"
+    },
+    "Ellipses003": {
+      "expected": "punkt punkt punkt komma, minus 2, komma, minus 1, komma 0 komma 1 komma 2 komma punkt punkt punkt"
+    },
+    "Ellipses004": {
+      "expected": "1 komma 2 komma 3 komma och så vidare"
+    },
+    "Ellipses005": {
+      "expected": "1 komma 2 komma 3 komma och så vidare till och med komma 20"
+    },
+    "Ellipses006": {
+      "expected": "punkt punkt punkt komma, minus 2, komma, minus 1, komma 0 komma 1 komma 2 komma punkt punkt punkt"
+    },
+    "VertLine001": {
+      "expected": "3 delar 6"
+    },
+    "VertLine002": {
+      "expected": "hela mängden x med x större än 0"
+    },
+    "VertLine003": {
+      "expected": "hela mängden x med, absolutvärdet av x, större än 2"
+    },
+    "VertLine004": {
+      "expected": "f av x, evaluerad vid x är lika med 5"
+    },
+    "VertLine005": {
+      "expected": "x kvadrat plus 2 x, evaluerad vid x är lika med 2"
+    },
+    "VertLine006": {
+      "expected": "x kvadrat plus x, evaluerad vid 1, minus samma uttryck evaluerat vid 0"
+    },
+    "VertLine007": {
+      "expected": "hela mängden x med x större än 0"
+    },
+    "VertLine008": {
+      "expected": "3 delar 6"
+    },
+    "VertLine009": {
+      "expected": "P av, öppna, A givet B, stäng"
+    },
+    "MembSym001": {
+      "expected": "If x är medlem av heltalen then 2 x, is an even number punkt"
+    },
+    "MembSym002": {
+      "expected": "hela mängden x i heltalen med x större än 5"
+    },
+    "MembSym003": {
+      "expected": "3 plus 2 I, är inte medlem av de reella talen"
+    },
+    "MembSym004": {
+      "expected": "If x är medlem av heltalen then 2 x, is an even number punkt"
+    },
+    "MembSym005": {
+      "expected": "hela mängden x medlem av heltalen med x större än 5"
+    },
+    "MembSym006": {
+      "expected": "3 plus 2 I, är inte medlem av de reella talen"
+    },
+    "MembSym007": {
+      "expected": "If x är ett element av heltalen then 2 x, is an even number punkt"
+    },
+    "MembSym008": {
+      "expected": "hela mängden x element av heltalen med x större än 5"
+    },
+    "MembSym009": {
+      "expected": "3 plus 2 I, är inte ett element av de reella talen"
+    },
+    "MembSym010": {
+      "expected": "If x tillhör heltalen then 2 x, is an even number punkt"
+    },
+    "MembSym011": {
+      "expected": "hela mängden x tillhörande heltalen med x större än 5"
+    },
+    "MembSym012": {
+      "expected": "3 plus 2 I, tillhör inte de reella talen"
+    },
+    "MembSym013": {
+      "expected": "If x tillhör heltalen then 2 x, is an even number punkt"
+    },
+    "MembSym014": {
+      "expected": "hela mängden x tillhörande heltalen med x större än 5"
+    },
+    "MembSym015": {
+      "expected": "3 plus 2 I, tillhör inte de reella talen"
+    },
+    "SetMemb001": {
+      "expected": "mängden av x tillhörande heltalen med 2 mindre än x mindre än 7"
+    },
+    "SetMemb002": {
+      "expected": "mängden av x medlem av heltalen med x större än 5"
+    },
+    "Sum001": {
+      "expected": "summa från n är lika med 1 till 10 av n"
+    },
+    "Sum002": {
+      "expected": "summa från n är lika med 1 till oändlighet av n"
+    },
+    "Sum003": {
+      "expected": "summa över I är medlem av de positiva heltalen, av I"
+    },
+    "Sum004": {
+      "expected": "summa över S, av I"
+    },
+    "Sum005": {
+      "expected": "summa av, a index I"
+    },
+    "Sum006": {
+      "expected": "produkt från I är lika med 1 till 10 av I"
+    },
+    "Sum007": {
+      "expected": "produkt över I är medlem av de positiva heltalen, av, bråket med täljare I, och nämnare I plus 1"
+    },
+    "Sum008": {
+      "expected": "produkt över de positiva heltalen, av, bråket med täljare I, och nämnare I plus 1"
+    },
+    "Sum009": {
+      "expected": "produkt av, a index I"
+    },
+    "Sum010": {
+      "expected": "snitt från I är lika med 1 till 10 av, S index I"
+    },
+    "Sum011": {
+      "expected": "union från I är lika med 1 till 10 av, S index I"
+    },
+    "Sum012": {
+      "expected": "snitt av, S index I"
+    },
+    "Sum013": {
+      "expected": "union av, S index I"
+    },
+    "Sum014": {
+      "expected": "snitt över C, av, S index I"
+    },
+    "Sum015": {
+      "expected": "union över C, av, S index I"
+    },
+    "Sum016": {
+      "expected": "integral av f av x, d x"
+    },
+    "Sum017": {
+      "expected": "integral från 0 till 1 av f av x, d x"
+    },
+    "Sum018": {
+      "expected": "integral över de reella talen, av f av x, d x"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "tests": {
+    "In_set_0": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "In_set_1": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x220A;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "In_set_2": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "In_set_3": {
+      "input": "<math><mo>{</mo><mi>A</mi><mo>&#x220B;</mo><mi>z</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "In_set_4": {
+      "input": "<math><mo>{</mo><mi>A</mi><mo>&#x220D;</mo><mi>z</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "In_set_5": {
+      "input": "<math><mo>{</mo><mi>A</mi><mo>&#x220C;</mo><mi>z</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "default"
+    },
+    "Free_standing_0": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "default"
+    },
+    "Free_standing_1": {
+      "input": "<math><mi>z</mi><mo>&#x220A;</mo><mi>A</mi></math>",
+      "preference": "default"
+    },
+    "Free_standing_2": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "default"
+    },
+    "Free_standing_3": {
+      "input": "<math><mi>A</mi><mo>&#x220B;</mo><mi>z</mi></math>",
+      "preference": "default"
+    },
+    "Free_standing_4": {
+      "input": "<math><mi>A</mi><mo>&#x220D;</mo><mi>z</mi></math>",
+      "preference": "default"
+    },
+    "Free_standing_5": {
+      "input": "<math><mi>A</mi><mo>&#x220C;</mo><mi>z</mi></math>",
+      "preference": "default"
+    },
+    "Under_bigop_0": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Under_bigop_1": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x220A;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Under_bigop_2": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Under_bigop_3": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>A</mi><mo>&#x220B;</mo><mi>z</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Under_bigop_4": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>A</mi><mo>&#x220D;</mo><mi>z</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Under_bigop_5": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>A</mi><mo>&#x220C;</mo><mi>z</mi></mrow></munder></math>",
+      "preference": "default"
+    },
+    "Preferences_in_0": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_in_1": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_in_2": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_in_3": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_in_4": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_in_5": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_in_6": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_in_7": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_in_8": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_in_9": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_in_10": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_in_11": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_in_12": {
+      "input": "<math><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Preferences_in_13": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2208;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Preferences_in_14": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2208;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Preferences_not_in_0": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_not_in_1": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_not_in_2": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Auto"
+    },
+    "Preferences_not_in_3": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_not_in_4": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_not_in_5": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Member"
+    },
+    "Preferences_not_in_6": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_not_in_7": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_not_in_8": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Element"
+    },
+    "Preferences_not_in_9": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_not_in_10": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_not_in_11": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_In"
+    },
+    "Preferences_not_in_12": {
+      "input": "<math><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Preferences_not_in_13": {
+      "input": "<math><mo>{</mo><mi>z</mi><mo>&#x2209;</mo><mi>A</mi><mo>:</mo><mi>z</mi><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Preferences_not_in_14": {
+      "input": "<math><munder><mo>&#x2211;</mo><mrow><mi>z</mi><mo>&#x2209;</mo><mi>A</mi></mrow></munder></math>",
+      "preference": "SetMemberSymbol_Belongs"
+    },
+    "Complex": {
+      "input": "<math><mo>{</mo><mi>a</mi><mo>&#x2208;</mo><mi>A</mi><mrow><mo>|</mo></mrow><mfrac><mn>1</mn><mi>a</mi></mfrac><mo>}</mo></math>",
+      "preference": "SetMemberSymbol_Belongs:Caps_SayCaps:Fraction_GeneralEndFrac"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "name": "ItalianMathspeakIssues1",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Italian Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesItalian",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "inizio valore assoluto a fine valore assoluto"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "inizio valore assoluto a fine valore assoluto"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "valore assoluto a fine valore assoluto"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "inizio valore assoluto a fine valore assoluto"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "inizio valore assoluto a fine valore assoluto"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "valore assoluto a fine valore assoluto"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "meno cinque diciottesimi"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "meno cinque diciottesimi"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "meno cinque diciottesimi"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 gradi"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 gradi"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 gradi"
+    },
+    "MixedIdentifier_default": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "S maiuscola i O maiuscola normale 2 più 6 H maiuscola normale F maiuscola normale freccia verso destra H maiuscola normale 2 S maiuscola i F maiuscola normale 6 più 2 H maiuscola normale 2 O maiuscola normale"
+    },
+    "ParenSuper_default": {
+      "expected": "parentesi tonda aperta a parentesi tonda chiusa quadrato"
+    },
+    "ParenSuper_brief": {
+      "expected": "parentesi tonda aperta a parentesi tonda chiusa quadrato"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "parentesi tonda aperta a parentesi tonda chiusa quadrato"
+    },
+    "ParenConvoluted_default": {
+      "expected": "parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "parentesi tonda aperta meno x quadrato diviso 2 parentesi tonda chiusa"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h apice 4 meno 2 s linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a c 2 h apice 4 meno 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a c 2 h sup 4 meno 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a c 2 h sup 4 meno 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h apice 4 meno 2 s linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a c 2 h apice 4 meno 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a c 2 h sup 4 meno 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h sup 4 meno 2 s base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione uguale a c 2 h sup 4 meno 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h pedice s linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h pedice s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h sub s base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h sub s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h sub s base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h sub s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h pedice s linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a h pedice s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h sub s base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a h sub s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h sub s base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione uguale a h sub s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h pedice s apice t linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h pedice s apice t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h sub s sup t base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h sub s sup t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h sub s sup t base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione minore o uguale a h sub s sup t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h pedice s apice t linea di base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a h pedice s apice t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h sub s sup t base minore o uguale a inizio frazione 1 fratto 2 T maiuscola fine frazione uguale a h sub s sup t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h sub s sup t base minore o uguale a frazione 1 fratto 2 T maiuscola fine frazione uguale a h sub s sup t"
+    },
+    "SquareWithText_default": {
+      "expected": "inizio frazione area of triangle fratto area of square fine frazione uguale a inizio frazione 1 unit quadrato fratto 16 units cubo fine frazione"
+    },
+    "SquareWithText_brief": {
+      "expected": "inizio frazione area of triangle fratto area of square fine frazione uguale a inizio frazione 1 unit quadrato fratto 16 units cubo fine frazione"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "frazione area of triangle fratto area of square fine frazione uguale a frazione 1 unit quadrato fratto 16 units cubo fine frazione"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square apice 1 linea di base 1 unit apice 2 linea di base 16 units apice 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square sup 1 base 1 unit sup 2 base 16 units sup 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square sup 1 base 1 unit sup 2 base 16 units sup 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle apice 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle sup 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle sup 2"
+    },
+    "LabelledRow_default": {
+      "expected": "inizio layout 1a row  con etichetta parentesi tonda aperta 1 parentesi tonda chiusa fine etichetta 1a colonna a 2a colonna b fine layout"
+    },
+    "LabelledRow_brief": {
+      "expected": "inizio layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa 1a colonna a 2a colonna b fine layout"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa 1a colonna a 2a colonna b fine layout"
+    },
+    "LabelledLine_default": {
+      "expected": "inizio layout 1a row  con etichetta parentesi tonda aperta 1 parentesi tonda chiusa fine etichetta a fine layout"
+    },
+    "LabelledLine_brief": {
+      "expected": "inizio layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa a fine layout"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa a fine layout"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "inizio layout 1a row  con etichetta parentesi tonda aperta 1 parentesi tonda chiusa fine etichetta vuoto fine layout"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "inizio layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa vuoto fine layout"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa vuoto fine layout"
+    },
+    "EmptyLine_default": {
+      "expected": "inizio layout 1a row  vuoto fine layout"
+    },
+    "EmptyLine_brief": {
+      "expected": "inizio layout 1a row  vuoto fine layout"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "layout 1a row  vuoto fine layout"
+    },
+    "EmptyRow_default": {
+      "expected": "inizio layout 1a row 1a colonna a 2a colonna b 2a row  vuoto fine layout"
+    },
+    "EmptyRow_brief": {
+      "expected": "inizio layout 1a row 1a colonna a 2a colonna b 2a row  vuoto fine layout"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "layout 1a row 1a colonna a 2a colonna b 2a row  vuoto fine layout"
+    },
+    "EmptyCell_default": {
+      "expected": "inizio layout 1a row  vuoto fine layout"
+    },
+    "EmptyCell_brief": {
+      "expected": "inizio layout 1a row  vuoto fine layout"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "layout 1a row  vuoto fine layout"
+    },
+    "TextLabelledLine_default": {
+      "expected": "inizio layout 1a row  con etichetta parentesi tonda aperta 1 parentesi tonda chiusa fine etichetta a fine layout"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "inizio layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa a fine layout"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "layout 1a row  etichetta 1 a fine layout"
+    },
+    "TextLabelledRow_default": {
+      "expected": "inizio layout 1a row  con etichetta parentesi tonda aperta 1 parentesi tonda chiusa fine etichetta 1a colonna a 2a colonna b fine layout"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "inizio layout 1a row  etichetta parentesi tonda aperta 1 parentesi tonda chiusa 1a colonna a 2a colonna b fine layout"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "layout 1a row  etichetta 1 1a colonna a 2a colonna b fine layout"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a con barra sopra"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a con barra sopra"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a con barra sopra"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a con barra sotto"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a con barra sotto"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a con barra sotto"
+    },
+    "PrefixopSquare_default": {
+      "expected": "derivata parziale quadrato x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "derivata parziale quadrato x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "derivata parziale quadrato x"
+    },
+    "PrefixopCube_default": {
+      "expected": "derivata parziale cubo x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "derivata parziale cubo x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "derivata parziale cubo x"
+    },
+    "Vector_default": {
+      "expected": "inizio 3 per 1 matrice 1a riga  a 2a riga  b 3a riga  c fine matrice"
+    },
+    "Vector_brief": {
+      "expected": "inizio 3 per 1 matrice 1a riga  a 2a riga  b 3a riga  c fine matrice"
+    },
+    "Vector_sbrief": {
+      "expected": "3 per 1 matrice 1a riga  a 2a riga  b 3a riga  c fine matrice"
+    }
+  }
+}

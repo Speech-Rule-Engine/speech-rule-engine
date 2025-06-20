@@ -1,0 +1,139 @@
+{
+  "name": "HindiMathspeakCoverage",
+  "locale": "hi",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "Hindi Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "आल्फा आधार रेखा 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "आल्फा आधार 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "आल्फा आधार 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक आधार रेखा 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "सामान्य अलेफ प्रतीक आधार 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "सामान्य अलेफ प्रतीक आधार 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "आल्फा आधार रेखा बोल्ड 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "आल्फा आधार बोल्ड 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "आल्फा आधार बोल्ड 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक आधार रेखा बोल्ड 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "सामान्य अलेफ प्रतीक आधार बोल्ड 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "सामान्य अलेफ प्रतीक आधार बोल्ड 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "आल्फा उर्ध्व दंड"
+    },
+    "OverbarOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक उर्ध्व दंड"
+    },
+    "UnderbarGreek_default": {
+      "expected": "आल्फा अधो दंड"
+    },
+    "UnderbarOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक अधो दंड"
+    },
+    "OvertildeGreek_default": {
+      "expected": "आल्फा उर्ध्व अंतर-चिह्न"
+    },
+    "OvertildeOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक उर्ध्व अंतर-चिह्न"
+    },
+    "UndertildeGreek_default": {
+      "expected": "आल्फा अधो अंतर-चिह्न"
+    },
+    "UndertildeOther_default": {
+      "expected": "सामान्य अलेफ प्रतीक अधो अंतर-चिह्न"
+    },
+    "SetEmpty_default": {
+      "expected": "रिक्त समुच्चय"
+    },
+    "SetEmpty_brief": {
+      "expected": "रिक्त समुच्चय"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "रिक्त समुच्चय"
+    },
+    "SetSingleton_default": {
+      "expected": "समुच्चय आरंभ ए समुच्चय समाप्त"
+    },
+    "SetSingleton_brief": {
+      "expected": "समुच्चय आरंभ ए समुच्चय समाप्त"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "समुच्चय ए समुच्चय समाप्त"
+    },
+    "SetCollection_default": {
+      "expected": "समुच्चय आरंभ ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "SetCollection_brief": {
+      "expected": "समुच्चय आरंभ ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "SetCollection_sbrief": {
+      "expected": "समुच्चय ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "SetExtended_default": {
+      "expected": "समुच्चय आरंभ ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "SetExtended_brief": {
+      "expected": "समुच्चय आरंभ ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "SetExtended_sbrief": {
+      "expected": "समुच्चय ए अल्पविराम बी समुच्चय समाप्त"
+    },
+    "NumberSet": {
+      "expected": "डबल-स्ट्रक कैपिटल सी"
+    },
+    "LimitLower0_default": {
+      "expected": "निचे संशोधित सीमा के साथ निम्न रेखा निम्नांक ए बराबर का चिह्न 5 लिपि समाप्त निम्नांक बी बराबर का चिह्न 3 लिपि समाप्त"
+    },
+    "LimitLower1_default": {
+      "expected": "सीमा निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त उर्ध्व लिपि एक्स लिपि समाप्त"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  ए २री पंक्ति  रिक्त खाका समाप्त"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "सी 1 एच पादांक 4 बाकी 2 एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर सी 2 एच पादांक 4 बाकी 2 एस"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "सी 1 एच अधो 4 बाकी 2 एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर सी 2 एच अधो 4 बाकी 2 एस"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "सी 1 एच अधो 4 बाकी 2 एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त से कम या बराबर सी 2 एच अधो 4 बाकी 2 एस"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "सी 1 एच पादांक 4 बाकी 2 एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न सी 2 एच पादांक 4 बाकी 2 एस"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "सी 1 एच अधो 4 बाकी 2 एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न सी 2 एच अधो 4 बाकी 2 एस"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "सी 1 एच अधो 4 बाकी 2 एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त बराबर का चिह्न सी 2 एच अधो 4 बाकी 2 एस"
+    }
+  }
+}

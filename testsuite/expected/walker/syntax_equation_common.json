@@ -1,0 +1,71 @@
+{
+  "information": "Syntax walker with Node generator on Equation CommonHtml expression.",
+  "walker": "Syntax",
+  "generator": "Node",
+  "base": "input/base/walker_test.json",
+  "factory": "walker",
+  "renderer": "CommonHTML",
+  "expression": "Equation_CommonHtml",
+  "tests": {
+    "Step_0": {
+      "input": null,
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"},
+    "Step_1": {
+      "input": "X",
+      "expected": "table with 2 rows and 3 columns"},
+    "Step_2": {
+      "input": "DOWN",
+      "expected": "1st Row 1st Column a 2nd Column equals 3rd Column b"},
+    "Step_3": {
+      "input": "RIGHT",
+      "expected": "2nd Row 1st Column c 2nd Column equals 3rd Column d"},
+    "Step_4": {
+      "input": "RIGHT",
+      "expected": "2nd Row 1st Column c 2nd Column equals 3rd Column d"},
+    "Step_5": {
+      "input": "SPACE",
+      "expected": "Level 1 2nd Row"},
+    "Step_6": {
+      "input": "X",
+      "expected": "2nd Row in table with 3 columns"},
+    "Step_7": {
+      "input": "DOWN",
+      "expected": "1st Column c"},
+    "Step_8": {
+      "input": "SPACE",
+      "expected": "Level 2 2nd Row 1st Column"},
+    "Step_9": {
+      "input": "X",
+      "expected": "1st Column in table"},
+    "Step_10": {
+      "input": "DOWN",
+      "expected": "c"},
+    "Step_11": {
+      "input": "UP",
+      "expected": "1st Column c"},
+    "Step_12": {
+      "input": "RIGHT",
+      "expected": "2nd Column equals"},
+    "Step_13": {
+      "input": "SPACE",
+      "expected": "Level 2 2nd Row 2nd Column"},
+    "Step_14": {
+      "input": "X",
+      "expected": "2nd Column in table"},
+    "Step_15": {
+      "input": "UP",
+      "expected": "2nd Row 1st Column c 2nd Column equals 3rd Column d"},
+    "Step_16": {
+      "input": "LEFT",
+      "expected": "1st Row 1st Column a 2nd Column equals 3rd Column b"},
+    "Step_17": {
+      "input": "HOME",
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd Column d EndLayout"},
+    "Step_18": {
+      "input": "DOWN",
+      "expected": "1st Row 1st Column a 2nd Column equals 3rd Column b"},
+    "Step_19": {
+      "input": "X",
+      "expected": "1st Row in table with 3 columns"}
+  }
+}

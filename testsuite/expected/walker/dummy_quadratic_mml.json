@@ -1,0 +1,29 @@
+{
+  "information": "Dummy walker with Node generator on Quadratic Mml expression.",
+  "walker": "Dummy",
+  "generator": "Node",
+  "base": "input/base/walker_test.json",
+  "factory": "walker",
+  "renderer": "NativeMML",
+  "expression": "Quadratic_Mml",
+  "tests": {
+    "Step_0": {
+      "input": null,
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_1": {
+      "input": "DOWN",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_2": {
+      "input": "RIGHT",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_3": {
+      "input": "RIGHT",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_4": {
+      "input": "SPACE",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_5": {
+      "input": "HOME",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"}
+  }
+}

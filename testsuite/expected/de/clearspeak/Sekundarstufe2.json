@@ -1,0 +1,53 @@
+{
+  "factory": "clearspeak",
+  "locale": "de",
+  "active": "ClearspeakGerman",
+  "name": "GermanClearspeakSekundarstufe2",
+  "information": "LaTeX Manual Sekundarstufe 2",
+  "base": "input/euro/Sekundarstufe2.json",
+  "actual": true,
+  "tests": {
+    "_comment0_": "Analysis",
+    "Analysis_0": {
+      "expected": "n geht gegen unendlich"
+    },
+    "Analysis_1": {
+      "expected": "Limes h gegen 0"
+    },
+    "Analysis_2": {
+      "expected": "Limes x gegen x Index 0"
+    },
+    "Analysis_3": {
+      "expected": "f Strich von x, f zwei Strich von x"
+    },
+    "Analysis_4": {
+      "expected": "Summe von i gleich 0 bis n über A Index n"
+    },
+    "Analysis_5": {
+      "expected": "Integral von a bis b über f von x dx"
+    },
+    "_comment1_": "Stochastik",
+    "Stochastik_0": {
+      "expected": "n Fakultät"
+    },
+    "Stochastik_1": {
+      "expected": "Binomialkoeffizient n über k"
+    },
+    "Stochastik_2": {
+      "expected": "klein Sigma groß Omega"
+    },
+    "_comment2_": "Analytische Geometrie",
+    "Analytische_0": {
+      "expected": "Vektor p ist gleich Zeilenvektor x ;  y ; z-3 Vektorende"
+    },
+    "Analytische_1": {
+      "expected": "Vektor q ist gleich Spaltenvektor -5  0,5 k+4 Vektorende"
+    },
+    "Analytische_2": {
+      "expected": "Vektorprodukt (Kreuzprodukt) der Vektoren p und q"
+    },
+    "Analytische_3": {
+      "expected": "2 Kreuz 3 Matrix  Zeilenanfang a b c Zeilenende Zeilenanfang d e f Zeilenende Matrixende"
+    }
+  }
+}

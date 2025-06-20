@@ -1,0 +1,750 @@
+{
+  "_comment_0": " Empty wrappers.",
+  "_comment_1": " Test for empty wrapping elements.",
+  "tests": {
+    "Wrappers_0": {
+      "input": "<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>"
+    },
+    "Wrappers_1": {
+      "input": "<mstyle><mi>q</mi><mpadded><mstyle><mrow><mi>x</mi><mo>+</mo></mrow></mstyle><mpadded><mrow><mi>a</mi></mrow><mrow><mi>a</mi></mrow></mpadded><mtext>nix</mtext></mpadded></mstyle>"
+    },
+    "Wrappers_2": {
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>x</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow>"
+    },
+    "_comment_2": " Sub, Superscripts.",
+    "_comment_3": " Test for sub super and subsuper scripts.",
+    "Scripts_0": {
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>"
+    },
+    "Scripts_1": {
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>"
+    },
+    "Scripts_2": {
+      "input": "<msubsup><mi>a</mi><mi>b</mi><mi>c</mi></msubsup>"
+    },
+    "Scripts_3": {
+      "input": "<mphantom/><msub><mi>a</mi><mpadded><mi>b</mi></mpadded></msub><merror/>"
+    },
+    "Scripts_4": {
+      "input": "<mphantom/><msup><mi>a</mi><mpadded><mi>b</mi></mpadded></msup><merror/>"
+    },
+    "Scripts_5": {
+      "input": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+    },
+    "Scripts_6": {
+      "input": "<mphantom/><msubsup><mpadded><mi>a</mi></mpadded><mi>b</mi><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+    },
+    "Scripts_7": {
+      "input": "<mphantom/><msubsup><mi>a</mi><mpadded><mi>b</mi><mi>d</mi></mpadded><mpadded><mi>c</mi></mpadded></msubsup><merror/>"
+    },
+    "_comment_4": " Numbers.",
+    "_comment_5": " Test number representations.",
+    "Numbers_0": {
+      "input": "<mn>2</mn>"
+    },
+    "Numbers_1": {
+      "input": "<mn>2.0</mn>"
+    },
+    "Numbers_2": {
+      "input": "<mn>2t3</mn>"
+    },
+    "Numbers_3": {
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "Numbers_4": {
+      "input": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
+    },
+    "_comment_6": " Test mixed number representations.",
+    "MixedNumbers_0": {
+      "input": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "MixedNumbers_1": {
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3</mn>"
+    },
+    "MixedNumbers_2": {
+      "input": "<mn>3.0</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "MixedNumbers_3": {
+      "input": "<mn>3.0e</mn><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "MixedNumbers_4": {
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mn>3.0</mn>"
+    },
+    "MixedNumbers_5": {
+      "input": "<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "MixedNumbers_6": {
+      "input": "<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "_comment_7": " Relations.",
+    "_comment_8": " Test relation trees.",
+    "Relations_0": {
+      "input": "<mo>=</mo>"
+    },
+    "Relations_1": {
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi>"
+    },
+    "Relations_2": {
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>"
+    },
+    "Relations_3": {
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi><mo>&#x2264;</mo><mi>d</mi>"
+    },
+    "_comment_9": " Operators.",
+    "_comment_10": " Test operator trees with pre- and postfixes.",
+    "_comment_11": " Pathological operator only case.",
+    "PrePostfixOperators_0": {
+      "input": "<mo>+</mo><mo>-</mo><mo>+</mo>"
+    },
+    "_comment_12": " Single identifier with prefixes.",
+    "PrePostfixOperators_1": {
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi>"
+    },
+    "_comment_13": " Single identifier with prefix and negative.",
+    "PrePostfixOperators_2": {
+      "input": "<mo>+</mo><mo>-</mo><mi>a</mi>"
+    },
+    "_comment_14": " Single identifier with postfixes.",
+    "PrePostfixOperators_3": {
+      "input": "<mi>a</mi><mo>+</mo><mo>-</mo>"
+    },
+    "_comment_15": " Single identifier with pre- and postfixes.",
+    "PrePostfixOperators_4": {
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>+</mo><mo>+</mo>"
+    },
+    "_comment_16": " Single identifier with mixed pre- and postfixes.",
+    "PrePostfixOperators_5": {
+      "input": "<mo>&#x2213;</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo>"
+    },
+    "_comment_17": " Two identifiers with pre- and postfixes.",
+    "PrePostfixOperators_6": {
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo>"
+    },
+    "_comment_18": " Three identifiers with pre- and postfixes.",
+    "PrePostfixOperators_7": {
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>"
+    },
+    "_comment_19": " Test operator trees with single operator.",
+    "_comment_20": " Single identifier.",
+    "SingleOperators_0": {
+      "input": "<mi>a</mi>"
+    },
+    "_comment_21": " Single implicit node.",
+    "SingleOperators_1": {
+      "input": "<mi>a</mi><mi>b</mi>"
+    },
+    "_comment_22": " Implicit multi node.",
+    "SingleOperators_2": {
+      "input": "<mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "_comment_23": " Single addition.",
+    "SingleOperators_3": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "_comment_24": " Multi addition.",
+    "SingleOperators_4": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi>"
+    },
+    "_comment_25": " Multi addition with implicit node.",
+    "SingleOperators_5": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mi>c</mi><mo>+</mo><mi>d</mi>"
+    },
+    "_comment_26": " Test operator trees with multiple operators.",
+    "_comment_27": " Addition and subtraction.",
+    "MultipleOperators_0": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>-</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
+    },
+    "_comment_28": " Addition and subtraction.",
+    "MultipleOperators_1": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>-</mo><mi>d</mi><mo>-</mo><mi>e</mi>"
+    },
+    "_comment_29": " Addition and explicit multiplication.",
+    "MultipleOperators_2": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mo>+</mo><mi>d</mi>"
+    },
+    "_comment_30": " Addition with explicit and implicit multiplication.",
+    "MultipleOperators_3": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>&#x2218;</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi>"
+    },
+    "_comment_31": " Two Additions, subtraction plus explicit and implicit multiplication,",
+    "_comment_32": " one prefix and one postfix.",
+    "MultipleOperators_4": {
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi><mo>+</mo><mi>e</mi><mo>&#x2218;</mo><mi>f</mi><mo>-</mo><mi>g</mi><mo>+</mo><mo>+</mo><mi>h</mi><mo>&#x2295;</mo><mi>i</mi><mo>&#x2295;</mo><mi>j</mi><mo>+</mo><mo>+</mo>"
+    },
+    "_comment_33": " Test operator trees with multiplication operators.",
+    "_comment_34": " Addition and subtraction.",
+    "MultiplicationOperators_0": {
+      "input": "<mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi><mo>*</mo><mi>d</mi>"
+    },
+    "MultiplicationOperators_1": {
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi></mrow>"
+    },
+    "MultiplicationOperators_2": {
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi></mrow>"
+    },
+    "MultiplicationOperators_3": {
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><mi>m</mi><mo>&#x00B7;</mo><mi>s</mi><mo>&#x00B7;</mo><mi>c</mi><mi>b</mi><mo>&#x00B7;</mo><mi>k</mi></mrow>"
+    },
+    "MultiplicationOperators_4": {
+      "input": "<mrow><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
+    },
+    "MultiplicationOperators_5": {
+      "input": "<mrow><mn>1</mn><mi>J</mi><mo>=</mo><mn>1</mn><mi>a</mi><mo>&#x00B7;</mo><msup><mi>m</mi><mn>2</mn></msup><mo>&#x00B7;</mo><msup><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow>"
+    },
+    "_comment_89": " Square roots",
+    "SquareRoots_0": {
+      "input": "<msqrt></msqrt>"
+    },
+    "SquareRoots_1": {
+      "input": "<msqrt><mi>x</mi></msqrt>"
+    },
+    "SquareRoots_2": {
+      "input": "<msqrt><msqrt><mi>x</mi></msqrt></msqrt>"
+    },
+    "SquareRoots_3": {
+      "input": "<msqrt><mi>x</mi><mi>n</mi></msqrt>"
+    },
+    "SquareRoots_4": {
+      "input": "<msqrt><msqrt><msqrt><mi>x</mi></msqrt></msqrt><mi>y</mi></msqrt>"
+    },
+    "_comment_90": " Regular roots",
+    "RegularRoots_0": {
+      "input": "<mroot><mi>x</mi><mi>n</mi></mroot>"
+    },
+    "RegularRoots_1": {
+      "input": "<mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mroot>"
+    },
+    "RegularRoots_2": {
+      "input": "<mroot><mroot><mi>x</mi><mi>n</mi></mroot><mi>m</mi></mroot>"
+    },
+    "RegularRoots_3": {
+      "input": "<mroot><mrow><mroot><mi>x</mi><mi>n</mi></mroot><mroot><mi>y</mi><mi>l</mi></mroot></mrow><mi>m</mi></mroot>"
+    },
+    "_comment_91": " Mixed roots",
+    "MixedRoots_0": {
+      "input": "<msqrt><mroot><mi>x</mi><mi>n</mi></mroot></msqrt>"
+    },
+    "MixedRoots_1": {
+      "input": "<mroot><msqrt><mi>x</mi></msqrt><mi>n</mi></mroot>"
+    },
+    "MixedRoots_2": {
+      "input": "<mroot><msqrt><mi>x</mi><mi>y</mi></msqrt><mi>n</mi></mroot>"
+    },
+    "_comment_92": " Simple function applications",
+    "SimpleFuncsSingle_0": {
+      "input": "<mrow><mi>f</mi></mrow>"
+    },
+    "SimpleFuncsSingle_1": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_2": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_3": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_4": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_5": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_6": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_7": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_8": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_9": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_10": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsSingle_11": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "_comment_93": " Simple functions with surrounding operators.",
+    "SimpleFuncsWithOps_0": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_1": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "SimpleFuncsWithOps_2": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "SimpleFuncsWithOps_3": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_4": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_5": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_6": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_7": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "SimpleFuncsWithOps_8": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "_comment_94": " Multiple simple functions.",
+    "SimpleFuncsMulti_0": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsMulti_1": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsMulti_2": {
+      "input": "<mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "_comment_95": " Nested simple functions.",
+    "SimpleFuncsNested_0": {
+      "input": "<mrow><mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsNested_1": {
+      "input": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsNested_2": {
+      "input": "<mrow><mi>h</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>g</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "SimpleFuncsNested_3": {
+      "input": "<mi>P</mi><mo>[</mo><mi>x</mi><mo>=</mo><mn>2</mn><mo>]</mo>"
+    },
+    "_comment_96": " Simple functions with explicit function application.",
+    "SimpleFuncsExplicitApp_0": {
+      "input": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+    },
+    "SimpleFuncsExplicitApp_1": {
+      "input": "<mi>f</mi><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+    },
+    "SimpleFuncsExplicitApp_2": {
+      "input": "<msub><mi>f</mi><mn>1</mn></msub><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+    },
+    "SimpleFuncsExplicitApp_3": {
+      "input": "<msup><msub><mi>f</mi><mi>n</mi></msub><mn>2</mn></msup><mo>&#x2061;</mo><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><msup><msub><mi>f</mi><mi>m</mi></msub><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+    },
+    "_comment_97": " Prefix function applications",
+    "PrefixFuncsSingle_0": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_1": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_2": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_3": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_4": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_5": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mover><mi>x</mi><mn>2</mn></mover><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_6": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><munder><mi>x</mi><mn>2</mn></munder><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_7": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_8": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsSingle_9": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "_comment_98": " Prefix functions applications with surrounding operators.",
+    "PrefixFuncsWithOps_0": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_1": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "PrefixFuncsWithOps_2": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "PrefixFuncsWithOps_3": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_4": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_5": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_6": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_7": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsWithOps_8": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "_comment_99": " Multiple prefix function applications.",
+    "PrefixFuncsMulti_0": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsMulti_1": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsMulti_2": {
+      "input": "<mrow><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>cos</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>tan</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo></mrow>"
+    },
+    "_comment_100": " Prefix function applications with sub- and superscripts.",
+    "PrefixFuncsScripts_0": {
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsScripts_1": {
+      "input": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsScripts_2": {
+      "input": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsScripts_3": {
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mn>1</mn></mrow>"
+    },
+    "_comment_101": " Prefix function applications with unfenced arguments.",
+    "PrefixFuncsUnfenced_0": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsUnfenced_1": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mi>y</mi></mrow>"
+    },
+    "PrefixFuncsUnfenced_2": {
+      "input": "<mrow><mi>sin</mi><msup><mi>x</mi><mn>2</mn></msup></mrow>"
+    },
+    "PrefixFuncsUnfenced_3": {
+      "input": "<mrow><mi>sin</mi><msub><mi>x</mi><mn>2</mn></msub></mrow>"
+    },
+    "PrefixFuncsUnfenced_4": {
+      "input": "<mrow><mi>sin</mi><msubsup><mi>x</mi><mn>2</mn><mn>1</mn></msubsup></mrow>"
+    },
+    "PrefixFuncsUnfenced_5": {
+      "input": "<mrow><mi>sin</mi><mover><mi>x</mi><mn>2</mn></mover></mrow>"
+    },
+    "PrefixFuncsUnfenced_6": {
+      "input": "<mrow><mi>sin</mi><munder><mi>x</mi><mn>2</mn></munder></mrow>"
+    },
+    "PrefixFuncsUnfenced_7": {
+      "input": "<mrow><mi>sin</mi><munderover><mi>x</mi><mn>2</mn><mn>1</mn></munderover></mrow>"
+    },
+    "PrefixFuncsUnfenced_8": {
+      "input": "<mrow><mi>sin</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow>"
+    },
+    "_comment_102": " Prefix function applications with unfenced arguments in an operator",
+    "_comment_103": " expression.",
+    "PrefixFuncsUnfencedOps_0": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_1": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_2": {
+      "input": "<mrow><mn>1</mn><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mn>2</mn></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_3": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_4": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_5": {
+      "input": "<mrow><mo>a</mo><mo>+</mo><mi>sin</mi><mi>x</mi><mo>+</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_6": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_7": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "PrefixFuncsUnfencedOps_8": {
+      "input": "<mrow><mo>a</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mo>=</mo><mo>b</mo></mrow>"
+    },
+    "_comment_104": " Multiple prefix function applications with unfenced arguments.",
+    "PrefixFuncsMultiUnfenced_0": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsMultiUnfenced_1": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mo>=</mo><mi>tan</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsMultiUnfenced_2": {
+      "input": "<mrow><mi>sin</mi><mi>x</mi><mo>+</mo><mi>cos</mi><mi>y</mi><mo>=</mo><mi>tan</mi><mi>x</mi><mi>y</mi></mrow>"
+    },
+    "_comment_105": " Prefix function applications with sub- and superscripts and unfenced",
+    "_comment_106": " arguments.",
+    "PrefixFuncsScriptUnfenced_0": {
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsScriptUnfenced_1": {
+      "input": "<mrow><msub><mi>sin</mi><mn>1</mn></msub><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsScriptUnfenced_2": {
+      "input": "<mrow><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsScriptUnfenced_3": {
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn></mrow>"
+    },
+    "PrefixFuncsScriptUnfenced_4": {
+      "input": "<mrow><msubsup><msubsup><mi>sin</mi><mn>2</mn><mn>1</mn></msubsup><mi>n</mi><mi>m</mi></msubsup><mi>x</mi></mrow>"
+    },
+    "_comment_107": " Prefix functions without arguments.",
+    "PrefixFuncsNoArgs_0": {
+      "input": "<mi>sin</mi>"
+    },
+    "PrefixFuncsNoArgs_1": {
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup>"
+    },
+    "PrefixFuncsNoArgs_2": {
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup>"
+    },
+    "PrefixFuncsNoArgs_3": {
+      "input": "<mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>+</mo><msup><mi>cos</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow>"
+    },
+    "PrefixFuncsNoArgs_4": {
+      "input": "<mrow><mi>sin</mi><mo>=</mo><mfrac><mn>1</mn><mi>csc</mi></mfrac></mrow>"
+    },
+    "_comment_108": " Nested prefix function applications, both with and without fenced arguments.",
+    "PrefixFuncsNested_0": {
+      "input": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi></mrow>"
+    },
+    "PrefixFuncsNested_1": {
+      "input": "<mrow><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "PrefixFuncsNested_2": {
+      "input": "<mrow><mi>log</mi><mi>cos</mi><mi>x</mi><mo>=</mo><mi>ln</mi><mo>(</mo><mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "_comment_169": " Set expressions.",
+    "Sets_0": {
+      "input": "<mo>{</mo><mo>}</mo>"
+    },
+    "Sets_1": {
+      "input": "<mo>{</mo><mi>x</mi><mo>}</mo>"
+    },
+    "Sets_2": {
+      "input": "<mo>{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>}</mo>"
+    },
+    "Sets_3": {
+      "input": "<mo>{</mo><mi>x</mi><mo>|</mo><mi>y</mi><mo>}</mo>"
+    },
+    "Sets_4": {
+      "input": "<mo>{</mo><mi>x</mi><mo>:</mo><mi>y</mi><mo>}</mo>"
+    },
+    "Sets_5": {
+      "input": "<mo>{</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>}</mo>"
+    },
+    "Sets_6": {
+      "input": "<mo>{</mo><mi>x</mi><mi>y</mi><mo>}</mo>"
+    },
+    "Sets_7": {
+      "input": "<mo>{</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>}</mo>"
+    },
+    "Sets_8": {
+      "input": "<mi>P</mi><mo>{</mo><mi>x</mi><mo>}</mo>"
+    },
+    "Sets_9": {
+      "input": "<mo>{</mo><mi>x</mi><mo>*</mo><mi>y</mi><mo>}</mo>"
+    },
+    "_comment_170": " Test for issue #287",
+    "Sets_10": {
+      "input": "<msub><mi mathvariant=\"normal\">&#x393;</mi><mrow><mo fence=\"false\" stretchy=\"false\">{</mo><msub><mrow><mi mathvariant=\"-tex-calligraphic\">M</mi></mrow><mi>k</mi></msub><mo fence=\"false\" stretchy=\"false\">}</mo></mrow></msub><mo stretchy=\"false\">(</mo><mi>X</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "_comment_171": " Tests originating from issue #219. Incorrectly reordering elements.",
+    "HiddenIgnoreElements_0": {
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+    },
+    "HiddenIgnoreElements_1": {
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+    },
+    "HiddenIgnoreElements_2": {
+      "input": "<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>"
+    },
+    "_comment_172": " Tests originating from issue #227. Ignore empty token elements.",
+    "HiddenEmptyTokens_0": {
+      "input": "<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "HiddenEmptyTokens_1": {
+      "input": "<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "HiddenEmptyTokens_2": {
+      "input": "<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "_comment_181a": " Tests for vulgar fractions.",
+    "VulgarFractions_0": {
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "VulgarFractions_1": {
+      "input": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac>"
+    },
+    "VulgarFractions_2": {
+      "input": "<mfrac><mn>1</mn><mn>2.5</mn></mfrac>"
+    },
+    "VulgarFractions_3": {
+      "input": "<mfrac><msup><mn>3</mn><mn>4</mn></msup><msup><mn>8</mn><mn>10</mn></msup></mfrac>"
+    },
+    "_comment_182a": " Issue 376: Division treated similar to multiplication.",
+    "Issue376_0": {
+      "input": "<mn>2</mn><mo>+</mo><mn>27</mn><mo>÷</mo><mn>9</mn>"
+    },
+    "_comment_173": " Issue 382: Singleton integral in expression",
+    "Issue382_0": {
+      "input": "<mo>=</mo><mo>&#x222B;</mo>"
+    },
+    "_comment_174": " TODO: This should be improved.",
+    "Issue382_1": {
+      "input": "<mo>&#x222B;</mo><mo>+</mo><mo>&#x222B;</mo>"
+    },
+    "_comment_175": " Issue 383: Mathoperator with dash",
+    "Issue383_0": {
+      "input": "<mrow><mtext>-</mtext><mi mathvariant=\"normal\">p</mi></mrow><mo>&#x2061;</mo><mi>&#x3C9;</mi>"
+    },
+    "_comment_176": " Issue 284: Explicitly given invisible plus.",
+    "Issue284_0": {
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+    },
+    "Issue284_1": {
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+    },
+    "Issue284_2": {
+      "input": "<mn>2</mn><mo>+</mo><mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+    },
+    "Issue284_3": {
+      "input": "<mn>2</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "Issue284_4": {
+      "input": "<mn>a</mn><mo>&#x2064;</mo><mfrac><mn>3</mn><mi>p</mi></mfrac>"
+    },
+    "_comment_directspeech": "Direct speech related expressions",
+    "_comment_mg1": "mi",
+    "MglyphTokens_0": {
+      "input": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "MglyphToken_1": {
+      "input": "<mi aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "_comment_mg1": "mo",
+    "MglyphToken_2": {
+    "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "MglyphToken_3": {
+      "input": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "_comment_mg2": "mn",
+    "MglyphToken_4": {
+      "input": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "MglyphToken_5": {
+      "input": "<mn aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "_comment_mg3": "mtext",
+    "MglyphToken_6": {
+      "input": "<mtext><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+    },
+    "MglyphToken_7": {
+      "input": "<mtext aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+    },
+    "_comment_mg4": "ms",
+    "MglyphToken_8": {
+      "input": "<ms><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphToken_9": {
+      "input": "<ms aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphGeneral_0": {
+      "input": "<mi><mglyph src=\"my-braid-23.png\" alt=\"23braid\"/></mi><mo>+</mo><mi><mglyph src=\"my-braid-132.png\" alt=\"132braid\"/></mi><mo>=</mo><mi><mglyph src=\"my-braid-13.png\" alt=\"13braid\"/></mi>"
+    },
+    "MglyphGeneral_1": {
+      "input": "<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>1</mn><mo>⊂</mo><mrow class=\"MJX-TeXAtom-VCENTER\"><mglyph src=\"Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\" width=\"13pt\" height=\"6pt\" alt=\"mfin\"></mglyph></mrow></mrow></msub></mrow>"
+    },
+    "issue451_0": {
+      "input": "<mi>M</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><munder><mrow><mrow><mi>l</mi><mi>i</mi><mi>m</mi></mrow></mrow><mo>&#x2190;</mo></munder><mo>&#x2061;</mo><mi>M</mi>"
+    },
+    "issue451_1": {
+      "input": "<mi>M</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mrow><mi>l</mi><mi>i</mi></mrow><mo>&#x2061;</mo><mi>M</mi>"
+    },
+    "issue451_2": {
+      "input": "<mrow><msubsup><mi>f</mi><mo>_</mo><mo>&#xAF;</mo></msubsup></mrow><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "issue451_3": {
+      "input": "<mrow><munderover><mi>f</mi><mo>_</mo><mo>&#xAF;</mo></munderover></mrow><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "issue451_4": {
+      "input": "<mi>M</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munder><mrow data-mjx-texclass=\"OP\"><mi mathvariant=\"normal\">l</mi><mi mathvariant=\"normal\">i</mi><mi mathvariant=\"normal\">m</mi></mrow><mo stretchy=\"false\">&#x2190;</mo></munder><mo>&#x2061;</mo><mi>M</mi>"
+    },
+    "issue451_5": {
+      "input": "<mi>M</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mrow><mi>l</mi><mi>i</mi></mrow><mo>&#x2061;</mo><mi>M</mi><mi>x</mi>"
+    },
+    "issue451_6": {
+      "input": "<mi>M</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mrow><mrow><mi>l</mi><mi>i</mi></mrow><mo>&#x2061;</mo><mi>M</mi></mrow><mi>x</mi>"
+    },
+    "Mglyph_Mixed_Token_0": {
+      "input": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>a</mi>"
+    },
+    "Mglyph_Mixed_Token_1": {
+      "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>+</mo>"
+    },
+    "Mglyph_Mixed_Token_2": {
+      "input": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>2</mn>"
+    },
+    "Mglyph_Mixed_Token_3": {
+      "input": "<mi>a<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>a</mi>"
+    },
+    "Mglyph_Mixed_Token_4": {
+      "input": "<mo>+<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>+</mo>"
+    },
+    "Mglyph_Mixed_Token_5": {
+      "input": "<mn>2<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/>2</mn>"
+    },
+    "Mglyph_Mixed_Token_6": {
+      "input": "<mi>a<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "Mglyph_Mixed_Token_7": {
+      "input": "<mo>+<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "Mglyph_Mixed_Token_8": {
+      "input": "<mn>2<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "Mglyph_Mixed_Token_9": {
+      "input": "<mi>a</mi><mo>+<mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo><mi>b</mi>"
+    },
+    "Html_issue_0": {
+      "input": "<mo><div>a</div>a</mo>"
+    },
+    "Html_issue_1": {
+      "input": "<mtext><span>y</span></mtext>"
+    },
+    "Html_issue_2": {
+      "input": "<mi>x</mi><mtext><span>y</span></mtext>"
+    },
+    "Html_issue_3": {
+      "input": "<mi>x</mi><mtext><span>y</span></mtext><mi>y</mi>"
+    },
+    "Html_issue_4": {
+      "input": "<mi>x</mi><mtext>a<span>y</span></mtext><mi>y</mi>"
+    },
+    "Html_issue_5": {
+      "input": "<mi>x</mi><mtext><span>y</span>b</mtext><mi>y</mi>"
+    },
+    "Html_issue_6": {
+      "input": "<mi>x</mi><mtext>a<span>y</span>b</mtext><mi>y</mi>"
+    },
+    "Html_issue_7": {
+      "input": "<mtext>a<span>y</span></mtext>"
+    },
+    "Html_issue_8": {
+      "input": "<mtext><span>y</span>b</mtext>"
+    },
+    "Html_issue_9": {
+      "input": "<mtext>a<span>y</span>b</mtext>"
+    }
+  }
+}

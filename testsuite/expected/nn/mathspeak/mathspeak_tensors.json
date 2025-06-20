@@ -1,0 +1,697 @@
+{
+  "name": "NynorskMathspeakTensors",
+  "locale": "nn",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "Nynorsk Mathspeak Tensor tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "PartialTensorABCD_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Superskript d"
+    },
+    "PartialTensorABCD_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d"
+    },
+    "PartialTensorABCD_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d"
+    },
+    "PartialTensorABC_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c"
+    },
+    "PartialTensorABC_brief": {
+      "expected": "Sub a Sub b Basis x Sub c"
+    },
+    "PartialTensorABC_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c"
+    },
+    "PartialTensorABD_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Superskript d"
+    },
+    "PartialTensorABD_brief": {
+      "expected": "Sub a Sub b Basis x Sub d"
+    },
+    "PartialTensorABD_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub d"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Superskript d Grunnlinje r"
+    },
+    "PartialTensorABDR_brief": {
+      "expected": "Sub a Sub b Basis x Sub d Basis r"
+    },
+    "PartialTensorABDR_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub d Basis r"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorABDRootR_brief": {
+      "expected": "StartRot Sub a Sub b Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "expected": "StartRot Sub a Sub b Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorABDFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x Sub d Basis r SluttBrøk"
+    },
+    "PartialTensorAB_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x"
+    },
+    "PartialTensorAB_brief": {
+      "expected": "Sub a Sub b Basis x"
+    },
+    "PartialTensorAB_sbrief": {
+      "expected": "Sub a Sub b Basis x"
+    },
+    "PartialTensorABR_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x r"
+    },
+    "PartialTensorABR_brief": {
+      "expected": "Sub a Sub b Basis x r"
+    },
+    "PartialTensorABR_sbrief": {
+      "expected": "Sub a Sub b Basis x r"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x SluttRot r"
+    },
+    "PartialTensorABRootR_brief": {
+      "expected": "StartRot Sub a Sub b Basis x SluttRot r"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x SluttRot r"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x r SluttRot"
+    },
+    "PartialTensorABRRoot_brief": {
+      "expected": "StartRot Sub a Sub b Basis x r SluttRot"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x r SluttRot"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Slutt Brøk r"
+    },
+    "PartialTensorABFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Slutt Brøk r"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x SluttBrøk r"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x r Slutt Brøk"
+    },
+    "PartialTensorABRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x r Slutt Brøk"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x r SluttBrøk"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Grunnlinje r"
+    },
+    "PartialTensorABCR_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Basis r"
+    },
+    "PartialTensorABCR_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Basis r"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r"
+    },
+    "PartialTensorABCDR_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x Subskript c Superskript d SluttRot"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "expected": "StartRot Sub a Sub b Basis x Sub c Sub d SluttRot"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x Sub c Sub d SluttRot"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "expected": "StartRot Sub a Sub b Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "StartRot Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "expected": "StartRot Sub a Sub b Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "expected": "Rot Sub a Sub b Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Subskript c Superskript d Slutt Brøk"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Sub c Sub d Slutt Brøk"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x Sub c Sub d SluttBrøk"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Sub c Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x Sub c Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Sub b Basis x Sub c Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Sub b Basis x Sub c Sub d Basis r SluttBrøk"
+    },
+    "PartialTensorB_default": {
+      "expected": "Superskript b Grunnlinje x"
+    },
+    "PartialTensorB_brief": {
+      "expected": "Sub b Basis x"
+    },
+    "PartialTensorB_sbrief": {
+      "expected": "Sub b Basis x"
+    },
+    "PartialTensorBR_default": {
+      "expected": "Superskript b Grunnlinje x r"
+    },
+    "PartialTensorBR_brief": {
+      "expected": "Sub b Basis x r"
+    },
+    "PartialTensorBR_sbrief": {
+      "expected": "Sub b Basis x r"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "StartRot Superskript b Grunnlinje x SluttRot r"
+    },
+    "PartialTensorBRootR_brief": {
+      "expected": "StartRot Sub b Basis x SluttRot r"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "expected": "Rot Sub b Basis x SluttRot r"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "StartRot Superskript b Grunnlinje x r SluttRot"
+    },
+    "PartialTensorBRRoot_brief": {
+      "expected": "StartRot Sub b Basis x r SluttRot"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "expected": "Rot Sub b Basis x r SluttRot"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Slutt Brøk r"
+    },
+    "PartialTensorBFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Slutt Brøk r"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x SluttBrøk r"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x r Slutt Brøk"
+    },
+    "PartialTensorBRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x r Slutt Brøk"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x r SluttBrøk"
+    },
+    "PartialTensorBD_default": {
+      "expected": "Superskript b Grunnlinje x Superskript d"
+    },
+    "PartialTensorBD_brief": {
+      "expected": "Sub b Basis x Sub d"
+    },
+    "PartialTensorBD_sbrief": {
+      "expected": "Sub b Basis x Sub d"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "Superskript b Grunnlinje x Superskript d Grunnlinje r"
+    },
+    "PartialTensorBDR_brief": {
+      "expected": "Sub b Basis x Sub d Basis r"
+    },
+    "PartialTensorBDR_sbrief": {
+      "expected": "Sub b Basis x Sub d Basis r"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorBDRootR_brief": {
+      "expected": "StartRot Sub b Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "expected": "Rot Sub b Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "expected": "StartRot Sub b Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "expected": "Rot Sub b Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorBDFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub d Basis r SluttBrøk"
+    },
+    "PartialTensorBC_default": {
+      "expected": "Superskript b Grunnlinje x Subskript c"
+    },
+    "PartialTensorBC_brief": {
+      "expected": "Sub b Basis x Sub c"
+    },
+    "PartialTensorBC_sbrief": {
+      "expected": "Sub b Basis x Sub c"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "Superskript b Grunnlinje x Subskript c Grunnlinje r"
+    },
+    "PartialTensorBCR_brief": {
+      "expected": "Sub b Basis x Sub c Basis r"
+    },
+    "PartialTensorBCR_sbrief": {
+      "expected": "Sub b Basis x Sub c Basis r"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Subskript c Grunnlinje SluttRot r"
+    },
+    "PartialTensorBCRootR_brief": {
+      "expected": "StartRot Sub b Basis x Sub c Basis SluttRot r"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "expected": "Rot Sub b Basis x Sub c Basis SluttRot r"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Subskript c Grunnlinje r SluttRot"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "expected": "StartRot Sub b Basis x Sub c Basis r SluttRot"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "expected": "Rot Sub b Basis x Sub c Basis r SluttRot"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Subskript c Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorBCFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub c Basis Slutt Brøk r"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub c Basis SluttBrøk r"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Subskript c Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub c Basis r Slutt Brøk"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub c Basis r SluttBrøk"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "Superskript b Grunnlinje x Subskript c Superskript d"
+    },
+    "PartialTensorBCD_brief": {
+      "expected": "Sub b Basis x Sub c Sub d"
+    },
+    "PartialTensorBCD_sbrief": {
+      "expected": "Sub b Basis x Sub c Sub d"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r"
+    },
+    "PartialTensorBCDR_brief": {
+      "expected": "Sub b Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "expected": "Sub b Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "expected": "StartRot Sub b Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "expected": "Rot Sub b Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "StartRot Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "expected": "StartRot Sub b Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "expected": "Rot Sub b Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub c Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub c Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "Start Brøk 1 Over Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub b Basis x Sub c Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub b Basis x Sub c Sub d Basis r SluttBrøk"
+    },
+    "PartialTensorA_default": {
+      "expected": "Subskript a Grunnlinje x"
+    },
+    "PartialTensorA_brief": {
+      "expected": "Sub a Basis x"
+    },
+    "PartialTensorA_sbrief": {
+      "expected": "Sub a Basis x"
+    },
+    "PartialTensorAR_default": {
+      "expected": "Subskript a Grunnlinje x r"
+    },
+    "PartialTensorAR_brief": {
+      "expected": "Sub a Basis x r"
+    },
+    "PartialTensorAR_sbrief": {
+      "expected": "Sub a Basis x r"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "StartRot Subskript a Grunnlinje x SluttRot r"
+    },
+    "PartialTensorARootR_brief": {
+      "expected": "StartRot Sub a Basis x SluttRot r"
+    },
+    "PartialTensorARootR_sbrief": {
+      "expected": "Rot Sub a Basis x SluttRot r"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "StartRot Subskript a Grunnlinje x r SluttRot"
+    },
+    "PartialTensorARRoot_brief": {
+      "expected": "StartRot Sub a Basis x r SluttRot"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "expected": "Rot Sub a Basis x r SluttRot"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Slutt Brøk r"
+    },
+    "PartialTensorAFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Slutt Brøk r"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x SluttBrøk r"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x r Slutt Brøk"
+    },
+    "PartialTensorARFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x r Slutt Brøk"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x r SluttBrøk"
+    },
+    "PartialTensorAD_default": {
+      "expected": "Subskript a Grunnlinje x Superskript d"
+    },
+    "PartialTensorAD_brief": {
+      "expected": "Sub a Basis x Sub d"
+    },
+    "PartialTensorAD_sbrief": {
+      "expected": "Sub a Basis x Sub d"
+    },
+    "PartialTensorADR_default": {
+      "expected": "Subskript a Grunnlinje x Superskript d Grunnlinje r"
+    },
+    "PartialTensorADR_brief": {
+      "expected": "Sub a Basis x Sub d Basis r"
+    },
+    "PartialTensorADR_sbrief": {
+      "expected": "Sub a Basis x Sub d Basis r"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorADRootR_brief": {
+      "expected": "StartRot Sub a Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "expected": "Rot Sub a Basis x Sub d Basis SluttRot r"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorADRRoot_brief": {
+      "expected": "StartRot Sub a Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "expected": "Rot Sub a Basis x Sub d Basis r SluttRot"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorADFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorADRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub d Basis r SluttBrøk"
+    },
+    "PartialTensorAC_default": {
+      "expected": "Subskript a Grunnlinje x Subskript c"
+    },
+    "PartialTensorAC_brief": {
+      "expected": "Sub a Basis x Sub c"
+    },
+    "PartialTensorAC_sbrief": {
+      "expected": "Sub a Basis x Sub c"
+    },
+    "PartialTensorACR_default": {
+      "expected": "Subskript a Grunnlinje x Subskript c Grunnlinje r"
+    },
+    "PartialTensorACR_brief": {
+      "expected": "Sub a Basis x Sub c Basis r"
+    },
+    "PartialTensorACR_sbrief": {
+      "expected": "Sub a Basis x Sub c Basis r"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Subskript c Grunnlinje SluttRot r"
+    },
+    "PartialTensorACRootR_brief": {
+      "expected": "StartRot Sub a Basis x Sub c Basis SluttRot r"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "expected": "Rot Sub a Basis x Sub c Basis SluttRot r"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Subskript c Grunnlinje r SluttRot"
+    },
+    "PartialTensorACRRoot_brief": {
+      "expected": "StartRot Sub a Basis x Sub c Basis r SluttRot"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "expected": "Rot Sub a Basis x Sub c Basis r SluttRot"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Subskript c Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorACFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub c Basis Slutt Brøk r"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub c Basis SluttBrøk r"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Subskript c Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorACRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub c Basis r Slutt Brøk"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub c Basis r SluttBrøk"
+    },
+    "PartialTensorACD_default": {
+      "expected": "Subskript a Grunnlinje x Subskript c Superskript d"
+    },
+    "PartialTensorACD_brief": {
+      "expected": "Sub a Basis x Sub c Sub d"
+    },
+    "PartialTensorACD_sbrief": {
+      "expected": "Sub a Basis x Sub c Sub d"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "Subskript a Grunnlinje x Subskript c Superskript d Grunnlinje r"
+    },
+    "PartialTensorACDR_brief": {
+      "expected": "Sub a Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorACDR_sbrief": {
+      "expected": "Sub a Basis x Sub c Sub d Basis r"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Subskript c Superskript d Grunnlinje SluttRot r"
+    },
+    "PartialTensorACDRootR_brief": {
+      "expected": "StartRot Sub a Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "expected": "Rot Sub a Basis x Sub c Sub d Basis SluttRot r"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "StartRot Subskript a Grunnlinje x Subskript c Superskript d Grunnlinje r SluttRot"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "expected": "StartRot Sub a Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "expected": "Rot Sub a Basis x Sub c Sub d Basis r SluttRot"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Subskript c Superskript d Grunnlinje Slutt Brøk r"
+    },
+    "PartialTensorACDFracR_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub c Sub d Basis Slutt Brøk r"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub c Sub d Basis SluttBrøk r"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "Start Brøk 1 Over Subskript a Grunnlinje x Subskript c Superskript d Grunnlinje r Slutt Brøk"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "expected": "Start Brøk 1 Over Sub a Basis x Sub c Sub d Basis r Slutt Brøk"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "expected": "Brøk 1 Over Sub a Basis x Sub c Sub d Basis r SluttBrøk"
+    },
+    "TensorMultiSimpleABC_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Sub Superskript l"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l"
+    },
+    "TensorMultiSub_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Sub Subskript l Superskript d"
+    },
+    "TensorMultiSub_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub d"
+    },
+    "TensorMultiSub_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub d"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Sub Subskript l Sub Sub Superskript k Subskript e Superskript d"
+    },
+    "TensorMultiSubSup_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub Sub Sub k Sub e Sub d"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub Sub Sub k Sub e Sub d"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Sub Superskript l Superskript d"
+    },
+    "TensorMultiSimple_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub d"
+    },
+    "TensorMultiSimple_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub Sub l Sub d"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c k Sub Superskript l Superskript d"
+    },
+    "TensorMultiComplex_brief": {
+      "expected": "Sub a Sub b Basis x Sub c k Sub Sub l Sub d"
+    },
+    "TensorMultiComplex_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c k Sub Sub l Sub d"
+    },
+    "TwoTensors_default": {
+      "expected": "Subskript a Superskript b Grunnlinje x Subskript c Superskript d Grunnlinje Subskript a Superskript b Grunnlinje x Subskript c Superskript d"
+    },
+    "TwoTensors_brief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d Basis Sub a Sub b Basis x Sub c Sub d"
+    },
+    "TwoTensors_sbrief": {
+      "expected": "Sub a Sub b Basis x Sub c Sub d Basis Sub a Sub b Basis x Sub c Sub d"
+    }
+  }
+}

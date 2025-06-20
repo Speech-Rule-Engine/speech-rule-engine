@@ -1,0 +1,64 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakSetsEnclosedInSetBrackets",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Swedish Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Set001": {
+      "expected": "hela mängden x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set002": {
+      "expected": "hela mängden x med, absolutvärdet av x, större än 2"
+    },
+    "Set003": {
+      "expected": "hela mängden x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set004": {
+      "expected": "hela mängden x i de naturliga talen med x is an even number"
+    },
+    "Set005": {
+      "expected": "mängden 1 komma 2 komma 3"
+    },
+    "Set006": {
+      "expected": "mängden 1 komma 112 komma 1 komma 253"
+    },
+    "Set007": {
+      "expected": "mängden av x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set008": {
+      "expected": "mängden av x med, absolutvärdet av x, större än 2"
+    },
+    "Set009": {
+      "expected": "mängden av x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set010": {
+      "expected": "mängden 1 komma 2 komma 3"
+    },
+    "Set011": {
+      "expected": "mängden 1 komma 112 komma 1 komma 253"
+    },
+    "Set012": {
+      "expected": "hela mängden x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set013": {
+      "expected": "hela mängden x med, absolutvärdet av x, större än 2"
+    },
+    "Set014": {
+      "expected": "hela mängden x i heltalen med 2 mindre än x mindre än 7"
+    },
+    "Set015": {
+      "expected": "hela mängden x i de naturliga talen med x is an even number"
+    },
+    "Set016": {
+      "expected": "1 komma 2 komma 3"
+    },
+    "Set017": {
+      "expected": "1 komma 112 komma 1 komma 253"
+    }
+  }
+}

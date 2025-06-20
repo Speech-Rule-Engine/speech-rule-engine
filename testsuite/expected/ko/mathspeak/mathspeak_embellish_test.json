@@ -1,0 +1,522 @@
+{
+  "name": "KoreanMathspeakEmbellish",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "Korean Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "ko",
+  "active": "EmbellishedSymbolsKorean",
+  "exclude": [],
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a 더하기 아래첨자 2 기준 b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a 더하기 아래 2 기준 b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a 더하기 아래 2 기준 b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a 더하기 위첨자 2 기준 b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a 더하기 위 2 기준 b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a 더하기 위 2 기준 b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a 더하기 위첨자 3 기준 b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a 더하기 위 3 기준 b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a 더하기 위 3 기준 b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a 더하기 위첨자 n 기준 b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a 더하기 위 n 기준 b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a 더하기 위 n 기준 b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a 더하기 프라임 b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a 더하기 프라임 b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a 더하기 프라임 b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a 더하기 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a 더하기 아래첨자 m 위첨자 3 기준 b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a 더하기 아래 m 위 3 기준 b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a 더하기 아래 m 위 3 기준 b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a 더하기 아래첨자 m 위첨자 n 기준 b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a 더하기 아래 m 위 n 기준 b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a 더하기 아래 m 위 n 기준 b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a 더하기 프라임 아래첨자 m 기준 b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a 더하기 프라임 아래 m 기준 b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a 더하기 프라임 아래 m 기준 b"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "a 더하기 프라임 아래첨자 m 기준 b 더하기 프라임 아래첨자 m 기준 c"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "a 더하기 프라임 아래 m 기준 b 더하기 프라임 아래 m 기준 c"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "a 더하기 프라임 아래 m 기준 b 더하기 프라임 아래 m 기준 c"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a 더하기 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a 위첨자 3 기준 더하기 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a 위 3 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a 위 3 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a 아래첨자 3 기준 더하기 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a 아래 3 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a 아래 3 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a 아래첨자 3 위첨자 n 기준 더하기 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a 아래 3 위 n 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a 아래 3 위 n 기준 더하기 아래 m 위 2 기준 b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a 는 아래첨자 2 기준 b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a 는 아래 2 기준 b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a 는 아래 2 기준 b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a 는 위첨자 2 기준 b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a 는 위 2 기준 b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a 는 위 2 기준 b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a 는 위첨자 3 기준 b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a 는 위 3 기준 b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a 는 위 3 기준 b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a 는 위첨자 n 기준 b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a 는 위 n 기준 b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a 는 위 n 기준 b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a 는 프라임 b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a 는 프라임 b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a 는 프라임 b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a 는 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a 는 아래첨자 m 위첨자 3 기준 b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a 는 아래 m 위 3 기준 b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a 는 아래 m 위 3 기준 b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a 는 아래첨자 m 위첨자 n 기준 b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a 는 아래 m 위 n 기준 b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a 는 아래 m 위 n 기준 b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a 는 프라임 아래첨자 m 기준 b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a 는 프라임 아래 m 기준 b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a 는 프라임 아래 m 기준 b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a 는 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a 위첨자 3 기준 는 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a 위 3 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a 위 3 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a 아래첨자 3 기준 는 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a 아래 3 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a 아래 3 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a 아래첨자 3 위첨자 n 기준 는 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a 아래 3 위 n 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a 아래 3 위 n 기준 는 아래 m 위 2 기준 b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a 같다 아래첨자 2 기준 b 같다 c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a 같다 아래 2 기준 b 같다 c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a 같다 아래 2 기준 b 같다 c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a 콜론 아래첨자 2 기준 b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a 콜론 아래 2 기준 b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a 콜론 아래 2 기준 b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a 콜론 위첨자 2 기준 b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a 콜론 위 2 기준 b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a 콜론 위 2 기준 b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a 콜론 위첨자 3 기준 b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a 콜론 위 3 기준 b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a 콜론 위 3 기준 b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a 콜론 위첨자 n 기준 b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a 콜론 위 n 기준 b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a 콜론 위 n 기준 b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a 콜론 프라임 b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a 콜론 프라임 b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a 콜론 프라임 b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a 콜론 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a 콜론 아래첨자 m 위첨자 3 기준 b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a 콜론 아래 m 위 3 기준 b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a 콜론 아래 m 위 3 기준 b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a 콜론 아래첨자 m 위첨자 n 기준 b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a 콜론 아래 m 위 n 기준 b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a 콜론 아래 m 위 n 기준 b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a 콜론 프라임 아래첨자 m 기준 b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a 콜론 프라임 아래 m 기준 b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a 콜론 프라임 아래 m 기준 b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a 콜론 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a 위첨자 3 기준 콜론 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a 위 3 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a 위 3 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a 아래첨자 3 기준 콜론 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a 아래 3 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a 아래 3 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a 아래첨자 3 위첨자 n 기준 콜론 아래첨자 m 위첨자 2 기준 b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a 아래 3 위 n 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a 아래 3 위 n 기준 콜론 아래 m 위 2 기준 b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a 콜론 아래첨자 2 기준 b 콜론 c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a 콜론 아래 2 기준 b 콜론 c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a 콜론 아래 2 기준 b 콜론 c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a 더하기 b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a 더하기 b"
+    }
+  }
+}

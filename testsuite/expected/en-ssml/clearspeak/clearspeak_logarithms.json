@@ -1,0 +1,131 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakLogarithms",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "English Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Logarithms",
+    "Log001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> log <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"20\"/> of <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"5\"/> equals <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> log <mark name=\"7\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"10\"/> plus <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"11\"/> log <mark name=\"12\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"4\"/> over <prosody pitch=\"+30%\"> <mark name=\"4\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <mark name=\"9\"/> the <mark name=\"7\"/> log <mark name=\"8\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"10\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"10\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"11\"/> minus <break time=\"250ms\"/> <mark name=\"14\"/> the <mark name=\"12\"/> log <mark name=\"13\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"15\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"15\"/> <say-as interpret-as=\"character\">T</say-as> </prosody> </prosody></speak>"
+    },
+    "Log005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> to the k-th <mark name=\"6\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> <say-as interpret-as=\"character\">k</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"11\"/> log <mark name=\"12\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 10 <mark name=\"6\"/> raised to the <mark name=\"1\"/> log <mark name=\"2\"/> base 10 <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> equals <mark name=\"9\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"5\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> 10 <mark name=\"4\"/> to the x-th <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Log008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 10 <mark name=\"6\"/> raised to the <mark name=\"1\"/> log <mark name=\"2\"/> base 10 <mark name=\"4\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> 5 <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> equals <mark name=\"9\"/> 5 </prosody></speak>"
+    },
+    "Log009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"5\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> 10 <mark name=\"4\"/> cubed <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> 3 </prosody></speak>"
+    },
+    "Log010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"7\"/> the <mark name=\"5\"/> log <mark name=\"6\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> </prosody> <mark name=\"16\"/> over <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"11\"/> log <mark name=\"12\"/> base <say-as interpret-as=\"character\">b</say-as> <mark name=\"14\"/> of <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Log011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 10 <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> 18 <break time=\"250ms\"/> </prosody> <mark name=\"11\"/> over <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"6\"/> log <mark name=\"7\"/> base 10 <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"9\"/> 3 <break time=\"250ms\"/> <mark name=\"13\"/> equals <break time=\"250ms\"/> <mark name=\"16\"/> the <mark name=\"14\"/> log <mark name=\"15\"/> base 3 <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"17\"/> 18 </prosody></speak>"
+    },
+    "Log012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> log <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <mark name=\"7\"/> over <mark name=\"4\"/> log <mark name=\"5\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "Log013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "Log014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"8\"/> squared </prosody></speak>"
+    },
+    "Log015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> log <prosody rate=\"+25%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">y</say-as> </prosody> </prosody></speak>"
+    },
+    "Log016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"9\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"0\"/> the log <mark name=\"7\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <mark name=\"4\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> close paren <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <break time=\"250ms\"/> <mark name=\"10\"/> the log <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"13\"/> plus <mark name=\"14\"/> 2 <break time=\"250ms\"/> <mark name=\"16\"/> close paren </prosody></speak>"
+    },
+    "Log017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"24\"/> the <mark name=\"11\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 6 <mark name=\"9\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> open paren <break time=\"250ms\"/> <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> plus <mark name=\"6\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"23\"/> and denominator <break time=\"250ms\"/> <mark name=\"14\"/> the <mark name=\"12\"/> log <mark name=\"13\"/> base 6 <mark name=\"21\"/> of <break time=\"250ms\"/> <mark name=\"15\"/> open paren <break time=\"250ms\"/> <mark name=\"16\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"17\"/> plus <mark name=\"18\"/> 2 <break time=\"250ms\"/> <mark name=\"20\"/> close paren </prosody></speak>"
+    },
+    "Log018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the <mark name=\"9\"/> fraction with numerator <mark name=\"0\"/> log <mark name=\"1\"/> 40 <mark name=\"2\"/> plus <mark name=\"3\"/> log <mark name=\"4\"/> 60 <break time=\"250ms\"/> <mark name=\"13\"/> and denominator <mark name=\"10\"/> log <mark name=\"11\"/> 5 </prosody></speak>"
+    },
+    "Log019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"20\"/> the <mark name=\"13\"/> fraction with numerator <break time=\"250ms\"/> <mark name=\"2\"/> the <mark name=\"0\"/> log <mark name=\"1\"/> base 3 <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"3\"/> 40 <break time=\"250ms\"/> <mark name=\"4\"/> plus <break time=\"250ms\"/> <mark name=\"7\"/> the <mark name=\"5\"/> log <mark name=\"6\"/> base 3 <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"8\"/> 60 <break time=\"250ms\"/> <mark name=\"19\"/> and denominator <break time=\"250ms\"/> <mark name=\"16\"/> the <mark name=\"14\"/> log <mark name=\"15\"/> base 3 <mark name=\"17\"/> of <break time=\"250ms\"/> <mark name=\"17\"/> 5 </prosody></speak>"
+    },
+    "Log020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> 3 <mark name=\"3\"/> to the fourth <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"5\"/> 12 <mark name=\"6\"/> to the ninth <mark name=\"7\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> 4 <mark name=\"11\"/> log <mark name=\"12\"/> 3 <break time=\"250ms\"/> <mark name=\"13\"/> plus <mark name=\"14\"/> 9 <mark name=\"15\"/> log <mark name=\"16\"/> 12 </prosody></speak>"
+    },
+    "Log021": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> over <say-as interpret-as=\"character\">y</say-as> <break time=\"250ms\"/> <mark name=\"5\"/> close paren </prosody></speak>"
+    },
+    "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+    "Log022": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the log <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"8\"/> the <mark name=\"4\"/> fraction with numerator <mark name=\"2\"/> 3 <mark name=\"3\"/> to the fourth <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"7\"/> and denominator <mark name=\"5\"/> 8 <mark name=\"6\"/> to the tenth <mark name=\"7\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"9\"/> close paren <break time=\"250ms\"/> <mark name=\"11\"/> equals <mark name=\"12\"/> 4 <mark name=\"13\"/> log <mark name=\"14\"/> 3 <break time=\"250ms\"/> <mark name=\"15\"/> minus <mark name=\"16\"/> 10 <mark name=\"17\"/> log <mark name=\"18\"/> 8 </prosody></speak>"
+    },
+    "Log023": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 10 <mark name=\"4\"/> raised to the <mark name=\"1\"/> log <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\" kind=\"LAST\"/> power </prosody></speak>"
+    },
+    "NatLog001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> l n <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> l n <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> minus <mark name=\"3\"/> l n <mark name=\"21\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> minus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> equals <mark name=\"10\"/> l n <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"12\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"14\"/> minus <mark name=\"15\"/> 1 <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "NatLog003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> l n <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"3\"/> to the x-th <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> l n <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> l n <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"3\"/> to the x-th <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> l n <mark name=\"2\"/> 4 <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> 4 </prosody></speak>"
+    },
+    "NatLog007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> l n <mark name=\"1\"/> 40 <break time=\"250ms\"/> </prosody> <mark name=\"7\"/> over <mark name=\"4\"/> l n <mark name=\"5\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> equals <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> log <mark name=\"11\"/> base 5 <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"13\"/> 40 </prosody></speak>"
+    },
+    "NatLog008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the <mark name=\"9\"/> fraction with numerator <mark name=\"0\"/> l n <mark name=\"1\"/> 40 <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> l n <mark name=\"4\"/> 60 <break time=\"250ms\"/> <mark name=\"13\"/> and denominator <mark name=\"10\"/> l n <mark name=\"11\"/> 5 </prosody></speak>"
+    },
+    "NatLog009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> natural log <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> natural log <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> minus <break time=\"250ms\"/> <mark name=\"3\"/> the natural log <mark name=\"21\"/> of <break time=\"250ms\"/> <mark name=\"4\"/> open paren <break time=\"250ms\"/> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> minus <mark name=\"7\"/> 1 <break time=\"250ms\"/> <mark name=\"8\"/> close paren <break time=\"250ms\"/> <mark name=\"9\"/> equals <break time=\"250ms\"/> <mark name=\"10\"/> the natural log <mark name=\"19\"/> of <break time=\"250ms\"/> <mark name=\"11\"/> open paren <break time=\"250ms\"/> <mark name=\"17\"/> the <mark name=\"12\"/> fraction with numerator <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"16\"/> and denominator <mark name=\"13\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"14\"/> minus <mark name=\"15\"/> 1 <break time=\"250ms\"/> <mark name=\"18\"/> close paren </prosody></speak>"
+    },
+    "NatLog011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the natural log <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"3\"/> to the x-th <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> natural log <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the natural log <mark name=\"6\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"3\"/> to the x-th <mark name=\"4\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"5\"/> close paren <break time=\"250ms\"/> <mark name=\"7\"/> equals <mark name=\"8\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "NatLog014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">e</say-as> <mark name=\"4\"/> raised to the <mark name=\"1\"/> natural log <mark name=\"2\"/> 4 <mark name=\"5\" kind=\"LAST\"/> power <break time=\"250ms\"/> <mark name=\"6\"/> equals <mark name=\"7\"/> 4 </prosody></speak>"
+    },
+    "NatLog015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> natural log <mark name=\"1\"/> 40 </prosody> <break time=\"250ms\"/> <mark name=\"7\"/> over <mark name=\"4\"/> natural log <mark name=\"5\"/> 5 <break time=\"250ms\"/> <mark name=\"9\"/> equals <break time=\"250ms\"/> <mark name=\"12\"/> the <mark name=\"10\"/> log <mark name=\"11\"/> base 5 <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"13\"/> 40 </prosody></speak>"
+    },
+    "NatLog016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the <mark name=\"9\"/> fraction with numerator <mark name=\"0\"/> natural log <mark name=\"1\"/> 40 <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> natural log <mark name=\"4\"/> 60 <break time=\"250ms\"/> <mark name=\"13\"/> and denominator <mark name=\"10\"/> natural log <mark name=\"11\"/> 5 </prosody></speak>"
+    }
+  }
+}

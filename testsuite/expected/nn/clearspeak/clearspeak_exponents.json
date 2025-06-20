@@ -1,0 +1,562 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakExponents",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "Nynorsk Clearspeak Exponents rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Exp001": {
+      "expected": "3 kvadrat"
+    },
+    "Exp002a": {
+      "expected": "3 kubikk"
+    },
+    "Exp003": {
+      "expected": "3 i femte potens"
+    },
+    "Exp004": {
+      "expected": "3 i første potens"
+    },
+    "Exp005": {
+      "expected": "b i første potens"
+    },
+    "Exp006": {
+      "expected": "3 heva til 5,0"
+    },
+    "Exp007": {
+      "expected": "3 i 0 potens"
+    },
+    "Exp008": {
+      "expected": "4 i 11. potens"
+    },
+    "Exp009": {
+      "expected": "3 med eksponent minus 2"
+    },
+    "Exp010a": {
+      "expected": "3 heva til minus 2,0"
+    },
+    "Exp011": {
+      "expected": "4 i x-te potens"
+    },
+    "Exp012": {
+      "expected": "3 heva til y pluss 2"
+    },
+    "Exp013": {
+      "expected": "venstreparentes, 2 y, minus 3, høgreparentes, heva til 3 z, pluss 8"
+    },
+    "Exp014": {
+      "expected": "p indeks 1, kvadrat"
+    },
+    "Exp015": {
+      "expected": "p indeks 1, kubikk"
+    },
+    "Exp016": {
+      "expected": "p indeks 1, i fjerde potens"
+    },
+    "Exp017": {
+      "expected": "p indeks 1, i tiande potens"
+    },
+    "Exp018": {
+      "expected": "p indeks 1, heva til x pluss 1"
+    },
+    "Exp019": {
+      "expected": "p indeks, x indeks 1, kvadrat"
+    },
+    "Exp010b": {
+      "expected": "p indeks, x indeks 1, kubikk"
+    },
+    "Exp011b": {
+      "expected": "p indeks, x indeks 1, i fjerde potens"
+    },
+    "Exp012b": {
+      "expected": "p indeks, x indeks 1, i tiande potens"
+    },
+    "Exp013b": {
+      "expected": "p indeks, x indeks 1, heva til y pluss 1"
+    },
+    "Exp014b": {
+      "expected": "3 heva til 2 kvadrat"
+    },
+    "Exp015b": {
+      "expected": "3 heva til 2 x kvadrat"
+    },
+    "Exp016b": {
+      "expected": "5 heva til 2 kubikk"
+    },
+    "Exp017b": {
+      "expected": "5 heva til 2 x kubikk"
+    },
+    "Exp018b": {
+      "expected": "3 heva til eksponenten, 2 kvadrat pluss 1, end exponent"
+    },
+    "Exp019b": {
+      "expected": "3 heva til 2 kvadrat, pluss 1"
+    },
+    "Exp020": {
+      "expected": "2 heva til eksponenten, x kvadrat pluss 3 x kubikk, end exponent"
+    },
+    "Exp021": {
+      "expected": "3 heva til eksponenten, 3 i fjerde potens, end exponent"
+    },
+    "Exp022": {
+      "expected": "3 heva til eksponenten, 3 i fjerde potens, pluss 2, end exponent"
+    },
+    "Exp023": {
+      "expected": "3 heva til eksponenten, 3 i fjerde potens, end exponent, pluss 2"
+    },
+    "Exp024": {
+      "expected": "2 heva til eksponenten, x i fjerde potens, end exponent"
+    },
+    "Exp025": {
+      "expected": "2 heva til eksponenten, 10 heva til x pluss 3, end exponent"
+    },
+    "Exp026": {
+      "expected": "3 heva til eksponenten, 3 i tiande potens, end exponent"
+    },
+    "Exp027": {
+      "expected": "3 heva til eksponenten, 3 i tiande potens, pluss 1, end exponent"
+    },
+    "Exp028": {
+      "expected": "3 heva til eksponenten, 3 i tiande potens, end exponent, pluss 1"
+    },
+    "Exp029": {
+      "expected": "3 heva til eksponenten, venstreparentes, x pluss 1, høgreparentes, kvadrat, end exponent"
+    },
+    "Exp030": {
+      "expected": "3 heva til eksponenten, venstreparentes, x pluss 1, høgreparentes, i tiande potens, end exponent"
+    },
+    "Exp031": {
+      "expected": "3 heva til eksponenten, venstreparentes, x pluss 1, høgreparentes, heva til y pluss 2, end exponent"
+    },
+    "Exp032": {
+      "expected": "3 heva til eksponenten, venstreparentes, x pluss 1, høgreparentes, i y-te potens, pluss 2, end exponent"
+    },
+    "Exp033": {
+      "expected": "3 heva til eksponenten, venstreparentes, x pluss 1, høgreparentes, i y-te potens, end exponent, pluss 2"
+    },
+    "Exp035": {
+      "expected": "e heva til eksponenten, minus ein andre ganger, venstreparentes, brøk med tellar x minus my, og nemnar sigma, høgreparentes, kvadrat, end exponent"
+    },
+    "Exp036": {
+      "expected": "2 i n-te potens"
+    },
+    "Exp037": {
+      "expected": "2 i m-te potens"
+    },
+    "Exp038": {
+      "expected": "2 i i-te potens"
+    },
+    "Exp039": {
+      "expected": "2 i j-te potens"
+    },
+    "Exp040": {
+      "expected": "2 i a-te potens"
+    },
+    "Exp041": {
+      "expected": "3 opphøgd i andre"
+    },
+    "Exp042": {
+      "expected": "3 opphøgd i tredje"
+    },
+    "Exp043": {
+      "expected": "3 opphøgd i nullte"
+    },
+    "Exp044": {
+      "expected": "3 opphøgd i første"
+    },
+    "Exp045": {
+      "expected": "3 opphøgd i femte"
+    },
+    "Exp046": {
+      "expected": "4 heva til 3,0"
+    },
+    "Exp047": {
+      "expected": "4 opphøgd i ellevte"
+    },
+    "Exp048": {
+      "expected": "3 opphøgd i minus 2"
+    },
+    "Exp049": {
+      "expected": "3 heva til minus 2,0"
+    },
+    "Exp050": {
+      "expected": "4 opphøgd i x-te"
+    },
+    "Exp051": {
+      "expected": "3 heva til y pluss 2"
+    },
+    "Exp052": {
+      "expected": "venstreparentes, 2 y, minus 3, høgreparentes, heva til 3 z, pluss 8"
+    },
+    "Exp053": {
+      "expected": "p indeks 1, opphøgd i andre"
+    },
+    "Exp054": {
+      "expected": "p indeks 1, opphøgd i tredje"
+    },
+    "Exp055": {
+      "expected": "p indeks 1, opphøgd i fjerde"
+    },
+    "Exp056": {
+      "expected": "p indeks 1, opphøgd i tiande"
+    },
+    "Exp057": {
+      "expected": "p indeks 1, heva til x pluss 1"
+    },
+    "Exp058": {
+      "expected": "p indeks, x indeks 1, opphøgd i andre"
+    },
+    "Exp059": {
+      "expected": "p indeks, x indeks 1, opphøgd i tredje"
+    },
+    "Exp060": {
+      "expected": "p indeks, x indeks 1, opphøgd i fjerde"
+    },
+    "Exp061": {
+      "expected": "p indeks, x indeks 1, opphøgd i tiande"
+    },
+    "Exp062": {
+      "expected": "p indeks, x indeks 1, heva til y pluss 1"
+    },
+    "Exp063": {
+      "expected": "3 med eksponent, 2 opphøgd i andre, slutt eksponent"
+    },
+    "Exp064": {
+      "expected": "3 med eksponent, 2 x opphøgd i andre, slutt eksponent"
+    },
+    "Exp065": {
+      "expected": "5 med eksponent, 2 opphøgd i tredje, slutt eksponent"
+    },
+    "Exp066": {
+      "expected": "5 med eksponent, 2 x opphøgd i tredje, slutt eksponent"
+    },
+    "Exp067": {
+      "expected": "3 med eksponent, 2 opphøgd i andre, pluss 1, slutt eksponent"
+    },
+    "Exp068": {
+      "expected": "3 med eksponent, 2 opphøgd i andre, slutt eksponent, pluss 1"
+    },
+    "Exp069": {
+      "expected": "2 med eksponent, x opphøgd i andre, pluss 3 x opphøgd i tredje, slutt eksponent"
+    },
+    "Exp070": {
+      "expected": "3 med eksponent, 3 opphøgd i fjerde, slutt eksponent"
+    },
+    "Exp071": {
+      "expected": "3 med eksponent, 3 opphøgd i fjerde, pluss 2, slutt eksponent"
+    },
+    "Exp072": {
+      "expected": "3 med eksponent, 3 opphøgd i fjerde, slutt eksponent, pluss 2"
+    },
+    "Exp073": {
+      "expected": "2 med eksponent, x opphøgd i fjerde, slutt eksponent"
+    },
+    "Exp074": {
+      "expected": "2 med eksponent, 10 heva til x pluss 3, slutt eksponent"
+    },
+    "Exp075": {
+      "expected": "3 med eksponent, 3 opphøgd i tiande, slutt eksponent"
+    },
+    "Exp076": {
+      "expected": "3 med eksponent, 3 opphøgd i tiande, pluss 1, slutt eksponent"
+    },
+    "Exp077": {
+      "expected": "3 med eksponent, 3 opphøgd i tiande, slutt eksponent, pluss 1"
+    },
+    "Exp078": {
+      "expected": "3 med eksponent, venstreparentes, x pluss 1, høgreparentes, opphøgd i andre, slutt eksponent"
+    },
+    "Exp079": {
+      "expected": "3 med eksponent, venstreparentes, x pluss 1, høgreparentes, opphøgd i tiande, slutt eksponent"
+    },
+    "Exp080": {
+      "expected": "3 med eksponent, venstreparentes, x pluss 1, høgreparentes, heva til y pluss 2, slutt eksponent"
+    },
+    "Exp081": {
+      "expected": "3 med eksponent, venstreparentes, x pluss 1, høgreparentes, opphøgd i y-te, pluss 2, slutt eksponent"
+    },
+    "Exp082": {
+      "expected": "3 med eksponent, venstreparentes, x pluss 1, høgreparentes, opphøgd i y-te, slutt eksponent, pluss 2"
+    },
+    "Exp083": {
+      "expected": "e med eksponent, minus ein andre x opphøgd i andre, slutt eksponent"
+    },
+    "Exp084": {
+      "expected": "e med eksponent, minus ein andre ganger, venstreparentes, brøk med tellar x minus my, og nemnar sigma, høgreparentes, opphøgd i andre, slutt eksponent"
+    },
+    "Exp085": {
+      "expected": "3 opphøgd i andre"
+    },
+    "Exp086": {
+      "expected": "3 opphøgd i tredje"
+    },
+    "Exp087": {
+      "expected": "3 opphøgd i nullte"
+    },
+    "Exp088": {
+      "expected": "3 opphøgd i første"
+    },
+    "Exp089": {
+      "expected": "3 opphøgd i femte"
+    },
+    "Exp090": {
+      "expected": "3 heva til 5,0"
+    },
+    "Exp091": {
+      "expected": "4 opphøgd i ellevte"
+    },
+    "Exp092": {
+      "expected": "3 opphøgd i minus 2"
+    },
+    "Exp093": {
+      "expected": "3 heva til minus 2,0"
+    },
+    "Exp094": {
+      "expected": "4 opphøgd i x-te"
+    },
+    "Exp095": {
+      "expected": "3 heva til y pluss 2"
+    },
+    "Exp096": {
+      "expected": "venstreparentes, 2 y, minus 3, høgreparentes, heva til 3 z, pluss 8"
+    },
+    "Exp097": {
+      "expected": "p indeks 1, opphøgd i andre"
+    },
+    "Exp098": {
+      "expected": "p indeks 1, opphøgd i tredje"
+    },
+    "Exp099": {
+      "expected": "p indeks 1, opphøgd i fjerde"
+    },
+    "Exp100": {
+      "expected": "p indeks 1, opphøgd i tiande"
+    },
+    "Exp101": {
+      "expected": "p indeks 1, heva til x pluss 1"
+    },
+    "Exp102": {
+      "expected": "p indeks, x indeks 1, opphøgd i andre"
+    },
+    "Exp103": {
+      "expected": "p indeks, x indeks 1, opphøgd i tredje"
+    },
+    "Exp104": {
+      "expected": "p indeks, x indeks 1, opphøgd i fjerde"
+    },
+    "Exp105": {
+      "expected": "p indeks, x indeks 1, opphøgd i tiande"
+    },
+    "Exp106": {
+      "expected": "p indeks, x indeks 1, heva til y pluss 1"
+    },
+    "Exp107": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i andre, slutt eksponent"
+    },
+    "Exp108": {
+      "expected": "3 opphøgd til eksponenten, 2 x opphøgd i andre, slutt eksponent"
+    },
+    "Exp109": {
+      "expected": "5 opphøgd til eksponenten, 2 opphøgd i tredje, slutt eksponent"
+    },
+    "Exp110": {
+      "expected": "5 opphøgd til eksponenten, 2 x opphøgd i tredje, slutt eksponent"
+    },
+    "Exp111": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i andre, pluss 1, slutt eksponent"
+    },
+    "Exp112": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i andre, slutt eksponent, pluss 1"
+    },
+    "Exp113": {
+      "expected": "2 opphøgd til eksponenten, x opphøgd i andre, pluss 3 x opphøgd i tredje, slutt eksponent"
+    },
+    "Exp114": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i fjerde, slutt eksponent"
+    },
+    "Exp115": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i fjerde, pluss 2, slutt eksponent"
+    },
+    "Exp116": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i fjerde, slutt eksponent, pluss 2"
+    },
+    "Exp117": {
+      "expected": "2 opphøgd til eksponenten, x opphøgd i fjerde, slutt eksponent"
+    },
+    "Exp118": {
+      "expected": "2 opphøgd til eksponenten, 10 heva til x pluss 3, slutt eksponent"
+    },
+    "Exp119": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i tiande, slutt eksponent"
+    },
+    "Exp120": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i tiande, pluss 1, slutt eksponent"
+    },
+    "Exp121": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i tiande, slutt eksponent, pluss 1"
+    },
+    "Exp122": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i andre, slutt eksponent"
+    },
+    "Exp123": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i tiande, slutt eksponent"
+    },
+    "Exp124": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, heva til y pluss 2, slutt eksponent"
+    },
+    "Exp125": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i y-te, pluss 2, slutt eksponent"
+    },
+    "Exp126": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i y-te, slutt eksponent, pluss 2"
+    },
+    "Exp127": {
+      "expected": "e opphøgd til eksponenten, minus ein andre x opphøgd i andre, slutt eksponent"
+    },
+    "Exp128": {
+      "expected": "e opphøgd til eksponenten, minus ein andre ganger, venstreparentes, brøk med tellar x minus my, og nemnar sigma, høgreparentes, opphøgd i andre, slutt eksponent"
+    },
+    "Exp129": {
+      "expected": "3 opphøgd i 2"
+    },
+    "Exp130": {
+      "expected": "3 opphøgd i 3"
+    },
+    "Exp131": {
+      "expected": "3 opphøgd i 1"
+    },
+    "Exp132b": {
+      "expected": "3 opphøgd i 0"
+    },
+    "Exp133": {
+      "expected": "3 opphøgd i 5"
+    },
+    "Exp134": {
+      "expected": "3 opphøgd i 5,0"
+    },
+    "Exp135": {
+      "expected": "4 opphøgd i 11"
+    },
+    "Exp136": {
+      "expected": "3 opphøgd i minus 2"
+    },
+    "Exp137": {
+      "expected": "3 opphøgd i minus 2,0"
+    },
+    "Exp138": {
+      "expected": "4 opphøgd i x"
+    },
+    "Exp139": {
+      "expected": "3 opphøgd i y pluss 2"
+    },
+    "Exp140": {
+      "expected": "venstreparentes, 2 y, minus 3, høgreparentes, opphøgd i 3 z pluss 8"
+    },
+    "Exp141": {
+      "expected": "p indeks 1, opphøgd i 2"
+    },
+    "Exp142": {
+      "expected": "p indeks 1, opphøgd i 3"
+    },
+    "Exp143": {
+      "expected": "p indeks 1, opphøgd i 4"
+    },
+    "Exp144": {
+      "expected": "p indeks 1, opphøgd i 10"
+    },
+    "Exp145": {
+      "expected": "p indeks 1, opphøgd i x pluss 1"
+    },
+    "Exp146": {
+      "expected": "p indeks, x indeks 1, opphøgd i 2"
+    },
+    "Exp147": {
+      "expected": "p indeks, x indeks 1, opphøgd i 3"
+    },
+    "Exp148": {
+      "expected": "p indeks, x indeks 1, opphøgd i 4"
+    },
+    "Exp149": {
+      "expected": "p indeks, x indeks 1, opphøgd i 10"
+    },
+    "Exp150": {
+      "expected": "p indeks, x indeks 1, opphøgd i y pluss 1"
+    },
+    "Exp151": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i 2, slutt eksponent"
+    },
+    "Exp152": {
+      "expected": "3 opphøgd til eksponenten, 2 x opphøgd i 2, slutt eksponent"
+    },
+    "Exp153": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i 2, slutt eksponent"
+    },
+    "Exp154": {
+      "expected": "3 opphøgd til eksponenten, 2 x opphøgd i 2, slutt eksponent"
+    },
+    "Exp155": {
+      "expected": "5 opphøgd til eksponenten, 2 opphøgd i 3, slutt eksponent"
+    },
+    "Exp156": {
+      "expected": "5 opphøgd til eksponenten, 2 x opphøgd i 3, slutt eksponent"
+    },
+    "Exp157": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i 2, pluss 1, slutt eksponent"
+    },
+    "Exp158": {
+      "expected": "3 opphøgd til eksponenten, 2 opphøgd i 2, slutt eksponent, pluss 1"
+    },
+    "Exp159": {
+      "expected": "2 opphøgd til eksponenten, x opphøgd i 2, pluss 3 x opphøgd i 3, slutt eksponent"
+    },
+    "Exp160": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 4, slutt eksponent"
+    },
+    "Exp161": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 4, pluss 2, slutt eksponent"
+    },
+    "Exp162": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 4, slutt eksponent, pluss 2"
+    },
+    "Exp163": {
+      "expected": "2 opphøgd til eksponenten, x opphøgd i 4, slutt eksponent"
+    },
+    "Exp164": {
+      "expected": "2 opphøgd til eksponenten, 10 opphøgd i x pluss 3, slutt eksponent"
+    },
+    "Exp165": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 10, slutt eksponent"
+    },
+    "Exp166": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 10, pluss 1, slutt eksponent"
+    },
+    "Exp167": {
+      "expected": "3 opphøgd til eksponenten, 3 opphøgd i 10, slutt eksponent, pluss 1"
+    },
+    "Exp168": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i 2, slutt eksponent"
+    },
+    "Exp169": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i 10, slutt eksponent"
+    },
+    "Exp170": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i y pluss 2, slutt eksponent"
+    },
+    "Exp171": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i y, pluss 2, slutt eksponent"
+    },
+    "Exp172": {
+      "expected": "3 opphøgd til eksponenten, venstreparentes, x pluss 1, høgreparentes, opphøgd i y, slutt eksponent, pluss 2"
+    },
+    "Exp173": {
+      "expected": "e opphøgd til eksponenten, minus ein andre x opphøgd i 2, slutt eksponent"
+    },
+    "Exp174": {
+      "expected": "e opphøgd til eksponenten, minus ein andre ganger, venstreparentes, brøk med tellar x minus my, og nemnar sigma, høgreparentes, opphøgd i 2, slutt eksponent"
+    }
+  }
+}

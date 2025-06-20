@@ -1,0 +1,407 @@
+{
+  "_comment_0": "Tests for the Fences heuristics.",
+  "tests": {
+    "_comment_35": " Fences.",
+    "_comment_36": " Test regular directed fences.",
+    "_comment_37": " No fence.",
+    "RegularFences_0": {
+      "input": "<mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow>"
+    },
+    "_comment_38": " Empty parentheses.",
+    "RegularFences_1": {
+      "input": "<mo>(</mo><mo>)</mo>"
+    },
+    "_comment_39": " Single Fenced Expression.",
+    "RegularFences_2": {
+      "input": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo></mrow>"
+    },
+    "_comment_40": " Single Fenced Expression and operators.",
+    "RegularFences_3": {
+      "input": "<mrow><mi>a</mi><mo>+</mo><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>+</mo><mi>d</mi></mrow>"
+    },
+    "_comment_41": " Parallel Parenthesis.",
+    "RegularFences_4": {
+      "input": "<mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
+    },
+    "_comment_42": " Nested Parenthesis.",
+    "RegularFences_5": {
+      "input": "<mrow><mo>(</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mo>)</mo></mrow>"
+    },
+    "_comment_43": " Nested parenthesis and brackets.",
+    "RegularFences_6": {
+      "input": "<mrow><mo>(</mo><mo>[</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mi>d</mi><mo>)</mo></mrow>"
+    },
+    "_comment_44": " Nested parenthesis, brackets, braces and superscript operator.",
+    "RegularFences_7": {
+      "input": "<mrow><mo>(</mo><msup><mi>a</mi><mrow><mn>2</mn><mo>[</mo><mi>i</mi><mo>+</mo><mi>n</mi><mo>]</mo></mrow></msup><mo>+</mo><mi>b</mi><mo>)</mo><mo>+</mo><mo>{</mo><mi>c</mi><mi>d</mi><mo>-</mo><mo>[</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>]</mo><mo>}</mo></mrow>"
+    },
+    "_comment_45": " Test neutral fences.",
+    "_comment_46": " Empty bars.",
+    "NeutralFences_0": {
+      "input": "<mrow><mo>|</mo><mo>|</mo></mrow>"
+    },
+    "_comment_47": " Simple bar fence.",
+    "NeutralFences_1": {
+      "input": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo></mrow>"
+    },
+    "_comment_48": " Parallel bar fences.",
+    "NeutralFences_2": {
+      "input": "<mrow><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
+    },
+    "_comment_49": " Nested bar fences.",
+    "NeutralFences_3": {
+      "input": "<mrow><mo>&#x00A6;</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>&#x00A6;</mo></mrow>"
+    },
+    "_comment_50": " Mixed neutral and regular fences.",
+    "_comment_51": " Empty parenthsis inside bars.",
+    "MixedFences_0": {
+      "input": "<mrow><mo>|</mo><mo>(</mo><mo>)</mo><mo>|</mo></mrow>"
+    },
+    "_comment_52": " Bars inside parentheses.",
+    "MixedFences_1": {
+      "input": "<mrow><mo>(</mo><mo>|</mo><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>)</mo></mrow>"
+    },
+    "_comment_53": " Parentheses inside bards.",
+    "MixedFences_2": {
+      "input": "<mrow><mo>|</mo><mo>(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>)</mo><mo>&#x00A6;</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>|</mo></mrow>"
+    },
+    "_comment_54": " Parentheses inside bards.",
+    "MixedFences_3": {
+      "input": "<mrow><mo>[</mo><mo>|</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>|</mo><mo>+</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x00A6;</mo><mi>d</mi><mo>+</mo><mo>(</mo><mi>e</mi><mo>+</mo><mi>f</mi><mo>)</mo><mo>&#x00A6;</mo></mrow>"
+    },
+    "_comment_55": " Mixed with isolated bars.",
+    "_comment_56": " Set notation.",
+    "MixedFencesWithBars_0": {
+      "input": "<mrow><mo>{</mo><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo><mo>|</mo><mi>x</mi><mi>y</mi><mo>=</mo><mo>z</mo><mo>}</mo></mrow>"
+    },
+    "_comment_57": " Disjunction of bracketed parallel statements.",
+    "MixedFencesWithBars_1": {
+      "input": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo></mrow>"
+    },
+    "_comment_58": " Metric over the above.",
+    "MixedFencesWithBars_2": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>]</mo><mo>&#x2016;</mo></mrow>"
+    },
+    "_comment_59": " Mix of metrics and bracketed expression and single bars.",
+    "MixedFencesWithBars_3": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>[</mo><mi>u</mi><mo>&#x2016;</mo><mi>v</mi><mo>]</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+    },
+    "_comment_60": " Pathological cases with only opening fences.",
+    "_comment_61": " Single.",
+    "OpeningFencesOnly_0": {
+      "input": "<mrow><mo>[</mo></mrow>"
+    },
+    "_comment_62": " Single right.",
+    "OpeningFencesOnly_1": {
+      "input": "<mrow><mi>a</mi><mo>[</mo></mrow>"
+    },
+    "_comment_63": " Single middle.",
+    "OpeningFencesOnly_2": {
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi></mrow>"
+    },
+    "_comment_64": " Single left.",
+    "OpeningFencesOnly_3": {
+      "input": "<mrow><mo>[</mo><mi>b</mi></mrow>"
+    },
+    "_comment_65": " Multiple.",
+    "OpeningFencesOnly_4": {
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mi>c</mi><mo>(</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
+    },
+    "_comment_66": " Multiple plus inner fenced.",
+    "OpeningFencesOnly_5": {
+      "input": "<mrow><mi>a</mi><mo>[</mo><mi>b</mi><mo>[</mo><mo>(</mo><mo>(</mo><mi>c</mi><mo>)</mo><mi>d</mi><mo>{</mo><mi>e</mi><mo>&#x3008;</mo><mi>f</mi></mrow>"
+    },
+    "_comment_67": " Pathological cases with only closing fences.",
+    "_comment_68": " Single.",
+    "ClosingFencesOnly_0": {
+      "input": "<mrow><mo>]</mo></mrow>"
+    },
+    "_comment_69": " Single right.",
+    "ClosingFencesOnly_1": {
+      "input": "<mrow><mi>a</mi><mo>]</mo></mrow>"
+    },
+    "_comment_70": " Single middle.",
+    "ClosingFencesOnly_2": {
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi></mrow>"
+    },
+    "_comment_71": " Single left.",
+    "ClosingFencesOnly_3": {
+      "input": "<mrow><mo>]</mo><mi>b</mi></mrow>"
+    },
+    "_comment_72": " Multiple.",
+    "ClosingFencesOnly_4": {
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mi>c</mi><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
+    },
+    "_comment_73": " Multiple plus inner fenced.",
+    "ClosingFencesOnly_5": {
+      "input": "<mrow><mi>a</mi><mo>]</mo><mi>b</mi><mo>]</mo><mo>(</mo><mi>c</mi><mo>)</mo><mo>)</mo><mi>d</mi><mo>}</mo><mi>e</mi><mo>&#x3009;</mo><mi>f</mi></mrow>"
+    },
+    "_comment_74": " Pathological cases with only neutral fences.",
+    "_comment_75": " Single.",
+    "NeutralFencesOnly_0": {
+      "input": "<mrow><mo>|</mo></mrow>"
+    },
+    "_comment_76": " Single right.",
+    "NeutralFencesOnly_1": {
+      "input": "<mrow><mi>a</mi><mo>|</mo></mrow>"
+    },
+    "_comment_77": " Single middle.",
+    "NeutralFencesOnly_2": {
+      "input": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi></mrow>"
+    },
+    "_comment_78": " Single left.",
+    "NeutralFencesOnly_3": {
+      "input": "<mrow><mo>|</mo><mi>b</mi></mrow>"
+    },
+    "_comment_79": " Two different bars.",
+    "NeutralFencesOnly_4": {
+      "input": "<mrow><mi>a</mi><mo>|</mo><mi>b</mi><mo>&#x00A6;</mo><mi>c</mi></mrow>"
+    },
+    "_comment_80": " Neutrals and close.",
+    "NeutralFencesOnly_5": {
+      "input": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
+    },
+    "_comment_81": " Neutrals and open.",
+    "NeutralFencesOnly_6": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+    },
+    "_comment_82": " Multiple fences, fenced and operations",
+    "_comment_83": " Multiple fences, fenced and operations",
+    "_comment_84": " Multiple fences, fenced and operations",
+    "MixedUnmatchedFences_0": {
+      "input": "<mrow><mo>]</mo><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>(</mo></mrow>"
+    },
+    "MixedUnmatchedFences_1": {
+      "input": "<mrow><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mi>e</mi></mrow>"
+    },
+    "MixedUnmatchedFences_2": {
+      "input": "<mrow><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>|</mo><mi>c</mi><mo>&#x00A6;</mo><mi>d</mi></mrow>"
+    },
+    "MixedUnmatchedFences_3": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>|</mo><mo>[</mo><mi>c</mi><mo>&#x2016;</mo><mo>&#x00A6;</mo><mi>d</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>x</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi><mo>]</mo></mrow>"
+    },
+    "MixedUnmatchedFences_4": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>]</mo><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>|</mo><mo>[</mo><mi>a</mi><mo>&#x2016;</mo><mi>b</mi><mo>]</mo><mo>&#x2016;</mo><mo>|</mo><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mi>z</mi></mrow>"
+    },
+    "MixedUnmatchedFences_5": {
+      "input": "<mrow><mo>&#x2016;</mo><mo>[</mo><mi>a</mi><mo>&#x00A6;</mo><mo>&#x2016;</mo><mo>[</mo><mo>+</mo><mo>[</mo><mi>b</mi><mo>&#x2016;</mo><mi>c</mi><mo>]</mo><mo>+</mo><mo>&#x2016;</mo><mo>|</mo><mi>d</mi><mo>+</mo><mi>e</mi><mi>[</mi><mo>&#x2016;</mo><mi>y</mi><mo>&#x00A6;</mo><mo>+</mo><mi>z</mi></mrow>"
+    },
+    "_comment_144": " Embellished Fences",
+    "_comment_145": " Expressions with embellished fences right.",
+    "EmbellishedRightFence_0": {
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup>"
+    },
+    "EmbellishedRightFence_1": {
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mo>(</mo><mi>y</mi><msup><mo>)</mo><mn>3</mn></msup>"
+    },
+    "EmbellishedRightFence_2": {
+      "input": "<mo>(</mo><mi>x</mi><msub><msup><mo>)</mo><mn>4</mn></msup><mn>2</mn></msub>"
+    },
+    "EmbellishedRightFence_3": {
+      "input": "<mo>(</mo><mi>x</mi><msubsup><mo>)</mo><mn>4</mn><mn>2</mn></msubsup>"
+    },
+    "EmbellishedRightFence_4": {
+      "input": "<mo>(</mo><mi>x</mi><mmultiscripts><mo>)</mo><mn>4</mn><mn>2</mn></mmultiscripts>"
+    },
+    "EmbellishedRightFence_5": {
+      "input": "<mo>(</mo><mi>x</mi><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>1</mn></msup>"
+    },
+    "EmbellishedRightFence_6": {
+      "input": "<mo>(</mo><mi>x</mi><mpadded><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
+    },
+    "_comment_146": " Expressions with embellished fences left.",
+    "EmbellishedLeftFence_0": {
+      "input": "<msup><mo>(</mo><mn>4</mn></msup><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_1": {
+      "input": "<mmultiscripts><mo>(</mo><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_2": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_3": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_4": {
+      "input": "<mmultiscripts><mo>(</mo><mn>2</mn><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_5": {
+      "input": "<mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedLeftFence_6": {
+      "input": "<mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>)</mo>"
+    },
+    "_comment_147": " Expressions with embellished fences on both sides.",
+    "EmbellishedBothFences_0": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><msup><mo>)</mo><mn>2</mn></msup>"
+    },
+    "EmbellishedBothFences_1": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "EmbellishedBothFences_2": {
+      "input": "<munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder><mi>x</mi><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover>"
+    },
+    "_comment_148": " Expressions with padded background.",
+    "EmbellishedPaddedFences_0": {
+      "input": "<mo>(</mo><mi>x</mi><mpadded mathbackground=\"red\"><msup><munder><msub><mover><mo>)</mo><mo>^</mo></mover><mn>2</mn></msub><mo>~</mo></munder><mn>3</mn></msup></mpadded>"
+    },
+    "EmbellishedPaddedFences_1": {
+      "input": "<mpadded mathbackground=\"red\"><mmultiscripts><mover><mmultiscripts><munder><mo>(</mo><mo>~</mo></munder><mprescripts/><none/><mn>3</mn></mmultiscripts><mo>^</mo></mover><mprescripts/><mn>4</mn></mmultiscripts></mpadded><mi>x</mi><mo>)</mo>"
+    },
+    "EmbellishedPaddedFences_2": {
+      "input": "<mpadded mathbackground=\"blue\"><munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder></mpadded><mi>x</mi><mpadded mathbackground=\"red\"><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>"
+    },
+    "_comment_149": " Expressions with embellished right fences as a sub-expression.",
+    "EmbellRightSubexpr_0": {
+      "input": "<mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellRightSubexpr_1": {
+      "input": "<mn>2</mn><mo>+</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellRightSubexpr_2": {
+      "input": "<mo>-</mo><mo>(</mo><mi>x</mi><msup><mo>)</mo><mn>4</mn></msup><mo>+</mo><mn>1</mn>"
+    },
+    "_comment_150": " Expressions with embellished left fences as a sub-expression.",
+    "EmbellLeftSubexpr_0": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellLeftSubexpr_1": {
+      "input": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellLeftSubexpr_2": {
+      "input": "<mi>k</mi><mo>+</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>)</mo><mo>+</mo><mn>1</mn>"
+    },
+    "_comment_151": " Expressions with embellished both fences as a sub-expression.",
+    "EmbellBothSubexpr_0": {
+      "input": "<mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellBothSubexpr_1": {
+      "input": "<mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+    },
+    "EmbellBothSubexpr_2": {
+      "input": "<mi>k</mi><mo>-</mo><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><mn>1</mn>"
+    },
+    "_comment_152": " Expressions with embellished fences right and complex content.",
+    "ComplexEmbellRight_0": {
+      "input": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msup><mo>)</mo><mn>4</mn></msup>"
+    },
+    "ComplexEmbellRight_1": {
+      "input": "<mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><msub><mo>)</mo><mn>4</mn></msub>"
+    },
+    "EmbellishedNeutralFences_0": {
+      "input": "<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup>"
+    },
+    "EmbellishedNeutralFences_1": {
+      "input": "<mo>|</mo><mi>x</mi><msup><mo>|</mo><mn>4</mn></msup><mo>+</mo><mo>|</mo><mi>y</mi><msup><mo>|</mo><mn>3</mn></msup>"
+    },
+    "EmbellishedNeutralFences_2": {
+      "input": "<mo>|</mo><mi>x</mi><msub><msup><mo>|</mo><mn>4</mn></msup><mn>2</mn></msub>"
+    },
+    "EmbellishedNeutralFences_3": {
+      "input": "<mo>|</mo><mi>x</mi><mpadded mathbackground=\"blue\"><msup><mo>|</mo><mn>4</mn></msup></mpadded>"
+    },
+    "EmbellishedNeutralFences_4": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>|</mo>"
+    },
+    "EmbellishedNeutralFences_5": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "EmbellishedNeutralFences_6": {
+      "input": "<mo>|</mo><mi>x</mi><mo>¦</mo><mi>y</mi><msup><mo>|</mo><mn>4</mn></msup>"
+    },
+    "_comment_200": "The following tests mainly arouse with issue 461.",
+    "InelligibleLeft_0": {
+      "input": "<msup><mo>|</mo><mn>1</mn></msup><mi>a</mi><mo>|</mo>"
+    },
+    "InelligibleLeft_1": {
+      "input": "<msub><mo>|</mo><mn>1</mn></msub><mi>a</mi><mo>|</mo>"
+    },
+    "InelligibleLeft_2": {
+      "input": "<msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup><mi>a</mi><mo>|</mo>"
+    },
+    "InelligibleLeft_3": {
+      "input": "<msup><mo>|</mo><mn>1</mn></msup><mi>x</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeft_4": {
+      "input": "<msub><mo>|</mo><mn>1</mn></msub><mi>x</mi><msub><mo>|</mo><mn>1</mn></msub>"
+    },
+    "InelligibleLeft_5": {
+      "input": "<msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup><mi>a</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "InelligibleLeft_6": {
+      "input": "<mmultiscripts><mo>|</mo><mn>1</mn><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "InelligibleLeft_7": {
+      "input": "<mmultiscripts><mo>|</mo><mn>1</mn></mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "InelligibleRight_0": {
+      "input": "<mo>|</mo><mi>a</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts>"
+    },
+    "InelligibleRight_1": {
+      "input": "<mo>|</mo><mi>a</mi><mmultiscripts><mo>|</mo><mprescripts/><none/><mn>3</mn></mmultiscripts>"
+    },
+    "InelligibleRight_2": {
+      "input": "<mo>|</mo><mi>a</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts>"
+    },
+    "InelligibleRightMiddle_0": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>y</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "InelligibleRightMiddle_1": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeftMiddle_0": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><msub><mo>|</mo><mn>2</mn></msub><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeftMiddle_1": {
+      "input": "<mmultiscripts><mo>|</mo><mn>3</mn><mprescripts/></mmultiscripts><mi>x</mi><msub><mo>|</mo><mn>2</mn></msub><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeftMiddle_2": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>z</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeftMiddle_3": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><msup><mo>|</mo><mn>2</mn></msup><mi>z</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "InelligibleLeftMiddle_4": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><msup><mo>|</mo><mn>2</mn></msup><mi>z</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "ElligibleLeft_0": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><none/><mn>3</mn></mmultiscripts><mi>x</mi><mo>|</mo>"
+    },
+    "ElligibleLeft_1": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn></mmultiscripts><mi>x</mi><mo>|</mo>"
+    },
+    "ElligibleLeft_2": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><mo>|</mo>"
+    },
+    "ElligibleRight_0": {
+      "input": "<mo>|</mo><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "ElligibleRight_1": {
+      "input": "<mo>|</mo><mi>x</mi><mmultiscripts><mo>|</mo><mn>4</mn><mn>3</mn><mprescripts/></mmultiscripts>"
+    },
+    "ElligibleBoth_0": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mi>x</mi><msubsup><mo>|</mo><mn>1</mn><mn>2</mn></msubsup>"
+    },
+    "ElligibleBoth_1": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><msup><mo>|</mo><mn>2</mn></msup><mi>z</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msup><mo>|</mo><mn>1</mn></msup>"
+    },
+    "ElligibleBoth_2": {
+      "input": "<mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>x</mi><msub><mo>|</mo><mn>2</mn></msub><mi>z</mi><mmultiscripts><mo>|</mo><mprescripts/><mn>3</mn></mmultiscripts><mi>y</mi><msub><mo>|</mo><mn>1</mn></msub>"
+    },
+    "issue_616_0": {
+      "input": "<mtable displaystyle=\"true\"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></mtd></mlabeledtr></mtable>"
+    },
+    "issue_616_1": {
+      "input": "<mtable displaystyle=\"true\"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>x</mi><mo>=</mo><mi>y</mi></mtd></mlabeledtr></mtable>"
+    },
+    "issue_616_2": {
+      "input": "<mtable displaystyle=\"true\"><mlabeledtr><mtd><mtext>(3.42)</mtext></mtd><mtd><mo stretchy=\"false\">(</mo><msub><mi>L</mi><mrow><mn>1</mn></mrow></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>L</mi><mi>j</mi></msub><mo>,</mo><msub><mi>σ</mi><mrow><mo>−</mo><mi>r</mi></mrow></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>σ</mi><mrow><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><msubsup><mi>L</mi><mrow><mn>1</mn></mrow><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>,</mo><mo>…</mo><mo>,</mo><msubsup><mi>L</mi><mi>k</mi><mo data-mjx-alternate=\"1\">′</mo></msubsup><mo>,</mo><msubsup><mi>σ</mi><mrow><mn>0</mn></mrow><mi>ϕ</mi></msubsup><mo>,</mo><msubsup><mi>σ</mi><mrow><mn>1</mn></mrow><mi>ϕ</mi></msubsup><mo>,</mo><mo>…</mo><mo>,</mo><msubsup><mi>σ</mi><mi>ℓ</mi><mi>ϕ</mi></msubsup><mo stretchy=\"false\">)</mo></mtd></mlabeledtr></mtable>"
+    },
+    "issue_562_0": {
+      "input": "<mo stretchy=\"false\">(</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"/></mstyle><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"/></mstyle><mn>1</mn><msup><mo stretchy=\"false\">)</mo><mn>1</mn></msup>"
+    },
+    "issue_562_1": {
+      "input": "<mo stretchy=\"false\">(</mo><mi>a</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"/></mstyle><mi>b</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"/></mstyle><mi>c</mi><msup><mo stretchy=\"false\">)</mo><mn>2</mn></msup>"
+    }
+  }
+}

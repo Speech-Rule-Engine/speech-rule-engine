@@ -1,0 +1,251 @@
+{
+  "name": "HindiClearspeakFunction",
+  "locale": "hi",
+  "domain": "clearspeak",
+  "style": "default",
+  "active": "ClearspeakSymbolsHindi",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Hindi Clearspeak Function tests.",
+  "compare": true,
+  "tests": {
+    "deg": {
+      "expected": "अंश"
+    },
+    "Deg": {
+      "expected": "अंश"
+    },
+    "det": {
+      "expected": "सारणिक"
+    },
+    "Det": {
+      "expected": "सारणिक"
+    },
+    "dim": {
+      "expected": "आयाम"
+    },
+    "Dim": {
+      "expected": "आयाम"
+    },
+    "hom": {
+      "expected": "समरूपी"
+    },
+    "Hom": {
+      "expected": "समरूपी"
+    },
+    "HOM": {
+      "expected": "समरूपी"
+    },
+    "ker": {
+      "expected": "बीज"
+    },
+    "Ker": {
+      "expected": "बीज"
+    },
+    "Tr": {
+      "expected": "अनुरेख"
+    },
+    "tr": {
+      "expected": "अनुरेख"
+    },
+    "log": {
+      "expected": "लघुगणक"
+    },
+    "ln": {
+      "expected": "एल एन"
+    },
+    "lg": {
+      "expected": "दस आधारित लघुगणक"
+    },
+    "exp": {
+      "expected": "चरघातांकी"
+    },
+    "expt": {
+      "expected": "चरघातांकी"
+    },
+    "gcd": {
+      "expected": "महत्तम समापवर्तक"
+    },
+    "GCD": {
+      "expected": "महत्तम समापवर्तक"
+    },
+    "lcm": {
+      "expected": "लघुत्तम समापवर्त्य"
+    },
+    "LCM": {
+      "expected": "लघुत्तम समापवर्त्य"
+    },
+    "arg": {
+      "expected": "तर्क (Argument)"
+    },
+    "Arg": {
+      "expected": "तर्क (Argument)"
+    },
+    "im": {
+      "expected": "काल्पनिक (Imaginary)"
+    },
+    "Im": {
+      "expected": "काल्पनिक (Imaginary)"
+    },
+    "re": {
+      "expected": "वास्तविक (Real)"
+    },
+    "Re": {
+      "expected": "वास्तविक (Real)"
+    },
+    "inf": {
+      "expected": "अधिकतम निम्न परिबद्ध"
+    },
+    "Inf": {
+      "expected": "अधिकतम निम्न परिबद्ध"
+    },
+    "lim": {
+      "expected": "सीमा"
+    },
+    "lim inf": {
+      "expected": "निम्न सीमा"
+    },
+    "liminf": {
+      "expected": "निम्न सीमा"
+    },
+    "lim sup": {
+      "expected": "उच्च सीमा"
+    },
+    "limsup": {
+      "expected": "उच्च सीमा"
+    },
+    "max": {
+      "expected": "महत्तम"
+    },
+    "Max": {
+      "expected": "महत्तम"
+    },
+    "min": {
+      "expected": "न्यूनतम"
+    },
+    "Min": {
+      "expected": "न्यूनतम"
+    },
+    "sup": {
+      "expected": "लघुत्तम उच्च परिबद्ध"
+    },
+    "Sup": {
+      "expected": "लघुत्तम उच्च परिबद्ध"
+    },
+    "injlim": {
+      "expected": "सह सीमा"
+    },
+    "inj lim": {
+      "expected": "सह सीमा"
+    },
+    "projlim": {
+      "expected": "व्युत्क्रम सीमा"
+    },
+    "proj lim": {
+      "expected": "व्युत्क्रम सीमा"
+    },
+    "mod": {
+      "expected": "मापांक (modulus)"
+    },
+    "Pr": {
+      "expected": "प्रायिकता"
+    },
+    "cosh": {
+      "expected": "हाइपरबोलिक कोसाइन"
+    },
+    "coth": {
+      "expected": "हाइपरबोलिक कॉट"
+    },
+    "csch": {
+      "expected": "हाइपरबोलिक कोसेक"
+    },
+    "sech": {
+      "expected": "हाइपरबोलिक सेक"
+    },
+    "sinh": {
+      "expected": "हाइपरबोलिक साइन"
+    },
+    "tanh": {
+      "expected": "हाइपरबोलिक टेन"
+    },
+    "arcosh": {
+      "expected": "प्रतिलोम हाइपरबोलिक कोसाइन"
+    },
+    "arccosh": {
+      "expected": "प्रतिलोम हाइपरबोलिक कोसाइन"
+    },
+    "arcoth": {
+      "expected": "प्रतिलोम हाइपरबोलिक कॉट"
+    },
+    "arccoth": {
+      "expected": "प्रतिलोम हाइपरबोलिक कॉट"
+    },
+    "arcsch": {
+      "expected": "प्रतिलोम हाइपरबोलिक कोसेक"
+    },
+    "arccsch": {
+      "expected": "प्रतिलोम हाइपरबोलिक कोसेक"
+    },
+    "arsech": {
+      "expected": "प्रतिलोम हाइपरबोलिक सेक"
+    },
+    "arcsech": {
+      "expected": "प्रतिलोम हाइपरबोलिक सेक"
+    },
+    "arsinh": {
+      "expected": "प्रतिलोम हाइपरबोलिक साइन"
+    },
+    "arcsinh": {
+      "expected": "प्रतिलोम हाइपरबोलिक साइन"
+    },
+    "artanh": {
+      "expected": "प्रतिलोम हाइपरबोलिक टेन"
+    },
+    "arctanh": {
+      "expected": "प्रतिलोम हाइपरबोलिक टेन"
+    },
+    "cos": {
+      "expected": "कोस"
+    },
+    "cosine": {
+      "expected": "कोस"
+    },
+    "cot": {
+      "expected": "कॉट"
+    },
+    "csc": {
+      "expected": "कोसेक"
+    },
+    "sec": {
+      "expected": "सेक"
+    },
+    "sin": {
+      "expected": "साइन"
+    },
+    "sine": {
+      "expected": "साइन"
+    },
+    "tan": {
+      "expected": "टेन"
+    },
+    "arccos": {
+      "expected": "प्रतिलोम कोस"
+    },
+    "arccot": {
+      "expected": "प्रतिलोम कॉट"
+    },
+    "arccsc": {
+      "expected": "प्रतिलोम कोसेक"
+    },
+    "arcsec": {
+      "expected": "प्रतिलोम सेक"
+    },
+    "arcsin": {
+      "expected": "प्रतिलोम साइन"
+    },
+    "arctan": {
+      "expected": "प्रतिलोम टेन"
+    }
+  }
+}

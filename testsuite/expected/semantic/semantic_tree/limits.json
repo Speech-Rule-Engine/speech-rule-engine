@@ -1,0 +1,199 @@
+{
+  "information": "Semantic tree tests for limits heuristic.",
+  "base": "input/semantic/limits.json",
+  "factory": "stree",
+  "tests": {
+    "Sum_0": {
+      "expected": "<stree><underscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore></stree>"
+    },
+    "Sum_1": {
+      "expected": "<stree><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore></stree>"
+    },
+    "Sum_2": {
+      "expected": "<stree><limupper role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Sum_3": {
+      "expected": "<stree><limlower role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Sum_4": {
+      "expected": "<stree><limboth role=\"sum\" id=\"5\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Sum_5": {
+      "expected": "<stree><limboth role=\"sum\" id=\"7\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"infty\" font=\"normal\" id=\"3\">∞</identifier><prefixop role=\"negative\" id=\"6\">−<content><operator role=\"subtraction\" id=\"4\">−</operator></content><children><identifier role=\"infty\" font=\"normal\" id=\"5\">∞</identifier></children></prefixop></children></limboth></stree>"
+    },
+    "Sum_6": {
+      "expected": "<stree><limupper role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Sum_7": {
+      "expected": "<stree><limlower role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Sum_8": {
+      "expected": "<stree><limboth role=\"sum\" id=\"5\"><children><overscore role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Sum_9": {
+      "expected": "<stree><overscore role=\"sum\" id=\"7\"><children><limboth role=\"sum\" id=\"4\"><children><underscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"6\">~</relation></children></overscore></stree>"
+    },
+    "Sum_10": {
+      "expected": "<stree><overscore role=\"sum\" id=\"8\"><children><underscore role=\"sum\" id=\"6\"><children><limboth role=\"sum\" id=\"4\"><children><largeop role=\"sum\" id=\"1\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"5\">_</punctuation></children></underscore><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"7\">~</relation></children></overscore></stree>"
+    },
+    "Sum_11": {
+      "expected": "<stree><underscore role=\"sum\" id=\"7\"><children><overscore role=\"sum\" id=\"5\"><children><limboth role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore></stree>"
+    },
+    "Sum_12": {
+      "expected": "<stree><underscore role=\"sum\" id=\"8\"><children><limboth role=\"sum\" id=\"6\"><children><overscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"1\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore></stree>"
+    },
+    "Sum_13": {
+      "expected": "<stree><limboth role=\"sum\" id=\"11\"><children><underscore role=\"sum\" id=\"8\"><children><limboth role=\"sum\" id=\"6\"><children><overscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"1\">∑</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"10\">5</number></children></limboth></stree>"
+    },
+    "Sum_14": {
+      "expected": "<stree><limboth role=\"sum\" id=\"10\"><children><underscore role=\"sum\" id=\"7\"><children><overscore role=\"sum\" id=\"5\"><children><limboth role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"8\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"9\">5</number></children></limboth></stree>"
+    },
+    "Integral_0": {
+      "expected": "<stree><underscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore></stree>"
+    },
+    "Integral_1": {
+      "expected": "<stree><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore></stree>"
+    },
+    "Integral_2": {
+      "expected": "<stree><limupper role=\"integral\" id=\"4\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Integral_3": {
+      "expected": "<stree><limlower role=\"integral\" id=\"4\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Integral_4": {
+      "expected": "<stree><limboth role=\"integral\" id=\"5\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Integral_5": {
+      "expected": "<stree><limboth role=\"integral\" id=\"7\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"infty\" font=\"normal\" id=\"3\">∞</identifier><prefixop role=\"negative\" id=\"6\">−<content><operator role=\"subtraction\" id=\"4\">−</operator></content><children><identifier role=\"infty\" font=\"normal\" id=\"5\">∞</identifier></children></prefixop></children></limboth></stree>"
+    },
+    "Integral_6": {
+      "expected": "<stree><limupper role=\"integral\" id=\"4\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Integral_7": {
+      "expected": "<stree><limlower role=\"integral\" id=\"4\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Integral_8": {
+      "expected": "<stree><limboth role=\"integral\" id=\"5\"><children><overscore role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Integral_9": {
+      "expected": "<stree><overscore role=\"integral\" id=\"7\"><children><limboth role=\"integral\" id=\"4\"><children><underscore role=\"integral\" id=\"3\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"6\">~</relation></children></overscore></stree>"
+    },
+    "Integral_10": {
+      "expected": "<stree><overscore role=\"integral\" id=\"8\"><children><underscore role=\"integral\" id=\"6\"><children><limboth role=\"integral\" id=\"4\"><children><largeop role=\"integral\" id=\"1\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"5\">_</punctuation></children></underscore><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"7\">~</relation></children></overscore></stree>"
+    },
+    "Integral_11": {
+      "expected": "<stree><underscore role=\"integral\" id=\"7\"><children><overscore role=\"integral\" id=\"5\"><children><limboth role=\"integral\" id=\"3\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore></stree>"
+    },
+    "Integral_12": {
+      "expected": "<stree><underscore role=\"integral\" id=\"8\"><children><limboth role=\"integral\" id=\"6\"><children><overscore role=\"integral\" id=\"3\"><children><largeop role=\"integral\" id=\"1\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore></stree>"
+    },
+    "Integral_13": {
+      "expected": "<stree><limboth role=\"integral\" id=\"11\"><children><underscore role=\"integral\" id=\"8\"><children><limboth role=\"integral\" id=\"6\"><children><overscore role=\"integral\" id=\"3\"><children><largeop role=\"integral\" id=\"1\">∫</largeop><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"10\">5</number></children></limboth></stree>"
+    },
+    "Integral_14": {
+      "expected": "<stree><limboth role=\"integral\" id=\"10\"><children><underscore role=\"integral\" id=\"7\"><children><overscore role=\"integral\" id=\"5\"><children><limboth role=\"integral\" id=\"3\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"8\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"9\">5</number></children></limboth></stree>"
+    },
+    "Limit_0": {
+      "expected": "<stree><underscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore></stree>"
+    },
+    "Limit_1": {
+      "expected": "<stree><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore></stree>"
+    },
+    "Limit_2": {
+      "expected": "<stree><limupper role=\"limit function\" id=\"4\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Limit_3": {
+      "expected": "<stree><limlower role=\"limit function\" id=\"4\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Limit_4": {
+      "expected": "<stree><limboth role=\"limit function\" id=\"5\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Limit_5": {
+      "expected": "<stree><limboth role=\"limit function\" id=\"7\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"infty\" font=\"normal\" id=\"3\">∞</identifier><prefixop role=\"negative\" id=\"6\">−<content><operator role=\"subtraction\" id=\"4\">−</operator></content><children><identifier role=\"infty\" font=\"normal\" id=\"5\">∞</identifier></children></prefixop></children></limboth></stree>"
+    },
+    "Limit_6": {
+      "expected": "<stree><limupper role=\"limit function\" id=\"4\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limupper></stree>"
+    },
+    "Limit_7": {
+      "expected": "<stree><limlower role=\"limit function\" id=\"4\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier></children></limlower></stree>"
+    },
+    "Limit_8": {
+      "expected": "<stree><limboth role=\"limit function\" id=\"5\"><children><overscore role=\"limit function\" id=\"2\"><children><function role=\"limit function\" id=\"0\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"1\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></limboth></stree>"
+    },
+    "Limit_9": {
+      "expected": "<stree><overscore role=\"limit function\" id=\"7\"><children><limboth role=\"limit function\" id=\"4\"><children><underscore role=\"limit function\" id=\"3\"><children><function role=\"limit function\" id=\"0\">lim</function><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"6\">~</relation></children></overscore></stree>"
+    },
+    "Limit_10": {
+      "expected": "<stree><overscore role=\"limit function\" id=\"8\"><children><underscore role=\"limit function\" id=\"6\"><children><limboth role=\"limit function\" id=\"4\"><children><function role=\"limit function\" id=\"1\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"5\">_</punctuation></children></underscore><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"7\">~</relation></children></overscore></stree>"
+    },
+    "Limit_11": {
+      "expected": "<stree><underscore role=\"limit function\" id=\"7\"><children><overscore role=\"limit function\" id=\"5\"><children><limboth role=\"limit function\" id=\"3\"><children><function role=\"limit function\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore></stree>"
+    },
+    "Limit_12": {
+      "expected": "<stree><underscore role=\"limit function\" id=\"8\"><children><limboth role=\"limit function\" id=\"6\"><children><overscore role=\"limit function\" id=\"3\"><children><function role=\"limit function\" id=\"1\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore></stree>"
+    },
+    "Limit_13": {
+      "expected": "<stree><limboth role=\"limit function\" id=\"11\"><children><underscore role=\"limit function\" id=\"8\"><children><limboth role=\"limit function\" id=\"6\"><children><overscore role=\"limit function\" id=\"3\"><children><function role=\"limit function\" id=\"1\">lim</function><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"7\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"10\">5</number></children></limboth></stree>"
+    },
+    "Limit_14": {
+      "expected": "<stree><limboth role=\"limit function\" id=\"10\"><children><underscore role=\"limit function\" id=\"7\"><children><overscore role=\"limit function\" id=\"5\"><children><limboth role=\"limit function\" id=\"3\"><children><function role=\"limit function\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"4\">~</relation></children></overscore><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"6\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"8\">m</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"9\">5</number></children></limboth></stree>"
+    },
+    "Additional_0": {
+      "expected": "<stree><overscore role=\"sum\" id=\"7\"><children><limboth role=\"sum\" id=\"4\"><children><underscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier></children></limboth><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"6\">~</relation></children></overscore></stree>"
+    },
+    "Additional_1": {
+      "expected": "<stree><underscore role=\"sum\" id=\"7\"><children><limboth role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><relation role=\"underaccent\" annotation=\"accent:tilde\" id=\"6\">~</relation></children></underscore></stree>"
+    },
+    "Additional_2": {
+      "expected": "<stree><superscript role=\"sum\" id=\"7\"><children><limboth role=\"sum\" id=\"4\"><children><subscript role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></subscript><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier></children></limboth><relation role=\"equality\" id=\"6\">~</relation></children></superscript></stree>"
+    },
+    "Additional_3": {
+      "expected": "<stree><subscript role=\"sum\" id=\"7\"><children><limboth role=\"sum\" id=\"4\"><children><superscript role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></superscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"5\">2</number></children></limboth><relation role=\"equality\" id=\"6\">~</relation></children></subscript></stree>"
+    },
+    "Additional_4": {
+      "expected": "<stree><limlower role=\"sum\" id=\"4\"><children><superscript role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></superscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier></children></limlower></stree>"
+    },
+    "Additional_5": {
+      "expected": "<stree><limupper role=\"sum\" id=\"4\"><children><subscript role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier></children></limupper></stree>"
+    },
+    "Additional_6": {
+      "expected": "<stree><limlower role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier></children></limlower></stree>"
+    },
+    "Additional_7": {
+      "expected": "<stree><limupper role=\"sum\" id=\"4\"><children><underscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">n</identifier></children></limupper></stree>"
+    },
+    "Additional_8": {
+      "expected": "<stree><limboth role=\"sum\" id=\"4\"><children><overscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><operator role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">¯</operator></children></overscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">n</identifier></children></limboth></stree>"
+    },
+    "Additional_9": {
+      "expected": "<stree><limupper role=\"sum\" id=\"6\"><children><limupper role=\"sum\" id=\"4\"><children><underscore role=\"sum\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></limupper><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">n</identifier></children></limupper></stree>"
+    },
+    "Additional_10": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">0</number></children></superscript></stree>"
+    },
+    "Additional_11": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier></children></subscript><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">0</number></children></superscript></stree>"
+    },
+    "Additional_12": {
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
+    },
+    "Additional_13": {
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
+    },
+    "Additional_14": {
+      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+    },
+    "Additional_15": {
+      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+    },
+    "Additional_16": {
+      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+    },
+    "Additional_17": {
+      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+    },
+    "Additional_18": {
+      "expected": "<stree><overscore role=\"sum\" id=\"4\"><children><underscore role=\"underover\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore></stree>"
+    }
+  }
+}

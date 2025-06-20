@@ -1,0 +1,20 @@
+{
+  "factory": "semanticMap",
+  "map": "FencesVert",
+  "information": "Vertical fence pairs.",
+  "tests": {
+    "⎴": {"expected": "⎵"},
+    "⏜": {"expected": "⏝"},
+    "⏞": {"expected": "⏟"},
+    "⏠": {"expected": "⏡"},
+    "︵": {"expected": "︶"},
+    "︷": {"expected": "︸"},
+    "︹": {"expected": "︺"},
+    "︻": {"expected": "︼"},
+    "︽": {"expected": "︾"},
+    "︿": {"expected": "﹀"},
+    "﹁": {"expected": "﹂"},
+    "﹃": {"expected": "﹄"},
+    "﹇": {"expected": "﹈"}
+  }
+}

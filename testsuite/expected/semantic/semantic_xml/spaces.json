@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic Xml Tests for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json"
+}

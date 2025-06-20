@@ -1,0 +1,138 @@
+{
+  "name": "FrenchMathspeakCoverage",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "French Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "locale": "fr",
+  "active": "MathspeakIssuesFrench",
+  "exclude": [],
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alpha position de base 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alpha base 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alpha base 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "alef en normal position de base 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "alef en normal base 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "alef en normal base 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alpha position de base 2 en gras"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alpha base 2 en gras"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alpha base 2 en gras"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "alef en normal position de base 2 en gras"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "alef en normal base 2 en gras"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "alef en normal base 2 en gras"
+    },
+    "OverbarGreek_default": {
+      "expected": "suscrire alpha avec macron"
+    },
+    "OverbarOther_default": {
+      "expected": "suscrire alef en normal avec macron"
+    },
+    "UnderbarGreek_default": {
+      "expected": "souscrire alpha avec macron"
+    },
+    "UnderbarOther_default": {
+      "expected": "souscrire alef en normal avec macron"
+    },
+    "OvertildeGreek_default": {
+      "expected": "suscrire alpha avec tilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "suscrire alef en normal avec tilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "souscrire alpha avec tilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "souscrire alef en normal avec tilde"
+    },
+    "SetEmpty_default": {
+      "expected": "ensemble vide"
+    },
+    "SetEmpty_brief": {
+      "expected": "ensemble vide"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "ensemble vide"
+    },
+    "SetSingleton_default": {
+      "expected": "début ensemble a fin ensemble"
+    },
+    "SetSingleton_brief": {
+      "expected": "début ensemble a fin ensemble"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "ensemble a fin ensemble"
+    },
+    "SetCollection_default": {
+      "expected": "début ensemble a virgule b fin ensemble"
+    },
+    "SetCollection_brief": {
+      "expected": "début ensemble a virgule b fin ensemble"
+    },
+    "SetCollection_sbrief": {
+      "expected": "ensemble a virgule b fin ensemble"
+    },
+    "SetExtended_default": {
+      "expected": "début ensemble a virgule b fin ensemble"
+    },
+    "SetExtended_brief": {
+      "expected": "début ensemble a virgule b fin ensemble"
+    },
+    "SetExtended_sbrief": {
+      "expected": "ensemble a virgule b fin ensemble"
+    },
+    "NumberSet": {
+      "expected": "C majuscule ajouré"
+    },
+    "LimitLower0_default": {
+      "expected": "souscrire limite avec tiret bas début souscript a égale 5 fin scripts début souscript b égale 3 fin scripts"
+    },
+    "LimitLower1_default": {
+      "expected": "limite début souscript n début suscript 2 fin scripts début suscript x fin scripts"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "début tableau 1re rangée  a 2e rangée  vide fin tableau"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c indice 1 position de base h indice 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à c indice 2 position de base h indice 4 moins 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h sub 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sub 4 moins 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h sub 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sub 4 moins 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c indice 1 position de base h indice 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale c indice 2 position de base h indice 4 moins 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h sub 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale c 2 h sub 4 moins 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h sub 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale c 2 h sub 4 moins 2 s"
+    }
+  }
+}

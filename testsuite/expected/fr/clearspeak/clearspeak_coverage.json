@@ -1,0 +1,284 @@
+{
+  "name": "FrenchClearspeakCoverage",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "French Clearspeak Coverage tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f de, g de x"
+    },
+    "ApplSimple_1": {
+      "expected": "f de, g de x, égale f de x, plus g de x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "sinus x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 lignes, Ligne 1: a. Ligne 2: vide"
+    },
+    "Empty_Line_1": {
+      "expected": "2 lignes, Ligne 1: a. Ligne 2: vide"
+    },
+    "Empty_Line_2": {
+      "expected": "2 lignes, Ligne 1: a. Ligne 2: vide"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 lignes, Ligne 1: a; égale; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 lignes, Ligne 1: a; égale; b. Ligne 2: vide"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 lignes, Ligne 1: a; égale; b. Ligne 2: vide"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 lignes, Ligne 1: a; égale; b. Ligne 2: 1; vide; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 degrés, 10 minutes, 20 secondes"
+    },
+    "Angle_1_default": {
+      "expected": "1 degré, 10 minutes, 20 secondes"
+    },
+    "Angle_2_default": {
+      "expected": "45 degrés, 1 minute, 20 secondes"
+    },
+    "Angle_3_default": {
+      "expected": "45 degrés, 10 minutes, 1 seconde"
+    },
+    "Angle_4_default": {
+      "expected": "1 pied, 20 pouces"
+    },
+    "Angle_5_default": {
+      "expected": "10 pieds, 1 pouce"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 degrés, 10 minutes, 20 secondes"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 degré, 10 minutes, 20 secondes"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 degrés, 1 minute, 20 secondes"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 degrés, 10 minutes, 1 seconde"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minute, 20 secondes"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minutes, 1 seconde"
+    },
+    "Angle_0_Length": {
+      "expected": "45 degrés, 10 minutes, 20 secondes"
+    },
+    "Angle_1_Length": {
+      "expected": "1 degré, 10 minutes, 20 secondes"
+    },
+    "Angle_2_Length": {
+      "expected": "45 degrés, 1 minute, 20 secondes"
+    },
+    "Angle_3_Length": {
+      "expected": "45 degrés, 10 minutes, 1 seconde"
+    },
+    "Angle_4_Length": {
+      "expected": "1 pied, 20 pouces"
+    },
+    "Angle_5_Length": {
+      "expected": "10 pieds, 1 pouce"
+    },
+    "Enclose_0": {
+      "expected": "12"
+    },
+    "Enclose_1": {
+      "expected": "12"
+    },
+    "Enclose_2": {
+      "expected": "2 sur 12"
+    },
+    "Enclose_3": {
+      "expected": "12 sur 2"
+    },
+    "Enclose_4": {
+      "expected": "12 sous 2"
+    },
+    "Enclose_5": {
+      "expected": "2 sous 12"
+    },
+    "Enclose_6": {
+      "expected": "12"
+    },
+    "Enclose_7": {
+      "expected": "12"
+    },
+    "Enclose_8": {
+      "expected": "2 sur 12"
+    },
+    "Enclose_9": {
+      "expected": "12 sur 2"
+    },
+    "Enclose_10": {
+      "expected": "12 sous 2"
+    },
+    "Enclose_11": {
+      "expected": "2 sous 12"
+    },
+    "EncloseSpecial_0": {
+      "expected": "A majuscule"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A majuscule"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A majuscule"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A majuscule"
+    },
+    "NestedRoots_0": {
+      "expected": "la racine carrée de, la racine cubique de a, plus b"
+    },
+    "NestedRoots_1": {
+      "expected": "la racine carrée de, la quatrième racine de a, plus b"
+    },
+    "NestedRoots_2": {
+      "expected": "la racine carrée de, la racine carrée de a, plus b"
+    },
+    "NestedRoots_3": {
+      "expected": "la racine carrée positive de, la racine carrée positive de a, plus b"
+    },
+    "NestedRoots_4": {
+      "expected": "la racine carrée positive de, la racine carrée positive de a, plus b, fin racine"
+    },
+    "NestedRoots_5": {
+      "expected": "la racine carrée positive de, la racine carrée négative de a, fin racine, plus b, fin racine"
+    },
+    "Tensor_0": {
+      "expected": "indice gauche a exposant gauche b x indice droite c exposant droite d"
+    },
+    "Tensor_1": {
+      "expected": "indice gauche a b exposant gauche g h x indice droite c d exposant droite e f"
+    },
+    "Tensor_2": {
+      "expected": "indice gauche a exposant gauche b x; exposant droite d"
+    },
+    "Tensor_3": {
+      "expected": "indice gauche a exposant gauche b x indice droite c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; exposant gauche b x indice droite c exposant droite d"
+    },
+    "Tensor_5": {
+      "expected": "indice gauche a; x indice droite c exposant droite d"
+    },
+    "Set_0": {
+      "expected": "ensemble des x n'est pas un A tel que B"
+    },
+    "Set_1": {
+      "expected": "ensemble des x n'appartenant pas à A tel que B"
+    },
+    "Set_2": {
+      "expected": "ensemble des x n'est pas un élément de A tel que B"
+    },
+    "Set_3": {
+      "expected": "ensemble des x n'est pas un A tel que B"
+    },
+    "Set_4": {
+      "expected": "ensemble B"
+    },
+    "Set_5": {
+      "expected": "ensemble vide"
+    },
+    "NamedSet_0": {
+      "expected": "les nombres rationnels positif"
+    },
+    "NamedSet_1": {
+      "expected": "les nombres rationnels positif"
+    },
+    "NamedSet_2": {
+      "expected": "les nombres rationnels négatif"
+    },
+    "NamedSet_3": {
+      "expected": "les nombres rationnels négatif"
+    },
+    "NamedSet_4": {
+      "expected": "q-deux"
+    },
+    "NamedSet_5": {
+      "expected": "q-deux"
+    },
+    "NamedSet_6": {
+      "expected": "n-deux"
+    },
+    "NamedSet_7": {
+      "expected": "n-deux"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 cas, Cas 1: f de x, égale négatif x, if x inférieur à 0. Cas 2: f de x, égale x, if x plus grand ou égal à 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 contraintes, Contrainte 1: f de x, égale négatif x; if x inférieur à 0. Contrainte 2: f de x, égale x, if x plus grand ou égal à 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 sur 20"
+    },
+    "UnitFraction": {
+      "expected": "2 kilomètres sur b"
+    },
+    "Decimal": {
+      "expected": "la décimale 1 point 4 suivi par le chiffre répété 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 tel que 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. Rangée 1: 2, 1 Rangée 2: 7, 5. fin déterminant"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 à la puissance 2 au carré"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 à la puissance i au carré"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 à la puissance deux-tiers au carré"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 à la puissance 2 au cube"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 à la puissance i au cube"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 à la puissance deux-tiers au cube"
+    },
+    "MultiRel": {
+      "expected": "a plus petit ou égal à b égale c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 à la puissance sinus de, parenthèse gauche, 2 plus x, parenthèse droite"
+    },
+    "CompositeFunctionFences": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, 2 plus x, parenthèse droite"
+    },
+    "LimUpper": {
+      "expected": "sommation sous I"
+    },
+    "Overscript": {
+      "expected": "A sous B"
+    },
+    "DetFemale": {
+      "expected": "déterminant A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x à la puissance A"
+    }
+  }
+}

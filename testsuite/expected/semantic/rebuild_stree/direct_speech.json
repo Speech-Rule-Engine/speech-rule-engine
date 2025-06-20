@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree direct speech tests.",
+  "base": "input/common/direct_speech.json"
+}

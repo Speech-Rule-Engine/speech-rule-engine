@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree limits tests.",
+  "base": "input/semantic/limits.json"
+}

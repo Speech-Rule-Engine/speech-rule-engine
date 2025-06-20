@@ -1,0 +1,6 @@
+{
+  "factory": "deepSpeech",
+  "base": "input/semantic/base.json",
+  "information": "Deep Speech tests for speech generation.",
+  "tests": "ALL"
+}

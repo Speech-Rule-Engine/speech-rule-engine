@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakGerman rules.",
+  "name": "GermanClearspeakIssues",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "German Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5, 3 geteilt durch 224"
+    },
+    "Issue230_2": {
+      "expected": "5 drei viertel"
+    },
+    "IssueNumbers_1": {
+      "expected": "Zahl t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "Zahl Nummernzeichen F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partielle Ableitung"
+    },
+    "Issue320_2": {
+      "expected": "x Fakultät"
+    },
+    "Issue320_3": {
+      "expected": "minus minus x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "Sinus Sinus x"
+    },
+    "Issue320_6": {
+      "expected": "partielle Ableitung partielle Ableitung x"
+    },
+    "Issue320_7": {
+      "expected": "Klammer auf, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung x Quadrat, plus, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung y Quadrat, Klammer zu, mal, der Betrag von phi mal, Klammer auf, x plus normales i, y, Klammer zu, Quadrat ist gleich 0"
+    },
+    "Issue301_1": {
+      "expected": "4 Millimeter"
+    },
+    "Issue301_2": {
+      "expected": "1 Millimeter"
+    },
+    "Issue301_3": {
+      "expected": "4 Millimeter"
+    },
+    "Issue301_4": {
+      "expected": "1 Millimeter"
+    },
+    "Issue_442_0": {
+      "expected": "9 geteilt durch 3 ungleich 9 mal 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 geteilt durch 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 geteilt durch 3 ungleich 9 mal 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 geteilt durch 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "das Integral über f von x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "das Integral über f von x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "das Integral über f von x, d x, ist gleich 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 Zeilen, Zeile 1:, 2 Zeilen, Zeile 1: 100. Zeile 2: 200. Zeile 2:, 2 Zeilen, Zeile 1: 300. Zeile 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 Zeilen, Zeile 1: a; b. Zeile 2:, 2 Zeilen, Zeile 1:, c Index 1; c Index 2. Zeile 2:, c Index 3; c Index 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 Fälle, Fall 1:, 2 Fälle, Fall 1: b. Fall 2: c. Fall 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, a; Spalte 2, b. Zeile 2: Spalte 1, die 2 mal 2 Matrize. Zeile 1: c Index 1, c Index 2 Zeile 2: c Index 3, c Index 4. Ende Matrize; Spalte 2, d. Ende Matrize"
+    },
+    "Issue_689_4": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, a; Spalte 2, b. Zeile 2: Spalte 1, die 2 mal 2 Matrize. Zeile 1: Spalte 1,, c Index 1; Spalte 2,, c Index 2. Zeile 2: Spalte 1,, c Index 3, plus a plus b; Spalte 2,, c Index 4. Ende Matrize; Spalte 2, d. Ende Matrize"
+    }
+  }
+}

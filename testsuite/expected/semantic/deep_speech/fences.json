@@ -1,0 +1,7 @@
+{
+  "factory": "deepSpeech",
+  "base": "input/semantic/fences.json",
+  "information": "Deep Speech tests for speech generation of fenced expressions.",
+  "exclude": [],
+  "tests": "ALL"
+}

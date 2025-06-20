@@ -1,0 +1,380 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "factory": "nextStyle",
+  "base": "input/base/clearspeak_preferences_test.json",
+  "information": "Clearspeak Preferences tests.",
+  "domain": "clearspeak",
+  "exclude": [],
+  "tests": {
+    "Abs01": {
+      "expected": [
+        "AbsoluteValue_AbsEnd",
+        "AbsoluteValue_Cardinality",
+        "AbsoluteValue_Determinant",
+        "AbsoluteValue_Auto"
+      ]
+    },
+    "Metric01": {
+      "expected": [
+        "AbsoluteValue_AbsEnd",
+        "AbsoluteValue_Cardinality",
+        "AbsoluteValue_Determinant",
+        "AbsoluteValue_Auto"
+      ]
+    },
+    "Cap001": {
+      "expected": [
+        "Caps_SayCaps",
+        "Caps_Auto"
+      ]
+    },
+    "In_set_0": {
+      "expected": [
+        "Sets_SilentBracket",
+        "Sets_woAll",
+        "Sets_Auto"
+      ]
+    },
+    "Preferences_in_0": {
+      "expected": [
+        "SetMemberSymbol_Belongs",
+        "SetMemberSymbol_Element",
+        "SetMemberSymbol_Member",
+        "SetMemberSymbol_In",
+        "SetMemberSymbol_Auto"
+      ]
+    },
+    "Enclose_0": {
+      "expected": [
+        "Enclosed_EndEnclose",
+        "Enclosed_Auto"
+      ]
+    },
+    "NamedSet_0": {
+      "expected": [
+        "Exponent_AfterPower",
+        "Exponent_Ordinal",
+        "Exponent_OrdinalPower",
+        "Exponent_Auto"
+      ]
+    },
+    "ExponentLatinCap": {
+      "expected": [
+        "Exponent_AfterPower",
+        "Exponent_Ordinal",
+        "Exponent_OrdinalPower",
+        "Exponent_Auto"
+      ]
+    },
+    "VectorEndDeterminant": {
+      "expected": [
+        "Matrix_Combinatoric",
+        "Matrix_EndMatrix",
+        "Matrix_EndVector",
+        "Matrix_SilentColNum",
+        "Matrix_SpeakColNum",
+        "Matrix_Vector",
+        "Matrix_Auto"
+      ]
+    },
+    "MultiLines_0": {
+      "expected": [
+        "MultiLineOverview_None",
+        "MultiLineOverview_Auto"
+      ]
+    },
+    "CompositeFunctionFences": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Angle_0_Angle": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "NestedRoots_3": {
+      "expected": [
+        "Roots_PosNegSqRoot",
+        "Roots_PosNegSqRootEnd",
+        "Roots_RootEnd",
+        "Roots_Auto"
+      ]
+    },
+    "Set_1": {
+      "expected": [
+        "Sets_SilentBracket",
+        "Sets_woAll",
+        "Sets_Auto"
+      ]
+    },
+    "VertLine_SuchThat": {
+      "expected": [
+        "VerticalLine_Divides",
+        "VerticalLine_Given",
+        "VerticalLine_SuchThat",
+        "VerticalLine_Auto"
+      ]
+    },
+    "Exp001": {
+      "expected": [
+        "Exponent_AfterPower",
+        "Exponent_Ordinal",
+        "Exponent_OrdinalPower",
+        "Exponent_Auto"
+      ]
+    },
+    "LatinMathfontsUpperCaps_0": {
+      "expected": [
+        "Caps_SayCaps",
+        "Caps_Auto"
+      ]
+    },
+    "Frac001": {
+      "expected": [
+        "Fraction_EndFrac",
+        "Fraction_FracOver",
+        "Fraction_General",
+        "Fraction_GeneralEndFrac",
+        "Fraction_Ordinal",
+        "Fraction_Over",
+        "Fraction_OverEndFrac",
+        "Fraction_Per",
+        "Fraction_Auto"
+      ]
+    },
+    "Function007": {
+      "expected": [
+        "Functions_None",
+        "Functions_Auto"
+      ]
+    },
+    "Function001": {
+      "expected": [
+        "Functions_None",
+        "Functions_Auto"
+      ]
+    },
+    "ImpTimes001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Issue230_1": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Issue_689_3": {
+      "expected": [
+        "Matrix_Combinatoric",
+        "Matrix_EndMatrix",
+        "Matrix_EndVector",
+        "Matrix_SilentColNum",
+        "Matrix_SpeakColNum",
+        "Matrix_Vector",
+        "Matrix_Auto"
+      ]
+    },
+    "Log001": {
+      "expected": [
+        "Log_LnAsNaturalLog",
+        "Log_Auto"
+      ]
+    },
+    "Log002": {
+      "expected": [
+        "Log_LnAsNaturalLog",
+        "Log_Auto"
+      ]
+    },
+    "Matrix001": {
+      "expected": [
+        "Matrix_Combinatoric",
+        "Matrix_EndMatrix",
+        "Matrix_EndVector",
+        "Matrix_SilentColNum",
+        "Matrix_SpeakColNum",
+        "Matrix_Vector",
+        "Matrix_Auto"
+      ]
+    },
+    "Multiline001": {
+      "expected": [
+        "MultiLineOverview_None",
+        "MultiLineOverview_Auto"
+      ]
+    },
+    "Multiline016": {
+      "expected": [
+        "MultiLineOverview_None",
+        "MultiLineOverview_Auto"
+      ]
+    },
+    "Multiline020": {
+      "expected": [
+        "MultiLineOverview_None",
+        "MultiLineOverview_Auto"
+      ]
+    },
+    "NumSys001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Paren001": {
+      "expected": [
+        "Paren_CoordPoint",
+        "Paren_Interval",
+        "Paren_Silent",
+        "Paren_Speak",
+        "Paren_SpeakNestingLevel",
+        "Paren_Auto"
+      ]
+    },
+    "Sum001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Ellipses001": {
+      "expected": [
+        "Ellipses_AndSoOn",
+        "Ellipses_Auto"
+      ]
+    },
+    "Dot001": {
+      "expected": [
+        "MultsymbolDot_Dot",
+        "MultsymbolDot_Auto"
+      ]
+    },
+    "X001": {
+      "expected": [
+        "MultsymbolX_By",
+        "MultsymbolX_Cross",
+        "MultsymbolX_Auto"
+      ]
+    },
+    "MembSym001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "SetMemb001": {
+      "expected": [
+        "Sets_SilentBracket",
+        "Sets_woAll",
+        "Sets_Auto"
+      ]
+    },
+    "Triangle001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "VertLine001": {
+      "expected": [
+        "ImpliedTimes_MoreImpliedTimes",
+        "ImpliedTimes_None",
+        "ImpliedTimes_Auto"
+      ]
+    },
+    "Bar001": {
+      "expected": [
+        "Bar_Conjugate",
+        "Bar_Auto"
+      ]
+    },
+    "Prime001": {
+      "expected": [
+        "Prime_Angle",
+        "Prime_Length",
+        "Prime_Auto"
+      ]
+    },
+    "Root001": {
+      "expected": [
+        "Roots_PosNegSqRoot",
+        "Roots_PosNegSqRootEnd",
+        "Roots_RootEnd",
+        "Roots_Auto"
+      ]
+    },
+    "Root002": {
+      "expected": [
+        "Roots_PosNegSqRoot",
+        "Roots_PosNegSqRootEnd",
+        "Roots_RootEnd",
+        "Roots_Auto"
+      ]
+    },
+    "Set001": {
+      "expected": [
+        "Sets_SilentBracket",
+        "Sets_woAll",
+        "Sets_Auto"
+      ]
+    },
+    "Trig001": {
+      "expected": [
+        "Trig_ArcTrig",
+        "Trig_TrigInverse",
+        "Trig_Auto"
+      ]
+    },
+    "Trig002": {
+      "expected": [
+        "Trig_ArcTrig",
+        "Trig_TrigInverse",
+        "Trig_Auto"
+      ]
+    },
+    "Triangle": {
+      "expected": [
+        "TriangleSymbol_Delta",
+        "TriangleSymbol_Auto"
+      ]
+    },
+    "Currency001": {
+      "expected": [
+        "Currency_Position",
+        "Currency_Prefix",
+        "Currency_Auto"
+      ]
+    },
+    "Mathspeak": {
+      "input": "<mi>a</mi>",
+      "domain": "mathspeak",
+      "expected": [
+        "brief",
+        "sbrief",
+        "default"
+      ]
+    },
+    "Braille": {
+      "input": "<mi>a</mi>",
+      "domain": "default",
+      "modality": "braille",
+      "expected": [
+        "default"
+      ]
+    }
+  }
+}

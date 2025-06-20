@@ -1,0 +1,1100 @@
+{
+  "name": "AfrikaansMathspeak",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_test.json",
+  "information": "Afrikaans Mathspeak tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sample_1_1_1_default": {
+      "expected": "pi is amper gelyk aan 3,14159"
+    },
+    "Sample_1_1_1_brief": {
+      "expected": "pi is amper gelyk aan 3,14159"
+    },
+    "Sample_1_1_1_sbrief": {
+      "expected": "pi is amper gelyk aan 3,14159"
+    },
+    "Sample_1_1_2_default": {
+      "expected": "102 plus 2,214 plus 15 is gelyk aan 2,331"
+    },
+    "Sample_1_1_2_brief": {
+      "expected": "102 plus 2,214 plus 15 is gelyk aan 2,331"
+    },
+    "Sample_1_1_2_sbrief": {
+      "expected": "102 plus 2,214 plus 15 is gelyk aan 2,331"
+    },
+    "Sample_1_1_3_default": {
+      "expected": "59 maal 0 is gelyk aan 0"
+    },
+    "Sample_1_1_3_brief": {
+      "expected": "59 maal 0 is gelyk aan 0"
+    },
+    "Sample_1_1_3_sbrief": {
+      "expected": "59 maal 0 is gelyk aan 0"
+    },
+    "Sample_1_2_1_default": {
+      "expected": "3 minus negatief 2"
+    },
+    "Sample_1_2_1_brief": {
+      "expected": "3 minus negatief 2"
+    },
+    "Sample_1_2_1_sbrief": {
+      "expected": "3 minus negatief 2"
+    },
+    "Sample_1_2_2_default": {
+      "expected": "negatief y"
+    },
+    "Sample_1_2_2_brief": {
+      "expected": "negatief y"
+    },
+    "Sample_1_2_2_sbrief": {
+      "expected": "negatief y"
+    },
+    "Sample_1_2_3_default": {
+      "expected": "negatief 32"
+    },
+    "Sample_1_2_3_brief": {
+      "expected": "negatief 32"
+    },
+    "Sample_1_2_3_sbrief": {
+      "expected": "negatief 32"
+    },
+    "Sample_1_4_1_default": {
+      "expected": "getal t 2 e 4"
+    },
+    "Sample_1_4_1_brief": {
+      "expected": "Nom t 2 e 4"
+    },
+    "Sample_1_4_1_sbrief": {
+      "expected": "Nom t 2 e 4"
+    },
+    "Sample_1_4_2_default": {
+      "expected": "getal huts F F 0 0 0 0"
+    },
+    "Sample_1_4_2_brief": {
+      "expected": "Nom huts F F 0 0 0 0"
+    },
+    "Sample_1_4_2_sbrief": {
+      "expected": "Nom huts F F 0 0 0 0"
+    },
+    "Sample_1_4_3_default": {
+      "expected": "getal 0 x 1 5 F F plus getal 0 x 2 B 0 1 is gelyk aan getal 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_brief": {
+      "expected": "Nom 0 x 1 5 F F plus Nom 0 x 2 B 0 1 is gelyk aan Nom 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_sbrief": {
+      "expected": "Nom 0 x 1 5 F F plus Nom 0 x 2 B 0 1 is gelyk aan Nom 0 x 4 1 0 0"
+    },
+    "Sample_1_5_1_default": {
+      "expected": "hoofletter I komma hoofletters I I komma hoofletters I I I komma hoofletters I V komma hoofletter V punt"
+    },
+    "Sample_1_5_1_brief": {
+      "expected": "hoofletter I komma hoofletters I I komma hoofletters I I I komma hoofletters I V komma hoofletter V punt"
+    },
+    "Sample_1_5_1_sbrief": {
+      "expected": "hoofletter I komma hoofletters I I komma hoofletters I I I komma hoofletters I V komma hoofletter V punt"
+    },
+    "Sample_2_1_1_default": {
+      "expected": "d is gelyk aan Begin wortel links hakkie hoofletter X minus x regs hakkie kwadraat minus links hakkie hoofletter Y minus y regs hakkie kwadraat End wortel"
+    },
+    "Sample_2_1_1_brief": {
+      "expected": "d is gelyk aan Begin wortel links hakkie hoofletter X minus x regs hakkie kwadraat minus links hakkie hoofletter Y minus y regs hakkie kwadraat End wortel"
+    },
+    "Sample_2_1_1_sbrief": {
+      "expected": "d is gelyk aan Wortel links hakkie hoofletter X minus x regs hakkie kwadraat minus links hakkie hoofletter Y minus y regs hakkie kwadraat End wortel"
+    },
+    "Sample_2_3_1_default": {
+      "expected": "If hoofletter A regs pyltjie hoofletter B and hoofletter B regs pyltjie hoofletter C then hoofletter A regs pyltjie hoofletter C punt"
+    },
+    "Sample_2_3_1_brief": {
+      "expected": "If hoofletter A regs pyltjie hoofletter B and hoofletter B regs pyltjie hoofletter C then hoofletter A regs pyltjie hoofletter C punt"
+    },
+    "Sample_2_3_1_sbrief": {
+      "expected": "If hoofletter A regs pyltjie hoofletter B and hoofletter B regs pyltjie hoofletter C then hoofletter A regs pyltjie hoofletter C punt"
+    },
+    "Sample_2_6_1_default": {
+      "expected": "vetgedruk links blokhakkie x vetgedruk regs blokhakkie"
+    },
+    "Sample_2_6_1_brief": {
+      "expected": "vetgedruk links blokhakkie x vetgedruk regs blokhakkie"
+    },
+    "Sample_2_6_1_sbrief": {
+      "expected": "vetgedruk links blokhakkie x vetgedruk regs blokhakkie"
+    },
+    "Sample_2_6_2_default": {
+      "expected": "kontoer integraal hoofletter E dot d vetgedruk l is gelyk aan minus BeginBreuk d hoofletter Phi hoofletter B Oor d t EndBreuk"
+    },
+    "Sample_2_6_2_brief": {
+      "expected": "kontoer integraal hoofletter E dot d vetgedruk l is gelyk aan minus BeginBreuk d hoofletter Phi hoofletter B Oor d t EndBreuk"
+    },
+    "Sample_2_6_2_sbrief": {
+      "expected": "kontoer integraal hoofletter E dot d vetgedruk l is gelyk aan minus Breuk d hoofletter Phi hoofletter B Oor d t End breuk"
+    },
+    "NegativeVsMinus_0": {
+      "expected": "minus BeginBreuk 1 Oor b EndBreuk"
+    },
+    "NegativeVsMinus_1": {
+      "expected": "minus BeginBreuk a Oor b EndBreuk"
+    },
+    "NegativeVsMinus_2": {
+      "expected": "negatief 3 en een helfte"
+    },
+    "Sample_4_2_1_default": {
+      "expected": "Uppercase links hakkie begin versameling alfa komma beta komma gamma komma delta komma epsilon komma phi End versameling regs hakkie is gelyk aan begin versameling hoofletter Alfa komma hoofletter Beta komma hoofletter Gamma komma hoofletter Delta komma hoofletter Epsilon komma hoofletter Phi End versameling"
+    },
+    "Sample_4_2_1_brief": {
+      "expected": "Uppercase links hakkie begin versameling alfa komma beta komma gamma komma delta komma epsilon komma phi End versameling regs hakkie is gelyk aan begin versameling hoofletter Alfa komma hoofletter Beta komma hoofletter Gamma komma hoofletter Delta komma hoofletter Epsilon komma hoofletter Phi End versameling"
+    },
+    "Sample_4_2_1_sbrief": {
+      "expected": "Uppercase links hakkie Versameling alfa komma beta komma gamma komma delta komma epsilon komma phi End Versameling regs hakkie is gelyk aan Versameling hoofletter Alfa komma hoofletter Beta komma hoofletter Gamma komma hoofletter Delta komma hoofletter Epsilon komma hoofletter Phi End Versameling"
+    },
+    "Sample_5_1_1_default": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_1_brief": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_1_sbrief": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_2_default": {
+      "expected": "links hakkie 1 minus to minus 1 regs hakkie"
+    },
+    "Sample_5_1_2_brief": {
+      "expected": "links hakkie 1 minus to minus 1 regs hakkie"
+    },
+    "Sample_5_1_2_sbrief": {
+      "expected": "links hakkie 1 minus to minus 1 regs hakkie"
+    },
+    "Sample_5_1_3_default": {
+      "expected": "negatief 1"
+    },
+    "Sample_5_1_3_brief": {
+      "expected": "negatief 1"
+    },
+    "Sample_5_1_3_sbrief": {
+      "expected": "negatief 1"
+    },
+    "Sample_6_1_1_default": {
+      "expected": "The Fibonacci numbers are dubbelpunt begin versameling 0 komma 1 komma 1 komma 2 komma 3 komma 5 komma 8 komma ellipsis End versameling"
+    },
+    "Sample_6_1_1_brief": {
+      "expected": "The Fibonacci numbers are dubbelpunt begin versameling 0 komma 1 komma 1 komma 2 komma 3 komma 5 komma 8 komma ellipsis End versameling"
+    },
+    "Sample_6_1_1_sbrief": {
+      "expected": "The Fibonacci numbers are dubbelpunt Versameling 0 komma 1 komma 1 komma 2 komma 3 komma 5 komma 8 komma ellipsis End Versameling"
+    },
+    "Sample_6_2_1_default": {
+      "expected": "begin absolute Waarde 4 minus 7 End Absolute Waarde is gelyk aan 3"
+    },
+    "Sample_6_2_1_brief": {
+      "expected": "begin absolute Waarde 4 minus 7 End Absolute Waarde is gelyk aan 3"
+    },
+    "Sample_6_2_1_sbrief": {
+      "expected": "Absolute Waarde 4 minus 7 End Absolute Waarde is gelyk aan 3"
+    },
+    "_comment1_": " This equation does not make sense! We could do it purely syntactically!",
+    "Sample_6_2_2_default": {
+      "expected": "begin absolute Waarde a plus of minus begin absolute Waarde b minus c End Absolute Waarde End Absolute Waarde is nie gelyk aan begin absolute Waarde a End Absolute Waarde plus of minus begin absolute Waarde b minus c End Absolute Waarde"
+    },
+    "Sample_6_2_2_brief": {
+      "expected": "begin absolute Waarde a plus of minus begin absolute Waarde b minus c End Absolute Waarde End Absolute Waarde is nie gelyk aan begin absolute Waarde a End Absolute Waarde plus of minus begin absolute Waarde b minus c End Absolute Waarde"
+    },
+    "Sample_6_2_2_sbrief": {
+      "expected": "Absolute Waarde a plus of minus Absolute Waarde b minus c End Absolute Waarde End Absolute Waarde is nie gelyk aan Absolute Waarde a End Absolute Waarde plus of minus Absolute Waarde b minus c End Absolute Waarde"
+    },
+    "Sample_7_1_1_default": {
+      "expected": "BeginBreuk 1 Oor x EndBreuk"
+    },
+    "Sample_7_1_1_brief": {
+      "expected": "BeginBreuk 1 Oor x EndBreuk"
+    },
+    "Sample_7_1_1_sbrief": {
+      "expected": "Breuk 1 Oor x End breuk"
+    },
+    "Sample_7_1_2_default": {
+      "expected": "a minus BeginBreuk b plus c Oor d minus e EndBreuk maal f"
+    },
+    "Sample_7_1_2_brief": {
+      "expected": "a minus BeginBreuk b plus c Oor d minus e EndBreuk maal f"
+    },
+    "Sample_7_1_2_sbrief": {
+      "expected": "a minus Breuk b plus c Oor d minus e End breuk maal f"
+    },
+    "Sample_7_2_1_default": {
+      "expected": "BeginBeginBreuk BeginBreuk x Oor y EndBreuk OorOor z EndEndBreuk is nie gelyk aan BeginBeginBreuk x OorOor BeginBreuk y Oor z EndBreuk EndEndBreuk"
+    },
+    "Sample_7_2_1_brief": {
+      "expected": "BeginBeginBreuk BeginBreuk x Oor y EndBreuk OorOor z EndEndBreuk is nie gelyk aan BeginBeginBreuk x OorOor BeginBreuk y Oor z EndBreuk EndEndBreuk"
+    },
+    "Sample_7_2_1_sbrief": {
+      "expected": "genesBreuk Breuk x Oor y End breuk genesOor z genesEnd breuk is nie gelyk aan genesBreuk x genesOor Breuk y Oor z End breuk genesEnd breuk"
+    },
+    "Sample_7_3_1_default": {
+      "expected": "BeginBeginBeginBreuk BeginBeginBreuk links hakkie 1 minus x regs hakkie BeginBreuk d Oor d x EndBreuk links hakkie 2 x regs hakkie minus 2 x BeginBreuk d Oor d x EndBreuk links hakkie 1 minus x regs hakkie OorOor links hakkie 1 minus x regs hakkie kwadraat EndEndBreuk OorOorOor 1 plus links hakkie BeginBreuk 2 x Oor 1 minus x EndBreuk regs hakkie kwadraat EndEndEndBreuk"
+    },
+    "Sample_7_3_1_brief": {
+      "expected": "BeginBeginBeginBreuk BeginBeginBreuk links hakkie 1 minus x regs hakkie BeginBreuk d Oor d x EndBreuk links hakkie 2 x regs hakkie minus 2 x BeginBreuk d Oor d x EndBreuk links hakkie 1 minus x regs hakkie OorOor links hakkie 1 minus x regs hakkie kwadraat EndEndBreuk OorOorOor 1 plus links hakkie BeginBreuk 2 x Oor 1 minus x EndBreuk regs hakkie kwadraat EndEndEndBreuk"
+    },
+    "Sample_7_3_1_sbrief": {
+      "expected": "genesTwee keerBreuk genesBreuk links hakkie 1 minus x regs hakkie Breuk d Oor d x End breuk links hakkie 2 x regs hakkie minus 2 x Breuk d Oor d x End breuk links hakkie 1 minus x regs hakkie genesOor links hakkie 1 minus x regs hakkie kwadraat genesEnd breuk genesTwee keerOor 1 plus links hakkie Breuk 2 x Oor 1 minus x End breuk regs hakkie kwadraat genesTwee keerEnd breuk"
+    },
+    "Sample_7_3_2_default": {
+      "expected": "a 0 plus BeginBeginBeginBeginBreuk 1 OorOorOorOor a 1 plus BeginBeginBeginBreuk 1 OorOorOor a 2 plus BeginBeginBreuk 1 OorOor ellipsis plus BeginBreuk 1 Oor a Onderskrif n Basislyn EndBreuk EndEndBreuk EndEndEndBreuk EndEndEndEndBreuk"
+    },
+    "Sample_7_3_2_brief": {
+      "expected": "a 0 plus BeginBeginBeginBeginBreuk 1 OorOorOorOor a 1 plus BeginBeginBeginBreuk 1 OorOorOor a 2 plus BeginBeginBreuk 1 OorOor ellipsis plus BeginBreuk 1 Oor a Onderskrif n Basis EndBreuk EndEndBreuk EndEndEndBreuk EndEndEndEndBreuk"
+    },
+    "Sample_7_3_2_sbrief": {
+      "expected": "a 0 plus genes3Breuk 1 genes3Oor a 1 plus genesTwee keerBreuk 1 genesTwee keerOor a 2 plus genesBreuk 1 genesOor ellipsis plus Breuk 1 Oor a Onderskrif n Basis End breuk genesEnd breuk genesTwee keerEnd breuk genes3End breuk"
+    },
+    "Sample_7_4_1_default": {
+      "expected": "een helfte plus twee helftes plus drie helftes plus vier helftes plus ellipsis is gelyk aan som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte BeginBreuk n Oor 2 EndBreuk"
+    },
+    "Sample_7_4_1_brief": {
+      "expected": "een helfte plus twee helftes plus drie helftes plus vier helftes plus ellipsis is gelyk aan som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte BeginBreuk n Oor 2 EndBreuk"
+    },
+    "Sample_7_4_1_sbrief": {
+      "expected": "een helfte plus twee helftes plus drie helftes plus vier helftes plus ellipsis is gelyk aan som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte Breuk n Oor 2 End breuk"
+    },
+    "Sample_7_4_2_default": {
+      "expected": "BeginBreuk 20 Oor 5 EndBreuk maal BeginBreuk 1 Oor 100 EndBreuk is gelyk aan een vyf-en-twintigste"
+    },
+    "Sample_7_4_2_brief": {
+      "expected": "BeginBreuk 20 Oor 5 EndBreuk maal BeginBreuk 1 Oor 100 EndBreuk is gelyk aan een vyf-en-twintigste"
+    },
+    "Sample_7_4_2_sbrief": {
+      "expected": "Breuk 20 Oor 5 End breuk maal Breuk 1 Oor 100 End breuk is gelyk aan een vyf-en-twintigste"
+    },
+    "Sample_7_4_3_default": {
+      "expected": "BeginBreuk drie vyfdes Oor 8 EndBreuk is gelyk aan drie vyfdes maal een agste"
+    },
+    "Sample_7_4_3_brief": {
+      "expected": "BeginBreuk drie vyfdes Oor 8 EndBreuk is gelyk aan drie vyfdes maal een agste"
+    },
+    "Sample_7_4_3_sbrief": {
+      "expected": "Breuk drie vyfdes Oor 8 End breuk is gelyk aan drie vyfdes maal een agste"
+    },
+    "Sample_7_5_1_default": {
+      "expected": "3 en vyf agstes is gelyk aan BeginBreuk 29 Oor 8 EndBreuk"
+    },
+    "Sample_7_5_1_brief": {
+      "expected": "3 en vyf agstes is gelyk aan BeginBreuk 29 Oor 8 EndBreuk"
+    },
+    "Sample_7_5_1_sbrief": {
+      "expected": "3 en vyf agstes is gelyk aan Breuk 29 Oor 8 End breuk"
+    },
+    "Sample_7_6_1_default": {
+      "expected": "a 0 plus voortgesette Breuk b 1 Oor a 1 plus Begin Breuk b 2 Oor a 2 plus Begin Breuk b 3 Oor a 3 plus ellipsis is gelyk aan a 0 plus BeginBreuk b 1 Oor a 1 EndBreuk plus BeginBreuk b 2 Oor a 2 EndBreuk plus ellipsis"
+    },
+    "Sample_7_6_1_brief": {
+      "expected": "a 0 plus voortgesette Breuk b 1 Oor a 1 plus Begin Breuk b 2 Oor a 2 plus Begin Breuk b 3 Oor a 3 plus ellipsis is gelyk aan a 0 plus BeginBreuk b 1 Oor a 1 EndBreuk plus BeginBreuk b 2 Oor a 2 EndBreuk plus ellipsis"
+    },
+    "Sample_7_6_1_sbrief": {
+      "expected": "a 0 plus voortgesette Breuk b 1 Oor a 1 plus Breuk b 2 Oor a 2 plus Breuk b 3 Oor a 3 plus ellipsis is gelyk aan a 0 plus Breuk b 1 Oor a 1 End breuk plus Breuk b 2 Oor a 2 End breuk plus ellipsis"
+    },
+    "Sample_8_1_1_default": {
+      "expected": "x kubbiek plus 6 x kwadraat minus x is gelyk aan 30"
+    },
+    "Sample_8_1_1_brief": {
+      "expected": "x kubbiek plus 6 x kwadraat minus x is gelyk aan 30"
+    },
+    "Sample_8_1_1_sbrief": {
+      "expected": "x kubbiek plus 6 x kwadraat minus x is gelyk aan 30"
+    },
+    "Sample_8_1_2_default": {
+      "expected": "BeginBreuk d kwadraat y Oor d x kwadraat EndBreuk plus links hakkie a x kwadraat plus b x plus c regs hakkie y is gelyk aan 0"
+    },
+    "Sample_8_1_2_brief": {
+      "expected": "BeginBreuk d kwadraat y Oor d x kwadraat EndBreuk plus links hakkie a x kwadraat plus b x plus c regs hakkie y is gelyk aan 0"
+    },
+    "Sample_8_1_2_sbrief": {
+      "expected": "Breuk d kwadraat y Oor d x kwadraat End breuk plus links hakkie a x kwadraat plus b x plus c regs hakkie y is gelyk aan 0"
+    },
+    "Sample_8_2_1_default": {
+      "expected": "x Superskrif een helfte"
+    },
+    "Sample_8_2_1_brief": {
+      "expected": "x Sup een helfte"
+    },
+    "Sample_8_2_1_sbrief": {
+      "expected": "x Sup een helfte"
+    },
+    "Sample_8_2_2_default": {
+      "expected": "x Onderskrif n"
+    },
+    "Sample_8_2_2_brief": {
+      "expected": "x Onderskrif n"
+    },
+    "Sample_8_2_2_sbrief": {
+      "expected": "x Onderskrif n"
+    },
+    "Sample_8_2_3_default": {
+      "expected": "x Superskrif a"
+    },
+    "Sample_8_2_3_brief": {
+      "expected": "x Sup a"
+    },
+    "Sample_8_2_3_sbrief": {
+      "expected": "x Sup a"
+    },
+    "Sample_8_3_1_default": {
+      "expected": "x Superskrif m plus n"
+    },
+    "Sample_8_3_1_brief": {
+      "expected": "x Sup m plus n"
+    },
+    "Sample_8_3_1_sbrief": {
+      "expected": "x Sup m plus n"
+    },
+    "Sample_8_3_2_default": {
+      "expected": "hoofletter T Onderskrif n minus 1 Basislyn plus 5 is gelyk aan 0"
+    },
+    "Sample_8_3_2_brief": {
+      "expected": "hoofletter T Onderskrif n minus 1 Basis plus 5 is gelyk aan 0"
+    },
+    "Sample_8_3_2_sbrief": {
+      "expected": "hoofletter T Onderskrif n minus 1 Basis plus 5 is gelyk aan 0"
+    },
+    "Sample_8_3_3_default": {
+      "expected": "x Superskrif m plus n Basislyn is gelyk aan x Superskrif m Basislyn x Superskrif n"
+    },
+    "Sample_8_3_3_brief": {
+      "expected": "x Sup m plus n Basis is gelyk aan x Sup m Basis x Sup n"
+    },
+    "Sample_8_3_3_sbrief": {
+      "expected": "x Sup m plus n Basis is gelyk aan x Sup m Basis x Sup n"
+    },
+    "Sample_8_4_1_default": {
+      "expected": "x Superskrif a Super Onderskrif n Superskrif plus a Super Onderskrif n minus 1"
+    },
+    "Sample_8_4_1_brief": {
+      "expected": "x Sup a Sup Onderskrif n Sup plus a Sup Onderskrif n minus 1"
+    },
+    "Sample_8_4_1_sbrief": {
+      "expected": "x Sup a Sup Onderskrif n Sup plus a Sup Onderskrif n minus 1"
+    },
+    "Sample_8_4_2_default": {
+      "expected": "x Superskrif a Super Onderskrif b"
+    },
+    "Sample_8_4_2_brief": {
+      "expected": "x Sup a Sup Onderskrif b"
+    },
+    "Sample_8_4_2_sbrief": {
+      "expected": "x Sup a Sup Onderskrif b"
+    },
+    "Sample_8_4_3_default": {
+      "expected": "x Onderskrif a Onderskrif Superskrif b"
+    },
+    "Sample_8_4_3_brief": {
+      "expected": "x Onderskrif a Onderskrif Sup b"
+    },
+    "Sample_8_4_3_sbrief": {
+      "expected": "x Onderskrif a Onderskrif Sup b"
+    },
+    "Sample_8_4_4_default": {
+      "expected": "y Superskrif a Super Superskrif b Super Super Onderskrif c Basislyn is nie gelyk aan y Superskrif a Super Superskrif b Superskrif c"
+    },
+    "Sample_8_4_4_brief": {
+      "expected": "y Sup a Sup Sup b Sup Sup Onderskrif c Basis is nie gelyk aan y Sup a Sup Sup b Sup c"
+    },
+    "Sample_8_4_4_sbrief": {
+      "expected": "y Sup a Sup Sup b Sup Sup Onderskrif c Basis is nie gelyk aan y Sup a Sup Sup b Sup c"
+    },
+    "Sample_8_4_5_default": {
+      "expected": "y Superskrif a Super Super Onderskrif c Super Superskrif b"
+    },
+    "Sample_8_4_5_brief": {
+      "expected": "y Sup a Sup Sup Onderskrif c Sup Sup b"
+    },
+    "Sample_8_4_5_sbrief": {
+      "expected": "y Sup a Sup Sup Onderskrif c Sup Sup b"
+    },
+    "Sample_8_4_5Short_default": {
+      "expected": "y Superskrif a Super Super Onderskrif c"
+    },
+    "Sample_8_4_5Short_brief": {
+      "expected": "y Sup a Sup Sup Onderskrif c"
+    },
+    "Sample_8_4_5Short_sbrief": {
+      "expected": "y Sup a Sup Sup Onderskrif c"
+    },
+    "Sample_8_4_5Inv_default": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Superskrif c"
+    },
+    "Sample_8_4_5Inv_brief": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Sup c"
+    },
+    "Sample_8_4_5Inv_sbrief": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Sup c"
+    },
+    "Sample_8_4_5InvShort_default": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Superskrif c Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_5InvShort_brief": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Sup c Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_5InvShort_sbrief": {
+      "expected": "y Onderskrif a Onderskrif Onderskrif Sup c Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_6_default": {
+      "expected": "x Superskrif a Super Superskrif b"
+    },
+    "Sample_8_4_6_brief": {
+      "expected": "x Sup a Sup Sup b"
+    },
+    "Sample_8_4_6_sbrief": {
+      "expected": "x Sup a Sup Sup b"
+    },
+    "Sample_8_4_7_default": {
+      "expected": "x Onderskrif a Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_7_brief": {
+      "expected": "x Onderskrif a Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_7_sbrief": {
+      "expected": "x Onderskrif a Onderskrif Onderskrif b"
+    },
+    "Sample_8_4_8_default": {
+      "expected": "hoofletter T Superskrif links hakkie x Super Superskrif a Superskrif plus y Super Superskrif b Superskrif regs hakkie"
+    },
+    "Sample_8_4_8_brief": {
+      "expected": "hoofletter T Sup links hakkie x Sup Sup a Sup plus y Sup Sup b Sup regs hakkie"
+    },
+    "Sample_8_4_8_sbrief": {
+      "expected": "hoofletter T Sup links hakkie x Sup Sup a Sup plus y Sup Sup b Sup regs hakkie"
+    },
+    "Sample_8_5_1_default": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_brief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_sbrief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_2_default": {
+      "expected": "x Onderskrif negatief 1"
+    },
+    "Sample_8_5_2_brief": {
+      "expected": "x Onderskrif negatief 1"
+    },
+    "Sample_8_5_2_sbrief": {
+      "expected": "x Onderskrif negatief 1"
+    },
+    "Sample_8_5_3_default": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_brief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_sbrief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_4_default": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_4_brief": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_4_sbrief": {
+      "expected": "x 1,3"
+    },
+    "Sample_8_5_5_default": {
+      "expected": "4 hoofletter F e plus 3 hoofletter O 2 regs pyltjie 2 hoofletter F e 2 hoofletter O 3"
+    },
+    "Sample_8_5_5_brief": {
+      "expected": "4 hoofletter F e plus 3 hoofletter O 2 regs pyltjie 2 hoofletter F e 2 hoofletter O 3"
+    },
+    "Sample_8_5_5_sbrief": {
+      "expected": "4 hoofletter F e plus 3 hoofletter O 2 regs pyltjie 2 hoofletter F e 2 hoofletter O 3"
+    },
+    "Sample_8_5_6_default": {
+      "expected": "a Onderskrif 2 komma 3"
+    },
+    "Sample_8_5_6_brief": {
+      "expected": "a Onderskrif 2 komma 3"
+    },
+    "Sample_8_5_6_sbrief": {
+      "expected": "a Onderskrif 2 komma 3"
+    },
+    "Sample_8_5_7_default": {
+      "expected": "hoofletter T Onderskrif n 1 plus n 0"
+    },
+    "Sample_8_5_7_brief": {
+      "expected": "hoofletter T Onderskrif n 1 plus n 0"
+    },
+    "Sample_8_5_7_sbrief": {
+      "expected": "hoofletter T Onderskrif n 1 plus n 0"
+    },
+    "Sample_8_5_8_default": {
+      "expected": "logaritme Onderskrif 2 Basislyn links hakkie x regs hakkie is gelyk aan BeginBreuk logaritme Onderskrif 10 Basislyn links hakkie x regs hakkie Oor logaritme Onderskrif 10 Basislyn links hakkie 2 regs hakkie EndBreuk"
+    },
+    "Sample_8_5_8_brief": {
+      "expected": "logaritme Onderskrif 2 Basis links hakkie x regs hakkie is gelyk aan BeginBreuk logaritme Onderskrif 10 Basis links hakkie x regs hakkie Oor logaritme Onderskrif 10 Basis links hakkie 2 regs hakkie EndBreuk"
+    },
+    "Sample_8_5_8_sbrief": {
+      "expected": "logaritme Onderskrif 2 Basis links hakkie x regs hakkie is gelyk aan Breuk logaritme Onderskrif 10 Basis links hakkie x regs hakkie Oor logaritme Onderskrif 10 Basis links hakkie 2 regs hakkie End breuk"
+    },
+    "Sample_8_5_9_default": {
+      "expected": "hoofletter Phi 5"
+    },
+    "Sample_8_5_9_brief": {
+      "expected": "hoofletter Phi 5"
+    },
+    "Sample_8_5_9_sbrief": {
+      "expected": "hoofletter Phi 5"
+    },
+    "Sample_8_5_10_default": {
+      "expected": "ln x is gelyk aan integraal Onderskrif 1 Boskrif x Basislyn BeginBreuk d t Oor t EndBreuk"
+    },
+    "Sample_8_5_10_brief": {
+      "expected": "ln x is gelyk aan integraal Onder 1 Bo x Basis BeginBreuk d t Oor t EndBreuk"
+    },
+    "Sample_8_5_10_sbrief": {
+      "expected": "ln x is gelyk aan integraal Onder 1 Bo x Basis Breuk d t Oor t End breuk"
+    },
+    "Sample_8_6_1_default": {
+      "expected": "dollar n Basislyn 2 is gelyk aan 2 ster dollar n plus 1 kommapunt"
+    },
+    "Sample_8_6_1_brief": {
+      "expected": "dollar n Basis 2 is gelyk aan 2 ster dollar n plus 1 kommapunt"
+    },
+    "Sample_8_6_1_sbrief": {
+      "expected": "dollar n Basis 2 is gelyk aan 2 ster dollar n plus 1 kommapunt"
+    },
+    "BaselineNumberFont_default": {
+      "expected": "n Basislyn bold 2"
+    },
+    "BaselineNumberFont_brief": {
+      "expected": "n Basis bold 2"
+    },
+    "BaselineNumberFont_sbrief": {
+      "expected": "n Basis bold 2"
+    },
+    "Sample_8_8_1_naive_default": {
+      "expected": "Onderskrif c d Superskrif a b Basislyn x Onderskrif e f Superskrif g h"
+    },
+    "Sample_8_8_1_naive_brief": {
+      "expected": "Onderskrif c d Sup a b Basis x Onderskrif e f Sup g h"
+    },
+    "Sample_8_8_1_naive_sbrief": {
+      "expected": "Onderskrif c d Sup a b Basis x Onderskrif e f Sup g h"
+    },
+    "Sample_8_8_1_default": {
+      "expected": "Onderskrif c d Superskrif a b Basislyn x Onderskrif e f Superskrif g h"
+    },
+    "Sample_8_8_1_brief": {
+      "expected": "Onderskrif c d Sup a b Basis x Onderskrif e f Sup g h"
+    },
+    "Sample_8_8_1_sbrief": {
+      "expected": "Onderskrif c d Sup a b Basis x Onderskrif e f Sup g h"
+    },
+    "SampleSimpleSquare_default": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleSquare_brief": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleSquare_sbrief": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleSquare_2_default": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleSquare_2_brief": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleSquare_2_sbrief": {
+      "expected": "hoofletter T 0 kwadraat"
+    },
+    "SampleSimpleCube_default": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "SampleSimpleCube_brief": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "SampleSimpleCube_sbrief": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "SampleSimpleCube_2_default": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "SampleSimpleCube_2_brief": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "SampleSimpleCube_2_sbrief": {
+      "expected": "hoofletter T 0 kubbiek"
+    },
+    "Sample_8_8_2_default": {
+      "expected": "hoofletter T Onderskrif n minus 1 Superskrif 2"
+    },
+    "Sample_8_8_2_brief": {
+      "expected": "hoofletter T Onderskrif n minus 1 Sup 2"
+    },
+    "Sample_8_8_2_sbrief": {
+      "expected": "hoofletter T Onderskrif n minus 1 Sup 2"
+    },
+    "Sample_8_9_1_default": {
+      "expected": "x priem"
+    },
+    "Sample_8_9_1_brief": {
+      "expected": "x priem"
+    },
+    "Sample_8_9_1_sbrief": {
+      "expected": "x priem"
+    },
+    "Sample_8_9_2_default": {
+      "expected": "f trippelpriem links hakkie y regs hakkie is gelyk aan BeginBreuk d f dubbelpriem links hakkie y regs hakkie Oor d y EndBreuk"
+    },
+    "Sample_8_9_2_brief": {
+      "expected": "f trippelpriem links hakkie y regs hakkie is gelyk aan BeginBreuk d f dubbelpriem links hakkie y regs hakkie Oor d y EndBreuk"
+    },
+    "Sample_8_9_2_sbrief": {
+      "expected": "f trippelpriem links hakkie y regs hakkie is gelyk aan Breuk d f dubbelpriem links hakkie y regs hakkie Oor d y End breuk"
+    },
+    "Sample_8_10_1_default": {
+      "expected": "rho priem is gelyk aan rho priem Onderskrif plus Basislyn plus rho priem Onderskrif minus"
+    },
+    "Sample_8_10_1_brief": {
+      "expected": "rho priem is gelyk aan rho priem Onderskrif plus Basis plus rho priem Onderskrif minus"
+    },
+    "Sample_8_10_1_sbrief": {
+      "expected": "rho priem is gelyk aan rho priem Onderskrif plus Basis plus rho priem Onderskrif minus"
+    },
+    "Sample_8_10_2_default": {
+      "expected": "x priem 10"
+    },
+    "Sample_8_10_2_brief": {
+      "expected": "x priem 10"
+    },
+    "Sample_8_10_2_sbrief": {
+      "expected": "x priem 10"
+    },
+    "Sample_8_10_3_default": {
+      "expected": "hoofletter T priem Onderskrif n"
+    },
+    "Sample_8_10_3_brief": {
+      "expected": "hoofletter T priem Onderskrif n"
+    },
+    "Sample_8_10_3_sbrief": {
+      "expected": "hoofletter T priem Onderskrif n"
+    },
+    "Sample_8_11_1_default": {
+      "expected": "Begin 2 By 3 Matriks 1. Ry 1. Kolom x Superskrif n 2. Kolom y Superskrif n 3. Kolom z Superskrif n 2. Ry 1. Kolom x Superskrif n plus 1 2. Kolom y Superskrif n plus 1 3. Kolom z Superskrif n plus 1 End Matriks"
+    },
+    "Sample_8_11_1_brief": {
+      "expected": "Begin 2 By 3 Matriks 1. Ry 1. Kolom x Sup n 2. Kolom y Sup n 3. Kolom z Sup n 2. Ry 1. Kolom x Sup n plus 1 2. Kolom y Sup n plus 1 3. Kolom z Sup n plus 1 End Matriks"
+    },
+    "Sample_8_11_1_sbrief": {
+      "expected": "2 By 3 Matriks 1. Ry 1. Kolom x Sup n 2. Kolom y Sup n 3. Kolom z Sup n 2. Ry 1. Kolom x Sup n plus 1 2. Kolom y Sup n plus 1 3. Kolom z Sup n plus 1 End Matriks"
+    },
+    "Sample_8_12_1_default": {
+      "expected": "x Onderskrif a Basislyn Superskrif b"
+    },
+    "Sample_8_12_1_brief": {
+      "expected": "x Onderskrif a Basis Sup b"
+    },
+    "Sample_8_12_1_sbrief": {
+      "expected": "x Onderskrif a Basis Sup b"
+    },
+    "Sample_8_12_2_default": {
+      "expected": "x Superskrif b Basislyn Onderskrif a"
+    },
+    "Sample_8_12_2_brief": {
+      "expected": "x Sup b Basis Onderskrif a"
+    },
+    "Sample_8_12_2_sbrief": {
+      "expected": "x Sup b Basis Onderskrif a"
+    },
+    "Sample_8_13_1_default": {
+      "expected": "logaritme Superskrif 4 Superskrif b Basislyn x"
+    },
+    "Sample_8_13_1_brief": {
+      "expected": "logaritme Sup 4 Sup b Basis x"
+    },
+    "Sample_8_13_1_sbrief": {
+      "expected": "logaritme Sup 4 Sup b Basis x"
+    },
+    "Sample_8_13_2_default": {
+      "expected": "hoofletter T Onderskrif n Onderskrif a Basislyn y"
+    },
+    "Sample_8_13_2_brief": {
+      "expected": "hoofletter T Onderskrif n Onderskrif a Basis y"
+    },
+    "Sample_8_13_2_sbrief": {
+      "expected": "hoofletter T Onderskrif n Onderskrif a Basis y"
+    },
+    "Sample_9_1_1_default": {
+      "expected": "Begin wortel 2 End wortel"
+    },
+    "Sample_9_1_1_brief": {
+      "expected": "Begin wortel 2 End wortel"
+    },
+    "Sample_9_1_1_sbrief": {
+      "expected": "Wortel 2 End wortel"
+    },
+    "Sample_9_1_2_default": {
+      "expected": "Begin wortel m plus n End wortel"
+    },
+    "Sample_9_1_2_brief": {
+      "expected": "Begin wortel m plus n End wortel"
+    },
+    "Sample_9_1_2_sbrief": {
+      "expected": "Wortel m plus n End wortel"
+    },
+    "Sample_9_2_1_default": {
+      "expected": "WortelIndeks m plus n Begin wortel x plus y End wortel"
+    },
+    "Sample_9_2_1_brief": {
+      "expected": "WortelIndeks m plus n Begin wortel x plus y End wortel"
+    },
+    "Sample_9_2_1_sbrief": {
+      "expected": "Indeks m plus n Wortel x plus y End wortel"
+    },
+    "Sample_9_2_2_default": {
+      "expected": "WortelIndeks n Begin wortel x Superskrif m Basislyn End wortel is gelyk aan links hakkie WortelIndeks n Begin wortel x End wortel regs hakkie Superskrif m Basislyn is gelyk aan x Superskrif BeginBreuk m Oor n EndBreuk Basislyn komma x groter as 0"
+    },
+    "Sample_9_2_2_brief": {
+      "expected": "WortelIndeks n Begin wortel x Sup m Basis End wortel is gelyk aan links hakkie WortelIndeks n Begin wortel x End wortel regs hakkie Sup m Basis is gelyk aan x Sup BeginBreuk m Oor n EndBreuk Basis komma x groter as 0"
+    },
+    "Sample_9_2_2_sbrief": {
+      "expected": "Indeks n Wortel x Sup m Basis End wortel is gelyk aan links hakkie Indeks n Wortel x End wortel regs hakkie Sup m Basis is gelyk aan x Sup Breuk m Oor n End breuk Basis komma x groter as 0"
+    },
+    "Sample_9_2_3_default": {
+      "expected": "WortelIndeks 3 Begin wortel x End wortel is gelyk aan x Superskrif een derde"
+    },
+    "Sample_9_2_3_brief": {
+      "expected": "WortelIndeks 3 Begin wortel x End wortel is gelyk aan x Sup een derde"
+    },
+    "Sample_9_2_3_sbrief": {
+      "expected": "Indeks 3 Wortel x End wortel is gelyk aan x Sup een derde"
+    },
+    "Sample_9_3_1_default": {
+      "expected": "genesBegin wortel Begin wortel x plus 1 End wortel plus Begin wortel y plus 1 End wortel genesEnd wortel"
+    },
+    "Sample_9_3_1_brief": {
+      "expected": "genesBegin wortel Begin wortel x plus 1 End wortel plus Begin wortel y plus 1 End wortel genesEnd wortel"
+    },
+    "Sample_9_3_1_sbrief": {
+      "expected": "genesWortel Wortel x plus 1 End wortel plus Wortel y plus 1 End wortel genesEnd wortel"
+    },
+    "Sample_9_3_2_default": {
+      "expected": "genesWortelIndeks n genesBegin wortel WortelIndeks m Begin wortel x End wortel genesEnd wortel is gelyk aan genesWortelIndeks m genesBegin wortel WortelIndeks n Begin wortel x End wortel genesEnd wortel"
+    },
+    "Sample_9_3_2_brief": {
+      "expected": "genesWortelIndeks n genesBegin wortel WortelIndeks m Begin wortel x End wortel genesEnd wortel is gelyk aan genesWortelIndeks m genesBegin wortel WortelIndeks n Begin wortel x End wortel genesEnd wortel"
+    },
+    "Sample_9_3_2_sbrief": {
+      "expected": "genesIndeks n genesWortel Indeks m Wortel x End wortel genesEnd wortel is gelyk aan genesIndeks m genesWortel Indeks n Wortel x End wortel genesEnd wortel"
+    },
+    "Sample_9_3_3_default": {
+      "expected": "x Superskrif e minus 2 Basislyn is gelyk aan genes3Begin wortel x genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel x genesWortelIndeks 4 genesBegin wortel x WortelIndeks 5 Begin wortel x ellipsis End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel komma x element van hoofletter R dubbelgeslaan"
+    },
+    "Sample_9_3_3_brief": {
+      "expected": "x Sup e minus 2 Basis is gelyk aan genes3Begin wortel x genesTwee keerWortelIndeks 3 genesTwee keerBegin wortel x genesWortelIndeks 4 genesBegin wortel x WortelIndeks 5 Begin wortel x ellipsis End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel komma x element van hoofletter R dubbelgeslaan"
+    },
+    "Sample_9_3_3_sbrief": {
+      "expected": "x Sup e minus 2 Basis is gelyk aan genes3Wortel x genesTwee keerIndeks 3 genesTwee keerWortel x genesIndeks 4 genesWortel x Indeks 5 Wortel x ellipsis End wortel genesEnd wortel genesTwee keerEnd wortel genes3End wortel komma x element van hoofletter R dubbelgeslaan"
+    },
+    "Sample_9_3_4_default": {
+      "expected": "BeginBreuk 2 Oor pi EndBreuk is gelyk aan BeginBreuk Begin wortel 2 End wortel Oor 2 EndBreuk BeginBreuk genesBegin wortel 2 plus Begin wortel 2 End wortel genesEnd wortel Oor 2 EndBreuk BeginBreuk genesTwee keerBegin wortel 2 plus genesBegin wortel 2 plus Begin wortel 2 End wortel genesEnd wortel genesTwee keerEnd wortel Oor 2 EndBreuk ellipsis"
+    },
+    "Sample_9_3_4_brief": {
+      "expected": "BeginBreuk 2 Oor pi EndBreuk is gelyk aan BeginBreuk Begin wortel 2 End wortel Oor 2 EndBreuk BeginBreuk genesBegin wortel 2 plus Begin wortel 2 End wortel genesEnd wortel Oor 2 EndBreuk BeginBreuk genesTwee keerBegin wortel 2 plus genesBegin wortel 2 plus Begin wortel 2 End wortel genesEnd wortel genesTwee keerEnd wortel Oor 2 EndBreuk ellipsis"
+    },
+    "Sample_9_3_4_sbrief": {
+      "expected": "Breuk 2 Oor pi End breuk is gelyk aan Breuk Wortel 2 End wortel Oor 2 End breuk Breuk genesWortel 2 plus Wortel 2 End wortel genesEnd wortel Oor 2 End breuk Breuk genesTwee keerWortel 2 plus genesWortel 2 plus Wortel 2 End wortel genesEnd wortel genesTwee keerEnd wortel Oor 2 End breuk ellipsis"
+    },
+    "Sample_10_1_1_default": {
+      "expected": "BeginBreuk 5 x doodgetrek y End doodgetrek Oor 2 doodgetrek y End doodgetrek EndBreuk is gelyk aan vyf helftes x"
+    },
+    "Sample_10_1_1_brief": {
+      "expected": "BeginBreuk 5 x doodgetrek y End doodgetrek Oor 2 doodgetrek y End doodgetrek EndBreuk is gelyk aan vyf helftes x"
+    },
+    "Sample_10_1_1_sbrief": {
+      "expected": "Breuk 5 x doodgetrek y End doodgetrek Oor 2 doodgetrek y End doodgetrek End breuk is gelyk aan vyf helftes x"
+    },
+    "Sample_10_2_1_default": {
+      "expected": "BeginBreuk 12 Oor 18 EndBreuk is gelyk aan BeginBreuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_10_2_1_brief": {
+      "expected": "BeginBreuk 12 Oor 18 EndBreuk is gelyk aan BeginBreuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_10_2_1_sbrief": {
+      "expected": "Breuk 12 Oor 18 End breuk is gelyk aan Breuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang End breuk is gelyk aan twee derdes"
+    },
+    "Sample_10_2_2_default": {
+      "expected": "BeginBreuk 12 Oor 18 EndBreuk is gelyk aan BeginBreuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_10_2_2_brief": {
+      "expected": "BeginBreuk 12 Oor 18 EndBreuk is gelyk aan BeginBreuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang EndBreuk is gelyk aan twee derdes"
+    },
+    "Sample_10_2_2_sbrief": {
+      "expected": "Breuk 12 Oor 18 End breuk is gelyk aan Breuk vervang 12 met 2 End vervang Oor vervang 18 met 3 End vervang End breuk is gelyk aan twee derdes"
+    },
+    "Sample_11_1_1_default": {
+      "expected": "pas boonste aan x met twee punte"
+    },
+    "Sample_11_1_1_brief": {
+      "expected": "pas aan bo x met twee punte"
+    },
+    "Sample_11_1_1_sbrief": {
+      "expected": "pas aan bo x met twee punte"
+    },
+    "Sample_11_1_2_default": {
+      "expected": "pas boonste aan x plus y met regs pyltjie"
+    },
+    "Sample_11_1_2_brief": {
+      "expected": "pas aan bo x plus y met regs pyltjie"
+    },
+    "Sample_11_1_2_sbrief": {
+      "expected": "pas aan bo x plus y met regs pyltjie"
+    },
+    "Sample_11_1_3_default": {
+      "expected": "pas boonste aan x met hoed"
+    },
+    "Sample_11_1_3_brief": {
+      "expected": "pas aan bo x met hoed"
+    },
+    "Sample_11_1_3_sbrief": {
+      "expected": "pas aan bo x met hoed"
+    },
+    "Sample_11_2_1_default": {
+      "expected": "Pas aan onder x met punt bokant"
+    },
+    "Sample_11_2_1_brief": {
+      "expected": "Pas aan onder x met punt bokant"
+    },
+    "Sample_11_2_1_sbrief": {
+      "expected": "Pas aan onder x met punt bokant"
+    },
+    "Sample_11_3_1_default": {
+      "expected": "x oor tilde"
+    },
+    "Sample_11_3_1_brief": {
+      "expected": "x oor tilde"
+    },
+    "Sample_11_3_1_sbrief": {
+      "expected": "x oor tilde"
+    },
+    "Sample_11_3_2_default": {
+      "expected": "x bostaaf"
+    },
+    "Sample_11_3_2_brief": {
+      "expected": "x bostaaf"
+    },
+    "Sample_11_3_2_sbrief": {
+      "expected": "x bostaaf"
+    },
+    "Sample_11_3_3_default": {
+      "expected": "y onder tilde"
+    },
+    "Sample_11_3_3_brief": {
+      "expected": "y onder tilde"
+    },
+    "Sample_11_3_3_sbrief": {
+      "expected": "y onder tilde"
+    },
+    "Sample_11_4_1_default": {
+      "expected": "x bostaaf bostaaf"
+    },
+    "Sample_11_4_1_brief": {
+      "expected": "x bostaaf bostaaf"
+    },
+    "Sample_11_4_1_sbrief": {
+      "expected": "x bostaaf bostaaf"
+    },
+    "Sample_11_4_2_default": {
+      "expected": "y bostaaf bostaaf onderstaaf onderstaaf"
+    },
+    "Sample_11_4_2_brief": {
+      "expected": "y bostaaf bostaaf onderstaaf onderstaaf"
+    },
+    "Sample_11_4_2_sbrief": {
+      "expected": "y bostaaf bostaaf onderstaaf onderstaaf"
+    },
+    "Sample_11_6_1_default": {
+      "expected": "Pas aan Onder Onder Pas aan onder a plus b met lyn met ster"
+    },
+    "Sample_11_6_1_brief": {
+      "expected": "Pas aan Onder Onder Pas aan onder a plus b met lyn met ster"
+    },
+    "Sample_11_6_1_sbrief": {
+      "expected": "Pas aan Onder Onder Pas aan onder a plus b met lyn met ster"
+    },
+    "_comment8_": " This one is odd. This rule example seems to contradict Rule 11.2, where we",
+    "_comment9_": " ModifyAbove/Below with dot.  Here the dot is used as",
+    "_comment10_": " Over/Underscript. However, we express dot as a multi modifier.",
+    "Sample_11_6_3_default": {
+      "expected": "Pas aan Bokant Bokant pas boonste aan x plus y met tilde met makron"
+    },
+    "Sample_11_6_3_brief": {
+      "expected": "Pas aan Bo Bo pas aan bo x plus y met tilde met makron"
+    },
+    "Sample_11_6_3_sbrief": {
+      "expected": "Pas aan Bo Bo pas aan bo x plus y met tilde met makron"
+    },
+    "Sample_11_7_1_default": {
+      "expected": "som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte a Onderskrif n"
+    },
+    "Sample_11_7_1_brief": {
+      "expected": "som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte a Onderskrif n"
+    },
+    "Sample_11_7_1_sbrief": {
+      "expected": "som Onderskrif n is gelyk aan 1 Boskrif oneindigheid End skrifte a Onderskrif n"
+    },
+    "Sample_11_8_1_default": {
+      "expected": "Pas aan onder x plus y met lyn Onderskrif a is gelyk aan 5 OnderOnderskrif b is gelyk aan 3 End skrifte"
+    },
+    "Sample_11_8_1_brief": {
+      "expected": "Pas aan onder x plus y met lyn Onderskrif a is gelyk aan 5 OnderOnderskrif b is gelyk aan 3 End skrifte"
+    },
+    "Sample_11_8_1_sbrief": {
+      "expected": "Pas aan onder x plus y met lyn Onderskrif a is gelyk aan 5 OnderOnderskrif b is gelyk aan 3 End skrifte"
+    },
+    "Sample_11_8_2_default": {
+      "expected": "pas boonste aan x plus y met makron Boskrif n is gelyk aan 1 OorBoskrif m is gelyk aan 2 End skrifte"
+    },
+    "Sample_11_8_2_brief": {
+      "expected": "pas aan bo x plus y met makron Boskrif n is gelyk aan 1 OorBoskrif m is gelyk aan 2 End skrifte"
+    },
+    "Sample_11_8_2_sbrief": {
+      "expected": "pas aan bo x plus y met makron Boskrif n is gelyk aan 1 OorBoskrif m is gelyk aan 2 End skrifte"
+    },
+    "_comment11_": " This rule is currently not possible. It needs an enhanced processing in the",
+    "_comment12_": " semantic tree maybe together with a simultaneous treatment of mstacks.",
+    "Sample_12_1_1_default": {
+      "expected": "logaritme Onderskrif b Basislyn x"
+    },
+    "Sample_12_1_1_brief": {
+      "expected": "logaritme Onderskrif b Basis x"
+    },
+    "Sample_12_1_1_sbrief": {
+      "expected": "logaritme Onderskrif b Basis x"
+    },
+    "Sample_12_1_2_default": {
+      "expected": "kosinus y"
+    },
+    "Sample_12_1_2_brief": {
+      "expected": "kosinus y"
+    },
+    "Sample_12_1_2_sbrief": {
+      "expected": "kosinus y"
+    },
+    "Sample_12_1_3_default": {
+      "expected": "sinus x"
+    },
+    "Sample_12_1_3_brief": {
+      "expected": "sinus x"
+    },
+    "Sample_12_1_3_sbrief": {
+      "expected": "sinus x"
+    },
+    "Sample_13_1_1_default": {
+      "expected": "BeginBreuk 60 doodgetrek myl End doodgetrek Oor doodgetrek ure End doodgetrek EndBreuk maal BeginBreuk 5,280 voet Oor 1 doodgetrek myl End doodgetrek EndBreuk maal BeginBreuk 1 doodgetrek ure End doodgetrek Oor 60 minute EndBreuk is gelyk aan BeginBreuk 5,280 voet Oor minute EndBreuk"
+    },
+    "Sample_13_1_1_brief": {
+      "expected": "BeginBreuk 60 doodgetrek myl End doodgetrek Oor doodgetrek ure End doodgetrek EndBreuk maal BeginBreuk 5,280 voet Oor 1 doodgetrek myl End doodgetrek EndBreuk maal BeginBreuk 1 doodgetrek ure End doodgetrek Oor 60 minute EndBreuk is gelyk aan BeginBreuk 5,280 voet Oor minute EndBreuk"
+    },
+    "Sample_13_1_1_sbrief": {
+      "expected": "Breuk 60 doodgetrek myl End doodgetrek Oor doodgetrek ure End doodgetrek End breuk maal Breuk 5,280 voet Oor 1 doodgetrek myl End doodgetrek End breuk maal Breuk 1 doodgetrek ure End doodgetrek Oor 60 minute End breuk is gelyk aan Breuk 5,280 voet Oor minute End breuk"
+    },
+    "_comment13_": " That should be negative 2!",
+    "Sample_13_1_2_default": {
+      "expected": "1 joule is gelyk aan 1 kilogram dot meter kwadraat dot sekondes Superskrif negatief 2"
+    },
+    "Sample_13_1_2_brief": {
+      "expected": "1 joule is gelyk aan 1 kilogram dot meter kwadraat dot sekondes Sup negatief 2"
+    },
+    "Sample_13_1_2_sbrief": {
+      "expected": "1 joule is gelyk aan 1 kilogram dot meter kwadraat dot sekondes Sup negatief 2"
+    },
+    "Sample_13_1_3_default": {
+      "expected": "m meter is gelyk aan 100 m sentimeter is gelyk aan BeginBreuk m Oor 1,000 EndBreuk kilometer"
+    },
+    "Sample_13_1_3_brief": {
+      "expected": "m meter is gelyk aan 100 m sentimeter is gelyk aan BeginBreuk m Oor 1,000 EndBreuk kilometer"
+    },
+    "Sample_13_1_3_sbrief": {
+      "expected": "m meter is gelyk aan 100 m sentimeter is gelyk aan Breuk m Oor 1,000 End breuk kilometer"
+    },
+    "Sample_13_1_4_default": {
+      "expected": "1 myl is amper gelyk aan 1,6 kilometer"
+    },
+    "Sample_13_1_4_brief": {
+      "expected": "1 myl is amper gelyk aan 1,6 kilometer"
+    },
+    "Sample_13_1_4_sbrief": {
+      "expected": "1 myl is amper gelyk aan 1,6 kilometer"
+    },
+    "Sample_13_1_5_default": {
+      "expected": "1 duim is gelyk aan 2,54 sentimeter"
+    },
+    "Sample_13_1_5_brief": {
+      "expected": "1 duim is gelyk aan 2,54 sentimeter"
+    },
+    "Sample_13_1_5_sbrief": {
+      "expected": "1 duim is gelyk aan 2,54 sentimeter"
+    },
+    "Sample_14_1_1_default": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter H 2 2. Kolom plus 3. Kolom hoofletter F 2 4. Kolom regs pyltjie 5. Kolom 2 hoofletter H hoofletter F 2. Ry 1. Kolom hydrogen 2. Kolom leeg 3. Kolom fluorine 4. Kolom leeg 5. Kolom hydrogen fluoride End uitleg"
+    },
+    "Sample_14_1_1_brief": {
+      "expected": "Begin uitleg 1. Ry 1. Kolom hoofletter H 2 2. Kolom plus 3. Kolom hoofletter F 2 4. Kolom regs pyltjie 5. Kolom 2 hoofletter H hoofletter F 2. Ry 1. Kolom hydrogen 2. Kolom leeg 3. Kolom fluorine 4. Kolom leeg 5. Kolom hydrogen fluoride End uitleg"
+    },
+    "Sample_14_1_1_sbrief": {
+      "expected": "uitleg 1. Ry 1. Kolom hoofletter H 2 2. Kolom plus 3. Kolom hoofletter F 2 4. Kolom regs pyltjie 5. Kolom 2 hoofletter H hoofletter F 2. Ry 1. Kolom hydrogen 2. Kolom leeg 3. Kolom fluorine 4. Kolom leeg 5. Kolom hydrogen fluoride End uitleg"
+    },
+    "Sample_14_3_1_default": {
+      "expected": "x is gelyk aan Begin uitleg vergroot links krulhakkie 1. Ry 1. Kolom y kleiner as 0 2. Kolom 0 2. Ry 1. Kolom y groter of gelyk aan 0 2. Kolom 2 y End uitleg"
+    },
+    "Sample_14_3_1_brief": {
+      "expected": "x is gelyk aan Begin uitleg vergroot links krulhakkie 1. Ry 1. Kolom y kleiner as 0 2. Kolom 0 2. Ry 1. Kolom y groter of gelyk aan 0 2. Kolom 2 y End uitleg"
+    },
+    "Sample_14_3_1_sbrief": {
+      "expected": "x is gelyk aan Uitleg Vergroot links krulhakkie 1. Ry 1. Kolom y kleiner as 0 2. Kolom 0 2. Ry 1. Kolom y groter of gelyk aan 0 2. Kolom 2 y End uitleg"
+    },
+    "Sample_15_1_1_default": {
+      "expected": "Begin 3 By 3 Matriks 1. Ry 1. Kolom x plus a 2. Kolom x plus b 3. Kolom x plus c 2. Ry 1. Kolom y plus a 2. Kolom y plus b 3. Kolom y plus c 3. Ry 1. Kolom z plus a 2. Kolom z plus b 3. Kolom z plus c End Matriks"
+    },
+    "Sample_15_1_1_brief": {
+      "expected": "Begin 3 By 3 Matriks 1. Ry 1. Kolom x plus a 2. Kolom x plus b 3. Kolom x plus c 2. Ry 1. Kolom y plus a 2. Kolom y plus b 3. Kolom y plus c 3. Ry 1. Kolom z plus a 2. Kolom z plus b 3. Kolom z plus c End Matriks"
+    },
+    "Sample_15_1_1_sbrief": {
+      "expected": "3 By 3 Matriks 1. Ry 1. Kolom x plus a 2. Kolom x plus b 3. Kolom x plus c 2. Ry 1. Kolom y plus a 2. Kolom y plus b 3. Kolom y plus c 3. Ry 1. Kolom z plus a 2. Kolom z plus b 3. Kolom z plus c End Matriks"
+    },
+    "Sample_15_2_1_default": {
+      "expected": "Begin 2 By 2 Determinant 1. Ry 1. Kolom a plus 1 2. Kolom b 2. Ry 1. Kolom c 2. Kolom d EndDeterminant is gelyk aan links hakkie a plus 1 regs hakkie d minus b c"
+    },
+    "Sample_15_2_1_brief": {
+      "expected": "Begin 2 By 2 Determinant 1. Ry 1. Kolom a plus 1 2. Kolom b 2. Ry 1. Kolom c 2. Kolom d EndDeterminant is gelyk aan links hakkie a plus 1 regs hakkie d minus b c"
+    },
+    "Sample_15_2_1_sbrief": {
+      "expected": "2 By 2 Determinant 1. Ry 1. Kolom a plus 1 2. Kolom b 2. Ry 1. Kolom c 2. Kolom d EndDeterminant is gelyk aan links hakkie a plus 1 regs hakkie d minus b c"
+    },
+    "Sample_15_4_1_default": {
+      "expected": "Begin 2 By 2 Determinant 1. Ry a b 2. Ry c d EndDeterminant is gelyk aan a d minus b c"
+    },
+    "Sample_15_4_1_brief": {
+      "expected": "Begin 2 By 2 Determinant 1. Ry a b 2. Ry c d EndDeterminant is gelyk aan a d minus b c"
+    },
+    "Sample_15_4_1_sbrief": {
+      "expected": "2 By 2 Determinant 1. Ry a b 2. Ry c d EndDeterminant is gelyk aan a d minus b c"
+    },
+    "Sample_15_6_1_default": {
+      "expected": "Begin Binomiaal of Matriks x Kies y End Binomiaal of Matriks"
+    },
+    "Sample_15_6_1_brief": {
+      "expected": "Begin Binomiaal of Matriks x Kies y End Binomiaal of Matriks"
+    },
+    "Sample_15_6_1_sbrief": {
+      "expected": "Binomiaal of Matriks x Kies y End Binomiaal of Matriks"
+    }
+  }
+}

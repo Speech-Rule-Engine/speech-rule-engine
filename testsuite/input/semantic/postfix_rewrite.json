@@ -1,0 +1,118 @@
+{
+  "tests": {
+    "percentage_0": {
+      "tex": "a\\%",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi></math>"
+    },
+    "percentage_1": {
+      "tex": "+a\\%",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\">%</mi></math>"
+    },
+    "percentage_2": {
+      "tex": "a\\%+b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mo>+</mo><mi>b</mi></math>"
+    },
+    "percentage_3": {
+      "tex": "a\\%+b\\%",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mo>+</mo><mi>b</mi><mi mathvariant=\"normal\">%</mi></math>"
+    },
+    "percentage_4": {
+      "tex": "+a\\%+-b\\%",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\">%</mi><mo>+</mo><mo>&#x2212;</mo><mi>b</mi><mi mathvariant=\"normal\">%</mi></math>"
+    },
+    "div_0": {
+      "tex": "a\\%c",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi></math>"
+    },
+    "div_1": {
+      "tex": "+a\\%c",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi></math>"
+    },
+    "div_2": {
+      "tex": "a\\%c+b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi><mo>+</mo><mi>b</mi></math>"
+    },
+    "div_3": {
+      "tex": "a\\%c+b\\%d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi><mo>+</mo><mi>b</mi><mi mathvariant=\"normal\">%</mi><mi>d</mi></math>"
+    },
+    "divpercentage_0": {
+      "tex": "a\\%c+b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi><mo>+</mo><mi>b</mi></math>"
+    },
+    "divpercentage_1": {
+      "tex": "+a\\%c\\%d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi><mi mathvariant=\"normal\">%</mi><mi>d</mi></math>"
+    },
+    "divpercentage_3": {
+      "tex": "a\\%c+b\\%\\%d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mi mathvariant=\"normal\">%</mi><mi>c</mi><mo>+</mo><mi>b</mi><mi mathvariant=\"normal\">%</mi><mi mathvariant=\"normal\">%</mi><mi>d</mi></math>"
+    },
+    "permille_0": {
+      "tex": "a‰",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow></math>"
+    },
+    "permille_1": {
+      "tex": "+a‰",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow></math>"
+    },
+    "permille_2": {
+      "tex": "a‰+b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow><mo>+</mo><mi>b</mi></math>"
+    },
+    "permille_3": {
+      "tex": "a‰+b‰",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow><mo>+</mo><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow></math>"
+    },
+    "permille_4": {
+      "tex": "+a‰+-b‰",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow><mo>+</mo><mo>&#x2212;</mo><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2030;</mo></mrow></math>"
+    },
+    "permyriad_0": {
+      "tex": "a‱",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow></math>"
+    },
+    "permyriad_1": {
+      "tex": "+a‱",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow></math>"
+    },
+    "permyriad_2": {
+      "tex": "a‱+b",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow><mo>+</mo><mi>b</mi></math>"
+    },
+    "permyriad_3": {
+      "tex": "a‱+b‱",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow><mo>+</mo><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow></math>"
+    },
+    "permyriad_4": {
+      "tex": "+a‱+-b‱",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo>+</mo><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow><mo>+</mo><mo>&#x2212;</mo><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mo>&#x2031;</mo></mrow></math>"
+    },
+    "_comment_0": "Units with verious multiplications as they are now treated in two places.",
+    "times1": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn><mo>×</mo><mn>6</mn></mstyle>"
+    },
+    "times2": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn><mi class=\"MathML-Unit\">kg</mi><mo>×</mo><mn>6</mn><mi class=\"MathML-Unit\">ml</mi></mstyle>"
+    },
+    "times3": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn><mi class=\"MathML-Unit\">kg</mi><mo>×</mo><mi class=\"MathML-Unit\">ml</mi></mstyle>"
+    },
+    "times4": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn><mo>×</mo><mi class=\"MathML-Unit\">kg</mi><mo>×</mo><mi class=\"MathML-Unit\">ml</mi></mstyle>"
+    },
+    "times5": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>5</mn><mo>×</mo><mi class=\"MathML-Unit\">kg</mi><mi class=\"MathML-Unit\">ml</mi></mstyle>"
+    },
+    "times6": {
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mo>×</mo><mi class=\"MathML-Unit\">kg</mi><mi class=\"MathML-Unit\">ml</mi></mstyle>"
+    },
+    "_comment_1": "An issue on units with explicit invisible times.",
+    "times7": {
+      "input": "<mrow><mn>5</mn><mo>⁢</mo><mi>kg</mi></mrow><mo>×</mo><mrow><mn>6</mn><mo>⁢</mo><mi>ml</mi></mrow>"
+    },
+    "times8": {
+      "input": "<mrow><mn>5</mn><mo>⁢</mo><mi class=\"MathML-Unit\">kg</mi></mrow><mo>×</mo><mrow><mn>6</mn><mo>⁢</mo><mi class=\"MathML-Unit\">ml</mi></mrow>"
+    }
+  }
+}

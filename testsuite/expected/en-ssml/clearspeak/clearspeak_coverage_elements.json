@@ -1,0 +1,158 @@
+{
+  "name": "EnglishClearspeakCoverageElements",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_coverage_elements.json",
+  "information": "English Clearspeak Coverage for Elements symbol tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "In_set_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "In_set_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "In_set_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "In_set_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> contains as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "In_set_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> contains as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "In_set_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> does not contain as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Free_standing_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Free_standing_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Free_standing_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Free_standing_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> contains as member <mark name=\"2\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Free_standing_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> contains as member <mark name=\"2\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Free_standing_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> does not contain as member <mark name=\"2\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Under_bigop_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Under_bigop_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Under_bigop_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Under_bigop_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> contains as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Under_bigop_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> contains as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Under_bigop_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> does not contain as member <mark name=\"3\"/> <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is an element of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_7": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> element of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_8": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is an element of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_9": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is in <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_10": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_11": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_12": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> belongs to <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_in_13": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> belonging to <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_in_14": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> belongs to <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_not_in_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_not_in_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is not a member of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is not an element of <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_7": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not an element of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_not_in_8": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is not an element of <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_9": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> is not in <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_10": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_not_in_11": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> is not in <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_12": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"1\"/> does not belong to <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Preferences_not_in_13": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> not belonging to <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"5\"/> such that <say-as interpret-as=\"character\">z</say-as> </prosody></speak>"
+    },
+    "Preferences_not_in_14": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"4\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">z</say-as> <mark name=\"2\"/> does not belong to <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "Complex": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"11\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> belonging to <break time=\"250ms\"/> <mark name=\"3\"/> cap A <mark name=\"7\"/> such that <break time=\"250ms\"/> <mark name=\"7\"/> the fraction with numerator <mark name=\"5\"/> 1 <break time=\"250ms\"/> <mark name=\"6\"/> and denominator <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> end fraction </prosody></speak>"
+    }
+  }
+}

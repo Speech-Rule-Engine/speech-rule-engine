@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api empheq tests.",
+  "base": "input/semantic/empheq.json"
+}

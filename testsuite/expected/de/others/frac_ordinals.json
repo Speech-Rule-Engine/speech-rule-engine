@@ -1,0 +1,644 @@
+{
+  "locale": "de",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "German Ordinal word as used in fractions tests.",
+  "kind": "numberToOrdinal",
+  "active": "NumbersGerman",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "nulltel"
+    },
+    "Number_1": {
+      "expected": "eintel"
+    },
+    "Number_2": {
+      "expected": "halb"
+    },
+    "Number_3": {
+      "expected": "drittel"
+    },
+    "Number_4": {
+      "expected": "viertel"
+    },
+    "Number_5": {
+      "expected": "fünftel"
+    },
+    "Number_6": {
+      "expected": "sechstel"
+    },
+    "Number_7": {
+      "expected": "siebtel"
+    },
+    "Number_8": {
+      "expected": "achtel"
+    },
+    "Number_9": {
+      "expected": "neuntel"
+    },
+    "Number_10": {
+      "expected": "zehntel"
+    },
+    "Number_11": {
+      "expected": "elftel"
+    },
+    "Number_12": {
+      "expected": "zwölftel"
+    },
+    "Number_13": {
+      "expected": "dreizehntel"
+    },
+    "Number_14": {
+      "expected": "vierzehntel"
+    },
+    "Number_15": {
+      "expected": "fünfzehntel"
+    },
+    "Number_16": {
+      "expected": "sechzehntel"
+    },
+    "Number_17": {
+      "expected": "siebzehntel"
+    },
+    "Number_18": {
+      "expected": "achtzehntel"
+    },
+    "Number_19": {
+      "expected": "neunzehnstel"
+    },
+    "Number_20": {
+      "expected": "zwanzigstel"
+    },
+    "Number_21": {
+      "expected": "einundzwanzigstel"
+    },
+    "Number_22": {
+      "expected": "zweiundzwanzigstel"
+    },
+    "Number_23": {
+      "expected": "dreiundzwanzigstel"
+    },
+    "Number_24": {
+      "expected": "vierundzwanzigstel"
+    },
+    "Number_25": {
+      "expected": "fünfundzwanzigstel"
+    },
+    "Number_26": {
+      "expected": "sechsundzwanzigstel"
+    },
+    "Number_27": {
+      "expected": "siebenundzwanzigstel"
+    },
+    "Number_28": {
+      "expected": "achtundzwanzigstel"
+    },
+    "Number_29": {
+      "expected": "neunundzwanzigstel"
+    },
+    "Number_30": {
+      "expected": "dreißigstel"
+    },
+    "Number_31": {
+      "expected": "einunddreißigstel"
+    },
+    "Number_32": {
+      "expected": "zweiunddreißigstel"
+    },
+    "Number_33": {
+      "expected": "dreiunddreißigstel"
+    },
+    "Number_34": {
+      "expected": "vierunddreißigstel"
+    },
+    "Number_35": {
+      "expected": "fünfunddreißigstel"
+    },
+    "Number_36": {
+      "expected": "sechsunddreißigstel"
+    },
+    "Number_37": {
+      "expected": "siebenunddreißigstel"
+    },
+    "Number_38": {
+      "expected": "achtunddreißigstel"
+    },
+    "Number_39": {
+      "expected": "neununddreißigstel"
+    },
+    "Number_40": {
+      "expected": "vierzigstel"
+    },
+    "Number_41": {
+      "expected": "einundvierzigstel"
+    },
+    "Number_42": {
+      "expected": "zweiundvierzigstel"
+    },
+    "Number_43": {
+      "expected": "dreiundvierzigstel"
+    },
+    "Number_44": {
+      "expected": "vierundvierzigstel"
+    },
+    "Number_45": {
+      "expected": "fünfundvierzigstel"
+    },
+    "Number_46": {
+      "expected": "sechsundvierzigstel"
+    },
+    "Number_47": {
+      "expected": "siebenundvierzigstel"
+    },
+    "Number_48": {
+      "expected": "achtundvierzigstel"
+    },
+    "Number_49": {
+      "expected": "neunundvierzigstel"
+    },
+    "Number_50": {
+      "expected": "fünfzigstel"
+    },
+    "Number_51": {
+      "expected": "einundfünfzigstel"
+    },
+    "Number_52": {
+      "expected": "zweiundfünfzigstel"
+    },
+    "Number_53": {
+      "expected": "dreiundfünfzigstel"
+    },
+    "Number_54": {
+      "expected": "vierundfünfzigstel"
+    },
+    "Number_55": {
+      "expected": "fünfundfünfzigstel"
+    },
+    "Number_56": {
+      "expected": "sechsundfünfzigstel"
+    },
+    "Number_57": {
+      "expected": "siebenundfünfzigstel"
+    },
+    "Number_58": {
+      "expected": "achtundfünfzigstel"
+    },
+    "Number_59": {
+      "expected": "neunundfünfzigstel"
+    },
+    "Number_60": {
+      "expected": "sechzigstel"
+    },
+    "Number_61": {
+      "expected": "einundsechzigstel"
+    },
+    "Number_62": {
+      "expected": "zweiundsechzigstel"
+    },
+    "Number_63": {
+      "expected": "dreiundsechzigstel"
+    },
+    "Number_64": {
+      "expected": "vierundsechzigstel"
+    },
+    "Number_65": {
+      "expected": "fünfundsechzigstel"
+    },
+    "Number_66": {
+      "expected": "sechsundsechzigstel"
+    },
+    "Number_67": {
+      "expected": "siebenundsechzigstel"
+    },
+    "Number_68": {
+      "expected": "achtundsechzigstel"
+    },
+    "Number_69": {
+      "expected": "neunundsechzigstel"
+    },
+    "Number_70": {
+      "expected": "siebzigstel"
+    },
+    "Number_71": {
+      "expected": "einundsiebzigstel"
+    },
+    "Number_72": {
+      "expected": "zweiundsiebzigstel"
+    },
+    "Number_73": {
+      "expected": "dreiundsiebzigstel"
+    },
+    "Number_74": {
+      "expected": "vierundsiebzigstel"
+    },
+    "Number_75": {
+      "expected": "fünfundsiebzigstel"
+    },
+    "Number_76": {
+      "expected": "sechsundsiebzigstel"
+    },
+    "Number_77": {
+      "expected": "siebenundsiebzigstel"
+    },
+    "Number_78": {
+      "expected": "achtundsiebzigstel"
+    },
+    "Number_79": {
+      "expected": "neunundsiebzigstel"
+    },
+    "Number_80": {
+      "expected": "achtzigstel"
+    },
+    "Number_81": {
+      "expected": "einundachtzigstel"
+    },
+    "Number_82": {
+      "expected": "zweiundachtzigstel"
+    },
+    "Number_83": {
+      "expected": "dreiundachtzigstel"
+    },
+    "Number_84": {
+      "expected": "vierundachtzigstel"
+    },
+    "Number_85": {
+      "expected": "fünfundachtzigstel"
+    },
+    "Number_86": {
+      "expected": "sechsundachtzigstel"
+    },
+    "Number_87": {
+      "expected": "siebenundachtzigstel"
+    },
+    "Number_88": {
+      "expected": "achtundachtzigstel"
+    },
+    "Number_89": {
+      "expected": "neunundachtzigstel"
+    },
+    "Number_90": {
+      "expected": "neunzigstel"
+    },
+    "Number_91": {
+      "expected": "einundneunzigstel"
+    },
+    "Number_92": {
+      "expected": "zweiundneunzigstel"
+    },
+    "Number_93": {
+      "expected": "dreiundneunzigstel"
+    },
+    "Number_94": {
+      "expected": "vierundneunzigstel"
+    },
+    "Number_95": {
+      "expected": "fünfundneunzigstel"
+    },
+    "Number_96": {
+      "expected": "sechsundneunzigstel"
+    },
+    "Number_97": {
+      "expected": "siebenundneunzigstel"
+    },
+    "Number_98": {
+      "expected": "achtundneunzigstel"
+    },
+    "Number_99": {
+      "expected": "neunundneunzigstel"
+    },
+    "Number_100": {
+      "expected": "einhundertstel"
+    },
+    "Number_101": {
+      "expected": "einhunderteinsstel"
+    },
+    "Number_102": {
+      "expected": "einhundertzweistel"
+    },
+    "Number_103": {
+      "expected": "einhundertdreistel"
+    },
+    "Number_104": {
+      "expected": "einhundertvierstel"
+    },
+    "Number_105": {
+      "expected": "einhundertfünfstel"
+    },
+    "Number_106": {
+      "expected": "einhundertsechsstel"
+    },
+    "Number_107": {
+      "expected": "einhundertsiebenstel"
+    },
+    "Number_108": {
+      "expected": "einhundertachtstel"
+    },
+    "Number_109": {
+      "expected": "einhundertneunstel"
+    },
+    "Number_110": {
+      "expected": "einhundertzehnstel"
+    },
+    "Number_200": {
+      "expected": "zweihundertstel"
+    },
+    "Number_201": {
+      "expected": "zweihunderteinsstel"
+    },
+    "Number_300": {
+      "expected": "dreihundertstel"
+    },
+    "Number_301": {
+      "expected": "dreihunderteinsstel"
+    },
+    "Number_400": {
+      "expected": "vierhundertstel"
+    },
+    "Number_401": {
+      "expected": "vierhunderteinsstel"
+    },
+    "Number_500": {
+      "expected": "fünfhundertstel"
+    },
+    "Number_501": {
+      "expected": "fünfhunderteinsstel"
+    },
+    "Number_600": {
+      "expected": "sechshundertstel"
+    },
+    "Number_601": {
+      "expected": "sechshunderteinsstel"
+    },
+    "Number_700": {
+      "expected": "siebenhundertstel"
+    },
+    "Number_701": {
+      "expected": "siebenhunderteinsstel"
+    },
+    "Number_800": {
+      "expected": "achthundertstel"
+    },
+    "Number_801": {
+      "expected": "achthunderteinsstel"
+    },
+    "Number_900": {
+      "expected": "neunhundertstel"
+    },
+    "Number_901": {
+      "expected": "neunhunderteinsstel"
+    },
+    "Number_1000": {
+      "expected": "eintausendstel"
+    },
+    "Number_1001": {
+      "expected": "eintausendeinsstel"
+    },
+    "Number_2000": {
+      "expected": "zweitausendstel"
+    },
+    "Number_2001": {
+      "expected": "zweitausendeinsstel"
+    },
+    "Number_3000": {
+      "expected": "dreitausendstel"
+    },
+    "Number_3001": {
+      "expected": "dreitausendeinsstel"
+    },
+    "Number_4000": {
+      "expected": "viertausendstel"
+    },
+    "Number_4001": {
+      "expected": "viertausendeinsstel"
+    },
+    "Number_5000": {
+      "expected": "fünftausendstel"
+    },
+    "Number_5001": {
+      "expected": "fünftausendeinsstel"
+    },
+    "Number_6000": {
+      "expected": "sechstausendstel"
+    },
+    "Number_6001": {
+      "expected": "sechstausendeinsstel"
+    },
+    "Number_7000": {
+      "expected": "siebentausendstel"
+    },
+    "Number_7001": {
+      "expected": "siebentausendeinsstel"
+    },
+    "Number_8000": {
+      "expected": "achttausendstel"
+    },
+    "Number_8001": {
+      "expected": "achttausendeinsstel"
+    },
+    "Number_9000": {
+      "expected": "neuntausendstel"
+    },
+    "Number_9001": {
+      "expected": "neuntausendeinsstel"
+    },
+    "Number_10000": {
+      "expected": "zehntausendstel"
+    },
+    "Number_10001": {
+      "expected": "zehntausendeinsstel"
+    },
+    "Number_20000": {
+      "expected": "zwanzigtausendstel"
+    },
+    "Number_20001": {
+      "expected": "zwanzigtausendeinsstel"
+    },
+    "Number_30000": {
+      "expected": "dreißigtausendstel"
+    },
+    "Number_30001": {
+      "expected": "dreißigtausendeinsstel"
+    },
+    "Number_40000": {
+      "expected": "vierzigtausendstel"
+    },
+    "Number_40001": {
+      "expected": "vierzigtausendeinsstel"
+    },
+    "Number_50000": {
+      "expected": "fünfzigtausendstel"
+    },
+    "Number_50001": {
+      "expected": "fünfzigtausendeinsstel"
+    },
+    "Number_60000": {
+      "expected": "sechzigtausendstel"
+    },
+    "Number_60001": {
+      "expected": "sechzigtausendeinsstel"
+    },
+    "Number_70000": {
+      "expected": "siebzigtausendstel"
+    },
+    "Number_70001": {
+      "expected": "siebzigtausendeinsstel"
+    },
+    "Number_80000": {
+      "expected": "achtzigtausendstel"
+    },
+    "Number_80001": {
+      "expected": "achtzigtausendeinsstel"
+    },
+    "Number_90000": {
+      "expected": "neunzigtausendstel"
+    },
+    "Number_90001": {
+      "expected": "neunzigtausendeinsstel"
+    },
+    "Number_100000": {
+      "expected": "einhunderttausendstel"
+    },
+    "Number_1000000": {
+      "expected": "einemillionstel"
+    },
+    "Number_10000000": {
+      "expected": "zehnmillionenstel"
+    },
+    "Number_100000000": {
+      "expected": "einhundertmillionenstel"
+    },
+    "Number_1000000000": {
+      "expected": "einemilliardestel"
+    },
+    "Number_10000000000": {
+      "expected": "zehnmilliardenstel"
+    },
+    "Number_100000000000": {
+      "expected": "einhundertmilliardenstel"
+    },
+    "Number_1000000000000": {
+      "expected": "einebillionstel"
+    },
+    "Number_10000000000000": {
+      "expected": "zehnbillionenstel"
+    },
+    "Number_100000000000000": {
+      "expected": "einhundertbillionenstel"
+    },
+    "Number_1000000000000000": {
+      "expected": "einebilliardestel"
+    },
+    "Number_10000000000000000": {
+      "expected": "zehnbilliardenstel"
+    },
+    "Number_100001": {
+      "expected": "einhunderttausendeinsstel"
+    },
+    "Number_200000": {
+      "expected": "zweihunderttausendstel"
+    },
+    "Number_200001": {
+      "expected": "zweihunderttausendeinsstel"
+    },
+    "Number_1000001": {
+      "expected": "einemillioneinsstel"
+    },
+    "Number_2000000": {
+      "expected": "zweimillionenstel"
+    },
+    "Number_2000001": {
+      "expected": "zweimillioneneinsstel"
+    },
+    "Number_10000001": {
+      "expected": "zehnmillioneneinsstel"
+    },
+    "Number_20000000": {
+      "expected": "zwanzigmillionenstel"
+    },
+    "Number_20000001": {
+      "expected": "zwanzigmillioneneinsstel"
+    },
+    "Number_100000001": {
+      "expected": "einhundertmillioneneinsstel"
+    },
+    "Number_200000000": {
+      "expected": "zweihundertmillionenstel"
+    },
+    "Number_200000001": {
+      "expected": "zweihundertmillioneneinsstel"
+    },
+    "Number_1000000001": {
+      "expected": "einemilliardeeinsstel"
+    },
+    "Number_2000000000": {
+      "expected": "zweimilliardenstel"
+    },
+    "Number_2000000001": {
+      "expected": "zweimilliardeneinsstel"
+    },
+    "Number_10000000001": {
+      "expected": "zehnmilliardeneinsstel"
+    },
+    "Number_20000000000": {
+      "expected": "zwanzigmilliardenstel"
+    },
+    "Number_20000000001": {
+      "expected": "zwanzigmilliardeneinsstel"
+    },
+    "Number_100000000001": {
+      "expected": "einhundertmilliardeneinsstel"
+    },
+    "Number_200000000000": {
+      "expected": "zweihundertmilliardenstel"
+    },
+    "Number_200000000001": {
+      "expected": "zweihundertmilliardeneinsstel"
+    },
+    "Number_1000000000001": {
+      "expected": "einebillioneinsstel"
+    },
+    "Number_2000000000000": {
+      "expected": "zweibillionenstel"
+    },
+    "Number_2000000000001": {
+      "expected": "zweibillioneneinsstel"
+    },
+    "Number_10000000000001": {
+      "expected": "zehnbillioneneinsstel"
+    },
+    "Number_20000000000000": {
+      "expected": "zwanzigbillionenstel"
+    },
+    "Number_20000000000001": {
+      "expected": "zwanzigbillioneneinsstel"
+    },
+    "Number_100000000000001": {
+      "expected": "einhundertbillioneneinsstel"
+    },
+    "Number_200000000000000": {
+      "expected": "zweihundertbillionenstel"
+    },
+    "Number_200000000000001": {
+      "expected": "zweihundertbillioneneinsstel"
+    },
+    "Number_1000000000000001": {
+      "expected": "einebilliardeeinsstel"
+    },
+    "Number_2000000000000000": {
+      "expected": "zweibilliardenstel"
+    },
+    "Number_2000000000000001": {
+      "expected": "zweibilliardeneinsstel"
+    },
+    "Number_10000000000000001": {
+      "expected": "zehnbilliardenstel"
+    },
+    "Number_20000000000000000": {
+      "expected": "zwanzigbilliardenstel"
+    },
+    "Number_20000000000000001": {
+      "expected": "zwanzigbilliardenstel"
+    }
+  }
+}

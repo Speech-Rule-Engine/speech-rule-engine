@@ -1,0 +1,403 @@
+{
+  "name": "HindiMathspeakIssues2",
+  "locale": "hi",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Hindi Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "मूल आरंभ ए मूल समाप्त"
+    },
+    "MathspeakRoots_1": {
+      "expected": "मूलांक 2 मूल आरंभ ए मूल समाप्त"
+    },
+    "MathspeakRoots_2": {
+      "expected": "मूलांक 3 मूल आरंभ ए मूल समाप्त"
+    },
+    "MathspeakRoots_3": {
+      "expected": "मूलांक 4 मूल आरंभ ए मूल समाप्त"
+    },
+    "MathspeakRoots_4": {
+      "expected": "नीड़ितमूल आरंभ मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त"
+    },
+    "MathspeakRoots_5": {
+      "expected": "नीड़ितदुबारामूल आरंभ नीड़ितमूल आरंभ मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "MathspeakRoots_6": {
+      "expected": "नीड़ितमूलांक 2 नीड़ितमूल आरंभ मूलांक 2 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त"
+    },
+    "MathspeakRoots_7": {
+      "expected": "नीड़ितदुबारामूलांक 2 नीड़ितदुबारामूल आरंभ नीड़ितमूलांक 2 नीड़ितमूल आरंभ मूलांक 2 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "MathspeakRoots_8": {
+      "expected": "नीड़ितमूलांक 3 नीड़ितमूल आरंभ मूलांक 3 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त"
+    },
+    "MathspeakRoots_9": {
+      "expected": "नीड़ितदुबारामूलांक 3 नीड़ितदुबारामूल आरंभ नीड़ितमूलांक 3 नीड़ितमूल आरंभ मूलांक 3 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "MathspeakRoots_10": {
+      "expected": "नीड़ितमूलांक 4 नीड़ितमूल आरंभ मूलांक 4 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त"
+    },
+    "MathspeakRoots_11": {
+      "expected": "नीड़ितदुबारामूलांक 4 नीड़ितदुबारामूल आरंभ नीड़ितमूलांक 4 नीड़ितमूल आरंभ मूलांक 4 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "MathspeakRoots_12": {
+      "expected": "नीड़ितदुबारामूलांक 2 नीड़ितदुबारामूल आरंभ नीड़ितमूलांक 3 नीड़ितमूल आरंभ मूलांक 4 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "MathspeakRoots_13": {
+      "expected": "नीड़ितदुबारामूलांक 4 नीड़ितदुबारामूल आरंभ नीड़ितमूलांक 3 नीड़ितमूल आरंभ मूलांक 2 मूल आरंभ ए मूल समाप्त नीड़ितमूल समाप्त नीड़ितदुबारामूल समाप्त"
+    },
+    "HtmlEntities_0": {
+      "expected": "कम है"
+    },
+    "HtmlEntities_1": {
+      "expected": "अधिक है"
+    },
+    "HtmlEntities_2": {
+      "expected": "एन"
+    },
+    "HtmlEntities_3": {
+      "expected": "एम"
+    },
+    "HtmlEntities_4": {
+      "expected": "एन एम"
+    },
+    "HtmlEntities_5": {
+      "expected": "एन एम"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "द्विपद अथवा आव्यूह आरंभ एन चयन करें के द्विपद अथवा आव्यूह समाप्त"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "द्विपद अथवा आव्यूह आरंभ एन चयन करें के द्विपद अथवा आव्यूह समाप्त"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "द्विपद अथवा आव्यूह आरंभ एन चयन करें के द्विपद अथवा आव्यूह समाप्त"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "कोष्ठ आरंभ आरंभभिन्न एन के हर में के अंतभिन्न कोष्ठ अंत"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "कोष्ठ आरंभ आरंभभिन्न एन के हर में के अंतभिन्न कोष्ठ अंत"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "कोष्ठ आरंभ आरंभभिन्न एन के हर में के अंतभिन्न कोष्ठ अंत"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "एक द्वितीयांश बाकी पाँच अठारहवाँ अंश"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "बाकी आरंभभिन्न 5.2 के हर में ए अंतभिन्न"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "बाकी आरंभभिन्न 5.2 के हर में 18 अंतभिन्न"
+    },
+    "TrivialStuff_0": {
+      "expected": "ए बराबर का चिह्न बी"
+    },
+    "TrivialStuff_1": {
+      "expected": "उद्धरण चिन्ह"
+    },
+    "TrivialStuff_2": {
+      "expected": "उद्धरण चिन्ह एक्स उद्धरण चिन्ह"
+    },
+    "TrivialStuff_3": {
+      "expected": "प्राईम चिह्न"
+    },
+    "GermanFonts_0": {
+      "expected": "फ़्राक्टुर कैपिटल ए"
+    },
+    "GermanFonts_1": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए"
+    },
+    "GermanFonts_2": {
+      "expected": "फ़्राक्टुर कैपिटल ए"
+    },
+    "GermanFonts_3": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए"
+    },
+    "GermanFonts_4": {
+      "expected": "बोल्ड फ़्रेक्टुर abc"
+    },
+    "GermanFonts_5": {
+      "expected": "बोल्ड फ़्रेक्टुर ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए कैपिटल बी कैपिटल सी"
+    },
+    "OtherFonts_0": {
+      "expected": "एम"
+    },
+    "OtherFonts_1": {
+      "expected": "सामान्य एम"
+    },
+    "OtherFonts_2": {
+      "expected": "mi"
+    },
+    "OtherFonts_3": {
+      "expected": "इटैलिक mi"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "इटैलिक 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 अंश चिह्न"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 एम कैपिटल ए"
+    },
+    "Multiline_0": {
+      "expected": "खाका आरंभ १ली पंक्ति  ए २री पंक्ति  बी खाका समाप्त"
+    },
+    "Multiline_1": {
+      "expected": "खाका आरंभ १ली पंक्ति १ली स्तंभ ए २री स्तंभ सी २री पंक्ति १ली स्तंभ बी २री स्तंभ डी खाका समाप्त"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "से कम या बराबर 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "बराबर का चिह्न 2 बराबर का चिह्न"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "से कम या बराबर 2 बराबर का चिह्न"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "खाका आरंभ १ली पंक्ति १ली स्तंभ 1 २री स्तंभ से कम या बराबर 2 खाका समाप्त"
+    },
+    "EncloseGeneral": {
+      "expected": "घेरे का आरंभ वर्तुल ए घेरा समाप्त"
+    },
+    "EncloseLeftbar": {
+      "expected": "ऊर्ध्वाधर दंड ए"
+    },
+    "EncloseRightbar": {
+      "expected": "ए ऊर्ध्वाधर दंड"
+    },
+    "LatinMathfonts_0": {
+      "expected": "फ़्राक्टुर कैपिटल ए"
+    },
+    "LatinMathfonts_1": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए"
+    },
+    "LatinMathfonts_2": {
+      "expected": "बोल्ड स्क्रिप्ट कैपिटल ए"
+    },
+    "LatinMathfonts_3": {
+      "expected": "बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathfonts_4": {
+      "expected": "बोल्ड कैपिटल ए"
+    },
+    "LatinMathfonts_5": {
+      "expected": "डबल-स्ट्रक कैपिटल ए"
+    },
+    "LatinMathfonts_6": {
+      "expected": "कैपिटल ए"
+    },
+    "LatinMathfonts_7": {
+      "expected": "मोनोपेस कैपिटल ए"
+    },
+    "LatinMathfonts_8": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल ए"
+    },
+    "LatinMathfonts_9": {
+      "expected": "सैंस-सेरिफ़ इटैलिक कैपिटल ए"
+    },
+    "LatinMathfonts_10": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathfonts_11": {
+      "expected": "संस-सेरिफ़ कैपिटल ए"
+    },
+    "LatinMathfonts_12": {
+      "expected": "लिपि कैपिटल ए"
+    },
+    "GreekMathfonts_0": {
+      "expected": "बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathfonts_1": {
+      "expected": "कैपिटल आल्फा"
+    },
+    "GreekMathfonts_2": {
+      "expected": "बोल्ड इटैलिक कैपिटल आल्फा"
+    },
+    "GreekMathfonts_3": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathfonts_4": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल आल्फा"
+    },
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 3.1 .10 कोष्ठ अंत लेबल समाप्त खाका समाप्त"
+    },
+    "Issue320_0": {
+      "expected": "आंशिक अवकलन"
+    },
+    "Issue320_1": {
+      "expected": "एक्स क्रमगुणित"
+    },
+    "Issue320_2": {
+      "expected": "बाकी बाकी एक्स"
+    },
+    "Issue320_3": {
+      "expected": "धन चिह्न धन चिह्न एक्स"
+    },
+    "Issue320_4": {
+      "expected": "साइन साइन एक्स"
+    },
+    "Issue320_5": {
+      "expected": "आंशिक अवकलन आंशिक अवकलन एक्स"
+    },
+    "Issue320_6": {
+      "expected": "कोष्ठ आरंभ आरंभभिन्न आंशिक अवकलन वर्ग के हर में आंशिक अवकलन एक्स वर्ग अंतभिन्न धन चिह्न आरंभभिन्न आंशिक अवकलन वर्ग के हर में आंशिक अवकलन वाई वर्ग अंतभिन्न कोष्ठ अंत निरपेक्ष मान आरंभ फाई कोष्ठ आरंभ एक्स धन चिह्न सामान्य आय वाई कोष्ठ अंत निरपेक्ष मान समाप्त वर्ग बराबर का चिह्न 0"
+    },
+    "Prime_0": {
+      "expected": "एक्स प्राइम"
+    },
+    "Prime_1": {
+      "expected": "एक्स डबल प्राइम"
+    },
+    "Prime_2": {
+      "expected": "एक्स तिगुना प्राइम"
+    },
+    "Prime_3": {
+      "expected": "एक्स चौगुना प्राइम"
+    },
+    "Prime_4": {
+      "expected": "एक्स प्राइम"
+    },
+    "Prime_5": {
+      "expected": "एक्स डबल प्राइम"
+    },
+    "Prime_6": {
+      "expected": "एक्स प्राइम"
+    },
+    "Prime_7": {
+      "expected": "एक्स डबल प्राइम"
+    },
+    "Prime_8": {
+      "expected": "एक्स प्राईम चिह्न"
+    },
+    "Prime_9": {
+      "expected": "एक्स डबल प्राइम"
+    },
+    "Prime_10": {
+      "expected": "एक्स तिगुना प्राइम"
+    },
+    "Prime_11": {
+      "expected": "एक्स चौगुना प्राइम"
+    },
+    "Prime_12": {
+      "expected": "एक्स पाँच प्राइम"
+    },
+    "Prime_13": {
+      "expected": "एक्स छः प्राइम"
+    },
+    "Prime_14": {
+      "expected": "एक्स डबल प्राइम"
+    },
+    "Prime_15": {
+      "expected": "एक्स तिगुना प्राइम"
+    },
+    "Prime_16": {
+      "expected": "एक्स चौगुना प्राइम"
+    },
+    "Prime_17": {
+      "expected": "एक्स पाँच प्राइम"
+    },
+    "Prime_18": {
+      "expected": "एक्स छः प्राइम"
+    },
+    "LimBoth_0": {
+      "expected": "ऊपर संशोधित निचे संशोधित योग चिह्न निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त के साथ निम्न रेखा के साथ टिल्ड चिह्न"
+    },
+    "LimBoth_1": {
+      "expected": "ऊपर संशोधित निचे संशोधित योग चिह्न निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त के साथ निम्न रेखा के साथ टिल्ड चिह्न"
+    },
+    "LimBoth_2": {
+      "expected": "ऊपर संशोधित निचे संशोधित योग चिह्न निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त के साथ निम्न रेखा के साथ टिल्ड चिह्न"
+    },
+    "LimBoth_3": {
+      "expected": "योग चिह्न निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त"
+    },
+    "LimBoth_4": {
+      "expected": "योग चिह्न निम्नांक एन उर्ध्व लिपि 2 लिपि समाप्त ए"
+    },
+    "LimUpper_0": {
+      "expected": "योग चिह्न उर्ध्व लिपि एन लिपि समाप्त"
+    },
+    "LimUpper_1": {
+      "expected": "योग चिह्न उर्ध्व लिपि एन लिपि समाप्त ए"
+    },
+    "LimUpper_2": {
+      "expected": "योग चिह्न उर्ध्व लिपि एन लिपि समाप्त"
+    },
+    "LimUpper_3": {
+      "expected": "योग चिह्न उर्ध्व लिपि एन लिपि समाप्त ए"
+    },
+    "LimLower_0": {
+      "expected": "योग चिह्न निम्नांक एन लिपि समाप्त"
+    },
+    "LimLower_1": {
+      "expected": "योग चिह्न निम्नांक एन लिपि समाप्त ए"
+    },
+    "LimLower_2": {
+      "expected": "योग चिह्न निम्नांक एन लिपि समाप्त"
+    },
+    "LimLower_3": {
+      "expected": "योग चिह्न निम्नांक एन लिपि समाप्त ए"
+    },
+    "Issue_442_0": {
+      "expected": "9 divided by 3 बराबर नही है 9 गुणन चिह्न 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 divided by 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 divided by 3 बराबर नही है 9 गुणन चिह्न 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 divided by 3"
+    },
+    "Prime_19": {
+      "expected": "एक्स प्राईम चिह्न डबल प्राइम"
+    },
+    "issue_728_0": {
+      "expected": "ए mol"
+    },
+    "issue_728_1": {
+      "expected": "ए mol 1"
+    },
+    "issue_767_0": {
+      "expected": "कैपिटल ए पादांक एन आधार रेखा सीधी खड़ी रेखा पादांक बीज कैपिटल पी अधो पादांक एन पादांक आधार रेखा"
+    },
+    "issue_767_1": {
+      "expected": "कैपिटल ए पादांक एन आधार रेखा सीधी खड़ी रेखा पादांक ए बी सी कैपिटल पी अधो पादांक एन पादांक आधार रेखा"
+    },
+    "issue_767_2": {
+      "expected": "कैपिटल ए पादांक एन आधार रेखा सीधी खड़ी रेखा पादांक abc कैपिटल पी अधो पादांक एन पादांक आधार रेखा"
+    },
+    "issue_767_3": {
+      "expected": "एस आय एन कोष्ठ आरंभ एक्स कोष्ठ अंत"
+    },
+    "issue_767_4": {
+      "expected": "साइन कोष्ठ आरंभ एक्स कोष्ठ अंत"
+    }
+  }
+}

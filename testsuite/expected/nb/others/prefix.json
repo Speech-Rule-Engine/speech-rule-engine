@@ -1,0 +1,243 @@
+{
+  "name": "BokmalPrefix",
+  "locale": "nb",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Bokmal Prefix rule tests.",
+  "active": "PrefixBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sub_0": {
+      "expected": "Basis"
+    },
+    "Sub_1": {
+      "expected": "Indeks"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Basis"
+    },
+    "Super_1": {
+      "expected": "Eksponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Basis"
+    },
+    "Over_1": {
+      "expected": "Øvre grenseverdi"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Basis"
+    },
+    "Under_1": {
+      "expected": "Nedre grenseverdi"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Teller"
+    },
+    "Fractions_1": {
+      "expected": "Nevner"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikand"
+    },
+    "Root_1": {
+      "expected": "Indeks"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Basis"
+    },
+    "SimpleTensors_1": {
+      "expected": "Venstre subskript"
+    },
+    "SimpleTensors_2": {
+      "expected": "Venstre superskript"
+    },
+    "SimpleTensors_3": {
+      "expected": "Høyre subskript"
+    },
+    "SimpleTensors_4": {
+      "expected": "Høyre superskript"
+    },
+    "ComplexTensors_0": {
+      "expected": "Basis"
+    },
+    "ComplexTensors_1": {
+      "expected": "1. Venstre subskript"
+    },
+    "ComplexTensors_2": {
+      "expected": "2. Venstre subskript"
+    },
+    "ComplexTensors_3": {
+      "expected": "1. Venstre superskript"
+    },
+    "ComplexTensors_4": {
+      "expected": "2. Venstre superskript"
+    },
+    "ComplexTensors_5": {
+      "expected": "1. Høyre subskript"
+    },
+    "ComplexTensors_6": {
+      "expected": "2. Høyre subskript"
+    },
+    "ComplexTensors_7": {
+      "expected": "1. Høyre superskript"
+    },
+    "ComplexTensors_8": {
+      "expected": "2. Høyre superskript"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "Utvalg"
+    },
+    "Binomials_1": {
+      "expected": "Stikkprøvestørrelse"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1. Rad"
+    },
+    "Vectors_1": {
+      "expected": "2. Rad"
+    },
+    "Vectors_2": {
+      "expected": "3. Rad"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1. Rad"
+    },
+    "Matrices_depth_1": {
+      "expected": "1. Rad, 1. Kolonne"
+    },
+    "Matrices_depth_2": {
+      "expected": "1. Rad, 2. Kolonne"
+    },
+    "Matrices_depth_3": {
+      "expected": "2. Rad"
+    },
+    "Matrices_depth_4": {
+      "expected": "2. Rad, 1. Kolonne"
+    },
+    "Matrices_depth_5": {
+      "expected": "2. Rad, 2. Kolonne"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Rad"
+    },
+    "Matrices_1": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_2": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_3": {
+      "expected": "2. Rad"
+    },
+    "Matrices_4": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_5": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Basis"
+    },
+    "LimBoth_1": {
+      "expected": "Øvre grenseverdi"
+    },
+    "LimBoth_2": {
+      "expected": "Nedre grenseverdi"
+    },
+    "LimBoth_3": {
+      "expected": "Basis"
+    },
+    "LimBoth_4": {
+      "expected": "Basis"
+    },
+    "LimUpper_0": {
+      "expected": "Øvre grenseverdi"
+    },
+    "LimUpper_1": {
+      "expected": "Øvre grenseverdi"
+    },
+    "LimUpper_2": {
+      "expected": "Basis"
+    },
+    "LimUpper_3": {
+      "expected": "Basis"
+    },
+    "LimLower_0": {
+      "expected": "Nedre grenseverdi"
+    },
+    "LimLower_1": {
+      "expected": "Nedre grenseverdi"
+    },
+    "LimLower_2": {
+      "expected": "Basis"
+    },
+    "LimLower_3": {
+      "expected": "Basis"
+    }
+  }
+}

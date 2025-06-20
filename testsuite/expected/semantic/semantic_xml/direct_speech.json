@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml direct speech tests.",
+  "base": "input/common/direct_speech.json"
+}

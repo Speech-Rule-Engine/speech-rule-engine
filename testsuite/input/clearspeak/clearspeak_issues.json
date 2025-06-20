@@ -1,0 +1,129 @@
+{
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>"
+    },
+    "Issue230_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>"
+    },
+    "IssueNumbers_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>t2e4</mn></mrow>"
+    },
+    "IssueNumbers_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>#FF0000</mn></mrow>"
+    },
+    "IssueNumbers_3": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>#FFFF</mn></mrow>"
+    },
+    "Issue320_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>∂</mo>"
+    },
+    "Issue320_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mi>x</mi><mo>!</mo>"
+    },
+    "Issue320_3": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>-</mo><mo>-</mo><mi>x</mi>"
+    },
+    "Issue320_4": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>+</mo><mo>+</mo><mi>x</mi>"
+    },
+    "Issue320_5": {
+      "test": true,
+      "preference": "default",
+      "input": "<mi>sin</mi><mi>sin</mi><mi>x</mi>"
+    },
+    "Issue320_6": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>∂</mo><mo>∂</mo><mi>x</mi>"
+    },
+    "Issue320_7": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow><msup><mrow><mo minsize=\"150%\">|</mo><mi>φ</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi mathvariant=\"normal\">i</mi><mi>y</mi><mo stretchy=\"false\">)</mo><mo minsize=\"150%\">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow>"
+    },
+    "Issue301_1": {
+      "preference": "default",
+      "input": "<mn>4</mn><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "Issue301_2": {
+      "preference": "default",
+      "input": "<mn>1</mn><mo>&InvisibleTimes;</mo><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "Issue301_3": {
+      "preference": "default",
+      "input": "<mn>4</mn><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "Issue301_4": {
+      "preference": "default",
+      "input": "<mn>1</mn><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "Issue_442_0": {
+      "preference": "default",
+      "input": "<mn>9</mn><mo>&divide;</mo><mn>3</mn><mo>&ne;</mo><mn>9</mn><mo>&times;</mo><mn>3</mn>"
+    },
+    "Issue_442_1": {
+      "preference": "default",
+      "input": "<mn>9</mn><mo>&divide;</mo><mn>3</mn>"
+    },
+    "Issue_442_2": {
+      "preference": "default",
+      "input": "<mn>9</mn><mo>/</mo><mn>3</mn><mo>&ne;</mo><mn>9</mn><mo>&times;</mo><mn>3</mn>"
+    },
+    "Issue_442_3": {
+      "preference": "default",
+      "input": "<mn>9</mn><mo>/</mo><mn>3</mn>"
+    },
+    "Integral_Issue_0": {
+      "preference": "default",
+      "input": "<math><mrow><mstyle><mrow><mo>∫</mo><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mtext></mtext></mrow></mrow></mstyle><mi>d</mi><mi>x</mi></mrow></math>"
+    },
+    "Integral_Issue_1": {
+      "preference": "default",
+      "input": "<math><mo>∫</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi></math>"
+    },
+    "Integral_Issue_2": {
+      "preference": "default",
+      "input": "<math><mo>∫</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mn>8</mn></math>"
+    },
+    "Issue_689_0": {
+      "preference": "default",
+      "input": "<math><mtable><mtr><mtd><mtable><mtr><mtd><mn>100</mn></mtd></mtr><mtr><mtd><mn>200</mn></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mtable><mtr><mtd><mn>300</mn></mtd></mtr><mtr><mtd><mn>400</mn></mtd></mtr></mtable></mtd></mtr></mtable></math>"
+    },
+    "Issue_689_1": {
+      "preference": "default",
+      "input": "<math><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"center center\" frame=\"\" framespacing=\".5em .125em\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mtable columnspacing=\"1em\" rowspacing=\"4pt\" columnalign=\"center center\" frame=\"\" framespacing=\".5em .125em\"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>3</mn></msub></mtd><mtd><msub><mi>c</mi><mn>4</mn></msub></mtd></mtr></mtable></mtd><mtd><mi>d</mi></mtd></mtr></mtable></math>"
+    },
+    "Issue_689_2": {
+      "preference": "default",
+      "input": "<math><mrow><mo>{</mo><mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\"><mtr><mtd><mrow><mo>{</mo><mtable columnspacing=\"1em\" rowspacing=\".2em\" columnalign=\"left left\"><mtr><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable><mo fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo></mrow></mtd></mtr><mtr><mtd><mi>d</mi></mtd></mtr></mtable><mo fence=\"true\" stretchy=\"true\" symmetric=\"true\"></mo></mrow></math>"
+    },
+    "Issue_689_3": {
+      "preference": "Matrix_EndMatrix",
+      "input": "<math><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>3</mn></msub></mtd><mtd><msub><mi>c</mi><mn>4</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow></math>"
+    },
+    "Issue_689_4": {
+      "preference": "Matrix_EndMatrix",
+      "input": "<math><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mrow><mo>(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>3</mn></msub><mo>+</mo><mi>a</mi><mo>+</mo><mi>b</mi></mtd><mtd><msub><mi>c</mi><mn>4</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow></math>"
+    }
+  }
+}

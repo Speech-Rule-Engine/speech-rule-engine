@@ -1,0 +1,65 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakSetsEnclosedInSetBrackets",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Afrikaans Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "expected": "die versameling van alle x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set002": {
+      "expected": "die versameling van alle x sodat, die absolute waarde van x, groter as 2"
+    },
+    "Set003": {
+      "expected": "die versameling van alle x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set004": {
+      "expected": "die versameling van alle x in die natuurlike getalle sodat x is an even number"
+    },
+    "Set005": {
+      "expected": "die versameling 1 komma 2 komma 3"
+    },
+    "Set006": {
+      "expected": "die versameling 1 komma 112 komma 1 komma 253"
+    },
+    "Set007": {
+      "expected": "die versameling van x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set008": {
+      "expected": "die versameling van x sodat, die absolute waarde van x, groter as 2"
+    },
+    "Set009": {
+      "expected": "die versameling van x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set010": {
+      "expected": "die versameling 1 komma 2 komma 3"
+    },
+    "Set011": {
+      "expected": "die versameling 1 komma 112 komma 1 komma 253"
+    },
+    "Set012": {
+      "expected": "die versameling van alle x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set013": {
+      "expected": "die versameling van alle x sodat, die absolute waarde van x, groter as 2"
+    },
+    "Set014": {
+      "expected": "die versameling van alle x in die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "Set015": {
+      "expected": "die versameling van alle x in die natuurlike getalle sodat x is an even number"
+    },
+    "Set016": {
+      "expected": "1 komma 2 komma 3"
+    },
+    "Set017": {
+      "expected": "1 komma 112 komma 1 komma 253"
+    }
+  }
+}

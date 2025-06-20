@@ -1,0 +1,984 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "_comment1_": "Systematic testing of tensor rules.",
+    "_comment2_": " Tensor tests are named with the convention of including the indices that are",
+    "_comment3_": " present:",
+    "_comment4_": "   B      D",
+    "_comment5_": "      X      R",
+    "_comment6_": "   A      C",
+    "_comment7_": "  Where R is the rest.",
+    "_comment8_": "  Wrapping is indicated before R (without baseline) or after R (with baseline).",
+    "PartialTensorABCD_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorABCD_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorABCD_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABC_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorABC_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorABC_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABD_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorABD_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorABD_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABDR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABDR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABDR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABDRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABDRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABDRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABDFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABDFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABDRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorAB_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorAB_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorAB_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorABRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorABRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCR_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABCR_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABCR_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDR_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABCDR_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDRoot_default": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDRootR_default": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "test": true,
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDFrac_default": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDFracR_default": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+
+    "_comment11_": "New completion",
+    "PartialTensorB_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorB_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorB_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorBRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorBRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBD_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorBD_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorBD_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBDR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBDR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBDR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBDRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBDRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBDRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBDFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBDFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBDRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBC_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorBC_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorBC_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCR_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCD_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorBCD_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorBCD_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCDR_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCDR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCDRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCDFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><none/><mi>b</mi></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorA_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorA_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorA_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorAR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorAR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorAR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorARootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorARootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorARootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorARRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorARRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorAFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorAFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorARFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorARFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorAD_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorAD_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorAD_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorADR_default": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorADR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorADR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorADRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorADRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorADRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorADRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorADFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorADFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorADRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorADRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><none/><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorAC_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorAC_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorAC_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACR_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorACRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorACRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><none/><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACD_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "default"
+    },
+    "PartialTensorACD_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "brief"
+    },
+    "PartialTensorACD_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACDR_default": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACDR_brief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACDR_sbrief": {
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACDRootR_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACDRootR_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></msqrt><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACDRRoot_default": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "default"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "brief"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "input": "<msqrt><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></msqrt>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACDFracR_default": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "default"
+    },
+    "PartialTensorACDFracR_brief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "brief"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "input": "<mfrac><mn>1</mn><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts></mfrac><mi>r</mi>",
+      "preference": "sbrief"
+    },
+    "PartialTensorACDRFrac_default": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "default"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "input": "<mfrac><mn>1</mn><mrow><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><none/></mmultiscripts><mi>r</mi></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+
+    
+    "_comment10_": "Rest",
+    "TensorMultiSimpleABC_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "TensorMultiSub_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TensorMultiSub_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TensorMultiSub_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><mi>l</mi></msub><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "TensorMultiSubSup_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TensorMultiSubSup_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "TensorMultiSimple_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TensorMultiSimple_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TensorMultiSimple_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><msup><mi>c</mi><mi>l</mi></msup><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "TensorMultiComplex_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TensorMultiComplex_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TensorMultiComplex_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mrow><mi>c</mi><msup><mi>k</mi><mi>l</mi></msup></mrow><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    },
+    "TwoTensors_default": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "default"
+    },
+    "TwoTensors_brief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "brief"
+    },
+    "TwoTensors_sbrief": {
+      "test": true,
+      "input": "<mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts><mmultiscripts><mi>x</mi><mi>c</mi><mi>d</mi><mprescripts/><mi>a</mi><mi>b</mi></mmultiscripts>",
+      "preference": "sbrief"
+    }
+  }
+}

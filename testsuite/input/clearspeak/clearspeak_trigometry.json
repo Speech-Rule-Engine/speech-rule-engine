@@ -1,0 +1,972 @@
+{
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mi>x</mi></mrow></math>"
+    },
+    "Trig002": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mi>x</mi></mrow></math>"
+    },
+    "Trig003": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mi>θ</mi></mrow></math>"
+    },
+    "Trig004": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sec</mi><mi>θ</mi></mrow></math>"
+    },
+    "Trig005": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>csc</mi><mi>x</mi></mrow></math>"
+    },
+    "Trig006": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cot</mi><mi>x</mi></mrow></math>"
+    },
+    "Trig007": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig008": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mn>3</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig009": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig010": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mn>3</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig011": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig012": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig013": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mn>2</mn><mi>π</mi></mrow></math>"
+    },
+    "Trig014": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>π</mi><mi>k</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig015": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Trig016": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Trig017": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>π</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Trig018": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mfrac><mn>2</mn><mrow><mi>sin</mi><mi>π</mi></mrow></mfrac></mrow></math>"
+    },
+    "Trig019": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mfrac><mrow><mi>sin</mi><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac></mrow></math>"
+    },
+    "Trig020": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig021": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>π</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig022": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig023": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>+</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig024": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mrow><mi>cos</mi></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math>"
+    },
+    "Trig025": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mn>4</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig026": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mn>5</mn></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig027": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mi>n</mi></msup><mi>x</mi></mrow></math>"
+    },
+    "Trig028": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mfrac><mrow><mi>sin</mi><mi>x</mi></mrow><mrow><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></math>"
+    },
+    "Trig029": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mn>35</mn><mo>°</mo></mrow></math>"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "test": false,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mn>45</mn><mo>°</mo><mo>+</mo><mn>30</mn><mo>°</mo></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig031": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo><mi>D</mi><mi>E</mi><mi>F</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig032": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mo>∠</mo><mi>D</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Trig033": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>sin</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>+</mo><mi>cos</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
+    },
+    "Trig034": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>cos</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>−</mo><mi>sin</mi><mi>x</mi><mi>sin</mi><mi>y</mi></mrow></math>"
+    },
+    "Trig035": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mrow><mi>tan</mi><mi>x</mi><mo>−</mo><mi>tan</mi><mi>y</mi></mrow><mrow><mn>1</mn><mo>−</mo><mi>tan</mi><mi>x</mi><mi>tan</mi><mi>y</mi></mrow></mfrac></mrow></math>"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "test": false,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mn>30</mn><mo>°</mo><mi>cos</mi><mn>15</mn><mo>°</mo><mo>+</mo><mi>cos</mi><mn>30</mn><mo>°</mo><mi>sin</mi><mn>15</mn><mo>°</mo></mrow></math>"
+    },
+    "Trig037": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>tan</mi><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>−</mo><mi>tan</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow><mrow><mn>1</mn><mo>−</mo><mi>tan</mi><mfrac><mi>π</mi><mn>6</mn></mfrac><mi>tan</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mn>3</mn></mfrac></mrow></mfrac></mrow></math>"
+    },
+    "Trig038": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mn>2</mn><mi>x</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>tan</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac></mrow></math>"
+    },
+    "Trig039": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mn>2</mn><mi>x</mi><mo>=</mo><mn>2</mn><msup><mrow><mi>cos</mi></mrow><mn>2</mn></msup><mi>x</mi><mo>−</mo><mn>1</mn></mrow></math>"
+    },
+    "Trig040": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mn>2</mn></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Trig041": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tan</mi><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>=</mo><mo>±</mo><msqrt><mrow><mfrac><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>cos</mi><mi>x</mi></mrow></mfrac></mrow></msqrt></mrow></math>"
+    },
+    "Trig042": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mi>x</mi><mi>cos</mi><mi>y</mi><mo>=</mo><mn>2</mn><mi>cos</mi><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mi>cos</mi><mfrac><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "Trig043": {
+      "test": true,
+      "preference": "Trig_Auto:Roots_RootEnd",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>8</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>2</mn></msqrt></mrow></msqrt></mrow></math>"
+    },
+    "Trig044": {
+      "test": true,
+      "preference": "Trig_Auto:Roots_RootEnd",
+      "input": "<math><mrow><mi>tan</mi><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>8</mn></mfrac><mo>=</mo><mfrac><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mrow><msqrt><mrow><msqrt><mn>2</mn></msqrt><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></math>"
+    },
+    "Trig045": {
+      "test": true,
+      "preference": "Trig_Auto:Roots_RootEnd",
+      "input": "<math><mrow><mi>tan</mi><mfrac><mi>π</mi><mrow><mn>12</mn></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><mn>2</mn><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow></msqrt></mrow></math>"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto002": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto003": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto004": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto005": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto006": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInvAuto007": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigInvAuto008": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigInvAuto009": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>"
+    },
+    "TrigInvAuto010": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>"
+    },
+    "TrigInvAuto011": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>"
+    },
+    "TrigInvAuto012": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>"
+    },
+    "TrigInvAuto013": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto014": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto015": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto016": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto017": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto018": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto019": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto020": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto021": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto022": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto023": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto024": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto025": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInvAuto026": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "_comment6_": " New: Reciprocal. Not in English",
+    "TrigReciprocal001": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal002": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal003": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal004": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal005": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal006": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigReciprocal007": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigReciprocal008": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigReciprocal009": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>"
+    },
+    "TrigReciprocal010": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>"
+    },
+    "TrigReciprocal011": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>"
+    },
+    "TrigReciprocal012": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>"
+    },
+    "TrigReciprocal013": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal014": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal015": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal016": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal017": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal018": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal019": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal020": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal021": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal022": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal023": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal024": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal025": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigReciprocal026": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse001": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse002": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse003": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse004": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse005": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse006": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "TrigInverse007": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigInverse008": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "TrigInverse009": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>"
+    },
+    "TrigInverse010": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>"
+    },
+    "TrigInverse011": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>"
+    },
+    "TrigInverse012": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>"
+    },
+    "TrigInverse013": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse014": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse015": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse016": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse017": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse018": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse019": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse020": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse021": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse022": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse023": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse024": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse025": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "TrigInverse026": {
+      "test": true,
+      "preference": "Trig_TrigInverse",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig001": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig002": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig003": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig004": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig005": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig006": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "ArcTrig007": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math>"
+    },
+    "ArcTrig008": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math>"
+    },
+    "ArcTrig009": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>17</mn></mrow></math>"
+    },
+    "ArcTrig010": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>32</mn></mrow></math>"
+    },
+    "ArcTrig011": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>100</mn></mrow></math>"
+    },
+    "ArcTrig012": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>85</mn></mrow></math>"
+    },
+    "ArcTrig013": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig014": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig015": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>+</mo><mn>12</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig016": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>cot</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mi>x</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig017": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sin</mi><mn>0</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig018": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>csc</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>csc</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig019": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig020": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>cos</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mfrac><mrow><msqrt><mn>2</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig021": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sin</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cos</mi><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig022": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cos</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig023": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig024": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mn>1</mn></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig025": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mo>−</mo><msup><mrow><mi>tan</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "ArcTrig026": {
+      "test": true,
+      "preference": "Trig_ArcTrig",
+      "input": "<math><mrow><msup><mrow><mi>sec</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sec</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "AllTrig01": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>arcsin</mi><mi>x</mi></mrow></math>"
+    },
+    "AllTrig02": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>arccos</mi><mi>x</mi></mrow></math>"
+    },
+    "AllTrig03": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>arctan</mi><mi>x</mi></mrow></math>"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig002": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig003": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig004": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig005": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig006": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrig007": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig008": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig009": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig010": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig011": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig012": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrig013": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig014": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig015": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig016": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig017": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig018": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig019": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrig020": {
+      "test": true,
+      "preference": "Trig_Auto",
+      "input": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "_comment8_": "New: Reciprocal. Not in English",
+    "HypTrigReciprocal001": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sinh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal002": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>cosh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal003": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>tanh</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal004": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>coth</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal005": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sech</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal006": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>csch</mi><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal007": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal008": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal009": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal010": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal011": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sech</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal012": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>csch</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow></math>"
+    },
+    "HypTrigReciprocal013": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>sinh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal014": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>cosh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal015": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>tanh</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal016": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><mi>coth</mi><mrow><mo>(</mo><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal017": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>sinh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>sinh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal018": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>cosh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>cosh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal019": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>tanh</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>tanh</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "HypTrigReciprocal020": {
+      "test": true,
+      "preference": "Trig_Reciprocal",
+      "input": "<math><mrow><msup><mrow><mi>coth</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mrow><mi>coth</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
+    }
+  }
+}

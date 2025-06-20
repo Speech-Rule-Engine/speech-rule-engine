@@ -1,0 +1,159 @@
+{
+  "name": "AfrikaansClearspeakCoverageElements",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_elements.json",
+  "information": "Afrikaans Clearspeak Coverage for Elements symbol tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "In_set_0": {
+      "expected": "die versameling van alle z in A sodat z"
+    },
+    "In_set_1": {
+      "expected": "die versameling van alle z in A sodat z"
+    },
+    "In_set_2": {
+      "expected": "die versameling van alle z nie in A sodat z"
+    },
+    "In_set_3": {
+      "expected": "die versameling van alle A bevat as lid z sodat z"
+    },
+    "In_set_4": {
+      "expected": "die versameling van alle A bevat as lid z sodat z"
+    },
+    "In_set_5": {
+      "expected": "die versameling van alle A bevat nie as lid z sodat z"
+    },
+    "Free_standing_0": {
+      "expected": "z is 'n element van A"
+    },
+    "Free_standing_1": {
+      "expected": "z is 'n element van A"
+    },
+    "Free_standing_2": {
+      "expected": "z is nie 'n element van nie A"
+    },
+    "Free_standing_3": {
+      "expected": "A bevat as lid z"
+    },
+    "Free_standing_4": {
+      "expected": "A bevat as lid z"
+    },
+    "Free_standing_5": {
+      "expected": "A bevat nie as lid z"
+    },
+    "Under_bigop_0": {
+      "expected": "som oor z is 'n element van A"
+    },
+    "Under_bigop_1": {
+      "expected": "som oor z is 'n element van A"
+    },
+    "Under_bigop_2": {
+      "expected": "som oor z is nie 'n element van nie A"
+    },
+    "Under_bigop_3": {
+      "expected": "som oor A bevat as lid z"
+    },
+    "Under_bigop_4": {
+      "expected": "som oor A bevat as lid z"
+    },
+    "Under_bigop_5": {
+      "expected": "som oor A bevat nie as lid z"
+    },
+    "Preferences_in_0": {
+      "expected": "z is 'n element van A"
+    },
+    "Preferences_in_1": {
+      "expected": "die versameling van alle z in A sodat z"
+    },
+    "Preferences_in_2": {
+      "expected": "som oor z is 'n element van A"
+    },
+    "Preferences_in_3": {
+      "expected": "z is 'n element van A"
+    },
+    "Preferences_in_4": {
+      "expected": "die versameling van alle z element van A sodat z"
+    },
+    "Preferences_in_5": {
+      "expected": "som oor z is 'n element van A"
+    },
+    "Preferences_in_6": {
+      "expected": "z is 'n element van A"
+    },
+    "Preferences_in_7": {
+      "expected": "die versameling van alle z element van A sodat z"
+    },
+    "Preferences_in_8": {
+      "expected": "som oor z is 'n element van A"
+    },
+    "Preferences_in_9": {
+      "expected": "z is in A"
+    },
+    "Preferences_in_10": {
+      "expected": "die versameling van alle z in A sodat z"
+    },
+    "Preferences_in_11": {
+      "expected": "som oor z is in A"
+    },
+    "Preferences_in_12": {
+      "expected": "z behoord aan A"
+    },
+    "Preferences_in_13": {
+      "expected": "die versameling van alle z behoord aan A sodat z"
+    },
+    "Preferences_in_14": {
+      "expected": "som oor z behoord aan A"
+    },
+    "Preferences_not_in_0": {
+      "expected": "z is nie 'n element van nie A"
+    },
+    "Preferences_not_in_1": {
+      "expected": "die versameling van alle z nie in A sodat z"
+    },
+    "Preferences_not_in_2": {
+      "expected": "som oor z is nie 'n element van nie A"
+    },
+    "Preferences_not_in_3": {
+      "expected": "z is nie 'n element vanf A"
+    },
+    "Preferences_not_in_4": {
+      "expected": "die versameling van alle z nie 'n element van A sodat z"
+    },
+    "Preferences_not_in_5": {
+      "expected": "som oor z is nie 'n element vanf A"
+    },
+    "Preferences_not_in_6": {
+      "expected": "z is nie 'n element van A"
+    },
+    "Preferences_not_in_7": {
+      "expected": "die versameling van alle z nie 'n element van A sodat z"
+    },
+    "Preferences_not_in_8": {
+      "expected": "som oor z is nie 'n element van A"
+    },
+    "Preferences_not_in_9": {
+      "expected": "z is nie in A"
+    },
+    "Preferences_not_in_10": {
+      "expected": "die versameling van alle z nie in A sodat z"
+    },
+    "Preferences_not_in_11": {
+      "expected": "som oor z is nie in A"
+    },
+    "Preferences_not_in_12": {
+      "expected": "z behoord nie aan A"
+    },
+    "Preferences_not_in_13": {
+      "expected": "die versameling van alle z behoordnie aan A sodat z"
+    },
+    "Preferences_not_in_14": {
+      "expected": "som oor z behoord nie aan A"
+    },
+    "Complex": {
+      "expected": "die versameling van alle a behoord aan, hoofletter A sodat, die breuk met teller 1, en noemer a, end breuk"
+    }
+  }
+}

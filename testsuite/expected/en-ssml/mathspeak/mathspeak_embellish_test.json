@@ -1,0 +1,522 @@
+{
+  "name": "EnglishMathspeakEmbellish",
+  "factory": "speechMarkup",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "English Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "en",
+  "active": "EmbellishedSymbolsEnglish",
+  "exclude": [],
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Subscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Superscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Superscript 3 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 3 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus <mark name=\"9\"/> prime <mark name=\"8\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"11\" kind=\"LAST\"/> Baseline <mark name=\"12\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus <mark name=\"9\"/> prime <mark name=\"8\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"7\"/> plus <mark name=\"9\"/> prime <mark name=\"8\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"11\" kind=\"LAST\"/> Base <mark name=\"12\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Superscript <mark name=\"3\"/> 3 <mark name=\"1\"/> Baseline plus <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base plus <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base plus <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"1\"/> Baseline plus <mark name=\"3\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base plus <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base plus <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Baseline plus <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base plus <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base plus <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Superscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Superscript 3 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 3 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"3\"/> prime <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Superscript <mark name=\"3\"/> 3 <mark name=\"1\"/> Baseline equals <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base equals <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base equals <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"1\"/> Baseline equals <mark name=\"3\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base equals <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base equals <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Baseline equals <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base equals <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base equals <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Subscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> equals <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> equals <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> equals <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> equals <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Superscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Superscript 3 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup 3 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> prime <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 3 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 3 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"3\"/> prime <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"3\"/> prime <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Superscript 2 <mark name=\"5\" kind=\"LAST\"/> Baseline <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"3\"/> Sup 2 <mark name=\"5\" kind=\"LAST\"/> Base <mark name=\"6\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Superscript <mark name=\"3\"/> 3 <mark name=\"1\"/> Baseline colon <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base colon <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sup <mark name=\"3\"/> 3 <mark name=\"1\"/> Base colon <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"1\"/> Baseline colon <mark name=\"3\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base colon <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"1\"/> Base colon <mark name=\"3\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"4\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Subscript <mark name=\"2\"/> 3 <mark name=\"3\"/> Superscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Baseline colon <mark name=\"4\"/> Subscript <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Superscript 2 <mark name=\"6\" kind=\"LAST\"/> Baseline <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base colon <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"6\"/> Sub <mark name=\"2\"/> 3 <mark name=\"3\"/> Sup <say-as interpret-as=\"character\">n</say-as> <mark name=\"1\"/> Base colon <mark name=\"4\"/> Sub <say-as interpret-as=\"character\">m</say-as> <mark name=\"5\"/> Sup 2 <mark name=\"6\" kind=\"LAST\"/> Base <mark name=\"7\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Subscript 2 <mark name=\"3\" kind=\"LAST\"/> Baseline <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> colon <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> colon <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> colon <mark name=\"2\"/> Sub 2 <mark name=\"3\" kind=\"LAST\"/> Base <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"5\"/> colon <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_0_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsElement_0_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsElement_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_0_default": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsAnnotation_0_brief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> something </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    }
+  }
+}

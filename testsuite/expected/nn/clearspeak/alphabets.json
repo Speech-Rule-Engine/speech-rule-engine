@@ -1,0 +1,4677 @@
+{
+  "locale": "nn",
+  "factory": "speech",
+  "name": "NynorskClearspeakAlphabets",
+  "active": "AlphabetsNynorsk",
+  "information": "Nynorsk Clearspeak Alphabet speech tests.",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "base": "input/common/alphabets.json",
+  "tests": {
+    "0": {
+      "expected": "0"
+    },
+    "1": {
+      "expected": "1"
+    },
+    "2": {
+      "expected": "2"
+    },
+    "3": {
+      "expected": "3"
+    },
+    "4": {
+      "expected": "4"
+    },
+    "5": {
+      "expected": "5"
+    },
+    "6": {
+      "expected": "6"
+    },
+    "7": {
+      "expected": "7"
+    },
+    "8": {
+      "expected": "8"
+    },
+    "9": {
+      "expected": "9"
+    },
+    "𝐀": {
+      "expected": "feit A"
+    },
+    "𝐁": {
+      "expected": "feit B"
+    },
+    "𝐂": {
+      "expected": "feit C"
+    },
+    "𝐃": {
+      "expected": "feit D"
+    },
+    "𝐄": {
+      "expected": "feit E"
+    },
+    "𝐅": {
+      "expected": "feit F"
+    },
+    "𝐆": {
+      "expected": "feit G"
+    },
+    "𝐇": {
+      "expected": "feit H"
+    },
+    "𝐈": {
+      "expected": "feit I"
+    },
+    "𝐉": {
+      "expected": "feit J"
+    },
+    "𝐊": {
+      "expected": "feit K"
+    },
+    "𝐋": {
+      "expected": "feit L"
+    },
+    "𝐌": {
+      "expected": "feit M"
+    },
+    "𝐍": {
+      "expected": "feit N"
+    },
+    "𝐎": {
+      "expected": "feit O"
+    },
+    "𝐏": {
+      "expected": "feit P"
+    },
+    "𝐐": {
+      "expected": "feit Q"
+    },
+    "𝐑": {
+      "expected": "feit R"
+    },
+    "𝐒": {
+      "expected": "feit S"
+    },
+    "𝐓": {
+      "expected": "feit T"
+    },
+    "𝐔": {
+      "expected": "feit U"
+    },
+    "𝐕": {
+      "expected": "feit V"
+    },
+    "𝐖": {
+      "expected": "feit W"
+    },
+    "𝐗": {
+      "expected": "feit X"
+    },
+    "𝐘": {
+      "expected": "feit Y"
+    },
+    "𝐙": {
+      "expected": "feit Z"
+    },
+    "𝐚": {
+      "expected": "feit a"
+    },
+    "𝐛": {
+      "expected": "feit b"
+    },
+    "𝐜": {
+      "expected": "feit c"
+    },
+    "𝐝": {
+      "expected": "feit d"
+    },
+    "𝐞": {
+      "expected": "feit e"
+    },
+    "𝐟": {
+      "expected": "feit f"
+    },
+    "𝐠": {
+      "expected": "feit g"
+    },
+    "𝐡": {
+      "expected": "feit h"
+    },
+    "𝐢": {
+      "expected": "feit i"
+    },
+    "𝐣": {
+      "expected": "feit j"
+    },
+    "𝐤": {
+      "expected": "feit k"
+    },
+    "𝐥": {
+      "expected": "feit l"
+    },
+    "𝐦": {
+      "expected": "feit m"
+    },
+    "𝐧": {
+      "expected": "feit n"
+    },
+    "𝐨": {
+      "expected": "feit o"
+    },
+    "𝐩": {
+      "expected": "feit p"
+    },
+    "𝐪": {
+      "expected": "feit q"
+    },
+    "𝐫": {
+      "expected": "feit r"
+    },
+    "𝐬": {
+      "expected": "feit s"
+    },
+    "𝐭": {
+      "expected": "feit t"
+    },
+    "𝐮": {
+      "expected": "feit u"
+    },
+    "𝐯": {
+      "expected": "feit v"
+    },
+    "𝐰": {
+      "expected": "feit w"
+    },
+    "𝐱": {
+      "expected": "feit x"
+    },
+    "𝐲": {
+      "expected": "feit y"
+    },
+    "𝐳": {
+      "expected": "feit z"
+    },
+    "𝚨": {
+      "expected": "feit Alfa"
+    },
+    "𝚩": {
+      "expected": "feit Beta"
+    },
+    "𝚪": {
+      "expected": "feit Gamma"
+    },
+    "𝚫": {
+      "expected": "feit Delta"
+    },
+    "𝚬": {
+      "expected": "feit Epsilon"
+    },
+    "𝚭": {
+      "expected": "feit Zeta"
+    },
+    "𝚮": {
+      "expected": "feit Eta"
+    },
+    "𝚯": {
+      "expected": "feit Theta"
+    },
+    "𝚰": {
+      "expected": "feit Iota"
+    },
+    "𝚱": {
+      "expected": "feit Kappa"
+    },
+    "𝚲": {
+      "expected": "feit Lambda"
+    },
+    "𝚳": {
+      "expected": "feit My"
+    },
+    "𝚴": {
+      "expected": "feit Ny"
+    },
+    "𝚵": {
+      "expected": "feit Ksi"
+    },
+    "𝚶": {
+      "expected": "feit Omikron"
+    },
+    "𝚷": {
+      "expected": "feit Pi"
+    },
+    "𝚸": {
+      "expected": "feit Rho"
+    },
+    "𝚹": {
+      "expected": "feit Sluttsigma"
+    },
+    "𝚺": {
+      "expected": "feit Sigma"
+    },
+    "𝚻": {
+      "expected": "feit Tau"
+    },
+    "𝚼": {
+      "expected": "feit Ypsilon"
+    },
+    "𝚽": {
+      "expected": "feit Pi"
+    },
+    "𝚾": {
+      "expected": "feit Khi"
+    },
+    "𝚿": {
+      "expected": "feit Psi"
+    },
+    "𝛀": {
+      "expected": "feit Omega"
+    },
+    "𝛁": {
+      "expected": "feit nabla"
+    },
+    "𝛂": {
+      "expected": "feit alfa"
+    },
+    "𝛃": {
+      "expected": "feit beta"
+    },
+    "𝛄": {
+      "expected": "feit gamma"
+    },
+    "𝛅": {
+      "expected": "feit delta"
+    },
+    "𝛆": {
+      "expected": "feit epsilon"
+    },
+    "𝛇": {
+      "expected": "feit zeta"
+    },
+    "𝛈": {
+      "expected": "feit eta"
+    },
+    "𝛉": {
+      "expected": "feit theta"
+    },
+    "𝛊": {
+      "expected": "feit iota"
+    },
+    "𝛋": {
+      "expected": "feit kappa"
+    },
+    "𝛌": {
+      "expected": "feit lambda"
+    },
+    "𝛍": {
+      "expected": "feit my"
+    },
+    "𝛎": {
+      "expected": "feit ny"
+    },
+    "𝛏": {
+      "expected": "feit ksi"
+    },
+    "𝛐": {
+      "expected": "feit omikron"
+    },
+    "𝛑": {
+      "expected": "feit pi"
+    },
+    "𝛒": {
+      "expected": "feit rho"
+    },
+    "𝛓": {
+      "expected": "feit sluttsigma"
+    },
+    "𝛔": {
+      "expected": "feit sigma"
+    },
+    "𝛕": {
+      "expected": "feit tau"
+    },
+    "𝛖": {
+      "expected": "feit ypsilon"
+    },
+    "𝛗": {
+      "expected": "feit pi"
+    },
+    "𝛘": {
+      "expected": "feit khi"
+    },
+    "𝛙": {
+      "expected": "feit psi"
+    },
+    "𝛚": {
+      "expected": "feit omega"
+    },
+    "𝛛": {
+      "expected": "feit partiellderivert"
+    },
+    "𝛜": {
+      "expected": "feit epsilon"
+    },
+    "𝛝": {
+      "expected": "feit theta"
+    },
+    "𝛞": {
+      "expected": "feit kappa"
+    },
+    "𝛟": {
+      "expected": "feit pi"
+    },
+    "𝛠": {
+      "expected": "feit rho"
+    },
+    "𝛡": {
+      "expected": "feit pi"
+    },
+    "𝟎": {
+      "expected": "feit 0"
+    },
+    "𝟏": {
+      "expected": "feit 1"
+    },
+    "𝟐": {
+      "expected": "feit 2"
+    },
+    "𝟑": {
+      "expected": "feit 3"
+    },
+    "𝟒": {
+      "expected": "feit 4"
+    },
+    "𝟓": {
+      "expected": "feit 5"
+    },
+    "𝟔": {
+      "expected": "feit 6"
+    },
+    "𝟕": {
+      "expected": "feit 7"
+    },
+    "𝟖": {
+      "expected": "feit 8"
+    },
+    "𝟗": {
+      "expected": "feit 9"
+    },
+    "𝕬": {
+      "expected": "feit gotisk A"
+    },
+    "𝕭": {
+      "expected": "feit gotisk B"
+    },
+    "𝕮": {
+      "expected": "feit gotisk C"
+    },
+    "𝕯": {
+      "expected": "feit gotisk D"
+    },
+    "𝕰": {
+      "expected": "feit gotisk E"
+    },
+    "𝕱": {
+      "expected": "feit gotisk F"
+    },
+    "𝕲": {
+      "expected": "feit gotisk G"
+    },
+    "𝕳": {
+      "expected": "feit gotisk H"
+    },
+    "𝕴": {
+      "expected": "feit gotisk I"
+    },
+    "𝕵": {
+      "expected": "feit gotisk J"
+    },
+    "𝕶": {
+      "expected": "feit gotisk K"
+    },
+    "𝕷": {
+      "expected": "feit gotisk L"
+    },
+    "𝕸": {
+      "expected": "feit gotisk M"
+    },
+    "𝕹": {
+      "expected": "feit gotisk N"
+    },
+    "𝕺": {
+      "expected": "feit gotisk O"
+    },
+    "𝕻": {
+      "expected": "feit gotisk P"
+    },
+    "𝕼": {
+      "expected": "feit gotisk Q"
+    },
+    "𝕽": {
+      "expected": "feit gotisk R"
+    },
+    "𝕾": {
+      "expected": "feit gotisk S"
+    },
+    "𝕿": {
+      "expected": "feit gotisk T"
+    },
+    "𝖀": {
+      "expected": "feit gotisk U"
+    },
+    "𝖁": {
+      "expected": "feit gotisk V"
+    },
+    "𝖂": {
+      "expected": "feit gotisk W"
+    },
+    "𝖃": {
+      "expected": "feit gotisk X"
+    },
+    "𝖄": {
+      "expected": "feit gotisk Y"
+    },
+    "𝖅": {
+      "expected": "feit gotisk Z"
+    },
+    "𝖆": {
+      "expected": "feit gotisk a"
+    },
+    "𝖇": {
+      "expected": "feit gotisk b"
+    },
+    "𝖈": {
+      "expected": "feit gotisk c"
+    },
+    "𝖉": {
+      "expected": "feit gotisk d"
+    },
+    "𝖊": {
+      "expected": "feit gotisk e"
+    },
+    "𝖋": {
+      "expected": "feit gotisk f"
+    },
+    "𝖌": {
+      "expected": "feit gotisk g"
+    },
+    "𝖍": {
+      "expected": "feit gotisk h"
+    },
+    "𝖎": {
+      "expected": "feit gotisk i"
+    },
+    "𝖏": {
+      "expected": "feit gotisk j"
+    },
+    "𝖐": {
+      "expected": "feit gotisk k"
+    },
+    "𝖑": {
+      "expected": "feit gotisk l"
+    },
+    "𝖒": {
+      "expected": "feit gotisk m"
+    },
+    "𝖓": {
+      "expected": "feit gotisk n"
+    },
+    "𝖔": {
+      "expected": "feit gotisk o"
+    },
+    "𝖕": {
+      "expected": "feit gotisk p"
+    },
+    "𝖖": {
+      "expected": "feit gotisk q"
+    },
+    "𝖗": {
+      "expected": "feit gotisk r"
+    },
+    "𝖘": {
+      "expected": "feit gotisk s"
+    },
+    "𝖙": {
+      "expected": "feit gotisk t"
+    },
+    "𝖚": {
+      "expected": "feit gotisk u"
+    },
+    "𝖛": {
+      "expected": "feit gotisk v"
+    },
+    "𝖜": {
+      "expected": "feit gotisk w"
+    },
+    "𝖝": {
+      "expected": "feit gotisk x"
+    },
+    "𝖞": {
+      "expected": "feit gotisk y"
+    },
+    "𝖟": {
+      "expected": "feit gotisk z"
+    },
+    "𝑨": {
+      "expected": "feit kursiv A"
+    },
+    "𝑩": {
+      "expected": "feit kursiv B"
+    },
+    "𝑪": {
+      "expected": "feit kursiv C"
+    },
+    "𝑫": {
+      "expected": "feit kursiv D"
+    },
+    "𝑬": {
+      "expected": "feit kursiv E"
+    },
+    "𝑭": {
+      "expected": "feit kursiv F"
+    },
+    "𝑮": {
+      "expected": "feit kursiv G"
+    },
+    "𝑯": {
+      "expected": "feit kursiv H"
+    },
+    "𝑰": {
+      "expected": "feit kursiv I"
+    },
+    "𝑱": {
+      "expected": "feit kursiv J"
+    },
+    "𝑲": {
+      "expected": "feit kursiv K"
+    },
+    "𝑳": {
+      "expected": "feit kursiv L"
+    },
+    "𝑴": {
+      "expected": "feit kursiv M"
+    },
+    "𝑵": {
+      "expected": "feit kursiv N"
+    },
+    "𝑶": {
+      "expected": "feit kursiv O"
+    },
+    "𝑷": {
+      "expected": "feit kursiv P"
+    },
+    "𝑸": {
+      "expected": "feit kursiv Q"
+    },
+    "𝑹": {
+      "expected": "feit kursiv R"
+    },
+    "𝑺": {
+      "expected": "feit kursiv S"
+    },
+    "𝑻": {
+      "expected": "feit kursiv T"
+    },
+    "𝑼": {
+      "expected": "feit kursiv U"
+    },
+    "𝑽": {
+      "expected": "feit kursiv V"
+    },
+    "𝑾": {
+      "expected": "feit kursiv W"
+    },
+    "𝑿": {
+      "expected": "feit kursiv X"
+    },
+    "𝒀": {
+      "expected": "feit kursiv Y"
+    },
+    "𝒁": {
+      "expected": "feit kursiv Z"
+    },
+    "𝒂": {
+      "expected": "feit kursiv a"
+    },
+    "𝒃": {
+      "expected": "feit kursiv b"
+    },
+    "𝒄": {
+      "expected": "feit kursiv c"
+    },
+    "𝒅": {
+      "expected": "feit kursiv d"
+    },
+    "𝒆": {
+      "expected": "feit kursiv e"
+    },
+    "𝒇": {
+      "expected": "feit kursiv f"
+    },
+    "𝒈": {
+      "expected": "feit kursiv g"
+    },
+    "𝒉": {
+      "expected": "feit kursiv h"
+    },
+    "𝒊": {
+      "expected": "feit kursiv i"
+    },
+    "𝒋": {
+      "expected": "feit kursiv j"
+    },
+    "𝒌": {
+      "expected": "feit kursiv k"
+    },
+    "𝒍": {
+      "expected": "feit kursiv l"
+    },
+    "𝒎": {
+      "expected": "feit kursiv m"
+    },
+    "𝒏": {
+      "expected": "feit kursiv n"
+    },
+    "𝒐": {
+      "expected": "feit kursiv o"
+    },
+    "𝒑": {
+      "expected": "feit kursiv p"
+    },
+    "𝒒": {
+      "expected": "feit kursiv q"
+    },
+    "𝒓": {
+      "expected": "feit kursiv r"
+    },
+    "𝒔": {
+      "expected": "feit kursiv s"
+    },
+    "𝒕": {
+      "expected": "feit kursiv t"
+    },
+    "𝒖": {
+      "expected": "feit kursiv u"
+    },
+    "𝒗": {
+      "expected": "feit kursiv v"
+    },
+    "𝒘": {
+      "expected": "feit kursiv w"
+    },
+    "𝒙": {
+      "expected": "feit kursiv x"
+    },
+    "𝒚": {
+      "expected": "feit kursiv y"
+    },
+    "𝒛": {
+      "expected": "feit kursiv z"
+    },
+    "𝜜": {
+      "expected": "feit kursiv Alfa"
+    },
+    "𝜝": {
+      "expected": "feit kursiv Beta"
+    },
+    "𝜞": {
+      "expected": "feit kursiv Gamma"
+    },
+    "𝜟": {
+      "expected": "feit kursiv Delta"
+    },
+    "𝜠": {
+      "expected": "feit kursiv Epsilon"
+    },
+    "𝜡": {
+      "expected": "feit kursiv Zeta"
+    },
+    "𝜢": {
+      "expected": "feit kursiv Eta"
+    },
+    "𝜣": {
+      "expected": "feit kursiv Theta"
+    },
+    "𝜤": {
+      "expected": "feit kursiv Iota"
+    },
+    "𝜥": {
+      "expected": "feit kursiv Kappa"
+    },
+    "𝜦": {
+      "expected": "feit kursiv Lambda"
+    },
+    "𝜧": {
+      "expected": "feit kursiv My"
+    },
+    "𝜨": {
+      "expected": "feit kursiv Ny"
+    },
+    "𝜩": {
+      "expected": "feit kursiv Ksi"
+    },
+    "𝜪": {
+      "expected": "feit kursiv Omikron"
+    },
+    "𝜫": {
+      "expected": "feit kursiv Pi"
+    },
+    "𝜬": {
+      "expected": "feit kursiv Rho"
+    },
+    "𝜭": {
+      "expected": "feit kursiv Sluttsigma"
+    },
+    "𝜮": {
+      "expected": "feit kursiv Sigma"
+    },
+    "𝜯": {
+      "expected": "feit kursiv Tau"
+    },
+    "𝜰": {
+      "expected": "feit kursiv Ypsilon"
+    },
+    "𝜱": {
+      "expected": "feit kursiv Pi"
+    },
+    "𝜲": {
+      "expected": "feit kursiv Khi"
+    },
+    "𝜳": {
+      "expected": "feit kursiv Psi"
+    },
+    "𝜴": {
+      "expected": "feit kursiv Omega"
+    },
+    "𝜵": {
+      "expected": "feit kursiv nabla"
+    },
+    "𝜶": {
+      "expected": "feit kursiv alfa"
+    },
+    "𝜷": {
+      "expected": "feit kursiv beta"
+    },
+    "𝜸": {
+      "expected": "feit kursiv gamma"
+    },
+    "𝜹": {
+      "expected": "feit kursiv delta"
+    },
+    "𝜺": {
+      "expected": "feit kursiv epsilon"
+    },
+    "𝜻": {
+      "expected": "feit kursiv zeta"
+    },
+    "𝜼": {
+      "expected": "feit kursiv eta"
+    },
+    "𝜽": {
+      "expected": "feit kursiv theta"
+    },
+    "𝜾": {
+      "expected": "feit kursiv iota"
+    },
+    "𝜿": {
+      "expected": "feit kursiv kappa"
+    },
+    "𝝀": {
+      "expected": "feit kursiv lambda"
+    },
+    "𝝁": {
+      "expected": "feit kursiv my"
+    },
+    "𝝂": {
+      "expected": "feit kursiv ny"
+    },
+    "𝝃": {
+      "expected": "feit kursiv ksi"
+    },
+    "𝝄": {
+      "expected": "feit kursiv omikron"
+    },
+    "𝝅": {
+      "expected": "feit kursiv pi"
+    },
+    "𝝆": {
+      "expected": "feit kursiv rho"
+    },
+    "𝝇": {
+      "expected": "feit kursiv sluttsigma"
+    },
+    "𝝈": {
+      "expected": "feit kursiv sigma"
+    },
+    "𝝉": {
+      "expected": "feit kursiv tau"
+    },
+    "𝝊": {
+      "expected": "feit kursiv ypsilon"
+    },
+    "𝝋": {
+      "expected": "feit kursiv pi"
+    },
+    "𝝌": {
+      "expected": "feit kursiv khi"
+    },
+    "𝝍": {
+      "expected": "feit kursiv psi"
+    },
+    "𝝎": {
+      "expected": "feit kursiv omega"
+    },
+    "𝝏": {
+      "expected": "feit kursiv partiellderivert"
+    },
+    "𝝐": {
+      "expected": "feit kursiv epsilon"
+    },
+    "𝝑": {
+      "expected": "feit kursiv theta"
+    },
+    "𝝒": {
+      "expected": "feit kursiv kappa"
+    },
+    "𝝓": {
+      "expected": "feit kursiv pi"
+    },
+    "𝝔": {
+      "expected": "feit kursiv rho"
+    },
+    "𝝕": {
+      "expected": "feit kursiv pi"
+    },
+    "𝓐": {
+      "expected": "feit  A"
+    },
+    "𝓑": {
+      "expected": "feit  B"
+    },
+    "𝓒": {
+      "expected": "feit  C"
+    },
+    "𝓓": {
+      "expected": "feit  D"
+    },
+    "𝓔": {
+      "expected": "feit  E"
+    },
+    "𝓕": {
+      "expected": "feit  F"
+    },
+    "𝓖": {
+      "expected": "feit  G"
+    },
+    "𝓗": {
+      "expected": "feit  H"
+    },
+    "𝓘": {
+      "expected": "feit  I"
+    },
+    "𝓙": {
+      "expected": "feit  J"
+    },
+    "𝓚": {
+      "expected": "feit  K"
+    },
+    "𝓛": {
+      "expected": "feit  L"
+    },
+    "𝓜": {
+      "expected": "feit  M"
+    },
+    "𝓝": {
+      "expected": "feit  N"
+    },
+    "𝓞": {
+      "expected": "feit  O"
+    },
+    "𝓟": {
+      "expected": "feit  P"
+    },
+    "𝓠": {
+      "expected": "feit  Q"
+    },
+    "𝓡": {
+      "expected": "feit  R"
+    },
+    "𝓢": {
+      "expected": "feit  S"
+    },
+    "𝓣": {
+      "expected": "feit  T"
+    },
+    "𝓤": {
+      "expected": "feit  U"
+    },
+    "𝓥": {
+      "expected": "feit  V"
+    },
+    "𝓦": {
+      "expected": "feit  W"
+    },
+    "𝓧": {
+      "expected": "feit  X"
+    },
+    "𝓨": {
+      "expected": "feit  Y"
+    },
+    "𝓩": {
+      "expected": "feit  Z"
+    },
+    "𝓪": {
+      "expected": "feit  a"
+    },
+    "𝓫": {
+      "expected": "feit  b"
+    },
+    "𝓬": {
+      "expected": "feit  c"
+    },
+    "𝓭": {
+      "expected": "feit  d"
+    },
+    "𝓮": {
+      "expected": "feit  e"
+    },
+    "𝓯": {
+      "expected": "feit  f"
+    },
+    "𝓰": {
+      "expected": "feit  g"
+    },
+    "𝓱": {
+      "expected": "feit  h"
+    },
+    "𝓲": {
+      "expected": "feit  i"
+    },
+    "𝓳": {
+      "expected": "feit  j"
+    },
+    "𝓴": {
+      "expected": "feit  k"
+    },
+    "𝓵": {
+      "expected": "feit  l"
+    },
+    "𝓶": {
+      "expected": "feit  m"
+    },
+    "𝓷": {
+      "expected": "feit  n"
+    },
+    "𝓸": {
+      "expected": "feit  o"
+    },
+    "𝓹": {
+      "expected": "feit  p"
+    },
+    "𝓺": {
+      "expected": "feit  q"
+    },
+    "𝓻": {
+      "expected": "feit  r"
+    },
+    "𝓼": {
+      "expected": "feit  s"
+    },
+    "𝓽": {
+      "expected": "feit  t"
+    },
+    "𝓾": {
+      "expected": "feit  u"
+    },
+    "𝓿": {
+      "expected": "feit  v"
+    },
+    "𝔀": {
+      "expected": "feit  w"
+    },
+    "𝔁": {
+      "expected": "feit  x"
+    },
+    "𝔂": {
+      "expected": "feit  y"
+    },
+    "𝔃": {
+      "expected": "feit  z"
+    },
+    "𝔸": {
+      "expected": "double-struck A"
+    },
+    "𝔹": {
+      "expected": "double-struck B"
+    },
+    "ℂ": {
+      "expected": "dei komplekse tala"
+    },
+    "𝔻": {
+      "expected": "double-struck D"
+    },
+    "𝔼": {
+      "expected": "double-struck E"
+    },
+    "𝔽": {
+      "expected": "double-struck F"
+    },
+    "𝔾": {
+      "expected": "double-struck G"
+    },
+    "ℍ": {
+      "expected": "double-struck stor bokstav H"
+    },
+    "𝕀": {
+      "expected": "double-struck I"
+    },
+    "𝕁": {
+      "expected": "double-struck J"
+    },
+    "𝕂": {
+      "expected": "double-struck K"
+    },
+    "𝕃": {
+      "expected": "double-struck L"
+    },
+    "𝕄": {
+      "expected": "double-struck M"
+    },
+    "ℕ": {
+      "expected": "dei naturlege tala"
+    },
+    "𝕆": {
+      "expected": "double-struck O"
+    },
+    "ℙ": {
+      "expected": "double-struck stor bokstav P"
+    },
+    "ℚ": {
+      "expected": "dei rasjonale tala"
+    },
+    "ℝ": {
+      "expected": "dei reelle tala"
+    },
+    "𝕊": {
+      "expected": "double-struck S"
+    },
+    "𝕋": {
+      "expected": "double-struck T"
+    },
+    "𝕌": {
+      "expected": "double-struck U"
+    },
+    "𝕍": {
+      "expected": "double-struck V"
+    },
+    "𝕎": {
+      "expected": "double-struck W"
+    },
+    "𝕏": {
+      "expected": "double-struck X"
+    },
+    "𝕐": {
+      "expected": "double-struck Y"
+    },
+    "ℤ": {
+      "expected": "heiltala"
+    },
+    "𝕒": {
+      "expected": "double-struck a"
+    },
+    "𝕓": {
+      "expected": "double-struck b"
+    },
+    "𝕔": {
+      "expected": "double-struck c"
+    },
+    "𝕕": {
+      "expected": "double-struck d"
+    },
+    "𝕖": {
+      "expected": "double-struck e"
+    },
+    "𝕗": {
+      "expected": "double-struck f"
+    },
+    "𝕘": {
+      "expected": "double-struck g"
+    },
+    "𝕙": {
+      "expected": "double-struck h"
+    },
+    "𝕚": {
+      "expected": "double-struck i"
+    },
+    "𝕛": {
+      "expected": "double-struck j"
+    },
+    "𝕜": {
+      "expected": "double-struck k"
+    },
+    "𝕝": {
+      "expected": "double-struck l"
+    },
+    "𝕞": {
+      "expected": "double-struck m"
+    },
+    "𝕟": {
+      "expected": "double-struck n"
+    },
+    "𝕠": {
+      "expected": "double-struck o"
+    },
+    "𝕡": {
+      "expected": "double-struck p"
+    },
+    "𝕢": {
+      "expected": "double-struck q"
+    },
+    "𝕣": {
+      "expected": "double-struck r"
+    },
+    "𝕤": {
+      "expected": "double-struck s"
+    },
+    "𝕥": {
+      "expected": "double-struck t"
+    },
+    "𝕦": {
+      "expected": "double-struck u"
+    },
+    "𝕧": {
+      "expected": "double-struck v"
+    },
+    "𝕨": {
+      "expected": "double-struck w"
+    },
+    "𝕩": {
+      "expected": "double-struck x"
+    },
+    "𝕪": {
+      "expected": "double-struck y"
+    },
+    "𝕫": {
+      "expected": "double-struck z"
+    },
+    "𝟘": {
+      "expected": "double-struck 0"
+    },
+    "𝟙": {
+      "expected": "double-struck 1"
+    },
+    "𝟚": {
+      "expected": "double-struck 2"
+    },
+    "𝟛": {
+      "expected": "double-struck 3"
+    },
+    "𝟜": {
+      "expected": "double-struck 4"
+    },
+    "𝟝": {
+      "expected": "double-struck 5"
+    },
+    "𝟞": {
+      "expected": "double-struck 6"
+    },
+    "𝟟": {
+      "expected": "double-struck 7"
+    },
+    "𝟠": {
+      "expected": "double-struck 8"
+    },
+    "𝟡": {
+      "expected": "double-struck 9"
+    },
+    "Ａ": {
+      "expected": "A"
+    },
+    "Ｂ": {
+      "expected": "B"
+    },
+    "Ｃ": {
+      "expected": "C"
+    },
+    "Ｄ": {
+      "expected": "D"
+    },
+    "Ｅ": {
+      "expected": "E"
+    },
+    "Ｆ": {
+      "expected": "F"
+    },
+    "Ｇ": {
+      "expected": "G"
+    },
+    "Ｈ": {
+      "expected": "H"
+    },
+    "Ｉ": {
+      "expected": "I"
+    },
+    "Ｊ": {
+      "expected": "J"
+    },
+    "Ｋ": {
+      "expected": "K"
+    },
+    "Ｌ": {
+      "expected": "L"
+    },
+    "Ｍ": {
+      "expected": "M"
+    },
+    "Ｎ": {
+      "expected": "N"
+    },
+    "Ｏ": {
+      "expected": "O"
+    },
+    "Ｐ": {
+      "expected": "P"
+    },
+    "Ｑ": {
+      "expected": "Q"
+    },
+    "Ｒ": {
+      "expected": "R"
+    },
+    "Ｓ": {
+      "expected": "S"
+    },
+    "Ｔ": {
+      "expected": "T"
+    },
+    "Ｕ": {
+      "expected": "U"
+    },
+    "Ｖ": {
+      "expected": "V"
+    },
+    "Ｗ": {
+      "expected": "W"
+    },
+    "Ｘ": {
+      "expected": "X"
+    },
+    "Ｙ": {
+      "expected": "Y"
+    },
+    "Ｚ": {
+      "expected": "Z"
+    },
+    "ａ": {
+      "expected": "a"
+    },
+    "ｂ": {
+      "expected": "b"
+    },
+    "ｃ": {
+      "expected": "c"
+    },
+    "ｄ": {
+      "expected": "d"
+    },
+    "ｅ": {
+      "expected": "e"
+    },
+    "ｆ": {
+      "expected": "f"
+    },
+    "ｇ": {
+      "expected": "g"
+    },
+    "ｈ": {
+      "expected": "h"
+    },
+    "ｉ": {
+      "expected": "i"
+    },
+    "ｊ": {
+      "expected": "j"
+    },
+    "ｋ": {
+      "expected": "k"
+    },
+    "ｌ": {
+      "expected": "l"
+    },
+    "ｍ": {
+      "expected": "m"
+    },
+    "ｎ": {
+      "expected": "n"
+    },
+    "ｏ": {
+      "expected": "o"
+    },
+    "ｐ": {
+      "expected": "p"
+    },
+    "ｑ": {
+      "expected": "q"
+    },
+    "ｒ": {
+      "expected": "r"
+    },
+    "ｓ": {
+      "expected": "s"
+    },
+    "ｔ": {
+      "expected": "t"
+    },
+    "ｕ": {
+      "expected": "u"
+    },
+    "ｖ": {
+      "expected": "v"
+    },
+    "ｗ": {
+      "expected": "w"
+    },
+    "ｘ": {
+      "expected": "x"
+    },
+    "ｙ": {
+      "expected": "y"
+    },
+    "ｚ": {
+      "expected": "z"
+    },
+    "０": {
+      "expected": "0"
+    },
+    "１": {
+      "expected": "1"
+    },
+    "２": {
+      "expected": "2"
+    },
+    "３": {
+      "expected": "3"
+    },
+    "４": {
+      "expected": "4"
+    },
+    "５": {
+      "expected": "5"
+    },
+    "６": {
+      "expected": "6"
+    },
+    "７": {
+      "expected": "7"
+    },
+    "８": {
+      "expected": "8"
+    },
+    "９": {
+      "expected": "9"
+    },
+    "𝔄": {
+      "expected": "gotisk A"
+    },
+    "𝔅": {
+      "expected": "gotisk B"
+    },
+    "ℭ": {
+      "expected": "gotisk C"
+    },
+    "𝔇": {
+      "expected": "gotisk D"
+    },
+    "𝔈": {
+      "expected": "gotisk E"
+    },
+    "𝔉": {
+      "expected": "gotisk F"
+    },
+    "𝔊": {
+      "expected": "gotisk G"
+    },
+    "ℌ": {
+      "expected": "gotisk H"
+    },
+    "ℑ": {
+      "expected": "gotisk I"
+    },
+    "𝔍": {
+      "expected": "gotisk J"
+    },
+    "𝔎": {
+      "expected": "gotisk K"
+    },
+    "𝔏": {
+      "expected": "gotisk L"
+    },
+    "𝔐": {
+      "expected": "gotisk M"
+    },
+    "𝔑": {
+      "expected": "gotisk N"
+    },
+    "𝔒": {
+      "expected": "gotisk O"
+    },
+    "𝔓": {
+      "expected": "gotisk P"
+    },
+    "𝔔": {
+      "expected": "gotisk Q"
+    },
+    "ℜ": {
+      "expected": "gotisk R"
+    },
+    "𝔖": {
+      "expected": "gotisk S"
+    },
+    "𝔗": {
+      "expected": "gotisk T"
+    },
+    "𝔘": {
+      "expected": "gotisk U"
+    },
+    "𝔙": {
+      "expected": "gotisk V"
+    },
+    "𝔚": {
+      "expected": "gotisk W"
+    },
+    "𝔛": {
+      "expected": "gotisk X"
+    },
+    "𝔜": {
+      "expected": "gotisk Y"
+    },
+    "ℨ": {
+      "expected": "gotisk Z"
+    },
+    "𝔞": {
+      "expected": "gotisk a"
+    },
+    "𝔟": {
+      "expected": "gotisk b"
+    },
+    "𝔠": {
+      "expected": "gotisk c"
+    },
+    "𝔡": {
+      "expected": "gotisk d"
+    },
+    "𝔢": {
+      "expected": "gotisk e"
+    },
+    "𝔣": {
+      "expected": "gotisk f"
+    },
+    "𝔤": {
+      "expected": "gotisk g"
+    },
+    "𝔥": {
+      "expected": "gotisk h"
+    },
+    "𝔦": {
+      "expected": "gotisk i"
+    },
+    "𝔧": {
+      "expected": "gotisk j"
+    },
+    "𝔨": {
+      "expected": "gotisk k"
+    },
+    "𝔩": {
+      "expected": "gotisk l"
+    },
+    "𝔪": {
+      "expected": "gotisk m"
+    },
+    "𝔫": {
+      "expected": "gotisk n"
+    },
+    "𝔬": {
+      "expected": "gotisk o"
+    },
+    "𝔭": {
+      "expected": "gotisk p"
+    },
+    "𝔮": {
+      "expected": "gotisk q"
+    },
+    "𝔯": {
+      "expected": "gotisk r"
+    },
+    "𝔰": {
+      "expected": "gotisk s"
+    },
+    "𝔱": {
+      "expected": "gotisk t"
+    },
+    "𝔲": {
+      "expected": "gotisk u"
+    },
+    "𝔳": {
+      "expected": "gotisk v"
+    },
+    "𝔴": {
+      "expected": "gotisk w"
+    },
+    "𝔵": {
+      "expected": "gotisk x"
+    },
+    "𝔶": {
+      "expected": "gotisk y"
+    },
+    "𝔷": {
+      "expected": "gotisk z"
+    },
+    "𝐴": {
+      "expected": "A"
+    },
+    "𝐵": {
+      "expected": "B"
+    },
+    "𝐶": {
+      "expected": "C"
+    },
+    "𝐷": {
+      "expected": "D"
+    },
+    "𝐸": {
+      "expected": "E"
+    },
+    "𝐹": {
+      "expected": "F"
+    },
+    "𝐺": {
+      "expected": "G"
+    },
+    "𝐻": {
+      "expected": "H"
+    },
+    "𝐼": {
+      "expected": "I"
+    },
+    "𝐽": {
+      "expected": "J"
+    },
+    "𝐾": {
+      "expected": "K"
+    },
+    "𝐿": {
+      "expected": "L"
+    },
+    "𝑀": {
+      "expected": "M"
+    },
+    "𝑁": {
+      "expected": "N"
+    },
+    "𝑂": {
+      "expected": "O"
+    },
+    "𝑃": {
+      "expected": "P"
+    },
+    "𝑄": {
+      "expected": "Q"
+    },
+    "𝑅": {
+      "expected": "R"
+    },
+    "𝑆": {
+      "expected": "S"
+    },
+    "𝑇": {
+      "expected": "T"
+    },
+    "𝑈": {
+      "expected": "U"
+    },
+    "𝑉": {
+      "expected": "V"
+    },
+    "𝑊": {
+      "expected": "W"
+    },
+    "𝑋": {
+      "expected": "X"
+    },
+    "𝑌": {
+      "expected": "Y"
+    },
+    "𝑍": {
+      "expected": "Z"
+    },
+    "𝑎": {
+      "expected": "a"
+    },
+    "𝑏": {
+      "expected": "b"
+    },
+    "𝑐": {
+      "expected": "c"
+    },
+    "𝑑": {
+      "expected": "d"
+    },
+    "𝑒": {
+      "expected": "e"
+    },
+    "𝑓": {
+      "expected": "f"
+    },
+    "𝑔": {
+      "expected": "g"
+    },
+    "ℎ": {
+      "expected": "h"
+    },
+    "𝑖": {
+      "expected": "i"
+    },
+    "𝑗": {
+      "expected": "j"
+    },
+    "𝑘": {
+      "expected": "k"
+    },
+    "𝑙": {
+      "expected": "l"
+    },
+    "𝑚": {
+      "expected": "m"
+    },
+    "𝑛": {
+      "expected": "n"
+    },
+    "𝑜": {
+      "expected": "o"
+    },
+    "𝑝": {
+      "expected": "p"
+    },
+    "𝑞": {
+      "expected": "q"
+    },
+    "𝑟": {
+      "expected": "r"
+    },
+    "𝑠": {
+      "expected": "s"
+    },
+    "𝑡": {
+      "expected": "t"
+    },
+    "𝑢": {
+      "expected": "u"
+    },
+    "𝑣": {
+      "expected": "v"
+    },
+    "𝑤": {
+      "expected": "w"
+    },
+    "𝑥": {
+      "expected": "x"
+    },
+    "𝑦": {
+      "expected": "y"
+    },
+    "𝑧": {
+      "expected": "z"
+    },
+    "𝛢": {
+      "expected": "Alfa"
+    },
+    "𝛣": {
+      "expected": "Beta"
+    },
+    "𝛤": {
+      "expected": "Gamma"
+    },
+    "𝛥": {
+      "expected": "Delta"
+    },
+    "𝛦": {
+      "expected": "Epsilon"
+    },
+    "𝛧": {
+      "expected": "Zeta"
+    },
+    "𝛨": {
+      "expected": "Eta"
+    },
+    "𝛩": {
+      "expected": "Theta"
+    },
+    "𝛪": {
+      "expected": "Iota"
+    },
+    "𝛫": {
+      "expected": "Kappa"
+    },
+    "𝛬": {
+      "expected": "Lambda"
+    },
+    "𝛭": {
+      "expected": "My"
+    },
+    "𝛮": {
+      "expected": "Ny"
+    },
+    "𝛯": {
+      "expected": "Ksi"
+    },
+    "𝛰": {
+      "expected": "Omikron"
+    },
+    "𝛱": {
+      "expected": "Pi"
+    },
+    "𝛲": {
+      "expected": "Rho"
+    },
+    "𝛳": {
+      "expected": "Sluttsigma"
+    },
+    "𝛴": {
+      "expected": "Sigma"
+    },
+    "𝛵": {
+      "expected": "Tau"
+    },
+    "𝛶": {
+      "expected": "Ypsilon"
+    },
+    "𝛷": {
+      "expected": "Pi"
+    },
+    "𝛸": {
+      "expected": "Khi"
+    },
+    "𝛹": {
+      "expected": "Psi"
+    },
+    "𝛺": {
+      "expected": "Omega"
+    },
+    "𝛻": {
+      "expected": "kursiv nabla"
+    },
+    "𝛼": {
+      "expected": "alfa"
+    },
+    "𝛽": {
+      "expected": "beta"
+    },
+    "𝛾": {
+      "expected": "gamma"
+    },
+    "𝛿": {
+      "expected": "delta"
+    },
+    "𝜀": {
+      "expected": "epsilon"
+    },
+    "𝜁": {
+      "expected": "zeta"
+    },
+    "𝜂": {
+      "expected": "eta"
+    },
+    "𝜃": {
+      "expected": "theta"
+    },
+    "𝜄": {
+      "expected": "iota"
+    },
+    "𝜅": {
+      "expected": "kappa"
+    },
+    "𝜆": {
+      "expected": "lambda"
+    },
+    "𝜇": {
+      "expected": "my"
+    },
+    "𝜈": {
+      "expected": "ny"
+    },
+    "𝜉": {
+      "expected": "ksi"
+    },
+    "𝜊": {
+      "expected": "omikron"
+    },
+    "𝜋": {
+      "expected": "pi"
+    },
+    "𝜌": {
+      "expected": "rho"
+    },
+    "𝜍": {
+      "expected": "sluttsigma"
+    },
+    "𝜎": {
+      "expected": "sigma"
+    },
+    "𝜏": {
+      "expected": "tau"
+    },
+    "𝜐": {
+      "expected": "ypsilon"
+    },
+    "𝜑": {
+      "expected": "pi"
+    },
+    "𝜒": {
+      "expected": "khi"
+    },
+    "𝜓": {
+      "expected": "psi"
+    },
+    "𝜔": {
+      "expected": "omega"
+    },
+    "𝜕": {
+      "expected": "kursiv partiellderivert"
+    },
+    "𝜖": {
+      "expected": "epsilon"
+    },
+    "𝜗": {
+      "expected": "theta"
+    },
+    "𝜘": {
+      "expected": "kappa"
+    },
+    "𝜙": {
+      "expected": "pi"
+    },
+    "𝜚": {
+      "expected": "rho"
+    },
+    "𝜛": {
+      "expected": "pi"
+    },
+    "𝙰": {
+      "expected": "smal A"
+    },
+    "𝙱": {
+      "expected": "smal B"
+    },
+    "𝙲": {
+      "expected": "smal C"
+    },
+    "𝙳": {
+      "expected": "smal D"
+    },
+    "𝙴": {
+      "expected": "smal E"
+    },
+    "𝙵": {
+      "expected": "smal F"
+    },
+    "𝙶": {
+      "expected": "smal G"
+    },
+    "𝙷": {
+      "expected": "smal H"
+    },
+    "𝙸": {
+      "expected": "smal I"
+    },
+    "𝙹": {
+      "expected": "smal J"
+    },
+    "𝙺": {
+      "expected": "smal K"
+    },
+    "𝙻": {
+      "expected": "smal L"
+    },
+    "𝙼": {
+      "expected": "smal M"
+    },
+    "𝙽": {
+      "expected": "smal N"
+    },
+    "𝙾": {
+      "expected": "smal O"
+    },
+    "𝙿": {
+      "expected": "smal P"
+    },
+    "𝚀": {
+      "expected": "smal Q"
+    },
+    "𝚁": {
+      "expected": "smal R"
+    },
+    "𝚂": {
+      "expected": "smal S"
+    },
+    "𝚃": {
+      "expected": "smal T"
+    },
+    "𝚄": {
+      "expected": "smal U"
+    },
+    "𝚅": {
+      "expected": "smal V"
+    },
+    "𝚆": {
+      "expected": "smal W"
+    },
+    "𝚇": {
+      "expected": "smal X"
+    },
+    "𝚈": {
+      "expected": "smal Y"
+    },
+    "𝚉": {
+      "expected": "smal Z"
+    },
+    "𝚊": {
+      "expected": "smal a"
+    },
+    "𝚋": {
+      "expected": "smal b"
+    },
+    "𝚌": {
+      "expected": "smal c"
+    },
+    "𝚍": {
+      "expected": "smal d"
+    },
+    "𝚎": {
+      "expected": "smal e"
+    },
+    "𝚏": {
+      "expected": "smal f"
+    },
+    "𝚐": {
+      "expected": "smal g"
+    },
+    "𝚑": {
+      "expected": "smal h"
+    },
+    "𝚒": {
+      "expected": "smal i"
+    },
+    "𝚓": {
+      "expected": "smal j"
+    },
+    "𝚔": {
+      "expected": "smal k"
+    },
+    "𝚕": {
+      "expected": "smal l"
+    },
+    "𝚖": {
+      "expected": "smal m"
+    },
+    "𝚗": {
+      "expected": "smal n"
+    },
+    "𝚘": {
+      "expected": "smal o"
+    },
+    "𝚙": {
+      "expected": "smal p"
+    },
+    "𝚚": {
+      "expected": "smal q"
+    },
+    "𝚛": {
+      "expected": "smal r"
+    },
+    "𝚜": {
+      "expected": "smal s"
+    },
+    "𝚝": {
+      "expected": "smal t"
+    },
+    "𝚞": {
+      "expected": "smal u"
+    },
+    "𝚟": {
+      "expected": "smal v"
+    },
+    "𝚠": {
+      "expected": "smal w"
+    },
+    "𝚡": {
+      "expected": "smal x"
+    },
+    "𝚢": {
+      "expected": "smal y"
+    },
+    "𝚣": {
+      "expected": "smal z"
+    },
+    "𝟶": {
+      "expected": "smal 0"
+    },
+    "𝟷": {
+      "expected": "smal 1"
+    },
+    "𝟸": {
+      "expected": "smal 2"
+    },
+    "𝟹": {
+      "expected": "smal 3"
+    },
+    "𝟺": {
+      "expected": "smal 4"
+    },
+    "𝟻": {
+      "expected": "smal 5"
+    },
+    "𝟼": {
+      "expected": "smal 6"
+    },
+    "𝟽": {
+      "expected": "smal 7"
+    },
+    "𝟾": {
+      "expected": "smal 8"
+    },
+    "𝟿": {
+      "expected": "smal 9"
+    },
+    "A": {
+      "expected": "A"
+    },
+    "B": {
+      "expected": "B"
+    },
+    "C": {
+      "expected": "C"
+    },
+    "D": {
+      "expected": "D"
+    },
+    "E": {
+      "expected": "E"
+    },
+    "F": {
+      "expected": "F"
+    },
+    "G": {
+      "expected": "G"
+    },
+    "H": {
+      "expected": "H"
+    },
+    "I": {
+      "expected": "I"
+    },
+    "J": {
+      "expected": "J"
+    },
+    "K": {
+      "expected": "K"
+    },
+    "L": {
+      "expected": "L"
+    },
+    "M": {
+      "expected": "M"
+    },
+    "N": {
+      "expected": "N"
+    },
+    "O": {
+      "expected": "O"
+    },
+    "P": {
+      "expected": "P"
+    },
+    "Q": {
+      "expected": "Q"
+    },
+    "R": {
+      "expected": "R"
+    },
+    "S": {
+      "expected": "S"
+    },
+    "T": {
+      "expected": "T"
+    },
+    "U": {
+      "expected": "U"
+    },
+    "V": {
+      "expected": "V"
+    },
+    "W": {
+      "expected": "W"
+    },
+    "X": {
+      "expected": "X"
+    },
+    "Y": {
+      "expected": "Y"
+    },
+    "Z": {
+      "expected": "Z"
+    },
+    "a": {
+      "expected": "a"
+    },
+    "b": {
+      "expected": "b"
+    },
+    "c": {
+      "expected": "c"
+    },
+    "d": {
+      "expected": "d"
+    },
+    "e": {
+      "expected": "e"
+    },
+    "f": {
+      "expected": "f"
+    },
+    "g": {
+      "expected": "g"
+    },
+    "h": {
+      "expected": "h"
+    },
+    "i": {
+      "expected": "i"
+    },
+    "j": {
+      "expected": "j"
+    },
+    "k": {
+      "expected": "k"
+    },
+    "l": {
+      "expected": "l"
+    },
+    "m": {
+      "expected": "m"
+    },
+    "n": {
+      "expected": "n"
+    },
+    "o": {
+      "expected": "o"
+    },
+    "p": {
+      "expected": "p"
+    },
+    "q": {
+      "expected": "q"
+    },
+    "r": {
+      "expected": "r"
+    },
+    "s": {
+      "expected": "s"
+    },
+    "t": {
+      "expected": "t"
+    },
+    "u": {
+      "expected": "u"
+    },
+    "v": {
+      "expected": "v"
+    },
+    "w": {
+      "expected": "w"
+    },
+    "x": {
+      "expected": "x"
+    },
+    "y": {
+      "expected": "y"
+    },
+    "z": {
+      "expected": "z"
+    },
+    "Α": {
+      "expected": "Alfa"
+    },
+    "Β": {
+      "expected": "Beta"
+    },
+    "Γ": {
+      "expected": "Gamma"
+    },
+    "Δ": {
+      "expected": "triangel"
+    },
+    "Ε": {
+      "expected": "Epsilon"
+    },
+    "Ζ": {
+      "expected": "Zeta"
+    },
+    "Η": {
+      "expected": "Eta"
+    },
+    "Θ": {
+      "expected": "Theta"
+    },
+    "Ι": {
+      "expected": "Iota"
+    },
+    "Κ": {
+      "expected": "Kappa"
+    },
+    "Λ": {
+      "expected": "Lambda"
+    },
+    "Μ": {
+      "expected": "My"
+    },
+    "Ν": {
+      "expected": "Ny"
+    },
+    "Ξ": {
+      "expected": "Ksi"
+    },
+    "Ο": {
+      "expected": "Omikron"
+    },
+    "Π": {
+      "expected": "Pi"
+    },
+    "Ρ": {
+      "expected": "Rho"
+    },
+    "ϴ": {
+      "expected": "Sluttsigma"
+    },
+    "Σ": {
+      "expected": "Sigma"
+    },
+    "Τ": {
+      "expected": "Tau"
+    },
+    "Υ": {
+      "expected": "Ypsilon"
+    },
+    "Φ": {
+      "expected": "Pi"
+    },
+    "Χ": {
+      "expected": "Khi"
+    },
+    "Ψ": {
+      "expected": "Psi"
+    },
+    "Ω": {
+      "expected": "Omega"
+    },
+    "∇": {
+      "expected": "nabla"
+    },
+    "α": {
+      "expected": "alfa"
+    },
+    "β": {
+      "expected": "beta"
+    },
+    "γ": {
+      "expected": "gamma"
+    },
+    "δ": {
+      "expected": "delta"
+    },
+    "ε": {
+      "expected": "epsilon"
+    },
+    "ζ": {
+      "expected": "zeta"
+    },
+    "η": {
+      "expected": "eta"
+    },
+    "θ": {
+      "expected": "theta"
+    },
+    "ι": {
+      "expected": "iota"
+    },
+    "κ": {
+      "expected": "kappa"
+    },
+    "λ": {
+      "expected": "lambda"
+    },
+    "μ": {
+      "expected": "my"
+    },
+    "ν": {
+      "expected": "ny"
+    },
+    "ξ": {
+      "expected": "ksi"
+    },
+    "ο": {
+      "expected": "omikron"
+    },
+    "π": {
+      "expected": "pi"
+    },
+    "ρ": {
+      "expected": "rho"
+    },
+    "ς": {
+      "expected": "sluttsigma"
+    },
+    "σ": {
+      "expected": "sigma"
+    },
+    "τ": {
+      "expected": "tau"
+    },
+    "υ": {
+      "expected": "ypsilon"
+    },
+    "φ": {
+      "expected": "pi"
+    },
+    "χ": {
+      "expected": "khi"
+    },
+    "ψ": {
+      "expected": "psi"
+    },
+    "ω": {
+      "expected": "omega"
+    },
+    "∂": {
+      "expected": "partiellderivert"
+    },
+    "ϵ": {
+      "expected": "epsilon"
+    },
+    "ϑ": {
+      "expected": "theta"
+    },
+    "ϰ": {
+      "expected": "kappa"
+    },
+    "ϕ": {
+      "expected": "pi"
+    },
+    "ϱ": {
+      "expected": "rho"
+    },
+    "ϖ": {
+      "expected": "pi"
+    },
+    "𝒜": {
+      "expected": "script A"
+    },
+    "ℬ": {
+      "expected": "script B"
+    },
+    "𝒞": {
+      "expected": "script C"
+    },
+    "𝒟": {
+      "expected": "script D"
+    },
+    "ℰ": {
+      "expected": "script E"
+    },
+    "ℱ": {
+      "expected": "script F"
+    },
+    "𝒢": {
+      "expected": "script G"
+    },
+    "ℋ": {
+      "expected": "script H"
+    },
+    "ℐ": {
+      "expected": "script I"
+    },
+    "𝒥": {
+      "expected": "script J"
+    },
+    "𝒦": {
+      "expected": "script K"
+    },
+    "ℒ": {
+      "expected": "script L"
+    },
+    "ℳ": {
+      "expected": "script M"
+    },
+    "𝒩": {
+      "expected": "script N"
+    },
+    "𝒪": {
+      "expected": "script O"
+    },
+    "𝒫": {
+      "expected": "script P"
+    },
+    "𝒬": {
+      "expected": "script Q"
+    },
+    "ℛ": {
+      "expected": "script R"
+    },
+    "𝒮": {
+      "expected": "script S"
+    },
+    "𝒯": {
+      "expected": "script T"
+    },
+    "𝒰": {
+      "expected": "script U"
+    },
+    "𝒱": {
+      "expected": "script V"
+    },
+    "𝒲": {
+      "expected": "script W"
+    },
+    "𝒳": {
+      "expected": "script X"
+    },
+    "𝒴": {
+      "expected": "script Y"
+    },
+    "𝒵": {
+      "expected": "script Z"
+    },
+    "𝒶": {
+      "expected": "script a"
+    },
+    "𝒷": {
+      "expected": "script b"
+    },
+    "𝒸": {
+      "expected": "script c"
+    },
+    "𝒹": {
+      "expected": "script d"
+    },
+    "ℯ": {
+      "expected": "script e"
+    },
+    "𝒻": {
+      "expected": "script f"
+    },
+    "ℊ": {
+      "expected": "script g"
+    },
+    "𝒽": {
+      "expected": "script h"
+    },
+    "𝒾": {
+      "expected": "script i"
+    },
+    "𝒿": {
+      "expected": "script j"
+    },
+    "𝓀": {
+      "expected": "script k"
+    },
+    "𝓁": {
+      "expected": "script l"
+    },
+    "𝓂": {
+      "expected": "script m"
+    },
+    "𝓃": {
+      "expected": "script n"
+    },
+    "ℴ": {
+      "expected": "script o"
+    },
+    "𝓅": {
+      "expected": "script p"
+    },
+    "𝓆": {
+      "expected": "script q"
+    },
+    "𝓇": {
+      "expected": "script r"
+    },
+    "𝓈": {
+      "expected": "script s"
+    },
+    "𝓉": {
+      "expected": "script t"
+    },
+    "𝓊": {
+      "expected": "script u"
+    },
+    "𝓋": {
+      "expected": "script v"
+    },
+    "𝓌": {
+      "expected": "script w"
+    },
+    "𝓍": {
+      "expected": "script x"
+    },
+    "𝓎": {
+      "expected": "script y"
+    },
+    "𝓏": {
+      "expected": "script z"
+    },
+    "𝖠": {
+      "expected": "utan seriffar A"
+    },
+    "𝖡": {
+      "expected": "utan seriffar B"
+    },
+    "𝖢": {
+      "expected": "utan seriffar C"
+    },
+    "𝖣": {
+      "expected": "utan seriffar D"
+    },
+    "𝖤": {
+      "expected": "utan seriffar E"
+    },
+    "𝖥": {
+      "expected": "utan seriffar F"
+    },
+    "𝖦": {
+      "expected": "utan seriffar G"
+    },
+    "𝖧": {
+      "expected": "utan seriffar H"
+    },
+    "𝖨": {
+      "expected": "utan seriffar I"
+    },
+    "𝖩": {
+      "expected": "utan seriffar J"
+    },
+    "𝖪": {
+      "expected": "utan seriffar K"
+    },
+    "𝖫": {
+      "expected": "utan seriffar L"
+    },
+    "𝖬": {
+      "expected": "utan seriffar M"
+    },
+    "𝖭": {
+      "expected": "utan seriffar N"
+    },
+    "𝖮": {
+      "expected": "utan seriffar O"
+    },
+    "𝖯": {
+      "expected": "utan seriffar P"
+    },
+    "𝖰": {
+      "expected": "utan seriffar Q"
+    },
+    "𝖱": {
+      "expected": "utan seriffar R"
+    },
+    "𝖲": {
+      "expected": "utan seriffar S"
+    },
+    "𝖳": {
+      "expected": "utan seriffar T"
+    },
+    "𝖴": {
+      "expected": "utan seriffar U"
+    },
+    "𝖵": {
+      "expected": "utan seriffar V"
+    },
+    "𝖶": {
+      "expected": "utan seriffar W"
+    },
+    "𝖷": {
+      "expected": "utan seriffar X"
+    },
+    "𝖸": {
+      "expected": "utan seriffar Y"
+    },
+    "𝖹": {
+      "expected": "utan seriffar Z"
+    },
+    "𝖺": {
+      "expected": "utan seriffar a"
+    },
+    "𝖻": {
+      "expected": "utan seriffar b"
+    },
+    "𝖼": {
+      "expected": "utan seriffar c"
+    },
+    "𝖽": {
+      "expected": "utan seriffar d"
+    },
+    "𝖾": {
+      "expected": "utan seriffar e"
+    },
+    "𝖿": {
+      "expected": "utan seriffar f"
+    },
+    "𝗀": {
+      "expected": "utan seriffar g"
+    },
+    "𝗁": {
+      "expected": "utan seriffar h"
+    },
+    "𝗂": {
+      "expected": "utan seriffar i"
+    },
+    "𝗃": {
+      "expected": "utan seriffar j"
+    },
+    "𝗄": {
+      "expected": "utan seriffar k"
+    },
+    "𝗅": {
+      "expected": "utan seriffar l"
+    },
+    "𝗆": {
+      "expected": "utan seriffar m"
+    },
+    "𝗇": {
+      "expected": "utan seriffar n"
+    },
+    "𝗈": {
+      "expected": "utan seriffar o"
+    },
+    "𝗉": {
+      "expected": "utan seriffar p"
+    },
+    "𝗊": {
+      "expected": "utan seriffar q"
+    },
+    "𝗋": {
+      "expected": "utan seriffar r"
+    },
+    "𝗌": {
+      "expected": "utan seriffar s"
+    },
+    "𝗍": {
+      "expected": "utan seriffar t"
+    },
+    "𝗎": {
+      "expected": "utan seriffar u"
+    },
+    "𝗏": {
+      "expected": "utan seriffar v"
+    },
+    "𝗐": {
+      "expected": "utan seriffar w"
+    },
+    "𝗑": {
+      "expected": "utan seriffar x"
+    },
+    "𝗒": {
+      "expected": "utan seriffar y"
+    },
+    "𝗓": {
+      "expected": "utan seriffar z"
+    },
+    "𝟢": {
+      "expected": "utan seriffar 0"
+    },
+    "𝟣": {
+      "expected": "utan seriffar 1"
+    },
+    "𝟤": {
+      "expected": "utan seriffar 2"
+    },
+    "𝟥": {
+      "expected": "utan seriffar 3"
+    },
+    "𝟦": {
+      "expected": "utan seriffar 4"
+    },
+    "𝟧": {
+      "expected": "utan seriffar 5"
+    },
+    "𝟨": {
+      "expected": "utan seriffar 6"
+    },
+    "𝟩": {
+      "expected": "utan seriffar 7"
+    },
+    "𝟪": {
+      "expected": "utan seriffar 8"
+    },
+    "𝟫": {
+      "expected": "utan seriffar 9"
+    },
+    "𝘈": {
+      "expected": "utan seriffar kursiv A"
+    },
+    "𝘉": {
+      "expected": "utan seriffar kursiv B"
+    },
+    "𝘊": {
+      "expected": "utan seriffar kursiv C"
+    },
+    "𝘋": {
+      "expected": "utan seriffar kursiv D"
+    },
+    "𝘌": {
+      "expected": "utan seriffar kursiv E"
+    },
+    "𝘍": {
+      "expected": "utan seriffar kursiv F"
+    },
+    "𝘎": {
+      "expected": "utan seriffar kursiv G"
+    },
+    "𝘏": {
+      "expected": "utan seriffar kursiv H"
+    },
+    "𝘐": {
+      "expected": "utan seriffar kursiv I"
+    },
+    "𝘑": {
+      "expected": "utan seriffar kursiv J"
+    },
+    "𝘒": {
+      "expected": "utan seriffar kursiv K"
+    },
+    "𝘓": {
+      "expected": "utan seriffar kursiv L"
+    },
+    "𝘔": {
+      "expected": "utan seriffar kursiv M"
+    },
+    "𝘕": {
+      "expected": "utan seriffar kursiv N"
+    },
+    "𝘖": {
+      "expected": "utan seriffar kursiv O"
+    },
+    "𝘗": {
+      "expected": "utan seriffar kursiv P"
+    },
+    "𝘘": {
+      "expected": "utan seriffar kursiv Q"
+    },
+    "𝘙": {
+      "expected": "utan seriffar kursiv R"
+    },
+    "𝘚": {
+      "expected": "utan seriffar kursiv S"
+    },
+    "𝘛": {
+      "expected": "utan seriffar kursiv T"
+    },
+    "𝘜": {
+      "expected": "utan seriffar kursiv U"
+    },
+    "𝘝": {
+      "expected": "utan seriffar kursiv V"
+    },
+    "𝘞": {
+      "expected": "utan seriffar kursiv W"
+    },
+    "𝘟": {
+      "expected": "utan seriffar kursiv X"
+    },
+    "𝘠": {
+      "expected": "utan seriffar kursiv Y"
+    },
+    "𝘡": {
+      "expected": "utan seriffar kursiv Z"
+    },
+    "𝘢": {
+      "expected": "utan seriffar kursiv a"
+    },
+    "𝘣": {
+      "expected": "utan seriffar kursiv b"
+    },
+    "𝘤": {
+      "expected": "utan seriffar kursiv c"
+    },
+    "𝘥": {
+      "expected": "utan seriffar kursiv d"
+    },
+    "𝘦": {
+      "expected": "utan seriffar kursiv e"
+    },
+    "𝘧": {
+      "expected": "utan seriffar kursiv f"
+    },
+    "𝘨": {
+      "expected": "utan seriffar kursiv g"
+    },
+    "𝘩": {
+      "expected": "utan seriffar kursiv h"
+    },
+    "𝘪": {
+      "expected": "utan seriffar kursiv i"
+    },
+    "𝘫": {
+      "expected": "utan seriffar kursiv j"
+    },
+    "𝘬": {
+      "expected": "utan seriffar kursiv k"
+    },
+    "𝘭": {
+      "expected": "utan seriffar kursiv l"
+    },
+    "𝘮": {
+      "expected": "utan seriffar kursiv m"
+    },
+    "𝘯": {
+      "expected": "utan seriffar kursiv n"
+    },
+    "𝘰": {
+      "expected": "utan seriffar kursiv o"
+    },
+    "𝘱": {
+      "expected": "utan seriffar kursiv p"
+    },
+    "𝘲": {
+      "expected": "utan seriffar kursiv q"
+    },
+    "𝘳": {
+      "expected": "utan seriffar kursiv r"
+    },
+    "𝘴": {
+      "expected": "utan seriffar kursiv s"
+    },
+    "𝘵": {
+      "expected": "utan seriffar kursiv t"
+    },
+    "𝘶": {
+      "expected": "utan seriffar kursiv u"
+    },
+    "𝘷": {
+      "expected": "utan seriffar kursiv v"
+    },
+    "𝘸": {
+      "expected": "utan seriffar kursiv w"
+    },
+    "𝘹": {
+      "expected": "utan seriffar kursiv x"
+    },
+    "𝘺": {
+      "expected": "utan seriffar kursiv y"
+    },
+    "𝘻": {
+      "expected": "utan seriffar kursiv z"
+    },
+    "𝗔": {
+      "expected": "utan seriffar feit A"
+    },
+    "𝗕": {
+      "expected": "utan seriffar feit B"
+    },
+    "𝗖": {
+      "expected": "utan seriffar feit C"
+    },
+    "𝗗": {
+      "expected": "utan seriffar feit D"
+    },
+    "𝗘": {
+      "expected": "utan seriffar feit E"
+    },
+    "𝗙": {
+      "expected": "utan seriffar feit F"
+    },
+    "𝗚": {
+      "expected": "utan seriffar feit G"
+    },
+    "𝗛": {
+      "expected": "utan seriffar feit H"
+    },
+    "𝗜": {
+      "expected": "utan seriffar feit I"
+    },
+    "𝗝": {
+      "expected": "utan seriffar feit J"
+    },
+    "𝗞": {
+      "expected": "utan seriffar feit K"
+    },
+    "𝗟": {
+      "expected": "utan seriffar feit L"
+    },
+    "𝗠": {
+      "expected": "utan seriffar feit M"
+    },
+    "𝗡": {
+      "expected": "utan seriffar feit N"
+    },
+    "𝗢": {
+      "expected": "utan seriffar feit O"
+    },
+    "𝗣": {
+      "expected": "utan seriffar feit P"
+    },
+    "𝗤": {
+      "expected": "utan seriffar feit Q"
+    },
+    "𝗥": {
+      "expected": "utan seriffar feit R"
+    },
+    "𝗦": {
+      "expected": "utan seriffar feit S"
+    },
+    "𝗧": {
+      "expected": "utan seriffar feit T"
+    },
+    "𝗨": {
+      "expected": "utan seriffar feit U"
+    },
+    "𝗩": {
+      "expected": "utan seriffar feit V"
+    },
+    "𝗪": {
+      "expected": "utan seriffar feit W"
+    },
+    "𝗫": {
+      "expected": "utan seriffar feit X"
+    },
+    "𝗬": {
+      "expected": "utan seriffar feit Y"
+    },
+    "𝗭": {
+      "expected": "utan seriffar feit Z"
+    },
+    "𝗮": {
+      "expected": "utan seriffar feit a"
+    },
+    "𝗯": {
+      "expected": "utan seriffar feit b"
+    },
+    "𝗰": {
+      "expected": "utan seriffar feit c"
+    },
+    "𝗱": {
+      "expected": "utan seriffar feit d"
+    },
+    "𝗲": {
+      "expected": "utan seriffar feit e"
+    },
+    "𝗳": {
+      "expected": "utan seriffar feit f"
+    },
+    "𝗴": {
+      "expected": "utan seriffar feit g"
+    },
+    "𝗵": {
+      "expected": "utan seriffar feit h"
+    },
+    "𝗶": {
+      "expected": "utan seriffar feit i"
+    },
+    "𝗷": {
+      "expected": "utan seriffar feit j"
+    },
+    "𝗸": {
+      "expected": "utan seriffar feit k"
+    },
+    "𝗹": {
+      "expected": "utan seriffar feit l"
+    },
+    "𝗺": {
+      "expected": "utan seriffar feit m"
+    },
+    "𝗻": {
+      "expected": "utan seriffar feit n"
+    },
+    "𝗼": {
+      "expected": "utan seriffar feit o"
+    },
+    "𝗽": {
+      "expected": "utan seriffar feit p"
+    },
+    "𝗾": {
+      "expected": "utan seriffar feit q"
+    },
+    "𝗿": {
+      "expected": "utan seriffar feit r"
+    },
+    "𝘀": {
+      "expected": "utan seriffar feit s"
+    },
+    "𝘁": {
+      "expected": "utan seriffar feit t"
+    },
+    "𝘂": {
+      "expected": "utan seriffar feit u"
+    },
+    "𝘃": {
+      "expected": "utan seriffar feit v"
+    },
+    "𝘄": {
+      "expected": "utan seriffar feit w"
+    },
+    "𝘅": {
+      "expected": "utan seriffar feit x"
+    },
+    "𝘆": {
+      "expected": "utan seriffar feit y"
+    },
+    "𝘇": {
+      "expected": "utan seriffar feit z"
+    },
+    "𝝖": {
+      "expected": "utan seriffar feit Alfa"
+    },
+    "𝝗": {
+      "expected": "utan seriffar feit Beta"
+    },
+    "𝝘": {
+      "expected": "utan seriffar feit Gamma"
+    },
+    "𝝙": {
+      "expected": "utan seriffar feit Delta"
+    },
+    "𝝚": {
+      "expected": "utan seriffar feit Epsilon"
+    },
+    "𝝛": {
+      "expected": "utan seriffar feit Zeta"
+    },
+    "𝝜": {
+      "expected": "utan seriffar feit Eta"
+    },
+    "𝝝": {
+      "expected": "utan seriffar feit Theta"
+    },
+    "𝝞": {
+      "expected": "utan seriffar feit Iota"
+    },
+    "𝝟": {
+      "expected": "utan seriffar feit Kappa"
+    },
+    "𝝠": {
+      "expected": "utan seriffar feit Lambda"
+    },
+    "𝝡": {
+      "expected": "utan seriffar feit My"
+    },
+    "𝝢": {
+      "expected": "utan seriffar feit Ny"
+    },
+    "𝝣": {
+      "expected": "utan seriffar feit Ksi"
+    },
+    "𝝤": {
+      "expected": "utan seriffar feit Omikron"
+    },
+    "𝝥": {
+      "expected": "utan seriffar feit Pi"
+    },
+    "𝝦": {
+      "expected": "utan seriffar feit Rho"
+    },
+    "𝝧": {
+      "expected": "utan seriffar feit Sluttsigma"
+    },
+    "𝝨": {
+      "expected": "utan seriffar feit Sigma"
+    },
+    "𝝩": {
+      "expected": "utan seriffar feit Tau"
+    },
+    "𝝪": {
+      "expected": "utan seriffar feit Ypsilon"
+    },
+    "𝝫": {
+      "expected": "utan seriffar feit Pi"
+    },
+    "𝝬": {
+      "expected": "utan seriffar feit Khi"
+    },
+    "𝝭": {
+      "expected": "utan seriffar feit Psi"
+    },
+    "𝝮": {
+      "expected": "utan seriffar feit Omega"
+    },
+    "𝝯": {
+      "expected": "utan seriffar feit nabla"
+    },
+    "𝝰": {
+      "expected": "utan seriffar feit alfa"
+    },
+    "𝝱": {
+      "expected": "utan seriffar feit beta"
+    },
+    "𝝲": {
+      "expected": "utan seriffar feit gamma"
+    },
+    "𝝳": {
+      "expected": "utan seriffar feit delta"
+    },
+    "𝝴": {
+      "expected": "utan seriffar feit epsilon"
+    },
+    "𝝵": {
+      "expected": "utan seriffar feit zeta"
+    },
+    "𝝶": {
+      "expected": "utan seriffar feit eta"
+    },
+    "𝝷": {
+      "expected": "utan seriffar feit theta"
+    },
+    "𝝸": {
+      "expected": "utan seriffar feit iota"
+    },
+    "𝝹": {
+      "expected": "utan seriffar feit kappa"
+    },
+    "𝝺": {
+      "expected": "utan seriffar feit lambda"
+    },
+    "𝝻": {
+      "expected": "utan seriffar feit my"
+    },
+    "𝝼": {
+      "expected": "utan seriffar feit ny"
+    },
+    "𝝽": {
+      "expected": "utan seriffar feit ksi"
+    },
+    "𝝾": {
+      "expected": "utan seriffar feit omikron"
+    },
+    "𝝿": {
+      "expected": "utan seriffar feit pi"
+    },
+    "𝞀": {
+      "expected": "utan seriffar feit rho"
+    },
+    "𝞁": {
+      "expected": "utan seriffar feit sluttsigma"
+    },
+    "𝞂": {
+      "expected": "utan seriffar feit sigma"
+    },
+    "𝞃": {
+      "expected": "utan seriffar feit tau"
+    },
+    "𝞄": {
+      "expected": "utan seriffar feit ypsilon"
+    },
+    "𝞅": {
+      "expected": "utan seriffar feit pi"
+    },
+    "𝞆": {
+      "expected": "utan seriffar feit khi"
+    },
+    "𝞇": {
+      "expected": "utan seriffar feit psi"
+    },
+    "𝞈": {
+      "expected": "utan seriffar feit omega"
+    },
+    "𝞉": {
+      "expected": "utan seriffar feit partiellderivert"
+    },
+    "𝞊": {
+      "expected": "utan seriffar feit epsilon"
+    },
+    "𝞋": {
+      "expected": "utan seriffar feit theta"
+    },
+    "𝞌": {
+      "expected": "utan seriffar feit kappa"
+    },
+    "𝞍": {
+      "expected": "utan seriffar feit pi"
+    },
+    "𝞎": {
+      "expected": "utan seriffar feit rho"
+    },
+    "𝞏": {
+      "expected": "utan seriffar feit pi"
+    },
+    "𝟬": {
+      "expected": "utan seriffar feit 0"
+    },
+    "𝟭": {
+      "expected": "utan seriffar feit 1"
+    },
+    "𝟮": {
+      "expected": "utan seriffar feit 2"
+    },
+    "𝟯": {
+      "expected": "utan seriffar feit 3"
+    },
+    "𝟰": {
+      "expected": "utan seriffar feit 4"
+    },
+    "𝟱": {
+      "expected": "utan seriffar feit 5"
+    },
+    "𝟲": {
+      "expected": "utan seriffar feit 6"
+    },
+    "𝟳": {
+      "expected": "utan seriffar feit 7"
+    },
+    "𝟴": {
+      "expected": "utan seriffar feit 8"
+    },
+    "𝟵": {
+      "expected": "utan seriffar feit 9"
+    },
+    "𝘼": {
+      "expected": "utan seriffar feit kursiv A"
+    },
+    "𝘽": {
+      "expected": "utan seriffar feit kursiv B"
+    },
+    "𝘾": {
+      "expected": "utan seriffar feit kursiv C"
+    },
+    "𝘿": {
+      "expected": "utan seriffar feit kursiv D"
+    },
+    "𝙀": {
+      "expected": "utan seriffar feit kursiv E"
+    },
+    "𝙁": {
+      "expected": "utan seriffar feit kursiv F"
+    },
+    "𝙂": {
+      "expected": "utan seriffar feit kursiv G"
+    },
+    "𝙃": {
+      "expected": "utan seriffar feit kursiv H"
+    },
+    "𝙄": {
+      "expected": "utan seriffar feit kursiv I"
+    },
+    "𝙅": {
+      "expected": "utan seriffar feit kursiv J"
+    },
+    "𝙆": {
+      "expected": "utan seriffar feit kursiv K"
+    },
+    "𝙇": {
+      "expected": "utan seriffar feit kursiv L"
+    },
+    "𝙈": {
+      "expected": "utan seriffar feit kursiv M"
+    },
+    "𝙉": {
+      "expected": "utan seriffar feit kursiv N"
+    },
+    "𝙊": {
+      "expected": "utan seriffar feit kursiv O"
+    },
+    "𝙋": {
+      "expected": "utan seriffar feit kursiv P"
+    },
+    "𝙌": {
+      "expected": "utan seriffar feit kursiv Q"
+    },
+    "𝙍": {
+      "expected": "utan seriffar feit kursiv R"
+    },
+    "𝙎": {
+      "expected": "utan seriffar feit kursiv S"
+    },
+    "𝙏": {
+      "expected": "utan seriffar feit kursiv T"
+    },
+    "𝙐": {
+      "expected": "utan seriffar feit kursiv U"
+    },
+    "𝙑": {
+      "expected": "utan seriffar feit kursiv V"
+    },
+    "𝙒": {
+      "expected": "utan seriffar feit kursiv W"
+    },
+    "𝙓": {
+      "expected": "utan seriffar feit kursiv X"
+    },
+    "𝙔": {
+      "expected": "utan seriffar feit kursiv Y"
+    },
+    "𝙕": {
+      "expected": "utan seriffar feit kursiv Z"
+    },
+    "𝙖": {
+      "expected": "utan seriffar feit kursiv a"
+    },
+    "𝙗": {
+      "expected": "utan seriffar feit kursiv b"
+    },
+    "𝙘": {
+      "expected": "utan seriffar feit kursiv c"
+    },
+    "𝙙": {
+      "expected": "utan seriffar feit kursiv d"
+    },
+    "𝙚": {
+      "expected": "utan seriffar feit kursiv e"
+    },
+    "𝙛": {
+      "expected": "utan seriffar feit kursiv f"
+    },
+    "𝙜": {
+      "expected": "utan seriffar feit kursiv g"
+    },
+    "𝙝": {
+      "expected": "utan seriffar feit kursiv h"
+    },
+    "𝙞": {
+      "expected": "utan seriffar feit kursiv i"
+    },
+    "𝙟": {
+      "expected": "utan seriffar feit kursiv j"
+    },
+    "𝙠": {
+      "expected": "utan seriffar feit kursiv k"
+    },
+    "𝙡": {
+      "expected": "utan seriffar feit kursiv l"
+    },
+    "𝙢": {
+      "expected": "utan seriffar feit kursiv m"
+    },
+    "𝙣": {
+      "expected": "utan seriffar feit kursiv n"
+    },
+    "𝙤": {
+      "expected": "utan seriffar feit kursiv o"
+    },
+    "𝙥": {
+      "expected": "utan seriffar feit kursiv p"
+    },
+    "𝙦": {
+      "expected": "utan seriffar feit kursiv q"
+    },
+    "𝙧": {
+      "expected": "utan seriffar feit kursiv r"
+    },
+    "𝙨": {
+      "expected": "utan seriffar feit kursiv s"
+    },
+    "𝙩": {
+      "expected": "utan seriffar feit kursiv t"
+    },
+    "𝙪": {
+      "expected": "utan seriffar feit kursiv u"
+    },
+    "𝙫": {
+      "expected": "utan seriffar feit kursiv v"
+    },
+    "𝙬": {
+      "expected": "utan seriffar feit kursiv w"
+    },
+    "𝙭": {
+      "expected": "utan seriffar feit kursiv x"
+    },
+    "𝙮": {
+      "expected": "utan seriffar feit kursiv y"
+    },
+    "𝙯": {
+      "expected": "utan seriffar feit kursiv z"
+    },
+    "𝞐": {
+      "expected": "utan seriffar feit kursiv Alfa"
+    },
+    "𝞑": {
+      "expected": "utan seriffar feit kursiv Beta"
+    },
+    "𝞒": {
+      "expected": "utan seriffar feit kursiv Gamma"
+    },
+    "𝞓": {
+      "expected": "utan seriffar feit kursiv Delta"
+    },
+    "𝞔": {
+      "expected": "utan seriffar feit kursiv Epsilon"
+    },
+    "𝞕": {
+      "expected": "utan seriffar feit kursiv Zeta"
+    },
+    "𝞖": {
+      "expected": "utan seriffar feit kursiv Eta"
+    },
+    "𝞗": {
+      "expected": "utan seriffar feit kursiv Theta"
+    },
+    "𝞘": {
+      "expected": "utan seriffar feit kursiv Iota"
+    },
+    "𝞙": {
+      "expected": "utan seriffar feit kursiv Kappa"
+    },
+    "𝞚": {
+      "expected": "utan seriffar feit kursiv Lambda"
+    },
+    "𝞛": {
+      "expected": "utan seriffar feit kursiv My"
+    },
+    "𝞜": {
+      "expected": "utan seriffar feit kursiv Ny"
+    },
+    "𝞝": {
+      "expected": "utan seriffar feit kursiv Ksi"
+    },
+    "𝞞": {
+      "expected": "utan seriffar feit kursiv Omikron"
+    },
+    "𝞟": {
+      "expected": "utan seriffar feit kursiv Pi"
+    },
+    "𝞠": {
+      "expected": "utan seriffar feit kursiv Rho"
+    },
+    "𝞡": {
+      "expected": "utan seriffar feit kursiv Sluttsigma"
+    },
+    "𝞢": {
+      "expected": "utan seriffar feit kursiv Sigma"
+    },
+    "𝞣": {
+      "expected": "utan seriffar feit kursiv Tau"
+    },
+    "𝞤": {
+      "expected": "utan seriffar feit kursiv Ypsilon"
+    },
+    "𝞥": {
+      "expected": "utan seriffar feit kursiv Pi"
+    },
+    "𝞦": {
+      "expected": "utan seriffar feit kursiv Khi"
+    },
+    "𝞧": {
+      "expected": "utan seriffar feit kursiv Psi"
+    },
+    "𝞨": {
+      "expected": "utan seriffar feit kursiv Omega"
+    },
+    "𝞩": {
+      "expected": "utan seriffar feit kursiv nabla"
+    },
+    "𝞪": {
+      "expected": "utan seriffar feit kursiv alfa"
+    },
+    "𝞫": {
+      "expected": "utan seriffar feit kursiv beta"
+    },
+    "𝞬": {
+      "expected": "utan seriffar feit kursiv gamma"
+    },
+    "𝞭": {
+      "expected": "utan seriffar feit kursiv delta"
+    },
+    "𝞮": {
+      "expected": "utan seriffar feit kursiv epsilon"
+    },
+    "𝞯": {
+      "expected": "utan seriffar feit kursiv zeta"
+    },
+    "𝞰": {
+      "expected": "utan seriffar feit kursiv eta"
+    },
+    "𝞱": {
+      "expected": "utan seriffar feit kursiv theta"
+    },
+    "𝞲": {
+      "expected": "utan seriffar feit kursiv iota"
+    },
+    "𝞳": {
+      "expected": "utan seriffar feit kursiv kappa"
+    },
+    "𝞴": {
+      "expected": "utan seriffar feit kursiv lambda"
+    },
+    "𝞵": {
+      "expected": "utan seriffar feit kursiv my"
+    },
+    "𝞶": {
+      "expected": "utan seriffar feit kursiv ny"
+    },
+    "𝞷": {
+      "expected": "utan seriffar feit kursiv ksi"
+    },
+    "𝞸": {
+      "expected": "utan seriffar feit kursiv omikron"
+    },
+    "𝞹": {
+      "expected": "utan seriffar feit kursiv pi"
+    },
+    "𝞺": {
+      "expected": "utan seriffar feit kursiv rho"
+    },
+    "𝞻": {
+      "expected": "utan seriffar feit kursiv sluttsigma"
+    },
+    "𝞼": {
+      "expected": "utan seriffar feit kursiv sigma"
+    },
+    "𝞽": {
+      "expected": "utan seriffar feit kursiv tau"
+    },
+    "𝞾": {
+      "expected": "utan seriffar feit kursiv ypsilon"
+    },
+    "𝞿": {
+      "expected": "utan seriffar feit kursiv pi"
+    },
+    "𝟀": {
+      "expected": "utan seriffar feit kursiv khi"
+    },
+    "𝟁": {
+      "expected": "utan seriffar feit kursiv psi"
+    },
+    "𝟂": {
+      "expected": "utan seriffar feit kursiv omega"
+    },
+    "𝟃": {
+      "expected": "utan seriffar feit kursiv partiellderivert"
+    },
+    "𝟄": {
+      "expected": "utan seriffar feit kursiv epsilon"
+    },
+    "𝟅": {
+      "expected": "utan seriffar feit kursiv theta"
+    },
+    "𝟆": {
+      "expected": "utan seriffar feit kursiv kappa"
+    },
+    "𝟇": {
+      "expected": "utan seriffar feit kursiv pi"
+    },
+    "𝟈": {
+      "expected": "utan seriffar feit kursiv rho"
+    },
+    "𝟉": {
+      "expected": "utan seriffar feit kursiv pi"
+    },
+    "⁰": {
+      "expected": "super 0"
+    },
+    "¹": {
+      "expected": "super 1"
+    },
+    "²": {
+      "expected": "super 2"
+    },
+    "³": {
+      "expected": "super 3"
+    },
+    "⁴": {
+      "expected": "super 4"
+    },
+    "⁵": {
+      "expected": "super 5"
+    },
+    "⁶": {
+      "expected": "super 6"
+    },
+    "⁷": {
+      "expected": "super 7"
+    },
+    "⁸": {
+      "expected": "super 8"
+    },
+    "⁹": {
+      "expected": "super 9"
+    },
+    "₀": {
+      "expected": "sub 0"
+    },
+    "₁": {
+      "expected": "sub 1"
+    },
+    "₂": {
+      "expected": "sub 2"
+    },
+    "₃": {
+      "expected": "sub 3"
+    },
+    "₄": {
+      "expected": "sub 4"
+    },
+    "₅": {
+      "expected": "sub 5"
+    },
+    "₆": {
+      "expected": "sub 6"
+    },
+    "₇": {
+      "expected": "sub 7"
+    },
+    "₈": {
+      "expected": "sub 8"
+    },
+    "₉": {
+      "expected": "sub 9"
+    },
+    "Ⓐ": {
+      "expected": "innsirkla stor bokstav A"
+    },
+    "Ⓑ": {
+      "expected": "innsirkla stor bokstav B"
+    },
+    "Ⓒ": {
+      "expected": "innsirkla stor bokstav C"
+    },
+    "Ⓓ": {
+      "expected": "innsirkla stor bokstav D"
+    },
+    "Ⓔ": {
+      "expected": "innsirkla stor bokstav E"
+    },
+    "Ⓕ": {
+      "expected": "innsirkla stor bokstav F"
+    },
+    "Ⓖ": {
+      "expected": "innsirkla stor bokstav G"
+    },
+    "Ⓗ": {
+      "expected": "innsirkla stor bokstav H"
+    },
+    "Ⓘ": {
+      "expected": "innsirkla stor bokstav I"
+    },
+    "Ⓙ": {
+      "expected": "innsirkla stor bokstav J"
+    },
+    "Ⓚ": {
+      "expected": "innsirkla stor bokstav K"
+    },
+    "Ⓛ": {
+      "expected": "innsirkla stor bokstav L"
+    },
+    "Ⓜ": {
+      "expected": "innsirkla stor bokstav M"
+    },
+    "Ⓝ": {
+      "expected": "innsirkla stor bokstav N"
+    },
+    "Ⓞ": {
+      "expected": "innsirkla stor bokstav O"
+    },
+    "Ⓟ": {
+      "expected": "innsirkla stor bokstav P"
+    },
+    "Ⓠ": {
+      "expected": "innsirkla stor bokstav Q"
+    },
+    "Ⓡ": {
+      "expected": "innsirkla stor bokstav R"
+    },
+    "Ⓢ": {
+      "expected": "innsirkla stor bokstav S"
+    },
+    "Ⓣ": {
+      "expected": "innsirkla stor bokstav T"
+    },
+    "Ⓤ": {
+      "expected": "innsirkla stor bokstav U"
+    },
+    "Ⓥ": {
+      "expected": "innsirkla stor bokstav V"
+    },
+    "Ⓦ": {
+      "expected": "innsirkla stor bokstav W"
+    },
+    "Ⓧ": {
+      "expected": "innsirkla stor bokstav X"
+    },
+    "Ⓨ": {
+      "expected": "innsirkla stor bokstav Y"
+    },
+    "Ⓩ": {
+      "expected": "innsirkla stor bokstav Z"
+    },
+    "ⓐ": {
+      "expected": "innsirkla a"
+    },
+    "ⓑ": {
+      "expected": "innsirkla b"
+    },
+    "ⓒ": {
+      "expected": "innsirkla c"
+    },
+    "ⓓ": {
+      "expected": "innsirkla d"
+    },
+    "ⓔ": {
+      "expected": "innsirkla e"
+    },
+    "ⓕ": {
+      "expected": "innsirkla f"
+    },
+    "ⓖ": {
+      "expected": "innsirkla g"
+    },
+    "ⓗ": {
+      "expected": "innsirkla h"
+    },
+    "ⓘ": {
+      "expected": "innsirkla i"
+    },
+    "ⓙ": {
+      "expected": "innsirkla j"
+    },
+    "ⓚ": {
+      "expected": "innsirkla k"
+    },
+    "ⓛ": {
+      "expected": "innsirkla l"
+    },
+    "ⓜ": {
+      "expected": "innsirkla m"
+    },
+    "ⓝ": {
+      "expected": "innsirkla n"
+    },
+    "ⓞ": {
+      "expected": "innsirkla o"
+    },
+    "ⓟ": {
+      "expected": "innsirkla p"
+    },
+    "ⓠ": {
+      "expected": "innsirkla q"
+    },
+    "ⓡ": {
+      "expected": "innsirkla r"
+    },
+    "ⓢ": {
+      "expected": "innsirkla s"
+    },
+    "ⓣ": {
+      "expected": "innsirkla t"
+    },
+    "ⓤ": {
+      "expected": "innsirkla u"
+    },
+    "ⓥ": {
+      "expected": "innsirkla v"
+    },
+    "ⓦ": {
+      "expected": "innsirkla w"
+    },
+    "ⓧ": {
+      "expected": "innsirkla x"
+    },
+    "ⓨ": {
+      "expected": "innsirkla y"
+    },
+    "ⓩ": {
+      "expected": "innsirkla z"
+    },
+    "⓪": {
+      "expected": "innsirkla 0"
+    },
+    "①": {
+      "expected": "innsirkla 1"
+    },
+    "②": {
+      "expected": "innsirkla 2"
+    },
+    "③": {
+      "expected": "innsirkla 3"
+    },
+    "④": {
+      "expected": "innsirkla 4"
+    },
+    "⑤": {
+      "expected": "innsirkla 5"
+    },
+    "⑥": {
+      "expected": "innsirkla 6"
+    },
+    "⑦": {
+      "expected": "innsirkla 7"
+    },
+    "⑧": {
+      "expected": "innsirkla 8"
+    },
+    "⑨": {
+      "expected": "innsirkla 9"
+    },
+    "⑩": {
+      "expected": "innsirkla 10"
+    },
+    "⑪": {
+      "expected": "innsirkla 11"
+    },
+    "⑫": {
+      "expected": "innsirkla 12"
+    },
+    "⑬": {
+      "expected": "innsirkla 13"
+    },
+    "⑭": {
+      "expected": "innsirkla 14"
+    },
+    "⑮": {
+      "expected": "innsirkla 15"
+    },
+    "⑯": {
+      "expected": "innsirkla 16"
+    },
+    "⑰": {
+      "expected": "innsirkla 17"
+    },
+    "⑱": {
+      "expected": "innsirkla 18"
+    },
+    "⑲": {
+      "expected": "innsirkla 19"
+    },
+    "⑳": {
+      "expected": "innsirkla 20"
+    },
+    "㉑": {
+      "expected": "innsirkla 21"
+    },
+    "㉒": {
+      "expected": "innsirkla 22"
+    },
+    "㉓": {
+      "expected": "innsirkla 23"
+    },
+    "㉔": {
+      "expected": "innsirkla 24"
+    },
+    "㉕": {
+      "expected": "innsirkla 25"
+    },
+    "㉖": {
+      "expected": "innsirkla 26"
+    },
+    "㉗": {
+      "expected": "innsirkla 27"
+    },
+    "㉘": {
+      "expected": "innsirkla 28"
+    },
+    "㉙": {
+      "expected": "innsirkla 29"
+    },
+    "㉚": {
+      "expected": "innsirkla 30"
+    },
+    "㉛": {
+      "expected": "innsirkla 31"
+    },
+    "㉜": {
+      "expected": "innsirkla 32"
+    },
+    "㉝": {
+      "expected": "innsirkla 33"
+    },
+    "㉞": {
+      "expected": "innsirkla 34"
+    },
+    "㉟": {
+      "expected": "innsirkla 35"
+    },
+    "㊱": {
+      "expected": "innsirkla 36"
+    },
+    "㊲": {
+      "expected": "innsirkla 37"
+    },
+    "㊳": {
+      "expected": "innsirkla 38"
+    },
+    "㊴": {
+      "expected": "innsirkla 39"
+    },
+    "㊵": {
+      "expected": "innsirkla 40"
+    },
+    "㊶": {
+      "expected": "innsirkla 41"
+    },
+    "㊷": {
+      "expected": "innsirkla 42"
+    },
+    "㊸": {
+      "expected": "innsirkla 43"
+    },
+    "㊹": {
+      "expected": "innsirkla 44"
+    },
+    "㊺": {
+      "expected": "innsirkla 45"
+    },
+    "㊻": {
+      "expected": "innsirkla 46"
+    },
+    "㊼": {
+      "expected": "innsirkla 47"
+    },
+    "㊽": {
+      "expected": "innsirkla 48"
+    },
+    "㊾": {
+      "expected": "innsirkla 49"
+    },
+    "㊿": {
+      "expected": "innsirkla 50"
+    },
+    "🄐": {
+      "expected": "i parentes stor bokstav A"
+    },
+    "🄑": {
+      "expected": "i parentes stor bokstav B"
+    },
+    "🄒": {
+      "expected": "i parentes stor bokstav C"
+    },
+    "🄓": {
+      "expected": "i parentes stor bokstav D"
+    },
+    "🄔": {
+      "expected": "i parentes stor bokstav E"
+    },
+    "🄕": {
+      "expected": "i parentes stor bokstav F"
+    },
+    "🄖": {
+      "expected": "i parentes stor bokstav G"
+    },
+    "🄗": {
+      "expected": "i parentes stor bokstav H"
+    },
+    "🄘": {
+      "expected": "i parentes stor bokstav I"
+    },
+    "🄙": {
+      "expected": "i parentes stor bokstav J"
+    },
+    "🄚": {
+      "expected": "i parentes stor bokstav K"
+    },
+    "🄛": {
+      "expected": "i parentes stor bokstav L"
+    },
+    "🄜": {
+      "expected": "i parentes stor bokstav M"
+    },
+    "🄝": {
+      "expected": "i parentes stor bokstav N"
+    },
+    "🄞": {
+      "expected": "i parentes stor bokstav O"
+    },
+    "🄟": {
+      "expected": "i parentes stor bokstav P"
+    },
+    "🄠": {
+      "expected": "i parentes stor bokstav Q"
+    },
+    "🄡": {
+      "expected": "i parentes stor bokstav R"
+    },
+    "🄢": {
+      "expected": "i parentes stor bokstav S"
+    },
+    "🄣": {
+      "expected": "i parentes stor bokstav T"
+    },
+    "🄤": {
+      "expected": "i parentes stor bokstav U"
+    },
+    "🄥": {
+      "expected": "i parentes stor bokstav V"
+    },
+    "🄦": {
+      "expected": "i parentes stor bokstav W"
+    },
+    "🄧": {
+      "expected": "i parentes stor bokstav X"
+    },
+    "🄨": {
+      "expected": "i parentes stor bokstav Y"
+    },
+    "🄩": {
+      "expected": "i parentes stor bokstav Z"
+    },
+    "⒜": {
+      "expected": "i parentes a"
+    },
+    "⒝": {
+      "expected": "i parentes b"
+    },
+    "⒞": {
+      "expected": "i parentes c"
+    },
+    "⒟": {
+      "expected": "i parentes d"
+    },
+    "⒠": {
+      "expected": "i parentes e"
+    },
+    "⒡": {
+      "expected": "i parentes f"
+    },
+    "⒢": {
+      "expected": "i parentes g"
+    },
+    "⒣": {
+      "expected": "i parentes h"
+    },
+    "⒤": {
+      "expected": "i parentes i"
+    },
+    "⒥": {
+      "expected": "i parentes j"
+    },
+    "⒦": {
+      "expected": "i parentes k"
+    },
+    "⒧": {
+      "expected": "i parentes l"
+    },
+    "⒨": {
+      "expected": "i parentes m"
+    },
+    "⒩": {
+      "expected": "i parentes n"
+    },
+    "⒪": {
+      "expected": "i parentes o"
+    },
+    "⒫": {
+      "expected": "i parentes p"
+    },
+    "⒬": {
+      "expected": "i parentes q"
+    },
+    "⒭": {
+      "expected": "i parentes r"
+    },
+    "⒮": {
+      "expected": "i parentes s"
+    },
+    "⒯": {
+      "expected": "i parentes t"
+    },
+    "⒰": {
+      "expected": "i parentes u"
+    },
+    "⒱": {
+      "expected": "i parentes v"
+    },
+    "⒲": {
+      "expected": "i parentes w"
+    },
+    "⒳": {
+      "expected": "i parentes x"
+    },
+    "⒴": {
+      "expected": "i parentes y"
+    },
+    "⒵": {
+      "expected": "i parentes z"
+    },
+    "⑴": {
+      "expected": "i parentes 1"
+    },
+    "⑵": {
+      "expected": "i parentes 2"
+    },
+    "⑶": {
+      "expected": "i parentes 3"
+    },
+    "⑷": {
+      "expected": "i parentes 4"
+    },
+    "⑸": {
+      "expected": "i parentes 5"
+    },
+    "⑹": {
+      "expected": "i parentes 6"
+    },
+    "⑺": {
+      "expected": "i parentes 7"
+    },
+    "⑻": {
+      "expected": "i parentes 8"
+    },
+    "⑼": {
+      "expected": "i parentes 9"
+    },
+    "⑽": {
+      "expected": "i parentes 10"
+    },
+    "⑾": {
+      "expected": "i parentes 11"
+    },
+    "⑿": {
+      "expected": "i parentes 12"
+    },
+    "⒀": {
+      "expected": "i parentes 13"
+    },
+    "⒁": {
+      "expected": "i parentes 14"
+    },
+    "⒂": {
+      "expected": "i parentes 15"
+    },
+    "⒃": {
+      "expected": "i parentes 16"
+    },
+    "⒄": {
+      "expected": "i parentes 17"
+    },
+    "⒅": {
+      "expected": "i parentes 18"
+    },
+    "⒆": {
+      "expected": "i parentes 19"
+    },
+    "⒇": {
+      "expected": "i parentes 20"
+    },
+    "🄀": {
+      "expected": "punktum 0"
+    },
+    "⒈": {
+      "expected": "punktum 1"
+    },
+    "⒉": {
+      "expected": "punktum 2"
+    },
+    "⒊": {
+      "expected": "punktum 3"
+    },
+    "⒋": {
+      "expected": "punktum 4"
+    },
+    "⒌": {
+      "expected": "punktum 5"
+    },
+    "⒍": {
+      "expected": "punktum 6"
+    },
+    "⒎": {
+      "expected": "punktum 7"
+    },
+    "⒏": {
+      "expected": "punktum 8"
+    },
+    "⒐": {
+      "expected": "punktum 9"
+    },
+    "⒑": {
+      "expected": "punktum 10"
+    },
+    "⒒": {
+      "expected": "punktum 11"
+    },
+    "⒓": {
+      "expected": "punktum 12"
+    },
+    "⒔": {
+      "expected": "punktum 13"
+    },
+    "⒕": {
+      "expected": "punktum 14"
+    },
+    "⒖": {
+      "expected": "punktum 15"
+    },
+    "⒗": {
+      "expected": "punktum 16"
+    },
+    "⒘": {
+      "expected": "punktum 17"
+    },
+    "⒙": {
+      "expected": "punktum 18"
+    },
+    "⒚": {
+      "expected": "punktum 19"
+    },
+    "⒛": {
+      "expected": "punktum 20"
+    },
+    "🅐": {
+      "expected": "svart innsirkla stor bokstav A"
+    },
+    "🅑": {
+      "expected": "svart innsirkla stor bokstav B"
+    },
+    "🅒": {
+      "expected": "svart innsirkla stor bokstav C"
+    },
+    "🅓": {
+      "expected": "svart innsirkla stor bokstav D"
+    },
+    "🅔": {
+      "expected": "svart innsirkla stor bokstav E"
+    },
+    "🅕": {
+      "expected": "svart innsirkla stor bokstav F"
+    },
+    "🅖": {
+      "expected": "svart innsirkla stor bokstav G"
+    },
+    "🅗": {
+      "expected": "svart innsirkla stor bokstav H"
+    },
+    "🅘": {
+      "expected": "svart innsirkla stor bokstav I"
+    },
+    "🅙": {
+      "expected": "svart innsirkla stor bokstav J"
+    },
+    "🅚": {
+      "expected": "svart innsirkla stor bokstav K"
+    },
+    "🅛": {
+      "expected": "svart innsirkla stor bokstav L"
+    },
+    "🅜": {
+      "expected": "svart innsirkla stor bokstav M"
+    },
+    "🅝": {
+      "expected": "svart innsirkla stor bokstav N"
+    },
+    "🅞": {
+      "expected": "svart innsirkla stor bokstav O"
+    },
+    "🅟": {
+      "expected": "svart innsirkla stor bokstav P"
+    },
+    "🅠": {
+      "expected": "svart innsirkla stor bokstav Q"
+    },
+    "🅡": {
+      "expected": "svart innsirkla stor bokstav R"
+    },
+    "🅢": {
+      "expected": "svart innsirkla stor bokstav S"
+    },
+    "🅣": {
+      "expected": "svart innsirkla stor bokstav T"
+    },
+    "🅤": {
+      "expected": "svart innsirkla stor bokstav U"
+    },
+    "🅥": {
+      "expected": "svart innsirkla stor bokstav V"
+    },
+    "🅦": {
+      "expected": "svart innsirkla stor bokstav W"
+    },
+    "🅧": {
+      "expected": "svart innsirkla stor bokstav X"
+    },
+    "🅨": {
+      "expected": "svart innsirkla stor bokstav Y"
+    },
+    "🅩": {
+      "expected": "svart innsirkla stor bokstav Z"
+    },
+    "⓿": {
+      "expected": "svart innsirkla 0"
+    },
+    "❶": {
+      "expected": "svart innsirkla 1"
+    },
+    "❷": {
+      "expected": "svart innsirkla 2"
+    },
+    "❸": {
+      "expected": "svart innsirkla 3"
+    },
+    "❹": {
+      "expected": "svart innsirkla 4"
+    },
+    "❺": {
+      "expected": "svart innsirkla 5"
+    },
+    "❻": {
+      "expected": "svart innsirkla 6"
+    },
+    "❼": {
+      "expected": "svart innsirkla 7"
+    },
+    "❽": {
+      "expected": "svart innsirkla 8"
+    },
+    "❾": {
+      "expected": "svart innsirkla 9"
+    },
+    "❿": {
+      "expected": "svart innsirkla 10"
+    },
+    "⓫": {
+      "expected": "svart innsirkla 11"
+    },
+    "⓬": {
+      "expected": "svart innsirkla 12"
+    },
+    "⓭": {
+      "expected": "svart innsirkla 13"
+    },
+    "⓮": {
+      "expected": "svart innsirkla 14"
+    },
+    "⓯": {
+      "expected": "svart innsirkla 15"
+    },
+    "⓰": {
+      "expected": "svart innsirkla 16"
+    },
+    "⓱": {
+      "expected": "svart innsirkla 17"
+    },
+    "⓲": {
+      "expected": "svart innsirkla 18"
+    },
+    "⓳": {
+      "expected": "svart innsirkla 19"
+    },
+    "⓴": {
+      "expected": "svart innsirkla 20"
+    },
+    "⓵": {
+      "expected": "dobbelt innsirkla 1"
+    },
+    "⓶": {
+      "expected": "dobbelt innsirkla 2"
+    },
+    "⓷": {
+      "expected": "dobbelt innsirkla 3"
+    },
+    "⓸": {
+      "expected": "dobbelt innsirkla 4"
+    },
+    "⓹": {
+      "expected": "dobbelt innsirkla 5"
+    },
+    "⓺": {
+      "expected": "dobbelt innsirkla 6"
+    },
+    "⓻": {
+      "expected": "dobbelt innsirkla 7"
+    },
+    "⓼": {
+      "expected": "dobbelt innsirkla 8"
+    },
+    "⓽": {
+      "expected": "dobbelt innsirkla 9"
+    },
+    "⓾": {
+      "expected": "dobbelt innsirkla 10"
+    },
+    "🄋": {
+      "expected": "innsirkla utan seriffar 0"
+    },
+    "➀": {
+      "expected": "innsirkla utan seriffar 1"
+    },
+    "➁": {
+      "expected": "innsirkla utan seriffar 2"
+    },
+    "➂": {
+      "expected": "innsirkla utan seriffar 3"
+    },
+    "➃": {
+      "expected": "innsirkla utan seriffar 4"
+    },
+    "➄": {
+      "expected": "innsirkla utan seriffar 5"
+    },
+    "➅": {
+      "expected": "innsirkla utan seriffar 6"
+    },
+    "➆": {
+      "expected": "innsirkla utan seriffar 7"
+    },
+    "➇": {
+      "expected": "innsirkla utan seriffar 8"
+    },
+    "➈": {
+      "expected": "innsirkla utan seriffar 9"
+    },
+    "➉": {
+      "expected": "innsirkla utan seriffar 10"
+    },
+    "🄌": {
+      "expected": "svart innsirkla utan seriffar 0"
+    },
+    "➊": {
+      "expected": "svart innsirkla utan seriffar 1"
+    },
+    "➋": {
+      "expected": "svart innsirkla utan seriffar 2"
+    },
+    "➌": {
+      "expected": "svart innsirkla utan seriffar 3"
+    },
+    "➍": {
+      "expected": "svart innsirkla utan seriffar 4"
+    },
+    "➎": {
+      "expected": "svart innsirkla utan seriffar 5"
+    },
+    "➏": {
+      "expected": "svart innsirkla utan seriffar 6"
+    },
+    "➐": {
+      "expected": "svart innsirkla utan seriffar 7"
+    },
+    "➑": {
+      "expected": "svart innsirkla utan seriffar 8"
+    },
+    "➒": {
+      "expected": "svart innsirkla utan seriffar 9"
+    },
+    "➓": {
+      "expected": "svart innsirkla utan seriffar 10"
+    },
+    "🄁": {
+      "expected": "komma 0"
+    },
+    "🄂": {
+      "expected": "komma 1"
+    },
+    "🄃": {
+      "expected": "komma 2"
+    },
+    "🄄": {
+      "expected": "komma 3"
+    },
+    "🄅": {
+      "expected": "komma 4"
+    },
+    "🄆": {
+      "expected": "komma 5"
+    },
+    "🄇": {
+      "expected": "komma 6"
+    },
+    "🄈": {
+      "expected": "komma 7"
+    },
+    "🄉": {
+      "expected": "komma 8"
+    },
+    "🄊": {
+      "expected": "komma 9"
+    },
+    "🄰": {
+      "expected": "kvadratisk stor bokstav A"
+    },
+    "🄱": {
+      "expected": "kvadratisk stor bokstav B"
+    },
+    "🄲": {
+      "expected": "kvadratisk stor bokstav C"
+    },
+    "🄳": {
+      "expected": "kvadratisk stor bokstav D"
+    },
+    "🄴": {
+      "expected": "kvadratisk stor bokstav E"
+    },
+    "🄵": {
+      "expected": "kvadratisk stor bokstav F"
+    },
+    "🄶": {
+      "expected": "kvadratisk stor bokstav G"
+    },
+    "🄷": {
+      "expected": "kvadratisk stor bokstav H"
+    },
+    "🄸": {
+      "expected": "kvadratisk stor bokstav I"
+    },
+    "🄹": {
+      "expected": "kvadratisk stor bokstav J"
+    },
+    "🄺": {
+      "expected": "kvadratisk stor bokstav K"
+    },
+    "🄻": {
+      "expected": "kvadratisk stor bokstav L"
+    },
+    "🄼": {
+      "expected": "kvadratisk stor bokstav M"
+    },
+    "🄽": {
+      "expected": "kvadratisk stor bokstav N"
+    },
+    "🄾": {
+      "expected": "kvadratisk stor bokstav O"
+    },
+    "🄿": {
+      "expected": "kvadratisk stor bokstav P"
+    },
+    "🅀": {
+      "expected": "kvadratisk stor bokstav Q"
+    },
+    "🅁": {
+      "expected": "kvadratisk stor bokstav R"
+    },
+    "🅂": {
+      "expected": "kvadratisk stor bokstav S"
+    },
+    "🅃": {
+      "expected": "kvadratisk stor bokstav T"
+    },
+    "🅄": {
+      "expected": "kvadratisk stor bokstav U"
+    },
+    "🅅": {
+      "expected": "kvadratisk stor bokstav V"
+    },
+    "🅆": {
+      "expected": "kvadratisk stor bokstav W"
+    },
+    "🅇": {
+      "expected": "kvadratisk stor bokstav X"
+    },
+    "🅈": {
+      "expected": "kvadratisk stor bokstav Y"
+    },
+    "🅉": {
+      "expected": "kvadratisk stor bokstav Z"
+    },
+    "🅰": {
+      "expected": "svart kvadratisk stor bokstav A"
+    },
+    "🅱": {
+      "expected": "svart kvadratisk stor bokstav B"
+    },
+    "🅲": {
+      "expected": "svart kvadratisk stor bokstav C"
+    },
+    "🅳": {
+      "expected": "svart kvadratisk stor bokstav D"
+    },
+    "🅴": {
+      "expected": "svart kvadratisk stor bokstav E"
+    },
+    "🅵": {
+      "expected": "svart kvadratisk stor bokstav F"
+    },
+    "🅶": {
+      "expected": "svart kvadratisk stor bokstav G"
+    },
+    "🅷": {
+      "expected": "svart kvadratisk stor bokstav H"
+    },
+    "🅸": {
+      "expected": "svart kvadratisk stor bokstav I"
+    },
+    "🅹": {
+      "expected": "svart kvadratisk stor bokstav J"
+    },
+    "🅺": {
+      "expected": "svart kvadratisk stor bokstav K"
+    },
+    "🅻": {
+      "expected": "svart kvadratisk stor bokstav L"
+    },
+    "🅼": {
+      "expected": "svart kvadratisk stor bokstav M"
+    },
+    "🅽": {
+      "expected": "svart kvadratisk stor bokstav N"
+    },
+    "🅾": {
+      "expected": "svart kvadratisk stor bokstav O"
+    },
+    "🅿": {
+      "expected": "svart kvadratisk stor bokstav P"
+    },
+    "🆀": {
+      "expected": "svart kvadratisk stor bokstav Q"
+    },
+    "🆁": {
+      "expected": "svart kvadratisk stor bokstav R"
+    },
+    "🆂": {
+      "expected": "svart kvadratisk stor bokstav S"
+    },
+    "🆃": {
+      "expected": "svart kvadratisk stor bokstav T"
+    },
+    "🆄": {
+      "expected": "svart kvadratisk stor bokstav U"
+    },
+    "🆅": {
+      "expected": "svart kvadratisk stor bokstav V"
+    },
+    "🆆": {
+      "expected": "svart kvadratisk stor bokstav W"
+    },
+    "🆇": {
+      "expected": "svart kvadratisk stor bokstav X"
+    },
+    "🆈": {
+      "expected": "svart kvadratisk stor bokstav Y"
+    },
+    "🆉": {
+      "expected": "svart kvadratisk stor bokstav Z"
+    }
+  }
+}

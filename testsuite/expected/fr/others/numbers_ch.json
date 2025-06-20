@@ -1,0 +1,645 @@
+{
+  "locale": "fr",
+  "subiso": "ch",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Swiss Number word tests.",
+  "kind": "numberToWords",
+  "active": "NumbersFrench",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "zero"
+    },
+    "Number_1": {
+      "expected": "un"
+    },
+    "Number_2": {
+      "expected": "deux"
+    },
+    "Number_3": {
+      "expected": "trois"
+    },
+    "Number_4": {
+      "expected": "quatre"
+    },
+    "Number_5": {
+      "expected": "cinq"
+    },
+    "Number_6": {
+      "expected": "six"
+    },
+    "Number_7": {
+      "expected": "sept"
+    },
+    "Number_8": {
+      "expected": "huit"
+    },
+    "Number_9": {
+      "expected": "neuf"
+    },
+    "Number_10": {
+      "expected": "dix"
+    },
+    "Number_11": {
+      "expected": "onze"
+    },
+    "Number_12": {
+      "expected": "douze"
+    },
+    "Number_13": {
+      "expected": "treize"
+    },
+    "Number_14": {
+      "expected": "quatorze"
+    },
+    "Number_15": {
+      "expected": "quinze"
+    },
+    "Number_16": {
+      "expected": "seize"
+    },
+    "Number_17": {
+      "expected": "dix-sept"
+    },
+    "Number_18": {
+      "expected": "dix-huit"
+    },
+    "Number_19": {
+      "expected": "dix-neuf"
+    },
+    "Number_20": {
+      "expected": "vingt"
+    },
+    "Number_21": {
+      "expected": "vingt-et-un"
+    },
+    "Number_22": {
+      "expected": "vingt-deux"
+    },
+    "Number_23": {
+      "expected": "vingt-trois"
+    },
+    "Number_24": {
+      "expected": "vingt-quatre"
+    },
+    "Number_25": {
+      "expected": "vingt-cinq"
+    },
+    "Number_26": {
+      "expected": "vingt-six"
+    },
+    "Number_27": {
+      "expected": "vingt-sept"
+    },
+    "Number_28": {
+      "expected": "vingt-huit"
+    },
+    "Number_29": {
+      "expected": "vingt-neuf"
+    },
+    "Number_30": {
+      "expected": "trente"
+    },
+    "Number_31": {
+      "expected": "trente-et-un"
+    },
+    "Number_32": {
+      "expected": "trente-deux"
+    },
+    "Number_33": {
+      "expected": "trente-trois"
+    },
+    "Number_34": {
+      "expected": "trente-quatre"
+    },
+    "Number_35": {
+      "expected": "trente-cinq"
+    },
+    "Number_36": {
+      "expected": "trente-six"
+    },
+    "Number_37": {
+      "expected": "trente-sept"
+    },
+    "Number_38": {
+      "expected": "trente-huit"
+    },
+    "Number_39": {
+      "expected": "trente-neuf"
+    },
+    "Number_40": {
+      "expected": "quarante"
+    },
+    "Number_41": {
+      "expected": "quarante-et-un"
+    },
+    "Number_42": {
+      "expected": "quarante-deux"
+    },
+    "Number_43": {
+      "expected": "quarante-trois"
+    },
+    "Number_44": {
+      "expected": "quarante-quatre"
+    },
+    "Number_45": {
+      "expected": "quarante-cinq"
+    },
+    "Number_46": {
+      "expected": "quarante-six"
+    },
+    "Number_47": {
+      "expected": "quarante-sept"
+    },
+    "Number_48": {
+      "expected": "quarante-huit"
+    },
+    "Number_49": {
+      "expected": "quarante-neuf"
+    },
+    "Number_50": {
+      "expected": "cinquante"
+    },
+    "Number_51": {
+      "expected": "cinquante-et-un"
+    },
+    "Number_52": {
+      "expected": "cinquante-deux"
+    },
+    "Number_53": {
+      "expected": "cinquante-trois"
+    },
+    "Number_54": {
+      "expected": "cinquante-quatre"
+    },
+    "Number_55": {
+      "expected": "cinquante-cinq"
+    },
+    "Number_56": {
+      "expected": "cinquante-six"
+    },
+    "Number_57": {
+      "expected": "cinquante-sept"
+    },
+    "Number_58": {
+      "expected": "cinquante-huit"
+    },
+    "Number_59": {
+      "expected": "cinquante-neuf"
+    },
+    "Number_60": {
+      "expected": "soixante"
+    },
+    "Number_61": {
+      "expected": "soixante-et-un"
+    },
+    "Number_62": {
+      "expected": "soixante-deux"
+    },
+    "Number_63": {
+      "expected": "soixante-trois"
+    },
+    "Number_64": {
+      "expected": "soixante-quatre"
+    },
+    "Number_65": {
+      "expected": "soixante-cinq"
+    },
+    "Number_66": {
+      "expected": "soixante-six"
+    },
+    "Number_67": {
+      "expected": "soixante-sept"
+    },
+    "Number_68": {
+      "expected": "soixante-huit"
+    },
+    "Number_69": {
+      "expected": "soixante-neuf"
+    },
+    "Number_70": {
+      "expected": "septante"
+    },
+    "Number_71": {
+      "expected": "septante-et-un"
+    },
+    "Number_72": {
+      "expected": "septante-deux"
+    },
+    "Number_73": {
+      "expected": "septante-trois"
+    },
+    "Number_74": {
+      "expected": "septante-quatre"
+    },
+    "Number_75": {
+      "expected": "septante-cinq"
+    },
+    "Number_76": {
+      "expected": "septante-six"
+    },
+    "Number_77": {
+      "expected": "septante-sept"
+    },
+    "Number_78": {
+      "expected": "septante-huit"
+    },
+    "Number_79": {
+      "expected": "septante-neuf"
+    },
+    "Number_80": {
+      "expected": "huitante"
+    },
+    "Number_81": {
+      "expected": "huitante-et-un"
+    },
+    "Number_82": {
+      "expected": "huitante-deux"
+    },
+    "Number_83": {
+      "expected": "huitante-trois"
+    },
+    "Number_84": {
+      "expected": "huitante-quatre"
+    },
+    "Number_85": {
+      "expected": "huitante-cinq"
+    },
+    "Number_86": {
+      "expected": "huitante-six"
+    },
+    "Number_87": {
+      "expected": "huitante-sept"
+    },
+    "Number_88": {
+      "expected": "huitante-huit"
+    },
+    "Number_89": {
+      "expected": "huitante-neuf"
+    },
+    "Number_90": {
+      "expected": "nonante"
+    },
+    "Number_91": {
+      "expected": "nonante-et-un"
+    },
+    "Number_92": {
+      "expected": "nonante-deux"
+    },
+    "Number_93": {
+      "expected": "nonante-trois"
+    },
+    "Number_94": {
+      "expected": "nonante-quatre"
+    },
+    "Number_95": {
+      "expected": "nonante-cinq"
+    },
+    "Number_96": {
+      "expected": "nonante-six"
+    },
+    "Number_97": {
+      "expected": "nonante-sept"
+    },
+    "Number_98": {
+      "expected": "nonante-huit"
+    },
+    "Number_99": {
+      "expected": "nonante-neuf"
+    },
+    "Number_100": {
+      "expected": "un-cent"
+    },
+    "Number_101": {
+      "expected": "un-cent-et-un"
+    },
+    "Number_102": {
+      "expected": "un-cent-deux"
+    },
+    "Number_103": {
+      "expected": "un-cent-trois"
+    },
+    "Number_104": {
+      "expected": "un-cent-quatre"
+    },
+    "Number_105": {
+      "expected": "un-cent-cinq"
+    },
+    "Number_106": {
+      "expected": "un-cent-six"
+    },
+    "Number_107": {
+      "expected": "un-cent-sept"
+    },
+    "Number_108": {
+      "expected": "un-cent-huit"
+    },
+    "Number_109": {
+      "expected": "un-cent-neuf"
+    },
+    "Number_110": {
+      "expected": "un-cent-dix"
+    },
+    "Number_200": {
+      "expected": "deux-cent"
+    },
+    "Number_201": {
+      "expected": "deux-cent-et-un"
+    },
+    "Number_300": {
+      "expected": "troi-cent"
+    },
+    "Number_301": {
+      "expected": "trois-cent-et-un"
+    },
+    "Number_400": {
+      "expected": "quatre-cent"
+    },
+    "Number_401": {
+      "expected": "quatre-cent-et-un"
+    },
+    "Number_500": {
+      "expected": "cinq-cent"
+    },
+    "Number_501": {
+      "expected": "cinq-cent-et-un"
+    },
+    "Number_600": {
+      "expected": "six-cent"
+    },
+    "Number_601": {
+      "expected": "six-cent-et-un"
+    },
+    "Number_700": {
+      "expected": "sept-cent"
+    },
+    "Number_701": {
+      "expected": "sept-cent-et-un"
+    },
+    "Number_800": {
+      "expected": "huit-cent"
+    },
+    "Number_801": {
+      "expected": "huit-cent-et-un"
+    },
+    "Number_900": {
+      "expected": "neuf-cent"
+    },
+    "Number_901": {
+      "expected": "neuf-cent-et-un"
+    },
+    "Number_1000": {
+      "expected": "un-mille"
+    },
+    "Number_1001": {
+      "expected": "un-mille-un"
+    },
+    "Number_2000": {
+      "expected": "deux-mille"
+    },
+    "Number_2001": {
+      "expected": "deux-mille-un"
+    },
+    "Number_3000": {
+      "expected": "trois-mille"
+    },
+    "Number_3001": {
+      "expected": "trois-mille-un"
+    },
+    "Number_4000": {
+      "expected": "quatre-mille"
+    },
+    "Number_4001": {
+      "expected": "quatre-mille-un"
+    },
+    "Number_5000": {
+      "expected": "cinq-mille"
+    },
+    "Number_5001": {
+      "expected": "cinq-mille-un"
+    },
+    "Number_6000": {
+      "expected": "six-mille"
+    },
+    "Number_6001": {
+      "expected": "six-mille-un"
+    },
+    "Number_7000": {
+      "expected": "sept-mille"
+    },
+    "Number_7001": {
+      "expected": "sept-mille-un"
+    },
+    "Number_8000": {
+      "expected": "huit-mille"
+    },
+    "Number_8001": {
+      "expected": "huit-mille-un"
+    },
+    "Number_9000": {
+      "expected": "neuf-mille"
+    },
+    "Number_9001": {
+      "expected": "neuf-mille-un"
+    },
+    "Number_10000": {
+      "expected": "dix-mille"
+    },
+    "Number_10001": {
+      "expected": "dix-mille-un"
+    },
+    "Number_20000": {
+      "expected": "vingt-mille"
+    },
+    "Number_20001": {
+      "expected": "vingt-mille-un"
+    },
+    "Number_30000": {
+      "expected": "trente-mille"
+    },
+    "Number_30001": {
+      "expected": "trente-mille-un"
+    },
+    "Number_40000": {
+      "expected": "quarante-mille"
+    },
+    "Number_40001": {
+      "expected": "quarante-mille-un"
+    },
+    "Number_50000": {
+      "expected": "cinquante-mille"
+    },
+    "Number_50001": {
+      "expected": "cinquante-mille-un"
+    },
+    "Number_60000": {
+      "expected": "soixante-mille"
+    },
+    "Number_60001": {
+      "expected": "soixante-mille-un"
+    },
+    "Number_70000": {
+      "expected": "septante-mille"
+    },
+    "Number_70001": {
+      "expected": "septante-mille-un"
+    },
+    "Number_80000": {
+      "expected": "huitante-mille"
+    },
+    "Number_80001": {
+      "expected": "huitante-mille-un"
+    },
+    "Number_90000": {
+      "expected": "nonante-mille"
+    },
+    "Number_90001": {
+      "expected": "nonante-mille-un"
+    },
+    "Number_100000": {
+      "expected": "un-cent-mille"
+    },
+    "Number_1000000": {
+      "expected": "un-million"
+    },
+    "Number_10000000": {
+      "expected": "dix-millions"
+    },
+    "Number_100000000": {
+      "expected": "un-cent-millions"
+    },
+    "Number_1000000000": {
+      "expected": "un-milliard"
+    },
+    "Number_10000000000": {
+      "expected": "dix-milliards"
+    },
+    "Number_100000000000": {
+      "expected": "un-cent-milliards"
+    },
+    "Number_1000000000000": {
+      "expected": "un-billion"
+    },
+    "Number_10000000000000": {
+      "expected": "dix-billions"
+    },
+    "Number_100000000000000": {
+      "expected": "un-cent-billions"
+    },
+    "Number_1000000000000000": {
+      "expected": "un-mille billions"
+    },
+    "Number_10000000000000000": {
+      "expected": "dix-mille billions"
+    },
+    "Number_100001": {
+      "expected": "un-cent-mille-un"
+    },
+    "Number_200000": {
+      "expected": "deux-cent-mille"
+    },
+    "Number_200001": {
+      "expected": "deux-cent-mille-un"
+    },
+    "Number_1000001": {
+      "expected": "un-million-un"
+    },
+    "Number_2000000": {
+      "expected": "deux-millions"
+    },
+    "Number_2000001": {
+      "expected": "deux-millions-un"
+    },
+    "Number_10000001": {
+      "expected": "dix-millions-un"
+    },
+    "Number_20000000": {
+      "expected": "vingt-millions"
+    },
+    "Number_20000001": {
+      "expected": "vingt-millions-un"
+    },
+    "Number_100000001": {
+      "expected": "un-cent-millions-un"
+    },
+    "Number_200000000": {
+      "expected": "deux-cent-millions"
+    },
+    "Number_200000001": {
+      "expected": "deux-cent-millions-un"
+    },
+    "Number_1000000001": {
+      "expected": "un-milliard-un"
+    },
+    "Number_2000000000": {
+      "expected": "deux-milliards"
+    },
+    "Number_2000000001": {
+      "expected": "deux-milliards-un"
+    },
+    "Number_10000000001": {
+      "expected": "dix-milliards-un"
+    },
+    "Number_20000000000": {
+      "expected": "vingt-milliards"
+    },
+    "Number_20000000001": {
+      "expected": "vingt-milliards-un"
+    },
+    "Number_100000000001": {
+      "expected": "un-cent-milliards-un"
+    },
+    "Number_200000000000": {
+      "expected": "deux-cent-milliards"
+    },
+    "Number_200000000001": {
+      "expected": "deux-cent-milliards-un"
+    },
+    "Number_1000000000001": {
+      "expected": "un-billion-un"
+    },
+    "Number_2000000000000": {
+      "expected": "deux-billions"
+    },
+    "Number_2000000000001": {
+      "expected": "deux-billions-un"
+    },
+    "Number_10000000000001": {
+      "expected": "dix-billions-un"
+    },
+    "Number_20000000000000": {
+      "expected": "vingt-billions"
+    },
+    "Number_20000000000001": {
+      "expected": "vingt-billions-un"
+    },
+    "Number_100000000000001": {
+      "expected": "un-cent-billions-un"
+    },
+    "Number_200000000000000": {
+      "expected": "deux-cent-billions"
+    },
+    "Number_200000000000001": {
+      "expected": "deux-cent-billions-un"
+    },
+    "Number_1000000000000001": {
+      "expected": "un-mille billions-un"
+    },
+    "Number_2000000000000000": {
+      "expected": "deux-mille billions"
+    },
+    "Number_2000000000000001": {
+      "expected": "deux-mille billions-un"
+    },
+    "Number_10000000000000001": {
+      "expected": "dix-mille billions"
+    },
+    "Number_20000000000000000": {
+      "expected": "vingt-mille billions"
+    },
+    "Number_20000000000000001": {
+      "expected": "vingt-mille billions"
+    }
+  }
+}

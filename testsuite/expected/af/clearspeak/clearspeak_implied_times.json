@@ -1,0 +1,484 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakImpliedTimes",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "Afrikaans Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Implied Times",
+    "ImpTimes001": {
+      "expected": "2 maal 3"
+    },
+    "ImpTimes002": {
+      "expected": "2 maal 3"
+    },
+    "ImpTimes003": {
+      "expected": "2 tot die vierde mag, maal 3"
+    },
+    "ImpTimes004": {
+      "expected": "2 maal, links hakkie, 3 plus 4, regs hakkie"
+    },
+    "ImpTimes005": {
+      "expected": "2 maal, links blokhakkie, 3 plus 4, regs blokhakkie"
+    },
+    "ImpTimes006": {
+      "expected": "3 maal 2"
+    },
+    "ImpTimes007": {
+      "expected": "2 maal, links hakkie, 3 plus 4, regs hakkie, kwadraat"
+    },
+    "ImpTimes008": {
+      "expected": "links hakkie, 2 plus 7, regs hakkie, maal, links hakkie, 3 minus 6, regs hakkie"
+    },
+    "ImpTimes009": {
+      "expected": "links blokhakkie, 2 plus 7, regs blokhakkie, maal, links blokhakkie, 3 minus 6, regs blokhakkie"
+    },
+    "_comment2_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes011": {
+      "expected": "x maal, links hakkie, y plus z, regs hakkie"
+    },
+    "ImpTimes012": {
+      "expected": "2 maal, links hakkie, y plus 1, regs hakkie"
+    },
+    "ImpTimes013": {
+      "expected": "links hakkie, 2 minus 1, regs hakkie, maal x"
+    },
+    "ImpTimes014": {
+      "expected": "p onderskrif 1, maal, links hakkie, 3 plus 7, regs hakkie"
+    },
+    "ImpTimes015": {
+      "expected": "p onderskrif 1, verhef tot die, a onderskrif 1, mag, p onderskrif 2, verhef tot die, a onderskrif 2, mag"
+    },
+    "ImpTimes016": {
+      "expected": "links hakkie, x plus y, regs hakkie, tot die negatiewe 4 mag, maal, links hakkie, x minus y, regs hakkie, tot die negatiewe 4 mag"
+    },
+    "ImpTimes017": {
+      "expected": "2 verhef tot die 4 maal, links hakkie, x plus y, regs hakkie, mag"
+    },
+    "ImpTimes018": {
+      "expected": "x y"
+    },
+    "ImpTimes019": {
+      "expected": "x kwadraat, y tot die mag drie"
+    },
+    "ImpTimes020": {
+      "expected": "x verhef tot die y plus 1 mag, x verhef tot die y plus 2 mag"
+    },
+    "ImpTimes021": {
+      "expected": "die vierkantswortel van a, die vierkantswortel van b, is gelyk aan die vierkantswortel van a b"
+    },
+    "ImpTimes022": {
+      "expected": "die vierkantswortel van 3, die vierkantswortel van 10, is gelyk aan die vierkantswortel van 30"
+    },
+    "ImpTimes023": {
+      "expected": "2 die vierkantswortel van 3"
+    },
+    "ImpTimes024": {
+      "expected": "1 plus 2 die vierkantswortel van 3"
+    },
+    "ImpTimes025": {
+      "expected": "f van x, is gelyk aan x kwadraat maal, links hakkie, x plus 1, regs hakkie"
+    },
+    "ImpTimes026": {
+      "expected": "f maal x, is gelyk aan x kwadraat maal, links hakkie, x plus 1, regs hakkie"
+    },
+    "ImpTimes027": {
+      "expected": "sinus x kosinus y, plus, kosinus x sinus y"
+    },
+    "ImpTimes027a": {
+      "expected": "die sinus van, links hakkie, x plus y, regs hakkie, die kosinus van, links hakkie, x plus y, regs hakkie"
+    },
+    "ImpTimes028": {
+      "expected": "die logaritme basis 10 van, x y"
+    },
+    "ImpTimes029": {
+      "expected": "die logaritme van, links hakkie, x plus y, regs hakkie, is gelyk aan, logaritme x logaritme y"
+    },
+    "ImpTimes030": {
+      "expected": "die 2 by 2 matriks. Ry 1: 1, 3 Ry 2: 5, 2. maal die 2 by 2 matriks. Ry 1: 7, 4 Ry 2: 0, 1"
+    },
+    "ImpTimes031": {
+      "expected": "2 maal, links hakkie, 3 maal, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs hakkie"
+    },
+    "ImpTimes032": {
+      "expected": "2 maal, links hakkie, 3 maal, tweede links hakkie, derde links hakkie, 4 plus 5, derde regs hakkie, plus 6, tweede regs hakkie, regs hakkie"
+    },
+    "ImpTimes033": {
+      "expected": "2 maal, links blokhakkie, 3 maal, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes034": {
+      "expected": "2 maal, links blokhakkie, 3 maal, links hakkie, tweede links hakkie, 4 plus 5, tweede regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes035": {
+      "expected": "2 maal, die absolute waarde van x"
+    },
+    "ImpTimes036": {
+      "expected": "die absolute waarde van x, maal, die absolute waarde van y"
+    },
+    "ImpTimes037": {
+      "expected": "die absolute waarde van x plus 1, maal, die absolute waarde van y minus 1"
+    },
+    "ImpTimes037a": {
+      "expected": "die absolute waarde van x plus 1, end absolute waarde van, maal, die absolute waarde van y minus 1, end absolute waarde van"
+    },
+    "ImpTimes038": {
+      "expected": "die absolute waarde van x plus 1, maal, die absolute waarde van y, minus 1"
+    },
+    "ImpTimes0381": {
+      "expected": "die absolute waarde van x plus 1, end absolute waarde van, maal, die absolute waarde van y, end absolute waarde van, minus 1"
+    },
+    "ImpTimes039": {
+      "expected": "2 maal 3"
+    },
+    "ImpTimes040": {
+      "expected": "2 maal 3"
+    },
+    "ImpTimes041": {
+      "expected": "2 tot die vierde mag, maal 3"
+    },
+    "ImpTimes042": {
+      "expected": "2 maal, links hakkie, 3 plus 4, regs hakkie"
+    },
+    "ImpTimes043": {
+      "expected": "2 maal, links blokhakkie, 3 plus 4, regs blokhakkie"
+    },
+    "ImpTimes044": {
+      "expected": "3 maal 2"
+    },
+    "ImpTimes045": {
+      "expected": "2 maal, links hakkie, 3 plus 4, regs hakkie, kwadraat"
+    },
+    "ImpTimes046": {
+      "expected": "links hakkie, 2 plus 7, regs hakkie, maal, links hakkie, 3 minus 6, regs hakkie"
+    },
+    "ImpTimes047": {
+      "expected": "links blokhakkie, 2 plus 7, regs blokhakkie, maal, links blokhakkie, 3 minus 6, regs blokhakkie"
+    },
+    "_comment3_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes049": {
+      "expected": "x maal, links hakkie, y plus z, regs hakkie"
+    },
+    "ImpTimes050": {
+      "expected": "2 maal, links hakkie, y plus 1, regs hakkie"
+    },
+    "ImpTimes051": {
+      "expected": "links hakkie, 2 minus 1, regs hakkie, maal x"
+    },
+    "ImpTimes052": {
+      "expected": "p onderskrif 1, maal, links hakkie, 3 plus 7, regs hakkie"
+    },
+    "ImpTimes053": {
+      "expected": "p onderskrif 1, verhef tot die, a onderskrif 1, mag, maal, p onderskrif 2, verhef tot die, a onderskrif 2, mag"
+    },
+    "ImpTimes054": {
+      "expected": "links hakkie, x plus y, regs hakkie, tot die negatiewe 4 mag, maal, links hakkie, x minus y, regs hakkie, tot die negatiewe 4 mag"
+    },
+    "ImpTimes055": {
+      "expected": "2 verhef tot die 4 maal, links hakkie, x plus y, regs hakkie, mag"
+    },
+    "ImpTimes056": {
+      "expected": "x maal y"
+    },
+    "ImpTimes057": {
+      "expected": "x kwadraat maal y tot die mag drie"
+    },
+    "ImpTimes058": {
+      "expected": "x verhef tot die y plus 1 mag, maal x verhef tot die y plus 2 mag"
+    },
+    "ImpTimes059": {
+      "expected": "die vierkantswortel van a, maal die vierkantswortel van b, is gelyk aan die vierkantswortel van a maal b"
+    },
+    "ImpTimes060": {
+      "expected": "die vierkantswortel van 3, maal die vierkantswortel van 10, is gelyk aan die vierkantswortel van 30"
+    },
+    "ImpTimes061": {
+      "expected": "2 maal die vierkantswortel van 3"
+    },
+    "ImpTimes062": {
+      "expected": "1 plus 2 maal die vierkantswortel van 3"
+    },
+    "ImpTimes063": {
+      "expected": "f van x, is gelyk aan x kwadraat maal, links hakkie, x plus 1, regs hakkie"
+    },
+    "ImpTimes064": {
+      "expected": "f maal x, is gelyk aan x kwadraat maal, links hakkie, x plus 1, regs hakkie"
+    },
+    "ImpTimes065": {
+      "expected": "sinus x, maal kosinus y plus kosinus x, maal sinus y"
+    },
+    "ImpTimes065a": {
+      "expected": "die sinus van, links hakkie, x plus y, regs hakkie, maal, die kosinus van, links hakkie, x plus y, regs hakkie"
+    },
+    "ImpTimes066": {
+      "expected": "die logaritme basis 10 van, x maal y"
+    },
+    "ImpTimes067": {
+      "expected": "die logaritme van, links hakkie, x plus y, regs hakkie, is gelyk aan logaritme x, maal logaritme y"
+    },
+    "ImpTimes068": {
+      "expected": "die 2 by 2 matriks. Ry 1: 1, 3 Ry 2: 5, 2. maal die 2 by 2 matriks. Ry 1: 7, 4 Ry 2: 0, 1"
+    },
+    "ImpTimes069": {
+      "expected": "2 maal, links hakkie, 3 maal, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs hakkie"
+    },
+    "ImpTimes070": {
+      "expected": "2 maal, links hakkie, 3 maal, tweede links hakkie, derde links hakkie, 4 plus 5, derde regs hakkie, plus 6, tweede regs hakkie, regs hakkie"
+    },
+    "ImpTimes070a": {
+      "expected": "2 maal, links blokhakkie, 3 maal, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes071": {
+      "expected": "2 maal, links blokhakkie, 3 maal, links hakkie, tweede links hakkie, 4 plus 5, tweede regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes072": {
+      "expected": "2 maal, die absolute waarde van x"
+    },
+    "ImpTimes073": {
+      "expected": "die absolute waarde van x, maal, die absolute waarde van y"
+    },
+    "ImpTimes074": {
+      "expected": "die absolute waarde van x plus 1, maal, die absolute waarde van y minus 1"
+    },
+    "ImpTimes074a": {
+      "expected": "die absolute waarde van x plus 1, end absolute waarde van, maal, die absolute waarde van y minus 1, end absolute waarde van"
+    },
+    "ImpTimes075": {
+      "expected": "die absolute waarde van x plus 1, maal, die absolute waarde van y, minus 1"
+    },
+    "ImpTimes076": {
+      "expected": "die absolute waarde van x plus 1, end absolute waarde van, maal, die absolute waarde van y, end absolute waarde van, minus 1"
+    },
+    "ImpTimes077": {
+      "expected": "2, links hakkie, 3, regs hakkie"
+    },
+    "ImpTimes078": {
+      "expected": "2, links blokhakkie, 3, regs blokhakkie"
+    },
+    "ImpTimes079": {
+      "expected": "2 tot die vierde mag, links hakkie, 3, regs hakkie"
+    },
+    "ImpTimes080": {
+      "expected": "2, links hakkie, 3 plus 4, regs hakkie"
+    },
+    "ImpTimes081": {
+      "expected": "2, links blokhakkie, 3 plus 4, regs blokhakkie"
+    },
+    "ImpTimes082": {
+      "expected": "links hakkie, 3, regs hakkie, links hakkie, 2, regs hakkie"
+    },
+    "ImpTimes083": {
+      "expected": "2, links hakkie, 3 plus 4, regs hakkie, kwadraat"
+    },
+    "ImpTimes084": {
+      "expected": "links hakkie, 2 plus 7, regs hakkie, links hakkie, 3 minus 6, regs hakkie"
+    },
+    "ImpTimes085": {
+      "expected": "links blokhakkie, 2 plus 7, regs blokhakkie, links blokhakkie, 3 minus 6, regs blokhakkie"
+    },
+    "_comment4_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes087": {
+      "expected": "x, links hakkie, y plus z, regs hakkie"
+    },
+    "ImpTimes088": {
+      "expected": "2, links hakkie, y plus 1, regs hakkie"
+    },
+    "ImpTimes089": {
+      "expected": "links hakkie, 2 minus 1, regs hakkie, x"
+    },
+    "ImpTimes090": {
+      "expected": "p onderskrif 1, links hakkie, 3 plus 7, regs hakkie"
+    },
+    "ImpTimes091": {
+      "expected": "p onderskrif 1, verhef tot die, a onderskrif 1, mag, p onderskrif 2, verhef tot die, a onderskrif 2, mag"
+    },
+    "ImpTimes092": {
+      "expected": "links hakkie, x plus y, regs hakkie, tot die negatiewe 4 mag, links hakkie, x minus y, regs hakkie, tot die negatiewe 4 mag"
+    },
+    "ImpTimes093": {
+      "expected": "2 verhef tot die 4, links hakkie, x plus y, regs hakkie, mag"
+    },
+    "ImpTimes094": {
+      "expected": "x y"
+    },
+    "ImpTimes095": {
+      "expected": "x kwadraat y tot die mag drie"
+    },
+    "ImpTimes096": {
+      "expected": "x verhef tot die y plus 1 mag, x verhef tot die y plus 2 mag"
+    },
+    "ImpTimes097": {
+      "expected": "die vierkantswortel van a, die vierkantswortel van b, is gelyk aan die vierkantswortel van a b"
+    },
+    "ImpTimes098": {
+      "expected": "die vierkantswortel van 3, die vierkantswortel van 10, is gelyk aan die vierkantswortel van 30"
+    },
+    "ImpTimes099": {
+      "expected": "2 die vierkantswortel van 3"
+    },
+    "ImpTimes100": {
+      "expected": "1 plus 2 die vierkantswortel van 3"
+    },
+    "ImpTimes101": {
+      "expected": "f van x, is gelyk aan x kwadraat, links hakkie, x plus 1, regs hakkie"
+    },
+    "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimes103": {
+      "expected": "sinus x kosinus y, plus, kosinus x sinus y"
+    },
+    "ImpTimes104": {
+      "expected": "die logaritme basis 10 van, x y"
+    },
+    "ImpTimes105": {
+      "expected": "die logaritme van, links hakkie, x plus y, regs hakkie, is gelyk aan, logaritme x logaritme y"
+    },
+    "ImpTimes106": {
+      "expected": "die 2 by 2 matriks. Ry 1: 1, 3 Ry 2: 5, 2. die 2 by 2 matriks. Ry 1: 7, 4 Ry 2: 0, 1"
+    },
+    "ImpTimes107": {
+      "expected": "2, links hakkie, 3, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs hakkie"
+    },
+    "ImpTimes108": {
+      "expected": "2, links hakkie, 3, tweede links hakkie, derde links hakkie, 4 plus 5, derde regs hakkie, plus 6, tweede regs hakkie, regs hakkie"
+    },
+    "ImpTimes109": {
+      "expected": "2, links blokhakkie, 3, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes110": {
+      "expected": "2, links blokhakkie, 3, links hakkie, tweede links hakkie, 4 plus 5, tweede regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimes111": {
+      "expected": "2, die absolute waarde van x"
+    },
+    "ImpTimes112": {
+      "expected": "die absolute waarde van x, die absolute waarde van y"
+    },
+    "ImpTimes113": {
+      "expected": "die absolute waarde van x plus 1, die absolute waarde van y minus 1"
+    },
+    "ImpTimes114": {
+      "expected": "die absolute waarde van x plus 1, die absolute waarde van y, minus 1"
+    },
+    "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
+    "ImpTimesSilPar001": {
+      "expected": "2, links hakkie, 3, regs hakkie"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "2, links blokhakkie, 3, regs blokhakkie"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "2 tot die vierde mag, links hakkie, 3, regs hakkie"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "2, links hakkie, 3 plus 4, regs hakkie"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "2, links blokhakkie, 3 plus 4, regs blokhakkie"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "links hakkie, 3, regs hakkie, links hakkie, 2, regs hakkie"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "2, links hakkie, 3 plus 4, regs hakkie, kwadraat"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "links hakkie, 2 plus 7, regs hakkie, links hakkie, 3 minus 6, regs hakkie"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "links blokhakkie, 2 plus 7, regs blokhakkie, links blokhakkie, 3 minus 6, regs blokhakkie"
+    },
+    "_comment7_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimesSilPar011": {
+      "expected": "x, links hakkie, y plus z, regs hakkie"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "2, links hakkie, y plus 1, regs hakkie"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "links hakkie, 2 minus 1, regs hakkie, x"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "p onderskrif 1, links hakkie, 3 plus 7, regs hakkie"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "links hakkie, x plus y, regs hakkie, tot die negatiewe 4 mag, links hakkie, x minus y, regs hakkie, tot die negatiewe 4 mag"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "2 verhef tot die 4, links hakkie, x plus y, regs hakkie, mag"
+    },
+    "ImpTimesSilPar017": {
+      "expected": "f van x, is gelyk aan x kwadraat, links hakkie, x plus 1, regs hakkie"
+    },
+    "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimesSilPar019": {
+      "expected": "die logaritme van, links hakkie, x plus y, regs hakkie, is gelyk aan, logaritme x logaritme y"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "die 2 by 2 matriks. Ry 1: 1, 3 Ry 2: 5, 2. die 2 by 2 matriks. Ry 1: 7, 4 Ry 2: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "2, links hakkie, 3, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs hakkie"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "2, links hakkie, 3, tweede links hakkie, derde links hakkie, 4 plus 5, derde regs hakkie, plus 6, tweede regs hakkie, regs hakkie"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "2, links blokhakkie, 3, links hakkie, links hakkie, 4 plus 5, regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "2, links blokhakkie, 3, links hakkie, tweede links hakkie, 4 plus 5, tweede regs hakkie, plus 6, regs hakkie, regs blokhakkie"
+    },
+    "_comment11_": " Implied Times, Functions, or Something Else",
+    "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
+    "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
+    "_comment14_": "       Times_Auto.",
+    "Extra001": {
+      "expected": "A is gelyk aan h van, links hakkie, die breuk met teller, b onderskrif 1, plus, b onderskrif 2, en noemer 2, regs hakkie"
+    },
+    "Extra002": {
+      "expected": "A is gelyk aan, h maal, links hakkie, die breuk met teller, b onderskrif 1, plus, b onderskrif 2, en noemer 2, regs hakkie"
+    },
+    "Extra003": {
+      "expected": "a van 0, is gelyk aan 0 maal a is gelyk aan 0"
+    },
+    "Extra004": {
+      "expected": "a maal 0, is gelyk aan 0 maal a is gelyk aan 0"
+    },
+    "Extra005": {
+      "expected": "a maal negatiewe 1, is gelyk aan negatiewe a"
+    },
+    "Extra006": {
+      "expected": "a van negatiewe 1, is gelyk aan negatiewe a"
+    },
+    "_comment15_": " TODO: (Simons) a is categorised as function!",
+    "_comment16_": " TODO: (Simons) a is categorised as function!",
+    "_comment17_": " TODO: (Simons) a is categorised as function!",
+    "Extra010": {
+      "expected": "B van, links hakkie, 2 komma 6, regs hakkie"
+    },
+    "Extra012": {
+      "expected": "B maal, links hakkie, 2 komma 6, regs hakkie"
+    },
+    "_comment18_": " TODO: (Simons) Explore exact speech.",
+    "Extra014": {
+      "expected": "p van w"
+    },
+    "Extra015": {
+      "expected": "x van t, is gelyk aan 2 t, plus 4"
+    },
+    "Extra016": {
+      "expected": "k van x, is gelyk aan, links hakkie, x plus 3, regs hakkie, maal, links hakkie, x minus 5, regs hakkie"
+    },
+    "_comment19_": " TODO: (Simons) a is categorised as function!",
+    "Extra018": {
+      "expected": "T van t, is gelyk aan, T onderskrif s, plus, links hakkie, T onderskrif 0, minus, T onderskrif s, regs hakkie, maal e verhef tot die negatiewe k t, mag"
+    },
+    "Extra019": {
+      "expected": "V is gelyk aan skrif l, w van 8"
+    },
+    "_comment22_": " TODO: (Simons) Explore exact speech."
+  }
+}

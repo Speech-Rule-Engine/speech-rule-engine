@@ -1,0 +1,644 @@
+{
+  "locale": "da",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "Danish Ordinal word as used in fractions tests.",
+  "kind": "numberToOrdinal",
+  "active": "NumbersDanish",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "nuledel"
+    },
+    "Number_1": {
+      "expected": "hele"
+    },
+    "Number_2": {
+      "expected": "halve"
+    },
+    "Number_3": {
+      "expected": "tredjedel"
+    },
+    "Number_4": {
+      "expected": "fjerdedel"
+    },
+    "Number_5": {
+      "expected": "femtedel"
+    },
+    "Number_6": {
+      "expected": "sjettedel"
+    },
+    "Number_7": {
+      "expected": "syvendedel"
+    },
+    "Number_8": {
+      "expected": "ottendedel"
+    },
+    "Number_9": {
+      "expected": "niendedel"
+    },
+    "Number_10": {
+      "expected": "tiendedel"
+    },
+    "Number_11": {
+      "expected": "ellevtedel"
+    },
+    "Number_12": {
+      "expected": "tolvtedel"
+    },
+    "Number_13": {
+      "expected": "trettendedel"
+    },
+    "Number_14": {
+      "expected": "fjortendedel"
+    },
+    "Number_15": {
+      "expected": "femtendedel"
+    },
+    "Number_16": {
+      "expected": "sekstendedel"
+    },
+    "Number_17": {
+      "expected": "syttendedel"
+    },
+    "Number_18": {
+      "expected": "attendedel"
+    },
+    "Number_19": {
+      "expected": "nittendedel"
+    },
+    "Number_20": {
+      "expected": "tyvendedel"
+    },
+    "Number_21": {
+      "expected": "enogtyvendedel"
+    },
+    "Number_22": {
+      "expected": "toogtyvendedel"
+    },
+    "Number_23": {
+      "expected": "treogtyvendedel"
+    },
+    "Number_24": {
+      "expected": "fireogtyvendedel"
+    },
+    "Number_25": {
+      "expected": "femogtyvendedel"
+    },
+    "Number_26": {
+      "expected": "seksogtyvendedel"
+    },
+    "Number_27": {
+      "expected": "syvogtyvendedel"
+    },
+    "Number_28": {
+      "expected": "otteogtyvendedel"
+    },
+    "Number_29": {
+      "expected": "niogtyvendedel"
+    },
+    "Number_30": {
+      "expected": "tredvtedel"
+    },
+    "Number_31": {
+      "expected": "enogtredvtedel"
+    },
+    "Number_32": {
+      "expected": "toogtredvtedel"
+    },
+    "Number_33": {
+      "expected": "treogtredvtedel"
+    },
+    "Number_34": {
+      "expected": "fireogtredvtedel"
+    },
+    "Number_35": {
+      "expected": "femogtredvtedel"
+    },
+    "Number_36": {
+      "expected": "seksogtredvtedel"
+    },
+    "Number_37": {
+      "expected": "syvogtredvtedel"
+    },
+    "Number_38": {
+      "expected": "otteogtredvtedel"
+    },
+    "Number_39": {
+      "expected": "niogtredvtedel"
+    },
+    "Number_40": {
+      "expected": "fyrretyvendedel"
+    },
+    "Number_41": {
+      "expected": "enogfyrretyvendedel"
+    },
+    "Number_42": {
+      "expected": "toogfyrretyvendedel"
+    },
+    "Number_43": {
+      "expected": "treogfyrretyvendedel"
+    },
+    "Number_44": {
+      "expected": "fireogfyrretyvendedel"
+    },
+    "Number_45": {
+      "expected": "femogfyrretyvendedel"
+    },
+    "Number_46": {
+      "expected": "seksogfyrretyvendedel"
+    },
+    "Number_47": {
+      "expected": "syvogfyrretyvendedel"
+    },
+    "Number_48": {
+      "expected": "otteogfyrretyvendedel"
+    },
+    "Number_49": {
+      "expected": "niogfyrretyvendedel"
+    },
+    "Number_50": {
+      "expected": "halvtredsindstyvendedel"
+    },
+    "Number_51": {
+      "expected": "enoghalvtredsindstyvendedel"
+    },
+    "Number_52": {
+      "expected": "tooghalvtredsindstyvendedel"
+    },
+    "Number_53": {
+      "expected": "treoghalvtredsindstyvendedel"
+    },
+    "Number_54": {
+      "expected": "fireoghalvtredsindstyvendedel"
+    },
+    "Number_55": {
+      "expected": "femoghalvtredsindstyvendedel"
+    },
+    "Number_56": {
+      "expected": "seksoghalvtredsindstyvendedel"
+    },
+    "Number_57": {
+      "expected": "syvoghalvtredsindstyvendedel"
+    },
+    "Number_58": {
+      "expected": "otteoghalvtredsindstyvendedel"
+    },
+    "Number_59": {
+      "expected": "nioghalvtredsindstyvendedel"
+    },
+    "Number_60": {
+      "expected": "tresindstyvendedel"
+    },
+    "Number_61": {
+      "expected": "enogtresindstyvendedel"
+    },
+    "Number_62": {
+      "expected": "toogtresindstyvendedel"
+    },
+    "Number_63": {
+      "expected": "treogtresindstyvendedel"
+    },
+    "Number_64": {
+      "expected": "fireogtresindstyvendedel"
+    },
+    "Number_65": {
+      "expected": "femogtresindstyvendedel"
+    },
+    "Number_66": {
+      "expected": "seksogtresindstyvendedel"
+    },
+    "Number_67": {
+      "expected": "syvogtresindstyvendedel"
+    },
+    "Number_68": {
+      "expected": "otteogtresindstyvendedel"
+    },
+    "Number_69": {
+      "expected": "niogtresindstyvendedel"
+    },
+    "Number_70": {
+      "expected": "halvfjerdsendedel"
+    },
+    "Number_71": {
+      "expected": "enoghalvfjerdsendedel"
+    },
+    "Number_72": {
+      "expected": "tooghalvfjerdsendedel"
+    },
+    "Number_73": {
+      "expected": "treoghalvfjerdsendedel"
+    },
+    "Number_74": {
+      "expected": "fireoghalvfjerdsendedel"
+    },
+    "Number_75": {
+      "expected": "femoghalvfjerdsendedel"
+    },
+    "Number_76": {
+      "expected": "seksoghalvfjerdsendedel"
+    },
+    "Number_77": {
+      "expected": "syvoghalvfjerdsendedel"
+    },
+    "Number_78": {
+      "expected": "otteoghalvfjerdsendedel"
+    },
+    "Number_79": {
+      "expected": "nioghalvfjerdsendedel"
+    },
+    "Number_80": {
+      "expected": "firsindstyvendedel"
+    },
+    "Number_81": {
+      "expected": "enogfirsindstyvendedel"
+    },
+    "Number_82": {
+      "expected": "toogfirsindstyvendedel"
+    },
+    "Number_83": {
+      "expected": "treogfirsindstyvendedel"
+    },
+    "Number_84": {
+      "expected": "fireogfirsindstyvendedel"
+    },
+    "Number_85": {
+      "expected": "femogfirsindstyvendedel"
+    },
+    "Number_86": {
+      "expected": "seksogfirsindstyvendedel"
+    },
+    "Number_87": {
+      "expected": "syvogfirsindstyvendedel"
+    },
+    "Number_88": {
+      "expected": "otteogfirsindstyvendedel"
+    },
+    "Number_89": {
+      "expected": "niogfirsindstyvendedel"
+    },
+    "Number_90": {
+      "expected": "halvfemsindstyvendedel"
+    },
+    "Number_91": {
+      "expected": "enoghalvfemsindstyvendedel"
+    },
+    "Number_92": {
+      "expected": "tooghalvfemsindstyvendedel"
+    },
+    "Number_93": {
+      "expected": "treoghalvfemsindstyvendedel"
+    },
+    "Number_94": {
+      "expected": "fireoghalvfemsindstyvendedel"
+    },
+    "Number_95": {
+      "expected": "femoghalvfemsindstyvendedel"
+    },
+    "Number_96": {
+      "expected": "seksoghalvfemsindstyvendedel"
+    },
+    "Number_97": {
+      "expected": "syvoghalvfemsindstyvendedel"
+    },
+    "Number_98": {
+      "expected": "otteoghalvfemsindstyvendedel"
+    },
+    "Number_99": {
+      "expected": "nioghalvfemsindstyvendedel"
+    },
+    "Number_100": {
+      "expected": "et hundrededel"
+    },
+    "Number_101": {
+      "expected": "et hundrede og førstedel"
+    },
+    "Number_102": {
+      "expected": "et hundrede og andendel"
+    },
+    "Number_103": {
+      "expected": "et hundrede og tredjedel"
+    },
+    "Number_104": {
+      "expected": "et hundrede og fjerdedel"
+    },
+    "Number_105": {
+      "expected": "et hundrede og femtedel"
+    },
+    "Number_106": {
+      "expected": "et hundrede og sjettedel"
+    },
+    "Number_107": {
+      "expected": "et hundrede og syvendedel"
+    },
+    "Number_108": {
+      "expected": "et hundrede og ottendedel"
+    },
+    "Number_109": {
+      "expected": "et hundrede og niendedel"
+    },
+    "Number_110": {
+      "expected": "et hundrede og tiendedel"
+    },
+    "Number_200": {
+      "expected": "to hundrededel"
+    },
+    "Number_201": {
+      "expected": "to hundrede og førstedel"
+    },
+    "Number_300": {
+      "expected": "tre hundrededel"
+    },
+    "Number_301": {
+      "expected": "tre hundrede og førstedel"
+    },
+    "Number_400": {
+      "expected": "fire hundrededel"
+    },
+    "Number_401": {
+      "expected": "fire hundrede og førstedel"
+    },
+    "Number_500": {
+      "expected": "fem hundrededel"
+    },
+    "Number_501": {
+      "expected": "fem hundrede og førstedel"
+    },
+    "Number_600": {
+      "expected": "seks hundrededel"
+    },
+    "Number_601": {
+      "expected": "seks hundrede og førstedel"
+    },
+    "Number_700": {
+      "expected": "syv hundrededel"
+    },
+    "Number_701": {
+      "expected": "syv hundrede og førstedel"
+    },
+    "Number_800": {
+      "expected": "otte hundrededel"
+    },
+    "Number_801": {
+      "expected": "otte hundrede og førstedel"
+    },
+    "Number_900": {
+      "expected": "ni hundrededel"
+    },
+    "Number_901": {
+      "expected": "ni hundrede og førstedel"
+    },
+    "Number_1000": {
+      "expected": "et tusindedel"
+    },
+    "Number_1001": {
+      "expected": "et tusind og førstedel"
+    },
+    "Number_2000": {
+      "expected": "to tusinderedel"
+    },
+    "Number_2001": {
+      "expected": "to tusinder og førstedel"
+    },
+    "Number_3000": {
+      "expected": "tre tusinderedel"
+    },
+    "Number_3001": {
+      "expected": "tre tusinder og førstedel"
+    },
+    "Number_4000": {
+      "expected": "fire tusinderedel"
+    },
+    "Number_4001": {
+      "expected": "fire tusinder og førstedel"
+    },
+    "Number_5000": {
+      "expected": "fem tusinderedel"
+    },
+    "Number_5001": {
+      "expected": "fem tusinder og førstedel"
+    },
+    "Number_6000": {
+      "expected": "seks tusinderedel"
+    },
+    "Number_6001": {
+      "expected": "seks tusinder og førstedel"
+    },
+    "Number_7000": {
+      "expected": "syv tusinderedel"
+    },
+    "Number_7001": {
+      "expected": "syv tusinder og førstedel"
+    },
+    "Number_8000": {
+      "expected": "otte tusinderedel"
+    },
+    "Number_8001": {
+      "expected": "otte tusinder og førstedel"
+    },
+    "Number_9000": {
+      "expected": "ni tusinderedel"
+    },
+    "Number_9001": {
+      "expected": "ni tusinder og førstedel"
+    },
+    "Number_10000": {
+      "expected": "ti tusinderedel"
+    },
+    "Number_10001": {
+      "expected": "ti tusinder og førstedel"
+    },
+    "Number_20000": {
+      "expected": "tyve tusinderedel"
+    },
+    "Number_20001": {
+      "expected": "tyve tusinder og førstedel"
+    },
+    "Number_30000": {
+      "expected": "tredve tusinderedel"
+    },
+    "Number_30001": {
+      "expected": "tredve tusinder og førstedel"
+    },
+    "Number_40000": {
+      "expected": "fyrre tusinderedel"
+    },
+    "Number_40001": {
+      "expected": "fyrre tusinder og førstedel"
+    },
+    "Number_50000": {
+      "expected": "halvtreds tusinderedel"
+    },
+    "Number_50001": {
+      "expected": "halvtreds tusinder og førstedel"
+    },
+    "Number_60000": {
+      "expected": "tres tusinderedel"
+    },
+    "Number_60001": {
+      "expected": "tres tusinder og førstedel"
+    },
+    "Number_70000": {
+      "expected": "halvfjerds tusinderedel"
+    },
+    "Number_70001": {
+      "expected": "halvfjerds tusinder og førstedel"
+    },
+    "Number_80000": {
+      "expected": "firs tusinderedel"
+    },
+    "Number_80001": {
+      "expected": "firs tusinder og førstedel"
+    },
+    "Number_90000": {
+      "expected": "halvfems tusinderedel"
+    },
+    "Number_90001": {
+      "expected": "halvfems tusinder og førstedel"
+    },
+    "Number_100000": {
+      "expected": "et hundrede tusinderedel"
+    },
+    "Number_100001": {
+      "expected": "et hundrede tusinder og førstedel"
+    },
+    "Number_200000": {
+      "expected": "to hundrede tusinderedel"
+    },
+    "Number_200001": {
+      "expected": "to hundrede tusinder og førstedel"
+    },
+    "Number_1000000": {
+      "expected": "en millionedel"
+    },
+    "Number_1000001": {
+      "expected": "en million og førstedel"
+    },
+    "Number_2000000": {
+      "expected": "to millioneredel"
+    },
+    "Number_2000001": {
+      "expected": "to millioner og førstedel"
+    },
+    "Number_10000000": {
+      "expected": "ti millioneredel"
+    },
+    "Number_10000001": {
+      "expected": "ti millioner og førstedel"
+    },
+    "Number_20000000": {
+      "expected": "tyve millioneredel"
+    },
+    "Number_20000001": {
+      "expected": "tyve millioner og førstedel"
+    },
+    "Number_100000000": {
+      "expected": "et hundrede millioneredel"
+    },
+    "Number_100000001": {
+      "expected": "et hundrede millioner og førstedel"
+    },
+    "Number_200000000": {
+      "expected": "to hundrede millioneredel"
+    },
+    "Number_200000001": {
+      "expected": "to hundrede millioner og førstedel"
+    },
+    "Number_1000000000": {
+      "expected": "en milliardedel"
+    },
+    "Number_1000000001": {
+      "expected": "en milliard og førstedel"
+    },
+    "Number_2000000000": {
+      "expected": "to milliarderedel"
+    },
+    "Number_2000000001": {
+      "expected": "to milliarder og førstedel"
+    },
+    "Number_10000000000": {
+      "expected": "ti milliarderedel"
+    },
+    "Number_10000000001": {
+      "expected": "ti milliarder og førstedel"
+    },
+    "Number_20000000000": {
+      "expected": "tyve milliarderedel"
+    },
+    "Number_20000000001": {
+      "expected": "tyve milliarder og førstedel"
+    },
+    "Number_100000000000": {
+      "expected": "et hundrede milliarderedel"
+    },
+    "Number_100000000001": {
+      "expected": "et hundrede milliarder og førstedel"
+    },
+    "Number_200000000000": {
+      "expected": "to hundrede milliarderedel"
+    },
+    "Number_200000000001": {
+      "expected": "to hundrede milliarder og førstedel"
+    },
+    "Number_1000000000000": {
+      "expected": "en billionedel"
+    },
+    "Number_1000000000001": {
+      "expected": "en billion og førstedel"
+    },
+    "Number_2000000000000": {
+      "expected": "to billioneredel"
+    },
+    "Number_2000000000001": {
+      "expected": "to billioner og førstedel"
+    },
+    "Number_10000000000000": {
+      "expected": "ti billioneredel"
+    },
+    "Number_10000000000001": {
+      "expected": "ti billioner og førstedel"
+    },
+    "Number_20000000000000": {
+      "expected": "tyve billioneredel"
+    },
+    "Number_20000000000001": {
+      "expected": "tyve billioner og førstedel"
+    },
+    "Number_100000000000000": {
+      "expected": "et hundrede billioneredel"
+    },
+    "Number_100000000000001": {
+      "expected": "et hundrede billioner og førstedel"
+    },
+    "Number_200000000000000": {
+      "expected": "to hundrede billioneredel"
+    },
+    "Number_200000000000001": {
+      "expected": "to hundrede billioner og førstedel"
+    },
+    "Number_1000000000000000": {
+      "expected": "en billiardedel"
+    },
+    "Number_1000000000000001": {
+      "expected": "en billiard og førstedel"
+    },
+    "Number_2000000000000000": {
+      "expected": "to billiarderedel"
+    },
+    "Number_2000000000000001": {
+      "expected": "to billiarder og førstedel"
+    },
+    "Number_10000000000000000": {
+      "expected": "ti billiarderedel"
+    },
+    "Number_10000000000000001": {
+      "expected": "ti billiarderedel"
+    },
+    "Number_20000000000000000": {
+      "expected": "tyve billiarderedel"
+    },
+    "Number_20000000000000001": {
+      "expected": "tyve billiarderedel"
+    }
+  }
+}

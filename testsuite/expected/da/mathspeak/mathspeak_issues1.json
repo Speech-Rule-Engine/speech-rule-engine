@@ -1,0 +1,274 @@
+{
+  "name": "DanishMathspeakIssues1",
+  "locale": "da",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Danish Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "StartNumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "StartNumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "NumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "StartNumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "StartNumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "NumeriskVærdi a SlutNumeriskVærdi"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "negativ fem attendedele"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "negativ fem attendedele"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "negativ fem attendedele"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 grader"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 grader"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 grader"
+    },
+    "MixedIdentifier_default": {
+      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+    },
+    "ParenSuper_default": {
+      "expected": "venstre parantes a højre parantes kvadreret"
+    },
+    "ParenSuper_brief": {
+      "expected": "venstre parantes a højre parantes kvadreret"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "venstre parantes a højre parantes kvadreret"
+    },
+    "ParenConvoluted_default": {
+      "expected": "venstre parantes minus x kvadreret skråstreg 2 højre parantes"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "venstre parantes minus x kvadreret skråstreg 2 højre parantes"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "venstre parantes minus x kvadreret skråstreg 2 højre parantes"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h Hævet 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h Hævet 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med c 2 h Hævet 4 minus 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h Sænket s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h Sænket s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h Sænket s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med h Sænket s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h Sænket s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h Sænket s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h Sænket s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med h Sænket s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h Sænket s Hævet t Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s Hævet t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s Hævet t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med h Sænket s Hævet t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h Sænket s Hævet t Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s Hævet t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s Hævet t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med h Sænket s Hævet t"
+    },
+    "SquareWithText_default": {
+      "expected": "Start Brøk area of triangle Over area of square Slut Brøk lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
+    },
+    "SquareWithText_brief": {
+      "expected": "Start Brøk area of triangle Over area of square Slut Brøk lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "Brøk area of triangle Over area of square SlutBrøk lig med Brøk 1 unit kvadreret Over 16 units i tredje SlutBrøk"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square Hævet 1 Grundlinje 1 unit Hævet 2 Grundlinje 16 units Hævet 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square Hævet 1 Basis 1 unit Hævet 2 Basis 16 units Hævet 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square Hævet 1 Basis 1 unit Hævet 2 Basis 16 units Hævet 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle Hævet 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle Hævet 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle Hævet 2"
+    },
+    "LabelledRow_default": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 1 højre parantes SlutLabel 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "LabelledRow_brief": {
+      "expected": "StartLayout 1. Række  Label venstre parantes 1 højre parantes 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "Layout 1. Række  Label venstre parantes 1 højre parantes 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "LabelledLine_default": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 1 højre parantes SlutLabel a SlutLayout"
+    },
+    "LabelledLine_brief": {
+      "expected": "StartLayout 1. Række  Label venstre parantes 1 højre parantes a SlutLayout"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "Layout 1. Række  Label venstre parantes 1 højre parantes a SlutLayout"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 1 højre parantes SlutLabel Blank SlutLayout"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "StartLayout 1. Række  Label venstre parantes 1 højre parantes Blank SlutLayout"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "Layout 1. Række  Label venstre parantes 1 højre parantes Blank SlutLayout"
+    },
+    "EmptyLine_default": {
+      "expected": "StartLayout 1. Række  Blank SlutLayout"
+    },
+    "EmptyLine_brief": {
+      "expected": "StartLayout 1. Række  Blank SlutLayout"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "Layout 1. Række  Blank SlutLayout"
+    },
+    "EmptyRow_default": {
+      "expected": "StartLayout 1. Række 1. Kolonne a 2. Kolonne b 2. Række  Blank SlutLayout"
+    },
+    "EmptyRow_brief": {
+      "expected": "StartLayout 1. Række 1. Kolonne a 2. Kolonne b 2. Række  Blank SlutLayout"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "Layout 1. Række 1. Kolonne a 2. Kolonne b 2. Række  Blank SlutLayout"
+    },
+    "EmptyCell_default": {
+      "expected": "StartLayout 1. Række  Blank SlutLayout"
+    },
+    "EmptyCell_brief": {
+      "expected": "StartLayout 1. Række  Blank SlutLayout"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "Layout 1. Række  Blank SlutLayout"
+    },
+    "TextLabelledLine_default": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 1 højre parantes SlutLabel a SlutLayout"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "StartLayout 1. Række  Label venstre parantes 1 højre parantes a SlutLayout"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "Layout 1. Række  Label 1 a SlutLayout"
+    },
+    "TextLabelledRow_default": {
+      "expected": "StartLayout 1. Række  med Label venstre parantes 1 højre parantes SlutLabel 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "StartLayout 1. Række  Label venstre parantes 1 højre parantes 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "Layout 1. Række  Label 1 1. Kolonne a 2. Kolonne b SlutLayout"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a overstreg"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a overstreg"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a overstreg"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a understreg"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a understreg"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a understreg"
+    },
+    "PrefixopSquare_default": {
+      "expected": "partielle afledte kvadreret x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "partielle afledte kvadreret x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "partielle afledte kvadreret x"
+    },
+    "PrefixopCube_default": {
+      "expected": "partielle afledte i tredje x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "partielle afledte i tredje x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "partielle afledte i tredje x"
+    },
+    "Vector_default": {
+      "expected": "Start 3 Gange 1 Matrix 1. Række  a 2. Række  b 3. Række  c SlutMatrix"
+    },
+    "Vector_brief": {
+      "expected": "Start 3 Gange 1 Matrix 1. Række  a 2. Række  b 3. Række  c SlutMatrix"
+    },
+    "Vector_sbrief": {
+      "expected": "3 Gange 1 Matrix 1. Række  a 2. Række  b 3. Række  c EndMatrix"
+    }
+  }
+}

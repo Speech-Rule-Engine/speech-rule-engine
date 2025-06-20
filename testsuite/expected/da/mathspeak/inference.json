@@ -1,0 +1,59 @@
+{
+  "name": "DanishMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "da",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Danish Mathspeak Inference rules.",
+  "active": "InferenceDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NoLabel_0": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "NoLabel_1": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "Premise_0": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "Premise_1": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "Axiom": {
+      "expected": "aksiom stort A"
+    },
+    "EmptyAxiom": {
+      "expected": "tom aksiom"
+    },
+    "RightLabel_0": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "RightLabel_1": {
+      "expected": "inferensregel label stort N med konklusion stort X og 2 præmisser"
+    },
+    "RightLabel_2": {
+      "expected": "inferensregel label stort N med konklusion stort X og 3 præmisser"
+    },
+    "LeftLabel_0": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "LeftLabel_1": {
+      "expected": "inferensregel label stort N med konklusion stort X og 2 præmisser"
+    },
+    "LeftLabel_2": {
+      "expected": "inferensregel label stort N med konklusion stort X og 3 præmisser"
+    },
+    "Premises_0": {
+      "expected": "1. præmis  aksiom stort A"
+    },
+    "Premises_1": {
+      "expected": "1. præmis  aksiom stort A 2. præmis  aksiom stort B"
+    },
+    "Premises_2": {
+      "expected": "1. præmis  aksiom stort A 2. præmis  aksiom stort B 3. præmis  aksiom stort C"
+    }
+  }
+}

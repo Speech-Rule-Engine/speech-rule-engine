@@ -1,0 +1,139 @@
+{
+  "name": "EnglishMathspeakCoverage",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "English Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alpha Baseline 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alpha Base 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alpha Base 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "normal first transfinite cardinal Baseline 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normal first transfinite cardinal Base 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normal first transfinite cardinal Base 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alpha Baseline bold 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alpha Base bold 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alpha Base bold 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "normal first transfinite cardinal Baseline bold 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normal first transfinite cardinal Base bold 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normal first transfinite cardinal Base bold 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alpha overbar"
+    },
+    "OverbarOther_default": {
+      "expected": "normal first transfinite cardinal overbar"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alpha underbar"
+    },
+    "UnderbarOther_default": {
+      "expected": "normal first transfinite cardinal underbar"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alpha overtilde"
+    },
+    "OvertildeOther_default": {
+      "expected": "normal first transfinite cardinal overtilde"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alpha undertilde"
+    },
+    "UndertildeOther_default": {
+      "expected": "normal first transfinite cardinal undertilde"
+    },
+    "SetEmpty_default": {
+      "expected": "empty set"
+    },
+    "SetEmpty_brief": {
+      "expected": "empty set"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "empty set"
+    },
+    "SetSingleton_default": {
+      "expected": "StartSet a EndSet"
+    },
+    "SetSingleton_brief": {
+      "expected": "StartSet a EndSet"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "Set a EndSet"
+    },
+    "SetCollection_default": {
+      "expected": "StartSet a comma b EndSet"
+    },
+    "SetCollection_brief": {
+      "expected": "StartSet a comma b EndSet"
+    },
+    "SetCollection_sbrief": {
+      "expected": "Set a comma b EndSet"
+    },
+    "SetExtended_default": {
+      "expected": "StartSet a comma b EndSet"
+    },
+    "SetExtended_brief": {
+      "expected": "StartSet a comma b EndSet"
+    },
+    "SetExtended_sbrief": {
+      "expected": "Set a comma b EndSet"
+    },
+    "NumberSet": {
+      "expected": "double struck upper C"
+    },
+    "LimitLower0_default": {
+      "expected": "ModifyingBelow limit With bar Underscript a equals 5 Endscripts Underscript b equals 3 Endscripts"
+    },
+    "LimitLower1_default": {
+      "expected": "limit Underscript n Overscript 2 Endscripts Overscript x Endscripts"
+    },
+    "_comment10_": "Coverage for under/over scripts",
+    "BlankLineEmpty0_default": {
+      "expected": "StartLayout 1st Row  a 2nd Row  Blank EndLayout"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h Subscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction less than or equals c 2 h Subscript 4 minus 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h Sub 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac less than or equals c 2 h Sub 4 minus 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h Sub 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac less than or equals c 2 h Sub 4 minus 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h Subscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction equals c 2 h Subscript 4 minus 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h Sub 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac equals c 2 h Sub 4 minus 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h Sub 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac equals c 2 h Sub 4 minus 2 s"
+    }
+  }
+}

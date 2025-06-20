@@ -1,0 +1,265 @@
+{
+  "name": "EnglishMathspeakFencesNeutral",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/common/fences_neutral.json",
+  "information": "English Mathspeak Neutral Fences tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakEnglish",
+  "exclude": [
+    "BarFenced_0_AbsoluteValue_AbsEnd",
+    "BarFenced_1_AbsoluteValue_AbsEnd",
+    "BarFenced_2_AbsoluteValue_AbsEnd",
+    "BarFenced_3_AbsoluteValue_AbsEnd",
+    "BarFenced_4_AbsoluteValue_AbsEnd",
+    "BarFenced_5_AbsoluteValue_AbsEnd",
+    "BarFenced_6_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd",
+    "CenterBar_0_AbsoluteValue_AbsEnd",
+    "CenterBar_1_AbsoluteValue_AbsEnd",
+    "CenterBar_2_AbsoluteValue_AbsEnd",
+    "CenterBar_3_AbsoluteValue_AbsEnd",
+    "CenterBar_4_AbsoluteValue_AbsEnd",
+    "CenterBar_5_AbsoluteValue_AbsEnd",
+    "Function_0_AbsoluteValue_AbsEnd",
+    "Function_1_AbsoluteValue_AbsEnd",
+    "Function_2_AbsoluteValue_AbsEnd",
+    "Function_3_AbsoluteValue_AbsEnd",
+    "Function_4_AbsoluteValue_AbsEnd",
+    "Function_5_AbsoluteValue_AbsEnd",
+    "FunctionMetric0_AbsoluteValue_AbsEnd",
+    "FunctionMetric1_AbsoluteValue_AbsEnd",
+    "FunctionMetric2_AbsoluteValue_AbsEnd",
+    "FunctionMetric3_AbsoluteValue_AbsEnd",
+    "FunctionMetric4_AbsoluteValue_AbsEnd",
+    "FunctionMetric5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd"
+  ],
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_1_default": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_2_default": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_3_default": {
+      "expected": "StartMetric a EndMetric"
+    },
+    "BarFenced_4_default": {
+      "expected": "StartMetric a EndMetric"
+    },
+    "BarFenced_5_default": {
+      "expected": "StartMetric a EndMetric"
+    },
+    "BarFenced_6_default": {
+      "expected": "StartMetric a EndMetric"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "vertical bar a double vertical bar"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "parallel to a double vertical bar"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "vertical bar a broken vertical bar"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "triple vertical bar a double vertical bar"
+    },
+    "CenterBar_0_default": {
+      "expected": "a vertical bar b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a vertical bar b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a broken vertical bar b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a double vertical bar b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a parallel to b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a triple vertical bar b"
+    },
+    "BarFenced_0_sbrief": {
+      "expected": "AbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_1_sbrief": {
+      "expected": "AbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_2_sbrief": {
+      "expected": "AbsoluteValue a EndAbsoluteValue"
+    },
+    "BarFenced_3_sbrief": {
+      "expected": "Metric a EndMetric"
+    },
+    "BarFenced_4_sbrief": {
+      "expected": "Metric a EndMetric"
+    },
+    "BarFenced_5_sbrief": {
+      "expected": "Metric a EndMetric"
+    },
+    "BarFenced_6_sbrief": {
+      "expected": "Metric a EndMetric"
+    },
+    "BarFencedMixed_0_sbrief": {
+      "expected": "vertical bar a double vertical bar"
+    },
+    "BarFencedMixed_1_sbrief": {
+      "expected": "parallel to a double vertical bar"
+    },
+    "BarFencedMixed_2_sbrief": {
+      "expected": "vertical bar a broken vertical bar"
+    },
+    "BarFencedMixed_3_sbrief": {
+      "expected": "triple vertical bar a double vertical bar"
+    },
+    "CenterBar_0_sbrief": {
+      "expected": "a vertical bar b"
+    },
+    "CenterBar_1_sbrief": {
+      "expected": "a vertical bar b"
+    },
+    "CenterBar_2_sbrief": {
+      "expected": "a broken vertical bar b"
+    },
+    "CenterBar_3_sbrief": {
+      "expected": "a double vertical bar b"
+    },
+    "CenterBar_4_sbrief": {
+      "expected": "a parallel to b"
+    },
+    "CenterBar_5_sbrief": {
+      "expected": "a triple vertical bar b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f vertical bar g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f vertical bar g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f broken vertical bar g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f double vertical bar g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f parallel to g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f triple vertical bar g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sine triple vertical bar g"
+    },
+    "Function_0_default": {
+      "expected": "f StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_1_default": {
+      "expected": "g StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_2_default": {
+      "expected": "h StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_3_default": {
+      "expected": "r StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_4_default": {
+      "expected": "sine StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_5_default": {
+      "expected": "sigma summation StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f StartMetric a EndMetric"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g StartMetric a EndMetric"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h StartMetric a EndMetric"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r StartMetric a EndMetric"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sine StartMetric a EndMetric"
+    },
+    "FunctionMetric5_default": {
+      "expected": "sigma summation StartMetric a EndMetric"
+    },
+    "Function_0_sbrief": {
+      "expected": "f AbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_1_sbrief": {
+      "expected": "g AbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_2_sbrief": {
+      "expected": "h AbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_3_sbrief": {
+      "expected": "r AbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_4_sbrief": {
+      "expected": "sine AbsoluteValue a EndAbsoluteValue"
+    },
+    "Function_5_sbrief": {
+      "expected": "sigma summation AbsoluteValue a EndAbsoluteValue"
+    },
+    "FunctionMetric0_sbrief": {
+      "expected": "f Metric a EndMetric"
+    },
+    "FunctionMetric1_sbrief": {
+      "expected": "g Metric a EndMetric"
+    },
+    "FunctionMetric2_sbrief": {
+      "expected": "h Metric a EndMetric"
+    },
+    "FunctionMetric3_sbrief": {
+      "expected": "r Metric a EndMetric"
+    },
+    "FunctionMetric4_sbrief": {
+      "expected": "sine Metric a EndMetric"
+    },
+    "FunctionMetric5_sbrief": {
+      "expected": "sigma summation Metric a EndMetric"
+    },
+    "CenterBarFunc_0_sbrief": {
+      "expected": "f vertical bar g"
+    },
+    "CenterBarFunc_1_sbrief": {
+      "expected": "f vertical bar g"
+    },
+    "CenterBarFunc_2_sbrief": {
+      "expected": "f broken vertical bar g"
+    },
+    "CenterBarFunc_3_sbrief": {
+      "expected": "f double vertical bar g"
+    },
+    "CenterBarFunc_4_sbrief": {
+      "expected": "f parallel to g"
+    },
+    "CenterBarFunc_5_sbrief": {
+      "expected": "f triple vertical bar g"
+    },
+    "CenterBarFunc_6_sbrief": {
+      "expected": "sine triple vertical bar g"
+    }
+  }
+}
