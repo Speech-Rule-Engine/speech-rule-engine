@@ -59,6 +59,76 @@
       "children/*[2][@role=\"negative\"]",
       "children/*[2]/children/*[1][text()=1]",
       "preceding-sibling::*[@role=\"unit\"]"
+    ],
+    [
+      "Alias",
+      "interval-open",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\""
+    ],
+    [
+      "Alias",
+      "interval-closed-open",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"[\"",
+      "content/*[2]/text()=\"[\""
+    ],
+    [
+      "Alias",
+      "interval-open-closed",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"]\""
+    ],
+    [
+      "Alias",
+      "interval-open-inf-r",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")"
+    ],
+    [
+      "Alias",
+      "interval-open-inf-l",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
+    ],
+    [
+      "Alias",
+      "interval-open-inf-lr",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")",
+      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
+    ],
+    [
+      "Alias",
+      "interval-closed-open-inf",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"[\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")"
+    ],
+    [
+      "Alias",
+      "interval-open-closed-inf",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"]\"",
+      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
     ]
   ]
 }

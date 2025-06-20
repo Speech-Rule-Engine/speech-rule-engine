@@ -76,7 +76,7 @@ export class MathStore extends BaseRuleStore {
       console.error(`Precondition Error: ${prec} ${args}`);
       return;
     }
-    const condition = this.preconditions.get(name);
+    const condition = this.preconditions.get(name) || this.getFullPreconditions(name);
     if (!condition) {
       console.error(`Alias Error: No precondition by the name of ${name}`);
       return;
