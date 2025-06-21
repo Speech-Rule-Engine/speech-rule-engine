@@ -34,7 +34,13 @@ const documentSupported = (() =>
   windowSupported && !(typeof window.document === 'undefined'))();
 const webworker = (() =>
   !(typeof DedicatedWorkerGlobalScope === 'undefined'))();
-const nodeRequire = () => eval('require');
+const nodeRequire = () => {
+  try {
+    return eval('require');
+  } catch (_err) {
+    return (_file: string) => null as any;
+  }
+}
 
 export const SystemExternal: any = {
   /**
