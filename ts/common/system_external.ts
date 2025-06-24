@@ -83,14 +83,6 @@ export const SystemExternal: any = {
   document: document,
 
   /**
-   * The URL for Mathmaps for IE.
-   */
-  mathmapsIePath:
-    'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
-    Variables.VERSION +
-    'mathmaps_ie.js',
-
-  /**
    * Filesystem library.
    */
   fs: documentSupported || webworker ? null : nodeRequire()('fs'),
