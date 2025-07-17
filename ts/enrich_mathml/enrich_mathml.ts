@@ -68,7 +68,7 @@ const IDS = new Map();
  * @returns The modified MathML element.
  */
 export function enrich(mml: Element, semantic: SemanticTree, options: Options): Element {
-  Debugger.getInstance().generateOutput(() => [
+  Debugger.getInstance().generate(() => [
     'Original MathML',
     formattedOutput(mml)
   ]);
@@ -80,7 +80,7 @@ export function enrich(mml: Element, semantic: SemanticTree, options: Options): 
       SemanticSkeleton.fromStructure(mml, semantic, options).toString()
     );
   }
-  Debugger.getInstance().generateOutput(() => [
+  Debugger.getInstance().generate(() => [
     'Semantic Tree\n',
     formattedOutput(semantic),
     'Semantically enriched MathML\n',
@@ -99,7 +99,7 @@ export function enrich(mml: Element, semantic: SemanticTree, options: Options): 
  * @returns The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
-  Debugger.getInstance().generateOutput(() => [
+  Debugger.getInstance().generate(() => [
     'WALKING START: ',
     semantic.toString()
   ]);
@@ -107,7 +107,7 @@ export function walkTree(semantic: SemanticNode): Element {
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
-    Debugger.getInstance().generateOutput(() => [
+    Debugger.getInstance().generate(() => [
       'WALKING END: ',
       semantic.toString()
     ]);
@@ -119,7 +119,7 @@ export function walkTree(semantic: SemanticNode): Element {
       Debugger.getInstance().output('Walktree Case 0.1');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
-      Debugger.getInstance().generateOutput(() => [
+      Debugger.getInstance().generate(() => [
         'WALKING END: ',
         semantic.toString()
       ]);
@@ -134,7 +134,7 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
       newNode.appendChild(walkTree(fchild));
-      Debugger.getInstance().generateOutput(() => [
+      Debugger.getInstance().generate(() => [
         'WALKING END: ',
         semantic.toString()
       ]);
@@ -178,10 +178,7 @@ export function walkTree(semantic: SemanticNode): Element {
     IDS.set(semantic.id, true);
     EnrichAttr.setAttributes(newNode, semantic);
   }
-  Debugger.getInstance().generateOutput(() => [
-    'WALKING END: ',
-    semantic.toString()
-  ]);
+  Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
   return ascendNewNode(newNode);
 }
 

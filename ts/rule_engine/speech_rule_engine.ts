@@ -331,7 +331,7 @@ export class SpeechRuleEngine {
   private evaluateTreeInternal_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
-    Debugger.getInstance().generateOutput(() => [node.toString()]);
+    Debugger.getInstance().generate(() => [node.toString()]);
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
@@ -344,7 +344,7 @@ export class SpeechRuleEngine {
       }
       return result;
     }
-    Debugger.getInstance().generateOutput(() => [
+    Debugger.getInstance().generate(() => [
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
@@ -806,7 +806,7 @@ export class SpeechRuleEngine {
         r2.precondition.rank - r1.precondition.rank
       );
     });
-    Debugger.getInstance().generateOutput(
+    Debugger.getInstance().generate(
       (() => {
         return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
       }).bind(this)

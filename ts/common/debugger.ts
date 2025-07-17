@@ -75,7 +75,7 @@ export class Debugger {
    * @param func The function that generates the
    *      debug output.
    */
-  public generateOutput(func: () => string[]) {
+  public generate(func: () => string[]) {
     if (this.isActive_) {
       this.output_(func.apply(func, []));
     }
