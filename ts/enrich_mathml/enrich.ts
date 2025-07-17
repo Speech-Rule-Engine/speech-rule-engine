@@ -71,19 +71,6 @@ export function semanticMathml(expr: string, options: Options, callback: (p1: El
   });
 }
 
-// /**
-//  * Tests for an expression with debugger output.
-//  *
-//  * @param expr MathML expression.
-//  * @returns The enriched MathML expression.
-//  */
-// export function testTranslation(expr: string): Element {
-//   Debugger.getInstance().init();
-//   const mml = semanticMathmlSync(prepareMmlString(expr), options);
-//   Debugger.getInstance().exit();
-//   return mml;
-// }
-
 /**
  * Adds Math tags to a MathML string, if necessary.
  *

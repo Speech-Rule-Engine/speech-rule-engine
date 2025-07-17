@@ -164,8 +164,6 @@ export class SpeechRuleEngine {
     return allRules.map((rule) => rule.toString()).join('\n');
   }
 
-  // TODO (TS): Rewrite engine to use a feature vector and save the settings
-  //            this way. Currently we mess about with a lot of casting!
   /**
    * Runs a function in the temporary context of the speech rule engine.
    *

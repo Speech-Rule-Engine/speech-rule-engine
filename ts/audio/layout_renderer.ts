@@ -194,7 +194,9 @@ function setRelValues(values: { [key: string]: boolean }) {
 function setTwoDim(str: string): string {
   twodExpr = '';
   const dom = DomUtil.parseInput(`<all>${str}</all>`);
-  Debugger.getInstance().output(DomUtil.formatXml(dom.toString()));
+  Debugger.getInstance().generateOutput(() => [
+    DomUtil.formatXml(dom.toString())
+  ]);
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
