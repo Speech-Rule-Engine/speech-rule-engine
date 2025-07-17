@@ -47,9 +47,8 @@ const SETTINGS: {
   implicit: boolean;
 } = {
   collapsed: true,
-  implicit: true,
+  implicit: true
 };
-
 
 /**
  * Map to prevent overwriting of semantic ids during enrichment if a node (e.g.,
@@ -67,7 +66,11 @@ const IDS = new Map();
  * @param semantic The semantic tree.
  * @returns The modified MathML element.
  */
-export function enrich(mml: Element, semantic: SemanticTree, options: Options): Element {
+export function enrich(
+  mml: Element,
+  semantic: SemanticTree,
+  options: Options
+): Element {
   Debugger.getInstance().generate(() => [
     'Original MathML',
     formattedOutput(mml)
@@ -922,10 +925,10 @@ export function getInnerNode(node: Element): Element {
  * @param element The original MathML expression.
  * @returns Formatted output string.
  */
-function formattedOutput(
-  element: Element | SemanticTree,
-) {
-  return EnrichAttr.removeAttributePrefix(DomUtil.formatXml(element.toString()));
+function formattedOutput(element: Element | SemanticTree) {
+  return EnrichAttr.removeAttributePrefix(
+    DomUtil.formatXml(element.toString())
+  );
 }
 
 /**

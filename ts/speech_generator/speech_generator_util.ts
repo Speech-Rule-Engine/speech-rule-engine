@@ -32,7 +32,10 @@ import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
 import * as EngineConst from '../common/engine_const.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
-import { addPreference, findPreference } from '../speech_rules/clearspeak_preference_string.js';
+import {
+  addPreference,
+  findPreference
+} from '../speech_rules/clearspeak_preference_string.js';
 // import { RebuildStree } from '../walker/rebuild_stree.js';
 
 type OptionsList = { [key: string]: string };
@@ -464,7 +467,8 @@ export function computeBrailleStructure(sxml: Element) {
  */
 export function nextRules(
   options: OptionsList,
-  styles: OptionsList = EngineConst.DOMAIN_TO_STYLES): OptionsList {
+  styles: OptionsList = EngineConst.DOMAIN_TO_STYLES
+): OptionsList {
   // Rule cycling only makes sense for speech modality.
   if (options.modality !== 'speech') {
     return options;
@@ -486,7 +490,12 @@ export function nextRules(
  * @returns The new style name.
  */
 export function nextStyle(node: SemanticNode, options: OptionsList) {
-  const { modality: modality, domain: domain, style: style, locale: locale } = options;
+  const {
+    modality: modality,
+    domain: domain,
+    style: style,
+    locale: locale
+  } = options;
   // Rule cycling only makes sense for speech modality.
   if (modality !== 'speech') {
     return style;
@@ -524,7 +533,7 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
 }
 
 export function toStyles(options: OptionsList): OptionsList {
-  const {domain, style, domain2style} = options;
+  const { domain, style, domain2style } = options;
   const styles: OptionsList = {};
   if (!domain2style) {
     Object.assign(styles, EngineConst.DOMAIN_TO_STYLES);
@@ -534,8 +543,9 @@ export function toStyles(options: OptionsList): OptionsList {
   const split = domain2style.split(',');
   for (const pair of split) {
     const [first, second] = pair.split(/:(.*)/);
-    styles[first] = second ? second :
-      (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
+    styles[first] = second
+      ? second
+      : (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
   }
   return styles;
 }

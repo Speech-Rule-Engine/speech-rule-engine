@@ -64,7 +64,11 @@ export function semanticMathmlSync(expr: string, options: Options): Element {
  * @param options The options to use.
  * @param callback Function to apply on the result.
  */
-export function semanticMathml(expr: string, options: Options, callback: (p1: Element) => any) {
+export function semanticMathml(
+  expr: string,
+  options: Options,
+  callback: (p1: Element) => any
+) {
   EnginePromise.getall().then(() => {
     const mml = DomUtil.parseInput(expr);
     callback(semanticMathmlNode(mml, options));

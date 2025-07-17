@@ -40,7 +40,7 @@ const nodeRequire = () => {
   } catch (_err) {
     return (_file: string) => null as any;
   }
-}
+};
 
 export const SystemExternal: any = {
   /**

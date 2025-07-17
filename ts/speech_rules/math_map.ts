@@ -152,7 +152,8 @@ function retrieveMaps(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().options.locale = Engine.getInstance().defaultLocale;
+        Engine.getInstance().options.locale =
+          Engine.getInstance().defaultLocale;
         res(locale);
       }
     );

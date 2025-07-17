@@ -22,7 +22,6 @@ import * as EngineConst from './engine_const.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 
 export class Options {
-
   /**
    * Binary feature vector.
    */
@@ -152,27 +151,30 @@ export class Options {
    */
   public prune = '';
 
-  constructor(options: {[key: string]: boolean | string} = {}) {
+  constructor(options: { [key: string]: boolean | string } = {}) {
     this.set(options);
   }
 
-  set(options: {[key: string]: boolean | string}) {
+  set(options: { [key: string]: boolean | string }) {
     this.ensureDomain(options);
     for (const [option, value] of Object.entries(options)) {
-      if (Options.BINARY_FEATURES.includes(option) || Options.STRING_FEATURES.includes(option)) {
+      if (
+        Options.BINARY_FEATURES.includes(option) ||
+        Options.STRING_FEATURES.includes(option)
+      ) {
         (this as any)[option] = value;
         continue;
       }
     }
   }
 
-  json(): {[key: string]: boolean | string} {
+  json(): { [key: string]: boolean | string } {
     const features: { [key: string]: string | boolean } = {};
     const engineFeatures = [].concat(
       Options.STRING_FEATURES,
       Options.BINARY_FEATURES
     );
-    engineFeatures.forEach(x => features[x] = (this as any)[x]);
+    engineFeatures.forEach((x) => (features[x] = (this as any)[x]));
     return features;
   }
 
@@ -189,7 +191,7 @@ export class Options {
     // we get a meaningful output.
     if (
       (feature.modality && feature.modality !== 'speech') ||
-        (!feature.modality && this.modality !== 'speech')
+      (!feature.modality && this.modality !== 'speech')
     ) {
       return;
     }
@@ -216,7 +218,6 @@ export class Options {
       feature.domain = 'mathspeak';
     }
   }
-
 }
 
 const MATHSPEAK_ONLY: string[] = ['ca', 'da', 'es'];

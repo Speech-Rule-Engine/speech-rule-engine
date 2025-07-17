@@ -18,7 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Axis, AxisMap, DynamicCstr, DynamicProperties } from '../rule_engine/dynamic_cstr.js';
+import {
+  Axis,
+  AxisMap,
+  DynamicCstr,
+  DynamicProperties
+} from '../rule_engine/dynamic_cstr.js';
 
 export const PREFERENCES = new DynamicProperties({
   AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
@@ -123,8 +128,8 @@ export function fromPreference(pref: string): AxisMap {
     const value = pair[1];
     if (
       value &&
-        value !== AUTO &&
-        properties[pair[0] as Axis].indexOf(value) !== -1
+      value !== AUTO &&
+      properties[pair[0] as Axis].indexOf(value) !== -1
     ) {
       preferences[pair[0]] = pair[1];
     }
@@ -187,4 +192,3 @@ export function addPreference(
   parsed[kind] = value;
   return toPreference(parsed);
 }
-

@@ -495,7 +495,9 @@ export async function workerNextStyle(
  * @param options The options containing the locale setting.
  * @returns The worker structure once the promise resolves.
  */
-export async function workerLocalePreferences(options: OptionsList): Promise<WorkerStructure> {
+export async function workerLocalePreferences(
+  options: OptionsList
+): Promise<WorkerStructure> {
   return ClearspeakPreferences.getLocalePreferences()[options.locale];
 }
 
@@ -512,7 +514,9 @@ export async function workerRelevantPreferences(
 ): Promise<string> {
   const mml = DomUtil.parseInput(expr);
   const rebuilt = new RebuildStree(mml);
-  const query = rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ?? rebuilt.stree.root;
+  const query =
+    rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ??
+    rebuilt.stree.root;
   return ClearspeakPreferences.relevantPreferences(query);
 }
 

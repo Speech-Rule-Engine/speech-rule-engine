@@ -129,5 +129,7 @@ export function registerRenderer(
  * @returns True if it is an instance of the given type.
  */
 export function isXml(): boolean {
-  return renderers.get(Engine.getInstance().options.markup) instanceof XmlRenderer;
+  return (
+    renderers.get(Engine.getInstance().options.markup) instanceof XmlRenderer
+  );
 }

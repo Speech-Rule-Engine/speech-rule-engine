@@ -73,7 +73,10 @@ export function getTree(mml: Element, options: Options): SemanticTree {
  * @param options The options to use.
  * @returns Semantic tree for input string as XML node.
  */
-export function getTreeFromString(expr: string, options: Options): SemanticTree {
+export function getTreeFromString(
+  expr: string,
+  options: Options
+): SemanticTree {
   const mml = DomUtil.parseInput(expr);
   return getTree(mml, options);
 }

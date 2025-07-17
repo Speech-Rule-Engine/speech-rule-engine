@@ -57,9 +57,8 @@ export class SREError extends Error {
  *
  */
 export class Engine {
-
   public options: Options = new Options();
-  
+
   /**
    * True if configuration block has been applied in HTTP mode.
    */
@@ -189,9 +188,8 @@ export class Engine {
       this.options.locale,
       this.options.modality,
       this.options.domain,
-      this.options.style].join(
-      '.'
-    );
+      this.options.style
+    ].join('.');
     const fallback = Dcstr.DynamicProperties.createProp(
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
@@ -273,7 +271,7 @@ export class Engine {
    * @returns Overview of engine setup as a JSON dictionary.
    */
   public json(): { [key: string]: boolean | string } {
-    return Object.assign({'mode': this.mode}, this.options.json());
+    return Object.assign({ mode: this.mode }, this.options.json());
   }
 
   /**
@@ -283,7 +281,6 @@ export class Engine {
   public reset() {
     this.options = new Options();
   }
-
 }
 
 /**
@@ -353,5 +350,4 @@ export class EnginePromise {
   public static getall() {
     return Promise.all(Object.values(EnginePromise.promises));
   }
-
 }
