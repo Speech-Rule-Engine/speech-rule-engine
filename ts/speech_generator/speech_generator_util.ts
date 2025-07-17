@@ -464,6 +464,7 @@ export function computeBrailleStructure(sxml: Element) {
 /**
  *
  * @param options
+ * @param styles
  */
 export function nextRules(
   options: OptionsList,
@@ -532,6 +533,10 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
   return style;
 }
 
+/**
+ *
+ * @param options
+ */
 export function toStyles(options: OptionsList): OptionsList {
   const { domain, style, domain2style } = options;
   const styles: OptionsList = {};
@@ -550,8 +555,12 @@ export function toStyles(options: OptionsList): OptionsList {
   return styles;
 }
 
+/**
+ *
+ * @param styles
+ */
 export function fromStyles(styles: OptionsList): string {
-  let strs = [];
+  const strs = [];
   for (const [domain, style] of Object.entries(styles)) {
     strs.push(`${domain}:${style}`);
   }

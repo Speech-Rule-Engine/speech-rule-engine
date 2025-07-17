@@ -151,10 +151,20 @@ export class Options {
    */
   public prune = '';
 
+  /**
+   * Constructor for options objects.
+   *
+   * @param options The mappings for the intial options setup.
+   */
   constructor(options: { [key: string]: boolean | string } = {}) {
     this.set(options);
   }
 
+  /**
+   * Sets options from a association mapping.
+   *
+   * @param options The mappings for the intial options setup.
+   */
   set(options: { [key: string]: boolean | string }) {
     this.ensureDomain(options);
     for (const [option, value] of Object.entries(options)) {
@@ -168,6 +178,9 @@ export class Options {
     }
   }
 
+  /**
+   * @returns The JSON representation of the options.
+   */
   json(): { [key: string]: boolean | string } {
     const features: { [key: string]: string | boolean } = {};
     const engineFeatures = [].concat(

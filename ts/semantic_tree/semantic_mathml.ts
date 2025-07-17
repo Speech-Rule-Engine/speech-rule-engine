@@ -63,6 +63,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * The semantic parser for MathML elements.
+   *
+   * @param options An options object
    */
   constructor(public options: Options) {
     super('MathML');

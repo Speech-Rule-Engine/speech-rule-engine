@@ -46,7 +46,9 @@ export class SpeechStructure {
 
   /**
    *
+   *
    * @param id
+   * @returns
    */
   private getSpeechMap(id: string): SpeechMap {
     let map = this.speechMaps.get(id);
@@ -98,13 +100,14 @@ export class SpeechStructure {
   /**
    *
    * @param id
+   * @returns
    */
   public get(id: string) {
     return this.speechMaps.get(id);
   }
 
   /**
-   *
+   * @returns
    */
   private getNodeMap() {
     if (this.nodeMap) {
@@ -150,6 +153,7 @@ export class SpeechStructure {
    * Computes json speech structure for a list of given markups.
    *
    * @param mls Optional markup strings. Defaults to none.
+   * @returns
    */
   public json(mls: string[] = ['none']) {
     const result: {

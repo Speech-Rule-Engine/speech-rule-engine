@@ -72,7 +72,7 @@ export function engineSetup(): { [key: string]: boolean | string } {
  * Reset the engine options setup.
  */
 export function resetEngine() {
-  return Engine.getInstance().reset();
+  Engine.getInstance().reset();
 }
 
 /**

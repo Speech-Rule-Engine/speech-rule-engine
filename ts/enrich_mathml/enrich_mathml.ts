@@ -64,6 +64,7 @@ const IDS = new Map();
  *
  * @param mml The MathML element.
  * @param semantic The semantic tree.
+ * @param options An options object.
  * @returns The modified MathML element.
  */
 export function enrich(

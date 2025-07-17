@@ -128,6 +128,7 @@ export class SemanticTree {
    * Create an initial semantic tree.
    *
    * @param mathml The original MathML node.
+   * @param options An options object.
    */
   constructor(
     public mathml: Element,
