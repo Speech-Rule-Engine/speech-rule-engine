@@ -11,7 +11,11 @@ const compat = new FlatCompat({
   allConfig: js.configs.all
 });
 
-export default [...compat.extends(
+export default [
+  {
+    ignores: ["ts/wicked-good-xpath.d.ts"],
+  },
+  ...compat.extends(
   "eslint:recommended",
   "plugin:@typescript-eslint/recommended",
   "plugin:jsdoc/recommended-typescript",
