@@ -6,7 +6,8 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "costante di planck"
+        "default": "h tagliata",
+        "physics": "costante di planck"
       }
     }
   },

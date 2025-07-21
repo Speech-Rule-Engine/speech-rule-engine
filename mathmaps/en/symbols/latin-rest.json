@@ -6,7 +6,7 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "italic h",
+        "default": "h bar",
         "physics": "planck constant"
       }
     }

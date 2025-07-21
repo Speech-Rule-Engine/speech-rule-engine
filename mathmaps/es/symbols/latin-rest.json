@@ -6,7 +6,8 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "constante de planck"
+        "default": "h barra",
+        "physics": "constante de planck"
       }
     }
   },

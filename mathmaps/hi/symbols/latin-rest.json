@@ -6,7 +6,8 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "प्लांक कॉन्स्टेंट"
+        "default": "एच बार",
+        "physics": "प्लांक कॉन्स्टेंट"
       }
     }
   },
