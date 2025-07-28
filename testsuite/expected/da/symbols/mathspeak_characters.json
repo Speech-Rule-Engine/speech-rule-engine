@@ -1232,7 +1232,7 @@
       "expected": "g kursiv"
     },
     "ℎ": {
-      "expected": "h med kursiv"
+      "expected": "h kursiv"
     },
     "𝑖": {
       "expected": "I kursiv"
@@ -9710,7 +9710,7 @@
       "expected": "fiskekrog ned"
     },
     "ℏ": {
-      "expected": "h med kursiv oven over to pi"
+      "expected": "h streg"
     },
     "℔": {
       "expected": "l b bar"
