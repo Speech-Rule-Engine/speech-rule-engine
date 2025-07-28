@@ -6982,7 +6982,7 @@
       "key": "ℏ",
       "domain": "default",
       "style": "physics",
-      "expected": "디랙 상수"
+      "expected": "2 파이 분의 기울인 h"
     },
     "0023-mathspeak-brief": {
       "key": "#",

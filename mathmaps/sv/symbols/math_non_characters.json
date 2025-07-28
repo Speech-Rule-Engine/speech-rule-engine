@@ -6,7 +6,8 @@
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "h streck"
+        "default": "h streck",
+        "physics": "planck constant över två pi"
       }
     }
   },

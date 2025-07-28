@@ -4,6 +4,15 @@
   },
   {
     "category": "Mn",
+    "key": "210E",
+    "mappings": {
+      "default": {
+        "default": "⠈⠓"
+      }
+    }
+  },
+  {
+    "category": "Mn",
     "key": "0363",
     "mappings": {
       "default": {

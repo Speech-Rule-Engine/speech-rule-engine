@@ -6,7 +6,7 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "kursiv h"
+        "physics": "Plancks konstant"
       }
     }
   },

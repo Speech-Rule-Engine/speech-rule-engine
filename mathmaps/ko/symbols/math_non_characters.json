@@ -2,8 +2,8 @@
   {
     "mappings": {
       "default": {
-        "default": "2 파이 분의 기울인 h",
-        "physics": "디랙 상수"
+        "default": "디랙 상수",
+        "physics": "2 파이 분의 기울인 h"
       }
     },
     "key": "210F"

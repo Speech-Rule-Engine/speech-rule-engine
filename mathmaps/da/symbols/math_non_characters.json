@@ -6,7 +6,8 @@
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "h med kursiv oven over to pi"
+        "default": "h streg",
+        "physics": "Plancks konstant over to pi"
       }
     }
   },

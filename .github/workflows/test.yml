@@ -65,7 +65,7 @@ jobs:
           cd testsuite; pnpm build;
 
       - name: Run tests for ${{ matrix.block }}
-        run: pnpm actionTest tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json
+        run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json
 
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4

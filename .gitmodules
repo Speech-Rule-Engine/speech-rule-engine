@@ -1,3 +1,0 @@
-[submodule "sre-tests"]
-	path = sre-tests
-	url = git@github.com:Speech-Rule-Engine/sre-tests.git
