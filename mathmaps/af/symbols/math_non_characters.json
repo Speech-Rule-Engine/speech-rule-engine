@@ -6,7 +6,7 @@
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "kursief h oor twee pi",
+        "default": "h dwars",
         "physics": "planck constant over two pi"
       }
     }

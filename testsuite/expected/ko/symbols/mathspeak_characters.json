@@ -1231,7 +1231,7 @@
       "expected": "기울임체 g"
     },
     "ℎ": {
-      "expected": "이텔릭체 h"
+      "expected": "기울임체 h"
     },
     "𝑖": {
       "expected": "기울임체 i"
@@ -9625,7 +9625,7 @@
       "expected": "아래쪽 물고기 꼬리"
     },
     "ℏ": {
-      "expected": "2 파이 분의 기울인 h"
+      "expected": "디랙 상수"
     },
     "℔": {
       "expected": "L B 막대기 기호"

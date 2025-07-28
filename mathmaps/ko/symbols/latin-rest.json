@@ -2,7 +2,6 @@
     {
     "mappings": {
       "default": {
-        "default": "이텔릭체 h",
         "physics": "플랑크 상수"
       }
     },

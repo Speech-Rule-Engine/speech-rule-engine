@@ -6,7 +6,7 @@
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "italic h over two pi",
+        "default": "h bar",
         "physics": "planck constant over two pi"
       }
     }

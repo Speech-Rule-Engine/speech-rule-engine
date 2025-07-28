@@ -6,6 +6,7 @@
     "key": "210F",
     "mappings": {
       "default": {
+        "default": "h barre",
         "default": "constante de planck sur deux pi"
       }
     }
