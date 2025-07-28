@@ -6,7 +6,6 @@
     "key": "210E",
     "mappings": {
       "default": {
-        "default": "h quer",
         "physics": "Planck-Konstante"
       }
     }

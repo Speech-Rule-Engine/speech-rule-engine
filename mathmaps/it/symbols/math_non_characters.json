@@ -6,7 +6,8 @@
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "planck Constant Over Two Pi"
+        "default": "h tagliata",
+        "physics": "planck Constant Over Two Pi"
       }
     }
   },
