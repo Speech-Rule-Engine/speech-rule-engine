@@ -18,7 +18,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-// import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { EnginePromise } from '../common/engine.js';
 import { Options } from '../common/options.js';
