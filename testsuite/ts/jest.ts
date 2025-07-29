@@ -1,6 +1,6 @@
 import AnalyticsTest from './analytics/analytics_test.js';
 import { get } from './classes/test_factory.js';
-import { describe, beforeAll, afterAll, test } from '@jest/globals';
+import { jest, describe, beforeAll, afterAll, test } from '@jest/globals';
 
 /**
  * Runs tests for a json file.
@@ -22,6 +22,7 @@ export function runJsonTest(file: string) {
     afterAll(() => {
       testcases.tearDownTest();
       global.gc && global.gc();
+      jest.restoreAllMocks();
     });
     for (const testcase of testcases.inputTests) {
       if (!testcase.test) {

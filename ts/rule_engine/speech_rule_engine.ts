@@ -164,8 +164,6 @@ export class SpeechRuleEngine {
     return allRules.map((rule) => rule.toString()).join('\n');
   }
 
-  // TODO (TS): Rewrite engine to use a feature vector and save the settings
-  //            this way. Currently we mess about with a lot of casting!
   /**
    * Runs a function in the temporary context of the speech rule engine.
    *
@@ -333,9 +331,7 @@ export class SpeechRuleEngine {
   private evaluateTreeInternal_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
-    // Debugger.getInstance().output(
-    //   engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
-    // );
+    Debugger.getInstance().generate(() => [node.toString()]);
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
@@ -348,14 +344,14 @@ export class SpeechRuleEngine {
       }
       return result;
     }
-    // Debugger.getInstance().generateOutput(() => [
-    //   'Apply Rule:',
-    //   rule.name,
-    //   rule.dynamicCstr.toString(),
-    //   engine.mode === EngineConst.Mode.HTTP ?
-    //     DomUtil.serializeXml(node) :
-    //     node.toString()
-    // ]);
+    Debugger.getInstance().generate(() => [
+      'Apply Rule:',
+      rule.name,
+      rule.dynamicCstr.toString(),
+      engine.mode === EngineConst.Mode.HTTP ?
+        DomUtil.serializeXml(node) :
+        node.toString()
+    ]);
     Grammar.getInstance().processSingles();
     const context = rule.context;
     const components = rule.action.components;
@@ -810,11 +806,11 @@ export class SpeechRuleEngine {
         r2.precondition.rank - r1.precondition.rank
       );
     });
-    // Debugger.getInstance().generateOutput(
-    //   (() => {
-    //     return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
-    //   }).bind(this)
-    // );
+    Debugger.getInstance().generate(
+      (() => {
+        return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
+      }).bind(this)
+    );
     return rules[0];
   }
 }

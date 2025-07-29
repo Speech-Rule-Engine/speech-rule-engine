@@ -24,12 +24,13 @@ import * as System from '#js/common/system.js';
 import { Key } from './keycodes.js';
 
 import { AbstractJsonTest } from './abstract_test.js';
+import { jest, expect } from '@jest/globals';
 
 export class ApiTest extends AbstractJsonTest {
   /**
    * Feature vector for setting up the engine.
    */
-  public static SETUP: { [key: string]: string } = {
+  public static SETUP: { [key: string]: string | boolean } = {
     domain: 'mathspeak',
     style: 'default',
     modality: 'speech',
@@ -131,3 +132,50 @@ ApiTest.QUADRATIC =
   '</mrow>' +
   '</mfrac>' +
   '</math>';
+
+
+export class DebugTest extends ApiTest {
+
+  /**
+   * @override
+   */
+  public information = 'Debugger test.';
+
+
+  constructor() {
+    super();
+    this.pickFields.push('strings');
+  }
+  
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    ApiTest.SETUP['debug'] = true;
+    jest.clearAllMocks();
+    return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async executeTest(
+    func: string,
+    expr: any,
+    result: string,
+    feature: { [key: string]: string },
+    _json: boolean,
+    move: boolean
+  ) {
+    await System.setupEngine(feature || ApiTest.SETUP);
+    expr = move ? Key.get(expr) : expr || ApiTest.QUADRATIC;
+    console.info = jest.fn();
+    await (System as any)[func](expr);
+    expect(console.info).toHaveBeenCalledTimes(parseInt(result, 10));
+    const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
+    for (let [index, res] of strings) {
+      expect(console.info).toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
+    }
+  }  
+
+}
