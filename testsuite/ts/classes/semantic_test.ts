@@ -62,6 +62,7 @@ export abstract class SemanticTest extends AbstractExamples {
     deactivate('depth', 'depth');
     return System.setupEngine({
       domain: 'mathspeak',
+      debug: true,
       style: 'default'
     });
   }
