@@ -65,7 +65,7 @@ export class Options {
   /**
    * Current domain.
    */
-  public domain = 'mathspeak';
+  public domain = 'clearspeak';
 
   /**
    * Current style.
