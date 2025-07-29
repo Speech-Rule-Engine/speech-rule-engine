@@ -318,7 +318,11 @@ export class SpeechRuleEngine {
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
     const result = this.evaluateTreeInternal_(node);
-    this.speechStructure.addNode(node, result, Engine.getInstance().options.modality);
+    this.speechStructure.addNode(
+      node,
+      result,
+      Engine.getInstance().options.modality
+    );
     return result;
   }
 
@@ -338,7 +342,10 @@ export class SpeechRuleEngine {
       if (engine.options.strict) {
         return [];
       }
-      result = this.getEvaluator(engine.options.locale, engine.options.modality)(node);
+      result = this.getEvaluator(
+        engine.options.locale,
+        engine.options.modality
+      )(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
@@ -348,9 +355,9 @@ export class SpeechRuleEngine {
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
-      engine.mode === EngineConst.Mode.HTTP ?
-        DomUtil.serializeXml(node) :
-        node.toString()
+      engine.mode === EngineConst.Mode.HTTP
+        ? DomUtil.serializeXml(node)
+        : node.toString()
     ]);
     Grammar.getInstance().processSingles();
     const context = rule.context;

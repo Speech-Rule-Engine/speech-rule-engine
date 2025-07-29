@@ -136,7 +136,10 @@ export function evalXPath(expression: string, rootNode: Element): Element[] {
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @returns The result of evaluating the xpath expression.
  */
-export function evaluateBoolean(expression: string, rootNode: Element): boolean {
+export function evaluateBoolean(
+  expression: string,
+  rootNode: Element
+): boolean {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.BOOLEAN_TYPE);

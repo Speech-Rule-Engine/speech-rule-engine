@@ -145,7 +145,8 @@ export class SemanticSkeleton {
     options: Options
   ): SemanticSkeleton {
     return new SemanticSkeleton(
-      SemanticSkeleton.tree_(mml, tree.root, options));
+      SemanticSkeleton.tree_(mml, tree.root, options)
+    );
   }
 
   /**
@@ -321,13 +322,7 @@ export class SemanticSkeleton {
         SemanticSkeleton.tree_(mml, child, options, level + 1, i + 1, l) as any
       );
     }
-    SemanticSkeleton.addAria(
-      mmlChild,
-      level,
-      posinset,
-      setsize,
-      options
-    );
+    SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, options);
     return skeleton;
   }
 
@@ -347,7 +342,7 @@ export class SemanticSkeleton {
     setsize: number,
     options: Options
   ) {
-    const role = !options.tree ? 'treeitem' : level ? 'treeitem' : 'tree'
+    const role = !options.tree ? 'treeitem' : level ? 'treeitem' : 'tree';
     if (!options.aria || !node) {
       return;
     }

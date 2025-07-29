@@ -34,7 +34,9 @@ import { SystemExternal } from './system_external.js';
  * @param feature An object describing some setup features.
  * @returns The promise that resolves once setup is complete.
  */
-export async function setupEngine(feature: { [key: string]: boolean | string }) {
+export async function setupEngine(feature: {
+  [key: string]: boolean | string;
+}) {
   if (feature.debug) {
     Debugger.getInstance().init();
   }
@@ -66,8 +68,8 @@ export async function setupEngine(feature: { [key: string]: boolean | string }) 
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  const features: { [key: string]: string | boolean } = Engine.getInstance().json();
+  const features: { [key: string]: string | boolean } =
+    Engine.getInstance().json();
   features.json = SystemExternal.jsonPath;
   return features;
 }
-

@@ -35,10 +35,13 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
-import { fromPreference, toPreference, PREFERENCES } from './clearspeak_preference_string.js';
+import {
+  fromPreference,
+  toPreference,
+  PREFERENCES
+} from './clearspeak_preference_string.js';
 
 export class ClearspeakPreferences extends DynamicCstr {
-
   /**
    * Exports the Clearspeak comparator with default settings.
    *

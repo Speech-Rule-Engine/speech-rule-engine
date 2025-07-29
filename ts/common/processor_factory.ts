@@ -250,8 +250,7 @@ set(
 set(
   new Processor<Element>('enriched', {
     processor: function (expr) {
-      return Enrich.semanticMathmlSync(
-        expr, Engine.getInstance().options);
+      return Enrich.semanticMathmlSync(expr, Engine.getInstance().options);
     },
     postprocessor: function (enr, _expr) {
       const root = WalkerUtil.getSemanticRoot(enr);

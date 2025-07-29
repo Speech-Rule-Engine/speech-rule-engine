@@ -128,8 +128,12 @@ export class SemanticTree {
    * Create an initial semantic tree.
    *
    * @param mathml The original MathML node.
+   * @param options An options object.
    */
-  constructor(public mathml: Element, public options: Options) {
+  constructor(
+    public mathml: Element,
+    public options: Options
+  ) {
     this.parser = new SemanticMathml(options);
     this.root = this.parser.parse(mathml);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
