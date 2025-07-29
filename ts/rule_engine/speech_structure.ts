@@ -67,7 +67,7 @@ export class SpeechStructure {
    */
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
     const map = this.getSpeechMap(id);
-    map.set(modality, descr);
+    map.set(modality, descr.map(x => x.clone()));
   }
 
   private nodeMap: Map<string, Element> = null;
