@@ -870,6 +870,11 @@ SemanticHeuristics.add(
       ) {
         return false;
       }
+      if (content.length === 1 &&
+        content[0].type === SemanticType.PUNCTUATED &&
+        content[0].contentNodes.length === 1) {
+        return true;
+      }
       const partition = SemanticUtil.partitionNodes(
         content,
         SemanticPred.isPunctuation
