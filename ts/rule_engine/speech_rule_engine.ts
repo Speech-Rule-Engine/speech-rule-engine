@@ -815,7 +815,10 @@ export class SpeechRuleEngine {
     });
     Debugger.getInstance().generate(
       (() => {
-        return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
+        return [
+          'Applicable Rules:',
+          ...rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')')
+        ];
       }).bind(this)
     );
     return rules[0];
