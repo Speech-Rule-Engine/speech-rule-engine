@@ -1,0 +1,302 @@
+{
+  "domain": "clearspeak",
+  "name": "ItalianClearspeakIntervalAuto",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/semantic/intervals.json",
+  "information": "Italian Clearspeak Intervals with Paren Auto.",
+  "active": "IntervalAutoItalian",
+  "compare": true,
+  "tests": {
+    "_comment_0": "Anglo style intervals.",
+    "Anglo_style_00": {
+      "expected": "parentesi tonda aperta a virgola b parentesi tonda chiusa"
+    },
+    "Anglo_style_01": {
+      "expected": "parentesi quadra aperta a virgola b parentesi quadra chiusa"
+    },
+    "Anglo_style_02": {
+      "expected": "parentesi tonda aperta a virgola b parentesi quadra chiusa"
+    },
+    "Anglo_style_03": {
+      "expected": "parentesi quadra aperta a virgola b parentesi tonda chiusa"
+    },
+    "Anglo_style_04": {
+      "expected": "parentesi tonda aperta infinito virgola b parentesi tonda chiusa"
+    },
+    "Anglo_style_05": {
+      "expected": "parentesi tonda aperta meno infinito virgola b parentesi tonda chiusa"
+    },
+    "Anglo_style_06": {
+      "expected": "parentesi tonda aperta infinito virgola b parentesi quadra chiusa"
+    },
+    "Anglo_style_07": {
+      "expected": "parentesi tonda aperta meno infinito virgola b parentesi quadra chiusa"
+    },
+    "Anglo_style_08": {
+      "expected": "parentesi tonda aperta a virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_style_09": {
+      "expected": "parentesi quadra aperta a virgola meno infinito parentesi tonda chiusa"
+    },
+    "Anglo_style_10": {
+      "expected": "parentesi tonda aperta infinito virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_style_11": {
+      "expected": "parentesi tonda aperta infinito virgola meno infinito parentesi tonda chiusa"
+    },
+    "Anglo_style_12": {
+      "expected": "parentesi tonda aperta meno infinito virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_style_13": {
+      "expected": "parentesi tonda aperta meno infinito virgola meno infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_0": {
+      "expected": "parentesi tonda aperta 0 virgola b parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_1": {
+      "expected": "parentesi quadra aperta 0 virgola b parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_left_2": {
+      "expected": "parentesi tonda aperta 0 virgola b parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_left_3": {
+      "expected": "parentesi quadra aperta 0 virgola b parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_4": {
+      "expected": "parentesi tonda aperta infinito virgola b parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_5": {
+      "expected": "parentesi tonda aperta meno infinito virgola b parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_6": {
+      "expected": "parentesi tonda aperta infinito virgola b parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_left_7": {
+      "expected": "parentesi tonda aperta meno infinito virgola b parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_left_8": {
+      "expected": "parentesi tonda aperta 0 virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_left_9": {
+      "expected": "parentesi quadra aperta 0 virgola meno infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_0": {
+      "expected": "parentesi tonda aperta a virgola 0 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_1": {
+      "expected": "parentesi quadra aperta a virgola 0 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_right_2": {
+      "expected": "parentesi tonda aperta a virgola 0 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_right_3": {
+      "expected": "parentesi quadra aperta a virgola 0 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_4": {
+      "expected": "parentesi tonda aperta infinito virgola 0 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_5": {
+      "expected": "parentesi tonda aperta meno infinito virgola 0 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_6": {
+      "expected": "parentesi tonda aperta infinito virgola 0 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_right_7": {
+      "expected": "parentesi tonda aperta meno infinito virgola 0 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_right_8": {
+      "expected": "parentesi tonda aperta a virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_right_9": {
+      "expected": "parentesi quadra aperta a virgola meno infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_0": {
+      "expected": "parentesi tonda aperta meno 1 virgola 1 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_1": {
+      "expected": "parentesi quadra aperta meno 1 virgola 1 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_both_2": {
+      "expected": "parentesi tonda aperta meno 1 virgola 1 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_both_3": {
+      "expected": "parentesi quadra aperta meno 1 virgola 1 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_4": {
+      "expected": "parentesi tonda aperta infinito virgola 1 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_5": {
+      "expected": "parentesi tonda aperta meno infinito virgola 1 parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_6": {
+      "expected": "parentesi tonda aperta infinito virgola 1 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_both_7": {
+      "expected": "parentesi tonda aperta meno infinito virgola 1 parentesi quadra chiusa"
+    },
+    "Anglo_Numbers_both_8": {
+      "expected": "parentesi tonda aperta meno 1 virgola infinito parentesi tonda chiusa"
+    },
+    "Anglo_Numbers_both_9": {
+      "expected": "parentesi quadra aperta meno 1 virgola meno infinito parentesi tonda chiusa"
+    },
+    "_comment_1": "Continental style intervals.",
+    "European_style_00": {
+      "expected": "parentesi quadra chiusa a virgola b parentesi quadra aperta"
+    },
+    "European_style_01": {
+      "expected": "parentesi quadra aperta a virgola b parentesi quadra chiusa"
+    },
+    "European_style_02": {
+      "expected": "parentesi quadra chiusa a virgola b parentesi quadra chiusa"
+    },
+    "European_style_03": {
+      "expected": "parentesi quadra aperta a virgola b parentesi quadra aperta"
+    },
+    "European_style_04": {
+      "expected": "parentesi quadra chiusa infinito virgola b parentesi quadra aperta"
+    },
+    "European_style_05": {
+      "expected": "parentesi quadra chiusa meno infinito virgola b parentesi quadra aperta"
+    },
+    "European_style_06": {
+      "expected": "parentesi quadra chiusa infinito virgola b parentesi quadra chiusa"
+    },
+    "European_style_07": {
+      "expected": "parentesi quadra chiusa meno infinito virgola b parentesi quadra chiusa"
+    },
+    "European_style_08": {
+      "expected": "parentesi quadra chiusa a virgola infinito parentesi quadra aperta"
+    },
+    "European_style_09": {
+      "expected": "parentesi quadra aperta a virgola meno infinito parentesi quadra aperta"
+    },
+    "European_style_10": {
+      "expected": "parentesi quadra chiusa infinito virgola infinito parentesi quadra aperta"
+    },
+    "European_style_11": {
+      "expected": "parentesi quadra chiusa infinito virgola meno infinito parentesi quadra aperta"
+    },
+    "European_style_12": {
+      "expected": "parentesi quadra chiusa meno infinito virgola infinito parentesi quadra aperta"
+    },
+    "European_style_13": {
+      "expected": "parentesi quadra chiusa meno infinito virgola meno infinito parentesi quadra aperta"
+    },
+    "European_Numbers_left_0": {
+      "expected": "parentesi quadra chiusa 0 virgola b parentesi quadra aperta"
+    },
+    "European_Numbers_left_1": {
+      "expected": "parentesi quadra aperta 0 virgola b parentesi quadra chiusa"
+    },
+    "European_Numbers_left_2": {
+      "expected": "parentesi quadra chiusa 0 virgola b parentesi quadra chiusa"
+    },
+    "European_Numbers_left_3": {
+      "expected": "parentesi quadra aperta 0 virgola b parentesi quadra aperta"
+    },
+    "European_Numbers_left_4": {
+      "expected": "parentesi quadra chiusa infinito virgola b parentesi quadra aperta"
+    },
+    "European_Numbers_left_5": {
+      "expected": "parentesi quadra chiusa meno infinito virgola b parentesi quadra aperta"
+    },
+    "European_Numbers_left_6": {
+      "expected": "parentesi quadra chiusa infinito virgola b parentesi quadra chiusa"
+    },
+    "European_Numbers_left_7": {
+      "expected": "parentesi quadra chiusa meno infinito virgola b parentesi quadra chiusa"
+    },
+    "European_Numbers_left_8": {
+      "expected": "parentesi quadra chiusa 0 virgola infinito parentesi quadra aperta"
+    },
+    "European_Numbers_left_9": {
+      "expected": "parentesi quadra aperta 0 virgola meno infinito parentesi quadra aperta"
+    },
+    "European_Numbers_right_0": {
+      "expected": "parentesi quadra chiusa a virgola 0 parentesi quadra aperta"
+    },
+    "European_Numbers_right_1": {
+      "expected": "parentesi quadra aperta a virgola 0 parentesi quadra chiusa"
+    },
+    "European_Numbers_right_2": {
+      "expected": "parentesi quadra chiusa a virgola 0 parentesi quadra chiusa"
+    },
+    "European_Numbers_right_3": {
+      "expected": "parentesi quadra aperta a virgola 0 parentesi quadra aperta"
+    },
+    "European_Numbers_right_4": {
+      "expected": "parentesi quadra chiusa infinito virgola 0 parentesi quadra aperta"
+    },
+    "European_Numbers_right_5": {
+      "expected": "parentesi quadra chiusa meno infinito virgola 0 parentesi quadra aperta"
+    },
+    "European_Numbers_right_6": {
+      "expected": "parentesi quadra chiusa infinito virgola 0 parentesi quadra chiusa"
+    },
+    "European_Numbers_right_7": {
+      "expected": "parentesi quadra chiusa meno infinito virgola 0 parentesi quadra chiusa"
+    },
+    "European_Numbers_right_8": {
+      "expected": "parentesi quadra chiusa a virgola infinito parentesi quadra aperta"
+    },
+    "European_Numbers_right_9": {
+      "expected": "parentesi quadra aperta a virgola meno infinito parentesi quadra aperta"
+    },
+    "European_Numbers_both_0": {
+      "expected": "parentesi quadra chiusa meno 1 virgola 1 parentesi quadra aperta"
+    },
+    "European_Numbers_both_1": {
+      "expected": "parentesi quadra aperta meno 1 virgola 1 parentesi quadra chiusa"
+    },
+    "European_Numbers_both_2": {
+      "expected": "parentesi quadra chiusa meno 1 virgola 1 parentesi quadra chiusa"
+    },
+    "European_Numbers_both_3": {
+      "expected": "parentesi quadra aperta meno 1 virgola 1 parentesi quadra aperta"
+    },
+    "European_Numbers_both_4": {
+      "expected": "parentesi quadra chiusa infinito virgola 1 parentesi quadra aperta"
+    },
+    "European_Numbers_both_5": {
+      "expected": "parentesi quadra chiusa meno infinito virgola 1 parentesi quadra aperta"
+    },
+    "European_Numbers_both_6": {
+      "expected": "parentesi quadra chiusa infinito virgola 1 parentesi quadra chiusa"
+    },
+    "European_Numbers_both_7": {
+      "expected": "parentesi quadra chiusa meno infinito virgola 1 parentesi quadra chiusa"
+    },
+    "European_Numbers_both_8": {
+      "expected": "parentesi quadra chiusa meno 1 virgola infinito parentesi quadra aperta"
+    },
+    "European_Numbers_both_9": {
+      "expected": "parentesi quadra aperta meno 1 virgola meno infinito parentesi quadra aperta"
+    },
+    "None_intervals_0": {
+      "expected": "parentesi tonda aperta a virgola b virgola c parentesi tonda chiusa"
+    },
+    "None_intervals_1": {
+      "expected": "parentesi quadra chiusa a virgola b virgola c parentesi tonda chiusa"
+    },
+    "None_intervals_2": {
+      "expected": "parentesi tonda aperta a virgola b virgola c parentesi quadra aperta"
+    },
+    "None_intervals_3": {
+      "expected": "parentesi tonda aperta infinito virgola b virgola c parentesi quadra aperta"
+    },
+    "None_intervals_4": {
+      "expected": "parentesi tonda aperta a virgola b virgola meno infinito parentesi quadra aperta"
+    },
+    "None_intervals_5": {
+      "expected": "parentesi tonda aperta a punto e virgola b parentesi tonda chiusa"
+    },
+    "None_intervals_6": {
+      "expected": "parentesi tonda aperta a punto e virgola infinito parentesi tonda chiusa"
+    },
+    "None_intervals_7": {
+      "expected": "parentesi quadra aperta a punto e virgola b parentesi tonda chiusa"
+    }
+  }
+}

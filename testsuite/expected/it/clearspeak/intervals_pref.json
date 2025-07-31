@@ -1,0 +1,303 @@
+{
+  "domain": "clearspeak",
+  "name": "ItalianClearspeakIntervalPref",
+  "locale": "it",
+  "factory": "speech",
+  "style": "Paren_Interval",
+  "base": "input/semantic/intervals.json",
+  "information": "Italian Clearspeak Intervals with Paren Interval.",
+  "active": "IntervalPrefItalian",
+  "compare": true,
+  "tests": {
+    "_comment_0": "Anglo style intervals.",
+    "Anglo_style_00": {
+      "expected": "l'intervallo da a a b che non include a o b"
+    },
+    "Anglo_style_01": {
+      "expected": "l'intervallo da a a b che include a e b"
+    },
+    "Anglo_style_02": {
+      "expected": "l'intervallo da a a b che non include a ma che comprende b"
+    },
+    "Anglo_style_03": {
+      "expected": "l'intervallo da a a b che include a ma che non include b"
+    },
+    "Anglo_style_04": {
+      "expected": "l'intervallo da infinito a b che non include b"
+    },
+    "Anglo_style_05": {
+      "expected": "l'intervallo da meno infinito a b che non include b"
+    },
+    "Anglo_style_06": {
+      "expected": "l'intervallo da infinito a b che include b"
+    },
+    "Anglo_style_07": {
+      "expected": "l'intervallo da meno infinito a b che include b"
+    },
+    "Anglo_style_08": {
+      "expected": "l'intervallo da a a infinito che non include a"
+    },
+    "Anglo_style_09": {
+      "expected": "l'intervallo da a a meno infinito che include a"
+    },
+    "Anglo_style_10": {
+      "expected": "l'intervallo da infinito a infinito"
+    },
+    "Anglo_style_11": {
+      "expected": "l'intervallo da infinito a meno infinito"
+    },
+    "Anglo_style_12": {
+      "expected": "l'intervallo da meno infinito a infinito"
+    },
+    "Anglo_style_13": {
+      "expected": "l'intervallo da meno infinito a meno infinito"
+    },
+    "Anglo_Numbers_left_0": {
+      "expected": "l'intervallo da 0 a b che non include 0 o b"
+    },
+    "Anglo_Numbers_left_1": {
+      "expected": "l'intervallo da 0 a b che include 0 e b"
+    },
+    "Anglo_Numbers_left_2": {
+      "expected": "l'intervallo da 0 a b che non include 0 ma che comprende b"
+    },
+    "Anglo_Numbers_left_3": {
+      "expected": "l'intervallo da 0 a b che include 0 ma che non include b"
+    },
+    "Anglo_Numbers_left_4": {
+      "expected": "l'intervallo da infinito a b che non include b"
+    },
+    "Anglo_Numbers_left_5": {
+      "expected": "l'intervallo da meno infinito a b che non include b"
+    },
+    "Anglo_Numbers_left_6": {
+      "expected": "l'intervallo da infinito a b che include b"
+    },
+    "Anglo_Numbers_left_7": {
+      "expected": "l'intervallo da meno infinito a b che include b"
+    },
+    "Anglo_Numbers_left_8": {
+      "expected": "l'intervallo da 0 a infinito che non include 0"
+    },
+    "Anglo_Numbers_left_9": {
+      "expected": "l'intervallo da 0 a meno infinito che include 0"
+    },
+    "Anglo_Numbers_right_0": {
+      "expected": "l'intervallo da a a 0 che non include a o 0"
+    },
+    "Anglo_Numbers_right_1": {
+      "expected": "l'intervallo da a a 0 che include a e 0"
+    },
+    "Anglo_Numbers_right_2": {
+      "expected": "l'intervallo da a a 0 che non include a ma che comprende 0"
+    },
+    "Anglo_Numbers_right_3": {
+      "expected": "l'intervallo da a a 0 che include a ma che non include 0"
+    },
+    "Anglo_Numbers_right_4": {
+      "expected": "l'intervallo da infinito a 0 che non include 0"
+    },
+    "Anglo_Numbers_right_5": {
+      "expected": "l'intervallo da meno infinito a 0 che non include 0"
+    },
+    "Anglo_Numbers_right_6": {
+      "expected": "l'intervallo da infinito a 0 che include 0"
+    },
+    "Anglo_Numbers_right_7": {
+      "expected": "l'intervallo da meno infinito a 0 che include 0"
+    },
+    "Anglo_Numbers_right_8": {
+      "expected": "l'intervallo da a a infinito che non include a"
+    },
+    "Anglo_Numbers_right_9": {
+      "expected": "l'intervallo da a a meno infinito che include a"
+    },
+    "Anglo_Numbers_both_0": {
+      "expected": "l'intervallo da meno 1 a 1 che non include meno 1 o 1"
+    },
+    "Anglo_Numbers_both_1": {
+      "expected": "l'intervallo da meno 1 a 1 che include meno 1 e 1"
+    },
+    "Anglo_Numbers_both_2": {
+      "expected": "l'intervallo da meno 1 a 1 che non include meno 1 ma che comprende 1"
+    },
+    "Anglo_Numbers_both_3": {
+      "expected": "l'intervallo da meno 1 a 1 che include meno 1 ma che non include 1"
+    },
+    "Anglo_Numbers_both_4": {
+      "expected": "l'intervallo da infinito a 1 che non include 1"
+    },
+    "Anglo_Numbers_both_5": {
+      "expected": "l'intervallo da meno infinito a 1 che non include 1"
+    },
+    "Anglo_Numbers_both_6": {
+      "expected": "l'intervallo da infinito a 1 che include 1"
+    },
+    "Anglo_Numbers_both_7": {
+      "expected": "l'intervallo da meno infinito a 1 che include 1"
+    },
+    "Anglo_Numbers_both_8": {
+      "expected": "l'intervallo da meno 1 a infinito che non include meno 1"
+    },
+    "Anglo_Numbers_both_9": {
+      "expected": "l'intervallo da meno 1 a meno infinito che include meno 1"
+    },
+    "_comment_1": "Continental style intervals.",
+    "European_style_00": {
+      "expected": "l'intervallo da a a b che non include a o b"
+    },
+    "European_style_01": {
+      "expected": "l'intervallo da a a b che include a e b"
+    },
+    "European_style_02": {
+      "expected": "l'intervallo da a a b che non include a ma che comprende b"
+    },
+    "European_style_03": {
+      "expected": "l'intervallo da a a b che include a ma che non include b"
+    },
+    "European_style_04": {
+      "expected": "l'intervallo da infinito a b che non include b"
+    },
+    "European_style_05": {
+      "expected": "l'intervallo da meno infinito a b che non include b"
+    },
+    "European_style_06": {
+      "expected": "l'intervallo da infinito a b che include b"
+    },
+    "European_style_07": {
+      "expected": "l'intervallo da meno infinito a b che include b"
+    },
+    "European_style_08": {
+      "expected": "l'intervallo da a a infinito che non include a"
+    },
+    "European_style_09": {
+      "expected": "l'intervallo da a a meno infinito che include a"
+    },
+    "European_style_10": {
+      "expected": "l'intervallo da infinito a infinito"
+    },
+    "European_style_11": {
+      "expected": "l'intervallo da infinito a meno infinito"
+    },
+    "European_style_12": {
+      "expected": "l'intervallo da meno infinito a infinito"
+    },
+    "European_style_13": {
+      "expected": "l'intervallo da meno infinito a meno infinito"
+    },
+    "European_Numbers_left_0": {
+      "expected": "l'intervallo da 0 a b che non include 0 o b"
+    },
+    "European_Numbers_left_1": {
+      "expected": "l'intervallo da 0 a b che include 0 e b"
+    },
+    "European_Numbers_left_2": {
+      "expected": "l'intervallo da 0 a b che non include 0 ma che comprende b"
+    },
+    "European_Numbers_left_3": {
+      "expected": "l'intervallo da 0 a b che include 0 ma che non include b"
+    },
+    "European_Numbers_left_4": {
+      "expected": "l'intervallo da infinito a b che non include b"
+    },
+    "European_Numbers_left_5": {
+      "expected": "l'intervallo da meno infinito a b che non include b"
+    },
+    "European_Numbers_left_6": {
+      "expected": "l'intervallo da infinito a b che include b"
+    },
+    "European_Numbers_left_7": {
+      "expected": "l'intervallo da meno infinito a b che include b"
+    },
+    "European_Numbers_left_8": {
+      "expected": "l'intervallo da 0 a infinito che non include 0"
+    },
+    "European_Numbers_left_9": {
+      "expected": "l'intervallo da 0 a meno infinito che include 0"
+    },
+    "European_Numbers_right_0": {
+      "expected": "l'intervallo da a a 0 che non include a o 0"
+    },
+    "European_Numbers_right_1": {
+      "expected": "l'intervallo da a a 0 che include a e 0"
+    },
+    "European_Numbers_right_2": {
+      "expected": "l'intervallo da a a 0 che non include a ma che comprende 0"
+    },
+    "European_Numbers_right_3": {
+      "expected": "l'intervallo da a a 0 che include a ma che non include 0"
+    },
+    "European_Numbers_right_4": {
+      "expected": "l'intervallo da infinito a 0 che non include 0"
+    },
+    "European_Numbers_right_5": {
+      "expected": "l'intervallo da meno infinito a 0 che non include 0"
+    },
+    "European_Numbers_right_6": {
+      "expected": "l'intervallo da infinito a 0 che include 0"
+    },
+    "European_Numbers_right_7": {
+      "expected": "l'intervallo da meno infinito a 0 che include 0"
+    },
+    "European_Numbers_right_8": {
+      "expected": "l'intervallo da a a infinito che non include a"
+    },
+    "European_Numbers_right_9": {
+      "expected": "l'intervallo da a a meno infinito che include a"
+    },
+    "European_Numbers_both_0": {
+      "expected": "l'intervallo da meno 1 a 1 che non include meno 1 o 1"
+    },
+    "European_Numbers_both_1": {
+      "expected": "l'intervallo da meno 1 a 1 che include meno 1 e 1"
+    },
+    "European_Numbers_both_2": {
+      "expected": "l'intervallo da meno 1 a 1 che non include meno 1 ma che comprende 1"
+    },
+    "European_Numbers_both_3": {
+      "expected": "l'intervallo da meno 1 a 1 che include meno 1 ma che non include 1"
+    },
+    "European_Numbers_both_4": {
+      "expected": "l'intervallo da infinito a 1 che non include 1"
+    },
+    "European_Numbers_both_5": {
+      "expected": "l'intervallo da meno infinito a 1 che non include 1"
+    },
+    "European_Numbers_both_6": {
+      "expected": "l'intervallo da infinito a 1 che include 1"
+    },
+    "European_Numbers_both_7": {
+      "expected": "l'intervallo da meno infinito a 1 che include 1"
+    },
+    "European_Numbers_both_8": {
+      "expected": "l'intervallo da meno 1 a infinito che non include meno 1"
+    },
+    "European_Numbers_both_9": {
+      "expected": "l'intervallo da meno 1 a meno infinito che include meno 1"
+    },
+    "None_intervals_0": {
+      "expected": "parentesi tonda aperta a virgola b virgola c parentesi tonda chiusa"
+    },
+    "None_intervals_1": {
+      "expected": "parentesi quadra chiusa a virgola b virgola c parentesi tonda chiusa"
+    },
+    "None_intervals_2": {
+      "expected": "parentesi tonda aperta a virgola b virgola c parentesi quadra aperta"
+    },
+    "None_intervals_3": {
+      "expected": "parentesi tonda aperta infinito virgola b virgola c parentesi quadra aperta"
+    },
+    "None_intervals_4": {
+      "expected": "parentesi tonda aperta a virgola b virgola meno infinito parentesi quadra aperta"
+    },
+    "None_intervals_5": {
+      "expected": "parentesi tonda aperta a punto e virgola b parentesi tonda chiusa"
+    },
+    "None_intervals_6": {
+      "expected": "parentesi tonda aperta a punto e virgola infinito parentesi tonda chiusa"
+    },
+    "None_intervals_7": {
+      "expected": "parentesi quadra aperta a punto e virgola b parentesi tonda chiusa"
+    }
+  }
+}

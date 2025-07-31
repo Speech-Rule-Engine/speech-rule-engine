@@ -171,16 +171,16 @@
       "expected": "das Interval von a bis minus unendlich einschließlich a"
     },
     "European_style_10": {
-      "expected": "das Interval von unendlich bis unendlich ohne unendlich"
+      "expected": "das Interval von unendlich bis unendlich"
     },
     "European_style_11": {
-      "expected": "das Interval von unendlich bis minus unendlich ohne minus unendlich"
+      "expected": "das Interval von unendlich bis minus unendlich"
     },
     "European_style_12": {
-      "expected": "das Interval von minus unendlich bis unendlich ohne unendlich"
+      "expected": "das Interval von minus unendlich bis unendlich"
     },
     "European_style_13": {
-      "expected": "das Interval von minus unendlich bis minus unendlich ohne minus unendlich"
+      "expected": "das Interval von minus unendlich bis minus unendlich"
     },
     "European_Numbers_left_0": {
       "expected": "das Interval von 0 bis b ohne 0 und b"

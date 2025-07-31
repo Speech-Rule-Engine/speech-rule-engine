@@ -1,0 +1,303 @@
+{
+  "domain": "clearspeak",
+  "name": "FrenchClearspeakIntervalPref",
+  "locale": "fr",
+  "factory": "speech",
+  "style": "Paren_Interval",
+  "base": "input/semantic/intervals.json",
+  "information": "French Clearspeak Intervals with Paren Interval.",
+  "active": "IntervalPrefFrench",
+  "compare": true,
+  "tests": {
+    "_comment_0": "Anglo style intervals.",
+    "Anglo_style_00": {
+      "expected": "un intervalle de a à b sans inclure a ni b"
+    },
+    "Anglo_style_01": {
+      "expected": "un intervalle de a à b avec a et b inclus"
+    },
+    "Anglo_style_02": {
+      "expected": "un intervalle de a à b sans inclure a mais avec b inclus"
+    },
+    "Anglo_style_03": {
+      "expected": "un intervalle de a à b avec a inclus mais sans inclure b"
+    },
+    "Anglo_style_04": {
+      "expected": "un intervalle de infini à b sans inclure b"
+    },
+    "Anglo_style_05": {
+      "expected": "un intervalle de négatif infini à b sans inclure b"
+    },
+    "Anglo_style_06": {
+      "expected": "un intervalle de infini à b avec b inclus"
+    },
+    "Anglo_style_07": {
+      "expected": "un intervalle de négatif infini à b avec b inclus"
+    },
+    "Anglo_style_08": {
+      "expected": "un intervalle de a à infini sans inclure a"
+    },
+    "Anglo_style_09": {
+      "expected": "un intervalle de a à négatif infini avec a inclus"
+    },
+    "Anglo_style_10": {
+      "expected": "un intervalle de infini à infini"
+    },
+    "Anglo_style_11": {
+      "expected": "un intervalle de infini à négatif infini"
+    },
+    "Anglo_style_12": {
+      "expected": "un intervalle de négatif infini à infini"
+    },
+    "Anglo_style_13": {
+      "expected": "un intervalle de négatif infini à négatif infini"
+    },
+    "Anglo_Numbers_left_0": {
+      "expected": "un intervalle de 0 à b sans inclure 0 ni b"
+    },
+    "Anglo_Numbers_left_1": {
+      "expected": "un intervalle de 0 à b avec 0 et b inclus"
+    },
+    "Anglo_Numbers_left_2": {
+      "expected": "un intervalle de 0 à b sans inclure 0 mais avec b inclus"
+    },
+    "Anglo_Numbers_left_3": {
+      "expected": "un intervalle de 0 à b avec 0 inclus mais sans inclure b"
+    },
+    "Anglo_Numbers_left_4": {
+      "expected": "un intervalle de infini à b sans inclure b"
+    },
+    "Anglo_Numbers_left_5": {
+      "expected": "un intervalle de négatif infini à b sans inclure b"
+    },
+    "Anglo_Numbers_left_6": {
+      "expected": "un intervalle de infini à b avec b inclus"
+    },
+    "Anglo_Numbers_left_7": {
+      "expected": "un intervalle de négatif infini à b avec b inclus"
+    },
+    "Anglo_Numbers_left_8": {
+      "expected": "un intervalle de 0 à infini sans inclure 0"
+    },
+    "Anglo_Numbers_left_9": {
+      "expected": "un intervalle de 0 à négatif infini avec 0 inclus"
+    },
+    "Anglo_Numbers_right_0": {
+      "expected": "un intervalle de a à 0 sans inclure a ni 0"
+    },
+    "Anglo_Numbers_right_1": {
+      "expected": "un intervalle de a à 0 avec a et 0 inclus"
+    },
+    "Anglo_Numbers_right_2": {
+      "expected": "un intervalle de a à 0 sans inclure a mais avec 0 inclus"
+    },
+    "Anglo_Numbers_right_3": {
+      "expected": "un intervalle de a à 0 avec a inclus mais sans inclure 0"
+    },
+    "Anglo_Numbers_right_4": {
+      "expected": "un intervalle de infini à 0 sans inclure 0"
+    },
+    "Anglo_Numbers_right_5": {
+      "expected": "un intervalle de négatif infini à 0 sans inclure 0"
+    },
+    "Anglo_Numbers_right_6": {
+      "expected": "un intervalle de infini à 0 avec 0 inclus"
+    },
+    "Anglo_Numbers_right_7": {
+      "expected": "un intervalle de négatif infini à 0 avec 0 inclus"
+    },
+    "Anglo_Numbers_right_8": {
+      "expected": "un intervalle de a à infini sans inclure a"
+    },
+    "Anglo_Numbers_right_9": {
+      "expected": "un intervalle de a à négatif infini avec a inclus"
+    },
+    "Anglo_Numbers_both_0": {
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 ni 1"
+    },
+    "Anglo_Numbers_both_1": {
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 et 1 inclus"
+    },
+    "Anglo_Numbers_both_2": {
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 mais avec 1 inclus"
+    },
+    "Anglo_Numbers_both_3": {
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 inclus mais sans inclure 1"
+    },
+    "Anglo_Numbers_both_4": {
+      "expected": "un intervalle de infini à 1 sans inclure 1"
+    },
+    "Anglo_Numbers_both_5": {
+      "expected": "un intervalle de négatif infini à 1 sans inclure 1"
+    },
+    "Anglo_Numbers_both_6": {
+      "expected": "un intervalle de infini à 1 avec 1 inclus"
+    },
+    "Anglo_Numbers_both_7": {
+      "expected": "un intervalle de négatif infini à 1 avec 1 inclus"
+    },
+    "Anglo_Numbers_both_8": {
+      "expected": "un intervalle de négatif 1 à infini sans inclure négatif 1"
+    },
+    "Anglo_Numbers_both_9": {
+      "expected": "un intervalle de négatif 1 à négatif infini avec négatif 1 inclus"
+    },
+    "_comment_1": "Continental style intervals.",
+    "European_style_00": {
+      "expected": "un intervalle de a à b sans inclure a ni b"
+    },
+    "European_style_01": {
+      "expected": "un intervalle de a à b avec a et b inclus"
+    },
+    "European_style_02": {
+      "expected": "un intervalle de a à b sans inclure a mais avec b inclus"
+    },
+    "European_style_03": {
+      "expected": "un intervalle de a à b avec a inclus mais sans inclure b"
+    },
+    "European_style_04": {
+      "expected": "un intervalle de infini à b sans inclure b"
+    },
+    "European_style_05": {
+      "expected": "un intervalle de négatif infini à b sans inclure b"
+    },
+    "European_style_06": {
+      "expected": "un intervalle de infini à b avec b inclus"
+    },
+    "European_style_07": {
+      "expected": "un intervalle de négatif infini à b avec b inclus"
+    },
+    "European_style_08": {
+      "expected": "un intervalle de a à infini sans inclure a"
+    },
+    "European_style_09": {
+      "expected": "un intervalle de a à négatif infini avec a inclus"
+    },
+    "European_style_10": {
+      "expected": "un intervalle de infini à infini"
+    },
+    "European_style_11": {
+      "expected": "un intervalle de infini à négatif infini"
+    },
+    "European_style_12": {
+      "expected": "un intervalle de négatif infini à infini"
+    },
+    "European_style_13": {
+      "expected": "un intervalle de négatif infini à négatif infini"
+    },
+    "European_Numbers_left_0": {
+      "expected": "un intervalle de 0 à b sans inclure 0 ni b"
+    },
+    "European_Numbers_left_1": {
+      "expected": "un intervalle de 0 à b avec 0 et b inclus"
+    },
+    "European_Numbers_left_2": {
+      "expected": "un intervalle de 0 à b sans inclure 0 mais avec b inclus"
+    },
+    "European_Numbers_left_3": {
+      "expected": "un intervalle de 0 à b avec 0 inclus mais sans inclure b"
+    },
+    "European_Numbers_left_4": {
+      "expected": "un intervalle de infini à b sans inclure b"
+    },
+    "European_Numbers_left_5": {
+      "expected": "un intervalle de négatif infini à b sans inclure b"
+    },
+    "European_Numbers_left_6": {
+      "expected": "un intervalle de infini à b avec b inclus"
+    },
+    "European_Numbers_left_7": {
+      "expected": "un intervalle de négatif infini à b avec b inclus"
+    },
+    "European_Numbers_left_8": {
+      "expected": "un intervalle de 0 à infini sans inclure 0"
+    },
+    "European_Numbers_left_9": {
+      "expected": "un intervalle de 0 à négatif infini avec 0 inclus"
+    },
+    "European_Numbers_right_0": {
+      "expected": "un intervalle de a à 0 sans inclure a ni 0"
+    },
+    "European_Numbers_right_1": {
+      "expected": "un intervalle de a à 0 avec a et 0 inclus"
+    },
+    "European_Numbers_right_2": {
+      "expected": "un intervalle de a à 0 sans inclure a mais avec 0 inclus"
+    },
+    "European_Numbers_right_3": {
+      "expected": "un intervalle de a à 0 avec a inclus mais sans inclure 0"
+    },
+    "European_Numbers_right_4": {
+      "expected": "un intervalle de infini à 0 sans inclure 0"
+    },
+    "European_Numbers_right_5": {
+      "expected": "un intervalle de négatif infini à 0 sans inclure 0"
+    },
+    "European_Numbers_right_6": {
+      "expected": "un intervalle de infini à 0 avec 0 inclus"
+    },
+    "European_Numbers_right_7": {
+      "expected": "un intervalle de négatif infini à 0 avec 0 inclus"
+    },
+    "European_Numbers_right_8": {
+      "expected": "un intervalle de a à infini sans inclure a"
+    },
+    "European_Numbers_right_9": {
+      "expected": "un intervalle de a à négatif infini avec a inclus"
+    },
+    "European_Numbers_both_0": {
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 ni 1"
+    },
+    "European_Numbers_both_1": {
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 et 1 inclus"
+    },
+    "European_Numbers_both_2": {
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 mais avec 1 inclus"
+    },
+    "European_Numbers_both_3": {
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 inclus mais sans inclure 1"
+    },
+    "European_Numbers_both_4": {
+      "expected": "un intervalle de infini à 1 sans inclure 1"
+    },
+    "European_Numbers_both_5": {
+      "expected": "un intervalle de négatif infini à 1 sans inclure 1"
+    },
+    "European_Numbers_both_6": {
+      "expected": "un intervalle de infini à 1 avec 1 inclus"
+    },
+    "European_Numbers_both_7": {
+      "expected": "un intervalle de négatif infini à 1 avec 1 inclus"
+    },
+    "European_Numbers_both_8": {
+      "expected": "un intervalle de négatif 1 à infini sans inclure négatif 1"
+    },
+    "European_Numbers_both_9": {
+      "expected": "un intervalle de négatif 1 à négatif infini avec négatif 1 inclus"
+    },
+    "None_intervals_0": {
+      "expected": "parenthèse gauche a virgule b virgule c parenthèse droite"
+    },
+    "None_intervals_1": {
+      "expected": "crochet droit a virgule b virgule c parenthèse droite"
+    },
+    "None_intervals_2": {
+      "expected": "parenthèse gauche a virgule b virgule c crochet gauche"
+    },
+    "None_intervals_3": {
+      "expected": "parenthèse gauche infini virgule b virgule c crochet gauche"
+    },
+    "None_intervals_4": {
+      "expected": "parenthèse gauche a virgule b virgule négatif infini crochet gauche"
+    },
+    "None_intervals_5": {
+      "expected": "parenthèse gauche a point virgule b parenthèse droite"
+    },
+    "None_intervals_6": {
+      "expected": "parenthèse gauche a point virgule infini parenthèse droite"
+    },
+    "None_intervals_7": {
+      "expected": "crochet gauche a point virgule b parenthèse droite"
+    }
+  }
+}
