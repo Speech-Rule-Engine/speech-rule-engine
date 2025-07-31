@@ -1,0 +1,299 @@
+{
+  "domain": "clearspeak",
+  "name": "GermanClearspeakIntervalAuto",
+  "locale": "de",
+  "factory": "speech",
+  "base": "input/semantic/intervals.json",
+  "information": "German Clearspeak Intervals with Paren Interval.",
+  "active": "IntervalAutoGerman",
+  "tests": {
+    "Anglo_style_00": {
+      "expected": "Klammer auf a Komma b Klammer zu"
+    },
+    "Anglo_style_01": {
+      "expected": "eckige Klammer auf a Komma b eckige Klammer zu"
+    },
+    "Anglo_style_02": {
+      "expected": "Klammer auf a Komma b eckige Klammer zu"
+    },
+    "Anglo_style_03": {
+      "expected": "eckige Klammer auf a Komma b Klammer zu"
+    },
+    "Anglo_style_04": {
+      "expected": "Klammer auf unendlich Komma b Klammer zu"
+    },
+    "Anglo_style_05": {
+      "expected": "Klammer auf minus unendlich Komma b Klammer zu"
+    },
+    "Anglo_style_06": {
+      "expected": "Klammer auf unendlich Komma b eckige Klammer zu"
+    },
+    "Anglo_style_07": {
+      "expected": "Klammer auf minus unendlich Komma b eckige Klammer zu"
+    },
+    "Anglo_style_08": {
+      "expected": "Klammer auf a Komma unendlich Klammer zu"
+    },
+    "Anglo_style_09": {
+      "expected": "eckige Klammer auf a Komma minus unendlich Klammer zu"
+    },
+    "Anglo_style_10": {
+      "expected": "Klammer auf unendlich Komma unendlich Klammer zu"
+    },
+    "Anglo_style_11": {
+      "expected": "Klammer auf unendlich Komma minus unendlich Klammer zu"
+    },
+    "Anglo_style_12": {
+      "expected": "Klammer auf minus unendlich Komma unendlich Klammer zu"
+    },
+    "Anglo_style_13": {
+      "expected": "Klammer auf minus unendlich Komma minus unendlich Klammer zu"
+    },
+    "Anglo_Numbers_left_0": {
+      "expected": "Klammer auf 0 Komma b Klammer zu"
+    },
+    "Anglo_Numbers_left_1": {
+      "expected": "eckige Klammer auf 0 Komma b eckige Klammer zu"
+    },
+    "Anglo_Numbers_left_2": {
+      "expected": "Klammer auf 0 Komma b eckige Klammer zu"
+    },
+    "Anglo_Numbers_left_3": {
+      "expected": "eckige Klammer auf 0 Komma b Klammer zu"
+    },
+    "Anglo_Numbers_left_4": {
+      "expected": "Klammer auf unendlich Komma b Klammer zu"
+    },
+    "Anglo_Numbers_left_5": {
+      "expected": "Klammer auf minus unendlich Komma b Klammer zu"
+    },
+    "Anglo_Numbers_left_6": {
+      "expected": "Klammer auf unendlich Komma b eckige Klammer zu"
+    },
+    "Anglo_Numbers_left_7": {
+      "expected": "Klammer auf minus unendlich Komma b eckige Klammer zu"
+    },
+    "Anglo_Numbers_left_8": {
+      "expected": "Klammer auf 0 Komma unendlich Klammer zu"
+    },
+    "Anglo_Numbers_left_9": {
+      "expected": "eckige Klammer auf 0 Komma minus unendlich Klammer zu"
+    },
+    "Anglo_Numbers_right_0": {
+      "expected": "Klammer auf a Komma 0 Klammer zu"
+    },
+    "Anglo_Numbers_right_1": {
+      "expected": "eckige Klammer auf a Komma 0 eckige Klammer zu"
+    },
+    "Anglo_Numbers_right_2": {
+      "expected": "Klammer auf a Komma 0 eckige Klammer zu"
+    },
+    "Anglo_Numbers_right_3": {
+      "expected": "eckige Klammer auf a Komma 0 Klammer zu"
+    },
+    "Anglo_Numbers_right_4": {
+      "expected": "Klammer auf unendlich Komma 0 Klammer zu"
+    },
+    "Anglo_Numbers_right_5": {
+      "expected": "Klammer auf minus unendlich Komma 0 Klammer zu"
+    },
+    "Anglo_Numbers_right_6": {
+      "expected": "Klammer auf unendlich Komma 0 eckige Klammer zu"
+    },
+    "Anglo_Numbers_right_7": {
+      "expected": "Klammer auf minus unendlich Komma 0 eckige Klammer zu"
+    },
+    "Anglo_Numbers_right_8": {
+      "expected": "Klammer auf a Komma unendlich Klammer zu"
+    },
+    "Anglo_Numbers_right_9": {
+      "expected": "eckige Klammer auf a Komma minus unendlich Klammer zu"
+    },
+    "Anglo_Numbers_both_0": {
+      "expected": "Klammer auf minus 1 Komma 1 Klammer zu"
+    },
+    "Anglo_Numbers_both_1": {
+      "expected": "eckige Klammer auf minus 1 Komma 1 eckige Klammer zu"
+    },
+    "Anglo_Numbers_both_2": {
+      "expected": "Klammer auf minus 1 Komma 1 eckige Klammer zu"
+    },
+    "Anglo_Numbers_both_3": {
+      "expected": "eckige Klammer auf minus 1 Komma 1 Klammer zu"
+    },
+    "Anglo_Numbers_both_4": {
+      "expected": "Klammer auf unendlich Komma 1 Klammer zu"
+    },
+    "Anglo_Numbers_both_5": {
+      "expected": "Klammer auf minus unendlich Komma 1 Klammer zu"
+    },
+    "Anglo_Numbers_both_6": {
+      "expected": "Klammer auf unendlich Komma 1 eckige Klammer zu"
+    },
+    "Anglo_Numbers_both_7": {
+      "expected": "Klammer auf minus unendlich Komma 1 eckige Klammer zu"
+    },
+    "Anglo_Numbers_both_8": {
+      "expected": "Klammer auf minus 1 Komma unendlich Klammer zu"
+    },
+    "Anglo_Numbers_both_9": {
+      "expected": "eckige Klammer auf minus 1 Komma minus unendlich Klammer zu"
+    },
+    "European_style_00": {
+      "expected": "eckige Klammer zu a Komma b eckige Klammer auf"
+    },
+    "European_style_01": {
+      "expected": "eckige Klammer auf a Komma b eckige Klammer zu"
+    },
+    "European_style_02": {
+      "expected": "eckige Klammer zu a Komma b eckige Klammer zu"
+    },
+    "European_style_03": {
+      "expected": "eckige Klammer auf a Komma b eckige Klammer auf"
+    },
+    "European_style_04": {
+      "expected": "eckige Klammer zu unendlich Komma b eckige Klammer auf"
+    },
+    "European_style_05": {
+      "expected": "eckige Klammer zu minus unendlich Komma b eckige Klammer auf"
+    },
+    "European_style_06": {
+      "expected": "eckige Klammer zu unendlich Komma b eckige Klammer zu"
+    },
+    "European_style_07": {
+      "expected": "eckige Klammer zu minus unendlich Komma b eckige Klammer zu"
+    },
+    "European_style_08": {
+      "expected": "eckige Klammer zu a Komma unendlich eckige Klammer auf"
+    },
+    "European_style_09": {
+      "expected": "eckige Klammer auf a Komma minus unendlich eckige Klammer auf"
+    },
+    "European_style_10": {
+      "expected": "eckige Klammer zu unendlich Komma unendlich eckige Klammer auf"
+    },
+    "European_style_11": {
+      "expected": "eckige Klammer zu unendlich Komma minus unendlich eckige Klammer auf"
+    },
+    "European_style_12": {
+      "expected": "eckige Klammer zu minus unendlich Komma unendlich eckige Klammer auf"
+    },
+    "European_style_13": {
+      "expected": "eckige Klammer zu minus unendlich Komma minus unendlich eckige Klammer auf"
+    },
+    "European_Numbers_left_0": {
+      "expected": "eckige Klammer zu 0 Komma b eckige Klammer auf"
+    },
+    "European_Numbers_left_1": {
+      "expected": "eckige Klammer auf 0 Komma b eckige Klammer zu"
+    },
+    "European_Numbers_left_2": {
+      "expected": "eckige Klammer zu 0 Komma b eckige Klammer zu"
+    },
+    "European_Numbers_left_3": {
+      "expected": "eckige Klammer auf 0 Komma b eckige Klammer auf"
+    },
+    "European_Numbers_left_4": {
+      "expected": "eckige Klammer zu unendlich Komma b eckige Klammer auf"
+    },
+    "European_Numbers_left_5": {
+      "expected": "eckige Klammer zu minus unendlich Komma b eckige Klammer auf"
+    },
+    "European_Numbers_left_6": {
+      "expected": "eckige Klammer zu unendlich Komma b eckige Klammer zu"
+    },
+    "European_Numbers_left_7": {
+      "expected": "eckige Klammer zu minus unendlich Komma b eckige Klammer zu"
+    },
+    "European_Numbers_left_8": {
+      "expected": "eckige Klammer zu 0 Komma unendlich eckige Klammer auf"
+    },
+    "European_Numbers_left_9": {
+      "expected": "eckige Klammer auf 0 Komma minus unendlich eckige Klammer auf"
+    },
+    "European_Numbers_right_0": {
+      "expected": "eckige Klammer zu a Komma 0 eckige Klammer auf"
+    },
+    "European_Numbers_right_1": {
+      "expected": "eckige Klammer auf a Komma 0 eckige Klammer zu"
+    },
+    "European_Numbers_right_2": {
+      "expected": "eckige Klammer zu a Komma 0 eckige Klammer zu"
+    },
+    "European_Numbers_right_3": {
+      "expected": "eckige Klammer auf a Komma 0 eckige Klammer auf"
+    },
+    "European_Numbers_right_4": {
+      "expected": "eckige Klammer zu unendlich Komma 0 eckige Klammer auf"
+    },
+    "European_Numbers_right_5": {
+      "expected": "eckige Klammer zu minus unendlich Komma 0 eckige Klammer auf"
+    },
+    "European_Numbers_right_6": {
+      "expected": "eckige Klammer zu unendlich Komma 0 eckige Klammer zu"
+    },
+    "European_Numbers_right_7": {
+      "expected": "eckige Klammer zu minus unendlich Komma 0 eckige Klammer zu"
+    },
+    "European_Numbers_right_8": {
+      "expected": "eckige Klammer zu a Komma unendlich eckige Klammer auf"
+    },
+    "European_Numbers_right_9": {
+      "expected": "eckige Klammer auf a Komma minus unendlich eckige Klammer auf"
+    },
+    "European_Numbers_both_0": {
+      "expected": "eckige Klammer zu minus 1 Komma 1 eckige Klammer auf"
+    },
+    "European_Numbers_both_1": {
+      "expected": "eckige Klammer auf minus 1 Komma 1 eckige Klammer zu"
+    },
+    "European_Numbers_both_2": {
+      "expected": "eckige Klammer zu minus 1 Komma 1 eckige Klammer zu"
+    },
+    "European_Numbers_both_3": {
+      "expected": "eckige Klammer auf minus 1 Komma 1 eckige Klammer auf"
+    },
+    "European_Numbers_both_4": {
+      "expected": "eckige Klammer zu unendlich Komma 1 eckige Klammer auf"
+    },
+    "European_Numbers_both_5": {
+      "expected": "eckige Klammer zu minus unendlich Komma 1 eckige Klammer auf"
+    },
+    "European_Numbers_both_6": {
+      "expected": "eckige Klammer zu unendlich Komma 1 eckige Klammer zu"
+    },
+    "European_Numbers_both_7": {
+      "expected": "eckige Klammer zu minus unendlich Komma 1 eckige Klammer zu"
+    },
+    "European_Numbers_both_8": {
+      "expected": "eckige Klammer zu minus 1 Komma unendlich eckige Klammer auf"
+    },
+    "European_Numbers_both_9": {
+      "expected": "eckige Klammer auf minus 1 Komma minus unendlich eckige Klammer auf"
+    },
+    "None_intervals_0": {
+      "expected": "Klammer auf a Komma b Komma c Klammer zu"
+    },
+    "None_intervals_1": {
+      "expected": "eckige Klammer zu a Komma b Komma c Klammer zu"
+    },
+    "None_intervals_2": {
+      "expected": "Klammer auf a Komma b Komma c eckige Klammer auf"
+    },
+    "None_intervals_3": {
+      "expected": "Klammer auf unendlich Komma b Komma c eckige Klammer auf"
+    },
+    "None_intervals_4": {
+      "expected": "Klammer auf a Komma b Komma minus unendlich eckige Klammer auf"
+    },
+    "None_intervals_5": {
+      "expected": "Klammer auf a Strichpunkt b Klammer zu"
+    },
+    "None_intervals_6": {
+      "expected": "Klammer auf a Strichpunkt unendlich Klammer zu"
+    },
+    "None_intervals_7": {
+      "expected": "eckige Klammer auf a Strichpunkt b Klammer zu"
+    }
+  }
+}
