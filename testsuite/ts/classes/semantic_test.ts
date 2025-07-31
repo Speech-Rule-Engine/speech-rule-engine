@@ -60,9 +60,9 @@ export abstract class SemanticTest extends AbstractExamples {
   public async setUpTest() {
     await super.setUpTest();
     deactivate('depth', 'depth');
+    deactivate('nemeth', 'number');
     return System.setupEngine({
       domain: 'mathspeak',
-      debug: true,
       style: 'default'
     });
   }
