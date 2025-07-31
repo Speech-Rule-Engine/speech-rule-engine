@@ -36,6 +36,7 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import './semantic_heuristics.js';
+import './special_annotators.js';
 
 export class SemanticTree {
   /**
