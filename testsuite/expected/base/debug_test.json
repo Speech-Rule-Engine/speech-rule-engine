@@ -7,9 +7,9 @@
       "input": "<mo>=</mo>",
       "expected": "5",
       "strings": {
-        "1": ["<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"],
-        "2": ["stree(en.speech.mathspeak.default)"],
-        "3": ["Apply Rule:", "stree", "en.speech.mathspeak.default", "<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"]
+        "1": ["<stree><relation role=\"equality\" annotation=\"nemeth:number;depth:1\" id=\"0\">=</relation></stree>"],
+        "2": ["Applicable Rules:", "stree(en.speech.mathspeak.default)"],
+        "3": ["Apply Rule:", "stree", "en.speech.mathspeak.default", "<stree><relation role=\"equality\" annotation=\"nemeth:number;depth:1\" id=\"0\">=</relation></stree>"]
       }
     },
     "JuxtaHeuristics1": {
@@ -32,7 +32,7 @@
         "7": ["Walktree Case 0.1"],
         "9": ["Walktree Case 2"],
         "10": ["Walktree Case 2.1"],
-        "11": ["WALKING END: ", "<cell role=\"label\" annotation=\"depth:3\" id=\"1\"><children><text role=\"label\" annotation=\"depth:4\" id=\"0\">(*)</text></children></cell>"],
+        "11": ["WALKING END: ", "<cell role=\"label\" annotation=\"depth:3\" id=\"1\"><children><text role=\"label\" annotation=\"nemeth:number;depth:4\" id=\"0\">(*)</text></children></cell>"],
         "100": ["Walktree Case 0"],
         "101": ["Walktree Case 0.1"],
         "123": ["Walktree Case 1"],

@@ -159,6 +159,15 @@ export class DebugTest extends ApiTest {
   /**
    * @override
    */
+  public async tearDownTest(): Promise<string> {
+    ApiTest.SETUP['debug'] = false;
+    jest.clearAllMocks();
+    return super.tearDownTest();
+  }
+
+  /**
+   * @override
+   */
   public async executeTest(
     func: string,
     expr: any,
