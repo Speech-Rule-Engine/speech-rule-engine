@@ -1814,8 +1814,21 @@
     ],
     [
       "Precondition",
+      "multi-inference-brief",
+      "brief",
+      "self::inference"
+    ],
+    [
+      "Precondition",
       "inference",
       "default",
+      "self::inference",
+      "count(children/*[2]/children/*)<2"
+    ],
+    [
+      "Precondition",
+      "inference-brief",
+      "brief",
       "self::inference",
       "count(children/*[2]/children/*)<2"
     ],
@@ -1841,7 +1854,8 @@
       "Precondition",
       "axiom",
       "default",
-      "self::inference[@role=\"axiom\"]"
+      "self::inference[@role=\"axiom\"]",
+      "not(contains(@grammar, \"shortPrem\"))"
     ],
     [
       "Precondition",
@@ -1849,6 +1863,20 @@
       "default",
       "self::inference[@role=\"axiom\"]",
       "name(children/*[1])=\"empty\""
+    ],
+    [
+      "Precondition",
+      "inference-short",
+      "default",
+      "self::inference",
+      "contains(@grammar, \"shortPrem\")"
+    ],
+    [
+      "Precondition",
+      "premise-short",
+      "default",
+      "self::inference",
+      "contains(@grammar, \"shortPrem\")"
     ],
     [
       "Generator",

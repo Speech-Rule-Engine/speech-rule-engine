@@ -3094,6 +3094,71 @@
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Precondition",
+      "multi-inference",
+      "default",
+      "self::inference"
+    ],
+    [
+      "Precondition",
+      "multi-inference-brief",
+      "Inference_Short",
+      "self::inference"
+    ],
+    [
+      "Precondition",
+      "inference",
+      "default",
+      "self::inference",
+      "count(children/*[2]/children/*)<2"
+    ],
+    [
+      "Precondition",
+      "inference-brief",
+      "Inference_Short",
+      "self::inference",
+      "count(children/*[2]/children/*)<2"
+    ],
+    [
+      "Precondition",
+      "premise",
+      "default",
+      "self::premises"
+    ],
+    [
+      "Precondition",
+      "conclusion",
+      "default",
+      "self::conclusion"
+    ],
+    [
+      "Precondition",
+      "label",
+      "default",
+      "self::rulelabel"
+    ],
+    [
+      "Precondition",
+      "axiom",
+      "default",
+      "self::inference[@role=\"axiom\"]",
+      "not(contains(@grammar, \"shortPrem\"))"
+    ],
+    [
+      "Precondition",
+      "empty-axiom",
+      "default",
+      "self::inference[@role=\"axiom\"]",
+      "name(children/*[1])=\"empty\""
+    ],
+    [
+      "Precondition",
+      "premise-short",
+      "default",
+      "self::inference",
+      "contains(@grammar, \"shortPrem\")"
     ]
   ],
   "annotators": [

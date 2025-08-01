@@ -1218,6 +1218,56 @@
       "Action",
       "cancel-under-end",
       "[t] \"crossed out\"; [n] children/*[2]/children/*[1]; [t] \"with\"; [n] children/*[1]; [t] \"end crossout\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [m] children/*[2]/children/* (ctxtFunc:CTFnodeCounter, context:\"Premise-:\", sepFunc:CTFpauseSeparator, separator:\"short\", grammar:?shortPrem);"
+    ],
+    [
+      "Action",
+      "multi-inference-brief",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premises\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] \"premise\"; [t] children/*[2]/children/*[1]/children/*[1];"
+    ],
+    [
+      "Action",
+      "inference-brief",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\""
+    ],
+    [
+      "Action",
+      "premise-short",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"label\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"axiom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"empty axiom\""
     ]
   ]
 }
