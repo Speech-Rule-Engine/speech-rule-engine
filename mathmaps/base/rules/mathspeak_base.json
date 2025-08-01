@@ -1808,35 +1808,54 @@
     ],
     [
       "Precondition",
-      "multi-inference",
-      "default",
-      "self::inference"
-    ],
-    [
-      "Precondition",
-      "multi-inference-brief",
-      "brief",
-      "self::inference"
-    ],
-    [
-      "Precondition",
       "inference",
       "default",
-      "self::inference",
-      "count(children/*[2]/children/*)<2"
+      "self::inference"
     ],
     [
       "Precondition",
       "inference-brief",
-      "brief",
+      "default",
       "self::inference",
-      "count(children/*[2]/children/*)<2"
+      "contains(@grammar, \"shortPrem\")"
     ],
     [
       "Precondition",
       "premise",
       "default",
       "self::premises"
+    ],
+    [
+      "Precondition",
+      "premise-single",
+      "default",
+      "self::premises",
+      "count(children/*)<2"
+    ],
+    [
+      "Precondition",
+      "premise-short",
+      "brief",
+      "self::premises"
+    ],
+    [
+      "Specialized",
+      "premise-short",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Precondition",
+      "premise-single-short",
+      "brief",
+      "self::premises",
+      "count(children/*)<2"
+    ],
+    [
+      "Specialized",
+      "premise-single-short",
+      "brief",
+      "sbrief"
     ],
     [
       "Precondition",
