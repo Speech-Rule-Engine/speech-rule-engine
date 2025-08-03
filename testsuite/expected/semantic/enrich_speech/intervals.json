@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech intervals tests.",
+  "base": "input/semantic/intervals.json"
+}
