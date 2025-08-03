@@ -1364,9 +1364,5 @@
       "line-segment",
       "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

@@ -21,6 +21,9 @@
 
 import * as EngineConst from '#js/common/engine_const.js';
 import * as System from '#js/common/system.js';
+import {
+  deactivate
+} from '#js/semantic_tree/semantic_annotations.js';
 import { Key } from './keycodes.js';
 
 import { AbstractJsonTest } from './abstract_test.js';
@@ -57,6 +60,7 @@ export class ApiTest extends AbstractJsonTest {
    * @override
    */
   public async setUpTest() {
+    deactivate('nemeth', 'number');
     return System.setupEngine({
       locale: 'en'
     });
@@ -154,6 +158,15 @@ export class DebugTest extends ApiTest {
     ApiTest.SETUP['debug'] = true;
     jest.clearAllMocks();
     return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    ApiTest.SETUP['debug'] = false;
+    jest.clearAllMocks();
+    return super.tearDownTest();
   }
 
   /**
