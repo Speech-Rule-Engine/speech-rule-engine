@@ -151,6 +151,16 @@ export class ExplorationTest extends AbstractJsonTest {
   /**
    * @override
    */
+  public async setUpTest() {
+    await super.setUpTest();
+    return System.setupEngine({
+      domain: 'mathspeak'
+    });
+  }
+
+  /**
+   * @override
+   */
   public method() {
     this.executeTest(
       this.field('input'),

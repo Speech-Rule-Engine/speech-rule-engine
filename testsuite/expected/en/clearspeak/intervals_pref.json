@@ -140,6 +140,9 @@
     "Anglo_Numbers_both_9": {
       "expected": "the interval from negative 1 to negative infinity including negative 1"
     },
+    "European_style_00a": {
+      "expected": "the interval from a to b not including a or b"
+    },
     "European_style_00": {
       "expected": "the interval from a to b not including a or b"
     },

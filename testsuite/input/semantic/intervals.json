@@ -179,6 +179,10 @@
       "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
     },
     "_comment_1": "Continental style intervals.",
+    "European_style_00a": {
+      "tex": "]a,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mrow><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi></mrow><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
     "European_style_00": {
       "tex": "]a,b[",
       "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"

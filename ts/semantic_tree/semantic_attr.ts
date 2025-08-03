@@ -1217,6 +1217,8 @@ function initFences() {
   addFences(SemanticMap.FencesHoriz, [
     '28',
     '2045',
+    '207D',
+    '208D',
     ['2308', '230f'],
     ['231c', '231f'],
     '2329',

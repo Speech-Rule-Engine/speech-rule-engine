@@ -139,6 +139,9 @@
     "Anglo_Numbers_both_9": {
       "expected": "open bracket negative 1 comma negative infinity close paren"
     },
+    "European_style_00a": {
+      "expected": "close bracket a comma b open bracket"
+    },
     "European_style_00": {
       "expected": "close bracket a comma b open bracket"
     },

@@ -3137,6 +3137,10 @@ export class SemanticProcessor {
    * @param node A fenced semantic node.
    */
   private classifyHorizontalFence_(node: SemanticNode) {
+    SemanticHeuristics.run('interval_heuristic', node);
+    if (node.role === SemanticRole.INTERVAL) {
+      return;
+    };
     node.role = SemanticRole.LEFTRIGHT;
     const children = node.childNodes;
     if (!SemanticPred.isSetNode(node) || children.length > 1) {
