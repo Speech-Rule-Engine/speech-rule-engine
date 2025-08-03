@@ -912,7 +912,6 @@ SemanticHeuristics.add(
       if (content.length === 1 &&
         content[0].type === SemanticType.PUNCTUATED &&
         content[0].contentNodes.length === 1) {
-        console.log(25);
         return true;
       }
       const partition = SemanticUtil.partitionNodes(
@@ -990,3 +989,21 @@ SemanticHeuristics.add(
     }
   )
 );
+
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'propagateInterval',
+    (node: SemanticNode) => {
+      console.log('Propagating interval');
+      return node;
+    },
+    (node: SemanticNode) => {
+      return SemanticPred.isMembership(node);
+    }
+  )
+);
+
+// We go over every element in the 
+// If interval we recurse
+// If leftright, we check if it is potential interval
+// then we recurse

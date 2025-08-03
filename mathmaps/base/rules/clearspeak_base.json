@@ -1272,7 +1272,8 @@
       "name(children/*[1])=\"punctuated\"",
       "children/*[1][@role=\"sequence\"]",
       "count(./children/*[1]/content/*)=1",
-      "children/*[1]/content/*[1][@role=\"comma\"]"
+      "children/*[1]/content/*[1][@role=\"comma\"]",
+      "name(parent::*/parent::*)!=\"appl\""
     ],
     [
       "Precondition",

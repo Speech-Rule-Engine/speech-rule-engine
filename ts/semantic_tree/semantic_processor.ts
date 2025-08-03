@@ -1905,13 +1905,17 @@ export class SemanticProcessor {
     children: SemanticNode[],
     opNode: SemanticNode
   ): SemanticNode {
-    const node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+    let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.INFIXOP,
       children,
       [opNode],
       SemanticUtil.getEmbellishedInner(opNode).textContent
     );
     node.role = opNode.role;
+    node = SemanticHeuristics.run(
+      'propagateInterval',
+      node
+    ) as SemanticNode;
     return SemanticHeuristics.run(
       'propagateSimpleFunction',
       node
