@@ -471,6 +471,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[n] . (grammar:interval)"
     ],

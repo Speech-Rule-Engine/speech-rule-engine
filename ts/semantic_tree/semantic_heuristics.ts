@@ -962,39 +962,50 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) => {
-      const child = node.childNodes[0];
-      if (node.type !== SemanticType.FENCED ||
-        // Check for comma separated pair!
-        child?.type !== SemanticType.PUNCTUATED ||
-        child?.childNodes.length !== 3 ||
-        child?.contentNodes.length !== 1 ||
-        child?.childNodes[1].role !== SemanticRole.COMMA) {
-        return false;
-      }
-      const first = node.childNodes[0].childNodes[0];
-      const second = node.childNodes[0].childNodes[2];
-      const left = node.contentNodes[0].textContent;
-      const right = node.contentNodes[1].textContent;
-      if ((isOpenBrack(left) && isCloseParen(right)) ||
-        (isOpenParen(left) && isCloseBrack(right))) {
-        return true;
-      }
-      // if we have both brackets or parens and at least one infty.
-      if (((isOpenBrack(left) && isCloseBrack(right)) ||
-        (isOpenParen(left) && isCloseParen(right))) &&
-        (isInfty(first) ||isInfty(second))) {
-        return true;
-      }
-      return false;
+      return isPotentialInterval(node);
     }
   )
 );
 
+function isPotentialInterval(node: SemanticNode) {
+  const child = node.childNodes[0];
+  if (node.type !== SemanticType.FENCED ||
+    // Check for comma separated pair!
+    child?.type !== SemanticType.PUNCTUATED ||
+    child?.childNodes.length !== 3 ||
+    child?.contentNodes.length !== 1 ||
+    child?.childNodes[1].role !== SemanticRole.COMMA) {
+    return false;
+  }
+  const first = node.childNodes[0].childNodes[0];
+  const second = node.childNodes[0].childNodes[2];
+  const left = node.contentNodes[0].textContent;
+  const right = node.contentNodes[1].textContent;
+  if ((isOpenBrack(left) && isCloseParen(right)) ||
+    (isOpenParen(left) && isCloseBrack(right))) {
+    return true;
+  }
+  // if we have both brackets or parens and at least one infty.
+  if (isOpenParen(left) && isCloseParen(right) &&
+    (isInfty(first) || isInfty(second))) {
+    return true;
+  }
+  return false;
+}
+
+// We go over every element in the
+// If interval we recurse
+// If leftright, we check if it is potential interval
+// then we recurse
 SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'propagateInterval',
     (node: SemanticNode) => {
-      console.log('Propagating interval');
+      node.childNodes.forEach(child => {
+        if (isPotentialInterval(child)) {
+          child.role = SemanticRole.INTERVAL;
+        }
+      })
       return node;
     },
     (node: SemanticNode) => {
@@ -1002,8 +1013,3 @@ SemanticHeuristics.add(
     }
   )
 );
-
-// We go over every element in the 
-// If interval we recurse
-// If leftright, we check if it is potential interval
-// then we recurse

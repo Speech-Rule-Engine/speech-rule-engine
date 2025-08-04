@@ -1265,6 +1265,14 @@
     ],
     [
       "Precondition",
+      "fences-auto-interval",
+      "default",
+      "self::fenced[@role=\"interval\"]",
+      "not(contains(@grammar, \"interval\"))",
+      "name(parent::*/parent::*)!=\"appl\""
+    ],
+    [
+      "Precondition",
       "fences-interval",
       "Paren_Interval",
       "self::fenced",
@@ -1278,7 +1286,7 @@
     [
       "Precondition",
       "interval-open",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1287,7 +1295,7 @@
     [
       "Precondition",
       "interval-closed-open",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1296,7 +1304,7 @@
     [
       "Precondition",
       "interval-open-closed",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1305,7 +1313,7 @@
     [
       "Precondition",
       "interval-closed",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1314,7 +1322,7 @@
     [
       "Precondition",
       "interval-open-inf-r",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1324,7 +1332,7 @@
     [
       "Precondition",
       "interval-open-inf-l",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1334,7 +1342,7 @@
     [
       "Precondition",
       "interval-open-inf-lr",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1345,7 +1353,7 @@
     [
       "Precondition",
       "interval-closed-open-inf",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1355,7 +1363,7 @@
     [
       "Precondition",
       "interval-open-closed-inf",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
