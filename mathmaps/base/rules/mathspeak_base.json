@@ -111,17 +111,8 @@
       "string-length(text())=1",
       "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
-      "@role!=\"unit\""
-    ],
-    [
-      "Alias",
-      "font",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font=\"normal\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "@role!=\"infty\""
     ],
     [
       "Precondition",

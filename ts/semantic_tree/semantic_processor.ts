@@ -1905,13 +1905,17 @@ export class SemanticProcessor {
     children: SemanticNode[],
     opNode: SemanticNode
   ): SemanticNode {
-    const node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+    let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.INFIXOP,
       children,
       [opNode],
       SemanticUtil.getEmbellishedInner(opNode).textContent
     );
     node.role = opNode.role;
+    node = SemanticHeuristics.run(
+      'propagateInterval',
+      node
+    ) as SemanticNode;
     return SemanticHeuristics.run(
       'propagateSimpleFunction',
       node
@@ -3137,6 +3141,10 @@ export class SemanticProcessor {
    * @param node A fenced semantic node.
    */
   private classifyHorizontalFence_(node: SemanticNode) {
+    SemanticHeuristics.run('interval_heuristic', node);
+    if (node.role === SemanticRole.INTERVAL) {
+      return;
+    };
     node.role = SemanticRole.LEFTRIGHT;
     const children = node.childNodes;
     if (!SemanticPred.isSetNode(node) || children.length > 1) {

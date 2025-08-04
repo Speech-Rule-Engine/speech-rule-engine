@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree intervals tests.",
+  "base": "input/semantic/intervals.json"
+}

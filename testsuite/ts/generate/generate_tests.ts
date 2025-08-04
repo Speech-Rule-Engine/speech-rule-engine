@@ -90,7 +90,8 @@ function generateFromJson(
     map[field] = expr;
     return map;
   };
-  for (const [name, expressions] of Object.entries(json)) {
+  for (let [name, expressions] of Object.entries(json)) {
+    name = name.replace(/\s+/g, '_');
     if (!expressions.length) {
       continue;
     }
@@ -367,7 +368,7 @@ export function transformTest(
 ): tu.JsonTest {
   for (const transformer of transformers) {
     const src = json[transformer.src];
-    if (src === undefined || force) {
+    if (src !== undefined || force) {
       try {
         json[transformer.dst] = transformer.via(src);
       } catch (_err) {

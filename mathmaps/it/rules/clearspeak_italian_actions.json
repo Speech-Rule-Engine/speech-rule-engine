@@ -406,6 +406,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],

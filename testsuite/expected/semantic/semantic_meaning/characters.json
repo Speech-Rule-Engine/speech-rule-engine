@@ -10075,10 +10075,10 @@
       "expected": "<relation role=\"equality\">⁼</relation>"
     },
     "⁽": {
-      "expected": "<punctuation role=\"overaccent\">⁽</punctuation>"
+      "expected": "<fence role=\"open\">⁽</fence>"
     },
     "⁾": {
-      "expected": "<punctuation role=\"overaccent\">⁾</punctuation>"
+      "expected": "<fence role=\"close\">⁾</fence>"
     },
     "₊": {
       "expected": "<punctuation role=\"underaccent\">₊</punctuation>"
@@ -10090,10 +10090,10 @@
       "expected": "<relation role=\"equality\">₌</relation>"
     },
     "₍": {
-      "expected": "<punctuation role=\"underaccent\">₍</punctuation>"
+      "expected": "<fence role=\"open\">₍</fence>"
     },
     "₎": {
-      "expected": "<punctuation role=\"underaccent\">₎</punctuation>"
+      "expected": "<fence role=\"close\">₎</fence>"
     },
     "⅊": {
       "expected": "<identifier role=\"unknown\">⅊</identifier>"
