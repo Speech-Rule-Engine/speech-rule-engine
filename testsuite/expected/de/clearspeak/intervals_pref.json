@@ -295,6 +295,9 @@
     },
     "None_intervals_7": {
       "expected": "eckige Klammer auf a Strichpunkt b Klammer zu"
+    },
+    "European_style_00a": {
+      "expected": "das Interval von a bis b ohne a und b"
     }
   }
 }

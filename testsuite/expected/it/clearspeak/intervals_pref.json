@@ -298,6 +298,9 @@
     },
     "None_intervals_7": {
       "expected": "parentesi quadra aperta a punto e virgola b parentesi tonda chiusa"
+    },
+    "European_style_00a": {
+      "expected": "l'intervallo da a a b che non include a o b"
     }
   }
 }

@@ -16,40 +16,40 @@
       "expected": "crochet gauche a virgule b crochet droit"
     },
     "Anglo_style_02": {
-      "expected": "parenthèse gauche a virgule b crochet droit"
+      "expected": "un intervalle de a à b sans inclure a mais avec b inclus"
     },
     "Anglo_style_03": {
-      "expected": "crochet gauche a virgule b parenthèse droite"
+      "expected": "un intervalle de a à b avec a inclus mais sans inclure b"
     },
     "Anglo_style_04": {
-      "expected": "parenthèse gauche infini virgule b parenthèse droite"
+      "expected": "un intervalle de infini à b sans inclure b"
     },
     "Anglo_style_05": {
-      "expected": "parenthèse gauche négatif infini virgule b parenthèse droite"
+      "expected": "un intervalle de négatif infini à b sans inclure b"
     },
     "Anglo_style_06": {
-      "expected": "parenthèse gauche infini virgule b crochet droit"
+      "expected": "un intervalle de infini à b avec b inclus"
     },
     "Anglo_style_07": {
-      "expected": "parenthèse gauche négatif infini virgule b crochet droit"
+      "expected": "un intervalle de négatif infini à b avec b inclus"
     },
     "Anglo_style_08": {
-      "expected": "parenthèse gauche a virgule infini parenthèse droite"
+      "expected": "un intervalle de a à infini sans inclure a"
     },
     "Anglo_style_09": {
-      "expected": "crochet gauche a virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de a à négatif infini avec a inclus"
     },
     "Anglo_style_10": {
-      "expected": "parenthèse gauche infini virgule infini parenthèse droite"
+      "expected": "un intervalle de infini à infini"
     },
     "Anglo_style_11": {
-      "expected": "parenthèse gauche infini virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de infini à négatif infini"
     },
     "Anglo_style_12": {
-      "expected": "parenthèse gauche négatif infini virgule infini parenthèse droite"
+      "expected": "un intervalle de négatif infini à infini"
     },
     "Anglo_style_13": {
-      "expected": "parenthèse gauche négatif infini virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de négatif infini à négatif infini"
     },
     "Anglo_Numbers_left_0": {
       "expected": "parenthèse gauche 0 virgule b parenthèse droite"
@@ -58,28 +58,28 @@
       "expected": "crochet gauche 0 virgule b crochet droit"
     },
     "Anglo_Numbers_left_2": {
-      "expected": "parenthèse gauche 0 virgule b crochet droit"
+      "expected": "un intervalle de 0 à b sans inclure 0 mais avec b inclus"
     },
     "Anglo_Numbers_left_3": {
-      "expected": "crochet gauche 0 virgule b parenthèse droite"
+      "expected": "un intervalle de 0 à b avec 0 inclus mais sans inclure b"
     },
     "Anglo_Numbers_left_4": {
-      "expected": "parenthèse gauche infini virgule b parenthèse droite"
+      "expected": "un intervalle de infini à b sans inclure b"
     },
     "Anglo_Numbers_left_5": {
-      "expected": "parenthèse gauche négatif infini virgule b parenthèse droite"
+      "expected": "un intervalle de négatif infini à b sans inclure b"
     },
     "Anglo_Numbers_left_6": {
-      "expected": "parenthèse gauche infini virgule b crochet droit"
+      "expected": "un intervalle de infini à b avec b inclus"
     },
     "Anglo_Numbers_left_7": {
-      "expected": "parenthèse gauche négatif infini virgule b crochet droit"
+      "expected": "un intervalle de négatif infini à b avec b inclus"
     },
     "Anglo_Numbers_left_8": {
-      "expected": "parenthèse gauche 0 virgule infini parenthèse droite"
+      "expected": "un intervalle de 0 à infini sans inclure 0"
     },
     "Anglo_Numbers_left_9": {
-      "expected": "crochet gauche 0 virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de 0 à négatif infini avec 0 inclus"
     },
     "Anglo_Numbers_right_0": {
       "expected": "parenthèse gauche a virgule 0 parenthèse droite"
@@ -88,28 +88,28 @@
       "expected": "crochet gauche a virgule 0 crochet droit"
     },
     "Anglo_Numbers_right_2": {
-      "expected": "parenthèse gauche a virgule 0 crochet droit"
+      "expected": "un intervalle de a à 0 sans inclure a mais avec 0 inclus"
     },
     "Anglo_Numbers_right_3": {
-      "expected": "crochet gauche a virgule 0 parenthèse droite"
+      "expected": "un intervalle de a à 0 avec a inclus mais sans inclure 0"
     },
     "Anglo_Numbers_right_4": {
-      "expected": "parenthèse gauche infini virgule 0 parenthèse droite"
+      "expected": "un intervalle de infini à 0 sans inclure 0"
     },
     "Anglo_Numbers_right_5": {
-      "expected": "parenthèse gauche négatif infini virgule 0 parenthèse droite"
+      "expected": "un intervalle de négatif infini à 0 sans inclure 0"
     },
     "Anglo_Numbers_right_6": {
-      "expected": "parenthèse gauche infini virgule 0 crochet droit"
+      "expected": "un intervalle de infini à 0 avec 0 inclus"
     },
     "Anglo_Numbers_right_7": {
-      "expected": "parenthèse gauche négatif infini virgule 0 crochet droit"
+      "expected": "un intervalle de négatif infini à 0 avec 0 inclus"
     },
     "Anglo_Numbers_right_8": {
-      "expected": "parenthèse gauche a virgule infini parenthèse droite"
+      "expected": "un intervalle de a à infini sans inclure a"
     },
     "Anglo_Numbers_right_9": {
-      "expected": "crochet gauche a virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de a à négatif infini avec a inclus"
     },
     "Anglo_Numbers_both_0": {
       "expected": "parenthèse gauche négatif 1 virgule 1 parenthèse droite"
@@ -118,161 +118,161 @@
       "expected": "crochet gauche négatif 1 virgule 1 crochet droit"
     },
     "Anglo_Numbers_both_2": {
-      "expected": "parenthèse gauche négatif 1 virgule 1 crochet droit"
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 mais avec 1 inclus"
     },
     "Anglo_Numbers_both_3": {
-      "expected": "crochet gauche négatif 1 virgule 1 parenthèse droite"
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 inclus mais sans inclure 1"
     },
     "Anglo_Numbers_both_4": {
-      "expected": "parenthèse gauche infini virgule 1 parenthèse droite"
+      "expected": "un intervalle de infini à 1 sans inclure 1"
     },
     "Anglo_Numbers_both_5": {
-      "expected": "parenthèse gauche négatif infini virgule 1 parenthèse droite"
+      "expected": "un intervalle de négatif infini à 1 sans inclure 1"
     },
     "Anglo_Numbers_both_6": {
-      "expected": "parenthèse gauche infini virgule 1 crochet droit"
+      "expected": "un intervalle de infini à 1 avec 1 inclus"
     },
     "Anglo_Numbers_both_7": {
-      "expected": "parenthèse gauche négatif infini virgule 1 crochet droit"
+      "expected": "un intervalle de négatif infini à 1 avec 1 inclus"
     },
     "Anglo_Numbers_both_8": {
-      "expected": "parenthèse gauche négatif 1 virgule infini parenthèse droite"
+      "expected": "un intervalle de négatif 1 à infini sans inclure négatif 1"
     },
     "Anglo_Numbers_both_9": {
-      "expected": "crochet gauche négatif 1 virgule négatif infini parenthèse droite"
+      "expected": "un intervalle de négatif 1 à négatif infini avec négatif 1 inclus"
     },
     "_comment_1": "Continental style intervals.",
     "European_style_00": {
-      "expected": "crochet droit a virgule b crochet gauche"
+      "expected": "un intervalle de a à b sans inclure a ni b"
     },
     "European_style_01": {
       "expected": "crochet gauche a virgule b crochet droit"
     },
     "European_style_02": {
-      "expected": "crochet droit a virgule b crochet droit"
+      "expected": "un intervalle de a à b sans inclure a mais avec b inclus"
     },
     "European_style_03": {
-      "expected": "crochet gauche a virgule b crochet gauche"
+      "expected": "un intervalle de a à b avec a inclus mais sans inclure b"
     },
     "European_style_04": {
-      "expected": "crochet droit infini virgule b crochet gauche"
+      "expected": "un intervalle de infini à b sans inclure b"
     },
     "European_style_05": {
-      "expected": "crochet droit négatif infini virgule b crochet gauche"
+      "expected": "un intervalle de négatif infini à b sans inclure b"
     },
     "European_style_06": {
-      "expected": "crochet droit infini virgule b crochet droit"
+      "expected": "un intervalle de infini à b avec b inclus"
     },
     "European_style_07": {
-      "expected": "crochet droit négatif infini virgule b crochet droit"
+      "expected": "un intervalle de négatif infini à b avec b inclus"
     },
     "European_style_08": {
-      "expected": "crochet droit a virgule infini crochet gauche"
+      "expected": "un intervalle de a à infini sans inclure a"
     },
     "European_style_09": {
-      "expected": "crochet gauche a virgule négatif infini crochet gauche"
+      "expected": "un intervalle de a à négatif infini avec a inclus"
     },
     "European_style_10": {
-      "expected": "crochet droit infini virgule infini crochet gauche"
+      "expected": "un intervalle de infini à infini"
     },
     "European_style_11": {
-      "expected": "crochet droit infini virgule négatif infini crochet gauche"
+      "expected": "un intervalle de infini à négatif infini"
     },
     "European_style_12": {
-      "expected": "crochet droit négatif infini virgule infini crochet gauche"
+      "expected": "un intervalle de négatif infini à infini"
     },
     "European_style_13": {
-      "expected": "crochet droit négatif infini virgule négatif infini crochet gauche"
+      "expected": "un intervalle de négatif infini à négatif infini"
     },
     "European_Numbers_left_0": {
-      "expected": "crochet droit 0 virgule b crochet gauche"
+      "expected": "un intervalle de 0 à b sans inclure 0 ni b"
     },
     "European_Numbers_left_1": {
       "expected": "crochet gauche 0 virgule b crochet droit"
     },
     "European_Numbers_left_2": {
-      "expected": "crochet droit 0 virgule b crochet droit"
+      "expected": "un intervalle de 0 à b sans inclure 0 mais avec b inclus"
     },
     "European_Numbers_left_3": {
-      "expected": "crochet gauche 0 virgule b crochet gauche"
+      "expected": "un intervalle de 0 à b avec 0 inclus mais sans inclure b"
     },
     "European_Numbers_left_4": {
-      "expected": "crochet droit infini virgule b crochet gauche"
+      "expected": "un intervalle de infini à b sans inclure b"
     },
     "European_Numbers_left_5": {
-      "expected": "crochet droit négatif infini virgule b crochet gauche"
+      "expected": "un intervalle de négatif infini à b sans inclure b"
     },
     "European_Numbers_left_6": {
-      "expected": "crochet droit infini virgule b crochet droit"
+      "expected": "un intervalle de infini à b avec b inclus"
     },
     "European_Numbers_left_7": {
-      "expected": "crochet droit négatif infini virgule b crochet droit"
+      "expected": "un intervalle de négatif infini à b avec b inclus"
     },
     "European_Numbers_left_8": {
-      "expected": "crochet droit 0 virgule infini crochet gauche"
+      "expected": "un intervalle de 0 à infini sans inclure 0"
     },
     "European_Numbers_left_9": {
-      "expected": "crochet gauche 0 virgule négatif infini crochet gauche"
+      "expected": "un intervalle de 0 à négatif infini avec 0 inclus"
     },
     "European_Numbers_right_0": {
-      "expected": "crochet droit a virgule 0 crochet gauche"
+      "expected": "un intervalle de a à 0 sans inclure a ni 0"
     },
     "European_Numbers_right_1": {
       "expected": "crochet gauche a virgule 0 crochet droit"
     },
     "European_Numbers_right_2": {
-      "expected": "crochet droit a virgule 0 crochet droit"
+      "expected": "un intervalle de a à 0 sans inclure a mais avec 0 inclus"
     },
     "European_Numbers_right_3": {
-      "expected": "crochet gauche a virgule 0 crochet gauche"
+      "expected": "un intervalle de a à 0 avec a inclus mais sans inclure 0"
     },
     "European_Numbers_right_4": {
-      "expected": "crochet droit infini virgule 0 crochet gauche"
+      "expected": "un intervalle de infini à 0 sans inclure 0"
     },
     "European_Numbers_right_5": {
-      "expected": "crochet droit négatif infini virgule 0 crochet gauche"
+      "expected": "un intervalle de négatif infini à 0 sans inclure 0"
     },
     "European_Numbers_right_6": {
-      "expected": "crochet droit infini virgule 0 crochet droit"
+      "expected": "un intervalle de infini à 0 avec 0 inclus"
     },
     "European_Numbers_right_7": {
-      "expected": "crochet droit négatif infini virgule 0 crochet droit"
+      "expected": "un intervalle de négatif infini à 0 avec 0 inclus"
     },
     "European_Numbers_right_8": {
-      "expected": "crochet droit a virgule infini crochet gauche"
+      "expected": "un intervalle de a à infini sans inclure a"
     },
     "European_Numbers_right_9": {
-      "expected": "crochet gauche a virgule négatif infini crochet gauche"
+      "expected": "un intervalle de a à négatif infini avec a inclus"
     },
     "European_Numbers_both_0": {
-      "expected": "crochet droit négatif 1 virgule 1 crochet gauche"
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 ni 1"
     },
     "European_Numbers_both_1": {
       "expected": "crochet gauche négatif 1 virgule 1 crochet droit"
     },
     "European_Numbers_both_2": {
-      "expected": "crochet droit négatif 1 virgule 1 crochet droit"
+      "expected": "un intervalle de négatif 1 à 1 sans inclure négatif 1 mais avec 1 inclus"
     },
     "European_Numbers_both_3": {
-      "expected": "crochet gauche négatif 1 virgule 1 crochet gauche"
+      "expected": "un intervalle de négatif 1 à 1 avec négatif 1 inclus mais sans inclure 1"
     },
     "European_Numbers_both_4": {
-      "expected": "crochet droit infini virgule 1 crochet gauche"
+      "expected": "un intervalle de infini à 1 sans inclure 1"
     },
     "European_Numbers_both_5": {
-      "expected": "crochet droit négatif infini virgule 1 crochet gauche"
+      "expected": "un intervalle de négatif infini à 1 sans inclure 1"
     },
     "European_Numbers_both_6": {
-      "expected": "crochet droit infini virgule 1 crochet droit"
+      "expected": "un intervalle de infini à 1 avec 1 inclus"
     },
     "European_Numbers_both_7": {
-      "expected": "crochet droit négatif infini virgule 1 crochet droit"
+      "expected": "un intervalle de négatif infini à 1 avec 1 inclus"
     },
     "European_Numbers_both_8": {
-      "expected": "crochet droit négatif 1 virgule infini crochet gauche"
+      "expected": "un intervalle de négatif 1 à infini sans inclure négatif 1"
     },
     "European_Numbers_both_9": {
-      "expected": "crochet gauche négatif 1 virgule négatif infini crochet gauche"
+      "expected": "un intervalle de négatif 1 à négatif infini avec négatif 1 inclus"
     },
     "None_intervals_0": {
       "expected": "parenthèse gauche a virgule b virgule c parenthèse droite"
@@ -297,6 +297,9 @@
     },
     "None_intervals_7": {
       "expected": "crochet gauche a point virgule b parenthèse droite"
+    },
+    "European_style_00a": {
+      "expected": "un intervalle de a à b sans inclure a ni b"
     }
   }
 }

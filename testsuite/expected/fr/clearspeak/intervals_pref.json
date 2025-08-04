@@ -298,6 +298,9 @@
     },
     "None_intervals_7": {
       "expected": "crochet gauche a point virgule b parenthèse droite"
+    },
+    "European_style_00a": {
+      "expected": "un intervalle de a à b sans inclure a ni b"
     }
   }
 }

@@ -197,6 +197,48 @@
     },
     "arctan": {
       "expected": "<function role=\"prefix function\">arctan</function>"
+    },
+    "Deg": {
+      "expected": "<function role=\"prefix function\">Deg</function>"
+    },
+    "Det": {
+      "expected": "<function role=\"prefix function\">Det</function>"
+    },
+    "Dim": {
+      "expected": "<function role=\"prefix function\">Dim</function>"
+    },
+    "HOM": {
+      "expected": "<function role=\"prefix function\">HOM</function>"
+    },
+    "Ker": {
+      "expected": "<function role=\"prefix function\">Ker</function>"
+    },
+    "GCD": {
+      "expected": "<function role=\"prefix function\">GCD</function>"
+    },
+    "LCM": {
+      "expected": "<function role=\"prefix function\">LCM</function>"
+    },
+    "Arg": {
+      "expected": "<function role=\"prefix function\">Arg</function>"
+    },
+    "Im": {
+      "expected": "<function role=\"prefix function\">Im</function>"
+    },
+    "Re": {
+      "expected": "<function role=\"prefix function\">Re</function>"
+    },
+    "Inf": {
+      "expected": "<function role=\"limit function\">Inf</function>"
+    },
+    "Max": {
+      "expected": "<function role=\"limit function\">Max</function>"
+    },
+    "Min": {
+      "expected": "<function role=\"limit function\">Min</function>"
+    },
+    "Sup": {
+      "expected": "<function role=\"limit function\">Sup</function>"
     }
   }
 }

@@ -14,40 +14,40 @@
       "expected": "open bracket a comma b close bracket"
     },
     "Anglo_style_02": {
-      "expected": "open paren a comma b close bracket"
+      "expected": "the interval from a to b not including a but including b"
     },
     "Anglo_style_03": {
-      "expected": "open bracket a comma b close paren"
+      "expected": "the interval from a to b including a but not including b"
     },
     "Anglo_style_04": {
-      "expected": "open paren infinity comma b close paren"
+      "expected": "the interval from infinity to b not including b"
     },
     "Anglo_style_05": {
-      "expected": "open paren negative infinity comma b close paren"
+      "expected": "the interval from negative infinity to b not including b"
     },
     "Anglo_style_06": {
-      "expected": "open paren infinity comma b close bracket"
+      "expected": "the interval from infinity to b including b"
     },
     "Anglo_style_07": {
-      "expected": "open paren negative infinity comma b close bracket"
+      "expected": "the interval from negative infinity to b including b"
     },
     "Anglo_style_08": {
-      "expected": "open paren a comma infinity close paren"
+      "expected": "the interval from a to infinity not including a"
     },
     "Anglo_style_09": {
-      "expected": "open bracket a comma negative infinity close paren"
+      "expected": "the interval from a to negative infinity including a"
     },
     "Anglo_style_10": {
-      "expected": "open paren infinity comma infinity close paren"
+      "expected": "the interval from infinity to infinity"
     },
     "Anglo_style_11": {
-      "expected": "open paren infinity comma negative infinity close paren"
+      "expected": "the interval from infinity to negative infinity"
     },
     "Anglo_style_12": {
-      "expected": "open paren negative infinity comma infinity close paren"
+      "expected": "the interval from negative infinity to infinity"
     },
     "Anglo_style_13": {
-      "expected": "open paren negative infinity comma negative infinity close paren"
+      "expected": "the interval from negative infinity to negative infinity"
     },
     "Anglo_Numbers_left_0": {
       "expected": "open paren 0 comma b close paren"
@@ -56,28 +56,28 @@
       "expected": "open bracket 0 comma b close bracket"
     },
     "Anglo_Numbers_left_2": {
-      "expected": "open paren 0 comma b close bracket"
+      "expected": "the interval from 0 to b not including 0 but including b"
     },
     "Anglo_Numbers_left_3": {
-      "expected": "open bracket 0 comma b close paren"
+      "expected": "the interval from 0 to b including 0 but not including b"
     },
     "Anglo_Numbers_left_4": {
-      "expected": "open paren infinity comma b close paren"
+      "expected": "the interval from infinity to b not including b"
     },
     "Anglo_Numbers_left_5": {
-      "expected": "open paren negative infinity comma b close paren"
+      "expected": "the interval from negative infinity to b not including b"
     },
     "Anglo_Numbers_left_6": {
-      "expected": "open paren infinity comma b close bracket"
+      "expected": "the interval from infinity to b including b"
     },
     "Anglo_Numbers_left_7": {
-      "expected": "open paren negative infinity comma b close bracket"
+      "expected": "the interval from negative infinity to b including b"
     },
     "Anglo_Numbers_left_8": {
-      "expected": "open paren 0 comma infinity close paren"
+      "expected": "the interval from 0 to infinity not including 0"
     },
     "Anglo_Numbers_left_9": {
-      "expected": "open bracket 0 comma negative infinity close paren"
+      "expected": "the interval from 0 to negative infinity including 0"
     },
     "Anglo_Numbers_right_0": {
       "expected": "open paren a comma 0 close paren"
@@ -86,28 +86,28 @@
       "expected": "open bracket a comma 0 close bracket"
     },
     "Anglo_Numbers_right_2": {
-      "expected": "open paren a comma 0 close bracket"
+      "expected": "the interval from a to 0 not including a but including 0"
     },
     "Anglo_Numbers_right_3": {
-      "expected": "open bracket a comma 0 close paren"
+      "expected": "the interval from a to 0 including a but not including 0"
     },
     "Anglo_Numbers_right_4": {
-      "expected": "open paren infinity comma 0 close paren"
+      "expected": "the interval from infinity to 0 not including 0"
     },
     "Anglo_Numbers_right_5": {
-      "expected": "open paren negative infinity comma 0 close paren"
+      "expected": "the interval from negative infinity to 0 not including 0"
     },
     "Anglo_Numbers_right_6": {
-      "expected": "open paren infinity comma 0 close bracket"
+      "expected": "the interval from infinity to 0 including 0"
     },
     "Anglo_Numbers_right_7": {
-      "expected": "open paren negative infinity comma 0 close bracket"
+      "expected": "the interval from negative infinity to 0 including 0"
     },
     "Anglo_Numbers_right_8": {
-      "expected": "open paren a comma infinity close paren"
+      "expected": "the interval from a to infinity not including a"
     },
     "Anglo_Numbers_right_9": {
-      "expected": "open bracket a comma negative infinity close paren"
+      "expected": "the interval from a to negative infinity including a"
     },
     "Anglo_Numbers_both_0": {
       "expected": "open paren negative 1 comma 1 close paren"
@@ -116,163 +116,163 @@
       "expected": "open bracket negative 1 comma 1 close bracket"
     },
     "Anglo_Numbers_both_2": {
-      "expected": "open paren negative 1 comma 1 close bracket"
+      "expected": "the interval from negative 1 to 1 not including negative 1 but including 1"
     },
     "Anglo_Numbers_both_3": {
-      "expected": "open bracket negative 1 comma 1 close paren"
+      "expected": "the interval from negative 1 to 1 including negative 1 but not including 1"
     },
     "Anglo_Numbers_both_4": {
-      "expected": "open paren infinity comma 1 close paren"
+      "expected": "the interval from infinity to 1 not including 1"
     },
     "Anglo_Numbers_both_5": {
-      "expected": "open paren negative infinity comma 1 close paren"
+      "expected": "the interval from negative infinity to 1 not including 1"
     },
     "Anglo_Numbers_both_6": {
-      "expected": "open paren infinity comma 1 close bracket"
+      "expected": "the interval from infinity to 1 including 1"
     },
     "Anglo_Numbers_both_7": {
-      "expected": "open paren negative infinity comma 1 close bracket"
+      "expected": "the interval from negative infinity to 1 including 1"
     },
     "Anglo_Numbers_both_8": {
-      "expected": "open paren negative 1 comma infinity close paren"
+      "expected": "the interval from negative 1 to infinity not including negative 1"
     },
     "Anglo_Numbers_both_9": {
-      "expected": "open bracket negative 1 comma negative infinity close paren"
+      "expected": "the interval from negative 1 to negative infinity including negative 1"
     },
     "European_style_00a": {
-      "expected": "close bracket a comma b open bracket"
+      "expected": "the interval from a to b not including a or b"
     },
     "European_style_00": {
-      "expected": "close bracket a comma b open bracket"
+      "expected": "the interval from a to b not including a or b"
     },
     "European_style_01": {
       "expected": "open bracket a comma b close bracket"
     },
     "European_style_02": {
-      "expected": "close bracket a comma b close bracket"
+      "expected": "the interval from a to b not including a but including b"
     },
     "European_style_03": {
-      "expected": "open bracket a comma b open bracket"
+      "expected": "the interval from a to b including a but not including b"
     },
     "European_style_04": {
-      "expected": "close bracket infinity comma b open bracket"
+      "expected": "the interval from infinity to b not including b"
     },
     "European_style_05": {
-      "expected": "close bracket negative infinity comma b open bracket"
+      "expected": "the interval from negative infinity to b not including b"
     },
     "European_style_06": {
-      "expected": "close bracket infinity comma b close bracket"
+      "expected": "the interval from infinity to b including b"
     },
     "European_style_07": {
-      "expected": "close bracket negative infinity comma b close bracket"
+      "expected": "the interval from negative infinity to b including b"
     },
     "European_style_08": {
-      "expected": "close bracket a comma infinity open bracket"
+      "expected": "the interval from a to infinity not including a"
     },
     "European_style_09": {
-      "expected": "open bracket a comma negative infinity open bracket"
+      "expected": "the interval from a to negative infinity including a"
     },
     "European_style_10": {
-      "expected": "close bracket infinity comma infinity open bracket"
+      "expected": "the interval from infinity to infinity"
     },
     "European_style_11": {
-      "expected": "close bracket infinity comma negative infinity open bracket"
+      "expected": "the interval from infinity to negative infinity"
     },
     "European_style_12": {
-      "expected": "close bracket negative infinity comma infinity open bracket"
+      "expected": "the interval from negative infinity to infinity"
     },
     "European_style_13": {
-      "expected": "close bracket negative infinity comma negative infinity open bracket"
+      "expected": "the interval from negative infinity to negative infinity"
     },
     "European_Numbers_left_0": {
-      "expected": "close bracket 0 comma b open bracket"
+      "expected": "the interval from 0 to b not including 0 or b"
     },
     "European_Numbers_left_1": {
       "expected": "open bracket 0 comma b close bracket"
     },
     "European_Numbers_left_2": {
-      "expected": "close bracket 0 comma b close bracket"
+      "expected": "the interval from 0 to b not including 0 but including b"
     },
     "European_Numbers_left_3": {
-      "expected": "open bracket 0 comma b open bracket"
+      "expected": "the interval from 0 to b including 0 but not including b"
     },
     "European_Numbers_left_4": {
-      "expected": "close bracket infinity comma b open bracket"
+      "expected": "the interval from infinity to b not including b"
     },
     "European_Numbers_left_5": {
-      "expected": "close bracket negative infinity comma b open bracket"
+      "expected": "the interval from negative infinity to b not including b"
     },
     "European_Numbers_left_6": {
-      "expected": "close bracket infinity comma b close bracket"
+      "expected": "the interval from infinity to b including b"
     },
     "European_Numbers_left_7": {
-      "expected": "close bracket negative infinity comma b close bracket"
+      "expected": "the interval from negative infinity to b including b"
     },
     "European_Numbers_left_8": {
-      "expected": "close bracket 0 comma infinity open bracket"
+      "expected": "the interval from 0 to infinity not including 0"
     },
     "European_Numbers_left_9": {
-      "expected": "open bracket 0 comma negative infinity open bracket"
+      "expected": "the interval from 0 to negative infinity including 0"
     },
     "European_Numbers_right_0": {
-      "expected": "close bracket a comma 0 open bracket"
+      "expected": "the interval from a to 0 not including a or 0"
     },
     "European_Numbers_right_1": {
       "expected": "open bracket a comma 0 close bracket"
     },
     "European_Numbers_right_2": {
-      "expected": "close bracket a comma 0 close bracket"
+      "expected": "the interval from a to 0 not including a but including 0"
     },
     "European_Numbers_right_3": {
-      "expected": "open bracket a comma 0 open bracket"
+      "expected": "the interval from a to 0 including a but not including 0"
     },
     "European_Numbers_right_4": {
-      "expected": "close bracket infinity comma 0 open bracket"
+      "expected": "the interval from infinity to 0 not including 0"
     },
     "European_Numbers_right_5": {
-      "expected": "close bracket negative infinity comma 0 open bracket"
+      "expected": "the interval from negative infinity to 0 not including 0"
     },
     "European_Numbers_right_6": {
-      "expected": "close bracket infinity comma 0 close bracket"
+      "expected": "the interval from infinity to 0 including 0"
     },
     "European_Numbers_right_7": {
-      "expected": "close bracket negative infinity comma 0 close bracket"
+      "expected": "the interval from negative infinity to 0 including 0"
     },
     "European_Numbers_right_8": {
-      "expected": "close bracket a comma infinity open bracket"
+      "expected": "the interval from a to infinity not including a"
     },
     "European_Numbers_right_9": {
-      "expected": "open bracket a comma negative infinity open bracket"
+      "expected": "the interval from a to negative infinity including a"
     },
     "European_Numbers_both_0": {
-      "expected": "close bracket negative 1 comma 1 open bracket"
+      "expected": "the interval from negative 1 to 1 not including negative 1 or 1"
     },
     "European_Numbers_both_1": {
       "expected": "open bracket negative 1 comma 1 close bracket"
     },
     "European_Numbers_both_2": {
-      "expected": "close bracket negative 1 comma 1 close bracket"
+      "expected": "the interval from negative 1 to 1 not including negative 1 but including 1"
     },
     "European_Numbers_both_3": {
-      "expected": "open bracket negative 1 comma 1 open bracket"
+      "expected": "the interval from negative 1 to 1 including negative 1 but not including 1"
     },
     "European_Numbers_both_4": {
-      "expected": "close bracket infinity comma 1 open bracket"
+      "expected": "the interval from infinity to 1 not including 1"
     },
     "European_Numbers_both_5": {
-      "expected": "close bracket negative infinity comma 1 open bracket"
+      "expected": "the interval from negative infinity to 1 not including 1"
     },
     "European_Numbers_both_6": {
-      "expected": "close bracket infinity comma 1 close bracket"
+      "expected": "the interval from infinity to 1 including 1"
     },
     "European_Numbers_both_7": {
-      "expected": "close bracket negative infinity comma 1 close bracket"
+      "expected": "the interval from negative infinity to 1 including 1"
     },
     "European_Numbers_both_8": {
-      "expected": "close bracket negative 1 comma infinity open bracket"
+      "expected": "the interval from negative 1 to infinity not including negative 1"
     },
     "European_Numbers_both_9": {
-      "expected": "open bracket negative 1 comma negative infinity open bracket"
+      "expected": "the interval from negative 1 to negative infinity including negative 1"
     },
     "None_intervals_0": {
       "expected": "open paren a comma b comma c close paren"

@@ -479,6 +479,21 @@
     },
     "″": {
       "expected": "<punctuation role=\"prime\">″</punctuation>"
+    },
+    "₸": {
+      "expected": "<unknown role=\"unknown\">₸</unknown>"
+    },
+    "KZT": {
+      "expected": "<unknown role=\"unknown\">KZT</unknown>"
+    },
+    "₺": {
+      "expected": "<unknown role=\"unknown\">₺</unknown>"
+    },
+    "TRY": {
+      "expected": "<unknown role=\"unknown\">TRY</unknown>"
+    },
+    "kph": {
+      "expected": "<unknown role=\"unknown\">kph</unknown>"
     }
   }
 }

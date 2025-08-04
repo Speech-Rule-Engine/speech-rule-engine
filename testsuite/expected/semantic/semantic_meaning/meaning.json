@@ -782,15 +782,15 @@
     },
     "⁽": {
       "expected": {
-        "role": "overaccent",
-        "type": "punctuation",
+        "role": "open",
+        "type": "fence",
         "font": "unknown"
       }
     },
     "⁾": {
       "expected": {
-        "role": "overaccent",
-        "type": "punctuation",
+        "role": "close",
+        "type": "fence",
         "font": "unknown"
       }
     },
@@ -845,15 +845,15 @@
     },
     "₍": {
       "expected": {
-        "role": "underaccent",
-        "type": "punctuation",
+        "role": "open",
+        "type": "fence",
         "font": "unknown"
       }
     },
     "₎": {
       "expected": {
-        "role": "underaccent",
-        "type": "punctuation",
+        "role": "close",
+        "type": "fence",
         "font": "unknown"
       }
     },
@@ -30970,6 +30970,9 @@
         "type": "function",
         "font": "unknown"
       }
+    },
+    "size": {
+      "expected": "4460"
     }
   }
 }
