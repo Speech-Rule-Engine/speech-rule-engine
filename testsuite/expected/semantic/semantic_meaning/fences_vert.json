@@ -15,6 +15,7 @@
     "︿": {"expected": "﹀"},
     "﹁": {"expected": "﹂"},
     "﹃": {"expected": "﹄"},
-    "﹇": {"expected": "﹈"}
+    "﹇": {"expected": "﹈"},
+    "size": {"expected:": "13"}
   }
 }
