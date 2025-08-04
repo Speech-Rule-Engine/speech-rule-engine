@@ -44,6 +44,7 @@ export function ClearspeakRules() {
     CSFnestingDepth: ClearspeakUtil.nestingDepth,
     CQFfencedArguments: ClearspeakUtil.fencedArguments,
     CQFsimpleArguments: ClearspeakUtil.simpleArguments,
-    CQFspaceoutNumber: MathspeakUtil.spaceoutNumber
+    CQFspaceoutNumber: MathspeakUtil.spaceoutNumber,
+    CQFisUnit: ClearspeakUtil.isUnit
   });
 }
