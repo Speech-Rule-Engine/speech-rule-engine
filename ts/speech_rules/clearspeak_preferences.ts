@@ -358,7 +358,11 @@ const REVERSE_MAPPING: string[][] = [
     'category:Trigonometric'
   ], // specific
   ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR],
-  ['VerticalLine', SemanticType.PUNCTUATION, SemanticRole.VBAR]
+  ['VerticalLine', SemanticType.PUNCTUATION, SemanticRole.VBAR],
+  ['Inference', SemanticType.INFERENCE, ''],
+  ['Inference', SemanticType.PREMISES, ''],
+  ['Inference', SemanticType.RULELABEL, ''],
+  ['Inference', SemanticType.CONCLUSION, '']
 ];
 
 const SEMANTIC_MAPPING_: {

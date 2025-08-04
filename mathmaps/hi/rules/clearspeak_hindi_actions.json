@@ -1113,6 +1113,41 @@
       "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"प्रति\"; [n] children/*[2] (grammar:singular)"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"सूचक पर्चा\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"अभिगृहीत\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"रिक्त अभिगृहीत\""
     ]
   ]
 }

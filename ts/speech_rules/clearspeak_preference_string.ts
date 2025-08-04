@@ -58,6 +58,7 @@ export const PREFERENCES = new DynamicProperties({
     // Reciprocal is French
     'Reciprocal'
   ],
+  Inference: ['Auto', 'Long'],
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
   Matrix: [

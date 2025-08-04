@@ -1208,6 +1208,41 @@
       "Action",
       "cancel-under-end",
       "[n] children/*[2]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[1]; [t] \"slutt utkrysset\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premisser\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premiss\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premiss \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"etikett\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"aksiom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"tomt aksiom\""
     ]
   ]
 }

@@ -1368,6 +1368,41 @@
       "Action",
       "line-segment",
       "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"추론 규칙\"; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"추론 규칙\"; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFwordCounter,context:\"전제 \");"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"꼬리표\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"공리\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"빈 공리\""
     ]
   ]
 }
