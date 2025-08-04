@@ -1227,32 +1227,17 @@
     [
       "Action",
       "multi-inference",
-      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [m] children/*[2]/children/* (ctxtFunc:CTFnodeCounter, context:\"Premise-:\", sepFunc:CTFpauseSeparator, separator:\"short\", grammar:?shortPrem);"
-    ],
-    [
-      "Action",
-      "multi-inference-brief",
-      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premises\""
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premises\" (pause:long)"
     ],
     [
       "Action",
       "inference",
-      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] \"premise\"; [t] children/*[2]/children/*[1]/children/*[1];"
-    ],
-    [
-      "Action",
-      "inference-brief",
-      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\""
-    ],
-    [
-      "Action",
-      "premise-short",
-      "[n] children/*[1]"
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\" (pause:long)"
     ],
     [
       "Action",
       "premise",
-      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Premise-:\", sepFunc:CTFpauseSeparator, separator:\"short\")"
     ],
     [
       "Action",
@@ -1273,6 +1258,21 @@
       "Action",
       "empty-axiom",
       "[t] \"empty axiom\""
+    ],
+    [
+      "Action",
+      "multi-inference-long",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [m] children/*[2]/children/* (ctxtFunc:CTFnodeCounter, context:\"Premise-:\", sepFunc:CTFpauseSeparator, separator:\"short\", grammar:shortPrem);"
+    ],
+    [
+      "Action",
+      "inference-long",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] \"premise\"; [t] children/*[2]/children/*[1]/children/*[1];"
+    ],
+    [
+      "Action",
+      "inference-short",
+      "[n] children/*[1]"
     ]
   ]
 }

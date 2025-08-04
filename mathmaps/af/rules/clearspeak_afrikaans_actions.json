@@ -1218,6 +1218,41 @@
       "Action",
       "cancel-under-end",
       "[t] \"oorskryf\"; [n] children/*[2]/children/*[1]; [t] \"met\"; [n] children/*[1]; [t] \"end oorskryf\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"afleidingsreël\"; [m] content/*; [t] \"met gevolgtrekking\"; [n] children/*[1]; [t] \"en\"; [t] count(children/*[2]/children/*); [t] \"uitgangspunte\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"afleidingsreël\"; [m] content/*; [t] \"met gevolgtrekking\"; [n] children/*[1]; [t] \"en\"; [t] count(children/*[2]/children/*); [t] \"uitgangspunt\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"uitgangspunt \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"opskrif\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"aksioom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"leë aksioom\""
     ]
   ]
 }

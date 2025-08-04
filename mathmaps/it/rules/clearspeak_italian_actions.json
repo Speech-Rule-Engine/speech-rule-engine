@@ -1143,6 +1143,41 @@
       "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
+    ],
+        [
+      "Action",
+      "multi-inference",
+      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premessa\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"etichetta\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"assioma\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"assioma vuoto\""
     ]
   ]
 }
