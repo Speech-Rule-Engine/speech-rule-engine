@@ -3195,7 +3195,7 @@
     [
       "Precondition",
       "multi-inference-brief",
-      "Inference_Short",
+      "Inference_Long",
       "self::inference"
     ],
     [
@@ -3208,7 +3208,7 @@
     [
       "Precondition",
       "inference-brief",
-      "Inference_Short",
+      "Inference_Long",
       "self::inference",
       "count(children/*[2]/children/*)<2"
     ],

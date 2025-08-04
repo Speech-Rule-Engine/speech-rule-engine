@@ -411,33 +411,18 @@
     ],
     [
       "Action",
+      "multi-inference",
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premises\""
+    ],
+    [
+      "Action",
       "inference",
-      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [n] children/*[2];"
-    ],
-    [
-      "Action",
-      "inference-brief",
-      "[n] children/*[1];"
-    ],
-    [
-      "Action",
-      "premise-single",
-      "[t] \"premise\"; [n] children/*[1];"
-    ],
-    [
-      "Action",
-      "premise-single-short",
-      "[t] \"1 premise\";"
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\""
     ],
     [
       "Action",
       "premise",
-      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise\", grammar:?shortPrem);"
-    ],
-    [
-      "Action",
-      "premise-short",
-      "[m] count(children/*); [t] \"premises\""
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
     ],
     [
       "Action",
