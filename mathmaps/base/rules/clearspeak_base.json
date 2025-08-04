@@ -2981,11 +2981,27 @@
       "self::identifier[@role=\"unit\"]"
     ],
     [
+      "Alias",
+      "unit-singular",
+      "self::identifier[@font=\"normal\"]",
+      "CQFisUnit",
+      "contains(@grammar, \"singular\")",
+      "priority=500"
+    ],
+    [
       "Precondition",
       "unit-plural",
       "default",
       "self::identifier[@role=\"unit\"]",
       "not(contains(@grammar, \"singular\"))"
+    ],
+    [
+      "Alias",
+      "unit-plural",
+      "self::identifier[@font=\"normal\"]",
+      "CQFisUnit",
+      "not(contains(@grammar, \"singular\"))",
+      "priority=500"
     ],
     [
       "Precondition",
@@ -3036,6 +3052,14 @@
       "unit-combine-singular",
       "default",
       "self::infixop[@role=\"unit\"]",
+      "name(children/*[1])=\"number\"",
+      "children/*[1][text()=1]"
+    ],
+    [
+      "Alias",
+      "unit-combine-singular",
+      "self::infixop[@role=\"implicit\"]",
+      "children/*[2][@font=\"normal\"]",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],

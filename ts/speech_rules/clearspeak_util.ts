@@ -30,6 +30,7 @@ import {
   SemanticRole,
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
+import { lookupCategory } from '../rule_engine/math_compound_store.js';
 
 /**
  * Count list of nodes and combine this according to the formatted context
@@ -363,3 +364,14 @@ export function wordOrdinal(node: Element): Span[] {
     Span.stringEmpty(LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
   ];
 }
+
+// TODO: This only works at run time as a workaround for the worker.
+/**
+ * Checks if the node is possibly a unit.
+ *
+ * @param node The node in question.
+ * @returns The element if it contains a unit.
+ */
+export function isUnit(node: Element): Element[] {
+  return lookupCategory(node.textContent + ':unit') ? [node] : [];
+};
