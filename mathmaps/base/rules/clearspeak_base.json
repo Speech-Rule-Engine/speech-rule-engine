@@ -3000,6 +3000,7 @@
       "unit-plural",
       "self::identifier[@font=\"normal\"]",
       "CQFisUnit",
+      "not(parent::stree)",
       "not(contains(@grammar, \"singular\"))",
       "priority=500"
     ],
