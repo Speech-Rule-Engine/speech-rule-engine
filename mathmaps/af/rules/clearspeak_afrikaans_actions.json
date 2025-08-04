@@ -401,6 +401,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[t] \"die interval van\"; [n] children/*[1]/children/*[1]; [t] \"tot\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"die interval van\"; [n] children/*[1]/children/*[1]; [t] \"tot\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],

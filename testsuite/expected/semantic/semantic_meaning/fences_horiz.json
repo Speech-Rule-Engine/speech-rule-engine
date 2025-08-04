@@ -215,6 +215,15 @@
     },
     "⎰": {
       "expected": "⎱"
+    },
+    "₍": {
+      "expected": "₎"
+    },
+    "⁽": {
+      "expected": "⁾"
+    },
+    "size": {
+      "expected": "73"
     }
   }
 }

@@ -17,6 +17,7 @@
     "analyse:tries": "export SRE_JSON_PATH=../lib/mathmaps; echo \"import('./js/module_loader.js').then((m) => m.loadPromise('atrie')).then(m => m.default.output())\" | node ",
     "local": "sed -i '0,/@jest\\/globals/{/@jest\\/globals/d;}' js/*/*.js",
     "compile": "pnpm tsc",
+    "compile:local": "pnpm compile; pnpm local",
     "prepare": "node tests.config.js",
     "build": "pnpm clean; pnpm prepare && pnpm compile",
     "clean": "pnpm rimraf dist js tests/output tests/json tests/analyse tests/actions coverage",

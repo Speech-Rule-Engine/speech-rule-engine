@@ -179,6 +179,8 @@ enum Roles {
   LEFTRIGHT = 'leftright',
 
   ABOVEBELOW = 'abovebelow',
+  // Interval.
+  INTERVAL = 'interval',
   // Sets.
   SETEMPTY = 'set empty',
   SETEXT = 'set extended',

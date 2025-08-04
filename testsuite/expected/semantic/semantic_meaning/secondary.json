@@ -1394,6 +1394,7 @@
     "allLetters 🆆": {"expected": "allLetters"},
     "allLetters 🆇": {"expected": "allLetters"},
     "allLetters 🆈": {"expected": "allLetters"},
-    "allLetters 🆉": {"expected": "allLetters"}
+    "allLetters 🆉": {"expected": "allLetters"},
+    "size": {"expected:": "1391"}
   }
 }

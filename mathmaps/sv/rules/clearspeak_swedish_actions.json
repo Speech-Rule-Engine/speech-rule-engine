@@ -396,6 +396,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[t] \"intervallet från\"; [n] children/*[1]/children/*[1]; [t] \"till\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"intervallet från\"; [n] children/*[1]/children/*[1]; [t] \"till\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
