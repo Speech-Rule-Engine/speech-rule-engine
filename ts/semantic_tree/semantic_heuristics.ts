@@ -477,6 +477,7 @@ SemanticHeuristics.add(
 function implicitUnpack(nodes: SemanticNode[]) {
   const children = nodes[0].childNodes;
   nodes.splice(0, 1, ...children);
+  nodes.forEach((x) => x.parent = null);
 }
 
 /**

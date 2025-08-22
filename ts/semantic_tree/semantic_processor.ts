@@ -3839,12 +3839,13 @@ export class SemanticProcessor {
 
   /**
    * Creates a functional node, i.e., integral, bigop, simple function. If the
-   * operator is given, it takes care that th eoperator is contained as a
+   * operator is given, it takes care that the operator is contained as a
    * content node, and that the original parent pointer of the operator node is
    * retained.
    *
    * Example: Function application sin^2(x). The pointer from sin should remain
-   * to the superscript node, although sin is given as a content node.
+   * to point at the superscript node, although sin is given as a content node,
+   * which would normally point at the appl node.
    *
    * @param type The type of the node.
    * @param children The children of the
