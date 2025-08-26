@@ -300,6 +300,9 @@ export class Cli {
       .option('-j, --json', 'Generate JSON of semantic tree.', () =>
         processor('json')
       )
+      .option('-J, --vis', 'Generate JSON for semantic visualization.', () =>
+        processor('vis')
+      )
       .option('-x, --xml', 'Generate XML of semantic tree.', () =>
         processor('semantic')
       )

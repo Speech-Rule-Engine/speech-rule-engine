@@ -130,6 +130,17 @@ export function toJson(expr: string): any {
 }
 
 /**
+ * Translate input expression into JSON version of the Semantic Tree that
+ * serializes the content nodes.
+ *
+ * @param expr Processes a given MathML expression for translation.
+ * @returns The semantic tree as Json.
+ */
+export function toVis(expr: string): any {
+  return processString('vis', expr);
+}
+
+/**
  * Main function to translate expressions into auditory descriptions.
  *
  * @param expr Processes a given Xml expression for translation.
