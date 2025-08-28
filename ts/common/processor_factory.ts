@@ -255,8 +255,12 @@ function rewriteJson(node: JSON): JSON {
   if (!node.children) {
     return node;
   }
-  node.children.forEach((node: JSON) => node.child = true);
-  node.content.forEach((node: JSON) => node.content = true);
+  if (node.children) {
+    node.children.forEach((node: JSON) => node.child = true);
+  }
+  if (node.content) {
+    node.content.forEach((node: JSON) => node.cont = true);
+  }
   node.children = SemanticSkeleton.combineContentChildren<JSON>(
       node.type,
       node.role,
