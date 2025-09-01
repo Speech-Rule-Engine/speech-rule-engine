@@ -2205,9 +2205,10 @@ export class SemanticProcessor {
       }
       return nodes;
     }
-    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) =>
-      SemanticPred.isType(x, SemanticType.TEXT)
-    );
+    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) => {
+      return SemanticPred.isType(x, SemanticType.TEXT) &&
+        !x.annotation['factor'];
+    });
     if (rel.length === 0) {
       return nodes;
     }
@@ -2234,6 +2235,13 @@ export class SemanticProcessor {
         currentRel = SemanticProcessor.getInstance().dummyNode_(text);
       }
       if (currentRel.role !== SemanticRole.UNKNOWN) {
+        // Here we ensure that text elements after or before operators/relations
+        // are not separated.
+        const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+        if (combine) {
+          prevComp = combine;
+          continue;
+        }
         if (prevComp.length) {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
@@ -2304,6 +2312,13 @@ export class SemanticProcessor {
       if (currentRel.type !== SemanticType.TEXT) {
         prevComp.push(currentRel);
         prevComp = prevComp.concat(nextComp);
+        continue;
+      }
+      // Here we ensure that text elements after or before operators/relations
+      // are not separated.
+      const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+      if (combine) {
+        prevComp = combine;
         continue;
       }
       if (prevComp.length) {
@@ -3974,3 +3989,45 @@ export class SemanticProcessor {
     return null;
   }
 }
+
+
+/**
+ * Ensures that text elements between operators and relations are treated more
+ * as identifiers than textual interspersion.
+ *
+ * @param before Set of nodes before the text element.
+ * @param text The text element.
+ * @param after Set of nodes following the text element.
+ *
+ * @returns The combined list of nodes, if before ends or after starts with an
+ *   operator or a relation. Otherwise null.
+ */
+function ensureOperatorRelations(
+  before: SemanticNode[],
+  text: SemanticNode,
+  after: SemanticNode[]
+): SemanticNode[] {
+  const last = before[before.length - 1];
+  if (
+    last && (
+      last.type === SemanticType.RELATION ||
+        last.type === SemanticType.OPERATOR
+    )
+  ) {
+    text.addAnnotation('factor', last.type);
+    return [...before, text, ...after];
+  }
+  const first = after[0];
+  if (
+    first && (
+      first.type === SemanticType.RELATION ||
+        first.type === SemanticType.OPERATOR
+    )
+  ) {
+    text.addAnnotation('factor', first.type);
+    return [...before, text, ...after];
+  }
+  return null;
+}
+
+
