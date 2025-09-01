@@ -2301,18 +2301,16 @@ export class SemanticProcessor {
           currentRel.role = SemanticRole.UNIT;
         }
       }
-      if (
-        currentRel.type === SemanticType.TEXT
-      ) {
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
-        result.push(currentRel);
-        prevComp = nextComp;
+      if (currentRel.type !== SemanticType.TEXT) {
+        prevComp.push(currentRel);
+        prevComp = prevComp.concat(nextComp);
         continue;
       }
-      prevComp.push(currentRel);
-      prevComp = prevComp.concat(nextComp);
+      if (prevComp.length) {
+        result.push(SemanticProcessor.getInstance().row(prevComp));
+      }
+      result.push(currentRel);
+      prevComp = nextComp;
     }
     if (prevComp.length > 0) {
       result.push(SemanticProcessor.getInstance().row(prevComp));
