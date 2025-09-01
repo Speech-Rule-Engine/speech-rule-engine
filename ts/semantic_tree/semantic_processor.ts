@@ -2288,17 +2288,6 @@ export class SemanticProcessor {
           n.role = SemanticRole.UNKNOWN;
         }
       );
-      if (
-        currentRel.type === SemanticType.TEXT &&
-        currentRel.role !== SemanticRole.UNKNOWN
-      ) {
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
-        result.push(currentRel);
-        prevComp = nextComp;
-        continue;
-      }
       if (currentRel.role === SemanticRole.UNKNOWN) {
         if (rel.length || nextComp.length) {
           if (nextComp.length && nextComp[0].type === SemanticType.FENCED) {
@@ -2311,6 +2300,16 @@ export class SemanticProcessor {
           currentRel.type = SemanticType.IDENTIFIER;
           currentRel.role = SemanticRole.UNIT;
         }
+      }
+      if (
+        currentRel.type === SemanticType.TEXT
+      ) {
+        if (prevComp.length) {
+          result.push(SemanticProcessor.getInstance().row(prevComp));
+        }
+        result.push(currentRel);
+        prevComp = nextComp;
+        continue;
       }
       prevComp.push(currentRel);
       prevComp = prevComp.concat(nextComp);
