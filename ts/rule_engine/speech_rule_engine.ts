@@ -513,10 +513,10 @@ export class SpeechRuleEngine {
       if (descrs.length > 0) {
         descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
         result = result.concat(descrs);
-        if (i < nodes.length - 1) {
-          const text = sepClosure() as AuditoryDescription[];
-          result = result.concat(text);
-        }
+      }
+      if (i < nodes.length - 1) {
+        const text = sepClosure() as AuditoryDescription[];
+        result = result.concat(text);
       }
     }
     return result;

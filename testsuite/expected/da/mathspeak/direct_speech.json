@@ -62,6 +62,18 @@
     },
     "MglyphGeneral_1": {
       "expected": "stort N stort M Sænket 1 delmængde af mfin"
+    },
+    "Issue_635": {
+      "expected": "plustegn 132braid lig med 13braid"
+    },
+    "Issue_644_0": {
+      "expected": "35 mickeys per hour"
+    },
+    "Issue_644_1": {
+      "expected": "35 mil i timen"
+    },
+    "Issue_644_2": {
+      "expected": "35 mickeys per hour"
     }
   }
 }

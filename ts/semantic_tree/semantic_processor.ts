@@ -2205,9 +2205,10 @@ export class SemanticProcessor {
       }
       return nodes;
     }
-    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) =>
-      SemanticPred.isType(x, SemanticType.TEXT)
-    );
+    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) => {
+      return SemanticPred.isType(x, SemanticType.TEXT) &&
+        !x.annotation['factor'];
+    });
     if (rel.length === 0) {
       return nodes;
     }
@@ -2230,18 +2231,17 @@ export class SemanticProcessor {
       }
       if (text.length) {
         // Combine multiple text elements into one.
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
         text.push(currentRel);
-        const dummy = SemanticProcessor.getInstance().dummyNode_(text);
-        // TODO: See if it already has a majority vote role.
-        // dummy.role = SemanticRole.ANNOTATION;
-        result.push(dummy);
-        prevComp = nextComp;
-        continue;
+        currentRel = SemanticProcessor.getInstance().dummyNode_(text);
       }
       if (currentRel.role !== SemanticRole.UNKNOWN) {
+        // Here we ensure that text elements after or before operators/relations
+        // are not separated.
+        const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+        if (combine) {
+          prevComp = combine;
+          continue;
+        }
         if (prevComp.length) {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
@@ -2296,17 +2296,6 @@ export class SemanticProcessor {
           n.role = SemanticRole.UNKNOWN;
         }
       );
-      if (
-        currentRel.type === SemanticType.TEXT &&
-        currentRel.role !== SemanticRole.UNKNOWN
-      ) {
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
-        result.push(currentRel);
-        prevComp = nextComp;
-        continue;
-      }
       if (currentRel.role === SemanticRole.UNKNOWN) {
         if (rel.length || nextComp.length) {
           if (nextComp.length && nextComp[0].type === SemanticType.FENCED) {
@@ -2320,8 +2309,23 @@ export class SemanticProcessor {
           currentRel.role = SemanticRole.UNIT;
         }
       }
-      prevComp.push(currentRel);
-      prevComp = prevComp.concat(nextComp);
+      if (currentRel.type !== SemanticType.TEXT) {
+        prevComp.push(currentRel);
+        prevComp = prevComp.concat(nextComp);
+        continue;
+      }
+      // Here we ensure that text elements after or before operators/relations
+      // are not separated.
+      const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+      if (combine) {
+        prevComp = combine;
+        continue;
+      }
+      if (prevComp.length) {
+        result.push(SemanticProcessor.getInstance().row(prevComp));
+      }
+      result.push(currentRel);
+      prevComp = nextComp;
     }
     if (prevComp.length > 0) {
       result.push(SemanticProcessor.getInstance().row(prevComp));
@@ -3985,3 +3989,45 @@ export class SemanticProcessor {
     return null;
   }
 }
+
+
+/**
+ * Ensures that text elements between operators and relations are treated more
+ * as identifiers than textual interspersion.
+ *
+ * @param before Set of nodes before the text element.
+ * @param text The text element.
+ * @param after Set of nodes following the text element.
+ *
+ * @returns The combined list of nodes, if before ends or after starts with an
+ *   operator or a relation. Otherwise null.
+ */
+function ensureOperatorRelations(
+  before: SemanticNode[],
+  text: SemanticNode,
+  after: SemanticNode[]
+): SemanticNode[] {
+  const last = before[before.length - 1];
+  if (
+    last && (
+      last.type === SemanticType.RELATION ||
+        last.type === SemanticType.OPERATOR
+    )
+  ) {
+    text.addAnnotation('factor', last.type);
+    return [...before, text, ...after];
+  }
+  const first = after[0];
+  if (
+    first && (
+      first.type === SemanticType.RELATION ||
+        first.type === SemanticType.OPERATOR
+    )
+  ) {
+    text.addAnnotation('factor', first.type);
+    return [...before, text, ...after];
+  }
+  return null;
+}
+
+

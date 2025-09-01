@@ -62,6 +62,18 @@
     },
     "MglyphGeneral_1": {
       "expected": "N M indeks 1 subsettt av mfin"
+    },
+    "Issue_635": {
+      "expected": "pluss 132braid er lik 13braid"
+    },
+    "Issue_644_0": {
+      "expected": "35 mickeys per hour"
+    },
+    "Issue_644_1": {
+      "expected": "35 mph"
+    },
+    "Issue_644_2": {
+      "expected": "35 mickeys per hour"
     }
   }
 }

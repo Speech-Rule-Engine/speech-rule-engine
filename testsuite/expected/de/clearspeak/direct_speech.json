@@ -61,6 +61,18 @@
     },
     "MglyphGeneral_1": {
       "expected": "N M Index 1 echte Teilmenge von mfin"
+    },
+    "Issue_635": {
+      "expected": "plus 132braid ist gleich 13braid"
+    },
+    "Issue_644_0": {
+      "expected": "35 mickeys per hour"
+    },
+    "Issue_644_1": {
+      "expected": "35 Meilen pro Stunde"
+    },
+    "Issue_644_2": {
+      "expected": "35 mickeys per hour"
     }
   }
 }

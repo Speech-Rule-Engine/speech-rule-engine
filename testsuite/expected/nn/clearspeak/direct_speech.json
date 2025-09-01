@@ -64,7 +64,7 @@
       "expected": "N M indeks 1 subsett av mfin"
     },
     "Issue_635": {
-      "expected": "132braid er lik 13braid"
+      "expected": "pluss 132braid er lik 13braid"
     },
     "Issue_644_0": {
       "expected": "35 mickeys per hour"
