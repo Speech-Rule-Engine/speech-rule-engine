@@ -2230,16 +2230,8 @@ export class SemanticProcessor {
       }
       if (text.length) {
         // Combine multiple text elements into one.
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
         text.push(currentRel);
-        const dummy = SemanticProcessor.getInstance().dummyNode_(text);
-        // TODO: See if it already has a majority vote role.
-        // dummy.role = SemanticRole.ANNOTATION;
-        result.push(dummy);
-        prevComp = nextComp;
-        continue;
+        currentRel = SemanticProcessor.getInstance().dummyNode_(text);
       }
       if (currentRel.role !== SemanticRole.UNKNOWN) {
         if (prevComp.length) {
