@@ -83,7 +83,7 @@
       "tex": "A_n|_{\\mathrm{abc} P_n}",
       "input": "<msub><mi>A</mi><mi>n</mi></msub><msub><mo data-mjx-texclass=\"ORD\">|</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">abc</mi></mrow><msub><mi>P</mi><mi>n</mi></msub></mrow></msub>"
     },
-"issue_749_0": {
+    "issue_749_0": {
       "tex": "L\\left([2,+\\infty [\\backslash \\bigcup _{k\\in \\mathcal{K}}[n_k,n_{k+1}[\\right)",
       "input": "<mi>L</mi><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mo>[</mo><mn>2</mn><mo>,</mo><mo>+</mo><mi mathvariant=\"normal\">&#x221E;</mi><mo>[</mo><mi mathvariant=\"normal\">\\</mi><munder><mo>&#x22C3;</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>&#x2208;</mo><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">K</mi></mrow></mrow></munder><mo>[</mo><msub><mi>n</mi><mi>k</mi></msub><mo>,</mo><msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>[</mo><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow>"
     },
@@ -126,6 +126,54 @@
     "issue_767_4": {
       "tex": "{sin}(x)",
       "input": "<mrow data-mjx-texclass=\"ORD\"><mi>s</mi><mi>i</mi><mi>n</mi></mrow><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "issue_814_00": {
+      "tex": "x+\\text{A}+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{A}\">A</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_01": {
+      "tex": "x+\\text{AA}+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{AA}\">AA</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_02": {
+      "tex": "x+\\text{ AA }+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{ AA }\">&#xA0;AA&#xA0;</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_03": {
+      "tex": "x+\\text{AA BB}+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{AA BB}\">AA BB</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_04": {
+      "tex": "x+\\text{ AA BB }+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{ AA BB }\">&#xA0;AA BB&#xA0;</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_05": {
+      "tex": "x+\\text{AA}\\text{BB}+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{AA}\">AA</mtext><mtext data-latex=\"\\text{BB}\">BB</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_06": {
+      "tex": "x+\\text{ }+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{ }\">&#xA0;</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_07": {
+      "tex": "x+\\qquad+y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mstyle scriptlevel=\"0\" data-latex=\"\\qquad\"><mspace width=\"2em\"></mspace></mstyle><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_08": {
+      "tex": "x+\\text{AA}y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mtext data-latex=\"\\text{AA}\">AA</mtext><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_09": {
+      "tex": "x\\text{AA}+y",
+      "input": "<mi data-latex=\"x\">x</mi><mtext data-latex=\"\\text{AA}\">AA</mtext><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_10": {
+      "tex": "x\\qquad+y",
+      "input": "<mi data-latex=\"x\">x</mi><mstyle scriptlevel=\"0\" data-latex=\"\\qquad\"><mspace width=\"2em\"></mspace></mstyle><mo data-latex=\"+\">+</mo><mi data-latex=\"y\">y</mi>"
+    },
+    "issue_814_11": {
+      "tex": "x+\\qquad y",
+      "input": "<mi data-latex=\"x\">x</mi><mo data-latex=\"+\">+</mo><mstyle scriptlevel=\"0\" data-latex=\"\\qquad\"><mspace width=\"2em\"></mspace></mstyle><mi data-latex=\"y\">y</mi>"
     }
   }
 }
