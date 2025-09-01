@@ -68,7 +68,7 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> upper N <mark name=\"1\"/> upper M <mark name=\"5\"/> Subscript <mark name=\"2\"/> 1 <mark name=\"3\"/> subset of <mark name=\"4\"/> mfin </prosody></speak>"
     },
     "Issue_635": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> 132braid <mark name=\"3\"/> equals <mark name=\"4\"/> 13braid </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> plus <mark name=\"2\"/> 132braid <mark name=\"3\"/> equals <mark name=\"4\"/> 13braid </prosody></speak>"
     },
     "Issue_644_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 35 <mark name=\"1\"/> mickeys per hour </prosody></speak>"
