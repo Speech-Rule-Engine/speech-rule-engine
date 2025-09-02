@@ -3016,31 +3016,31 @@
       ]
     },
     "issue451_0": {
-      "expected":      [
-       15,
-       [
-         14,
-         0,
-         13,
-         [
-           10,
-           1,
-           2,
-           3
-         ]
-       ],
-       4,
-       [
-         12,
-         [
-           7,
-           5,
-           6
-         ],
-         11,
-         9
-       ]
-     ]
+      "expected": [
+        15,
+        [
+          14,
+          0,
+          13,
+          [
+            10,
+            1,
+            2,
+            3
+          ]
+        ],
+        4,
+        [
+          12,
+          [
+            7,
+            5,
+            6
+          ],
+          11,
+          9
+        ]
+      ]
     },
     "issue451_1": {
       "expected": [
@@ -3107,7 +3107,7 @@
       ]
     },
     "issue451_4": {
-      "expected":   [
+      "expected": [
         15,
         [
           14,
@@ -3198,6 +3198,98 @@
           13
         ]
       ]
+    },
+    "Mglyph_Mixed_Token_0": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_1": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_2": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_3": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_4": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_5": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_6": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_7": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_8": {
+      "expected": 0
+    },
+    "Mglyph_Mixed_Token_9": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "Html_issue_0": {
+      "expected": 0
+    },
+    "Html_issue_1": {
+      "expected": 0
+    },
+    "Html_issue_2": {
+      "expected": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    "Html_issue_3": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "Html_issue_4": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "Html_issue_5": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "Html_issue_6": {
+      "expected": [
+        5,
+        0,
+        1,
+        2
+      ]
+    },
+    "Html_issue_7": {
+      "expected": 0
+    },
+    "Html_issue_8": {
+      "expected": 0
+    },
+    "Html_issue_9": {
+      "expected": 0
     }
   }
 }
