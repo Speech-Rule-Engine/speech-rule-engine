@@ -66,6 +66,18 @@
     },
     "MglyphGeneral_1": {
       "expected": "대문자 N 대문자 M 아래첨자 1 부분집합 mfin"
+    },
+    "Issue_635": {
+      "expected": "더하기 132braid 는 13braid"
+    },
+    "Issue_644_0": {
+      "expected": "35 mickeys per hour"
+    },
+    "Issue_644_1": {
+      "expected": "35 마일 퍼 아워"
+    },
+    "Issue_644_2": {
+      "expected": "35 mickeys per hour"
     }
   }
 }

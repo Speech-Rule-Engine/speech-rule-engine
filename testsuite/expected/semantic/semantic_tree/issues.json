@@ -95,6 +95,45 @@
     },
     "issue_767_4": {
       "expected": "<stree><appl role=\"prefix function\" annotation=\"clearspeak:simple\" id=\"6\"><content><punctuation role=\"application\" id=\"5\">⁡</punctuation><function role=\"prefix function\" id=\"0\" texclass=\"ORD\">sin</function></content><children><function role=\"prefix function\" id=\"0\" texclass=\"ORD\">sin</function><fenced role=\"leftright\" id=\"4\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"3\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">x</identifier></children></fenced></children></appl></stree>"
+    },
+    "issue_814_00": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><identifier role=\"latinletter\" font=\"normal\" annotation=\"general:text;clearspeak:simple\" id=\"2\">A</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_01": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\">AA</text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_02": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\"> AA </text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_03": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\">AA BB</text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_04": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\"> AA BB </text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_05": {
+      "expected": "<stree><infixop role=\"addition\" id=\"8\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"4\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><punctuated role=\"text\" annotation=\"factor:operator\" id=\"7\"><content><punctuation role=\"dummy\" id=\"6\">⁣</punctuation></content><children><text role=\"unknown\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"2\">AA</text><text role=\"unknown\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"3\">BB</text></children></punctuated><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_06": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\"> </text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_07": {
+      "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"3\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\"/><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_08": {
+      "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\">AA</text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></children></infixop></stree>"
+    },
+    "issue_814_09": {
+      "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"factor:operator;clearspeak:unit\" id=\"1\">AA</text></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_10": {
+      "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"1\"/></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></stree>"
+    },
+    "issue_814_11": {
+      "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"2\"/><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></children></infixop></stree>"
+    },
+    "issue_814_10_new": {
+      "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"1\"/></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></stree>"
     }
   }
 }
