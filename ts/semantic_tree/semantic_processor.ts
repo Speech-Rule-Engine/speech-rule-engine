@@ -396,7 +396,7 @@ export class SemanticProcessor {
         continue;
       }
       const spacer = SemanticProcessor.getSpacer_(sibling);
-      if (spacer) {
+      if (spacer && spacer !== mt2) {
         op.mathml.push(spacer);
         op.mathmlTree = spacer;
         op.role = SemanticRole.SPACE;
