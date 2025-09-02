@@ -171,6 +171,10 @@
       "tex": "x\\qquad+y",
       "input": "<mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mo>+</mo><mi>y</mi>"
     },
+    "issue_814_10_new": {
+      "tex": "x\\qquad+y",
+      "input": "<mi>x</mi><mspace width=\"2em\"></mspace><mo>+</mo><mi>y</mi>"
+    },
     "issue_814_11": {
       "tex": "x+\\qquad y",
       "input": "<mi>x</mi><mo>+</mo><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>y</mi>"
