@@ -134,6 +134,18 @@
     },
     "issue_814_10_new": {
       "expected": "<stree><infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"space\" annotation=\"factor:operator;clearspeak:unit\" id=\"1\"/></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></stree>"
+    },
+    "issue_815_0": {
+      "tex": " \\int _{C} {\\mathbb{P}f}\\mathcal{M} ",
+      "input": "<msub data-latex=\"\\int_{C}\"><mo data-latex=\"\\int\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{C}\"><mi data-latex=\"C\">C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathbb{P}f}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb{P}\"><mi mathvariant=\"double-struck\" data-latex=\"P\">P</mi></mrow><mi data-latex=\"f\">f</mi></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathcal{M}\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\" data-latex=\"M\">M</mi></mrow>"
+    },
+    "issue_815_1": {
+      "tex": "\\int _{C} {\\mathbb{P}\\sin}\\mathcal{M} ",
+      "input": "<msub data-latex=\"\\int_{C}\"><mo data-latex=\"\\int\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{C}\"><mi data-latex=\"C\">C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathbb{P}\\sin}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathbb{P}\"><mi mathvariant=\"double-struck\" data-latex=\"P\">P</mi></mrow><mi data-latex=\"\\sin\">sin</mi></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathcal{M}\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\" data-latex=\"M\">M</mi></mrow>"
+    },
+    "issue_815_2": {
+      "tex": "u(x) \\int  {\\mathcal{D} u} A d\\xi ",
+      "input": "<mi data-latex=\"u\">u</mi><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"x\">x</mi><mo data-latex=\")\" stretchy=\"false\">)</mo><mo data-latex=\"\\int\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\mathcal{D}u}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\mathcal{D}\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\" data-latex=\"D\">D</mi></mrow><mi data-latex=\"u\">u</mi></mrow><mi data-latex=\"A\">A</mi><mi data-latex=\"d\">d</mi><mi data-latex=\"\\xi\">&#x3BE;</mi>"
     }
   }
 }

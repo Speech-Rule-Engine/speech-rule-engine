@@ -178,6 +178,18 @@
     "issue_814_11": {
       "tex": "x+\\qquad y",
       "input": "<mi>x</mi><mo>+</mo><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>y</mi>"
+    },
+    "issue_815_0": {
+      "tex": " \\int _{C} {\\mathbb{P}f}\\mathcal{M} ",
+      "input": "<msub><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow><mi>f</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow>"
+    },
+    "issue_815_1": {
+      "tex": "\\int _{C} {\\mathbb{P}\\sin}\\mathcal{M} ",
+      "input": "<msub><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow><mi>sin</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow>"
+    },
+    "issue_815_2": {
+      "tex": "u(x) \\int  {\\mathcal{D} u} A d\\xi ",
+      "input": "<mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">D</mi></mrow><mi>u</mi></mrow><mi>A</mi><mi>d</mi><mi>&#x3BE;</mi>"
     }
   }
 }
