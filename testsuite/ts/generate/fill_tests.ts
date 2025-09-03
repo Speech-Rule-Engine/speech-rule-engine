@@ -112,7 +112,8 @@ async function add(expected: string, flag: TestFlag, dryrun: boolean) {
 export function addToFile(file: string, expected: JsonTests) {
   const filename = TestUtil.fileExists(file, TestPath.EXPECTED);
   const oldJson: JsonFile = TestUtil.loadJson(filename);
-  const oldTests = oldJson.tests as JsonTests;
+  const oldTests = oldJson.tests as JsonTests | 'ALL';
+  if (oldTests === 'ALL') return;
   for (const key of Object.keys(expected)) {
     if (oldTests[key]) {
       if (TestUtil.isComment(key)) continue;
