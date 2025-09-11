@@ -3946,6 +3946,7 @@ export class SemanticProcessor {
         break;
       default:
         newNode = SemanticProcessor.getInstance().dummyNode_(nodes);
+        newNode.addAnnotation('general', 'script');
     }
     newNode.role = role;
     return newNode;
