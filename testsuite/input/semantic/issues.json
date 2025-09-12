@@ -65,10 +65,10 @@
       "tex": "\\prescript {h_{ab}}{1}{P}",
       "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><mn>1</mn><msub><mi>h</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub></mmultiscripts>"
     },
-    "SRE_Issue_726_4": {
+    "SRE_Issue_726_5": {
       "input": "<math><mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
     },
-    "SRE_Issue_726_4": {
+    "SRE_Issue_726_6": {
       "input": "<math><mmultiscripts><mi>x</mi><mi>d</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
     },
     "issue_767_0": {
