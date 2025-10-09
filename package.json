@@ -11,6 +11,7 @@
     "lint": "eslint ts/ --ext .ts,.tsx",
     "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd testsuite; export SRE_JSON_PATH=../lib/mathmaps; pnpm test",
+    "test:json": "cd testsuite; export SRE_JSON_PATH=../lib/mathmaps; pnpm test tests/json",
     "test:action": "cd testsuite; export SRE_JSON_PATH=../lib/mathmaps; pnpm test --silent --coverage",
     "docs": "pnpm typedoc --entryPointStrategy ts/",
     "commonjs": "pnpm tsc --module commonjs --outDir cjs --moduleResolution node",

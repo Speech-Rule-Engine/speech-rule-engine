@@ -65,10 +65,10 @@
       "tex": "\\prescript {h_{ab}}{1}{P}",
       "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><mn>1</mn><msub><mi>h</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub></mmultiscripts>"
     },
-    "SRE_Issue_726_4": {
+    "SRE_Issue_726_5": {
       "input": "<math><mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
     },
-    "SRE_Issue_726_4": {
+    "SRE_Issue_726_6": {
       "input": "<math><mmultiscripts><mi>x</mi><mi>d</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
     },
     "issue_767_0": {
@@ -190,6 +190,36 @@
     "issue_815_2": {
       "tex": "u(x) \\int  {\\mathcal{D} u} A d\\xi ",
       "input": "<mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">D</mi></mrow><mi>u</mi></mrow><mi>A</mi><mi>d</mi><mi>&#x3BE;</mi>"
+    },
+        "MJ_Issue_3431_0": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>&#x2013;</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_1": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mo>&#x2013;</mo><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_2": {
+"input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>aber</mtext><mtext>nicht</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_3": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>aber nicht</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_small_0": {
+      "input": "<mn>58</mn><mo>–</mo><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_1": {
+      "input": "<mn>58</mn><mtext>-</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_2": {
+      "input": "<mn>58</mn><mtext>aber</mtext><mtext>nicht</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_3": {
+      "input": "<mn>58</mn><mtext>aber nicht</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_4": {
+      "input": "<mn>58</mn><mtext>–</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_text": {
+      "input": "<mtext>aber</mtext><mtext>,</mtext><mtext>nicht</mtext>"
     }
   }
 }
