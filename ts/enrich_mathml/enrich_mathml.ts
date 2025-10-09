@@ -509,7 +509,7 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let next = parentNode(parent);
   while (
     next &&
-    next.firstChild === parent &&
+    isFirstChild(next, parent) &&
     !parent.hasAttribute('AuxiliaryImplicit') &&
     next !== node
   ) {
@@ -520,6 +520,23 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
     next.insertBefore(newChild, parent);
     parent.removeAttribute('AuxiliaryImplicit');
   }
+}
+
+/**
+ * Checks if child is the first child of node. In case the node is an maction
+ * node, we compare the child to the currently selected node.
+ *
+ * @param node The parent node.
+ * @param child The potential child.
+ * @returns True if the child is the first child of node or the selected maction
+ *     node.
+ */
+function isFirstChild(node: Element, child: Element) {
+  if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
+    return node.firstChild === child
+  }
+  const selection = parseInt(node.getAttribute('selection')) || 1;
+  return node.childNodes[selection - 1] === child;
 }
 
 /**
