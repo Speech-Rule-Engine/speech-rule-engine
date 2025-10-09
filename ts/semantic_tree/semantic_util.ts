@@ -273,6 +273,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
         to.attributes['href'] = attrs[i].value;
         to.nobreaking = true;
       }
+      if (key === 'color' || key === 'mathcolor') {
+        to.attributes['color'] = attrs[i].value;
+      }
     }
   }
 }

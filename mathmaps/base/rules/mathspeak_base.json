@@ -6,6 +6,14 @@
   "rules": [
     [
       "Rule",
+      "color",
+      "default",
+      "[t] \"Start\"; [t] @color; [n] . (grammar:?noColor)",
+      "self::*[@color]",
+      "not(contains(@grammar, \"noColor\"))"
+    ],
+    [
+      "Rule",
       "direct-speech",
       "default",
       "[t] @ext-speech",
