@@ -478,16 +478,16 @@ function mergeChildren(
       const nextChild = newChildren[1] as Element;
       if (nextChild && nextChild.parentNode) {
         // newChild is indeed new but the next child has a parent, which must be
-        // different that the one of node. newChild should be inserted before
+        // different than the one of node. newChild should be inserted before
         // the next, which can then be skipped. Since the parentNode is
         // different than node we replace it.
         node = parentNode(nextChild);
-        node.insertBefore(newChild, nextChild);
+        insertBefore(node, newChild, nextChild);
         newChildren.shift();
         newChildren.shift();
         continue;
       }
-      node.insertBefore(newChild, null);
+      insertBefore(node, newChild, null);
       newChildren.shift();
       continue;
     }
@@ -498,7 +498,8 @@ function mergeChildren(
 }
 
 /**
- * Inserts a new child into the mml tree at the right position.
+ * Inserts a new child into the mml tree at the right position. If the old child
+ * is the first element of its parent, we skip that latter to go one further up.
  *
  * @param node The parent node.
  * @param oldChild The reference where newChild is inserted.
@@ -517,9 +518,25 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
     next = parentNode(parent);
   }
   if (next) {
-    next.insertBefore(newChild, parent);
+    insertBefore(next, newChild, parent);
     parent.removeAttribute('AuxiliaryImplicit');
   }
+}
+
+/**
+ * Inserts a new child before an existing child of the given node. If the given
+ * node is an maction element this level is skipped.
+ *
+ * @param node The parent node.
+ * @param oldChild The reference before which newChild is inserted.
+ * @param newChild The new child to be inserted.
+ */
+function insertBefore(node: Element, newChild: Element, oldChild: Element) {
+  if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
+    node.insertBefore(newChild, oldChild);
+    return;
+  }
+  insertBefore(parentNode(node), newChild, node);
 }
 
 /**
