@@ -197,6 +197,48 @@
     },
     "arctan": {
       "expected": "Cyclometric"
+    },
+    "Deg": {
+      "expected": "Algebra"
+    },
+    "Det": {
+      "expected": "Algebra"
+    },
+    "Dim": {
+      "expected": "Algebra"
+    },
+    "HOM": {
+      "expected": "Algebra"
+    },
+    "Ker": {
+      "expected": "Algebra"
+    },
+    "GCD": {
+      "expected": "Elementary"
+    },
+    "LCM": {
+      "expected": "Elementary"
+    },
+    "Arg": {
+      "expected": "Complex"
+    },
+    "Im": {
+      "expected": "Complex"
+    },
+    "Re": {
+      "expected": "Complex"
+    },
+    "Inf": {
+      "expected": "Limits"
+    },
+    "Max": {
+      "expected": "Limits"
+    },
+    "Min": {
+      "expected": "Limits"
+    },
+    "Sup": {
+      "expected": "Limits"
     }
   }
 }

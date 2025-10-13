@@ -479,6 +479,21 @@
     },
     "″": {
       "expected": "time"
+    },
+    "₸": {
+      "expected": "currency"
+    },
+    "KZT": {
+      "expected": "currency"
+    },
+    "₺": {
+      "expected": "currency"
+    },
+    "TRY": {
+      "expected": "currency"
+    },
+    "kph": {
+      "expected": "speed"
     }
   }
 }

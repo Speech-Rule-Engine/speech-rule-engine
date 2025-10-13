@@ -30,7 +30,6 @@ import * as WalkerFactory from '#js/walker/walker_factory.js';
 import * as SpeechGeneratorFactory from '#js/speech_generator/speech_generator_factory.js';
 import { Highlighter } from '#js/highlighter/highlighter.js';
 import * as HighlighterFactory from '#js/highlighter/highlighter_factory.js';
-import { expect } from '@jest/globals';
 
 import { AbstractJsonTest } from '../classes/abstract_test.js';
 import { Key } from './keycodes.js';
@@ -185,8 +184,7 @@ export class ExplorationTest extends AbstractJsonTest {
         { renderer: 'NativeMML'}),
       emml.toString()
     );
-    // this.assert.equal(ExplorationTest.dfs(this.walker), expected);
-    expect(ExplorationTest.dfs(this.walker)).toEqual(expected);
+    this.assert.equal(ExplorationTest.dfs(this.walker), expected);
   }
 
   private static dfs(walker: Walker) {

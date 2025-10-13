@@ -221,6 +221,7 @@ export class RebuildStree {
     punctuated.embellished = snode.embellished;
     punctuated.fencePointer = snode.fencePointer;
     punctuated.role = role;
+    punctuated.addAnnotation('general', 'script');
     const cont = collapsed.splice(1, 1)[0].slice(1);
     punctuated.contentNodes = cont.map(this.makePunctuation.bind(this));
     this.collapsedChildren_(collapsed);
