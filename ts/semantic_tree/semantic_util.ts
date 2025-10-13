@@ -263,15 +263,15 @@ export function addAttributes(to: SemanticNode, from: Element) {
         to.attributes['ext-speech'] = attrs[i].value;
         to.nobreaking = true;
       }
-      if (key.match(/texclass$/)) {
-        to.attributes['texclass'] = attrs[i].value;
-      }
-      if (key.toLowerCase() === 'data-latex') {
-        to.attributes['latex'] = attrs[i].value;
-      }
       if (key === 'href') {
         to.attributes['href'] = attrs[i].value;
         to.nobreaking = true;
+      }
+      if (key.toLowerCase() === 'data-latex' || key.toLowerCase() === 'latex') {
+        to.attributes['latex'] = attrs[i].value;
+      }
+      if (key.match(/texclass$/)) {
+        to.attributes['texclass'] = attrs[i].value;
       }
       if (key === 'color' || key === 'mathcolor') {
         to.attributes['color'] = attrs[i].value;

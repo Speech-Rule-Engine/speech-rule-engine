@@ -1677,6 +1677,106 @@
         1,
         2
       ]
+    },
+    "issue_toogle_times_0": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_times_1": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_times_2": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_appl_0": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_appl_1": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_appl_2": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_2appl_0": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_2appl_1": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_2appl_2": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "issue_toogle_2appl_3": {
+      "expected": [
+        5,
+        0,
+        3,
+        1,
+        4,
+        2
+      ]
     }
   }
 }
