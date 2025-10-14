@@ -406,12 +406,14 @@ set(
 set(
   new Processor('speechStructure', {
     processor: function (expr) {
-      // Direct from MathML
-      // process('speech', expr);
-      // Indirect from rebuilt semantic tree
       const mml = DomUtil.parseInput(expr);
-      const rebuilt = new RebuildStree(mml);
-      const sxml = rebuilt.stree.xml();
+      let sxml;
+      try {
+        const rebuilt = new RebuildStree(mml);
+        sxml = rebuilt.stree.xml();
+      } catch(_e) {
+        sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      }
       SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
       return SpeechGeneratorUtil.computeSpeechStructure(sxml);
     },

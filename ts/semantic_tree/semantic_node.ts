@@ -236,13 +236,13 @@ export class SemanticNode {
       const xmlNodes = nodes.map(function (x) {
         return x.xml(xml, brief);
       });
-      const tagNode = xml.createElementNS('', tag);
+      const tagNode = DomUtil.createElementNS('', tag);
       for (let i = 0, child; (child = xmlNodes[i]); i++) {
         tagNode.appendChild(child);
       }
       return tagNode;
     };
-    const node = xml.createElementNS('', this.type);
+    const node = DomUtil.createElementNS('', this.type);
     if (!brief) {
       this.xmlAttributes(node);
     }
