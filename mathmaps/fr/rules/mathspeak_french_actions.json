@@ -197,12 +197,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"au carré\""
+      "[n] children/*[1]; [t] \"au carré\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"cubique\""
+      "[n] children/*[1]; [t] \"cubique\" (span:children/*[2])"
     ],
     [
       "Action",
