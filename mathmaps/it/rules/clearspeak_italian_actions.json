@@ -767,7 +767,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",

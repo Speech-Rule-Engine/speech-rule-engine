@@ -727,7 +727,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"die Metrik von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Metrik\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"die Metrik von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Metrik\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",

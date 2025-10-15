@@ -732,7 +732,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt absolutt verdi\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt absolutt verdi\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -752,7 +752,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"beregningen av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt beregning\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"beregningen av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt beregning\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",

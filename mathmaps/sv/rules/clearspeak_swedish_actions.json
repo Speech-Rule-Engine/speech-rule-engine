@@ -737,7 +737,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"absolutvärdet av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slut absolutvärde\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"absolutvärdet av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slut absolutvärde\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -757,7 +757,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"beloppet av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutbelopp\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"beloppet av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutbelopp\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
