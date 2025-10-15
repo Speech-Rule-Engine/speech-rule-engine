@@ -712,7 +712,7 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"की दूरी फलन\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"की दूरी फलन\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",

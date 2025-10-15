@@ -8,7 +8,7 @@
       "Rule",
       "color",
       "default",
-      "[t] \"Start\"; [t] @color; [n] . (grammar:?noColor)",
+      "[t] \"\" (context:@color); [n] . (grammar:?noColor)",
       "self::*[@color]",
       "not(contains(@grammar, \"noColor\"))"
     ],

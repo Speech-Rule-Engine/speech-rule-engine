@@ -677,57 +677,57 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"de naturlige tallene\" (span:.)"
+      "[t] \"de naturlige tallene\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"heltallene\" (span:.)"
+      "[t] \"heltallene\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"de rasjonale tallene\" (span:.)"
+      "[t] \"de rasjonale tallene\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"de reelle tallene\" (span:.)"
+      "[t] \"de reelle tallene\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"de komplekse tallene\" (span:.)"
+      "[t] \"de komplekse tallene\""
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"de naturlige tallene med null\" (span:.)"
+      "[t] \"de naturlige tallene med null\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"de positive heltallene\" (span:.)"
+      "[t] \"de positive heltallene\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"de negative heltallene\" (span:.)"
+      "[t] \"de negative heltallene\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"de positive rasjonale tallene\" (span:.)"
+      "[t] \"de positive rasjonale tallene\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"de negative rasjonale tallene\" (span:.)"
+      "[t] \"de negative rasjonale tallene\""
     ],
     [
       "Action",
       "fences-neutral",
-      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"den absolutte verdien av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -737,17 +737,17 @@
     [
       "Action",
       "fences-neutral-cardinality",
-      "[p] (pause:short); [t] \"kardinaliteten til\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"kardinaliteten til\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"determinanten til\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"determinanten til\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"beregningen av\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"beregningen av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",

@@ -722,7 +722,7 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"die Metrik von\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die Metrik von\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",

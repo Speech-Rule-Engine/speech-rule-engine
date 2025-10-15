@@ -87,12 +87,12 @@
     [
       "Action",
       "not-member",
-      "[t] \"is nie 'n element van\"; [t] %1:; [t] \"nie\""
+      "[t] \"is nie 'n element van\""
     ],
     [
       "Action",
       "not-member-member",
-      "[t] \"is nie 'n element vanf\""
+      "[t] \"is nie 'n element van\""
     ],
     [
       "Action",
