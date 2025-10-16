@@ -36,6 +36,7 @@ export class Span {
    * @returns An empty span.
    */
   public static empty() {
+    console.log('Empty');
     return new Span('', {});
   }
 
@@ -44,6 +45,7 @@ export class Span {
    * @returns A simple span for string without annotations.
    */
   public static stringEmpty(str: string) {
+    console.log('StringEmpty');
     return new Span(str, {});
   }
 
@@ -53,6 +55,7 @@ export class Span {
    * @returns A simple span for string with the given annotation.
    */
   public static stringAttr(str: string, attr: SpanAttrs) {
+    console.log('StringAttr');
     return new Span(str, attr);
   }
 
@@ -77,12 +80,15 @@ export class Span {
    * @returns The newly created span.
    */
   public static node(str: string, node: Element, def: SpanAttrs = {}) {
+    console.log('Node');
+    console.log(node.toString());
     const attr = Span.getAttributes(node);
     Object.assign(attr, def);
+    console.log(new Span(str, attr));
     return new Span(str, attr);
   }
 
-  static attributeList = ['id', 'extid'];
+  static attributeList = ['id', 'extid', 'color'];
 
   /**
    * Harvests attributes from a node.

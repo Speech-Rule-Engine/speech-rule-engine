@@ -147,6 +147,7 @@ export class SemanticTree {
       this.root = this.parser.parse(mathml);
     }
     unitVisitor.visit(this.root, {});
+    // colorVisitor.visit(this.root, {});
 
     annotate(this.root);
   }
@@ -229,3 +230,17 @@ const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
   }
   return false;
 });
+
+const colorVisitor = new SemanticVisitor('general', 'color', (node, info) => {
+  const color = node.attributes['color'];
+  // console.log(node.toString());
+  // console.log(color);
+  // console.log(info);
+  if (color) {
+    return [color, {color: color}];
+  }
+  if (info.color) {
+    node.attributes['color'] = info.color;
+  }
+  return [color, info];
+})

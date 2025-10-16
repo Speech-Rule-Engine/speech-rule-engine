@@ -120,6 +120,13 @@ function constraintTest(constraint: string): ((p1: Element) => boolean) | null {
       node.localName.toUpperCase() === tag &&
       node.namespaceURI === namespace;
   }
+  // @grammar
+  if (
+    constraint.match(/^\s*@grammar\(@color\)!=@color\s*$/)
+  ) {
+    return (node: Element) =>
+      node.getAttribute('color') !== Grammar.getInstance().getParameter('color');
+  }
   // @attr
   if (constraint.match(/^@\w+$/)) {
     const attr = constraint.slice(1);

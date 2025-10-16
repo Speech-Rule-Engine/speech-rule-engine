@@ -412,7 +412,7 @@ export class SpeechRuleEngine {
           {
             const xpath = attributes['span'];
             let attrs: { [key: string]: string } = {};
-            // Span Custom: Here we compute a customized node for then span.
+            // Span Custom: Here we compute a customized node for the span.
             if (xpath) {
               const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
@@ -422,6 +422,7 @@ export class SpeechRuleEngine {
               attrs = nodes.length
                 ? Span.getAttributes(nodes[0] as Element)
                 : { kind: xpath };
+              console.log(attrs);
             }
             const str = context.constructSpan(node, content, attrs);
             descrs = str.map(function (span: Span) {
@@ -439,6 +440,7 @@ export class SpeechRuleEngine {
       // Adding overall context and annotation if they exist.
       if (descrs[0] && !multi) {
         if (attributes['context']) {
+          console.log(20);
           descrs[0]['context'] =
             context.constructString(node, attributes['context']) +
             (descrs[0]['context'] || '');
