@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "baseUrl": ".",
+    "outDir": "js",
+    "paths": {
+      "@*": ["../js/*"]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      }
+    ]
+  },
+  "include": ["tools/**/*"],
+  "exclude": [
+    "js",
+    "node_modules"
+  ]
+}
