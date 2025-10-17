@@ -34,6 +34,10 @@ export function actionDiff(outdir) {
   });
 }
 
+export function pushActions(locales: string[], domain: string, rules: string[] = []) {
+  locales.forEach(x => pushAction(x, domain, rules));
+}
+
 export function pushAction(locale: string, domain: string, rules: string[] = []) {
   const english = jsonLoadLocale('en', 'english', domain);
   let language = Variables.LOCALES.get(locale);

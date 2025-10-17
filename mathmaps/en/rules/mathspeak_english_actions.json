@@ -87,7 +87,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"divided by\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
