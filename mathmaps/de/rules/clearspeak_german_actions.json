@@ -352,12 +352,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"Quadrat\""
+      "[n] children/*[1]; [t] \"Quadrat\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"Kubik\""
+      "[n] children/*[1]; [t] \"Kubik\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -647,7 +647,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"geteilt durch\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"geteilt durch\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -707,7 +707,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause:short); [t] \"Ende Betrag\" (pause:short)"
+      "[p] (pause:short); [t] \"der Betrag von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Betrag\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
