@@ -18,7 +18,7 @@ export function actionDiff(outdir) {
     const struct1 = actionStructure(json1['rules']);
     const struct2 = actionStructure(json2['rules']);
     const filename = path.join(outdir, `${rules}_${language.toLowerCase()}.txt`);
-    fs.writeFileSync(filename, '')
+    const result = {};
     for (const [name, action1] of Object.entries(struct1)) {
       const action2 = struct2[name];
       if (!action2) continue;
@@ -26,14 +26,37 @@ export function actionDiff(outdir) {
       actionDiff = actionDiff?.components?.filter(x => x[0] === "~" &&
         (x[1]?.attributes?.span || x[1]?.attributes?.pause))
       if (!actionDiff?.length) continue;
-      fs.appendFileSync(
-        filename,
-        name + '\n' +
-          JSON.stringify(actionDiff, null, 2)
-          + '\n');
-      jsonWriteLocale(locale, language.toLowerCase(), rules, json2);
+      result[name] = actionDiff;
+    }
+    if (Object.keys(result).length) {
+      fs.writeFileSync(filename, JSON.stringify(result, null, 2))
     }
   });
+}
+
+export function pushAction(locale: string, domain: string, rules: string[] = []) {
+  const english = jsonLoadLocale('en', 'english', domain);
+  let language = Variables.LOCALES.get(locale);
+  if (!language) {
+    console.log(`Locale ${locale} does not exist!`);
+    return;
+  }
+  const actions = jsonLoadLocale(locale, language, domain);
+  const actionsEn = actionStructure(english.rules);
+  const actionsLocale = actionStructure(actions.rules);
+  for (const rule of rules) {
+    const action1 = actionsEn[rule];
+    const action2 = actionsLocale[rule];
+    if (!action1 || !action2) {
+      console.log(`WARN: Action for ${rule} not found.`);
+    }
+    for (let i = 0, comp1, comp2; comp1 = action1.components[i], comp2 = action2.components[i]; i++) {
+      if (comp1.attributes.span) {
+        comp2.attributes = comp1.attributes;
+      }
+    }
+  }
+  jsonWriteLocale(locale, language, domain, actions);
 }
 
 function jsonWriteLocale(locale: string, language: string, domain: string, json: JSON) {
