@@ -527,7 +527,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
+      "[p] (pause:short); [n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
@@ -537,7 +537,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
+      "[p] (pause:short); [n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",

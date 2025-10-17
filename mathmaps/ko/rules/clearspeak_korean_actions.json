@@ -647,7 +647,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -657,7 +657,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"마이너스 루트\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"마이너스 루트\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -667,7 +667,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -677,7 +677,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",

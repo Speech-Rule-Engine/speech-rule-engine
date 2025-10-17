@@ -507,7 +507,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -517,7 +517,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -527,7 +527,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -537,7 +537,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",

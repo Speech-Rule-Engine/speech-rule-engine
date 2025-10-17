@@ -572,7 +572,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"die vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -582,7 +582,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"die negatiewe vierkantswortel van\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die negatiewe vierkantswortel van\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -592,7 +592,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -602,7 +602,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
