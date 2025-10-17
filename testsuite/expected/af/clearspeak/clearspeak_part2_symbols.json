@@ -119,7 +119,7 @@
       "expected": "die versameling van alle x in die heelgetalle sodat x groter as 5"
     },
     "MembSym003": {
-      "expected": "3 plus 2 i, is nie 'n element van nie die riële getalle"
+      "expected": "3 plus 2 i, is nie 'n element van die riële getalle"
     },
     "MembSym004": {
       "expected": "If x is 'n element van die heelgetalle then 2 x, is an even number punt"
@@ -128,7 +128,7 @@
       "expected": "die versameling van alle x element van die heelgetalle sodat x groter as 5"
     },
     "MembSym006": {
-      "expected": "3 plus 2 i, is nie 'n element vanf die riële getalle"
+      "expected": "3 plus 2 i, is nie 'n element van die riële getalle"
     },
     "MembSym007": {
       "expected": "If x is 'n element van die heelgetalle then 2 x, is an even number punt"
