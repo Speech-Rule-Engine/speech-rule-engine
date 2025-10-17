@@ -1144,7 +1144,7 @@
       "unit-divide",
       "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
     ],
-        [
+    [
       "Action",
       "multi-inference",
       "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\""

@@ -38,7 +38,7 @@ export function actionDiff(outdir) {
 
 function jsonWriteLocale(locale: string, language: string, domain: string, json: JSON) {
   const filename = path.join(mathmaps, locale, 'rules', `${domain}_${language}_actions.json`);
-  fs.writeFileSync(filename, JSON.stringify(json, null, 2));
+  fs.writeFileSync(filename, JSON.stringify(json, null, 2) + '\n');
 }
 
 function actionStructure(json: ['Action', string, string][]): {[key: string]: Action} {
