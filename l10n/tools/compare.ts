@@ -41,7 +41,7 @@ export function pushAction(locale: string, domain: string, rules: string[] = [])
     console.log(`Locale ${locale} does not exist!`);
     return;
   }
-  const actions = jsonLoadLocale(locale, language, domain);
+  const actions = jsonLoadLocale(locale, language.toLowerCase(), domain);
   const actionsEn = actionStructure(english.rules);
   const actionsLocale = actionStructure(actions.rules);
   for (const rule of rules) {
@@ -51,16 +51,24 @@ export function pushAction(locale: string, domain: string, rules: string[] = [])
       console.log(`WARN: Action for ${rule} not found.`);
     }
     for (let i = 0, comp1, comp2; comp1 = action1.components[i], comp2 = action2.components[i]; i++) {
-      if (comp1.attributes.span) {
+      if (comp1.attributes?.span) {
         comp2.attributes = comp1.attributes;
       }
     }
+    replaceActionInLocale(actions, rule, action2);
   }
-  jsonWriteLocale(locale, language, domain, actions);
+  jsonWriteLocale(locale, language.toLowerCase(), domain, actions);
 }
+
+function replaceActionInLocale(actions, rule, action) {
+  const index = actions.rules.findIndex(x => x[1] === rule);
+  actions.rules[index] = ['Action', rule, action.toString()];
+}
+
 
 function jsonWriteLocale(locale: string, language: string, domain: string, json: JSON) {
   const filename = path.join(mathmaps, locale, 'rules', `${domain}_${language}_actions.json`);
+  console.log(filename);
   fs.writeFileSync(filename, JSON.stringify(json, null, 2) + '\n');
 }
 
