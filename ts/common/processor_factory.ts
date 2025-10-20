@@ -480,12 +480,12 @@ export function assembleSpeechStructure(
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
   const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
-  json.label = json.speech[root]['speech-none'];
+  json.label = json.speech[root]['speech-none'] + '';
   json.ssml = json.speech[root]['speech-ssml'];
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   const links = DomUtil.querySelectorAllByAttr(sxml, 'href').length;
   if (links) {
-    json.postfix = `${links} ${(links === 1) ? 'link' : 'links'}`;
+    json.label += `, ${links} ${(links === 1) ? 'link' : 'links'}`;
   }
 }
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
