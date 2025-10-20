@@ -57,6 +57,7 @@ export class SREError extends Error {
  *
  */
 export class Engine {
+
   public options: Options = new Options();
 
   /**
