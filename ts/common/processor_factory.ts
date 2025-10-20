@@ -426,5 +426,67 @@ set(
   })
 );
 
+
+export type OptionsList = { [key: string]: string };
+type SpeechList = { [id: string]: { [mod: string]: string } };
+
+export type WorkerStructure = {
+  speech?: SpeechList;
+  braille?: SpeechList;
+  mactions?: SpeechList;
+  options?: OptionsList;
+  translations?: OptionsList;
+  label?: string;
+  postfix?: string;
+  braillelabel?: string;
+  ssml?: string;
+};
+
+// The new speech structure for the webworker integration.
+// TODO: Cleanup and remove duplication with system.ts
+set(
+  new Processor('workerSpeechStructure', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      let sxml;
+      try {
+        const rebuilt = new RebuildStree(mml);
+        sxml = rebuilt.stree.xml();
+      } catch(_e) {
+        sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      }
+      Engine.getInstance().options.automark = true;
+      const json: WorkerStructure = {};
+      assembleSpeechStructure(json, mml, sxml);
+      return json;
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
+
+
+export function assembleSpeechStructure(
+  json: WorkerStructure,
+  mml: Element,
+  sxml: Element,
+  options: OptionsList = {}
+) {
+  json.options = options;
+  json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+  json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  json.label = json.speech[root]['speech-none'];
+  json.ssml = json.speech[root]['speech-ssml'];
+  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+  const links = DomUtil.querySelectorAllByAttr(sxml, 'href').length;
+  if (links) {
+    json.postfix = `${links} ${(links === 1) ? 'link' : 'links'}`;
+  }
+}
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
 // echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak
