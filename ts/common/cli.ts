@@ -317,6 +317,9 @@ export class Cli {
       .option('-T, --speechStructure', 'Return speech structure only.', () =>
         processor('speechStructure')
       )
+      .option('-W, --workerStructure', 'Return worker speech structure only.', () =>
+        processor('workerSpeechStructure')
+      )
       .option(
         '-t, --latex',
         'Accepts LaTeX input for certain locale/modality combinations.',
