@@ -113,6 +113,11 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition; [t] \"Column\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"Label\" (pause:200)"
     ]
   ]
 }

@@ -2491,6 +2491,40 @@
     ],
     [
       "Precondition",
+      "line-label",
+      "default",
+      "self::line",
+      "content",
+      "not(contains(@grammar, \"labelledLine\"))"
+    ],
+    [
+      "Alias",
+      "line-label",
+      "self::row",
+      "content",
+      "not(contains(@grammar, \"labelledLine\"))"
+    ],
+    [
+      "Specialized",
+      "line-label",
+      "default",
+      "MultiLinePausesBetweenColumns_Short"
+    ],
+    [
+      "Specialized",
+      "line-label",
+      "default",
+      "MultiLinePausesBetweenColumns_Long"
+    ],
+    [
+      "Precondition",
+      "cell-label",
+      "default",
+      "self::cell",
+      "@role=\"label\""
+    ],
+    [
+      "Precondition",
       "blank-cell",
       "default",
       "self::cell",

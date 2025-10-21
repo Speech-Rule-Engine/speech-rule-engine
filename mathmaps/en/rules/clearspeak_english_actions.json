@@ -906,6 +906,11 @@
     ],
     [
       "Action",
+      "line-label",
+      "[n] . (grammar:?labelledLine); [t] \"Label\"; [n] content/*[1]"
+    ],
+    [
+      "Action",
       "blank-cell",
       "[t] \"blank\""
     ],
