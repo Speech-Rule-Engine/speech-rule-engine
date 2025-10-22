@@ -12,6 +12,19 @@ import { Action } from '@rule_engine/speech_rule.js';
 const mathmaps = '../mathmaps';
 
 const ruleSets = ['mathspeak', 'clearspeak', 'prefix', 'summary'];
+const remove = ['nemeth', 'euro', 'en'];
+
+
+function getLanguage(locale: string) {
+  let language = Variables.LOCALES.get(locale);
+  if (remove.includes(locale)) return;
+  if (!language) {
+    console.info(`Locale ${locale} does not exist!`);
+    return;
+  }
+  language = language.toLowerCase().replace(/å/g, 'a');
+  return language;
+}
 
 export function actionDiff(outdir: string) {
   jsonDiff((json1, json2, _locale, language, rules) => {
@@ -35,33 +48,28 @@ export function actionDiff(outdir: string) {
 }
 
 export function pushActions(locales: string[], domain: string, rules: string[] = []) {
-
   if (!locales || !locales.length) {
-    const remove = ['nemeth', 'euro', 'en'];
-    locales = Array.from(Variables.LOCALES.keys()).filter(x => !remove.includes(x));
+    locales = Array.from(Variables.LOCALES.keys());
   }
   locales.forEach(x => pushAction(x, domain, rules));
 }
 
 export function pushAction(locale: string, domain: string, rules: string[] = []) {
   const english = jsonLoadLocale('en', 'english', domain);
-  let language = Variables.LOCALES.get(locale).replace(/å/g, 'a');
+  let language = getLanguage(locale);
   if (!language) {
-    console.log(`Locale ${locale} does not exist!`);
     return;
   }
-  console.log(english);
-  console.log(locale);
-  console.log(language.toLowerCase());
   const actions = jsonLoadLocale(locale, language.toLowerCase(), domain);
-  console.log(actions);
   const actionsEn = actionStructure(english.rules);
   const actionsLocale = actionStructure(actions.rules);
   for (const rule of rules) {
+    console.info(`Pushing ${rule} for ${language} ${domain}`);
     const action1 = actionsEn[rule];
     const action2 = actionsLocale[rule];
     if (!action1 || !action2) {
-      console.log(`WARN: Action for ${rule} not found.`);
+      console.info(`WARN: Action for ${rule} not found.`);
+      continue;
     }
     for (let i = 0, comp1, comp2; comp1 = action1.components[i], comp2 = action2.components[i]; i++) {
       if (comp1.attributes?.span) {
@@ -81,8 +89,8 @@ function replaceActionInLocale(actions, rule, action) {
 
 function jsonWriteLocale(locale: string, language: string, domain: string, json: JSON) {
   const filename = path.join(mathmaps, locale, 'rules', `${domain}_${language}_actions.json`);
-  console.log(filename);
   fs.writeFileSync(filename, JSON.stringify(json, null, 2) + '\n');
+  console.info(`Saved ${filename}`);
 }
 
 function actionStructure(json: ['Action', string, string][]): {[key: string]: Action} {
@@ -111,10 +119,11 @@ function jsonDiff(diff: (json1: JSON,
   for (const rules of ruleSets) {
     en[rules] = jsonLoadLocale('en', 'english', rules);
   }
-  for (const [locale, language] of Variables.LOCALES) {
-    if (['nemeth', 'euro', 'en'].includes(locale)) continue;
+  for (const locale of Variables.LOCALES.keys()) {
+    const language = getLanguage(locale);
+    if (!language) continue;
     for (const rules of ruleSets) {
-      const json = jsonLoadLocale(locale, language.toLowerCase(), rules);
+      const json = jsonLoadLocale(locale, language, rules);
       if (json) {
         diff(en[rules], json, locale, language, rules);
       }

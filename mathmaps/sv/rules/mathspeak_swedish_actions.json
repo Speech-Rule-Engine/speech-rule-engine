@@ -82,7 +82,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"delat med\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"delat med\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -92,22 +92,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"StartAbsolutVärde\"; [n] children/*[1]; [t] \"SlutAbsolutVärde\""
+      "[t] \"StartAbsolutVärde\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutAbsolutVärde\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"AbsolutVärde\"; [n] children/*[1]; [t] \"SlutAbsolutVärde\""
+      "[t] \"AbsolutVärde\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutAbsolutVärde\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"StartBelopp\"; [n] children/*[1]; [t] \"SlutBelopp\""
+      "[t] \"StartBelopp\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutBelopp\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"Belopp\"; [n] children/*[1]; [t] \"SlutBelopp\""
+      "[t] \"Belopp\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutBelopp\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -117,12 +117,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"StartMängd\"; [n] children/*[1]; [t] \"SlutMängd\""
+      "[t] \"StartMängd\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutMängd\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"Mängds\"; [n] children/*[1]; [t] \"SlutMängd\""
+      "[t] \"Mängds\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutMängd\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -177,12 +177,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"kvadrat\""
+      "[n] children/*[1]; [t] \"kvadrat\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"kubik\""
+      "[n] children/*[1]; [t] \"kubik\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -242,32 +242,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"överstreck\""
+      "[n] children/*[1]; [t] \"överstreck\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"understreck\""
+      "[n] children/*[1]; [t] \"understreck\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"övertilde\""
+      "[n] children/*[1]; [t] \"övertilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"undetilde\""
+      "[n] children/*[1]; [t] \"undetilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Matris\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutMatris\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Matris\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutMatris\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Matris\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutMatris\""
+      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Matris\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutMatris\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -302,22 +302,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutDeterminant\""
+      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"SlutDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"SlutDeterminant\""
+      "[t] count(children/*); [t] \"Gånger\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -332,12 +332,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"StartBinomEllerMatris\"; [n] children/*[1]/children/*[1]; [t] \"Välj\"; [n] children/*[2]/children/*[1]; [t] \"SlutBinomEllerMatris\""
+      "[t] \"StartBinomEllerMatris\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Välj\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"SlutBinomEllerMatris\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"BinomEllerMatris\"; [n] children/*[1]/children/*[1]; [t] \"Välj\"; [n] children/*[2]/children/*[1]; [t] \"SlutBinomEllerMatris\""
+      "[t] \"BinomEllerMatris\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Välj\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"SlutBinomEllerMatris\" (span:content/*[2])"
     ],
     [
       "Action",
