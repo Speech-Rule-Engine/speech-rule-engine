@@ -257,7 +257,7 @@
     [
       "Action",
       "matrix",
-      "[t] \"començar matriu\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalitzar matriu\" (span:LAST)"
+      "[t] \"començar matriu\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalitzar matriu\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -297,7 +297,7 @@
     [
       "Action",
       "determinant",
-      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalitzar determinant\" (span:LAST)"
+      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalitzar determinant\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -307,7 +307,7 @@
     [
       "Action",
       "determinant-simple",
-      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1], grammar:simpleDet); [t] \"finalitzar determinant\" (span:LAST)"
+      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1], grammar:simpleDet); [t] \"finalitzar determinant\" (span:content/*[2])"
     ],
     [
       "Action",
