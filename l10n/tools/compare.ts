@@ -13,8 +13,8 @@ const mathmaps = '../mathmaps';
 
 const ruleSets = ['mathspeak', 'clearspeak', 'prefix', 'summary'];
 
-export function actionDiff(outdir) {
-  jsonDiff((json1, json2, locale, language, rules) => {
+export function actionDiff(outdir: string) {
+  jsonDiff((json1, json2, _locale, language, rules) => {
     const struct1 = actionStructure(json1['rules']);
     const struct2 = actionStructure(json2['rules']);
     const filename = path.join(outdir, `${rules}_${language.toLowerCase()}.txt`);
@@ -35,17 +35,26 @@ export function actionDiff(outdir) {
 }
 
 export function pushActions(locales: string[], domain: string, rules: string[] = []) {
+
+  if (!locales || !locales.length) {
+    const remove = ['nemeth', 'euro', 'en'];
+    locales = Array.from(Variables.LOCALES.keys()).filter(x => !remove.includes(x));
+  }
   locales.forEach(x => pushAction(x, domain, rules));
 }
 
 export function pushAction(locale: string, domain: string, rules: string[] = []) {
   const english = jsonLoadLocale('en', 'english', domain);
-  let language = Variables.LOCALES.get(locale);
+  let language = Variables.LOCALES.get(locale).replace(/å/g, 'a');
   if (!language) {
     console.log(`Locale ${locale} does not exist!`);
     return;
   }
+  console.log(english);
+  console.log(locale);
+  console.log(language.toLowerCase());
   const actions = jsonLoadLocale(locale, language.toLowerCase(), domain);
+  console.log(actions);
   const actionsEn = actionStructure(english.rules);
   const actionsLocale = actionStructure(actions.rules);
   for (const rule of rules) {
