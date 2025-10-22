@@ -77,7 +77,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"dividido\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"dividido\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,22 +87,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"empezar valor absoluto\"; [n] children/*[1]; [t] \"finalizar valor absoluto\""
+      "[t] \"empezar valor absoluto\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar valor absoluto\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"valor absoluto\"; [n] children/*[1]; [t] \"finalizar valor absoluto\""
+      "[t] \"valor absoluto\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar valor absoluto\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"empezar métrica\"; [n] children/*[1]; [t] \"finalizar métrica\""
+      "[t] \"empezar métrica\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar métrica\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"métrica\"; [n] children/*[1]; [t] \"finalizar métrica\""
+      "[t] \"métrica\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar métrica\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -112,12 +112,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"empezar llave\"; [n] children/*[1]; [t] \"finalizar llave\""
+      "[t] \"empezar llave\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar llave\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"llave\"; [n] children/*[1]; [t] \"finalizar llave\""
+      "[t] \"llave\" (span:content/*[1]); [n] children/*[1]; [t] \"finalizar llave\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -172,12 +172,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"al cuadrado\""
+      "[n] children/*[1]; [t] \"al cuadrado\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"al cubo\""
+      "[n] children/*[1]; [t] \"al cubo\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -237,32 +237,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"barra\""
+      "[n] children/*[1]; [t] \"barra\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"subbarra\""
+      "[n] children/*[1]; [t] \"subbarra\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"tilde\""
+      "[n] children/*[1]; [t] \"tilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"subtilde\""
+      "[n] children/*[1]; [t] \"subtilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"empezar matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar matriz\""
+      "[t] \"empezar matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalizar matriz\" (span:LAST)"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] \"matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\" \"); [t] \"finalizar matriz\""
+      "[t] \"matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*) (span:content/*[1]); [m] children/* (ctxtFunc:CTFwordCounter, context:\" \"); [t] \"finalizar matriz\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -297,22 +297,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"finalizar determinante\" (span:LAST)"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*) (span:content/*[1]); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar determinante\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1], grammar:simpleDet); [t] \"finalizar determinante\" (span:LAST)"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*) (span:content/*[1]); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalizar determinante\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -327,12 +327,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"empezar binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\""
+      "[t] \"empezar binomial\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"en\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\""
+      "[t] \"binomial\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"en\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\" (span:content/*[2])"
     ],
     [
       "Action",

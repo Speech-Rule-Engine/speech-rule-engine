@@ -82,7 +82,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"gedeel deur\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"gedeel deur\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -92,22 +92,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"begin absolute Waarde\"; [n] children/*[1]; [t] \"End Absolute Waarde\""
+      "[t] \"begin absolute Waarde\" (span:content/*[1]); [n] children/*[1]; [t] \"End Absolute Waarde\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"Absolute Waarde\"; [n] children/*[1]; [t] \"End Absolute Waarde\""
+      "[t] \"Absolute Waarde\" (span:content/*[1]); [n] children/*[1]; [t] \"End Absolute Waarde\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"Begin Metries\"; [n] children/*[1]; [t] \"End Metries\""
+      "[t] \"Begin Metries\" (span:content/*[1]); [n] children/*[1]; [t] \"End Metries\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"Metries\"; [n] children/*[1]; [t] \"end metries\""
+      "[t] \"Metries\" (span:content/*[1]); [n] children/*[1]; [t] \"end metries\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -117,12 +117,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"begin versameling\"; [n] children/*[1]; [t] \"End versameling\""
+      "[t] \"begin versameling\" (span:content/*[1]); [n] children/*[1]; [t] \"End versameling\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"Versameling\"; [n] children/*[1]; [t] \"End Versameling\""
+      "[t] \"Versameling\" (span:content/*[1]); [n] children/*[1]; [t] \"End Versameling\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -237,32 +237,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"bostaaf\""
+      "[n] children/*[1]; [t] \"bostaaf\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"onderstaaf\""
+      "[n] children/*[1]; [t] \"onderstaaf\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"oor tilde\""
+      "[n] children/*[1]; [t] \"oor tilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"onder tilde\""
+      "[n] children/*[1]; [t] \"onder tilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matriks\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"End Matriks\""
+      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matriks\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"End Matriks\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matriks\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"End Matriks\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matriks\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"End Matriks\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -297,22 +297,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"EndDeterminant\""
+      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"EndDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"EndDeterminant\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry \"); [t] \"EndDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry\", grammar:simpleDet); [t] \"EndDeterminant\""
+      "[t] \"Begin\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry\", grammar:simpleDet); [t] \"EndDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry\", grammar:simpleDet); [t] \"EndDeterminant\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Ry\", grammar:simpleDet); [t] \"EndDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -327,12 +327,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"Begin Binomiaal of Matriks\"; [n] children/*[1]/children/*[1]; [t] \"Kies\"; [n] children/*[2]/children/*[1]; [t] \"End Binomiaal of Matriks\""
+      "[t] \"Begin Binomiaal of Matriks\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Kies\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"End Binomiaal of Matriks\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"Binomiaal of Matriks\"; [n] children/*[1]/children/*[1]; [t] \"Kies\"; [n] children/*[2]/children/*[1]; [t] \"End Binomiaal of Matriks\""
+      "[t] \"Binomiaal of Matriks\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Kies\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"End Binomiaal of Matriks\" (span:content/*[2])"
     ],
     [
       "Action",
