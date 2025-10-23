@@ -551,6 +551,9 @@ SemanticHeuristics.add(
       let left = true;
       let right = true;
       const topLeft = table.childNodes[0].childNodes[0];
+      if (!topLeft) {
+        return false;
+      }
       if (!eligibleNode(topLeft.mathmlTree)) {
         left = false;
       } else {
