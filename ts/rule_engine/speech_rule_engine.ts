@@ -723,7 +723,7 @@ export class SpeechRuleEngine {
           (dynamic as ClearspeakPreferences).preference
         );
         const def = DynamicCstr.DEFAULT_VALUES[axis];
-        if (!strict && value !== def) {
+        if (value !== def) {
           valueSet.push(def);
         }
         props[axis] = valueSet;
@@ -767,6 +767,7 @@ export class SpeechRuleEngine {
       return null;
     }
     const matchingRules = this.lookupRules(node, dynamic);
+    Debugger.getInstance().output('Matching Rules: ', matchingRules.length, matchingRules);
     return matchingRules.length > 0
       ? this.pickMostConstraint_(dynamic, matchingRules)
       : null;
@@ -781,6 +782,7 @@ export class SpeechRuleEngine {
    * @returns All applicable speech rules.
    */
   public lookupRules(node: Element, dynamic: DynamicCstr): SpeechRule[] {
+    Debugger.getInstance().output(dynamic);
     return this.trie.lookupRules(node, dynamic.allProperties());
   }
 

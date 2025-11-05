@@ -237,6 +237,12 @@
       "count(preceding-sibling::*)=0"
     ],
     [
+      "Specialized",
+      "choice",
+      "default.default",
+      "clearspeak.Matrix_Combinatoric"
+    ],
+    [
       "Precondition",
       "select",
       "default",
@@ -244,6 +250,12 @@
       "@role=\"binomial\"",
       "parent::*/parent::vector",
       "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Specialized",
+      "select",
+      "default.default",
+      "clearspeak.Matrix_Combinatoric"
     ],
     [
       "Precondition",

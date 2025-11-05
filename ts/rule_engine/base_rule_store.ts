@@ -345,14 +345,7 @@ export abstract class BaseRuleStore
   public parseCstr(cstr: string): DynamicCstr {
     try {
       // TODO: Have a parser that respects generators.
-      return this.parser.parse(
-        this.locale +
-          '.' +
-          this.modality +
-          (this.domain ? '.' + this.domain : '') +
-          '.' +
-          cstr
-      );
+      return this.parser.parse(this.preParseCstr(cstr));
     } catch (err) {
       if (err.name === 'RuleError') {
         console.error(
@@ -587,6 +580,18 @@ export abstract class BaseRuleStore
     const generator = this.context.customGenerators.lookup(cstr);
     return generator ? (generator() as string[]) : [cstr];
   }
+
+  private preParseCstr(cstr: string): string {
+    const match = cstr.match('\(.+\)\\.\(.+\)');
+    return this.locale +
+      '.' +
+      this.modality +
+      '.' +
+      (match ? cstr :
+        ((this.domain ? this.domain : '') +
+          '.' + cstr))
+  }
+
 }
 
 // Conditions are clusters of preconditions that are used to define rules via

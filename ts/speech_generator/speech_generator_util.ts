@@ -168,8 +168,6 @@ export function computePrefix(node: Element): AuditoryDescription[] {
     ? SpeechRuleEngine.getInstance().runInSetting(
         {
           modality: 'prefix',
-          domain: 'default',
-          style: 'default',
           strict: true,
           speech: true
         },
@@ -429,13 +427,17 @@ export function computePostfix(node: Element): AuditoryDescription[] {
 
 // Changes for the webworker
 
+import { Debugger } from '../common/debugger.js';
+
 /**
  *
  * @param structure
  */
 export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('speech', computeSpeech);
+  Debugger.getInstance()['isActive_'] = true;
   structure.completeModality('prefix', computePrefix);
+  Debugger.getInstance()['isActive_'] = false;
   structure.completeModality('postfix', computePostfix);
   structure.completeModality('summary', computeSummary);
 }
@@ -445,7 +447,9 @@ export function completeModalities(structure: SpeechStructure) {
  * @param sxml
  */
 export function computeSpeechStructure(sxml: Element) {
+  // Debugger.getInstance()['isActive_'] = true;
   computeSpeech(sxml, true);
+  Debugger.getInstance()['isActive_'] = false;
   const structure = SpeechRuleEngine.getInstance().speechStructure;
   completeModalities(structure);
   return structure.json(['none', 'ssml']);

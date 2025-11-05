@@ -2,6 +2,7 @@
   "name": "EnglishPrefix",
   "locale": "en",
   "factory": "prefix",
+  "domain": "mathspeak",
   "base": "input/common/prefix.json",
   "information": "English Prefix rule tests.",
   "active": "PrefixEnglish",

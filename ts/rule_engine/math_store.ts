@@ -39,6 +39,7 @@ export class MathStore extends BaseRuleStore {
     super();
 
     this.parseMethods['Alias'] = this.defineAlias;
+    this.parseMethods['AliasRule'] = this.defineRulesAlias;
     this.parseMethods['SpecializedRule'] = this.defineSpecializedRule;
     this.parseMethods['Specialized'] = this.defineSpecialized;
   }
