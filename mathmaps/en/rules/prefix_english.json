@@ -99,17 +99,49 @@
     ],
     [
       "Rule",
+      "cell",
+      "clearspeak.default",
+      "[n] ../..; [t] \"Column\"; [t] count(preceding-sibling::*)+1 (pause:200)",
+      "self::cell",
+      "contains(@grammar,\"depth\")"
+    ],
+    [
+      "Rule",
       "matrix-row",
       "clearspeak.default",
       "[t] \"Row\"; [t] count(preceding-sibling::*)+1 (pause:200)",
       "self::row",
-      "@role=\"matrix\""
+      "contains(@role,\"matrix\")"
+    ],
+    [
+      "SpecializedRule",
+      "matrix-row",
+      "clearspeak.default",
+      "clearspeak.MultiLineLabel_Case"
+    ],
+    [
+      "SpecializedRule",
+      "matrix-row",
+      "clearspeak.default",
+      "clearspeak.MultiLineLabel_Equation"
+    ],
+    [
+      "SpecializedRule",
+      "matrix-row",
+      "clearspeak.default",
+      "clearspeak.MultiLineLabel_Constraint"
+    ],
+    [
+      "SpecializedRule",
+      "matrix-row",
+      "clearspeak.default",
+      "clearspeak.MultiLineLabel_Step"
     ],
     [
       "AliasRule",
       "matrix-row",
       "self::line",
-      "@role=\"matrix\""
+      "contains(@role,\"matrix\")"
     ]
   ]
 }

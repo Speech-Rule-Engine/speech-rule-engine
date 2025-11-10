@@ -33,6 +33,8 @@ import { StaticTrieNode } from './abstract_trie_node.js';
 import { TrieNode, TrieNodeKind } from './trie_node.js';
 import { getNode } from './trie_node_factory.js';
 
+import { Debugger } from '../common/debugger.js';
+
 export class Trie {
   /**
    *  The root of the trie.
@@ -152,11 +154,13 @@ export class Trie {
     // First deal with dynamic constraints.
     while (dynamic.length) {
       const dynamicSet = dynamic.shift();
+      Debugger.getInstance().output(dynamicSet);
       const newNodes: TrieNode[] = [];
       while (nodes.length) {
         const node = nodes.shift();
         const children = node.getChildren();
         children.forEach((child: TrieNode) => {
+          Debugger.getInstance().output(dynamicSet);
           if (
             child.getKind() !== TrieNodeKind.DYNAMIC ||
             dynamicSet.indexOf(child.getConstraint()) !== -1

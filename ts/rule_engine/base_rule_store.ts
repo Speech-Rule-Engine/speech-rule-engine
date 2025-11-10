@@ -478,12 +478,15 @@ export abstract class BaseRuleStore
     }
     // Overwrite previously defined rules!
     this.ignoreRules(name);
-    const regexp = new RegExp(
-      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
-    );
+    // const regexp = new RegExp(
+    //   '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    // );
+    const regexp = new RegExp('^\\w+\\.\\w+\\.');
     prec.conditions.forEach(([dynamic, prec]) => {
       // TODO: Work this out wrt. domain.
       const newDynamic = this.parseCstr(dynamic.toString().replace(regexp, ''));
+      // console.log(`ParseDYNAMIC ${regexp} ${dynamic.toString()} ${dynamic.toString().replace(regexp, '')} ${newDynamic}`);
+      // TODO: HERE is the problem!!!!
       this.addRule(new SpeechRule(name, newDynamic, prec, postc));
     });
   }
@@ -536,6 +539,7 @@ export abstract class BaseRuleStore
       const newDynamic = this.parseCstr(
         rule.dynamicCstr.toString().replace(regexp, '')
       );
+      // console.log(`ParseDYNAMIC ${rule.dynamicCstr.toString()} ${rule.dynamicCstr.toString().replace(regexp, '')} ${newDynamic}`);
       this.addRule(
         new SpeechRule(rule.name, newDynamic, rule.precondition, rule.action)
       );
@@ -642,6 +646,7 @@ class Condition {
       }
     }
     this._conditions = this._conditions.concat(newConds);
+    // console.log(`DYNAMIC2: ${this._conditions}`);
   }
 
   /**

@@ -439,7 +439,9 @@ export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('prefix', computePrefix);
   Debugger.getInstance()['isActive_'] = false;
   structure.completeModality('postfix', computePostfix);
+  Debugger.getInstance()['isActive_'] = false;
   structure.completeModality('summary', computeSummary);
+  Debugger.getInstance()['isActive_'] = false;
 }
 
 /**
