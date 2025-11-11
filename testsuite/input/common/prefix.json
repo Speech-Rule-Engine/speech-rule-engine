@@ -268,6 +268,22 @@
     },
     "LimLower_3": {
       "input": "<munder><mo extid=\"A\">&#x2211;</mo><mi>n</mi></munder><mi>a</mi>"
+    },
+    "Table_0": {
+      "tex": "\\begin{matrix}a\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>"
+    },
+    "Table_1": {
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_2": {
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
+    },
+    "Table_3": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
     }
   }
 }
