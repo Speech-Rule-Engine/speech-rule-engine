@@ -563,6 +563,61 @@ export function splitExpected(expected: string, base: string) {
   tu.TestUtil.saveJson(filename, json);
 }
 
+/**
+ * Splits an expected file into multiple expected files, according to the given
+ * base files. This is useful when a base file was separated into two or more
+ * new base files.
+ *
+ * @param {string} expected The name of the original expected file.
+ * @param {string[]} bases The names of the new base files.
+ */
+export function splitMultiExpected(expected: string, bases: string[]) {
+  const filename = tu.TestUtil.fileExists(expected, tu.TestPath.EXPECTED);
+  const json = tu.TestUtil.loadJson(filename);
+  const source: {[key: string]: tu.JsonFile} = {};
+  const dest: {[key: string]: tu.JsonFile} = {};
+  for (const base of bases) {
+    const basename = tu.TestUtil.fileExists(base, tu.TestPath.INPUT);
+    const baseJson = tu.TestUtil.loadJson(basename);
+    source[base] = baseJson;
+    dest[base] = Object.assign({}, json);
+    dest[base].tests = {};
+    dest[base].base = base;
+  }
+  for (const [key, value] of Object.entries(source)) {
+    for (const [testName, testExpected] of Object.entries(value.tests)) {
+      (dest[key] as tu.JsonTests).tests[testName] = testExpected;
+    }
+  }
+  for (const [key, value] of Object.entries(dest)) {
+    const file = makeFileName(expected, key);
+    value.name = replaceString(value.name, expected, key, '');
+    value.information = replaceString(value.information, expected, key, ' ');
+    tu.TestUtil.saveJson(file, value);
+  }
+}
+
+function replaceString(str: string, src: string, dst: string, sep: string) {
+  const splitter = (str: string) => str.split('/').
+    slice(-1)[0].
+    replace(/.json$/, '').
+    split('_').
+    map(x => x.charAt(0).toUpperCase() + x.slice(1)).
+    join(sep);
+  const sources = splitter(src);
+  const dests = splitter(dst);
+  return str.replace(sources, dests);
+}
+
+
+function makeFileName(src: string, dst: string) {
+  const sources = src.split('/');
+  const dests = dst.split('/');
+  return sources.
+    splice(0, sources.length - 1).
+    join('/') + '/' + dests[dests.length - 1];
+}
+
 /* ********************************************************** */
 /*
  * Test generation for the PreTeXt project.
