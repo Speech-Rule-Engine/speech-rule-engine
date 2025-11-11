@@ -155,6 +155,5 @@
       "self::row",
       "contains(@role,\"vector\")"
     ]
-
   ]
 }

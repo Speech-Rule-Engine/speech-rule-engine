@@ -582,15 +582,15 @@ export function splitMultiExpected(expected: string, bases: string[]) {
     source[base] = baseJson;
     dest[base] = Object.assign({}, json);
     dest[base].tests = {};
-    dest[base].base = base;
+    dest[base].base = 'input/' + base;
   }
   for (const [key, value] of Object.entries(source)) {
-    for (const [testName, testExpected] of Object.entries(value.tests)) {
-      (dest[key] as tu.JsonTests).tests[testName] = testExpected;
+    for (const testName of Object.keys(value.tests)) {
+      (dest[key] as tu.JsonTests).tests[testName] = json.test[testName];
     }
   }
   for (const [key, value] of Object.entries(dest)) {
-    const file = makeFileName(expected, key);
+    const file = tu.TestPath.EXPECTED + '/' + makeFileName(expected, key);
     value.name = replaceString(value.name, expected, key, '');
     value.information = replaceString(value.information, expected, key, ' ');
     tu.TestUtil.saveJson(file, value);
