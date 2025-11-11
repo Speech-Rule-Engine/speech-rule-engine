@@ -1,0 +1,240 @@
+{
+  "tests": {
+    "Binomials_0": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 2
+    },
+    "Binomials_1": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 3
+    },
+    "Binomials_2": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 0
+    },
+    "Binomials_3": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 4
+    },
+    "Binomials_4": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 5
+    },
+    "Vectors_0": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 2
+    },
+    "Vectors_1": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 5
+    },
+    "Vectors_2": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 8
+    },
+    "Vectors_3": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 0
+    },
+    "Vectors_4": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 6
+    },
+    "Vectors_5": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 10
+    },
+    "Matrices_depth_0": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 4
+    },
+    "Matrices_depth_1": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 1
+    },
+    "Matrices_depth_2": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 3
+    },
+    "Matrices_depth_3": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 9
+    },
+    "Matrices_depth_4": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 6
+    },
+    "Matrices_depth_5": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 8
+    },
+    "Matrices_depth_6": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 2
+    },
+    "Matrices_depth_7": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 7
+    },
+    "Matrices_depth_8": {
+      "grammar": "depth",
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 12
+    },
+    "Matrices_0": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 4
+    },
+    "Matrices_1": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 1
+    },
+    "Matrices_2": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 3
+    },
+    "Matrices_3": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 9
+    },
+    "Matrices_4": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 6
+    },
+    "Matrices_5": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 8
+    },
+    "Matrices_6": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 2
+    },
+    "Matrices_7": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 7
+    },
+    "Matrices_8": {
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 12
+    },
+    "Table_0": {
+      "tex": "\\begin{matrix}a\\end{matrix}",
+      "input": "<mtable><mtr extid=\"A\"><mtd><mi>a</mi></mtd></mtr></mtable>"
+    },
+    "Table_1": {
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr extid=\"A\"><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_2": {
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr extid=\"A\"><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>"
+    },
+    "Table_3": {
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr extid=\"A\"><mtd><mi>b</mi></mtd></mtr></mtable>"
+    },
+    "Table_4": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr extid=\"A\"><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_5": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr extid=\"A\"><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_0": {
+      "tex": "\\begin{matrix}a\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "id": 2
+    },
+    "Table_Cell_1": {
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr><mtd extid=\"A\"><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_1a": {
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd extid=\"A\"><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_2": {
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "id": 2
+    },
+    "Table_Cell_3": {
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "id": 5
+    },
+    "Table_Cell_4": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd extid=\"A\"><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_4a": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd extid=\"A\"><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_5": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd extid=\"A\"><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_5a": {
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd extid=\"A\"><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_0": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "id": 2
+    },
+    "Table_Cell_Depth_1": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr><mtd extid=\"A\"><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_1a": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd extid=\"A\"><mi>c</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_2": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "id": 2
+    },
+    "Table_Cell_Depth_3": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a \\\\b\\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "id": 5
+    },
+    "Table_Cell_Depth_4": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd extid=\"A\"><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_4a": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd extid=\"A\"><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_5": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd extid=\"A\"><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Cell_Depth_5a": {
+      "grammar": "depth",
+      "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd extid=\"A\"><mi>d</mi></mtd></mtr></mtable>"
+    }
+  }
+}
