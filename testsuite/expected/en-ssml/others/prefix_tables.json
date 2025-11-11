@@ -1,0 +1,170 @@
+{
+  "name": "EnglishPrefixTables",
+  "locale": "en",
+  "factory": "prefixMarkup",
+  "base": "input/common/prefix_tables.json",
+  "information": "English Prefix Tables rule tests.",
+  "active": "PrefixEnglish",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "<mark name=\"2\"/> Choice Quantity <break time=\"200ms\"/>"
+    },
+    "Binomials_1": {
+      "expected": "<mark name=\"3\"/> Selection Quantity <break time=\"200ms\"/>"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Vectors_1": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Vectors_2": {
+      "expected": "<mark name=\"8\"/> 3rd Row <break time=\"200ms\"/>"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_2": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_3": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_4": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Matrices_1": {
+      "expected": "<mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_2": {
+      "expected": "<mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_3": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Matrices_4": {
+      "expected": "<mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Matrices_5": {
+      "expected": "<mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_4": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_1": {
+      "expected": "<mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_1a": {
+      "expected": "<mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_4": {
+      "expected": "<mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_4a": {
+      "expected": "<mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_5": {
+      "expected": "<mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_5a": {
+      "expected": "<mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    }
+  }
+}

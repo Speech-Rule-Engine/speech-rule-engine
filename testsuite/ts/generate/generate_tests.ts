@@ -573,7 +573,7 @@ export function splitExpected(expected: string, base: string) {
  */
 export function splitMultiExpected(expected: string, bases: string[]) {
   const filename = tu.TestUtil.fileExists(expected, tu.TestPath.EXPECTED);
-  const json = tu.TestUtil.loadJson(filename);
+  const json: tu.JsonTests = tu.TestUtil.loadJson(filename);
   const source: {[key: string]: tu.JsonFile} = {};
   const dest: {[key: string]: tu.JsonFile} = {};
   for (const base of bases) {
@@ -586,7 +586,7 @@ export function splitMultiExpected(expected: string, bases: string[]) {
   }
   for (const [key, value] of Object.entries(source)) {
     for (const testName of Object.keys(value.tests)) {
-      (dest[key] as tu.JsonTests).tests[testName] = json.test[testName];
+      (dest[key] as tu.JsonTests).tests[testName] = json.tests[testName];
     }
   }
   for (const [key, value] of Object.entries(dest)) {
