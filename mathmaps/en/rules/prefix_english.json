@@ -142,6 +142,19 @@
       "matrix-row",
       "self::line",
       "contains(@role,\"matrix\")"
+    ],
+    [
+      "AliasRule",
+      "matrix-row",
+      "self::line",
+      "contains(@role,\"vector\")"
+    ],
+    [
+      "AliasRule",
+      "matrix-row",
+      "self::row",
+      "contains(@role,\"vector\")"
     ]
+
   ]
 }

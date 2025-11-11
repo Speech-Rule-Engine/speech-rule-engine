@@ -140,7 +140,6 @@ export class MathStore extends BaseRuleStore {
       (rule) => rule.name === name && dynamicCstr.equal(rule.dynamicCstr)
     );
     const newCstr = this.parseCstr(newDynamic);
-    console.log(`Dynamic: ${name} ${oldDynamic} ${newDynamic} ${dynamicCstr} ${newCstr}`);
     if (!rule && opt_action) {
       throw new OutputError(
         'Rule named ' + name + ' with style ' + oldDynamic + ' does not exist.'
@@ -153,7 +152,6 @@ export class MathStore extends BaseRuleStore {
       rule.precondition,
       action
     );
-    console.log(`AddRule ${newRule}`);
     this.addRule(newRule);
   }
 
@@ -166,7 +164,6 @@ export class MathStore extends BaseRuleStore {
    */
   public defineSpecialized(name: string, _old: string, dynamic: string) {
     const cstr = this.parseCstr(dynamic);
-    // console.log(`DYNAMIC: ${_old} ${dynamic} ${cstr}`);
     if (!cstr) {
       console.error(`Dynamic Constraint Error: ${dynamic}`);
       return;
