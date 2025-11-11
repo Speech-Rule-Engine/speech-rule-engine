@@ -237,6 +237,78 @@
     },
     "LimLower_3": {
       "expected": "<mark name=\"0\"/> Base <break time=\"200ms\"/>"
+    },
+    "Table_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_4": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_1a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_4": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_4a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_5a": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "<mark name=\"5\"/> 2nd Row <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"1\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "<mark name=\"4\"/> 1st Row <break time=\"200ms\"/> <mark name=\"3\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"6\"/> 1st Column <break time=\"200ms\"/>"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
     }
   }
 }

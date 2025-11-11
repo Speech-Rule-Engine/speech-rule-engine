@@ -82,7 +82,6 @@ export class PrefixTest extends SpeechTest {
     this.id =
       this.field('id') === undefined ? null : parseInt(this.field('id'), 10);
     if (this.field('grammar')) {
-      console.log(this.field('grammar'));
       Grammar.getInstance().setParameter(this.field('grammar'), true);
     }
     super.method();

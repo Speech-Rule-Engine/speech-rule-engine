@@ -238,6 +238,78 @@
     },
     "LimLower_3": {
       "expected": "आधार"
+    },
+    "Table_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_1": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_4": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_5": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_1": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_1a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_4": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_4a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_5": {
+      "expected": "२री पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_5a": {
+      "expected": "२री पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "२री पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "२री पंक्ति, २रा स्तंभ"
     }
   }
 }

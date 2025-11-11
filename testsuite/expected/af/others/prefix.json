@@ -238,6 +238,78 @@
     },
     "LimLower_3": {
       "expected": "Basis"
+    },
+    "Table_0": {
+      "expected": "1. Ry"
+    },
+    "Table_1": {
+      "expected": "1. Ry"
+    },
+    "Table_2": {
+      "expected": "1. Ry"
+    },
+    "Table_3": {
+      "expected": "2. Ry"
+    },
+    "Table_4": {
+      "expected": "1. Ry"
+    },
+    "Table_5": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_0": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_1": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_1a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_4a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_5": {
+      "expected": "2. Ry, 1. kolom"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Ry, 2. kolom"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Ry, 2. kolom"
     }
   }
 }

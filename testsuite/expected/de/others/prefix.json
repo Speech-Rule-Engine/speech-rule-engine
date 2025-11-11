@@ -238,6 +238,78 @@
     },
     "LimLower_3": {
       "expected": "Basis"
+    },
+    "Table_0": {
+      "expected": "1. Zeile"
+    },
+    "Table_1": {
+      "expected": "1. Zeile"
+    },
+    "Table_2": {
+      "expected": "1. Zeile"
+    },
+    "Table_3": {
+      "expected": "2. Zeile"
+    },
+    "Table_4": {
+      "expected": "1. Zeile"
+    },
+    "Table_5": {
+      "expected": "2. Zeile"
+    },
+    "Table_Cell_0": {
+      "expected": "1. Zeile"
+    },
+    "Table_Cell_1": {
+      "expected": "1. Zeile, 1. Spalte"
+    },
+    "Table_Cell_1a": {
+      "expected": "1. Zeile, 2. Spalte"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Zeile"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Zeile"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Zeile, 1. Spalte"
+    },
+    "Table_Cell_4a": {
+      "expected": "1. Zeile, 2. Spalte"
+    },
+    "Table_Cell_5": {
+      "expected": "2. Zeile, 1. Spalte"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Zeile, 2. Spalte"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1. Zeile"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Zeile, 1. Spalte"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Zeile, 2. Spalte"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Zeile"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Zeile"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Zeile, 1. Spalte"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Zeile, 2. Spalte"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Zeile, 1. Spalte"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Zeile, 2. Spalte"
     }
   }
 }

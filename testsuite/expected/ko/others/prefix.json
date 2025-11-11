@@ -237,6 +237,78 @@
     },
     "LimLower_3": {
       "expected": "밑"
+    },
+    "Table_0": {
+      "expected": "첫번째 행"
+    },
+    "Table_1": {
+      "expected": "첫번째 행"
+    },
+    "Table_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_3": {
+      "expected": "두번째 행"
+    },
+    "Table_4": {
+      "expected": "첫번째 행"
+    },
+    "Table_5": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_0": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_1": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_1a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_3": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_4": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_4a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_5": {
+      "expected": "두번째 행, 첫번째 열"
+    },
+    "Table_Cell_5a": {
+      "expected": "두번째 행, 두번째 열"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "두번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "두번째 행, 두번째 열"
     }
   }
 }

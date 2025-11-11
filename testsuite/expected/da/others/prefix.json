@@ -238,6 +238,78 @@
     },
     "LimLower_3": {
       "expected": "Grundtal"
+    },
+    "Table_0": {
+      "expected": "1. Række"
+    },
+    "Table_1": {
+      "expected": "1. Række"
+    },
+    "Table_2": {
+      "expected": "1. Række"
+    },
+    "Table_3": {
+      "expected": "2. Række"
+    },
+    "Table_4": {
+      "expected": "1. Række"
+    },
+    "Table_5": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_0": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_1": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_1a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_4a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_5": {
+      "expected": "2. Række, 1. Kolonne"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Række, 2. Kolonne"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Række, 2. Kolonne"
     }
   }
 }
