@@ -97,7 +97,7 @@ export async function runTests(
 async function add(expected: string, flag: TestFlag, dryrun: boolean) {
   const [result, tests] = await runTests(expected, flag);
   if (dryrun) {
-    console.log(JSON.stringify(result, null, 2));
+    console.info(JSON.stringify(result, null, 2));
     return;
   }
   addToFile(tests['jsonFile'], result);
@@ -195,7 +195,7 @@ export function removeFromFile(file: string, removal: JsonTests) {
 export async function removeMissing(expected: string, dryrun = false) {
   const [result, tests] = await runTests(expected, TestFlag.REMOVE);
   if (dryrun) {
-    console.log(JSON.stringify(result, null, 2));
+    console.info(JSON.stringify(result, null, 2));
     return;
   }
   removeFromFile(tests['jsonFile'], result);
@@ -215,7 +215,7 @@ export function showFailed(regexp = /./, dryrun = true) {
     .filter((x) => x.jsonFile.match(regexp))
     .reduce(
       (p, x) => p.then(() => {
-        console.log(x.jsonFile);
+        console.info(x.jsonFile);
         return addFailed(x.jsonFile, dryrun)
       }),
       Promise.resolve());
@@ -234,7 +234,7 @@ export function showMissing(regexp = /./, dryrun = true) {
     .filter(([x, y]) => y.length && x.jsonFile.match(regexp))
     .reduce(
       (p, [x]) => p.then(() => {
-        console.log(x.jsonFile);
+        console.info(x.jsonFile);
         return addMissing(x.jsonFile, dryrun)
       }),
       Promise.resolve());
