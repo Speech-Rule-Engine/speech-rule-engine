@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "विकल्प तादात"
+    },
+    "Binomials_1_extra": {
+      "expected": "चयन तादात"
+    },
     "Vectors_0": {
       "expected": "१ली पंक्ति"
     },

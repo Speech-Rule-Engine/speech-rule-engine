@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "Beskikbare Hoeveelheid"
+    },
+    "Binomials_1_extra": {
+      "expected": "Gekose Hoeveelheid"
+    },
     "Vectors_0": {
       "expected": "1. Ry"
     },

@@ -22,6 +22,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "조합 식"
+    },
+    "Binomials_1_extra": {
+      "expected": "분할 식"
+    },
     "Vectors_0": {
       "expected": "첫번째 행"
     },

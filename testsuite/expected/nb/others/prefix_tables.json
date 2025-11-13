@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "Utvalg"
+    },
+    "Binomials_1_extra": {
+      "expected": "Stikkprøvestørrelse"
+    },
     "Vectors_0": {
       "expected": "1. Rad"
     },

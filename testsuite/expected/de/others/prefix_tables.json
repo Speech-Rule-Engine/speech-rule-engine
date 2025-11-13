@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "Grundgesamtheit"
+    },
+    "Binomials_1_extra": {
+      "expected": "Stichprobengröße"
+    },
     "Vectors_0": {
       "expected": "1. Zeile"
     },

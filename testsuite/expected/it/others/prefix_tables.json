@@ -22,6 +22,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "quantità scelta"
+    },
+    "Binomials_1_extra": {
+      "expected": "quantità selezione"
+    },
     "Vectors_0": {
       "expected": "1a riga"
     },

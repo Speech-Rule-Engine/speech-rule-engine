@@ -22,6 +22,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "<mark name=\"2\"/> Choice Quantity <break time=\"200ms\"/>"
+    },
+    "Binomials_1_extra": {
+      "expected": "<mark name=\"3\"/> Selection Quantity <break time=\"200ms\"/>"
+    },
     "Vectors_0": {
       "expected": "<mark name=\"2\"/> 1st Row <break time=\"200ms\"/>"
     },

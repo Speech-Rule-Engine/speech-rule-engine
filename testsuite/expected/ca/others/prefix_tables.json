@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "quantitat d'elecció"
+    },
+    "Binomials_1_extra": {
+      "expected": "quantitat de selecció"
+    },
     "Vectors_0": {
       "expected": "1a fila"
     },
