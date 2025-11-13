@@ -41,7 +41,7 @@ const enum TestFlag {
 export async function runTests(
   expected: string,
   flag: TestFlag
-): Promise<[JsonTests, AbstractJsonTest]> {
+): Promise<[JsonTests, AbstractJsonTest, string[]]> {
   const saveOutput = ExampleFiles.noOutput;
   ExampleFiles.noOutput = true;
   const tests = factoryget(expected);
@@ -83,7 +83,7 @@ export async function runTests(
     await tests.tearDownTest();
   } catch (e) {}
   ExampleFiles.noOutput = saveOutput;
-  return [result, tests];
+  return [result, tests, Object.keys(base)];
 }
 
 /**
@@ -95,12 +95,12 @@ export async function runTests(
  * @param dryrun Print to console instead to file.
  */
 async function add(expected: string, flag: TestFlag, dryrun: boolean) {
-  const [result, tests] = await runTests(expected, flag);
+  const [result, tests, order] = await runTests(expected, flag);
   if (dryrun) {
     console.info(JSON.stringify(result, null, 2));
     return;
   }
-  addToFile(tests['jsonFile'], result);
+  addToFile(tests['jsonFile'], result, order);
 }
 
 /**
@@ -109,19 +109,23 @@ async function add(expected: string, flag: TestFlag, dryrun: boolean) {
  * @param {string} file The file name.
  * @param {JsonTests} expected The expected values.
  */
-export function addToFile(file: string, expected: JsonTests) {
+export function addToFile(file: string, expected: JsonTests, order?: string[]) {
+  order = order || Object.keys(expected);
   const filename = TestUtil.fileExists(file, TestPath.EXPECTED);
   const oldJson: JsonFile = TestUtil.loadJson(filename);
   const oldTests = oldJson.tests as JsonTests | 'ALL';
   if (oldTests === 'ALL') return;
-  for (const key of Object.keys(expected)) {
+  const result: JsonTests = {};
+  for (const key of order) {
     if (oldTests[key]) {
       if (TestUtil.isComment(key)) continue;
       Object.assign(oldTests[key], expected[key]);
     } else {
       oldTests[key] = expected[key];
     }
+    result[key] = oldTests[key];
   }
+  oldJson.tests = result;
   TestUtil.saveJson(filename, oldJson);
 }
 
