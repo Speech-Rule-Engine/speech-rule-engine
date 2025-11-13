@@ -20,6 +20,14 @@
       "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
       "id": 5
     },
+    "Binomials_0_extra": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 2
+    },
+    "Binomials_1_extra": {
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 3
+    },
     "Vectors_0": {
       "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
       "id": 2

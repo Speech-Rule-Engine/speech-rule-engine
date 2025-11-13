@@ -166,6 +166,12 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "2nd Row, 2nd Column"
+    },
+    "Binomials_0_extra": {
+      "expected": "Choice Quantity"
+    },
+    "Binomials_1_extra": {
+      "expected": "Selection Quantity"
     }
   }
 }
