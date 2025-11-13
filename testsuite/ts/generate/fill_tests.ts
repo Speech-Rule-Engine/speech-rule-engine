@@ -56,11 +56,9 @@ export async function runTests(
       ? tests.baseTests.tests
       : tests.jsonTests.tests
   ) as JsonTests;
-  for (const [key, test] of Object.entries(base)) {
-    if (flag === TestFlag.MISSING && !tests.warn.includes(key)) {
-      result[key] = (tests.jsonTests.tests as JsonTests)[key];
-      continue;
-    }
+  const keys = flag === TestFlag.MISSING ? tests.warn : Object.keys(base);
+  for (const key of keys) {
+    const test = base[key];
     if (
       key.match(/_comment/) ||
       !test.test ||
@@ -99,7 +97,7 @@ export async function runTests(
 async function add(expected: string, flag: TestFlag, dryrun: boolean) {
   const [result, tests] = await runTests(expected, flag);
   if (dryrun) {
-    console.info(JSON.stringify(result, null, 2));
+    console.log(JSON.stringify(result, null, 2));
     return;
   }
   addToFile(tests['jsonFile'], result);
@@ -116,17 +114,14 @@ export function addToFile(file: string, expected: JsonTests) {
   const oldJson: JsonFile = TestUtil.loadJson(filename);
   const oldTests = oldJson.tests as JsonTests | 'ALL';
   if (oldTests === 'ALL') return;
-  const results: JsonTests = {};
   for (const key of Object.keys(expected)) {
     if (oldTests[key]) {
       if (TestUtil.isComment(key)) continue;
       Object.assign(oldTests[key], expected[key]);
-      results[key] = oldTests[key];
     } else {
-      results[key] = expected[key];
+      oldTests[key] = expected[key];
     }
   }
-  oldJson.tests = results;
   TestUtil.saveJson(filename, oldJson);
 }
 
@@ -200,7 +195,7 @@ export function removeFromFile(file: string, removal: JsonTests) {
 export async function removeMissing(expected: string, dryrun = false) {
   const [result, tests] = await runTests(expected, TestFlag.REMOVE);
   if (dryrun) {
-    console.info(JSON.stringify(result, null, 2));
+    console.log(JSON.stringify(result, null, 2));
     return;
   }
   removeFromFile(tests['jsonFile'], result);
@@ -220,7 +215,7 @@ export function showFailed(regexp = /./, dryrun = true) {
     .filter((x) => x.jsonFile.match(regexp))
     .reduce(
       (p, x) => p.then(() => {
-        console.info(x.jsonFile);
+        console.log(x.jsonFile);
         return addFailed(x.jsonFile, dryrun)
       }),
       Promise.resolve());
@@ -239,7 +234,7 @@ export function showMissing(regexp = /./, dryrun = true) {
     .filter(([x, y]) => y.length && x.jsonFile.match(regexp))
     .reduce(
       (p, [x]) => p.then(() => {
-        console.info(x.jsonFile);
+        console.log(x.jsonFile);
         return addMissing(x.jsonFile, dryrun)
       }),
       Promise.resolve());
