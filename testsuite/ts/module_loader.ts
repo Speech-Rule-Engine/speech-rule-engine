@@ -12,6 +12,7 @@ let fileMap = new Map([
   ['ct', 'generate/copy_tests.js'],
   ['ft', 'generate/fill_tests.js'],
   ['gt', 'generate/generate_tests.js'],
+  ['rt', 'generate/rewrite_tests.js'],
   ['ttrans', 'generate/tex_transformer.js'],
   ['trans', 'generate/transformers.js'],
   ['tu', 'base/test_util.js'],
