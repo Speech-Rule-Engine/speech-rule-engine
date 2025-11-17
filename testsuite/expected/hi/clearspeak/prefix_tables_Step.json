@@ -10,10 +10,10 @@
   "exclude": [],
   "tests": {
     "Binomials_0": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Binomials_1": {
-      "expected": "Step 2"
+      "expected": "चरण 2"
     },
     "Binomials_2": {
       "expected": ""
@@ -26,20 +26,20 @@
     },
     "Binomials_0_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "Choice Quantity"
+      "expected": "वकलप तदत"
     },
     "Binomials_1_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "Selection Quantity"
+      "expected": "चयन तदत"
     },
     "Vectors_0": {
-      "expected": "Row 1"
+      "expected": "पंक्ति 1"
     },
     "Vectors_1": {
-      "expected": "Row 2"
+      "expected": "पंक्ति 2"
     },
     "Vectors_2": {
-      "expected": "Row 3"
+      "expected": "पंक्ति 3"
     },
     "Vectors_3": {
       "expected": ""
@@ -51,22 +51,22 @@
       "expected": ""
     },
     "Matrices_depth_0": {
-      "expected": "Row 1"
+      "expected": "पंक्ति 1"
     },
     "Matrices_depth_1": {
-      "expected": "Row 1, Column 1"
+      "expected": "पंक्ति 1, स्तंभ 1"
     },
     "Matrices_depth_2": {
-      "expected": "Row 1, Column 2"
+      "expected": "पंक्ति 1, स्तंभ 2"
     },
     "Matrices_depth_3": {
-      "expected": "Row 2"
+      "expected": "पंक्ति 2"
     },
     "Matrices_depth_4": {
-      "expected": "Row 2, Column 1"
+      "expected": "पंक्ति 2, स्तंभ 1"
     },
     "Matrices_depth_5": {
-      "expected": "Row 2, Column 2"
+      "expected": "पंक्ति 2, स्तंभ 2"
     },
     "Matrices_depth_6": {
       "expected": ""
@@ -78,22 +78,22 @@
       "expected": ""
     },
     "Matrices_0": {
-      "expected": "Row 1"
+      "expected": "पंक्ति 1"
     },
     "Matrices_1": {
-      "expected": "Column 1"
+      "expected": "स्तंभ 1"
     },
     "Matrices_2": {
-      "expected": "Column 2"
+      "expected": "स्तंभ 2"
     },
     "Matrices_3": {
-      "expected": "Row 2"
+      "expected": "पंक्ति 2"
     },
     "Matrices_4": {
-      "expected": "Column 1"
+      "expected": "स्तंभ 1"
     },
     "Matrices_5": {
-      "expected": "Column 2"
+      "expected": "स्तंभ 2"
     },
     "Matrices_6": {
       "expected": ""
@@ -105,76 +105,76 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_1": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_2": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_3": {
-      "expected": "Step 2"
+      "expected": "चरण 2"
     },
     "Table_4": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_5": {
-      "expected": "Step 2"
+      "expected": "चरण 2"
     },
     "Table_Cell_0": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_Cell_1": {
-      "expected": "Column 1"
+      "expected": "स्तंभ 1"
     },
     "Table_Cell_1a": {
-      "expected": "Column 2"
+      "expected": "स्तंभ 2"
     },
     "Table_Cell_2": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_Cell_3": {
-      "expected": "Step 2"
+      "expected": "चरण 2"
     },
     "Table_Cell_4": {
-      "expected": "Column 1"
+      "expected": "स्तंभ 1"
     },
     "Table_Cell_4a": {
-      "expected": "Column 2"
+      "expected": "स्तंभ 2"
     },
     "Table_Cell_5": {
-      "expected": "Column 1"
+      "expected": "स्तंभ 1"
     },
     "Table_Cell_5a": {
-      "expected": "Column 2"
+      "expected": "स्तंभ 2"
     },
     "Table_Cell_Depth_0": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_Cell_Depth_1": {
-      "expected": "Step 1, Column 1"
+      "expected": "चरण 1, स्तंभ 1"
     },
     "Table_Cell_Depth_1a": {
-      "expected": "Step 1, Column 2"
+      "expected": "चरण 1, स्तंभ 2"
     },
     "Table_Cell_Depth_2": {
-      "expected": "Step 1"
+      "expected": "चरण 1"
     },
     "Table_Cell_Depth_3": {
-      "expected": "Step 2"
+      "expected": "चरण 2"
     },
     "Table_Cell_Depth_4": {
-      "expected": "Step 1, Column 1"
+      "expected": "चरण 1, स्तंभ 1"
     },
     "Table_Cell_Depth_4a": {
-      "expected": "Step 1, Column 2"
+      "expected": "चरण 1, स्तंभ 2"
     },
     "Table_Cell_Depth_5": {
-      "expected": "Step 2, Column 1"
+      "expected": "चरण 2, स्तंभ 1"
     },
     "Table_Cell_Depth_5a": {
-      "expected": "Step 2, Column 2"
+      "expected": "चरण 2, स्तंभ 2"
     }
   },
   "compare": true
