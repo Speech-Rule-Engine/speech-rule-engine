@@ -1,5 +1,5 @@
 //
-// Copyright 2024 Volker Sorge
+// Copyright 2024-2025 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,13 +42,19 @@ import { Markup } from '../common/engine_const.js';
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
 export class SpeechStructure {
+
+  /**
+   * 
+   * @type {Map<string, SpeechMap>}
+   */
   public speechMaps: Map<string, SpeechMap> = new Map();
 
   /**
+   * Retrieve a speech map for a particular node id. If no map exists, an empy
+   * one is created.
    *
-   *
-   * @param id
-   * @returns
+   * @param id The node id.
+   * @returns The speech map for that id.
    */
   private getSpeechMap(id: string): SpeechMap {
     let map = this.speechMaps.get(id);
@@ -67,7 +73,10 @@ export class SpeechStructure {
    */
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
     const map = this.getSpeechMap(id);
-    map.set(modality, descr.map(x => x.clone()));
+    map.set(
+      modality,
+      descr.map((x) => x.clone())
+    );
   }
 
   private nodeMap: Map<string, Element> = null;
@@ -107,7 +116,7 @@ export class SpeechStructure {
   }
 
   /**
-   * @returns
+   * @returns The node map.
    */
   private getNodeMap() {
     if (this.nodeMap) {
@@ -153,7 +162,7 @@ export class SpeechStructure {
    * Computes json speech structure for a list of given markups.
    *
    * @param mls Optional markup strings. Defaults to none.
-   * @returns
+   * @returns The JSON structure of speech maps for the given markups.
    */
   public json(mls: string[] = ['none']) {
     const result: {

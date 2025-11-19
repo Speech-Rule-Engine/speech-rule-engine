@@ -411,7 +411,7 @@ set(
       try {
         const rebuilt = new RebuildStree(mml);
         sxml = rebuilt.stree.xml();
-      } catch(_e) {
+      } catch (_e) {
         sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
       }
       SpeechGeneratorUtil.connectMactionSelections(mml, sxml);

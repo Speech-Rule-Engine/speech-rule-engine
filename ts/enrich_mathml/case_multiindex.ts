@@ -49,8 +49,8 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
   public static multiscriptIndex(index: SemanticNode): Sexp {
     if (
       index.type === SemanticType.PUNCTUATED &&
-        index.contentNodes[0].role === SemanticRole.DUMMY &&
-        index.hasAnnotation('general', 'script')
+      index.contentNodes[0].role === SemanticRole.DUMMY &&
+      index.hasAnnotation('general', 'script')
     ) {
       return EnrichMathml.collapsePunctuated(index);
     }
