@@ -242,7 +242,7 @@
     [
       "Action",
       "matrix",
-      "[t] \"début matrice\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1]); [t] \"fin matrice\" (span:content/*[2])"
+      "[t] \"début matrice\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*) (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin matrice\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -292,7 +292,7 @@
     [
       "Action",
       "determinant-simple",
-      "[t] \"début déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (span:content/*[1], grammar:simpleDet); [t] \"fin déterminant\" (span:content/*[2])"
+      "[t] \"début déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*) (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée\", grammar:simpleDet); [t] \"fin déterminant\" (span:content/*[2])"
     ],
     [
       "Action",

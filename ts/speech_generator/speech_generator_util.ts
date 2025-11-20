@@ -458,6 +458,7 @@ export function computeSpeechStructure(sxml: Element) {
 export function computeBrailleStructure(sxml: Element) {
   computeSpeech(sxml, true);
   const structure = SpeechRuleEngine.getInstance().speechStructure;
+  structure.completeModality('braille', computeSpeech);
   return structure.json(['none']);
 }
 

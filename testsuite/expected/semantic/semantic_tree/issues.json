@@ -211,6 +211,12 @@
     },
     "issue_toogle_2appl_3": {
       "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" latex=\"\\toggle{M}{F}\\endtoggle\">M</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" latex=\"\\toggle{a}{m}\\endtoggle\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" latex=\"x\">x</identifier></children></infixop></stree>"
+    },
+    "MJ_Issue_3453_0": {
+      "expected": "<stree><table role=\"unknown\" id=\"4\"><children><row role=\"table\" id=\"0\"/><row role=\"table\" id=\"3\"><children><cell role=\"table\" id=\"1\"/><cell role=\"table\" id=\"2\"/></children></row></children></table></stree>"
+    },
+    "MJ_Issue_3453_1": {
+      "expected": "<stree><punctuated role=\"text\" id=\"15\"><content><punctuation role=\"dummy\" id=\"14\">⁣</punctuation></content><children><text role=\"space\" annotation=\"clearspeak:unit\" id=\"0\"/><table role=\"unknown\" id=\"13\"><children><row role=\"table\" id=\"1\"/><row role=\"table\" id=\"12\"><children><cell role=\"table\" id=\"7\"><children><superscript role=\"unknown\" id=\"4\"><children><empty role=\"unknown\" id=\"2\"/><empty role=\"integer\" id=\"3\"/></children></superscript></children></cell><cell role=\"table\" id=\"9\"><children><empty role=\"unknown\" id=\"8\"/></children></cell><cell role=\"table\" id=\"11\"><children><empty role=\"integer\" id=\"10\"/></children></cell></children></row></children></table></children></punctuated></stree>"
     }
   }
 }

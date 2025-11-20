@@ -26,6 +26,7 @@ import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
 import * as FileUtil from './file_util.js';
 import * as ProcessorFactory from './processor_factory.js';
+import { OptionsList, WorkerStructure } from './processor_factory.js';
 import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
@@ -412,21 +413,6 @@ export function toSpeechStructure(expr: string): string {
 /**
  *  Web worker related API methods.
  */
-import { LOCALE } from '../l10n/locale.js';
-
-type OptionsList = { [key: string]: string };
-type SpeechList = { [id: string]: { [mod: string]: string } };
-
-type WorkerStructure = {
-  speech?: SpeechList;
-  braille?: SpeechList;
-  mactions?: SpeechList;
-  options?: OptionsList;
-  translations?: OptionsList;
-  label?: string;
-  braillelabel?: string;
-  ssml?: string;
-};
 
 /**
  * Compute speech structure for the expression.
@@ -537,13 +523,7 @@ async function assembleWorkerStructure(
   await setupEngine(options);
   Engine.getInstance().options.automark = true;
   const json: WorkerStructure = {};
-  json.options = options;
-  json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
-  json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
-  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
-  json.label = json.speech[root]['speech-none'];
-  json.ssml = json.speech[root]['speech-ssml'];
-  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+  ProcessorFactory.assembleSpeechStructure(json, mml, sxml, options);
   if (options.braille === 'none') {
     return json;
   }
@@ -553,6 +533,7 @@ async function assembleWorkerStructure(
     domain: 'default',
     style: 'default'
   });
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
   json.braille = SpeechGeneratorUtil.computeBrailleStructure(sxml);
   json.braillelabel = json.braille[root]['braille-none'];
   return json;
