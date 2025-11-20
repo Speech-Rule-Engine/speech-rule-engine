@@ -45,28 +45,28 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> Base bold 2 </prosody></speak>"
     },
     "OverbarGreek_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"2\" kind=\"LAST\"/> overbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> overbar1 </prosody></speak>"
     },
     "OverbarOther_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"2\" kind=\"LAST\"/> overbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> overbar1 </prosody></speak>"
     },
     "UnderbarGreek_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"2\" kind=\"LAST\"/> underbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> underbar </prosody></speak>"
     },
     "UnderbarOther_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"2\" kind=\"LAST\"/> underbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> underbar </prosody></speak>"
     },
     "OvertildeGreek_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"2\" kind=\"LAST\"/> overtilde </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> overtilde </prosody></speak>"
     },
     "OvertildeOther_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"2\" kind=\"LAST\"/> overtilde </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> overtilde </prosody></speak>"
     },
     "UndertildeGreek_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"2\" kind=\"LAST\"/> undertilde </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> undertilde </prosody></speak>"
     },
     "UndertildeOther_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"2\" kind=\"LAST\"/> undertilde </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> undertilde </prosody></speak>"
     },
     "SetEmpty_default": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> empty set </prosody></speak>"
@@ -78,31 +78,31 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> empty set </prosody></speak>"
     },
     "SetSingleton_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> EndSet </prosody></speak>"
     },
     "SetSingleton_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> EndSet </prosody></speak>"
     },
     "SetSingleton_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"3\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> EndSet </prosody></speak>"
     },
     "SetCollection_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "SetCollection_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "SetCollection_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "SetExtended_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "SetExtended_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> StartSet <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "SetExtended_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\" kind=\"LAST\"/> EndSet </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> Set <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> comma <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> EndSet </prosody></speak>"
     },
     "NumberSet": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> double struck upper C </prosody></speak>"
