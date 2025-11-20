@@ -225,13 +225,13 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> Layout <mark name=\"6\"/> 1st Row  Label 1 <mark name=\"2\"/> 1st Column a <break time=\"300ms\"/> <mark name=\"4\"/> 2nd Column b <break time=\"300ms\"/> <mark name=\"7\" kind=\"LAST\"/> EndLayout </prosody></speak>"
     },
     "EncloseOverbar_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar </prosody></speak>"
     },
     "EncloseOverbar_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar </prosody></speak>"
     },
     "EncloseOverbar_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> overbar </prosody></speak>"
     },
     "EncloseUnderbar_default": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"children/*[2]\"/> underbar </prosody></speak>"

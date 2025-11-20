@@ -45,10 +45,10 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> Base bold 2 </prosody></speak>"
     },
     "OverbarGreek_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> overbar </prosody></speak>"
     },
     "OverbarOther_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> normal first transfinite cardinal <mark name=\"1\"/> overbar </prosody></speak>"
     },
     "UnderbarGreek_default": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> alpha <mark name=\"1\"/> underbar </prosody></speak>"

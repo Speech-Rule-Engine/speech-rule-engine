@@ -896,13 +896,13 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overtilde </prosody></speak>"
     },
     "Sample_11_3_2_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar </prosody></speak>"
     },
     "Sample_11_3_2_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar </prosody></speak>"
     },
     "Sample_11_3_2_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar </prosody></speak>"
     },
     "Sample_11_3_3_default": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> undertilde </prosody></speak>"
@@ -914,22 +914,22 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> undertilde </prosody></speak>"
     },
     "Sample_11_4_1_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar </prosody></speak>"
     },
     "Sample_11_4_1_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar </prosody></speak>"
     },
     "Sample_11_4_1_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar </prosody></speak>"
     },
     "Sample_11_4_2_default": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
     },
     "Sample_11_4_2_brief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
     },
     "Sample_11_4_2_sbrief": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar1 <mark name=\"3\"/> overbar1 <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"1\"/> overbar <mark name=\"3\"/> overbar <mark name=\"5\"/> underbar <mark name=\"7\"/> underbar </prosody></speak>"
     },
     "Sample_11_6_1_default": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> ModifyingBelow Below <mark name=\"5\"/> ModifyingBelow <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"4\"/> With bar <mark name=\"6\"/> With asterisk </prosody></speak>"
