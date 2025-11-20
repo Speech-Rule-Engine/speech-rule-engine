@@ -42,9 +42,8 @@ import { Markup } from '../common/engine_const.js';
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
 export class SpeechStructure {
-
   /**
-   * 
+   *
    * @type {Map<string, SpeechMap>}
    */
   public speechMaps: Map<string, SpeechMap> = new Map();
