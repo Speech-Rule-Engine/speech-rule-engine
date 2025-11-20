@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "prepare": "ts-patch install -s"
+  },
+  "dependencies": {
+    "@types/json-diff": "^1.0.3",
+    "json-diff": "^1.0.6",
+    "ts-patch": "^3.3.0",
+    "typescript-transform-paths": "^3.5.5"
+  }
+}

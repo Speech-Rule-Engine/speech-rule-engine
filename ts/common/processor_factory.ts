@@ -109,7 +109,6 @@ export function output(name: string, expr: string): string {
       ? processor.pprint(data)
       : processor.print(data);
   } catch (_e) {
-    console.log(_e);
     throw new SREError('Processing error for expression ' + expr);
   }
 }

@@ -77,7 +77,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"divideret med\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"divideret med\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,22 +87,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"StartNumeriskVærdi\"; [n] children/*[1]; [t] \"SlutNumeriskVærdi\""
+      "[t] \"StartNumeriskVærdi\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutNumeriskVærdi\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"NumeriskVærdi\"; [n] children/*[1]; [t] \"SlutNumeriskVærdi\""
+      "[t] \"NumeriskVærdi\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutNumeriskVærdi\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"StartDobbeltLodretStreg\"; [n] children/*[1]; [t] \"SlutDobbeltLodretStreg\""
+      "[t] \"StartDobbeltLodretStreg\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutDobbeltLodretStreg\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"DobbeltLodretStreg\"; [n] children/*[1]; [t] \"SlutDobbeltLodretStreg\""
+      "[t] \"DobbeltLodretStreg\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutDobbeltLodretStreg\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -112,12 +112,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"StartMængde\"; [n] children/*[1]; [t] \"SlutMængde\""
+      "[t] \"StartMængde\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutMængde\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"Mængde\"; [n] children/*[1]; [t] \"SlutMængde\""
+      "[t] \"Mængde\" (span:content/*[1]); [n] children/*[1]; [t] \"SlutMængde\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -167,12 +167,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"kvadreret\""
+      "[n] children/*[1]; [t] \"kvadreret\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"i tredje\""
+      "[n] children/*[1]; [t] \"i tredje\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -232,32 +232,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"overstreg\""
+      "[n] children/*[1]; [t] \"overstreg\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"understreg\""
+      "[n] children/*[1]; [t] \"understreg\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"overtilde\""
+      "[n] children/*[1]; [t] \"overtilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"undertilde\""
+      "[n] children/*[1]; [t] \"undertilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutMatrix\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Matrix\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutMatrix\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"EndMatrix\""
+      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Matrix\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"EndMatrix\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -292,22 +292,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutDeterminant\""
+      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række \"); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række\", grammar:simpleDet); [t] \"SlutDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række\", grammar:simpleDet); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række\", grammar:simpleDet); [t] \"SlutDeterminant\""
+      "[t] count(children/*); [t] \"Gange\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Række\", grammar:simpleDet); [t] \"SlutDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -322,12 +322,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"StartBinomialEllerMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Vælg\"; [n] children/*[2]/children/*[1]; [t] \"SlutBinomialEllerMatrix\""
+      "[t] \"StartBinomialEllerMatrix\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Vælg\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"SlutBinomialEllerMatrix\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"BinomialEllerMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Vælg\"; [n] children/*[2]/children/*[1]; [t] \"SlutBinomialEllerMatrix\""
+      "[t] \"BinomialEllerMatrix\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Vælg\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"SlutBinomialEllerMatrix\" (span:content/*[2])"
     ],
     [
       "Action",
