@@ -554,8 +554,6 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
  * @returns Options list mapping domains to styles.
  */
 export function toStyles(options: OptionsList): OptionsList {
-  console.log(0);
-  console.log(options);
   const { domain, style, domain2style } = options;
   const styles: OptionsList = {};
   if (!domain2style) {
@@ -570,7 +568,6 @@ export function toStyles(options: OptionsList): OptionsList {
       ? second
       : (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
   }
-  console.log(styles);
   return styles;
 }
 
@@ -583,12 +580,9 @@ export function toStyles(options: OptionsList): OptionsList {
  * @returns The corresponding structured string.
  */
 export function fromStyles(styles: OptionsList): string {
-  console.log(1);
-  console.log(styles);
   const strs = [];
   for (const [domain, style] of Object.entries(styles)) {
     strs.push(`${domain}:${style}`);
   }
-  console.log(strs);
   return strs.join(',');
 }
