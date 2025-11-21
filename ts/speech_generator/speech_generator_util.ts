@@ -431,8 +431,6 @@ export function computePostfix(node: Element): AuditoryDescription[] {
 
 // Changes for the webworker
 
-import { Debugger } from '../common/debugger.js';
-
 /**
  * Completes the JSON speech structure for speech related modalities.
  *
@@ -440,13 +438,9 @@ import { Debugger } from '../common/debugger.js';
  */
 export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('speech', computeSpeech);
-  Debugger.getInstance()['isActive_'] = true;
   structure.completeModality('prefix', computePrefix);
-  Debugger.getInstance()['isActive_'] = false;
   structure.completeModality('postfix', computePostfix);
-  Debugger.getInstance()['isActive_'] = false;
   structure.completeModality('summary', computeSummary);
-  Debugger.getInstance()['isActive_'] = false;
 }
 
 /**
@@ -456,9 +450,7 @@ export function completeModalities(structure: SpeechStructure) {
  * @returns The computes structure as JSON.
  */
 export function computeSpeechStructure(sxml: Element) {
-  // Debugger.getInstance()['isActive_'] = true;
   computeSpeech(sxml, true);
-  Debugger.getInstance()['isActive_'] = false;
   const structure = SpeechRuleEngine.getInstance().speechStructure;
   completeModalities(structure);
   return structure.json(['none', 'ssml']);

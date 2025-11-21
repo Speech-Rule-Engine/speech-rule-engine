@@ -204,7 +204,6 @@ export class Engine {
     this.comparator = comparator
       ? comparator()
       : new Dcstr.DefaultComparator(this.dynamicCstr);
-    Debugger.getInstance().output(this.comparator);
   }
 
   /**

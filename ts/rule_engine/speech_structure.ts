@@ -184,7 +184,6 @@ export class SpeechStructure {
       }
     }
     Engine.getInstance().options.markup = oldMarkup;
-    console.log(this.speechMaps);
     return result;
   }
 }
