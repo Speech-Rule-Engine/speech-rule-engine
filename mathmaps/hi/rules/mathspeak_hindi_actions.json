@@ -77,7 +77,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"divided by\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,22 +87,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"निरपेक्ष मान आरंभ\"; [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\""
+      "[t] \"निरपेक्ष मान आरंभ\" (span:content/*[1]); [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"निरपेक्ष मान\"; [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\""
+      "[t] \"निरपेक्ष मान\" (span:content/*[1]); [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"दूरी फलन आरंभ\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+      "[t] \"दूरी फलन आरंभ\" (span:content/*[1]); [n] children/*[1]; [t] \"दूरी फलन समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"दूरी फलन\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+      "[t] \"दूरी फलन\" (span:content/*[1]); [n] children/*[1]; [t] \"दूरी फलन समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -112,12 +112,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"समुच्चय आरंभ\"; [n] children/*[1]; [t] \"समुच्चय समाप्त\""
+      "[t] \"समुच्चय आरंभ\" (span:content/*[1]); [n] children/*[1]; [t] \"समुच्चय समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"समुच्चय\"; [n] children/*[1]; [t] \"समुच्चय समाप्त\""
+      "[t] \"समुच्चय\" (span:content/*[1]); [n] children/*[1]; [t] \"समुच्चय समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -167,12 +167,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"वर्ग\""
+      "[n] children/*[1]; [t] \"वर्ग\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"घन\""
+      "[n] children/*[1]; [t] \"घन\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -232,32 +232,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"उर्ध्व दंड\""
+      "[n] children/*[1]; [t] \"उर्ध्व दंड\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"अधो दंड\""
+      "[n] children/*[1]; [t] \"अधो दंड\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"उर्ध्व अंतर-चिह्न\""
+      "[n] children/*[1]; [t] \"उर्ध्व अंतर-चिह्न\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"अधो अंतर-चिह्न\""
+      "[n] children/*[1]; [t] \"अधो अंतर-चिह्न\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -292,22 +292,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -322,12 +322,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"द्विपद अथवा आव्यूह आरंभ\"; [n] children/*[1]/children/*[1]; [t] \"चयन करें\"; [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\""
+      "[t] \"द्विपद अथवा आव्यूह आरंभ\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"चयन करें\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"द्विपद अथवा आव्यूह\"; [n] children/*[1]/children/*[1]; [t] \"चयन करें\"; [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\""
+      "[t] \"द्विपद अथवा आव्यूह\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"चयन करें\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\" (span:content/*[2])"
     ],
     [
       "Action",

@@ -528,8 +528,8 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
  * node is an maction element this level is skipped.
  *
  * @param node The parent node.
- * @param oldChild The reference before which newChild is inserted.
  * @param newChild The new child to be inserted.
+ * @param oldChild The reference before which newChild is inserted.
  */
 function insertBefore(node: Element, newChild: Element, oldChild: Element) {
   if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
@@ -550,7 +550,7 @@ function insertBefore(node: Element, newChild: Element, oldChild: Element) {
  */
 function isFirstChild(node: Element, child: Element) {
   if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
-    return node.firstChild === child
+    return node.firstChild === child;
   }
   const selection = parseInt(node.getAttribute('selection')) || 1;
   return node.childNodes[selection - 1] === child;

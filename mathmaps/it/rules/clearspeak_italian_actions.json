@@ -397,7 +397,7 @@
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"cubo\""
+      "[n] children/*[1]; [t] \"cubo\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -682,7 +682,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"diviso per\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"diviso per\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -747,7 +747,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1] (pause:short); [t] \"fine valore assoluto\" (pause:short)"
+      "[p] (pause:short); [t] \"valore assoluto di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine valore assoluto\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -762,12 +762,12 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"metrica di\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"metrica di\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -1144,7 +1144,7 @@
       "unit-divide",
       "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
     ],
-        [
+    [
       "Action",
       "multi-inference",
       "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\""

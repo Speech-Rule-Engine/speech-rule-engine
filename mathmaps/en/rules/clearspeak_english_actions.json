@@ -577,7 +577,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"the square root of\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the square root of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -587,7 +587,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -597,7 +597,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the positive square root of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -607,7 +607,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"the positive square root of\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -747,7 +747,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"the absolute value of\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end absolute value\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"the absolute value of\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end absolute value\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -767,7 +767,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"the metric of\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"the metric of\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",

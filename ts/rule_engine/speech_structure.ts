@@ -1,5 +1,5 @@
 //
-// Copyright 2024 Volker Sorge
+// Copyright 2024-2025 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,13 +42,18 @@ import { Markup } from '../common/engine_const.js';
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
 export class SpeechStructure {
+  /**
+   *
+   * @type {Map<string, SpeechMap>}
+   */
   public speechMaps: Map<string, SpeechMap> = new Map();
 
   /**
+   * Retrieve a speech map for a particular node id. If no map exists, an empy
+   * one is created.
    *
-   *
-   * @param id
-   * @returns
+   * @param id The node id.
+   * @returns The speech map for that id.
    */
   private getSpeechMap(id: string): SpeechMap {
     let map = this.speechMaps.get(id);
@@ -60,29 +65,38 @@ export class SpeechStructure {
   }
 
   /**
+   * Inserts speech description for a semantic node into the speech map
+   * corresponding to the current modality. Note, that the list of auditory
+   * descriptions is cloned.
    *
-   * @param modality
-   * @param id
-   * @param descr
+   * @param modality The modality.
+   * @param id The id of the node.
+   * @param descr The list of auditory descriptions.
    */
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
     const map = this.getSpeechMap(id);
-    map.set(modality, descr.map(x => x.clone()));
+    map.set(
+      modality,
+      descr.map((x) => x.clone())
+    );
   }
 
   private nodeMap: Map<string, Element> = null;
 
   /**
+   * A JSON speech structure for semantic nodes.
    *
-   * @param node
+   * @param node The semantic element for which the speech structure created.
    */
   constructor(public node: Element) {}
 
   /**
+   * Adds a semantic node and its computes speech to the speech map. Text nodes
+   * are ignored.
    *
-   * @param node
-   * @param descr
-   * @param modality
+   * @param node The semantic element.
+   * @param descr The list of auditory descriptions.
+   * @param modality The current modality for the auditory descriptions.
    */
   public addNode(
     node: Element,
@@ -98,16 +112,17 @@ export class SpeechStructure {
   }
 
   /**
+   * Returns a speech map for semantic node id.
    *
-   * @param id
-   * @returns
+   * @param id The id of the semantic node.
+   * @returns The corresponding speech map.
    */
   public get(id: string) {
     return this.speechMaps.get(id);
   }
 
   /**
-   * @returns
+   * @returns The node map.
    */
   private getNodeMap() {
     if (this.nodeMap) {
@@ -153,7 +168,7 @@ export class SpeechStructure {
    * Computes json speech structure for a list of given markups.
    *
    * @param mls Optional markup strings. Defaults to none.
-   * @returns
+   * @returns The JSON structure of speech maps for the given markups.
    */
   public json(mls: string[] = ['none']) {
     const result: {

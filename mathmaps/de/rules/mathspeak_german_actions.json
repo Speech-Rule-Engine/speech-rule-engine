@@ -87,7 +87,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"geteilt durch\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"geteilt durch\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -97,22 +97,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"Anfang Betrag\"; [n] children/*[1]; [t] \"Ende Betrag\""
+      "[t] \"Anfang Betrag\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Betrag\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"Betrag\"; [n] children/*[1]; [t] \"Ende Betrag\""
+      "[t] \"Betrag\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Betrag\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"Anfang Metrik\"; [n] children/*[1]; [t] \"Ende Metrik\""
+      "[t] \"Anfang Metrik\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Metrik\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"Metrik\"; [n] children/*[1]; [t] \"Ende Metrik\""
+      "[t] \"Metrik\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Metrik\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -122,12 +122,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"Anfang Menge\"; [n] children/*[1]; [t] \"Ende Menge\""
+      "[t] \"Anfang Menge\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Menge\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"Menge\"; [n] children/*[1]; [t] \"Ende Menge\""
+      "[t] \"Menge\" (span:content/*[1]); [n] children/*[1]; [t] \"Ende Menge\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -187,12 +187,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"Quadrat\""
+      "[n] children/*[1]; [t] \"Quadrat\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"Kubik\""
+      "[n] children/*[1]; [t] \"Kubik\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -252,32 +252,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"Überstrich\""
+      "[n] children/*[1]; [t] \"Überstrich\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"Unterstrich\""
+      "[n] children/*[1]; [t] \"Unterstrich\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"Tilde oben\""
+      "[n] children/*[1]; [t] \"Tilde oben\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"Tilde unten\""
+      "[n] children/*[1]; [t] \"Tilde unten\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -312,22 +312,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -342,7 +342,7 @@
     [
       "Action",
       "binomial",
-      "[t] \"Anfang Binomialkoeffizient\"; [n] children/*[2]/children/*[1]; [t] \"aus\"; [n] children/*[1]/children/*[1]; [t] \"Ende Binomialkoeffizient\""
+      "[t] \"Anfang Binomialkoeffizient\" (span:content/*[1]); [n] children/*[2]/children/*[1]; [t] \"aus\" (span:children/*[2]/children/*[1]); [n] children/*[1]/children/*[1]; [t] \"Ende Binomialkoeffizient\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -352,7 +352,7 @@
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\"; [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\""
+      "[t] \"Binomial\" (span:content/*[1]); [n] children/*[2]/children/*[1]; [t] \"aus\" (span:children/*[2]/children/*[1]); [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\" (span:content/*[2])"
     ],
     [
       "Action",

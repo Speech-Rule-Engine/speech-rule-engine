@@ -25,7 +25,10 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { register, activate } from '../semantic_tree/semantic_annotations.js';
-import { SemanticAnnotator, SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
+import {
+  SemanticAnnotator,
+  SemanticVisitor
+} from '../semantic_tree/semantic_annotator.js';
 
 // Clearspeak annotators, currently always active.
 /**

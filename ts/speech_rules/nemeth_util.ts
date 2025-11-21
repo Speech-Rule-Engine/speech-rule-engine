@@ -24,9 +24,7 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Grammar, correctFont } from '../rule_engine/grammar.js';
 import { Engine } from '../common/engine.js';
-import {
-  SemanticRole,
-} from '../semantic_tree/semantic_meaning.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 
 import { LOCALE } from '../l10n/locale.js';
 import * as MathspeakUtil from './mathspeak_util.js';

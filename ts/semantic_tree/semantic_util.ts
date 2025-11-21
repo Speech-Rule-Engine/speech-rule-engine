@@ -273,6 +273,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
       }
+      if (key === 'color' || key === 'mathcolor') {
+        to.attributes['color'] = attrs[i].value;
+      }
     }
   }
 }
