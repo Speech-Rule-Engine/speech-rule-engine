@@ -26,11 +26,11 @@
     },
     "Binomials_0_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "nombre déléments disponibles"
+      "expected": "nombre d'éléments disponibles"
     },
     "Binomials_1_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "nombre déléments choisis"
+      "expected": "nombre d'éléments choisis"
     },
     "Vectors_0": {
       "expected": "Rangée 1"
