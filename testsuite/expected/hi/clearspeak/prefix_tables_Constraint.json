@@ -26,11 +26,11 @@
     },
     "Binomials_0_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "वकलप तदत"
+      "expected": "विकल्प तादात"
     },
     "Binomials_1_extra": {
       "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
-      "expected": "चयन तदत"
+      "expected": "चयन तादात"
     },
     "Vectors_0": {
       "expected": "पंक्ति 1"
