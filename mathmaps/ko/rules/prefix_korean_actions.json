@@ -127,7 +127,7 @@
     [
       "Action",
       "row-line",
-      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"행\" (pause:200)"
     ],
     [
       "Action",
@@ -142,12 +142,12 @@
     [
       "Action",
       "row-step",
-      "[t] \"단계\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"단계\" (pause:200)"
     ],
     [
       "Action",
       "row-row",
-      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"행\" (pause:200)"
     ],
     [
       "Action",
@@ -157,17 +157,17 @@
     [
       "Action",
       "cell-simple-short",
-      "[t] \"열\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"열\" (pause:200)"
     ],
     [
       "Action",
       "cell-short",
-      "[n] ../..; [t] \"열\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[n] ../..; [t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"열\" (pause:200)"
     ],
     [
       "Action",
       "matrix-row",
-      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] count(preceding-sibling::*)+1 (join:\"\"); [t] \"행\" (pause:200)"
     ]
   ]
 }
