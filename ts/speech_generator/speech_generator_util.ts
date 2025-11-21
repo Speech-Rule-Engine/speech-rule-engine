@@ -159,8 +159,7 @@ export function retrievePrefix(semantic: SemanticNode): string {
 /**
  * Computes prefix speech.
  *
- * @param xml The xml element.
- * @param node
+ * @param node The xml element.
  * @returns A list of auditory descriptions for the prefix.
  */
 export function computePrefix(node: Element): AuditoryDescription[] {
@@ -294,6 +293,9 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
   }
 }
 
+/**
+ * The attributes needed to be retained from an maction element.
+ */
 enum NeededAttributes {
   ID = 'data-semantic-id',
   PARENT = 'data-semantic-parent',
@@ -303,8 +305,10 @@ enum NeededAttributes {
 }
 
 /**
+ * Retrieves a mapping of needed maction attributes from the given element.
  *
- * @param stree
+ * @param stree The element.
+ * @returns The attributes to value mappings.
  */
 function getNeededAttributes(stree: Element) {
   const result: { [K in NeededAttributes]?: string } = {};
@@ -364,7 +368,7 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * Computes a speech summary if it exists.
  *
  * @param node The XML node.
- * @param options
+ * @param options The options list.
  * @returns The summary speech string.
  */
 export function retrieveSummary(
@@ -379,7 +383,7 @@ export function retrieveSummary(
  * Adds a speech summary if necessary.
  *
  * @param node The XML node.
- * @param options
+ * @param options The options list.
  * @returns A list of auditory descriptions
  *     for the summary.
  */
@@ -430,8 +434,9 @@ export function computePostfix(node: Element): AuditoryDescription[] {
 // Changes for the webworker
 
 /**
+ * Completes the JSON speech structure for speech related modalities.
  *
- * @param structure
+ * @param structure The speech structure.
  */
 export function completeModalities(structure: SpeechStructure) {
   structure.completeModality('speech', computeSpeech);
@@ -441,8 +446,10 @@ export function completeModalities(structure: SpeechStructure) {
 }
 
 /**
+ * Compute the JSON speech structure for a node.
  *
- * @param sxml
+ * @param sxml The semantic node.
+ * @returns The computes structure as JSON.
  */
 export function computeSpeechStructure(sxml: Element) {
   computeSpeech(sxml, true);
@@ -452,8 +459,10 @@ export function computeSpeechStructure(sxml: Element) {
 }
 
 /**
+ * Compute the JSON Braille structure for a node.
  *
- * @param sxml
+ * @param sxml The semantic node.
+ * @returns The computes structure as JSON.
  */
 export function computeBrailleStructure(sxml: Element) {
   computeSpeech(sxml, true);
@@ -463,9 +472,11 @@ export function computeBrailleStructure(sxml: Element) {
 }
 
 /**
+ * Cycles to next speech rule domain.
  *
- * @param options
- * @param styles
+ * @param options The options list.
+ * @param styles The styles for the current domains available.
+ * @returns The updated options list.
  */
 export function nextRules(
   options: OptionsList,
@@ -488,7 +499,7 @@ export function nextRules(
  * Cycles to next style or preference of the speech rule set if possible.
  *
  * @param node The semantic node currently in focus.
- * @param options
+ * @param options The options list.
  * @returns The new style name.
  */
 export function nextStyle(node: SemanticNode, options: OptionsList) {
@@ -535,8 +546,12 @@ export function nextStyle(node: SemanticNode, options: OptionsList) {
 }
 
 /**
+ * Extracts the current styles for all available rule set domains from the rule
+ * engine options. This is given in `domain2style`. If that is empty computes
+ * defaults.
  *
- * @param options
+ * @param options The input options list.
+ * @returns Options list mapping domains to styles.
  */
 export function toStyles(options: OptionsList): OptionsList {
   const { domain, style, domain2style } = options;
@@ -557,8 +572,12 @@ export function toStyles(options: OptionsList): OptionsList {
 }
 
 /**
+ * Compute a string version of the options list mapping domains to styles. This
+ * is used in the JSON speech structure to support dynamic domain and style
+ * changes.
  *
- * @param styles
+ * @param styles Options list mapping domains to styles.
+ * @returns The corresponding structured string.
  */
 export function fromStyles(styles: OptionsList): string {
   const strs = [];

@@ -138,12 +138,10 @@ export class Debugger {
         this.outputFunction.apply(
           this.outputFunction,
           ['Speech Rule Engine Debugger:'].concat(outputList)
-        ));
+        )
+      );
       return;
     }
-    console.info.apply(
-      console,
-        ['Speech Rule Engine Debugger:'].concat(outputList)
-      );
+    console.info(...['Speech Rule Engine Debugger:'].concat(outputList));
   }
 }

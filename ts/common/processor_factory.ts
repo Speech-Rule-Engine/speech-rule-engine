@@ -410,7 +410,7 @@ set(
       try {
         const rebuilt = new RebuildStree(mml);
         sxml = rebuilt.stree.xml();
-      } catch(_e) {
+      } catch (_e) {
         sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
       }
       SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
@@ -424,7 +424,6 @@ set(
     }
   })
 );
-
 
 export type OptionsList = { [key: string]: string };
 type SpeechList = { [id: string]: { [mod: string]: string } };
@@ -451,7 +450,7 @@ set(
       try {
         const rebuilt = new RebuildStree(mml);
         sxml = rebuilt.stree.xml();
-      } catch(_e) {
+      } catch (_e) {
         sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
       }
       Engine.getInstance().options.automark = true;
@@ -468,7 +467,14 @@ set(
   })
 );
 
-
+/**
+ * Assembles the final JSON speech structure for use in worker.
+ *
+ * @param json The initial speech structure.
+ * @param mml The MathML element.
+ * @param sxml The Semantic Tree as XML.
+ * @param options The list of options.
+ */
 export function assembleSpeechStructure(
   json: WorkerStructure,
   mml: Element,
@@ -484,7 +490,7 @@ export function assembleSpeechStructure(
   json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
   const links = DomUtil.querySelectorAllByAttr(sxml, 'href').length;
   if (links) {
-    json.label += `, ${links} ${(links === 1) ? 'link' : 'links'}`;
+    json.label += `, ${links} ${links === 1 ? 'link' : 'links'}`;
   }
 }
 // ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml

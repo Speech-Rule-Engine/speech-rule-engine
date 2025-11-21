@@ -1912,10 +1912,7 @@ export class SemanticProcessor {
       SemanticUtil.getEmbellishedInner(opNode).textContent
     );
     node.role = opNode.role;
-    node = SemanticHeuristics.run(
-      'propagateInterval',
-      node
-    ) as SemanticNode;
+    node = SemanticHeuristics.run('propagateInterval', node) as SemanticNode;
     return SemanticHeuristics.run(
       'propagateSimpleFunction',
       node
@@ -2206,8 +2203,9 @@ export class SemanticProcessor {
       return nodes;
     }
     const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) => {
-      return SemanticPred.isType(x, SemanticType.TEXT) &&
-        !x.annotation['factor'];
+      return (
+        SemanticPred.isType(x, SemanticType.TEXT) && !x.annotation['factor']
+      );
     });
     if (rel.length === 0) {
       return nodes;
@@ -3137,7 +3135,7 @@ export class SemanticProcessor {
     SemanticHeuristics.run('interval_heuristic', node);
     if (node.role === SemanticRole.INTERVAL) {
       return;
-    };
+    }
     node.role = SemanticRole.LEFTRIGHT;
     const children = node.childNodes;
     if (!SemanticPred.isSetNode(node) || children.length > 1) {
@@ -3981,7 +3979,6 @@ export class SemanticProcessor {
   }
 }
 
-
 /**
  * Ensures that text elements between operators and relations are treated more
  * as identifiers than textual interspersion.
@@ -4000,25 +3997,20 @@ function ensureOperatorRelations(
 ): SemanticNode[] {
   const last = before[before.length - 1];
   if (
-    last && (
-      last.type === SemanticType.RELATION ||
-        last.type === SemanticType.OPERATOR
-    )
+    last &&
+    (last.type === SemanticType.RELATION || last.type === SemanticType.OPERATOR)
   ) {
     text.addAnnotation('factor', last.type);
     return [...before, text, ...after];
   }
   const first = after[0];
   if (
-    first && (
-      first.type === SemanticType.RELATION ||
-        first.type === SemanticType.OPERATOR
-    )
+    first &&
+    (first.type === SemanticType.RELATION ||
+      first.type === SemanticType.OPERATOR)
   ) {
     text.addAnnotation('factor', first.type);
     return [...before, text, ...after];
   }
   return null;
 }
-
-

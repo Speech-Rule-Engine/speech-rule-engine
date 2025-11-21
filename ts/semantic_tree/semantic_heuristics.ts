@@ -477,7 +477,7 @@ SemanticHeuristics.add(
 function implicitUnpack(nodes: SemanticNode[]) {
   const children = nodes[0].childNodes;
   nodes.splice(0, 1, ...children);
-  nodes.forEach((x) => x.parent = null);
+  nodes.forEach((x) => (x.parent = null));
 }
 
 /**
@@ -905,17 +905,21 @@ SemanticHeuristics.add(
         !(
           leftFence &&
           rightFence &&
-            ((isCloseBrack(leftFence.textContent) &&
-              (isOpenBrack(rightFence.textContent) || isCloseBrack((rightFence.textContent))) ||
-              (isOpenBrack(rightFence.textContent) &&
-                (isOpenBrack(leftFence.textContent) || isCloseBrack(leftFence.textContent)))))
+          ((isCloseBrack(leftFence.textContent) &&
+            (isOpenBrack(rightFence.textContent) ||
+              isCloseBrack(rightFence.textContent))) ||
+            (isOpenBrack(rightFence.textContent) &&
+              (isOpenBrack(leftFence.textContent) ||
+                isCloseBrack(leftFence.textContent))))
         )
       ) {
         return false;
       }
-      if (content.length === 1 &&
+      if (
+        content.length === 1 &&
         content[0].type === SemanticType.PUNCTUATED &&
-        content[0].contentNodes.length === 1) {
+        content[0].contentNodes.length === 1
+      ) {
         return true;
       }
       const partition = SemanticUtil.partitionNodes(
@@ -931,26 +935,58 @@ SemanticHeuristics.add(
   )
 );
 
+/**
+ * Identify opening brackets.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an opening bracket.
+ */
 function isOpenBrack(str: string) {
   return ['[', '［'].includes(str);
 }
 
+/**
+ * Identify closing brackets.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an closing bracket.
+ */
 function isCloseBrack(str: string) {
   return [']', '］'].includes(str);
 }
 
+/**
+ * Identify opening parentheses.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an opening parenthesis.
+ */
 function isOpenParen(str: string) {
   return ['(', '⁽', '₍'].includes(str);
 }
 
+/**
+ * Identify closing parentheses.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an closing parenthesis.
+ */
 function isCloseParen(str: string) {
   return [')', '⁾', '₎'].includes(str);
 }
 
+/**
+ * Identifies infinity.
+ *
+ * @param node The semantic node to test.
+ * @returns True if the node is a positive or negative infinity.
+ */
 function isInfty(node: SemanticNode) {
-  return node.role === SemanticRole.INFTY ||
+  return (
+    node.role === SemanticRole.INFTY ||
     (node.type === SemanticType.PREFIXOP &&
       node.childNodes[0].role === SemanticRole.INFTY)
+  );
 }
 
 /**
@@ -971,27 +1007,40 @@ SemanticHeuristics.add(
   )
 );
 
+/**
+ * Check if a fenced expression is a potential interval.
+ *
+ * @param node The node to test.
+ * @returns True if expression is potentially an interval.
+ */
 function isPotentialInterval(node: SemanticNode) {
   const child = node.childNodes[0];
-  if (node.type !== SemanticType.FENCED ||
+  if (
+    node.type !== SemanticType.FENCED ||
     // Check for comma separated pair!
     child?.type !== SemanticType.PUNCTUATED ||
     child?.childNodes.length !== 3 ||
     child?.contentNodes.length !== 1 ||
-    child?.childNodes[1].role !== SemanticRole.COMMA) {
+    child?.childNodes[1].role !== SemanticRole.COMMA
+  ) {
     return false;
   }
   const first = node.childNodes[0].childNodes[0];
   const second = node.childNodes[0].childNodes[2];
   const left = node.contentNodes[0].textContent;
   const right = node.contentNodes[1].textContent;
-  if ((isOpenBrack(left) && isCloseParen(right)) ||
-    (isOpenParen(left) && isCloseBrack(right))) {
+  if (
+    (isOpenBrack(left) && isCloseParen(right)) ||
+    (isOpenParen(left) && isCloseBrack(right))
+  ) {
     return true;
   }
   // if we have both brackets or parens and at least one infty.
-  if (isOpenParen(left) && isCloseParen(right) &&
-    (isInfty(first) || isInfty(second))) {
+  if (
+    isOpenParen(left) &&
+    isCloseParen(right) &&
+    (isInfty(first) || isInfty(second))
+  ) {
     return true;
   }
   return false;
@@ -1005,11 +1054,11 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'propagateInterval',
     (node: SemanticNode) => {
-      node.childNodes.forEach(child => {
+      node.childNodes.forEach((child) => {
         if (isPotentialInterval(child)) {
           child.role = SemanticRole.INTERVAL;
         }
-      })
+      });
       return node;
     },
     (node: SemanticNode) => {

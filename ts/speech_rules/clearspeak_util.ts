@@ -374,4 +374,4 @@ export function wordOrdinal(node: Element): Span[] {
  */
 export function isUnit(node: Element): Element[] {
   return lookupCategory(node.textContent + ':unit') ? [node] : [];
-};
+}
