@@ -467,6 +467,14 @@ set(
   })
 );
 
+/**
+ * Assembles the final JSON speech structure for use in worker.
+ *
+ * @param json The initial speech structure.
+ * @param mml The MathML element.
+ * @param sxml The Semantic Tree as XML.
+ * @param options The list of options.
+ */
 export function assembleSpeechStructure(
   json: WorkerStructure,
   mml: Element,

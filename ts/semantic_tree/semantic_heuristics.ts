@@ -936,40 +936,50 @@ SemanticHeuristics.add(
 );
 
 /**
+ * Identify opening brackets.
  *
- * @param str
+ * @param str Input string to test.
+ * @returns True if string is an opening bracket.
  */
 function isOpenBrack(str: string) {
   return ['[', '［'].includes(str);
 }
 
 /**
+ * Identify closing brackets.
  *
- * @param str
+ * @param str Input string to test.
+ * @returns True if string is an closing bracket.
  */
 function isCloseBrack(str: string) {
   return [']', '］'].includes(str);
 }
 
 /**
+ * Identify opening parentheses.
  *
- * @param str
+ * @param str Input string to test.
+ * @returns True if string is an opening parenthesis.
  */
 function isOpenParen(str: string) {
   return ['(', '⁽', '₍'].includes(str);
 }
 
 /**
+ * Identify closing parentheses.
  *
- * @param str
+ * @param str Input string to test.
+ * @returns True if string is an closing parenthesis.
  */
 function isCloseParen(str: string) {
   return [')', '⁾', '₎'].includes(str);
 }
 
 /**
+ * Identifies infinity.
  *
- * @param node
+ * @param node The semantic node to test.
+ * @returns True if the node is a positive or negative infinity.
  */
 function isInfty(node: SemanticNode) {
   return (
@@ -998,8 +1008,10 @@ SemanticHeuristics.add(
 );
 
 /**
+ * Check if a fenced expression is a potential interval.
  *
- * @param node
+ * @param node The node to test.
+ * @returns True if expression is potentially an interval.
  */
 function isPotentialInterval(node: SemanticNode) {
   const child = node.childNodes[0];

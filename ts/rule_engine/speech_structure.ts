@@ -65,10 +65,13 @@ export class SpeechStructure {
   }
 
   /**
+   * Inserts speech description for a semantic node into the speech map
+   * corresponding to the current modality. Note, that the list of auditory
+   * descriptions is cloned.
    *
-   * @param modality
-   * @param id
-   * @param descr
+   * @param modality The modality.
+   * @param id The id of the node.
+   * @param descr The list of auditory descriptions.
    */
   private setMap(modality: string, id: string, descr: AuditoryDescription[]) {
     const map = this.getSpeechMap(id);
@@ -81,16 +84,19 @@ export class SpeechStructure {
   private nodeMap: Map<string, Element> = null;
 
   /**
+   * A JSON speech structure for semantic nodes.
    *
-   * @param node
+   * @param node The semantic element for which the speech structure created.
    */
   constructor(public node: Element) {}
 
   /**
+   * Adds a semantic node and its computes speech to the speech map. Text nodes
+   * are ignored.
    *
-   * @param node
-   * @param descr
-   * @param modality
+   * @param node The semantic element.
+   * @param descr The list of auditory descriptions.
+   * @param modality The current modality for the auditory descriptions.
    */
   public addNode(
     node: Element,
@@ -106,9 +112,10 @@ export class SpeechStructure {
   }
 
   /**
+   * Returns a speech map for semantic node id.
    *
-   * @param id
-   * @returns
+   * @param id The id of the semantic node.
+   * @returns The corresponding speech map.
    */
   public get(id: string) {
     return this.speechMaps.get(id);
