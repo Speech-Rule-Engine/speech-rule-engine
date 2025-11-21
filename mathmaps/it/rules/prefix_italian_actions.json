@@ -113,6 +113,61 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonna\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"Eitchetta\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cases-case",
+      "[t] \"Caso\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-line",
+      "[t] \"Riga\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-case",
+      "[t] \"Caso\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-equation",
+      "[t] \"Equazioni\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-step",
+      "[t] \"Passo\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-row",
+      "[t] \"Riga\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-constraint",
+      "[t] \"Vincoli\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple-short",
+      "[t] \"a colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-short",
+      "[n] ../..; [t] \"a colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[t] \"Riga\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ]
   ]
 }

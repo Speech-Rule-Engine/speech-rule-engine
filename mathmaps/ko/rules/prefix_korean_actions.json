@@ -113,6 +113,61 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition; [t] \"열\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"꼬리표\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cases-case",
+      "[t] \"케이스\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-line",
+      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-case",
+      "[t] \"케이스\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-equation",
+      "[t] \"방정식\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-step",
+      "[t] \"단계\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-row",
+      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-constraint",
+      "[t] \"조건문\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple-short",
+      "[t] \"열\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-short",
+      "[n] ../..; [t] \"열\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[t] \"행\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ]
   ]
 }
