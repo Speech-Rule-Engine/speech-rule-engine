@@ -97,6 +97,7 @@
       "determinant": "Determinante",
       "rowvector": "Zeilenvektor",
       "binomial": "Binomialkoeffizient",
+      "label": "Bezeichner",
       "squarematrix": "quadratische Matrize",
       "multiline": "mehrzeiligem Ausdruck",
       "matrix": "Matrize",

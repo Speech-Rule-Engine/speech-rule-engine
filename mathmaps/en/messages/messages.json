@@ -88,6 +88,7 @@
       "determinant": "determinant",
       "rowvector": "row vector",
       "binomial": "binomial",
+      "label": "label",
       "squarematrix": "square matrix",
       "multiline": "multiple lines",
       "matrix": "matrix",
