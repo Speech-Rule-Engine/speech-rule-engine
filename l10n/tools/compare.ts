@@ -102,14 +102,24 @@ function actionStructure(json: ['Action', string, string][]): {[key: string]: Ac
 }
 
 // Pushing new stuff
-export function pushNewActions(locales: string[], domain: string, rules: string[] = []) {
+export function pushNewActions(
+  locales: string[],
+  domain: string,
+  ignore: string[] = [],
+  rewrite: Record<string, Record<string, string>> = {}
+) {
   if (!locales || !locales.length) {
     locales = Array.from(Variables.LOCALES.keys());
   }
-  locales.forEach(x => pushNewAction(x, domain, rules));
+  locales.forEach(x => pushNewAction(x, domain, ignore, rewrite[x]));
 }
 
-export function pushNewAction(locale: string, domain: string, ignore: string[] = []) {
+export function pushNewAction(
+  locale: string,
+  domain: string,
+  ignore: string[] = [],
+  rewrite: Record<string, string> = {}
+) {
   const english = jsonLoadLocale('en', 'english', domain);
   let language = getLanguage(locale);
   if (!language) {
@@ -125,6 +135,14 @@ export function pushNewAction(locale: string, domain: string, ignore: string[] =
     if (action2) {
       console.info(`Action for ${rule} already exists. Ignored.`);
       continue;
+    }
+    for (let comp of action1.components) {
+      if (comp.type === 'TEXT' && comp.content.match(/^".*"$/)) {
+        for (const [search, replace] of Object.entries(rewrite)) {
+          comp.content = comp.content.replace(search, replace);
+        }
+      }
+      console.log(comp);
     }
     console.info(`Pushing ${rule} for ${language} ${domain}`);
     actions.rules.push(['Action', rule, action1.toString()]);
