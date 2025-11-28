@@ -687,7 +687,6 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().options.strict;
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);
