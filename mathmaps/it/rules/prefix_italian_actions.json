@@ -157,12 +157,12 @@
     [
       "Action",
       "cell-simple-short",
-      "[t] \"a colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[t] \"Colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ],
     [
       "Action",
       "cell-short",
-      "[n] ../..; [t] \"a colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+      "[n] ../..; [t] \"Colonna\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ],
     [
       "Action",
