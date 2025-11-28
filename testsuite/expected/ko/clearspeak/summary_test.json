@@ -6,7 +6,100 @@
   "base": "input/common/summary_test.json",
   "information": "Korean Clearspeak Summary tests.",
   "active": "SummaryKorean",
-  "exclude": ["AbstrAddition_brief", "AbstrAddition_sbrief", "AbstrBigop_brief", "AbstrBigop_sbrief", "AbstrBinomial_brief", "AbstrBinomial_sbrief", "AbstrCases_brief", "AbstrCases_sbrief", "AbstrCell_brief", "AbstrCell_sbrief", "AbstrContinuedFraction_brief", "AbstrContinuedFraction_sbrief", "AbstrDeterminant_brief", "AbstrDeterminant_sbrief", "AbstrFraction_brief", "AbstrFraction_sbrief", "AbstrFunction_brief", "AbstrFunction_sbrief", "AbstrIdentifier_brief", "AbstrIdentifier_sbrief", "AbstrInfixop_brief", "AbstrInfixop_sbrief", "AbstrIntegral_brief", "AbstrIntegral_sbrief", "AbstrLim_brief", "AbstrLim_sbrief", "AbstrLine_brief", "AbstrLine_sbrief", "AbstrMatrix_brief", "AbstrMatrix_sbrief", "AbstrMixedNumber_brief", "AbstrMixedNumber_sbrief", "AbstrMultiplication_brief", "AbstrMultiplication_sbrief", "AbstrMultirel_brief", "AbstrMultirel_sbrief", "AbstrNumber_brief", "AbstrNumber_sbrief", "AbstrPunctuated_brief", "AbstrPunctuated_sbrief", "AbstrRelation_brief", "AbstrRelation_sbrief", "AbstrRelationSeq_brief", "AbstrRelationSeq_sbrief", "AbstrRoot_brief", "AbstrRoot_sbrief", "AbstrRootNested_brief", "AbstrRootNested_sbrief", "AbstrRow_brief", "AbstrRow_sbrief", "AbstrRowvector_brief", "AbstrRowvector_sbrief", "AbstrSqrt_brief", "AbstrSqrt_sbrief", "AbstrSqrtNested_brief", "AbstrSqrtNested_sbrief", "AbstrSquarematrix_brief", "AbstrSquarematrix_sbrief", "AbstrSubscript_brief", "AbstrSubscript_sbrief", "AbstrSubsup_brief", "AbstrSubsup_sbrief", "AbstrSuperscript_brief", "AbstrSuperscript_sbrief", "AbstrTable_brief", "AbstrTable_sbrief", "AbstrText_brief", "AbstrText_sbrief", "AbstrVarAddition_brief", "AbstrVarAddition_sbrief", "AbstrVarCases_brief", "AbstrVarCases_sbrief", "AbstrVarDeterminant_brief", "AbstrVarDeterminant_sbrief", "AbstrVarMatrix_brief", "AbstrVarMatrix_sbrief", "AbstrVarMultiplication_brief", "AbstrVarMultiplication_sbrief", "AbstrVarMultirel_brief", "AbstrVarMultirel_sbrief", "AbstrVarPunctuated_brief", "AbstrVarPunctuated_sbrief", "AbstrVarRelation_brief", "AbstrVarRelation_sbrief", "AbstrVarVector_brief", "AbstrVarVector_sbrief", "AbstrVector_brief", "AbstrVector_sbrief", "AbstrVarSubtraction_brief", "AbstrVarSubtraction_sbrief", "AbstrCountImplicit_brief", "AbstrCountImplicit_sbrief"],
+  "exclude": [
+    "AbstrAddition_brief",
+    "AbstrAddition_sbrief",
+    "AbstrBigop_brief",
+    "AbstrBigop_sbrief",
+    "AbstrBinomial_brief",
+    "AbstrBinomial_sbrief",
+    "AbstrCases_brief",
+    "AbstrCases_sbrief",
+    "AbstrCell_brief",
+    "AbstrCell_sbrief",
+    "AbstrContinuedFraction_brief",
+    "AbstrContinuedFraction_sbrief",
+    "AbstrDeterminant_brief",
+    "AbstrDeterminant_sbrief",
+    "AbstrFraction_brief",
+    "AbstrFraction_sbrief",
+    "AbstrFunction_brief",
+    "AbstrFunction_sbrief",
+    "AbstrIdentifier_brief",
+    "AbstrIdentifier_sbrief",
+    "AbstrInfixop_brief",
+    "AbstrInfixop_sbrief",
+    "AbstrIntegral_brief",
+    "AbstrIntegral_sbrief",
+    "AbstrLim_brief",
+    "AbstrLim_sbrief",
+    "AbstrLine_brief",
+    "AbstrLine_sbrief",
+    "AbstrMatrix_brief",
+    "AbstrMatrix_sbrief",
+    "AbstrMixedNumber_brief",
+    "AbstrMixedNumber_sbrief",
+    "AbstrMultiplication_brief",
+    "AbstrMultiplication_sbrief",
+    "AbstrMultirel_brief",
+    "AbstrMultirel_sbrief",
+    "AbstrNumber_brief",
+    "AbstrNumber_sbrief",
+    "AbstrPunctuated_brief",
+    "AbstrPunctuated_sbrief",
+    "AbstrRelation_brief",
+    "AbstrRelation_sbrief",
+    "AbstrRelationSeq_brief",
+    "AbstrRelationSeq_sbrief",
+    "AbstrRoot_brief",
+    "AbstrRoot_sbrief",
+    "AbstrRootNested_brief",
+    "AbstrRootNested_sbrief",
+    "AbstrRow_brief",
+    "AbstrRow_sbrief",
+    "AbstrRowvector_brief",
+    "AbstrRowvector_sbrief",
+    "AbstrSqrt_brief",
+    "AbstrSqrt_sbrief",
+    "AbstrSqrtNested_brief",
+    "AbstrSqrtNested_sbrief",
+    "AbstrSquarematrix_brief",
+    "AbstrSquarematrix_sbrief",
+    "AbstrSubscript_brief",
+    "AbstrSubscript_sbrief",
+    "AbstrSubsup_brief",
+    "AbstrSubsup_sbrief",
+    "AbstrSuperscript_brief",
+    "AbstrSuperscript_sbrief",
+    "AbstrTable_brief",
+    "AbstrTable_sbrief",
+    "AbstrText_brief",
+    "AbstrText_sbrief",
+    "AbstrVarAddition_brief",
+    "AbstrVarAddition_sbrief",
+    "AbstrVarCases_brief",
+    "AbstrVarCases_sbrief",
+    "AbstrVarDeterminant_brief",
+    "AbstrVarDeterminant_sbrief",
+    "AbstrVarMatrix_brief",
+    "AbstrVarMatrix_sbrief",
+    "AbstrVarMultiplication_brief",
+    "AbstrVarMultiplication_sbrief",
+    "AbstrVarMultirel_brief",
+    "AbstrVarMultirel_sbrief",
+    "AbstrVarPunctuated_brief",
+    "AbstrVarPunctuated_sbrief",
+    "AbstrVarRelation_brief",
+    "AbstrVarRelation_sbrief",
+    "AbstrVarVector_brief",
+    "AbstrVarVector_sbrief",
+    "AbstrVector_brief",
+    "AbstrVector_sbrief",
+    "AbstrVarSubtraction_brief",
+    "AbstrVarSubtraction_sbrief",
+    "AbstrCountImplicit_brief",
+    "AbstrCountImplicit_sbrief"
+  ],
   "tests": {
     "AbstrAddition_default": {
       "expected": "항이 두 개인 덧셈"
@@ -21,7 +114,7 @@
       "expected": "케이스가 두 개인 조건문"
     },
     "AbstrCell_default": {
-      "expected": "첫번째 열 이 다음과 같은 표"
+      "expected": "1열 이 다음과 같은 표"
     },
     "AbstrContinuedFraction_default": {
       "expected": "연분수"
@@ -49,7 +142,7 @@
       "expected": "리미트"
     },
     "AbstrLine_default": {
-      "expected": "첫번째 행 이 다음과 같은 연립"
+      "expected": "1행 이 다음과 같은 연립"
     },
     "AbstrMatrix_default": {
       "expected": "3 행 2 열의 행렬"
@@ -82,7 +175,7 @@
       "expected": "세제곱근 중첩루트"
     },
     "AbstrRow_default": {
-      "expected": "첫번째 행 이 다음과 같은 2 열의 표"
+      "expected": "1행 이 다음과 같은 2 열의 표"
     },
     "AbstrRowvector_default": {
       "expected": "2 차원 행 벡터"

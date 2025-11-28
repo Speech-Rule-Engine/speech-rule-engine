@@ -115,7 +115,7 @@
       "expected": "gevalstelling met 2 gevalle"
     },
     "AbstrCell_default": {
-      "expected": "1. Kolom in tabêl"
+      "expected": "Kolom 1 in tabêl"
     },
     "AbstrContinuedFraction_default": {
       "expected": "voortgesette breuk"
@@ -141,9 +141,8 @@
     "AbstrLim_default": {
       "expected": "limiet funksie"
     },
-    "_comment2_": " TODO",
     "AbstrLine_default": {
-      "expected": "1. Ry in meerdere lyne"
+      "expected": "Lyn 1 in meerdere lyne"
     },
     "AbstrMatrix_default": {
       "expected": "3 by 2 matriks"
@@ -175,9 +174,8 @@
     "AbstrRootNested_default": {
       "expected": "genesde wortel van indeks 3"
     },
-    "_comment3_": " TODO",
     "AbstrRow_default": {
-      "expected": "1. Ry in tabêl met 2 kolomme"
+      "expected": "Lyn 1 in tabêl met 2 kolomme"
     },
     "AbstrRowvector_default": {
       "expected": "2 dimensionele ry vektor"

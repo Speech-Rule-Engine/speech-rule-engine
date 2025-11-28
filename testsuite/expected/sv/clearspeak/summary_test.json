@@ -115,7 +115,7 @@
       "expected": "case-sats med 2 case"
     },
     "AbstrCell_default": {
-      "expected": "1:a Kolumn i tabell"
+      "expected": "Kolumn 1 i tabell"
     },
     "AbstrContinuedFraction_default": {
       "expected": "förlängt bråk"
@@ -142,7 +142,7 @@
       "expected": "gränsfunktion"
     },
     "AbstrLine_default": {
-      "expected": "1:a Raden i flera rader"
+      "expected": "rad 1 i flera rader"
     },
     "AbstrMatrix_default": {
       "expected": "3 gånger 2 matris"
@@ -175,7 +175,7 @@
       "expected": "nästlad rot med index 3"
     },
     "AbstrRow_default": {
-      "expected": "1:a Raden i tabell med 2 kolumner"
+      "expected": "rad 1 i tabell med 2 kolumner"
     },
     "AbstrRowvector_default": {
       "expected": "2-dimensionell radvektor"

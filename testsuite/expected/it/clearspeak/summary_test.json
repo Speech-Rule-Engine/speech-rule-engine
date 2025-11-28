@@ -114,7 +114,7 @@
       "expected": "comando switch con 2 casi"
     },
     "AbstrCell_default": {
-      "expected": "1a colonna in tavola"
+      "expected": "Colonna 1 in tavola"
     },
     "AbstrContinuedFraction_default": {
       "expected": "frazione continua"
@@ -141,7 +141,7 @@
       "expected": "funzione limite"
     },
     "AbstrLine_default": {
-      "expected": "1a riga in linee multiple"
+      "expected": "Riga 1 in linee multiple"
     },
     "AbstrMatrix_default": {
       "expected": "3 per 2 matrice"
@@ -174,7 +174,7 @@
       "expected": "radicale doppio di indice 3"
     },
     "AbstrRow_default": {
-      "expected": "1a riga in tavola con 2 colonne"
+      "expected": "Riga 1 in tavola con 2 colonne"
     },
     "AbstrRowvector_default": {
       "expected": "2 vettore riga dimensionale"
