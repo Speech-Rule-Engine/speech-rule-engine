@@ -54,19 +54,19 @@
       "expected": "Riga 1"
     },
     "Matrices_depth_1": {
-      "expected": "Riga 1, a colonna 1"
+      "expected": "Riga 1, Colonna 1"
     },
     "Matrices_depth_2": {
-      "expected": "Riga 1, a colonna 2"
+      "expected": "Riga 1, Colonna 2"
     },
     "Matrices_depth_3": {
       "expected": "Riga 2"
     },
     "Matrices_depth_4": {
-      "expected": "Riga 2, a colonna 1"
+      "expected": "Riga 2, Colonna 1"
     },
     "Matrices_depth_5": {
-      "expected": "Riga 2, a colonna 2"
+      "expected": "Riga 2, Colonna 2"
     },
     "Matrices_depth_6": {
       "expected": ""
@@ -81,19 +81,19 @@
       "expected": "Riga 1"
     },
     "Matrices_1": {
-      "expected": "a colonna 1"
+      "expected": "Colonna 1"
     },
     "Matrices_2": {
-      "expected": "a colonna 2"
+      "expected": "Colonna 2"
     },
     "Matrices_3": {
       "expected": "Riga 2"
     },
     "Matrices_4": {
-      "expected": "a colonna 1"
+      "expected": "Colonna 1"
     },
     "Matrices_5": {
-      "expected": "a colonna 2"
+      "expected": "Colonna 2"
     },
     "Matrices_6": {
       "expected": ""
@@ -126,10 +126,10 @@
       "expected": "Caso 1"
     },
     "Table_Cell_1": {
-      "expected": "a colonna 1"
+      "expected": "Colonna 1"
     },
     "Table_Cell_1a": {
-      "expected": "a colonna 2"
+      "expected": "Colonna 2"
     },
     "Table_Cell_2": {
       "expected": "Caso 1"
@@ -138,25 +138,25 @@
       "expected": "Caso 2"
     },
     "Table_Cell_4": {
-      "expected": "a colonna 1"
+      "expected": "Colonna 1"
     },
     "Table_Cell_4a": {
-      "expected": "a colonna 2"
+      "expected": "Colonna 2"
     },
     "Table_Cell_5": {
-      "expected": "a colonna 1"
+      "expected": "Colonna 1"
     },
     "Table_Cell_5a": {
-      "expected": "a colonna 2"
+      "expected": "Colonna 2"
     },
     "Table_Cell_Depth_0": {
       "expected": "Caso 1"
     },
     "Table_Cell_Depth_1": {
-      "expected": "Caso 1, a colonna 1"
+      "expected": "Caso 1, Colonna 1"
     },
     "Table_Cell_Depth_1a": {
-      "expected": "Caso 1, a colonna 2"
+      "expected": "Caso 1, Colonna 2"
     },
     "Table_Cell_Depth_2": {
       "expected": "Caso 1"
@@ -165,16 +165,16 @@
       "expected": "Caso 2"
     },
     "Table_Cell_Depth_4": {
-      "expected": "Caso 1, a colonna 1"
+      "expected": "Caso 1, Colonna 1"
     },
     "Table_Cell_Depth_4a": {
-      "expected": "Caso 1, a colonna 2"
+      "expected": "Caso 1, Colonna 2"
     },
     "Table_Cell_Depth_5": {
-      "expected": "Caso 2, a colonna 1"
+      "expected": "Caso 2, Colonna 1"
     },
     "Table_Cell_Depth_5a": {
-      "expected": "Caso 2, a colonna 2"
+      "expected": "Caso 2, Colonna 2"
     }
   },
   "compare": true
