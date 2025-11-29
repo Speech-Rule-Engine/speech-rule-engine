@@ -118,12 +118,11 @@ export function addToFile(file: string, expected: JsonTests, order?: string[]) {
   const result: JsonTests = {};
   for (const key of order) {
     if (oldTests[key]) {
-      if (TestUtil.isComment(key)) continue;
-      Object.assign(oldTests[key], expected[key]);
+      result[key] = TestUtil.isComment(key) ? oldTests[key] :
+        Object.assign(oldTests[key], expected[key]);
     } else {
-      oldTests[key] = expected[key];
+      result[key] = expected[key];
     }
-    result[key] = oldTests[key];
   }
   oldJson.tests = result;
   TestUtil.saveJson(filename, oldJson);
