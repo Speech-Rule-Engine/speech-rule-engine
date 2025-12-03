@@ -1,0 +1,177 @@
+{
+  "name": "CatalanPrefixTables",
+  "locale": "ca",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Catalan Prefix Tables rule tests.",
+  "active": "PrefixCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Binomials_0": {
+      "expected": "quantitat d'elecció"
+    },
+    "Binomials_1": {
+      "expected": "quantitat de selecció"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "quantitat d'elecció"
+    },
+    "Binomials_1_extra": {
+      "expected": "quantitat de selecció"
+    },
+    "Vectors_0": {
+      "expected": "1a fila"
+    },
+    "Vectors_1": {
+      "expected": "2a fila"
+    },
+    "Vectors_2": {
+      "expected": "3a fila"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1a fila"
+    },
+    "Matrices_depth_1": {
+      "expected": "1a fila, 1a columna"
+    },
+    "Matrices_depth_2": {
+      "expected": "1a fila, 2a columna"
+    },
+    "Matrices_depth_3": {
+      "expected": "2a fila"
+    },
+    "Matrices_depth_4": {
+      "expected": "2a fila, 1a columna"
+    },
+    "Matrices_depth_5": {
+      "expected": "2a fila, 2a columna"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1a fila"
+    },
+    "Matrices_1": {
+      "expected": "1a columna"
+    },
+    "Matrices_2": {
+      "expected": "2a columna"
+    },
+    "Matrices_3": {
+      "expected": "2a fila"
+    },
+    "Matrices_4": {
+      "expected": "1a columna"
+    },
+    "Matrices_5": {
+      "expected": "2a columna"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": "1a fila"
+    },
+    "Table_1": {
+      "expected": "1a fila"
+    },
+    "Table_2": {
+      "expected": "1a fila"
+    },
+    "Table_3": {
+      "expected": "2a fila"
+    },
+    "Table_4": {
+      "expected": "1a fila"
+    },
+    "Table_5": {
+      "expected": "2a fila"
+    },
+    "Table_Cell_0": {
+      "expected": "1a fila"
+    },
+    "Table_Cell_1": {
+      "expected": "1a columna"
+    },
+    "Table_Cell_1a": {
+      "expected": "2a columna"
+    },
+    "Table_Cell_2": {
+      "expected": "1a fila"
+    },
+    "Table_Cell_3": {
+      "expected": "2a fila"
+    },
+    "Table_Cell_4": {
+      "expected": "1a columna"
+    },
+    "Table_Cell_4a": {
+      "expected": "2a columna"
+    },
+    "Table_Cell_5": {
+      "expected": "1a columna"
+    },
+    "Table_Cell_5a": {
+      "expected": "2a columna"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1a fila"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1a fila, 1a columna"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1a fila, 2a columna"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1a fila"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2a fila"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1a fila, 1a columna"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1a fila, 2a columna"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2a fila, 1a columna"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2a fila, 2a columna"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "_comment_0": " Empty wrappers.",
-  "_comment_1": " Test for empty wrapping elements.",
   "tests": {
+    "_comment_0": " Empty wrappers.",
+    "_comment_1": " Test for empty wrapping elements.",
     "Wrappers_0": {
       "input": "<mrow><mrow><mi>a</mi></mrow></mrow><mrow><mi>b</mi></mrow>"
     },

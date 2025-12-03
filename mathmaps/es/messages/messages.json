@@ -122,6 +122,7 @@
       "determinant": "determinante",
       "rowvector": "fila vector",
       "binomial": "binomial",
+      "label": "etiqueta",
       "squarematrix": "matriz cuadrada",
       "multiline": "líneas múltiples",
       "matrix": "matriz",

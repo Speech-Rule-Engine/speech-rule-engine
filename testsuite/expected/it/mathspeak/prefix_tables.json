@@ -1,0 +1,176 @@
+{
+  "name": "ItalianPrefixTables",
+  "locale": "it",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Italian Prefix Tables rule tests.",
+  "active": "PrefixItalian",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "quantità scelta"
+    },
+    "Binomials_1": {
+      "expected": "quantità selezione"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "quantità scelta"
+    },
+    "Binomials_1_extra": {
+      "expected": "quantità selezione"
+    },
+    "Vectors_0": {
+      "expected": "1a riga"
+    },
+    "Vectors_1": {
+      "expected": "2a riga"
+    },
+    "Vectors_2": {
+      "expected": "3a riga"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1a riga"
+    },
+    "Matrices_depth_1": {
+      "expected": "1a riga, 1a colonna"
+    },
+    "Matrices_depth_2": {
+      "expected": "1a riga, 2a colonna"
+    },
+    "Matrices_depth_3": {
+      "expected": "2a riga"
+    },
+    "Matrices_depth_4": {
+      "expected": "2a riga, 1a colonna"
+    },
+    "Matrices_depth_5": {
+      "expected": "2a riga, 2a colonna"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1a riga"
+    },
+    "Matrices_1": {
+      "expected": "1a colonna"
+    },
+    "Matrices_2": {
+      "expected": "2a colonna"
+    },
+    "Matrices_3": {
+      "expected": "2a riga"
+    },
+    "Matrices_4": {
+      "expected": "1a colonna"
+    },
+    "Matrices_5": {
+      "expected": "2a colonna"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": "1a riga"
+    },
+    "Table_1": {
+      "expected": "1a riga"
+    },
+    "Table_2": {
+      "expected": "1a riga"
+    },
+    "Table_3": {
+      "expected": "2a riga"
+    },
+    "Table_4": {
+      "expected": "1a riga"
+    },
+    "Table_5": {
+      "expected": "2a riga"
+    },
+    "Table_Cell_0": {
+      "expected": "1a riga"
+    },
+    "Table_Cell_1": {
+      "expected": "1a colonna"
+    },
+    "Table_Cell_1a": {
+      "expected": "2a colonna"
+    },
+    "Table_Cell_2": {
+      "expected": "1a riga"
+    },
+    "Table_Cell_3": {
+      "expected": "2a riga"
+    },
+    "Table_Cell_4": {
+      "expected": "1a colonna"
+    },
+    "Table_Cell_4a": {
+      "expected": "2a colonna"
+    },
+    "Table_Cell_5": {
+      "expected": "1a colonna"
+    },
+    "Table_Cell_5a": {
+      "expected": "2a colonna"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1a riga"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1a riga, 1a colonna"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1a riga, 2a colonna"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1a riga"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2a riga"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1a riga, 1a colonna"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1a riga, 2a colonna"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2a riga, 1a colonna"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2a riga, 2a colonna"
+    }
+  }
+}

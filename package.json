@@ -6,6 +6,7 @@
     "sre": "bin/sre"
   },
   "scripts": {
+    "local": "cd testsuite; pnpm local",
     "format": "prettier --check ts/",
     "format-fix": "prettier --write ts/",
     "lint": "eslint ts/ --ext .ts,.tsx",

@@ -1,0 +1,12 @@
+{
+  "tests": {
+    "function_propagation_0": {
+      "tex": "u(x+y)=u(x)+u(y)",
+      "input": "<mi>u</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>u</mi><mo>(</mo><mi>y</mi><mo>)</mo>"
+    },
+    "function_propagation_1": {
+      "tex": "u(x)+u(y)=u(x+y)",
+      "input": "<mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>+</mo><mi>u</mi><mo>(</mo><mi>y</mi><mo>)</mo><mo>=</mo><mi>u</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo>"
+    }
+  }
+}

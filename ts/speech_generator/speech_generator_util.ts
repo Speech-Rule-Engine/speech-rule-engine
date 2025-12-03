@@ -167,8 +167,6 @@ export function computePrefix(node: Element): AuditoryDescription[] {
     ? SpeechRuleEngine.getInstance().runInSetting(
         {
           modality: 'prefix',
-          domain: 'default',
-          style: 'default',
           strict: true,
           speech: true
         },

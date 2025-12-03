@@ -84,8 +84,13 @@ export class PrefixTest extends SpeechTest {
     if (this.field('grammar')) {
       Grammar.getInstance().setParameter(this.field('grammar'), true);
     }
-    super.method();
-    Grammar.getInstance().clear();
+    try {
+      super.method();
+    } catch(e) {
+      throw e;
+    } finally {
+      Grammar.getInstance().clear();
+    }
   }
 
   /**

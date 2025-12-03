@@ -345,14 +345,7 @@ export abstract class BaseRuleStore
   public parseCstr(cstr: string): DynamicCstr {
     try {
       // TODO: Have a parser that respects generators.
-      return this.parser.parse(
-        this.locale +
-          '.' +
-          this.modality +
-          (this.domain ? '.' + this.domain : '') +
-          '.' +
-          cstr
-      );
+      return this.parser.parse(this.preParseCstr(cstr));
     } catch (err) {
       if (err.name === 'RuleError') {
         console.error(
@@ -485,12 +478,15 @@ export abstract class BaseRuleStore
     }
     // Overwrite previously defined rules!
     this.ignoreRules(name);
-    const regexp = new RegExp(
-      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
-    );
+    // const regexp = new RegExp(
+    //   '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    // );
+    const regexp = new RegExp('^\\w+\\.\\w+\\.');
     prec.conditions.forEach(([dynamic, prec]) => {
       // TODO: Work this out wrt. domain.
       const newDynamic = this.parseCstr(dynamic.toString().replace(regexp, ''));
+      // console.log(`ParseDYNAMIC ${regexp} ${dynamic.toString()} ${dynamic.toString().replace(regexp, '')} ${newDynamic}`);
+      // TODO: HERE is the problem!!!!
       this.addRule(new SpeechRule(name, newDynamic, prec, postc));
     });
   }
@@ -543,6 +539,7 @@ export abstract class BaseRuleStore
       const newDynamic = this.parseCstr(
         rule.dynamicCstr.toString().replace(regexp, '')
       );
+      // console.log(`ParseDYNAMIC ${rule.dynamicCstr.toString()} ${rule.dynamicCstr.toString().replace(regexp, '')} ${newDynamic}`);
       this.addRule(
         new SpeechRule(rule.name, newDynamic, rule.precondition, rule.action)
       );
@@ -587,6 +584,18 @@ export abstract class BaseRuleStore
     const generator = this.context.customGenerators.lookup(cstr);
     return generator ? (generator() as string[]) : [cstr];
   }
+
+  private preParseCstr(cstr: string): string {
+    const match = cstr.match('\(.+\)\\.\(.+\)');
+    return this.locale +
+      '.' +
+      this.modality +
+      '.' +
+      (match ? cstr :
+        ((this.domain ? this.domain : '') +
+          '.' + cstr))
+  }
+
 }
 
 // Conditions are clusters of preconditions that are used to define rules via
@@ -637,6 +646,7 @@ class Condition {
       }
     }
     this._conditions = this._conditions.concat(newConds);
+    // console.log(`DYNAMIC2: ${this._conditions}`);
   }
 
   /**

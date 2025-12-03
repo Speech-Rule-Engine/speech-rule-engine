@@ -1246,7 +1246,21 @@ export class SemanticProcessor {
       leaf.role = SemanticRole.TEXT;
       return leaf;
     }
-    leaf.role = SemanticRole.UNKNOWN;
+    const content = [...leaf.textContent];
+    if (content.length !== 1) {
+      leaf.role = SemanticRole.UNKNOWN;
+      return leaf;
+    }
+    // Reclassifying length 1 text elements that are not identifiers
+    const meaning = SemanticMap.Meaning.get(content[0]);
+    if (meaning.type === SemanticType.UNKNOWN ||
+      meaning.type === SemanticType.IDENTIFIER) {
+      return leaf;
+    }
+    leaf.type = meaning.type;
+    leaf.role = meaning.role;
+    leaf.font = meaning.font;
+    leaf.addAnnotation('general', 'text');
     return leaf;
   }
 

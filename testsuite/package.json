@@ -20,7 +20,7 @@
     "compile:local": "pnpm compile; pnpm local",
     "prepare": "node tests.config.js",
     "build": "pnpm clean; pnpm prepare && pnpm compile",
-    "clean": "pnpm rimraf dist js tests/output tests/json tests/analyse tests/actions coverage",
+    "clean": "pnpm rimraf dist js tests coverage",
     "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
   },
   "imports": {

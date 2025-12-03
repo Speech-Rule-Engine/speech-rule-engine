@@ -317,6 +317,7 @@ const REVERSE_MAPPING: string[][] = [
   ['Log', SemanticType.FUNCTION, SemanticRole.PREFIXFUNC, 'category:Logarithm'], // specific
   ['Matrix', SemanticType.MATRIX, ''], // multiple
   ['Matrix', SemanticType.VECTOR, ''], // multiple
+  ['MultiLineLabel', SemanticType.ROW, ''],
   ['MultiLineLabel', SemanticType.MULTILINE, SemanticRole.LABEL], // more, multiple (table)
   ['MultiLinePausesBetweenColumns', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
   ['MultiLineOverview', SemanticType.MULTILINE, ''], // more, multiple (table)

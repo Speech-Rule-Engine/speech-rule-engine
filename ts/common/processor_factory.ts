@@ -35,6 +35,8 @@ import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';
 
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+
 const PROCESSORS = new Map();
 
 /**
@@ -226,6 +228,48 @@ set(
     }
   })
 );
+
+//  json: Json version of the semantic tree for visualization
+set(
+  new Processor('vis', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      const stree = Semantic.getTree(mml, Engine.getInstance().options);
+      const json = stree.toJson();
+      json.stree = rewriteJson(json.stree);
+      return json;
+    },
+    print: function (json) {
+      return JSON.stringify(json);
+    },
+    pprint: function (json) {
+      return JSON.stringify(json, null, 2);
+    }
+  })
+);
+
+type JSON = any;
+
+function rewriteJson(node: JSON): JSON {
+  if (!node.children) {
+    return node;
+  }
+  if (node.children) {
+    node.children.forEach((node: JSON) => node.child = true);
+  }
+  if (node.content) {
+    node.content.forEach((node: JSON) => node.cont = true);
+  }
+  node.children = SemanticSkeleton.combineContentChildren<JSON>(
+      node.type,
+      node.role,
+      node.content || [],
+      node.children || []
+    );
+  // delete node.content;
+  node.children.forEach((node: JSON) => rewriteJson(node));
+  return node;
+}
 
 //  description: List of auditory descriptions.
 set(

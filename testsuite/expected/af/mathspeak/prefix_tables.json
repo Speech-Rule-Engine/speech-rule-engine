@@ -1,0 +1,177 @@
+{
+  "name": "AfrikaansPrefixTables",
+  "locale": "af",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Afrikaans Prefix Tables rule tests.",
+  "active": "PrefixAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Binomials_0": {
+      "expected": "Beskikbare Hoeveelheid"
+    },
+    "Binomials_1": {
+      "expected": "Gekose Hoeveelheid"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "Beskikbare Hoeveelheid"
+    },
+    "Binomials_1_extra": {
+      "expected": "Gekose Hoeveelheid"
+    },
+    "Vectors_0": {
+      "expected": "1. Ry"
+    },
+    "Vectors_1": {
+      "expected": "2. Ry"
+    },
+    "Vectors_2": {
+      "expected": "3. Ry"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1. Ry"
+    },
+    "Matrices_depth_1": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Matrices_depth_2": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Matrices_depth_3": {
+      "expected": "2. Ry"
+    },
+    "Matrices_depth_4": {
+      "expected": "2. Ry, 1. kolom"
+    },
+    "Matrices_depth_5": {
+      "expected": "2. Ry, 2. kolom"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Ry"
+    },
+    "Matrices_1": {
+      "expected": "1. Kolom"
+    },
+    "Matrices_2": {
+      "expected": "2. Kolom"
+    },
+    "Matrices_3": {
+      "expected": "2. Ry"
+    },
+    "Matrices_4": {
+      "expected": "1. Kolom"
+    },
+    "Matrices_5": {
+      "expected": "2. Kolom"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": "1. Ry"
+    },
+    "Table_1": {
+      "expected": "1. Ry"
+    },
+    "Table_2": {
+      "expected": "1. Ry"
+    },
+    "Table_3": {
+      "expected": "2. Ry"
+    },
+    "Table_4": {
+      "expected": "1. Ry"
+    },
+    "Table_5": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_0": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_1": {
+      "expected": "1. Kolom"
+    },
+    "Table_Cell_1a": {
+      "expected": "2. Kolom"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Kolom"
+    },
+    "Table_Cell_4a": {
+      "expected": "2. Kolom"
+    },
+    "Table_Cell_5": {
+      "expected": "1. Kolom"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Kolom"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Ry"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Ry"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Ry, 2. kolom"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Ry, 1. kolom"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Ry, 2. kolom"
+    }
+  }
+}

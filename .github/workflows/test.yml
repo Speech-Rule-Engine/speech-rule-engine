@@ -26,7 +26,11 @@ jobs:
           run_install: false
 
       - name: Setup Speech Rule Engine
-        run: pnpm i; pnpm build
+        run: |
+          pnpm -r i
+          pnpm build
+          cd testsuite
+          pnpm compile
 
       - name: Upload build
         uses: actions/upload-artifact@v4
@@ -36,6 +40,8 @@ jobs:
                 lib
                 js
                 package.json
+                testsuite/js
+                testsuite/tests
 
   test:
     strategy:
@@ -62,7 +68,6 @@ jobs:
       - name: Set up tests
         run: |
           pnpm -r i --ignore-scripts
-          cd testsuite; pnpm build;
 
       - name: Run tests for ${{ matrix.block }}
         run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json

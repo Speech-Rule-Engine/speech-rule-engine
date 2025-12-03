@@ -40,7 +40,8 @@ export async function copyTestLocale(
   source: string,
   locale: string,
   loc1: string,
-  loc2: string
+  loc2: string,
+  update = true
 ) {
   const tests = factoryget(source);
   const dst = path.join(
@@ -48,15 +49,13 @@ export async function copyTestLocale(
     locale,
     ...source.split('/').slice(-2)
   );
-  delete tests.jsonTests.tests;
   tests.jsonTests.locale = locale;
   replaceInTests(tests.jsonTests, 'name', loc1, loc2);
   replaceInTests(tests.jsonTests, 'active', loc1, loc2);
   replaceInTests(tests.jsonTests, 'information', loc1, loc2);
   tests.jsonTests['compare'] = true;
-  tests.jsonTests.tests = {};
   TestUtil.saveJson(dst, tests.jsonTests);
-  return addActual(dst);
+  return update ? addActual(dst) : null;
 }
 
 /**

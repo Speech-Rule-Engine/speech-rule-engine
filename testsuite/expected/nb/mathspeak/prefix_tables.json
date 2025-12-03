@@ -1,0 +1,177 @@
+{
+  "name": "BokmalPrefixTables",
+  "locale": "nb",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Bokmal Prefix Tables rule tests.",
+  "active": "PrefixBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Binomials_0": {
+      "expected": "Utvalg"
+    },
+    "Binomials_1": {
+      "expected": "Stikkprøvestørrelse"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "Utvalg"
+    },
+    "Binomials_1_extra": {
+      "expected": "Stikkprøvestørrelse"
+    },
+    "Vectors_0": {
+      "expected": "1. Rad"
+    },
+    "Vectors_1": {
+      "expected": "2. Rad"
+    },
+    "Vectors_2": {
+      "expected": "3. Rad"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1. Rad"
+    },
+    "Matrices_depth_1": {
+      "expected": "1. Rad, 1. Kolonne"
+    },
+    "Matrices_depth_2": {
+      "expected": "1. Rad, 2. Kolonne"
+    },
+    "Matrices_depth_3": {
+      "expected": "2. Rad"
+    },
+    "Matrices_depth_4": {
+      "expected": "2. Rad, 1. Kolonne"
+    },
+    "Matrices_depth_5": {
+      "expected": "2. Rad, 2. Kolonne"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Rad"
+    },
+    "Matrices_1": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_2": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_3": {
+      "expected": "2. Rad"
+    },
+    "Matrices_4": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_5": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": "1. Rad"
+    },
+    "Table_1": {
+      "expected": "1. Rad"
+    },
+    "Table_2": {
+      "expected": "1. Rad"
+    },
+    "Table_3": {
+      "expected": "2. Rad"
+    },
+    "Table_4": {
+      "expected": "1. Rad"
+    },
+    "Table_5": {
+      "expected": "2. Rad"
+    },
+    "Table_Cell_0": {
+      "expected": "1. Rad"
+    },
+    "Table_Cell_1": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_1a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Rad"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Rad"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_4a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_5": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": "1. Rad"
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Rad, 1. Kolonne"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Rad, 2. Kolonne"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Rad"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Rad"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Rad, 1. Kolonne"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Rad, 2. Kolonne"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Rad, 1. Kolonne"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Rad, 2. Kolonne"
+    }
+  }
+}

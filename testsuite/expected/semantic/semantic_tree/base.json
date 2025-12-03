@@ -4,6 +4,8 @@
   "information": "Semantic Tree tests.",
   "exclude": [],
   "tests": {
+    "_comment_0": " Numbers.",
+    "_comment_1": " Test number representations.",
     "Wrappers_0": {
       "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></infixop></stree>"
     },
@@ -13,6 +15,8 @@
     "Wrappers_2": {
       "expected": "<stree><fenced role=\"neutral\" id=\"3\"><content><fence role=\"neutral\" id=\"0\">|</fence><fence role=\"neutral\" id=\"2\">|</fence></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier></children></fenced></stree>"
     },
+    "_comment_2": " Test mixed number representations.",
+    "_comment_3": " Relations.",
     "Scripts_0": {
       "expected": "<stree><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></subscript></stree>"
     },
@@ -37,8 +41,8 @@
     "Scripts_7": {
       "expected": "<stree><superscript role=\"latinletter\" id=\"7\"><children><subscript role=\"subsup\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">d</identifier></children></infixop></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">c</identifier></children></superscript></stree>"
     },
-    "_comment_0": " Numbers.",
-    "_comment_1": " Test number representations.",
+    "_comment_4": " Test relation trees.",
+    "_comment_5": " Operators.",
     "Numbers_0": {
       "expected": "<stree><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">2</number></stree>"
     },
@@ -54,7 +58,7 @@
     "Numbers_4": {
       "expected": "<stree><fraction role=\"division\" id=\"2\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">1</number><number role=\"float\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2.5</number></children></fraction></stree>"
     },
-    "_comment_2": " Test mixed number representations.",
+    "_comment_6": " Test operator trees with pre- and postfixes.",
     "MixedNumbers_0": {
       "expected": "<stree><number role=\"mixed\" id=\"4\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">3</number><fraction role=\"vulgar\" annotation=\"clearspeak:simple\" id=\"3\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">1</number><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></fraction></children></number></stree>"
     },
@@ -80,8 +84,8 @@
       "brief": true,
       "expected": "<infixop>⁢<content><operator>⁢</operator><operator>⁢</operator></content><children><identifier>b</identifier><number><children><number>3</number><fraction><children><number>1</number><number>2</number></children></fraction></children></number><identifier>a</identifier></children></infixop>"
     },
-    "_comment_3": " Relations.",
-    "_comment_4": " Test relation trees.",
+    "_comment_7": " Pathological operator only case.",
+    "_comment_8": " Single identifier with prefixes.",
     "Relations_0": {
       "brief": true,
       "expected": "<relation>=</relation>"
@@ -98,108 +102,104 @@
       "brief": true,
       "expected": "<multirel><content><relation>=</relation><relation>=</relation><relation>≤</relation></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier><identifier>d</identifier></children></multirel>"
     },
-    "_comment_5": " Operators.",
-    "_comment_6": " Test operator trees with pre- and postfixes.",
-    "_comment_7": " Pathological operator only case.",
+    "_comment_9": " Single identifier with prefix and negative.",
+    "_comment_10": " Single identifier with postfixes.",
+    "_comment_11": " Single identifier with pre- and postfixes.",
     "PrePostfixOperators_0": {
       "brief": true,
       "expected": "<prefixop>+<content><operator>+</operator></content><children><prefixop>-<content><operator>-</operator></content><children><operator>+</operator></children></prefixop></children></prefixop>"
     },
-    "_comment_8": " Single identifier with prefixes.",
+    "_comment_12": " Single identifier with mixed pre- and postfixes.",
     "PrePostfixOperators_1": {
       "brief": true,
       "expected": "<prefixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop>"
     },
-    "_comment_9": " Single identifier with prefix and negative.",
+    "_comment_13": " Two identifiers with pre- and postfixes.",
     "PrePostfixOperators_2": {
       "brief": true,
       "expected": "<prefixop>+<content><operator>+</operator></content><children><prefixop>-<content><operator>-</operator></content><children><identifier>a</identifier></children></prefixop></children></prefixop>"
     },
-    "_comment_10": " Single identifier with postfixes.",
+    "_comment_14": " Three identifiers with pre- and postfixes.",
     "PrePostfixOperators_3": {
       "brief": true,
       "expected": "<postfixop>+ -<content><operator>+</operator><operator>-</operator></content><children><identifier>a</identifier></children></postfixop>"
     },
-    "_comment_11": " Single identifier with pre- and postfixes.",
+    "_comment_15": " Test operator trees with single operator.",
     "PrePostfixOperators_4": {
       "brief": true,
       "expected": "<postfixop>+ +<content><operator>+</operator><operator>+</operator></content><children><prefixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop></children></postfixop>"
     },
-    "_comment_12": " Single identifier with mixed pre- and postfixes.",
+    "_comment_16": " Single identifier.",
     "PrePostfixOperators_5": {
       "brief": true,
       "expected": "<postfixop>∓ +<content><operator>∓</operator><operator>+</operator></content><children><prefixop>∓ +<content><operator>∓</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop></children></postfixop>"
     },
-    "_comment_13": " Two identifiers with pre- and postfixes.",
+    "_comment_17": " Single implicit node.",
     "PrePostfixOperators_6": {
       "brief": true,
       "expected": "<infixop>∓<content><operator>∓</operator></content><children><prefixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop><postfixop>+<content><operator>+</operator></content><children><prefixop>+<content><operator>+</operator></content><children><identifier>b</identifier></children></prefixop></children></postfixop></children></infixop>"
     },
-    "_comment_14": " Three identifiers with pre- and postfixes.",
+    "_comment_18": " Implicit multi node.",
     "PrePostfixOperators_7": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><infixop>∓<content><operator>∓</operator></content><children><prefixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop><prefixop>+<content><operator>+</operator></content><children><identifier>b</identifier></children></prefixop></children></infixop><postfixop>+<content><operator>+</operator></content><children><prefixop>∓<content><operator>∓</operator></content><children><identifier>c</identifier></children></prefixop></children></postfixop></children></infixop>"
     },
-    "_comment_15": " Test operator trees with single operator.",
-    "_comment_16": " Single identifier.",
+    "_comment_19": " Single addition.",
+    "_comment_20": " Multi addition.",
     "SingleOperators_0": {
       "brief": true,
       "expected": "<identifier>a</identifier>"
     },
-    "_comment_17": " Single implicit node.",
+    "_comment_21": " Multi addition with implicit node.",
     "SingleOperators_1": {
       "brief": true,
       "expected": "<infixop>⁢<content><operator>⁢</operator></content><children><identifier>a</identifier><identifier>b</identifier></children></infixop>"
     },
-    "_comment_18": " Implicit multi node.",
+    "_comment_22": " Test operator trees with multiple operators.",
     "SingleOperators_2": {
       "brief": true,
       "expected": "<infixop>⁢<content><operator>⁢</operator><operator>⁢</operator></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier></children></infixop>"
     },
-    "_comment_19": " Single addition.",
+    "_comment_23": " Addition and subtraction.",
     "SingleOperators_3": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier></children></infixop>"
     },
-    "_comment_20": " Multi addition.",
+    "_comment_24": " Addition and subtraction.",
     "SingleOperators_4": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier></children></infixop>"
     },
-    "_comment_21": " Multi addition with implicit node.",
+    "_comment_25": " Addition and explicit multiplication.",
     "SingleOperators_5": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><infixop>⁢<content><operator>⁢</operator></content><children><identifier>b</identifier><identifier>c</identifier></children></infixop><identifier>d</identifier></children></infixop>"
     },
-    "_comment_22": " Test operator trees with multiple operators.",
-    "_comment_23": " Addition and subtraction.",
+    "_comment_26": " Addition with explicit and implicit multiplication.",
+    "_comment_27": " Two Additions, subtraction plus explicit and implicit multiplication,",
     "MultipleOperators_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><infixop>-<content><operator>-</operator></content><children><infixop>+<content><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier></children></infixop><identifier>c</identifier></children></infixop><identifier>d</identifier></children></infixop>"
     },
-    "_comment_24": " Addition and subtraction.",
+    "_comment_28": " one prefix and one postfix.",
     "MultipleOperators_1": {
       "brief": true,
       "expected": "<infixop>-<content><operator>-</operator><operator>-</operator></content><children><infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier></children></infixop><identifier>d</identifier><identifier>e</identifier></children></infixop>"
     },
-    "_comment_25": " Addition and explicit multiplication.",
+    "_comment_29": " Test operator trees with multiplication operators.",
     "MultipleOperators_2": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><infixop>∘<content><operator>∘</operator></content><children><identifier>b</identifier><identifier>c</identifier></children></infixop><identifier>d</identifier></children></infixop>"
     },
-    "_comment_26": " Addition with explicit and implicit multiplication.",
+    "_comment_30": " Addition and subtraction.",
     "MultipleOperators_3": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><infixop>∘<content><operator>∘</operator></content><children><identifier>b</identifier><infixop>⁢<content><operator>⁢</operator></content><children><identifier>c</identifier><identifier>d</identifier></children></infixop></children></infixop><infixop>∘<content><operator>∘</operator></content><children><identifier>e</identifier><identifier>f</identifier></children></infixop></children></infixop>"
     },
-    "_comment_27": " Two Additions, subtraction plus explicit and implicit multiplication,",
-    "_comment_28": " one prefix and one postfix.",
     "MultipleOperators_4": {
       "brief": true,
       "expected": "<infixop>⊕<content><operator>⊕</operator><operator>⊕</operator></content><children><infixop>+<content><operator>+</operator></content><children><infixop>-<content><operator>-</operator></content><children><infixop>+<content><operator>+</operator><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier><identifier>b</identifier><infixop>⁢<content><operator>⁢</operator></content><children><identifier>c</identifier><identifier>d</identifier></children></infixop><infixop>∘<content><operator>∘</operator></content><children><identifier>e</identifier><identifier>f</identifier></children></infixop></children></infixop><identifier>g</identifier></children></infixop><prefixop>+<content><operator>+</operator></content><children><identifier>h</identifier></children></prefixop></children></infixop><identifier>i</identifier><postfixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>j</identifier></children></postfixop></children></infixop>"
     },
-    "_comment_29": " Test operator trees with multiplication operators.",
-    "_comment_30": " Addition and subtraction.",
     "MultiplicationOperators_0": {
       "brief": true,
       "expected": "<infixop>*<content><operator>*</operator><operator>*</operator><operator>*</operator></content><children><identifier>a</identifier><identifier>b</identifier><identifier>c</identifier><identifier>d</identifier></children></infixop>"
@@ -224,7 +224,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><infixop>⁢<content><operator>⁢</operator></content><children><number>1</number><identifier>J</identifier></children></infixop><infixop>·<content><operator>·</operator><operator>·</operator></content><children><infixop>⁢<content><operator>⁢</operator></content><children><number>1</number><identifier>a</identifier></children></infixop><superscript><children><identifier>m</identifier><number>2</number></children></superscript><superscript><children><identifier>s</identifier><prefixop>-<content><operator>-</operator></content><children><number>2</number></children></prefixop></children></superscript></children></infixop></children></relseq>"
     },
-    "_comment_85": " Square roots",
+    "_comment_89": " Simple functions with surrounding operators.",
     "SquareRoots_0": {
       "brief": false,
       "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
@@ -241,7 +241,7 @@
     "SquareRoots_4": {
       "expected": "<stree><sqrt role=\"unknown\" id=\"6\"><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"2\"><children><sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier></children></sqrt></children></sqrt><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></children></sqrt></stree>"
     },
-    "_comment_86": " Regular roots",
+    "_comment_90": " Multiple simple functions.",
     "RegularRoots_0": {
       "brief": false,
       "expected": "<stree><root role=\"unknown\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">n</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier></children></root></stree>"
@@ -255,7 +255,7 @@
     "RegularRoots_3": {
       "expected": "<stree><root role=\"unknown\" id=\"9\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">m</identifier><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><root role=\"unknown\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">x</identifier></children></root><root role=\"unknown\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">l</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">y</identifier></children></root></children></infixop></children></root></stree>"
     },
-    "_comment_87": " Mixed roots",
+    "_comment_91": " Nested simple functions.",
     "MixedRoots_0": {
       "brief": false,
       "expected": "<stree><sqrt role=\"unknown\" id=\"3\"><children><root role=\"unknown\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">n</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier></children></root></children></sqrt></stree>"
@@ -266,7 +266,7 @@
     "MixedRoots_2": {
       "expected": "<stree><root role=\"unknown\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">n</identifier><sqrt role=\"unknown\" id=\"5\"><children><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">y</identifier></children></infixop></children></sqrt></children></root></stree>"
     },
-    "_comment_88": " Simple function applications",
+    "_comment_92": " Simple functions with explicit function application.",
     "SimpleFuncsSingle_0": {
       "brief": true,
       "expected": "<identifier>f</identifier>"
@@ -315,7 +315,7 @@
       "brief": true,
       "expected": "<infixop>⁢<content><operator>⁢</operator></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></infixop>"
     },
-    "_comment_89": " Simple functions with surrounding operators.",
+    "_comment_93": " Prefix function applications",
     "SimpleFuncsWithOps_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><number>1</number><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></infixop>"
@@ -352,7 +352,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation><relation>=</relation></content><children><identifier>a</identifier><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><identifier>b</identifier></children></relseq>"
     },
-    "_comment_90": " Multiple simple functions.",
+    "_comment_94": " Prefix functions applications with surrounding operators.",
     "SimpleFuncsMulti_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><identifier>g</identifier></content><children><identifier>g</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></infixop>"
@@ -365,7 +365,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><identifier>g</identifier></content><children><identifier>g</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>y</identifier></children></fenced></children></appl></children></infixop><appl><content><punctuation>⁡</punctuation><identifier>h</identifier></content><children><identifier>h</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>⁢<content><operator>⁢</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl></children></relseq>"
     },
-    "_comment_91": " Nested simple functions.",
+    "_comment_95": " Multiple prefix function applications.",
     "SimpleFuncsNested_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><identifier>g</identifier></content><children><identifier>g</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></fenced></children></appl>"
@@ -382,7 +382,7 @@
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><identifier>P</identifier></content><children><identifier>P</identifier><fenced><content><fence>[</fence><fence>]</fence></content><children><relseq>=<content><relation>=</relation></content><children><identifier>x</identifier><number>2</number></children></relseq></children></fenced></children></appl>"
     },
-    "_comment_92": " Simple functions with explicit function application.",
+    "_comment_96": " Prefix function applications with sub- and superscripts.",
     "SimpleFuncsExplicitApp_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><identifier>f</identifier><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl>"
@@ -399,7 +399,7 @@
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><superscript><children><subscript><children><identifier>f</identifier><identifier>n</identifier></children></subscript><number>2</number></children></superscript><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><identifier>f</identifier></content><children><superscript><children><subscript><children><identifier>f</identifier><identifier>m</identifier></children></subscript><number>2</number></children></superscript><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl></children></infixop>"
     },
-    "_comment_93": " Prefix function applications",
+    "_comment_97": " Prefix function applications with unfenced arguments.",
     "PrefixFuncsSingle_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl>"
@@ -440,7 +440,7 @@
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>+<content><operator>+</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl>"
     },
-    "_comment_94": " Prefix functions applications with surrounding operators.",
+    "_comment_98": " Prefix function applications with unfenced arguments in an operator",
     "PrefixFuncsWithOps_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><number>1</number><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></infixop>"
@@ -477,7 +477,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation><relation>=</relation></content><children><identifier>a</identifier><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><identifier>b</identifier></children></relseq>"
     },
-    "_comment_95": " Multiple prefix function applications.",
+    "_comment_99": " expression.",
     "PrefixFuncsMulti_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></infixop>"
@@ -490,7 +490,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>y</identifier></children></fenced></children></appl></children></infixop><appl><content><punctuation>⁡</punctuation><function>tan</function></content><children><function>tan</function><fenced><content><fence>(</fence><fence>)</fence></content><children><infixop>⁢<content><operator>⁢</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></fenced></children></appl></children></relseq>"
     },
-    "_comment_96": " Prefix function applications with sub- and superscripts.",
+    "_comment_100": " Multiple prefix function applications with unfenced arguments.",
     "PrefixFuncsScripts_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><superscript><children><function>sin</function><number>2</number></children></superscript><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl>"
@@ -507,7 +507,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><superscript><children><function>sin</function><number>2</number></children></superscript><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><superscript><children><function>cos</function><number>2</number></children></superscript><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>y</identifier></children></fenced></children></appl></children></infixop><number>1</number></children></relseq>"
     },
-    "_comment_97": " Prefix function applications with unfenced arguments.",
+    "_comment_101": " Prefix function applications with sub- and superscripts and unfenced",
     "PrefixFuncsUnfenced_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><identifier>x</identifier></children></appl>"
@@ -544,8 +544,8 @@
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fraction><children><number>1</number><number>2</number></children></fraction></children></appl>"
     },
-    "_comment_98": " Prefix function applications with unfenced arguments in an operator",
-    "_comment_99": " expression.",
+    "_comment_102": " arguments.",
+    "_comment_103": " Prefix functions without arguments.",
     "PrefixFuncsUnfencedOps_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><number>1</number><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><identifier>x</identifier></children></appl></children></infixop>"
@@ -582,7 +582,7 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation><relation>=</relation></content><children><identifier>a</identifier><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><identifier>x</identifier></children></appl><identifier>b</identifier></children></relseq>"
     },
-    "_comment_100": " Multiple prefix function applications with unfenced arguments.",
+    "_comment_104": " Nested prefix function applications, both with and without fenced arguments.",
     "PrefixFuncsMultiUnfenced_0": {
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><identifier>x</identifier></children></appl><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><identifier>x</identifier></children></appl></children></infixop>"
@@ -595,8 +595,6 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><infixop>+<content><operator>+</operator></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><identifier>x</identifier></children></appl><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><identifier>y</identifier></children></appl></children></infixop><appl><content><punctuation>⁡</punctuation><function>tan</function></content><children><function>tan</function><infixop>⁢<content><operator>⁢</operator></content><children><identifier>x</identifier><identifier>y</identifier></children></infixop></children></appl></children></relseq>"
     },
-    "_comment_101": " Prefix function applications with sub- and superscripts and unfenced",
-    "_comment_102": " arguments.",
     "PrefixFuncsScriptUnfenced_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><superscript><children><function>sin</function><number>2</number></children></superscript><identifier>x</identifier></children></appl>"
@@ -617,7 +615,6 @@
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><superscript><children><subscript><children><superscript><children><subscript><children><function>sin</function><number>2</number></children></subscript><number>1</number></children></superscript><identifier>n</identifier></children></subscript><identifier>m</identifier></children></superscript><identifier>x</identifier></children></appl>"
     },
-    "_comment_103": " Prefix functions without arguments.",
     "PrefixFuncsNoArgs_0": {
       "brief": true,
       "expected": "<function>sin</function>"
@@ -638,7 +635,6 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><function>sin</function><fraction><children><number>1</number><function>csc</function></children></fraction></children></relseq>"
     },
-    "_comment_104": " Nested prefix function applications, both with and without fenced arguments.",
     "PrefixFuncsNested_0": {
       "brief": true,
       "expected": "<appl><content><punctuation>⁡</punctuation><function>log</function></content><children><function>log</function><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><identifier>x</identifier></children></appl></children></appl>"
@@ -651,7 +647,6 @@
       "brief": true,
       "expected": "<relseq>=<content><relation>=</relation></content><children><appl><content><punctuation>⁡</punctuation><function>log</function></content><children><function>log</function><appl><content><punctuation>⁡</punctuation><function>cos</function></content><children><function>cos</function><identifier>x</identifier></children></appl></children></appl><appl><content><punctuation>⁡</punctuation><function>ln</function></content><children><function>ln</function><fenced><content><fence>(</fence><fence>)</fence></content><children><appl><content><punctuation>⁡</punctuation><function>sin</function></content><children><function>sin</function><fenced><content><fence>(</fence><fence>)</fence></content><children><identifier>x</identifier></children></fenced></children></appl></children></fenced></children></appl></children></relseq>"
     },
-    "_comment_179": " Set expressions.",
     "Sets_0": {
       "expected": "<fenced role=\"set empty\" id=\"3\"><content><fence role=\"open\" id=\"0\">{</fence><fence role=\"close\" id=\"1\">}</fence></content><children><empty role=\"unknown\" id=\"2\"/></children></fenced>"
     },
@@ -682,7 +677,6 @@
     "Sets_9": {
       "expected": "<stree><fenced role=\"leftright\" id=\"6\"><content><fence role=\"open\" id=\"0\">{</fence><fence role=\"close\" id=\"4\">}</fence></content><children><infixop role=\"multiplication\" id=\"5\">*<content><operator role=\"multiplication\" id=\"2\">*</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">y</identifier></children></infixop></children></fenced></stree>"
     },
-    "_comment_180": " Test for issue #287",
     "Sets_10": {
       "expected": "<stree><appl role=\"simple function\" annotation=\"clearspeak:simple\" id=\"13\"><content><punctuation role=\"application\" id=\"12\">⁡</punctuation><identifier role=\"simple function\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">Γ</identifier></content><children><subscript role=\"simple function\" id=\"7\"><children><identifier role=\"simple function\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">Γ</identifier><fenced role=\"set singleton\" id=\"6\"><content><fence role=\"open\" id=\"1\">{</fence><fence role=\"close\" id=\"5\">}</fence></content><children><subscript role=\"latinletter\" id=\"4\"><children><identifier role=\"latinletter\" font=\"caligraphic\" annotation=\"clearspeak:simple\" id=\"2\">M</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">k</identifier></children></subscript></children></fenced></children></subscript><fenced role=\"leftright\" id=\"11\"><content><fence role=\"open\" id=\"8\">(</fence><fence role=\"close\" id=\"10\">)</fence></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">X</identifier></children></fenced></children></appl></stree>"
     },
@@ -704,7 +698,6 @@
     "HiddenEmptyTokens_2": {
       "expected": "<stree><subscript role=\"vbar\" embellished=\"punctuation\" id=\"4\"><children><punctuation role=\"vbar\" id=\"2\">|</punctuation><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">t</identifier></children></subscript></stree>"
     },
-    "_comment_181": " Tests for vulgar fractions.",
     "VulgarFractions_0": {
       "expected": "<stree><fraction role=\"vulgar\" annotation=\"clearspeak:simple\" id=\"2\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">1</number><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></fraction></stree>"
     },
@@ -717,23 +710,18 @@
     "VulgarFractions_3": {
       "expected": "<stree><fraction role=\"division\" id=\"6\"><children><superscript role=\"integer\" id=\"2\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">3</number><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">4</number></children></superscript><superscript role=\"integer\" id=\"5\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">8</number><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">10</number></children></superscript></children></fraction></stree>"
     },
-    "_comment_182": " Issue 376: Division treated similar to multiplication.",
     "Issue376_0": {
       "expected": "<stree><infixop role=\"addition\" id=\"5\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">2</number><infixop role=\"division\" id=\"6\">÷<content><operator role=\"division\" id=\"3\">÷</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">27</number><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">9</number></children></infixop></children></infixop></stree>"
     },
-    "_comment_183": " Issue 382: Singleton integral in expression",
     "Issue382_0": {
       "expected": "<relseq role=\"equality\" id=\"3\">=<content><relation role=\"equality\" id=\"0\">=</relation></content><children><empty role=\"unknown\" id=\"2\"/><largeop role=\"integral\" id=\"1\">∫</largeop></children></relseq>"
     },
-    "_comment_184": " TODO: This should be improved.",
     "Issue382_1": {
       "expected": "<stree><infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><largeop role=\"integral\" id=\"0\">∫</largeop><largeop role=\"integral\" id=\"2\">∫</largeop></children></infixop></stree>"
     },
-    "_comment_185": " Issue 383: Mathoperator with dash",
     "Issue383_0": {
       "expected": "<stree><appl role=\"simple function\" annotation=\"clearspeak:simple\" id=\"6\"><content><punctuation role=\"application\" id=\"5\">⁡</punctuation><identifier role=\"simple function\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">p</identifier></content><children><prefixop role=\"simple function\" id=\"2\">-<content><operator role=\"subtraction\" annotation=\"general:text\" id=\"0\">-</operator></content><children><identifier role=\"simple function\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">p</identifier></children></prefixop><identifier role=\"greekletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">ω</identifier></children></appl></stree>"
     },
-    "_comment_186": " Issue 284: Explicitly given invisible plus.",
     "Issue284_0": {
       "expected": "<stree><number role=\"mixed\" id=\"5\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">2</number><fraction role=\"division\" id=\"4\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">3</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">p</identifier></children></fraction></children></number></stree>"
     },
@@ -840,13 +828,13 @@
       "expected": "<stree><identifier role=\"latinletter\" annotation=\"clearspeak:simple\" id=\"0\">aa</identifier></stree>"
     },
     "Html_issue_1": {
-      "expected": "<stree><text role=\"unknown\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">y</text></stree>"
+      "expected": "<stree><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">y</text></stree>"
     },
     "Html_issue_2": {
-      "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><identifier role=\"latinletter\" font=\"normal\" annotation=\"general:text;clearspeak:simple\" id=\"1\">y</identifier></children></infixop></stree>"
+      "expected": "<stree><punctuated role=\"text\" id=\"3\"><content><punctuation role=\"dummy\" id=\"2\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"1\">y</text></children></punctuated></stree>"
     },
     "Html_issue_3": {
-      "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><identifier role=\"latinletter\" font=\"normal\" annotation=\"general:text;clearspeak:simple\" id=\"1\">y</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">y</identifier></children></infixop></stree>"
+      "expected": "<stree><punctuated role=\"text\" id=\"5\"><content><punctuation role=\"dummy\" id=\"3\">⁣</punctuation><punctuation role=\"dummy\" id=\"4\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"1\">y</text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">y</identifier></children></punctuated></stree>"
     },
     "Html_issue_4": {
       "expected": "<stree><punctuated role=\"text\" id=\"5\"><content><punctuation role=\"dummy\" id=\"3\">⁣</punctuation><punctuation role=\"dummy\" id=\"4\">⁣</punctuation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><text role=\"text\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"1\">ay</text><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">y</identifier></children></punctuated></stree>"

@@ -115,7 +115,7 @@
       "expected": "case-setning med 2 casar"
     },
     "AbstrCell_default": {
-      "expected": "1. Kolonne i tabell"
+      "expected": "Kolonne 1 i tabell"
     },
     "AbstrContinuedFraction_default": {
       "expected": "kjedebrøk"
@@ -142,7 +142,7 @@
       "expected": "grenseverdifunksjon"
     },
     "AbstrLine_default": {
-      "expected": "1. Rad i flere linjer"
+      "expected": "rad 1 i flere linjer"
     },
     "AbstrMatrix_default": {
       "expected": "3 gangar 2 matrise"
@@ -175,7 +175,7 @@
       "expected": "nøsta rot med eksponent 3"
     },
     "AbstrRow_default": {
-      "expected": "1. Rad i tabell med 2 kolonner"
+      "expected": "rad 1 i tabell med 2 kolonner"
     },
     "AbstrRowvector_default": {
       "expected": "2 dimensjonal radvektor"

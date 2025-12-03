@@ -101,6 +101,57 @@ function actionStructure(json: ['Action', string, string][]): {[key: string]: Ac
   return structure;
 }
 
+// Pushing new stuff
+export function pushNewActions(
+  locales: string[],
+  domain: string,
+  ignore: string[] = [],
+  rewrite: Record<string, Record<string, string>> = {}
+) {
+  if (!locales || !locales.length) {
+    locales = Array.from(Variables.LOCALES.keys());
+  }
+  locales.forEach(x => pushNewAction(x, domain, ignore, rewrite[x]));
+}
+
+export function pushNewAction(
+  locale: string,
+  domain: string,
+  ignore: string[] = [],
+  rewrite: Record<string, string> = {}
+) {
+  const english = jsonLoadLocale('en', 'english', domain);
+  let language = getLanguage(locale);
+  if (!language) {
+    return;
+  }
+  const actions = jsonLoadLocale(locale, language.toLowerCase(), domain);
+  const actionsEn = actionStructure(english.rules);
+  const actionsLocale = actionStructure(actions.rules);
+  for (const rule of Object.keys(actionsEn)) {
+    if (ignore.includes(rule)) continue;
+    const action1 = actionsEn[rule];
+    const action2 = actionsLocale[rule];
+    if (action2) {
+      console.info(`Action for ${rule} already exists. Ignored.`);
+      continue;
+    }
+    for (let comp of action1.components) {
+      if (comp.type === 'TEXT' && comp.content.match(/^".*"$/)) {
+        for (const [search, replace] of Object.entries(rewrite)) {
+          comp.content = comp.content.replace(search, replace);
+        }
+      }
+      console.log(comp);
+    }
+    console.info(`Pushing ${rule} for ${language} ${domain}`);
+    actions.rules.push(['Action', rule, action1.toString()]);
+  }
+  jsonWriteLocale(locale, language.toLowerCase(), domain, actions);
+}
+
+
+// Diffing
 
 export function ruleDiff(outdir: string) {
   jsonDiff((json1, json2, _locale, language, rules) => {

@@ -759,7 +759,7 @@ splitNemethForFire
 ### Copying tests
 
 ``` javascript
-(await import('./js/module_loader.js')).load('ct');
+ct = await (await import('./js/module_loader.js')).loadPromise('ct');
 ```
 
 Methods to copy test files from existing tests for a locale to tests for a new

@@ -1,0 +1,156 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanPrefix",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "German Prefix rule tests.",
+  "locale": "de",
+  "active": "PrefixGerman",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "Basis"
+    },
+    "Sub_1": {
+      "expected": "Index"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Basis"
+    },
+    "Super_1": {
+      "expected": "Exponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Basis"
+    },
+    "Over_1": {
+      "expected": "Oberer Grenzwert"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Basis"
+    },
+    "Under_1": {
+      "expected": "Unterer Grenzwert"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Zähler"
+    },
+    "Fractions_1": {
+      "expected": "Nenner"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikand"
+    },
+    "Root_1": {
+      "expected": "Wurzelexponent"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Basis"
+    },
+    "SimpleTensors_1": {
+      "expected": "linker unterer Index"
+    },
+    "SimpleTensors_2": {
+      "expected": "linker oberer Index"
+    },
+    "SimpleTensors_3": {
+      "expected": "rechter unterer Index"
+    },
+    "SimpleTensors_4": {
+      "expected": "rechter oberer Index"
+    },
+    "ComplexTensors_0": {
+      "expected": "Basis"
+    },
+    "ComplexTensors_1": {
+      "expected": "1. linker unterer Index"
+    },
+    "ComplexTensors_2": {
+      "expected": "2. linker unterer Index"
+    },
+    "ComplexTensors_3": {
+      "expected": "1. linker oberer Index"
+    },
+    "ComplexTensors_4": {
+      "expected": "2. linker oberer Index"
+    },
+    "ComplexTensors_5": {
+      "expected": "1. rechter unterer Index"
+    },
+    "ComplexTensors_6": {
+      "expected": "2. rechter unterer Index"
+    },
+    "ComplexTensors_7": {
+      "expected": "1. rechter oberer Index"
+    },
+    "ComplexTensors_8": {
+      "expected": "2. rechter oberer Index"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Basis"
+    },
+    "LimBoth_1": {
+      "expected": "Oberer Grenzwert"
+    },
+    "LimBoth_2": {
+      "expected": "Unterer Grenzwert"
+    },
+    "LimBoth_3": {
+      "expected": "Basis"
+    },
+    "LimBoth_4": {
+      "expected": "Basis"
+    },
+    "LimUpper_0": {
+      "expected": "Oberer Grenzwert"
+    },
+    "LimUpper_1": {
+      "expected": "Oberer Grenzwert"
+    },
+    "LimUpper_2": {
+      "expected": "Basis"
+    },
+    "LimUpper_3": {
+      "expected": "Basis"
+    },
+    "LimLower_0": {
+      "expected": "Unterer Grenzwert"
+    },
+    "LimLower_1": {
+      "expected": "Unterer Grenzwert"
+    },
+    "LimLower_2": {
+      "expected": "Basis"
+    },
+    "LimLower_3": {
+      "expected": "Basis"
+    }
+  }
+}

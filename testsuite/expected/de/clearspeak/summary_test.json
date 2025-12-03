@@ -7,7 +7,100 @@
   "locale": "de",
   "domain": "clearspeak",
   "active": "SummaryGerman",
-  "exclude": ["AbstrAddition_brief", "AbstrAddition_sbrief", "AbstrBigop_brief", "AbstrBigop_sbrief", "AbstrBinomial_brief", "AbstrBinomial_sbrief", "AbstrCases_brief", "AbstrCases_sbrief", "AbstrCell_brief", "AbstrCell_sbrief", "AbstrContinuedFraction_brief", "AbstrContinuedFraction_sbrief", "AbstrDeterminant_brief", "AbstrDeterminant_sbrief", "AbstrFraction_brief", "AbstrFraction_sbrief", "AbstrFunction_brief", "AbstrFunction_sbrief", "AbstrIdentifier_brief", "AbstrIdentifier_sbrief", "AbstrInfixop_brief", "AbstrInfixop_sbrief", "AbstrIntegral_brief", "AbstrIntegral_sbrief", "AbstrLim_brief", "AbstrLim_sbrief", "AbstrLine_brief", "AbstrLine_sbrief", "AbstrMatrix_brief", "AbstrMatrix_sbrief", "AbstrMixedNumber_brief", "AbstrMixedNumber_sbrief", "AbstrMultiplication_brief", "AbstrMultiplication_sbrief", "AbstrMultirel_brief", "AbstrMultirel_sbrief", "AbstrNumber_brief", "AbstrNumber_sbrief", "AbstrPunctuated_brief", "AbstrPunctuated_sbrief", "AbstrRelation_brief", "AbstrRelation_sbrief", "AbstrRelationSeq_brief", "AbstrRelationSeq_sbrief", "AbstrRoot_brief", "AbstrRoot_sbrief", "AbstrRootNested_brief", "AbstrRootNested_sbrief", "AbstrRow_brief", "AbstrRow_sbrief", "AbstrRowvector_brief", "AbstrRowvector_sbrief", "AbstrSqrt_brief", "AbstrSqrt_sbrief", "AbstrSqrtNested_brief", "AbstrSqrtNested_sbrief", "AbstrSquarematrix_brief", "AbstrSquarematrix_sbrief", "AbstrSubscript_brief", "AbstrSubscript_sbrief", "AbstrSubsup_brief", "AbstrSubsup_sbrief", "AbstrSuperscript_brief", "AbstrSuperscript_sbrief", "AbstrTable_brief", "AbstrTable_sbrief", "AbstrText_brief", "AbstrText_sbrief", "AbstrVarAddition_brief", "AbstrVarAddition_sbrief", "AbstrVarCases_brief", "AbstrVarCases_sbrief", "AbstrVarDeterminant_brief", "AbstrVarDeterminant_sbrief", "AbstrVarMatrix_brief", "AbstrVarMatrix_sbrief", "AbstrVarMultiplication_brief", "AbstrVarMultiplication_sbrief", "AbstrVarMultirel_brief", "AbstrVarMultirel_sbrief", "AbstrVarPunctuated_brief", "AbstrVarPunctuated_sbrief", "AbstrVarRelation_brief", "AbstrVarRelation_sbrief", "AbstrVarVector_brief", "AbstrVarVector_sbrief", "AbstrVector_brief", "AbstrVector_sbrief", "AbstrVarSubtraction_brief", "AbstrVarSubtraction_sbrief", "AbstrCountImplicit_brief", "AbstrCountImplicit_sbrief"],
+  "exclude": [
+    "AbstrAddition_brief",
+    "AbstrAddition_sbrief",
+    "AbstrBigop_brief",
+    "AbstrBigop_sbrief",
+    "AbstrBinomial_brief",
+    "AbstrBinomial_sbrief",
+    "AbstrCases_brief",
+    "AbstrCases_sbrief",
+    "AbstrCell_brief",
+    "AbstrCell_sbrief",
+    "AbstrContinuedFraction_brief",
+    "AbstrContinuedFraction_sbrief",
+    "AbstrDeterminant_brief",
+    "AbstrDeterminant_sbrief",
+    "AbstrFraction_brief",
+    "AbstrFraction_sbrief",
+    "AbstrFunction_brief",
+    "AbstrFunction_sbrief",
+    "AbstrIdentifier_brief",
+    "AbstrIdentifier_sbrief",
+    "AbstrInfixop_brief",
+    "AbstrInfixop_sbrief",
+    "AbstrIntegral_brief",
+    "AbstrIntegral_sbrief",
+    "AbstrLim_brief",
+    "AbstrLim_sbrief",
+    "AbstrLine_brief",
+    "AbstrLine_sbrief",
+    "AbstrMatrix_brief",
+    "AbstrMatrix_sbrief",
+    "AbstrMixedNumber_brief",
+    "AbstrMixedNumber_sbrief",
+    "AbstrMultiplication_brief",
+    "AbstrMultiplication_sbrief",
+    "AbstrMultirel_brief",
+    "AbstrMultirel_sbrief",
+    "AbstrNumber_brief",
+    "AbstrNumber_sbrief",
+    "AbstrPunctuated_brief",
+    "AbstrPunctuated_sbrief",
+    "AbstrRelation_brief",
+    "AbstrRelation_sbrief",
+    "AbstrRelationSeq_brief",
+    "AbstrRelationSeq_sbrief",
+    "AbstrRoot_brief",
+    "AbstrRoot_sbrief",
+    "AbstrRootNested_brief",
+    "AbstrRootNested_sbrief",
+    "AbstrRow_brief",
+    "AbstrRow_sbrief",
+    "AbstrRowvector_brief",
+    "AbstrRowvector_sbrief",
+    "AbstrSqrt_brief",
+    "AbstrSqrt_sbrief",
+    "AbstrSqrtNested_brief",
+    "AbstrSqrtNested_sbrief",
+    "AbstrSquarematrix_brief",
+    "AbstrSquarematrix_sbrief",
+    "AbstrSubscript_brief",
+    "AbstrSubscript_sbrief",
+    "AbstrSubsup_brief",
+    "AbstrSubsup_sbrief",
+    "AbstrSuperscript_brief",
+    "AbstrSuperscript_sbrief",
+    "AbstrTable_brief",
+    "AbstrTable_sbrief",
+    "AbstrText_brief",
+    "AbstrText_sbrief",
+    "AbstrVarAddition_brief",
+    "AbstrVarAddition_sbrief",
+    "AbstrVarCases_brief",
+    "AbstrVarCases_sbrief",
+    "AbstrVarDeterminant_brief",
+    "AbstrVarDeterminant_sbrief",
+    "AbstrVarMatrix_brief",
+    "AbstrVarMatrix_sbrief",
+    "AbstrVarMultiplication_brief",
+    "AbstrVarMultiplication_sbrief",
+    "AbstrVarMultirel_brief",
+    "AbstrVarMultirel_sbrief",
+    "AbstrVarPunctuated_brief",
+    "AbstrVarPunctuated_sbrief",
+    "AbstrVarRelation_brief",
+    "AbstrVarRelation_sbrief",
+    "AbstrVarVector_brief",
+    "AbstrVarVector_sbrief",
+    "AbstrVector_brief",
+    "AbstrVector_sbrief",
+    "AbstrVarSubtraction_brief",
+    "AbstrVarSubtraction_sbrief",
+    "AbstrCountImplicit_brief",
+    "AbstrCountImplicit_sbrief"
+  ],
   "tests": {
     "AbstrAddition_default": {
       "expected": "Summe mit 2 Summanden"
@@ -22,7 +115,7 @@
       "expected": "Fallunterscheidung mit 2 Fällen"
     },
     "AbstrCell_default": {
-      "expected": "1. Spalte in Tabelle"
+      "expected": "Spalte 1 in Tabelle"
     },
     "AbstrContinuedFraction_default": {
       "expected": "Kettenbruch"
@@ -50,7 +143,7 @@
       "expected": "Grenzwertfunktion"
     },
     "AbstrLine_default": {
-      "expected": "1. Zeile in mehrzeiligem Ausdruck"
+      "expected": "Zeile 1 in mehrzeiligem Ausdruck"
     },
     "AbstrMatrix_default": {
       "expected": "3 mal 2 Matrize"
@@ -83,7 +176,7 @@
       "expected": "verschachtelte Wurzel mit Exponent 3"
     },
     "AbstrRow_default": {
-      "expected": "1. Zeile in Tabelle mit 2 Spalten"
+      "expected": "Zeile 1 in Tabelle mit 2 Spalten"
     },
     "AbstrRowvector_default": {
       "expected": "2 dimensionaler Zeilenvektor"

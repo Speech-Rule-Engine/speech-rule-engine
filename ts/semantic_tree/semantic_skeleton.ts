@@ -191,7 +191,7 @@ export class SemanticSkeleton {
       case SemanticType.LINE:
         // Adding the labels to the skeleton for explorative access.
         if (content.length) {
-          children.unshift(content[0]);
+          children.push(content[0]);
         }
         return children;
       default:
