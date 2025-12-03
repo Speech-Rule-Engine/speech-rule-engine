@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml defaults tests.",
+  "base": "input/semantic/defaults.json"
+}

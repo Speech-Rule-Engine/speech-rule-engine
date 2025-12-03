@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree defaults tests.",
+  "base": "input/semantic/defaults.json"
+}

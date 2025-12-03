@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech defaults tests.",
+  "base": "input/semantic/defaults.json"
+}
