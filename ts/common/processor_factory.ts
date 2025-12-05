@@ -529,13 +529,21 @@ export function assembleSpeechStructure(
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
   const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
-  json.label = json.speech[root]['speech-none'] + '';
-  json.ssml = json.speech[root]['speech-ssml'];
-  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+  // Here we have to add the postfix correctly and then ensure that it is also
+  // added to the label and ssml output.
   const links = DomUtil.querySelectorAllByAttr(sxml, 'href').length;
   if (links) {
-    json.label += `, ${links} ${links === 1 ? 'link' : 'links'}`;
+    const text = `${links} ${links === 1 ? 'link' : 'links'}`;
+    json.speech[root]['postfix-none'] = json.speech[root]['postfix-none'] ?
+      json.speech[root]['postfix-none'] + `, ${text}` : text;
+    json.speech[root]['postfix-ssml'] = json.speech[root]['postfix-ssml'] ?
+      json.speech[root]['postfix-ssml'] + ` <break time="250ms"/> ${text}` : text;
   }
+  json.label = json.speech[root]['speech-none'] +
+    (json.speech[root]['postfix-none'] ?
+      `, ${json.speech[root]['postfix-none']}` :  '');
+  json.ssml = json.speech[root]['speech-ssml'] +
+    (json.speech[root]['postfix-ssml'] ?
+      ` <prosody pitch="+30%" rate="+20%"> ${json.speech[root]['postfix-ssml']} </prosody>` :  '');
+  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
 }
-// ./bin/sre -T -P -k ssml -d clearspeak < ../sre-resources/samples/quadratic-line.xml
-// echo "<math><mi>a</mi><mi>b</mi></math>" | ./bin/sre -T -P -d clearspeak
