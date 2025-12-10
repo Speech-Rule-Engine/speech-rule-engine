@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml href tests.",
+  "base": "input/semantic/href.json"
+}

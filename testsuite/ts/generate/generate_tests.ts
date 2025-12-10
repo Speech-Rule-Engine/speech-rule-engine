@@ -243,8 +243,13 @@ function generateFromIssues(
 }
 
 
-function generateFromLines(lines: string[],
-                           properties: string[], tests: tu.JsonTests) {
+function generateFromLines(
+  lines: string[],
+  properties: string[],
+  tests: tu.JsonTests,
+  basename: string
+) {
+  let nameCount = 0;
   let commentCount = 0;
   while (lines.length) {
     let name = lines.shift();
@@ -252,6 +257,10 @@ function generateFromLines(lines: string[],
     if (tu.TestUtil.isComment(name)) {
       tests[`_comment${commentCount++}_`] = lines.shift() as any;
       continue;
+    }
+    if (basename) {
+      lines.unshift(name);
+      name = `${basename}_${nameCount++}`;
     }
     if (tests[name]) {
       console.warn('Duplicate entry for ' + name);
@@ -312,9 +321,10 @@ export function fromIssues(dir: string, file: string, output: string) {
  * @param input The input file.
  * @param output The output filename for the target tests.
  * @param properties An ordered list of properties to be parsed.
+ * @param name If true, test names default to the basename of input file.
  */
 export function fromLines(
-  input: string, output: string, properties: string[]) {
+  input: string, output: string, properties: string[], name = false) {
   let data: string[];
   try {
     data = fs.readFileSync(input, { encoding: 'utf-8' }).split(/\r?\n/);
@@ -322,7 +332,8 @@ export function fromLines(
     console.error(`File ${input} does not exist.`);
   }
   appendTests(output,
-             tests => generateFromLines(data, properties, tests));
+              tests => generateFromLines(
+                data, properties, tests, name ? path.parse(input).name : ''));
 }
 
 
