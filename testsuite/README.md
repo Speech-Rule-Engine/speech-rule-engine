@@ -359,7 +359,7 @@ REPL. There are two ways to ensure that all the necessary files in SRE can be fo
 
     ``` javascript
     process.env['SRE_JSON_PATH'] = '../lib/mathmaps';
-    (await import('./js/module_loader.js')).load('gt');
+    const gt = await (await import('./js/module_loader.js')).loadPromise('gt');
     ...
     ```
 

@@ -1,0 +1,28 @@
+{
+  "factory": "stree",
+  "information": "Semantic tree href tests.",
+  "base": "input/semantic/href.json",
+  "tests": {
+    "href_0": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" href=\"a\">a</identifier></stree>"
+    },
+    "href_1": {
+      "expected": "<stree><infixop role=\"addition\" id=\"3\" href=\"c\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">b</identifier></children></infixop></stree>"
+    },
+    "href_2": {
+      "expected": "<stree><infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\" href=\"c\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">b</identifier></children></infixop></stree>"
+    },
+    "href_3": {
+      "expected": "<stree><infixop role=\"addition\" id=\"3\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" href=\"a\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" href=\"b\">b</identifier></children></infixop></stree>"
+    },
+    "href_4": {
+      "expected": "<stree><infixop role=\"addition\" id=\"3\" href=\"c\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" href=\"a\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" href=\"b\">b</identifier></children></infixop></stree>"
+    },
+    "href_5": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" href=\"a\">a</identifier></stree>"
+    },
+    "href_6": {
+      "expected": "<stree><infixop role=\"addition\" id=\"3\" href=\"c\">+<content><operator role=\"addition\" id=\"1\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">b</identifier></children></infixop></stree>"
+    }
+  }
+}

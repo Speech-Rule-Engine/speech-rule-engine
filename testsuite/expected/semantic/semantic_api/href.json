@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api href tests.",
+  "base": "input/semantic/href.json"
+}

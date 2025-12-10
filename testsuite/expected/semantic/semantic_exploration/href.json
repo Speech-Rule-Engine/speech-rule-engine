@@ -1,0 +1,53 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration href tests.",
+  "base": "input/semantic/href.json",
+  "tests": {
+    "href_0": {
+      "expected": 0
+    },
+    "href_1": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "href_2": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "href_3": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "href_4": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "href_5": {
+      "expected": 0
+    },
+    "href_6": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    }
+  }
+}
