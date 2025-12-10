@@ -138,6 +138,56 @@ ApiTest.QUADRATIC =
   '</math>';
 
 
+import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
+
+export class WorkerTest extends ApiTest {
+
+  /**
+   * Executes single API tests.
+   *
+   * @param func The API function to test.
+   * @param expr The input expression.
+   * @param result The expected result.
+   * @param feature Feature vector for engine setup.
+   * @param json Json output expected?
+   * @param move Is this a move with some keyboard input?
+   */
+  public async executeTest(
+    func: string,
+    expr: string,
+    result: string | null,
+    feature: { [key: string]: string },
+    json: boolean,
+    _move: boolean
+  ) {
+    expr = expr || ApiTest.QUADRATIC;
+    const options = Object.assign({}, feature, ApiTest.SETUP);
+    console.log(expr);
+    await System.setupEngine(options);
+    console.log(System.engineSetup());
+    options['domain2style'] = 'mathspeak:default,clearspeak:default';
+    console.log(13);
+    options['braille'] = 'nemeth';
+    console.log(14);
+    const sxml = semanticMathmlSync(expr, options as any);
+    console.log(func);
+    console.log((System as any)[func]);
+    console.log(sxml.toString());
+    let output = await (System as any)[func](sxml.toString(), options);
+    console.log(8);
+    console.log(output);
+    console.log(result);
+    output = output
+      ? json
+        ? JSON.stringify(output)
+        : output.toString()
+      : output;
+    expect(output).toEqual(result); // this.assert.equal(output, result);
+  }
+
+}
+
+
 export class DebugTest extends ApiTest {
 
   /**
@@ -150,7 +200,7 @@ export class DebugTest extends ApiTest {
     super();
     this.pickFields.push('strings');
   }
-  
+
   /**
    * @override
    */
@@ -189,6 +239,6 @@ export class DebugTest extends ApiTest {
     for (let [index, res] of strings) {
       expect(console.info).toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
     }
-  }  
+  }
 
 }

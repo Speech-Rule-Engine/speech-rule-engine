@@ -538,6 +538,8 @@ async function assembleWorkerStructure(
   if (options.braille === 'none') {
     return json;
   }
+  console.log(16);
+  console.log(options.braille);
   await setupEngine({
     modality: 'braille',
     locale: options.braille,
