@@ -29,6 +29,74 @@ import { Key } from './keycodes.js';
 import { AbstractJsonTest } from './abstract_test.js';
 import { jest, expect } from '@jest/globals';
 
+enum Expressions {
+  Quadratic = 'quadratic',
+  Square = 'square',
+  Maction = 'maction'
+}
+
+const Samples: Record<Expressions, string> = {
+  [Expressions.Quadratic]:
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mi>x</mi>' +
+    '<mo>=</mo>' +
+    '<mfrac>' +
+    '<mrow>' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mi>b</mi>' +
+    '<mo>&#x00B1;<!-- ± --></mo>' +
+    '<msqrt>' +
+    '<msup>' +
+    '<mi>b</mi>' +
+    '<mn>2</mn>' +
+    '</msup>' +
+    '<mo>&#x2212;<!-- − --></mo>' +
+    '<mn>4</mn>' +
+    '<mi>a</mi>' +
+    '<mi>c</mi>' +
+    '</msqrt>' +
+    '</mrow>' +
+    '<mrow>' +
+    '<mn>2</mn>' +
+    '<mi>a</mi>' +
+    '</mrow>' +
+    '</mfrac>' +
+    '</math>',
+  [Expressions.Square]:
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<msup>' +
+    '<mi>x</mi>' +
+    '<mn>2</mn>' +
+    '</msup>' +
+    '</math>',
+  [Expressions.Maction]: 
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<maction actiontype="toggle" selection="2" data-collapsible="true" id="mjx-collapse-0">' +
+    '<mtext>&#x25C2;f()&#x25B8;</mtext>' +
+    '<mrow>' +
+    '<mi>f</mi>' +
+    '<mo>&#x2061;</mo>' +
+    '<maction actiontype="toggle" selection="2" data-collapsible="true" id="mjx-collapse-1">' +
+    '<mtext>&#x25C2;()&#x25B8;</mtext>' +
+    '<mrow>' +
+    '<mo stretchy="false">(</mo>' +
+    '<mrow>' +
+    '<mi>a</mi>' +
+    '<mo>+</mo>' +
+    '<mi>b</mi>' +
+    '<mo>+</mo>' +
+    '<mi>c</mi>' +
+    '<mo>+</mo>' +
+    '<mi>d</mi>' +
+    '</mrow>' +
+    '<mo stretchy="false">)</mo>' +
+    '</mrow>' +
+    '</maction>' +
+    '</mrow>' +
+    '</maction>' +
+    '</math>'
+}
+
 export class ApiTest extends AbstractJsonTest {
   /**
    * Feature vector for setting up the engine.
@@ -44,7 +112,7 @@ export class ApiTest extends AbstractJsonTest {
    * The quadratic equation as a MathML string. By default tests are run against
    * the quadratic equation unless a different input is provided.
    */
-  public static QUADRATIC: string;
+  public static SAMPLES: Record<Expressions, string> = Samples;
 
   /**
    * @override
@@ -85,7 +153,7 @@ export class ApiTest extends AbstractJsonTest {
     move: boolean
   ) {
     System.setupEngine(feature || ApiTest.SETUP);
-    expr = move ? Key.get(expr) : expr || ApiTest.QUADRATIC;
+    expr = move ? Key.get(expr) : ApiTest.SAMPLES[expr] || ApiTest.SAMPLES[Expressions.QUADRATIC];
     let output = (System as any)[func](expr);
     output = output
       ? json
@@ -109,34 +177,6 @@ export class ApiTest extends AbstractJsonTest {
     );
   }
 }
-
-ApiTest.QUADRATIC =
-  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-  '<mi>x</mi>' +
-  '<mo>=</mo>' +
-  '<mfrac>' +
-  '<mrow>' +
-  '<mo>&#x2212;<!-- − --></mo>' +
-  '<mi>b</mi>' +
-  '<mo>&#x00B1;<!-- ± --></mo>' +
-  '<msqrt>' +
-  '<msup>' +
-  '<mi>b</mi>' +
-  '<mn>2</mn>' +
-  '</msup>' +
-  '<mo>&#x2212;<!-- − --></mo>' +
-  '<mn>4</mn>' +
-  '<mi>a</mi>' +
-  '<mi>c</mi>' +
-  '</msqrt>' +
-  '</mrow>' +
-  '<mrow>' +
-  '<mn>2</mn>' +
-  '<mi>a</mi>' +
-  '</mrow>' +
-  '</mfrac>' +
-  '</math>';
-
 
 import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
 
@@ -236,7 +276,8 @@ export class DebugTest extends ApiTest {
     expect(console.info).toHaveBeenCalledTimes(parseInt(result, 10));
     const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
     for (let [index, res] of strings) {
-      expect(console.info).toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
+      expect(console.info).
+        toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
     }
   }
 
