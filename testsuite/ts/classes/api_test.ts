@@ -98,8 +98,8 @@ export class ApiTest extends AbstractJsonTest {
   /**
    * @override
    */
-  public method() {
-    this.executeTest(
+  public async method() {
+    await this.executeTest(
       this.field('type'),
       this.field('input'),
       this.field('expected'),
@@ -162,27 +162,26 @@ export class WorkerTest extends ApiTest {
   ) {
     expr = expr || ApiTest.QUADRATIC;
     const options = Object.assign({}, feature, ApiTest.SETUP);
-    console.log(expr);
     await System.setupEngine(options);
-    console.log(System.engineSetup());
-    options['domain2style'] = 'mathspeak:default,clearspeak:default';
-    console.log(13);
-    options['braille'] = 'nemeth';
-    console.log(14);
     const sxml = semanticMathmlSync(expr, options as any);
-    console.log(func);
-    console.log((System as any)[func]);
-    console.log(sxml.toString());
-    let output = await (System as any)[func](sxml.toString(), options);
-    console.log(8);
-    console.log(output);
-    console.log(result);
+    let promise = (System as any)[func](sxml.toString(), options);
+    promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
+    let output = await promise;
     output = output
       ? json
         ? JSON.stringify(output)
         : output.toString()
       : output;
-    expect(output).toEqual(result); // this.assert.equal(output, result);
+    this.assert.equal(output, result);
+  }
+
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    ApiTest.SETUP['locale'] = 'en';
+    ApiTest.SETUP['braille'] = 'nemeth';
+    return super.setUpTest();
   }
 
 }
