@@ -535,11 +535,9 @@ async function assembleWorkerStructure(
   Engine.getInstance().options.automark = true;
   const json: WorkerStructure = {};
   ProcessorFactory.assembleSpeechStructure(json, mml, sxml, options);
-  if (options.braille === 'none') {
+  if ((options as any).enableBraille === false) {
     return json;
   }
-  console.log(16);
-  console.log(options.braille);
   await setupEngine({
     modality: 'braille',
     locale: options.braille,

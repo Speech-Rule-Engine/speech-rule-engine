@@ -146,7 +146,7 @@ export class SpeechRuleEngine {
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
-      console.error('Something went wrong computing speech.' + err + node.toString() + JSON.stringify(Engine.getInstance().json(), null, 2));
+      console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
     const timeOut = new Date().getTime();
