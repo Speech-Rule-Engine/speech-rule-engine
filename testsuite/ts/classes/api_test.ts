@@ -29,14 +29,15 @@ import { Key } from './keycodes.js';
 import { AbstractJsonTest } from './abstract_test.js';
 import { jest, expect } from '@jest/globals';
 
-enum Expressions {
+enum Expression {
   Quadratic = 'quadratic',
   Square = 'square',
-  Maction = 'maction'
+  Maction = 'maction',
+  Href = 'href'
 }
 
-const Samples: Record<Expressions, string> = {
-  [Expressions.Quadratic]:
+const Samples: Record<Expression, string> = {
+  [Expression.Quadratic]:
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mi>x</mi>' +
     '<mo>=</mo>' +
@@ -62,14 +63,14 @@ const Samples: Record<Expressions, string> = {
     '</mrow>' +
     '</mfrac>' +
     '</math>',
-  [Expressions.Square]:
+  [Expression.Square]:
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<msup>' +
     '<mi>x</mi>' +
     '<mn>2</mn>' +
     '</msup>' +
     '</math>',
-  [Expressions.Maction]: 
+  [Expression.Maction]: 
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<maction actiontype="toggle" selection="2" data-collapsible="true" id="mjx-collapse-0">' +
     '<mtext>&#x25C2;f()&#x25B8;</mtext>' +
@@ -94,6 +95,14 @@ const Samples: Record<Expressions, string> = {
     '</maction>' +
     '</mrow>' +
     '</maction>' +
+    '</math>',
+  [Expression.Href]:
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+    '<mrow href="c">' +
+    '<mi href="a">a</mi>' +
+    '<mo>+</mo>' +
+    '<mi href="b">b</mi>' +
+    '</mrow>' +
     '</math>'
 }
 
@@ -107,12 +116,6 @@ export class ApiTest extends AbstractJsonTest {
     modality: 'speech',
     speech: EngineConst.Speech.NONE
   };
-
-  /**
-   * The quadratic equation as a MathML string. By default tests are run against
-   * the quadratic equation unless a different input is provided.
-   */
-  public static SAMPLES: Record<Expressions, string> = Samples;
 
   /**
    * @override
@@ -135,6 +138,19 @@ export class ApiTest extends AbstractJsonTest {
   }
 
   /**
+   * The sample equations.
+   */
+  protected static SAMPLES: Record<Expression, string> = Samples;
+
+  /*
+   * Quadratic equation as a MathML string. By default tests are run against
+   * the quadratic equation unless a different input is provided.
+   */
+  protected getSample(expr: Expression) {
+    return ApiTest.SAMPLES[expr] || ApiTest.SAMPLES[Expression.Quadratic];
+  }
+
+  /**
    * Executes single API tests.
    *
    * @param func The API function to test.
@@ -146,14 +162,14 @@ export class ApiTest extends AbstractJsonTest {
    */
   public executeTest(
     func: string,
-    expr: any,
+    input: any,
     result: string | null,
     feature: { [key: string]: string },
     json: boolean,
     move: boolean
   ) {
     System.setupEngine(feature || ApiTest.SETUP);
-    expr = move ? Key.get(expr) : ApiTest.SAMPLES[expr] || ApiTest.SAMPLES[Expressions.QUADRATIC];
+    const expr = move ? Key.get(input) : this.getSample(input);
     let output = (System as any)[func](expr);
     output = output
       ? json
@@ -194,16 +210,16 @@ export class WorkerTest extends ApiTest {
    */
   public async executeTest(
     func: string,
-    expr: string,
+    input: Expression,
     result: string | null,
     feature: { [key: string]: string },
     json: boolean,
     _move: boolean
   ) {
-    expr = expr || ApiTest.QUADRATIC;
+    const sample = this.getSample(input);
     const options = Object.assign({}, feature, ApiTest.SETUP);
     await System.setupEngine(options);
-    const sxml = semanticMathmlSync(expr, options as any);
+    const sxml = semanticMathmlSync(sample, options as any);
     let promise = (System as any)[func](sxml.toString(), options);
     promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
     let output = await promise;
@@ -234,7 +250,8 @@ export class DebugTest extends ApiTest {
    */
   public information = 'Debugger test.';
 
-
+  private oldDebug: boolean | string = null;
+  
   constructor() {
     super();
     this.pickFields.push('strings');
@@ -244,6 +261,7 @@ export class DebugTest extends ApiTest {
    * @override
    */
   public async setUpTest() {
+    this.oldDebug = ApiTest.SETUP['debug'] ?? null;
     ApiTest.SETUP['debug'] = true;
     jest.clearAllMocks();
     return super.setUpTest();
@@ -253,7 +271,11 @@ export class DebugTest extends ApiTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
-    ApiTest.SETUP['debug'] = false;
+    if (this.oldDebug === null) {
+      delete ApiTest.SETUP['debug'];
+    } else {
+      ApiTest.SETUP['debug'] = this.oldDebug;
+    }
     jest.clearAllMocks();
     return super.tearDownTest();
   }
@@ -263,16 +285,15 @@ export class DebugTest extends ApiTest {
    */
   public async executeTest(
     func: string,
-    expr: any,
+    input: string,
     result: string,
     feature: { [key: string]: string },
     _json: boolean,
-    move: boolean
+    _move: boolean
   ) {
     await System.setupEngine(feature || ApiTest.SETUP);
-    expr = move ? Key.get(expr) : expr || ApiTest.QUADRATIC;
     console.info = jest.fn();
-    await (System as any)[func](expr);
+    await (System as any)[func](input);
     expect(console.info).toHaveBeenCalledTimes(parseInt(result, 10));
     const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
     for (let [index, res] of strings) {
