@@ -370,14 +370,16 @@
       "Precondition",
       "cell-simple-short",
       "clearspeak.default",
-      "self::cell"
+      "self::cell",
+      "@role!=\"label\""
     ],
     [
       "Precondition",
       "cell-short",
       "clearspeak.default",
       "self::cell",
-      "contains(@grammar,\"depth\")"
+      "contains(@grammar,\"depth\")",
+      "@role!=\"label\""
     ],
     [
       "Precondition",
