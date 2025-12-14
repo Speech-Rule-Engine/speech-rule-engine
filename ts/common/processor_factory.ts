@@ -76,8 +76,11 @@ export function process<T>(name: string, expr: string): T {
   const processor = get(name);
   try {
     return processor.processor(expr) as T;
-  } catch (_e) {
-    throw new SREError('Processing error for expression ' + expr);
+  } catch (error) {
+    if (error instanceof SREError) {
+      throw error;
+    }
+    throw new SREError(`Processing error for expression\n ${expr}`);
   }
 }
 
@@ -110,8 +113,11 @@ export function output(name: string, expr: string): string {
     return Engine.getInstance().options.pprint
       ? processor.pprint(data)
       : processor.print(data);
-  } catch (_e) {
-    throw new SREError('Processing error for expression ' + expr);
+  } catch (error) {
+    if (error instanceof SREError) {
+      throw error;
+    }
+    throw new SREError(`Processing error for expression\n ${expr}`);
   }
 }
 
@@ -527,6 +533,9 @@ export function assembleSpeechStructure(
 ) {
   json.options = options;
   json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+  if ((options as any).enableSpeech === false) {
+    return;
+  }
   json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
   const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
   // Here we have to add the postfix correctly and then ensure that it is also

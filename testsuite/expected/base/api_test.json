@@ -400,7 +400,7 @@
     },
     "SpeechStructure_1": {
       "type": "toSpeechStructure",
-      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msup data-semantic-type=\"superscript\" data-semantic-role=\"latinletter\" data-semantic-annotation=\"depth:1\" data-semantic-id=\"2\" data-semantic-children=\"0,1\"><mi data-semantic-type=\"identifier\" data-semantic-role=\"latinletter\" data-semantic-font=\"italic\" data-semantic-annotation=\"clearspeak:simple;nemeth:number;depth:2\" data-semantic-id=\"0\" data-semantic-parent=\"2\">x</mi><mn data-semantic-type=\"number\" data-semantic-role=\"integer\" data-semantic-font=\"normal\" data-semantic-annotation=\"clearspeak:simple;depth:2\" data-semantic-id=\"1\" data-semantic-parent=\"2\">2</mn></msup></math>",
+      "input": "square",
       "expected": "{\"0\":{\"speech-none\":\"x\",\"prefix-none\":\"Base\",\"postfix-none\":\"\",\"summary-none\":\"identifier\",\"speech-ssml\":\"<say-as interpret-as=\\\"character\\\">x</say-as>\",\"prefix-ssml\":\"Base\",\"postfix-ssml\":\"\",\"summary-ssml\":\"identifier\"},\"1\":{\"speech-none\":\"2\",\"prefix-none\":\"Exponent\",\"postfix-none\":\"\",\"summary-none\":\"number\",\"speech-ssml\":\"2\",\"prefix-ssml\":\"Exponent\",\"postfix-ssml\":\"\",\"summary-ssml\":\"number\"},\"2\":{\"speech-none\":\"x squared\",\"prefix-none\":\"\",\"postfix-none\":\"\",\"summary-none\":\"power\",\"speech-ssml\":\"<say-as interpret-as=\\\"character\\\">x</say-as> squared\",\"prefix-ssml\":\"\",\"postfix-ssml\":\"\",\"summary-ssml\":\"power\"}}",
       "json": true
     }

@@ -64,7 +64,7 @@ export function parseInput(input: string): Element {
   const allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
   const html = !!allValues;
   if (!clean_input) {
-    throw new Error('Empty input!');
+    throw new SREError('Empty input!');
   }
   try {
     const doc = dp.parseFromString(

@@ -28,9 +28,9 @@ export function runJsonTest(file: string) {
       if (!testcase.test) {
         continue;
       }
-      test(testcase.name, () => {
+      test(testcase.name, async () => {
         AnalyticsTest.currentTestcase = testcase.name;
-        testcases.method.bind(testcases).apply(null, testcases.pick(testcase));
+        await testcases.method.bind(testcases).apply(null, testcases.pick(testcase));
       });
     }
   });

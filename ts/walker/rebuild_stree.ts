@@ -20,6 +20,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import { SREError } from '../common/engine.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
@@ -116,6 +117,9 @@ export class RebuildStree {
   constructor(public mathml: Element) {
     this.mmlRoot = WalkerUtil.getSemanticRoot(mathml);
     this.streeRoot = this.assembleTree(this.mmlRoot);
+    if (isNaN(this.streeRoot.id)) {
+      throw new SREError(`Failed to rebuild semantic tree for\n ${mathml}`);
+    }
     this.stree = SemanticTree.fromNode(this.streeRoot, this.mathml);
     this.xml = this.stree.xml();
     // SemanticProcessor.getInstance().setNodeFactory(this.factory);

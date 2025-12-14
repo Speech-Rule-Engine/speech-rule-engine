@@ -22,7 +22,7 @@
 import { TestError, TestPath, TestUtil } from '../base/test_util.js';
 import { AbstractJsonTest } from './abstract_test.js';
 
-import { ApiTest, DebugTest } from './api_test.js';
+import * as api from './api_test.js';
 import * as cs from './clearspeak_annotation_test.js';
 import { BrailleLayoutTest, ClearspeakTest, SpeechMarkupTest } from './clearspeak_test.js';
 import { CollapseTest } from './collapse_test.js';
@@ -39,9 +39,9 @@ import { SymbolTest } from './symbol_test.js';
 import { ExplorationTest, WalkerTest, SemanticSkeletonTest } from './walker_test.js';
 
 const map = new Map<string, any>([
-  ['api', ApiTest],
+  ['api', api.ApiTest],
   ['braille2D', BrailleLayoutTest],
-  ['debug', DebugTest],
+  ['debug', api.DebugTest],
   ['deepSpeech', st.DeepSpeechTest],
   ['category', st.CategoryTest],
   ['clearspeak', ClearspeakTest],
@@ -75,6 +75,7 @@ const map = new Map<string, any>([
   ['summarySpeech', SummarySpeechTest],
   ['symbol', SymbolTest],
   ['walker', WalkerTest],
+  ['worker', api.WorkerTest],
   ['xpath', XpathTest]
 ]);
 
