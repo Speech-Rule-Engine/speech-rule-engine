@@ -22,7 +22,7 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '5.0.0-beta.2';
+  public static readonly VERSION: string = '5.0.0-beta.3';
 
   /**
    * Locale mapping to language names.
