@@ -171,6 +171,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "2e rangée, 2e colonne"
+    },
+    "Table_Label_0": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_1": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_2": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_3": {
+      "expected": "Étiquette"
     }
   }
 }

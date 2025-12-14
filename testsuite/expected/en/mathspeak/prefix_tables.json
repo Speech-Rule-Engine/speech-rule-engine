@@ -23,6 +23,12 @@
     "Binomials_4": {
       "expected": ""
     },
+    "Binomials_0_extra": {
+      "expected": "Choice Quantity"
+    },
+    "Binomials_1_extra": {
+      "expected": "Selection Quantity"
+    },
     "Vectors_0": {
       "expected": "1st Row"
     },
@@ -167,11 +173,17 @@
     "Table_Cell_Depth_5a": {
       "expected": "2nd Row, 2nd Column"
     },
-    "Binomials_0_extra": {
-      "expected": "Choice Quantity"
+    "Table_Label_0": {
+      "expected": "Label"
     },
-    "Binomials_1_extra": {
-      "expected": "Selection Quantity"
+    "Table_Label_1": {
+      "expected": "Label"
+    },
+    "Table_Label_2": {
+      "expected": "Label"
+    },
+    "Table_Label_3": {
+      "expected": "Label"
     }
   }
 }

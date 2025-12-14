@@ -175,6 +175,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "rad 2, Kolonne 2"
+    },
+    "Table_Label_0": {
+      "expected": "Etikett"
+    },
+    "Table_Label_1": {
+      "expected": "Etikett"
+    },
+    "Table_Label_2": {
+      "expected": "Etikett"
+    },
+    "Table_Label_3": {
+      "expected": "Etikett"
     }
   },
   "compare": true

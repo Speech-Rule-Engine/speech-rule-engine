@@ -598,7 +598,7 @@ argument, that enforces overwrite when set to true.
 Tests can be generated or regenerated using the `fill_tests` module:
 
 ``` javascript
-(await import('./js/module_loader.js')).load('ft');
+const ft = await (await import('./js/module_loader.js')).loadPromise('ft');
 ```
 
 Each of the following commands takes an path to a file with expected values and

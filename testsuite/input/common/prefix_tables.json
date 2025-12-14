@@ -243,6 +243,26 @@
       "grammar": "depth",
       "tex": "\\begin{matrix}a & c \\\\b & d \\end{matrix}",
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd extid=\"A\"><mi>d</mi></mtd></mtr></mtable>"
+    },
+    "Table_Label_0": {
+      "tex": "a\\tag{1}",
+      "id": 1,
+      "input": "<mtable displaystyle=\"true\" data-latex=\"a\\tag{1}\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext data-latex=\"\\text{(1)}\">(1)</mtext></mtd><mtd><mi data-latex=\"\\tag{1}\">a</mi></mtd></mlabeledtr></mtable>"
+    },
+    "Table_Label_1": {
+      "tex": "\\begin{align}a&c\\tag{1}\\end{align}",
+      "id": 1,
+      "input": "<mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\" data-latex-item=\"{align}\" data-latex=\"\\begin{align}a&amp;c\\tag{1}\\end{align}\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext data-latex=\"\\text{(1)}\">(1)</mtext></mtd><mtd><mi data-latex=\"a\">a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi data-latex=\"\\tag{1}\">c</mi></mstyle></mtd></mlabeledtr></mtable>"
+    },
+    "Table_Label_2": {
+      "tex": "\\begin{align}a&c\\tag{1}\\\\b&d\\tag{2}\\end{align}",
+      "id": 1,
+      "input": "<mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\" data-latex-item=\"{align}\" data-latex=\"\\begin{align}a&amp;c\\tag{1}\\\\b&amp;d\\tag{2}\\end{align}\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext data-latex=\"\\text{(1)}\">(1)</mtext></mtd><mtd><mi data-latex=\"a\">a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi data-latex=\"\\tag{1}\">c</mi></mstyle></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:2\"><mtext data-latex=\"\\text{(2)}\">(2)</mtext></mtd><mtd><mi data-latex=\"b\">b</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi data-latex=\"\\tag{2}\">d</mi></mstyle></mtd></mlabeledtr></mtable>"
+    },
+    "Table_Label_3": {
+      "tex": "\\begin{align}a&c\\tag{1}\\\\b&d\\tag{2}\\end{align}",
+      "id": 8,
+      "input": "<mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\" data-latex-item=\"{align}\" data-latex=\"\\begin{align}a&amp;c\\tag{1}\\\\b&amp;d\\tag{2}\\end{align}\"><mlabeledtr><mtd id=\"mjx-eqn:1\"><mtext data-latex=\"\\text{(1)}\">(1)</mtext></mtd><mtd><mi data-latex=\"a\">a</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi data-latex=\"\\tag{1}\">c</mi></mstyle></mtd></mlabeledtr><mlabeledtr><mtd id=\"mjx-eqn:2\"><mtext data-latex=\"\\text{(2)}\">(2)</mtext></mtd><mtd><mi data-latex=\"b\">b</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi data-latex=\"\\tag{2}\">d</mi></mstyle></mtd></mlabeledtr></mtable>"
     }
   }
 }

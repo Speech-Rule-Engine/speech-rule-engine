@@ -175,6 +175,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "व्यवरोध 2, स्तंभ 2"
+    },
+    "Table_Label_0": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_1": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_2": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_3": {
+      "expected": "सूचक पर्चा"
     }
   },
   "compare": true

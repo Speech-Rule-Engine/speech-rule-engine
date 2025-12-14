@@ -171,6 +171,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "2a riga, 2a colonna"
+    },
+    "Table_Label_0": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_1": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_2": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_3": {
+      "expected": "Eitchetta"
     }
   }
 }

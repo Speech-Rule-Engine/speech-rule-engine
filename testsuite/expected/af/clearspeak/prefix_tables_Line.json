@@ -175,6 +175,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "Lyn 2, Kolom 2"
+    },
+    "Table_Label_0": {
+      "expected": "Opskrif"
+    },
+    "Table_Label_1": {
+      "expected": "Opskrif"
+    },
+    "Table_Label_2": {
+      "expected": "Opskrif"
+    },
+    "Table_Label_3": {
+      "expected": "Opskrif"
     }
   },
   "compare": true

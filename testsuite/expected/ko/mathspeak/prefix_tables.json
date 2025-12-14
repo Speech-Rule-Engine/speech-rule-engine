@@ -171,6 +171,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "두번째 행, 두번째 열"
+    },
+    "Table_Label_0": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_1": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_2": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_3": {
+      "expected": "꼬리표"
     }
   }
 }
