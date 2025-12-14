@@ -175,6 +175,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "Equation 2, Column 2"
+    },
+    "Table_Label_0": {
+      "expected": "Label"
+    },
+    "Table_Label_1": {
+      "expected": "Label"
+    },
+    "Table_Label_2": {
+      "expected": "Label"
+    },
+    "Table_Label_3": {
+      "expected": "Label"
     }
   }
 }

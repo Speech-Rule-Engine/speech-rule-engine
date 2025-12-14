@@ -172,6 +172,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "२री पंक्ति, २रा स्तंभ"
+    },
+    "Table_Label_0": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_1": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_2": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_3": {
+      "expected": "सूचक पर्चा"
     }
   }
 }

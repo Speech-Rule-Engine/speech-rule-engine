@@ -171,6 +171,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "<mark name=\"9\"/> 2nd Row <break time=\"200ms\"/> <mark name=\"8\"/> 2nd Column <break time=\"200ms\"/>"
+    },
+    "Table_Label_0": {
+      "expected": "<mark name=\"1\"/> Label <break time=\"200ms\"/>"
+    },
+    "Table_Label_1": {
+      "expected": "<mark name=\"1\"/> Label <break time=\"200ms\"/>"
+    },
+    "Table_Label_2": {
+      "expected": "<mark name=\"1\"/> Label <break time=\"200ms\"/>"
+    },
+    "Table_Label_3": {
+      "expected": "<mark name=\"8\"/> Label <break time=\"200ms\"/>"
     }
   }
 }

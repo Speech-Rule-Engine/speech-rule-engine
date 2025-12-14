@@ -175,6 +175,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "Vincoli 2, Colonna 2"
+    },
+    "Table_Label_0": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_1": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_2": {
+      "expected": "Eitchetta"
+    },
+    "Table_Label_3": {
+      "expected": "Eitchetta"
     }
   },
   "compare": true

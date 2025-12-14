@@ -172,6 +172,18 @@
     },
     "Table_Cell_Depth_5a": {
       "expected": "2. Række, 2. Kolonne"
+    },
+    "Table_Label_0": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_1": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_2": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_3": {
+      "expected": "1. Kolonne"
     }
   }
 }
