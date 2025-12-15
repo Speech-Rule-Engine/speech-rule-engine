@@ -22,10 +22,27 @@ import { STATE } from '#mathjax/core/MathItem.js';
 import { SerializedMmlVisitor } from '#mathjax/core/MmlTree/SerializedMmlVisitor.js';
 import { RegisterHTMLHandler } from '#mathjax/handlers/html.js';
 import { TeX } from '#mathjax/input/tex.js';
-import { AllPackages } from '#mathjax/input/tex/AllPackages.js';
 import { mathjax } from '#mathjax/mathjax.js';
 import { SVG } from '#mathjax/output/svg.js';
 import { AbstractTransformer } from './transformers.js';
+import { AllPackages } from './AllPackages.js';
+// import {source} from '#mj-components/source.js';
+
+// const AllPackages = Object.entries(source).filter(([name, _]) => name.substring(0,6) === '[tex]/');
+
+// // async function load(pkg: string) {
+// //   console.log(`Loading package ${pkg}`);
+// //   await import(pkg).catch((err) => console.error(`Something went wrong importing ${pkg}:\n${err}`));
+// // }
+// async function load(packages: string[]) {
+//   let results = [];
+//   for (const pkg of packages) {
+//     console.log(`Loading package ${pkg}`);
+//     results.push(await import(pkg).catch((err) => console.error(`Something went wrong importing ${pkg}:\n${err}`)));
+//   }
+//   return results;
+// }
+
 
 export class Tex2Mml extends AbstractTransformer {
   /**
@@ -47,8 +64,11 @@ export class Tex2Mml extends AbstractTransformer {
   public constructor(src = 'tex', dst = 'input') {
     super(src, dst);
     RegisterHTMLHandler(liteAdaptor());
+    // const tex = new TeX({});
+    // await load(AllPackages.forEach(([_, src]) => load(src)));
     this.document = mathjax.document('', {
-      InputJax: new TeX({ packages: AllPackages }),
+      // InputJax: tex, //  packages: AllPackages.map(([name, _]) => name.substring(6))}),
+      InputJax: new TeX({packages: AllPackages }),
       OutputJax: new SVG({})
     });
   }
