@@ -1,6 +1,6 @@
 /*************************************************************
  *
- *  Copyright (c) 2018-2023 The MathJax Consortium
+ *  Copyright (c) 2018-2025 The MathJax Consortium
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -16,7 +16,9 @@
  */
 
 /**
- * @fileoverview  Loads all the TeX extensions
+ * @fileoverview Loads all the TeX extensions. This is lifted from MathJax
+ * 3.2. as it does no longer exist in 4.0. However, in the context of the
+ * transformers it makes life a lot easier!
  *
  * @author dpvc@mathjax.org (Davide Cervone)
  */
