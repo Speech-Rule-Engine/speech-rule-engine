@@ -10,7 +10,7 @@
     "paths": {
       "#js/*": ["../js/*"],
       "#tests/*": ["./js/*"],
-      "#mathjax/*": ["./node_modules/mathjax-full/mjs/*"]
+      "#mathjax/*": ["./node_modules/@mathjax/src/mjs/*"]
     }
   },
   "types": ["jest"],

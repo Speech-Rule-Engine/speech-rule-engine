@@ -232,7 +232,7 @@
       "preference": "default"
     },
     "NegativeVsMinus_1": {
-  "test": true,
+      "test": true,
       "input": "<mrow><mo>-</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow>",
       "preference": "default"
     },

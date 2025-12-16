@@ -633,7 +633,7 @@
     },
     "_comment_mg1": "mo",
     "MglyphToken_2": {
-    "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+      "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
     },
     "MglyphToken_3": {
       "input": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"

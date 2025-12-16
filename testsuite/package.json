@@ -25,7 +25,7 @@
   },
   "imports": {
     "#js/*": "./sources/*",
-    "#mathjax/*": "mathjax-full/mjs/*"
+    "#mathjax/*": "@mathjax/src/mjs/*"
   },
   "dependencies": {
     "@jest/globals": "^30.2.0",
@@ -33,7 +33,7 @@
     "cross-env": "^10.1.0",
     "firebase-admin": "^13.6.0",
     "jest": "^30.2.0",
-    "mathjax-full": "4.0.0-beta.4",
+    "@mathjax/src": "4.1.0",
     "rimraf": "^6.1.2",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
