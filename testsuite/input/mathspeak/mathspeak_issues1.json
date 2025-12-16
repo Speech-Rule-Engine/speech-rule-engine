@@ -432,6 +432,6 @@
     "Vector_sbrief": {
       "input": "<mo>[</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable><mo>]</mo>",
       "preference": "sbrief"
-    } 
+    }
   }
 }

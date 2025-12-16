@@ -1,7 +1,7 @@
 {
   "_comment_": "Tests for different types of intervals.",
   "tests": {
-  "_comment_0": "Anglo style intervals.",
+    "_comment_0": "Anglo style intervals.",
     "Anglo_style_00": {
       "tex": "(a,b)",
       "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"

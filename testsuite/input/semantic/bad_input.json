@@ -70,7 +70,6 @@
       "input": "<msubsup></msubsup>"
     },
 
-
     "_comment_5": "Underspecified Layout Elements with Limit functions",
 
     "Limit_Underspec_0": {
@@ -148,7 +147,6 @@
 
     "_comment_7": "Underspecified Layout Elements with Integral",
 
-
     "Integral_Underspec_0": {
       "input": "<mover><mi>∫</mi></mover>"
     },
@@ -174,7 +172,6 @@
       "input": "<msubsup><mi>∫</mi><mi>b</mi></msubsup>"
     },
 
-
     "_comment_8": "Underspecified Fraction",
 
     "Fraction_Underspec": {
@@ -186,12 +183,10 @@
       "input": "<mfrac></mfrac>"
     },
 
-
     "_comment_10": "Overspecified Fraction",
     "Fraction_Overspec": {
       "input": "<mfrac><mi>a</mi><mi>b</mi><mi>c</mi></mfrac>"
     },
-
 
     "_comment_11": "Underspecified Root",
     "Root_Underspec": {

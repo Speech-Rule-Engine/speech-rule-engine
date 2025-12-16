@@ -1,6 +1,5 @@
 {
-  "tests": 
-  {
+  "tests": {
     "Abs01": {
       "preference": "AbsoluteValue_Auto",
       "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>"

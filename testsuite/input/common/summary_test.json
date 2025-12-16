@@ -63,28 +63,19 @@
     "AbstrCell_default": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN",
-        "DOWN"
-      ],
+      "steps": ["DOWN", "DOWN"],
       "preference": "default"
     },
     "AbstrCell_brief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN",
-        "DOWN"
-      ],
+      "steps": ["DOWN", "DOWN"],
       "preference": "brief"
     },
     "AbstrCell_sbrief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN",
-        "DOWN"
-      ],
+      "steps": ["DOWN", "DOWN"],
       "preference": "sbrief"
     },
     "AbstrContinuedFraction_default": {
@@ -214,25 +205,19 @@
     "AbstrLine_default": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "default"
     },
     "AbstrLine_brief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "brief"
     },
     "AbstrLine_sbrief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "sbrief"
     },
     "AbstrMatrix_default": {
@@ -389,25 +374,19 @@
     "AbstrRow_default": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "default"
     },
     "AbstrRow_brief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "brief"
     },
     "AbstrRow_sbrief": {
       "test": true,
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
-      "steps": [
-        "DOWN"
-      ],
+      "steps": ["DOWN"],
       "preference": "sbrief"
     },
     "AbstrRowvector_default": {
