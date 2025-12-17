@@ -42,6 +42,7 @@ const map = new Map<string, any>([
   ['api', api.ApiTest],
   ['braille2D', BrailleLayoutTest],
   ['debug', api.DebugTest],
+  ['debugFile', api.DebugFileTest],
   ['deepSpeech', st.DeepSpeechTest],
   ['category', st.CategoryTest],
   ['clearspeak', ClearspeakTest],

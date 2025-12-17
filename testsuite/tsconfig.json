@@ -11,8 +11,11 @@
       "#js/*": ["../js/*"],
       "#tests/*": ["./js/*"],
       "#mathjax/*": ["./node_modules/@mathjax/src/mjs/*"]
-    }
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+    ],
+    "types": ["jest"]
   },
-  "types": ["jest"],
   "include": ["ts"]
 }

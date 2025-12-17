@@ -243,6 +243,31 @@ export class WorkerTest extends ApiTest {
 }
 
 
+// Mocking the filesystem methods.
+
+import { Debugger } from '#js/common/debugger.js';
+import { SystemExternal } from '#js/common/system_external.js';
+
+const mockStreamWrite: any = jest.fn();
+const mockStreamEnd: any = jest.fn((_data: any, _encoding: any, callback: () => void) => {
+  // Simulate stream ending and executing callback
+  if (callback) callback();
+});
+const mockStreamOn: any = jest.fn();
+const mockCreateWriteStream: any = jest.fn(() => ({
+  write: mockStreamWrite,
+  end: mockStreamEnd,
+  on: mockStreamOn,
+}));
+
+// --- Mock File Handle Component ---
+const mockOpen: any = jest.fn((_filename: string, _mode: string) => {
+  return Promise.resolve({
+  // The file handle needs to provide a method to create a write stream
+    createWriteStream: mockCreateWriteStream,
+  })});
+
+
 export class DebugTest extends ApiTest {
 
   /**
@@ -263,6 +288,7 @@ export class DebugTest extends ApiTest {
   public async setUpTest() {
     this.oldDebug = ApiTest.SETUP['debug'] ?? null;
     ApiTest.SETUP['debug'] = true;
+    console.info = jest.fn();
     jest.clearAllMocks();
     return super.setUpTest();
   }
@@ -292,13 +318,55 @@ export class DebugTest extends ApiTest {
     _move: boolean
   ) {
     await System.setupEngine(feature || ApiTest.SETUP);
-    console.info = jest.fn();
     await (System as any)[func](input);
     expect(console.info).toHaveBeenCalledTimes(parseInt(result, 10));
     const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
     for (let [index, res] of strings) {
       expect(console.info).
         toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
+    }
+  }
+
+}
+
+export class DebugFileTest extends DebugTest {
+
+  private static testFilename = 'test_debug.log';
+  private debuggerInstance: Debugger;
+
+
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    SystemExternal.fs.promises.open = mockOpen;
+    return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async executeTest(
+    func: string,
+    input: string,
+    result: string,
+    feature: { [key: string]: string },
+    _json: boolean,
+    _move: boolean
+  ) {
+    this.debuggerInstance = Debugger.getInstance();
+    await this.debuggerInstance.init(DebugFileTest.testFilename);
+    await System.setupEngine(feature || ApiTest.SETUP);
+    await (System as any)[func](input);
+    const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
+    expect(console.info).toHaveBeenCalledTimes(0);
+    expect(mockStreamWrite).toHaveBeenCalledTimes(parseInt(result, 10) * 2);
+    expect(mockOpen).toHaveBeenCalledWith(DebugFileTest.testFilename, 'w');
+    for (let [index, res] of strings) {
+      expect(mockStreamWrite).
+        toHaveBeenNthCalledWith(
+          ((parseInt(index, 10) - 1) * 2) + 1,
+          ["Speech Rule Engine Debugger:", ...res].join(' '));
     }
   }
 
