@@ -134,11 +134,13 @@ const Samples: Record<Expression, string> = {
     '</math>'
 }
 
+type FeatureVector = { [key: string]: string | boolean };
+
 export class ApiTest extends AbstractJsonTest {
   /**
    * Feature vector for setting up the engine.
    */
-  public static SETUP: { [key: string]: string | boolean } = {
+  public static SETUP: FeatureVector  = {
     domain: 'mathspeak',
     style: 'default',
     modality: 'speech',
@@ -155,10 +157,13 @@ export class ApiTest extends AbstractJsonTest {
    */
   public pickFields = ['type', 'input', 'expected', 'setup', 'json', 'move'];
 
+  private oldSetup: FeatureVector;
+
   /**
    * @override
    */
   public async setUpTest() {
+    this.oldSetup = Object.assign({}, System.engineSetup());
     deactivate('nemeth', 'number');
     return System.setupEngine({
       locale: 'en'
@@ -198,7 +203,6 @@ export class ApiTest extends AbstractJsonTest {
   ) {
     System.setupEngine(feature || ApiTest.SETUP);
     const expr = move ? Key.get(input) : this.getSample(input);
-    console.log(System.engineSetup());
     let output = (System as any)[func](expr);
     output = output
       ? json
@@ -221,6 +225,15 @@ export class ApiTest extends AbstractJsonTest {
       this.field('move')
     );
   }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    await System.setupEngine(this.oldSetup);
+    return super.tearDownTest();
+  }
+
 }
 
 export class ApiFileTest extends ApiTest {
@@ -416,4 +429,12 @@ export class DebugFileTest extends DebugTest {
     }
   }
 
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    // TODO: change this to exit.
+    (Debugger.getInstance() as any).stream_ = null;
+    return super.tearDownTest();
+  }
 }
