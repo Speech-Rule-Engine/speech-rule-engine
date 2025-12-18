@@ -40,6 +40,7 @@ import { ExplorationTest, WalkerTest, SemanticSkeletonTest } from './walker_test
 
 const map = new Map<string, any>([
   ['api', api.ApiTest],
+  ['apiFile', api.ApiFileTest],
   ['braille2D', BrailleLayoutTest],
   ['debug', api.DebugTest],
   ['debugFile', api.DebugFileTest],

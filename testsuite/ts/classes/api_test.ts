@@ -28,7 +28,35 @@ import { Key } from './keycodes.js';
 
 import { AbstractJsonTest } from './abstract_test.js';
 import { jest, expect } from '@jest/globals';
+// For the workers
+import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
 
+// Mocking the filesystem methods.
+
+import { Debugger } from '#js/common/debugger.js';
+import { SystemExternal } from '#js/common/system_external.js';
+
+const mockStreamWrite: any = jest.fn();
+const mockStreamEnd: any = jest.fn((_data: any, _encoding: any, callback: () => void) => {
+  // Simulate stream ending and executing callback
+  if (callback) callback();
+});
+const mockStreamOn: any = jest.fn();
+const mockCreateWriteStream: any = jest.fn(() => ({
+  write: mockStreamWrite,
+  end: mockStreamEnd,
+  on: mockStreamOn,
+}));
+
+// --- Mock File Handle Component ---
+const mockOpen: any = jest.fn((_filename: string, _mode: string) => {
+  return Promise.resolve({
+  // The file handle needs to provide a method to create a write stream
+    createWriteStream: mockCreateWriteStream,
+  })});
+
+
+// Some standard expressions.
 enum Expression {
   Quadratic = 'quadratic',
   Square = 'square',
@@ -170,6 +198,7 @@ export class ApiTest extends AbstractJsonTest {
   ) {
     System.setupEngine(feature || ApiTest.SETUP);
     const expr = move ? Key.get(input) : this.getSample(input);
+    console.log(System.engineSetup());
     let output = (System as any)[func](expr);
     output = output
       ? json
@@ -194,7 +223,49 @@ export class ApiTest extends AbstractJsonTest {
   }
 }
 
-import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
+export class ApiFileTest extends ApiTest {
+
+  /**
+   * Executes single API File tests.
+   *
+   * @param func The API function to test.
+   * @param expr The input expression.
+   * @param result The expected result.
+   * @param feature Feature vector for engine setup.
+   * @param json Json output expected?
+   * @param move Is this a move with some keyboard input?
+   */
+  public async executeTest(
+    func: string,
+    input: Expression,
+    result: string | null,
+    feature: { [key: string]: string },
+    _json: boolean,
+    _move: boolean
+  ) {
+    const sample = this.getSample(input);
+    await System.setupEngine(feature || ApiTest.SETUP);
+    SystemExternal.fs.promises.readFile = jest.fn((_file: string) => {
+      return Promise.resolve(sample);
+    });
+    SystemExternal.fs.promises.writeFile = jest.fn();
+    let promise = (System.file as any)[func]('input', 'output');
+    promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
+    let output = await promise;
+    this.assert.equal(output.toString(), result);
+  }
+
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    ApiTest.SETUP['locale'] = 'en';
+    ApiTest.SETUP['braille'] = 'nemeth';
+    jest.clearAllMocks();
+    return super.setUpTest();
+  }
+
+}
 
 export class WorkerTest extends ApiTest {
 
@@ -241,31 +312,6 @@ export class WorkerTest extends ApiTest {
   }
 
 }
-
-
-// Mocking the filesystem methods.
-
-import { Debugger } from '#js/common/debugger.js';
-import { SystemExternal } from '#js/common/system_external.js';
-
-const mockStreamWrite: any = jest.fn();
-const mockStreamEnd: any = jest.fn((_data: any, _encoding: any, callback: () => void) => {
-  // Simulate stream ending and executing callback
-  if (callback) callback();
-});
-const mockStreamOn: any = jest.fn();
-const mockCreateWriteStream: any = jest.fn(() => ({
-  write: mockStreamWrite,
-  end: mockStreamEnd,
-  on: mockStreamOn,
-}));
-
-// --- Mock File Handle Component ---
-const mockOpen: any = jest.fn((_filename: string, _mode: string) => {
-  return Promise.resolve({
-  // The file handle needs to provide a method to create a write stream
-    createWriteStream: mockCreateWriteStream,
-  })});
 
 
 export class DebugTest extends ApiTest {
