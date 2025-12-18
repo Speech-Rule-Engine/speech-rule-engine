@@ -193,15 +193,15 @@ export class ApiTest extends AbstractJsonTest {
    * @param json Json output expected?
    * @param move Is this a move with some keyboard input?
    */
-  public executeTest(
+  public async executeTest(
     func: string,
     input: any,
     result: string | null,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     json: boolean,
     move: boolean
   ) {
-    System.setupEngine(feature || ApiTest.SETUP);
+    await System.setupEngine(feature || ApiTest.SETUP);
     const expr = move ? Key.get(input) : this.getSample(input);
     let output = (System as any)[func](expr);
     output = output
@@ -252,7 +252,7 @@ export class ApiFileTest extends ApiTest {
     func: string,
     input: Expression,
     result: string | null,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     _json: boolean,
     _move: boolean
   ) {
@@ -296,7 +296,7 @@ export class WorkerTest extends ApiTest {
     func: string,
     input: Expression,
     result: string | null,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     json: boolean,
     _move: boolean
   ) {
@@ -372,7 +372,7 @@ export class DebugTest extends ApiTest {
     func: string,
     input: string,
     result: string,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     _json: boolean,
     _move: boolean
   ) {
@@ -391,8 +391,6 @@ export class DebugTest extends ApiTest {
 export class DebugFileTest extends DebugTest {
 
   private static testFilename = 'test_debug.log';
-  private debuggerInstance: Debugger;
-
 
   /**
    * @override
@@ -409,12 +407,11 @@ export class DebugFileTest extends DebugTest {
     func: string,
     input: string,
     result: string,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     _json: boolean,
     _move: boolean
   ) {
-    this.debuggerInstance = Debugger.getInstance();
-    await this.debuggerInstance.init(DebugFileTest.testFilename);
+    await Debugger.getInstance().init(DebugFileTest.testFilename);
     await System.setupEngine(feature || ApiTest.SETUP);
     await (System as any)[func](input);
     const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
