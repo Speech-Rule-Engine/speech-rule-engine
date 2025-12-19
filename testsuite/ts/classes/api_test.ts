@@ -297,7 +297,7 @@ export class ApiFileTest extends ApiTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
-    jest.resetAllMocks();
+    jest.clearAllMocks();
     return super.tearDownTest();
   }
 
@@ -453,7 +453,8 @@ export class DebugFileTest extends DebugTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
-    jest.resetAllMocks();
+    (Debugger.getInstance() as any).stream_ = null;
+    jest.clearAllMocks();
     return super.tearDownTest();
   }
 
