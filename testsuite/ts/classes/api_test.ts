@@ -98,7 +98,7 @@ const Samples: Record<Expression, string> = {
     '<mn>2</mn>' +
     '</msup>' +
     '</math>',
-  [Expression.Maction]: 
+  [Expression.Maction]:
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<maction actiontype="toggle" selection="2" data-collapsible="true" id="mjx-collapse-0">' +
     '<mtext>&#x25C2;f()&#x25B8;</mtext>' +
@@ -258,6 +258,13 @@ export class ApiFileTest extends ApiTest {
   ) {
     const sample = this.getSample(input);
     await System.setupEngine(feature || ApiTest.SETUP);
+    await this.asyncTest(func, sample, result);
+    await this.syncTest(func, sample, result);
+    System.setupEngine({mode: 'async'});
+  }
+
+  private async asyncTest(func: string, sample: string, result: string) {
+    System.setupEngine({mode: 'async'});
     SystemExternal.fs.promises.readFile = jest.fn((_file: string) => {
       return Promise.resolve(sample);
     });
@@ -268,6 +275,14 @@ export class ApiFileTest extends ApiTest {
     this.assert.equal(output.toString(), result);
   }
 
+  private async syncTest(func: string, sample: string, result: string) {
+    System.setupEngine({mode: 'sync'});
+    SystemExternal.fs.readFileSync = jest.fn((_file: string) => sample);
+    SystemExternal.fs.writeFileSync = jest.fn();
+    let output = (System.file as any)[func]('input', 'output');
+    this.assert.equal(output, result);
+  }
+
   /**
    * @override
    */
@@ -276,6 +291,14 @@ export class ApiFileTest extends ApiTest {
     ApiTest.SETUP['braille'] = 'nemeth';
     jest.clearAllMocks();
     return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    jest.resetAllMocks();
+    return super.tearDownTest();
   }
 
 }
@@ -335,7 +358,7 @@ export class DebugTest extends ApiTest {
   public information = 'Debugger test.';
 
   private oldDebug: boolean | string = null;
-  
+
   constructor() {
     super();
     this.pickFields.push('strings');
@@ -356,12 +379,12 @@ export class DebugTest extends ApiTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
+    Debugger.getInstance().exit();
     if (this.oldDebug === null) {
       delete ApiTest.SETUP['debug'];
     } else {
       ApiTest.SETUP['debug'] = this.oldDebug;
     }
-    jest.clearAllMocks();
     return super.tearDownTest();
   }
 
@@ -430,8 +453,8 @@ export class DebugFileTest extends DebugTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
-    // TODO: change this to exit.
-    (Debugger.getInstance() as any).stream_ = null;
+    jest.resetAllMocks();
     return super.tearDownTest();
   }
+
 }

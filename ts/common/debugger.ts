@@ -88,11 +88,15 @@ export class Debugger {
    *     debugger.
    */
   public exit(callback: () => any = () => {}) {
-    this.fileHandle.then(() => {
-      if (this.isActive_ && this.stream_) {
-        this.stream_.end('', '', callback);
-      }
-    });
+    if (this.stream_) {
+      this.fileHandle.then(() => {
+        if (this.isActive_ && this.stream_) {
+          this.stream_.end('', '', callback);
+          this.stream_ = null;
+        }
+      });
+    }
+    this.isActive_ = false;
   }
 
   /**
