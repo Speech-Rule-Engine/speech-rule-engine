@@ -24,9 +24,6 @@ importers:
       '@eslint/js':
         specifier: ^9.39.2
         version: 9.39.2
-      '@types/node':
-        specifier: ^25.0.8
-        version: 25.0.8
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.53.0
         version: 8.53.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
@@ -132,6 +129,10 @@ importers:
       xml-js:
         specifier: ^1.6.11
         version: 1.6.11
+    devDependencies:
+      '@types/node':
+        specifier: ^25.0.8
+        version: 25.0.8
 
 packages:
 
