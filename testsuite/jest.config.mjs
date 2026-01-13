@@ -38,9 +38,7 @@ const config = {
     prefix: '<rootDir>/',
   }),
   setupFiles:  ["./lib/require.mjs"],
-  transform: {
-    "^.+\\.tsx?$": [ tsjest, { useESM: true, isolatedModules: false } ],
-  }
+  transform: { }
 };
 
 export default config;
