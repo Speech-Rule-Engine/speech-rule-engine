@@ -24,7 +24,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 10
+          version: 'latest'
           run_install: false
 
       - name: Setup Speech Rule Engine
@@ -64,7 +64,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 10
+          version: 'latest'
           run_install: false
 
       - name: Downloading the build
@@ -77,7 +77,8 @@ jobs:
           pnpm -r i --ignore-scripts
 
       - name: Run tests for ${{ matrix.block }}
-        run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json
+        run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts
+     ## --coverageReporters=json
 
       # - name: Upload coverage artifact
       #   uses: actions/upload-artifact@v4
