@@ -1022,7 +1022,7 @@
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"to\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"above\""
     ],
     [
       "Action",
@@ -1032,7 +1032,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"from\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"below\""
     ],
     [
       "Action",
