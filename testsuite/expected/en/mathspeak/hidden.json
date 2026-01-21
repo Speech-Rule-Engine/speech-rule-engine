@@ -1,0 +1,78 @@
+{
+  "name": "EnglishMathspeak",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/common/hidden.json",
+  "information": "English Mathspeak hidden elements tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "SimplePhantom_0": {
+      "expected": "StartFraction Over c EndFraction"
+    },
+    "SimplePhantom_1": {
+      "expected": "StartFraction a Over EndFraction"
+    },
+    "SimplePhantom_2": {
+      "expected": "Superscript c"
+    },
+    "SimplePhantom_3": {
+      "expected": "a Superscript"
+    },
+    "HiddenIgnoreElements_0": {
+      "expected": "StartFraction a Over b EndFraction"
+    },
+    "HiddenIgnoreElements_1": {
+      "expected": "StartFraction a d Over b EndFraction"
+    },
+    "HiddenIgnoreElements_2": {
+      "expected": "StartFraction a Over b EndFraction"
+    },
+    "HiddenEmptyTokens_0": {
+      "expected": "vertical bar Subscript t Baseline"
+    },
+    "HiddenEmptyTokens_1": {
+      "expected": "vertical bar Subscript t Baseline"
+    },
+    "HiddenEmptyTokens_2": {
+      "expected": "vertical bar Subscript t Baseline"
+    },
+    "PseudoUnitChildren_0": {
+      "expected": "a"
+    },
+    "PseudoUnitChildren_1": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_2": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_3": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_4": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_5": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_6": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_0": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_1": {
+      "expected": "i plus j"
+    },
+    "InterspersedIgnore_2": {
+      "expected": "i plus j"
+    },
+    "InterspersedIgnore_3": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_4": {
+      "expected": "i plus j"
+    }
+  }
+}
