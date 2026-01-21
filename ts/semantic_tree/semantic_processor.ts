@@ -1305,18 +1305,17 @@ export class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     let center = children[0];
-    let type = SemanticType.UNKNOWN;
+    let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    children = children.slice(0, length + 1);
+    [mmlTag, children] =
+      SemanticProcessor.getInstance().cleanLimitNode(mmlTag, children, length);
+
     if (!children[1]) {
       return center;
     }
 
-    let result: BoundsType;
     SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
-      result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
-      const length = result.length;
-      type = result.type;
-      children = children.slice(0, result.length + 1);
       // Heuristic to deal with accents around limit functions/operators.
       if (
         (length === 1 && SemanticPred.isAccent(children[1])) ||
@@ -1324,7 +1323,7 @@ export class SemanticProcessor {
           SemanticPred.isAccent(children[1]) &&
           SemanticPred.isAccent(children[2]))
       ) {
-        result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+        let result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
         return SemanticProcessor.getInstance().accentNode_(
           center,
           children,
@@ -1385,7 +1384,7 @@ export class SemanticProcessor {
       );
     }
     // We either have an indexed, stacked or accented expression.
-    result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+    const result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
     return SemanticProcessor.getInstance().accentNode_(
       center,
       children,
@@ -1393,6 +1392,35 @@ export class SemanticProcessor {
       result.length,
       result.accent
     );
+  }
+
+  /**
+   * Creates a limit node from a sub/superscript or over/under node if the
+   * central element is a big operator. Otherwise it creates the standard
+   * elements.
+   *
+   * @param mmlTag The tag name of the original node.
+   * @param children The children of the
+   *     original node.
+   * @returns The newly created limit node.
+   */
+  private cleanLimitNode(mmlTag: string, children: SemanticNode[], length: number): [string, SemanticNode[]] {
+    const isEmpty = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    if (length === 1) {
+      return isEmpty(children[1]) ? [mmlTag, [children[0]]] : [mmlTag, children];
+    }
+    const child1 = children[1];
+    const child2 = children[2];
+    if (isEmpty(child1) && isEmpty(child2)) {
+      return [mmlTag, [children[0]]];
+    }
+    if (isEmpty(child1)) {
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER, [children[0], child2]];
+    }
+    if (isEmpty(child2)) {
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER, [children[0], child1]];
+    }
+    return [mmlTag, children];
   }
 
   // Improve table recognition, multiline alignments for pausing.
