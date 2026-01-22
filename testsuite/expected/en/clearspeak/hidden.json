@@ -18,7 +18,7 @@
       "expected": "to the c-th power"
     },
     "SimplePhantom_3": {
-      "expected": "a raised to the power"
+      "expected": "a"
     },
     "HiddenIgnoreElements_0": {
       "expected": "a over b"

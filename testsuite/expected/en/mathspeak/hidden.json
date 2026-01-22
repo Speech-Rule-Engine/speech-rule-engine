@@ -18,7 +18,7 @@
       "expected": "Superscript c"
     },
     "SimplePhantom_3": {
-      "expected": "a Superscript"
+      "expected": "a"
     },
     "HiddenIgnoreElements_0": {
       "expected": "StartFraction a Over b EndFraction"
