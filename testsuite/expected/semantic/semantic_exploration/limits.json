@@ -798,6 +798,31 @@
         1,
         2
       ]
+    },
+    "Overaccent_0": {
+      "expected": [
+        4,
+        0,
+        2,
+        1
+      ]
+    },
+    "Empty_0": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "Empty_1": {
+      "expected": [
+        3,
+        0,
+        1
+      ]
+    },
+    "Empty_2": {
+      "expected": 0
     }
   }
 }

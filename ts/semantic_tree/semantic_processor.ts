@@ -1305,15 +1305,18 @@ export class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     let center = children[0];
-    let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
-    children = children.slice(0, length + 1);
+    // Initial breaking point for cleanup.
+    let {length: breaking} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    children = children.slice(0, breaking + 1);
     [mmlTag, children] =
-      SemanticProcessor.getInstance().cleanLimitNode(mmlTag, children, length);
+      SemanticProcessor.getInstance().cleanLimitNode(mmlTag, children, breaking);
 
+    // Return if there are not real children.
     if (!children[1]) {
       return center;
     }
 
+    let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
     SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
       // Heuristic to deal with accents around limit functions/operators.
