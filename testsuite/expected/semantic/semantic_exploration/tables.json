@@ -3032,18 +3032,16 @@
     },
     "EmptyAccents_0": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_1": {
       "expected": [
-        4,
+        3,
         0,
-        2,
-        1
+        2
       ]
     },
     "EmptyAccents_2": {
@@ -3056,18 +3054,16 @@
     },
     "EmptyAccents_3": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_4": {
       "expected": [
-        4,
+        3,
         0,
-        2,
-        1
+        2
       ]
     },
     "EmptyAccents_5": {
@@ -3080,17 +3076,15 @@
     },
     "EmptyAccents_6": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_7": {
       "expected": [
-        4,
+        3,
         0,
-        1,
         2
       ]
     },
@@ -3167,6 +3161,59 @@
           3
         ],
         4
+      ]
+    },
+    "EllipsesCombined_5": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "EllipsesCombined_6": {
+      "expected": [
+        5,
+        0,
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "EllipsesCombined_7": {
+      "expected": [
+        6,
+        0,
+        [
+          4,
+          1,
+          2,
+          3
+        ],
+        5
+      ]
+    },
+    "EllipsesCombined_8": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          [
+            5,
+            1,
+            2,
+            3
+          ],
+          4
+        ]
       ]
     },
     "LabelledLines_0": {
@@ -4389,59 +4436,6 @@
         ],
         10,
         11
-      ]
-    },
-    "EllipsesCombined_5": {
-      "expected": [
-        4,
-        0,
-        [
-          3,
-          1,
-          2
-        ]
-      ]
-    },
-    "EllipsesCombined_6": {
-      "expected": [
-        5,
-        0,
-        [
-          4,
-          1,
-          2,
-          3
-        ]
-      ]
-    },
-    "EllipsesCombined_7": {
-      "expected": [
-        6,
-        0,
-        [
-          4,
-          1,
-          2,
-          3
-        ],
-        5
-      ]
-    },
-    "EllipsesCombined_8": {
-      "expected": [
-        8,
-        0,
-        7,
-        [
-          6,
-          [
-            5,
-            1,
-            2,
-            3
-          ],
-          4
-        ]
       ]
     }
   }
