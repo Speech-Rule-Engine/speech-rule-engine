@@ -1,0 +1,100 @@
+{
+  "name": "EnglishClearspeakCoverageLimits",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "English Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakEnglish",
+  "tests": {
+    "rel1": {
+      "expected": "q from n equals 1 to c"
+    },
+    "rel2": {
+      "expected": "normal q, with c above"
+    },
+    "rel3": {
+      "expected": "q over n equals 1"
+    },
+    "rel4": {
+      "expected": "normal q, with n below"
+    },
+    "over": {
+      "expected": "a with y above"
+    },
+    "overaccent": {
+      "expected": "a right arrow"
+    },
+    "overunder-sep": {
+      "expected": "a with x below and y above"
+    },
+    "overunder": {
+      "expected": "a with x below and y above"
+    },
+    "overunderaccent": {
+      "expected": "a with right arrow below left arrow"
+    },
+    "under": {
+      "expected": "a with x below"
+    },
+    "underaccent": {
+      "expected": "a with left arrow below"
+    },
+    "cup1": {
+      "expected": "union from n equals 1 to c"
+    },
+    "cup2": {
+      "expected": "union over c"
+    },
+    "cup3": {
+      "expected": "union under n equals 1"
+    },
+    "cup4": {
+      "expected": "union sign with n over it"
+    },
+    "cup5": {
+      "expected": "union sign with c over it"
+    },
+    "cup6": {
+      "expected": "union over n equals 1"
+    },
+    "cup7": {
+      "expected": "union over n"
+    },
+    "let1": {
+      "expected": "normal q, with n equals 1 below and c above"
+    },
+    "let2": {
+      "expected": "normal q, with c above"
+    },
+    "let3": {
+      "expected": "normal q, with n equals 1 below"
+    },
+    "let4": {
+      "expected": "normal q, with n below"
+    },
+    "limits1": {
+      "expected": "q from n equals 1 to c"
+    },
+    "limits1a": {
+      "expected": "normal q, with n below and c above"
+    },
+    "limits2": {
+      "expected": "normal q, with n equals 1 below and c above"
+    },
+    "limits2a": {
+      "expected": "normal q, with n below and c above"
+    },
+    "sum1": {
+      "expected": "sum from n equals 1 to c"
+    },
+    "sum2": {
+      "expected": "sum under c"
+    },
+    "sum3": {
+      "expected": "sum over n equals 1"
+    },
+    "sum4": {
+      "expected": "sum over n"
+    }
+  }
+}
