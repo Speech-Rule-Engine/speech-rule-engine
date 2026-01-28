@@ -43,13 +43,13 @@
       "expected": "h of, g of x"
     },
     "paren-simple-nested-func_2": {
-      "expected": "h of, g of, open brace, x, close brace"
+      "expected": "h of, g of x"
     },
     "paren-simple-nested-func_3": {
-      "expected": "h of, g of, left floor, x, right floor"
+      "expected": "h of, left floor, g of, left floor, x, right floor, right floor"
     },
     "paren-simple-nested-func_4": {
-      "expected": "h of, g of, left ceiling, x, right ceiling"
+      "expected": "h of, left ceiling, g of, left ceiling, x, right ceiling, right ceiling"
     },
     "paren-simple-nested-func-default_0": {
       "expected": "f of, open paren, x plus triangle x, close paren"
@@ -73,13 +73,13 @@
       "expected": "h times, g times x"
     },
     "paren-simple-nested-func-no-bracket_2": {
-      "expected": "h times, g times, open brace, x, close brace"
+      "expected": "h times, g times x"
     },
     "paren-simple-nested-func-no-bracket_3": {
-      "expected": "h times, g times, left floor, x, right floor"
+      "expected": "h times, left floor, g times, left floor, x, right floor, right floor"
     },
     "paren-simple-nested-func-no-bracket_4": {
-      "expected": "h times, g times, left ceiling, x, right ceiling"
+      "expected": "h times, left ceiling, g times, left ceiling, x, right ceiling, right ceiling"
     },
     "paren-simple-nested-func-none_0": {
       "expected": "f times, open paren, f to the negative 1 power, times x, close paren"
@@ -88,7 +88,7 @@
       "expected": "f times, open bracket, f to the negative 1 power, times x, close bracket"
     },
     "paren-simple-nested-func-none_2": {
-      "expected": "f times, open brace, f to the negative 1 power, times, open brace, x, close brace, close brace"
+      "expected": "f times, open brace, f to the negative 1 power, times x, close brace"
     },
     "paren-simple-nested-func-none_3": {
       "expected": "f times, left floor, f to the negative 1 power, times, left floor, x, right floor, right floor"
