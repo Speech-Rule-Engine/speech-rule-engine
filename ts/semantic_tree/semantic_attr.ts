@@ -1203,6 +1203,71 @@ function addFences(
   }
 }
 
+const parens = [
+  '0028',
+  '0029',
+  '207D',
+  '207E',
+  '208D',
+  '208E',
+  '2768',
+  '2769',
+  '276A',
+  '276B',
+  '27EE',
+  '27EF',
+  'FE59',
+  'FE5A',
+  'FF08',
+  'FF09',
+];
+
+const brackets = [
+  '005B',
+  '005D',
+  '2045',
+  '2046',
+  '298B',
+  '298C',
+  '298D',
+  '298E',
+  '298F',
+  '2990',
+  'FF3B',
+  'FF3D',
+];
+
+const curly = [
+  '007B',
+  '007D',
+  '2774',
+  '2775',
+  'FE5B',
+  'FE5C',
+  'FF5B',
+  'FF5D',
+];
+
+const ceil = [
+  '2308',
+  '2309',
+  '2E22',
+  '2E23',
+  '300C',
+  '300E',
+  'FF62',
+];
+
+const floor = [
+  '230A',
+  '230B',
+  '2E24',
+  '2E25',
+  '300D',
+  '300F',
+  'FF63',
+];
+
 /**
  * Initializes the dictionary mapping for fences.
  */
@@ -1215,12 +1280,12 @@ function initFences() {
     'fe47'
   ]);
   addFences(SemanticMap.FencesHoriz, [
-    '28',
+    '28', // paren
     '2045',
-    '207D',
-    '208D',
-    ['2308', '230f'],
-    ['231c', '231f'],
+    '207D', // paren
+    '208D', // paren
+    ['2308', '230f'], // ceil and floor
+    ['231c', '231f'], 
     '2329',
     '23b0',
     ['2768', '2775'],
@@ -1266,6 +1331,20 @@ function initFences() {
     type: SemanticType.FENCE,
     role: SemanticRole.BOTTOM
   });
+
+  addFenceSecondary(parens, SemanticSecondary.PAREN);
+  addFenceSecondary(curly, SemanticSecondary.CURLY);
+  addFenceSecondary(brackets, SemanticSecondary.BRACKET);
+  addFenceSecondary(ceil, SemanticSecondary.CEIL);
+  addFenceSecondary(floor, SemanticSecondary.FLOOR);
+}
+
+function addFenceSecondary(codes: string[], meaning: SemanticSecondary) {
+  for (const code of codes) {
+    const symbol = String.fromCodePoint(parseInt(code, 16));
+    SemanticMap.Secondary.set(symbol, meaning);
+    // console.log(`"${meaning} ${symbol}": {"expected": "${meaning}"},`);
+  }
 }
 
 // Functions.
