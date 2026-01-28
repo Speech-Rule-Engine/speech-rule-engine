@@ -16,10 +16,10 @@
       "expected": "the set one half"
     },
     "paren-simple_4": {
-      "expected": "left floor, one half, right floor"
+      "expected": "floor of one half"
     },
     "paren-simple_5": {
-      "expected": "left ceiling, one half, right ceiling"
+      "expected": "ceiling of one half"
     },
     "paren-simple-exp_1": {
       "expected": "one half to the fourth power"
@@ -31,10 +31,10 @@
       "expected": "the set one half to the fourth power"
     },
     "paren-simple-exp_4": {
-      "expected": "left floor, one half, right floor, to the fourth power"
+      "expected": "floor of one half, to the fourth power"
     },
     "paren-simple-exp_5": {
-      "expected": "left ceiling, one half, right ceiling, to the fourth power"
+      "expected": "ceiling of one half, to the fourth power"
     },
     "paren-simple-nested-func_0": {
       "expected": "h of, g of x"
@@ -46,10 +46,10 @@
       "expected": "h of, g of x"
     },
     "paren-simple-nested-func_3": {
-      "expected": "h of, left floor, g of, left floor, x, right floor, right floor"
+      "expected": "h of, floor of g of floor of x"
     },
     "paren-simple-nested-func_4": {
-      "expected": "h of, left ceiling, g of, left ceiling, x, right ceiling, right ceiling"
+      "expected": "h of, ceiling of g of ceiling of x"
     },
     "paren-simple-nested-func-default_0": {
       "expected": "f of, open paren, x plus triangle x, close paren"
@@ -76,10 +76,10 @@
       "expected": "h times, g times x"
     },
     "paren-simple-nested-func-no-bracket_3": {
-      "expected": "h times, left floor, g times, left floor, x, right floor, right floor"
+      "expected": "h times, left floor, g times floor of x, right floor"
     },
     "paren-simple-nested-func-no-bracket_4": {
-      "expected": "h times, left ceiling, g times, left ceiling, x, right ceiling, right ceiling"
+      "expected": "h times, left ceiling, g times ceiling of x, right ceiling"
     },
     "paren-simple-nested-func-none_0": {
       "expected": "f times, open paren, f to the negative 1 power, times x, close paren"
@@ -91,10 +91,10 @@
       "expected": "f times, open brace, f to the negative 1 power, times x, close brace"
     },
     "paren-simple-nested-func-none_3": {
-      "expected": "f times, left floor, f to the negative 1 power, times, left floor, x, right floor, right floor"
+      "expected": "f times, left floor, f to the negative 1 power, times floor of x, right floor"
     },
     "paren-simple-nested-func-none_4": {
-      "expected": "f times, left ceiling, f to the negative 1 power, times, left ceiling, x, right ceiling, right ceiling"
+      "expected": "f times, left ceiling, f to the negative 1 power, times ceiling of x, right ceiling"
     }
   }
 }
