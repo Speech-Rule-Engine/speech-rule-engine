@@ -1138,6 +1138,7 @@
       "default",
       "self::fenced",
       "@role=\"leftright\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\")",
       "contains(children/*[1]/@annotation, \"clearspeak:simple\")",
       "name(../..)!=\"superscript\" and name(../..)!=\"subscript\""
     ],
@@ -1148,6 +1149,7 @@
       "self::fenced",
       "@role=\"leftright\"",
       "name(../..)=\"superscript\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\")",
       "children/*[1][@role=\"integer\"] or children/*[1][@role=\"float\"] or (children/*[1][@role=\"vulgar\"] and contains(children/*[1]/@annotation, \"clearspeak:simple\")) or children/*[1][@role=\"latinletter\"] or children/*[1][@role=\"greekletter\"] or children/*[1][@role=\"otherletter\"]"
     ],
     [

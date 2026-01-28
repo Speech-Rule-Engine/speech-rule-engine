@@ -171,6 +171,8 @@ export const SemanticMap = {
    */
   FencesVert: new Map(),
 
+  FencesSecondary: new Map(),
+
   LatexCommands: new Map()
 };
 
@@ -1343,7 +1345,7 @@ function addFenceSecondary(codes: string[], meaning: SemanticSecondary) {
   for (const code of codes) {
     const symbol = String.fromCodePoint(parseInt(code, 16));
     SemanticMap.Secondary.set(symbol, meaning);
-    // console.log(`"${meaning} ${symbol}": {"expected": "${meaning}"},`);
+    SemanticMap.FencesSecondary.set(symbol, meaning);
   }
 }
 

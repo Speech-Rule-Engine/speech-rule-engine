@@ -3156,6 +3156,7 @@ export class SemanticProcessor {
       [childNode],
       [ofence, cfence]
     );
+    annotateFencedNode(newNode);
     if (ofence.role === SemanticRole.OPEN) {
       // newNode.role = SemanticRole.LEFTRIGHT;
       SemanticProcessor.getInstance().classifyHorizontalFence_(newNode);
@@ -4058,4 +4059,12 @@ function ensureOperatorRelations(
     return [...before, text, ...after];
   }
   return null;
+}
+
+function annotateFencedNode(node: SemanticNode) {
+  const meaning1 = SemanticMap.FencesSecondary.get(node.contentNodes[0].textContent);
+  const meaning2 = SemanticMap.FencesSecondary.get(node.contentNodes[1].textContent);
+  if (meaning1 === meaning2) {
+    node.addAnnotation('fences', meaning1);
+  }
 }
