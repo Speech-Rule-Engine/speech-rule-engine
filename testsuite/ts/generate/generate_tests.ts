@@ -228,9 +228,14 @@ function generateFromIssues(
 ): tu.JsonTests {
   for (let file of files) {
     const name = path.basename(file).match(/(^.+)\./)[1] || file;
-    const xml = DomUtil.parseInput(
-      fs.readFileSync(path.join(dir, file), { encoding: 'utf-8' })
-    );
+    let xml;
+    try {
+      xml = DomUtil.parseInput(
+        fs.readFileSync(path.join(dir, file), { encoding: 'utf-8' })
+      ); } catch {
+        console.info(`Illegal content in file ${file}`);
+        continue;
+      }
     const str =
       DomUtil.tagName(xml) === 'MATH'
       ? Array.from(xml.childNodes)

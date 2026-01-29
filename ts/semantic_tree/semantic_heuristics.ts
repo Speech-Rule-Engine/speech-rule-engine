@@ -822,7 +822,10 @@ SemanticHeuristics.add(
     },
     (nodes: SemanticNode[]) => {
       return (
-        nodes[0].type === SemanticType.OPERATOR &&
+        (nodes[0].type === SemanticType.OPERATOR ||
+          (nodes[0].type === SemanticType.IDENTIFIER &&
+            nodes[0].attributes['texclass'] === 'OP'
+          )) &&
         nodes
           .slice(1)
           .some(
