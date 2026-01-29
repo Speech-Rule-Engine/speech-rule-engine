@@ -101,7 +101,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
-      [MMLTAGS.MACTION, this.action_.bind(this)]
+      [MMLTAGS.MACTION, this.action_.bind(this)],
+      [MMLTAGS.MPHANTOM, this.empty_.bind(this)],
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,

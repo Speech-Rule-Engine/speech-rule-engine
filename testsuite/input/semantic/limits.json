@@ -242,6 +242,19 @@
     "Additional_18": {
       "input": "<munderover><mo>&#x2211;</mo><mo>_</mo><mo>~</mo></munderover>"
     },
-    "_comment_19": "Missing for the overAccent && !underAccent case in accentNode_."
+    "_comment_19": "Missing for the overAccent && !underAccent case in accentNode_.",
+    "Overaccent_0": {
+      "input": "<munderover><mi>X</mi><mo>x</mo><mo>_</mo></munderover>"
+    },
+    "_comment_20": "Empty elements to be ignored.",
+    "Empty_0": {
+      "input": "<munderover><mi>X</mi><mo></mo><mo>_</mo></munderover>"
+    },
+    "Empty_1": {
+      "input": "<munderover><mi>X</mi><mo>^</mo><mo></mo></munderover>"
+    },
+    "Empty_2": {
+      "input": "<munderover><mi>X</mi><mo></mo><mo></mo></munderover>"
+    }
   }
 }

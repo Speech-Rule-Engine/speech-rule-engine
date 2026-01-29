@@ -195,6 +195,18 @@
     },
     "Additional_18": {
       "expected": "<math><munderover type=\"underover\" role=\"sum\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mo type=\"largeop\" role=\"sum\" id=\"0\" parent=\"4\">∑</mo><mo type=\"punctuation\" role=\"underaccent\" annotation=\"accent:bar\" id=\"1\" parent=\"4\">_</mo><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\" parent=\"4\">~</mo></munderover></math>"
+    },
+    "Overaccent_0": {
+      "expected": "<math><munderover type=\"underover\" role=\"latinletter\" id=\"4\" children=\"0,2,1\" collapsed=\"(4 (3 0 2) 1)\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"4\">X</mi><mo type=\"identifier\" role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"4\">x</mo><mo type=\"punctuation\" role=\"overaccent\" annotation=\"accent:bar\" id=\"2\" parent=\"4\">_</mo></munderover></math>"
+    },
+    "Empty_0": {
+      "expected": "<math><munderover type=\"overscore\" role=\"latinletter\" id=\"3\" children=\"0,2\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">X</mi><mo/><mo type=\"punctuation\" role=\"overaccent\" annotation=\"accent:bar\" id=\"2\" parent=\"3\">_</mo></munderover></math>"
+    },
+    "Empty_1": {
+      "expected": "<math><munderover type=\"underscore\" role=\"latinletter\" id=\"3\" children=\"0,1\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">X</mi><mo type=\"punctuation\" role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\" parent=\"3\">^</mo><mo/></munderover></math>"
+    },
+    "Empty_2": {
+      "expected": "<math><munderover><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">X</mi><mo/><mo/></munderover></math>"
     }
   }
 }
