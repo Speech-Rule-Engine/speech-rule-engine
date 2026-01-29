@@ -38,6 +38,7 @@ import * as DomUtil from '../common/dom_util.js';
 import { markup } from '../audio/aural_rendering.js';
 import { Engine } from '../common/engine.js';
 import { Markup } from '../common/engine_const.js';
+import { Grammar } from '../rule_engine/grammar.js';
 
 type SpeechMap = Map<string, AuditoryDescription[]>;
 
@@ -48,10 +49,11 @@ export class SpeechStructure {
    */
   public speechMaps: Map<string, SpeechMap> = new Map();
 
-  public recompute: Map<string, Set<string>> = new Map();
+  private recompute: Map<string, Set<string>> = new Map();
 
+  private recomputeCases = ['ordinal'];
 
-  public addRecompute(modality: string, id: string) {
+  private addRecompute(modality: string, id: string) {
     let map = this.recompute.get(modality);
     if (!map) {
       map = new Set();
@@ -117,12 +119,15 @@ export class SpeechStructure {
     modality: string = 'speech'
   ) {
     if (
-      node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
-      node.hasAttribute('id')
-    ) {
-      console.log(`Adding: ${node.getAttribute('id')} for modality ${modality}`);
-      this.setMap(modality, node.getAttribute('id'), descr);
+      node.nodeType !== DomUtil.NodeType.ELEMENT_NODE ||
+        !node.hasAttribute('id')
+    ) return;
+    const id = node.getAttribute('id');
+    if (this.recomputeCases.some(
+      x => Grammar.getInstance().getParameter(x))) {
+      this.addRecompute(modality, id);
     }
+    this.setMap(modality, id, descr);
   }
 
   /**

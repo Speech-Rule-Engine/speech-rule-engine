@@ -318,14 +318,6 @@ export class SpeechRuleEngine {
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
     const result = this.evaluateTreeInternal_(node);
-    if (node.getAttribute &&
-      Grammar.getInstance().getParameter('ordinal')) {
-      console.log('Recompute: ' + node.getAttribute('id'));
-      this.speechStructure.addRecompute(
-        Engine.getInstance().options.modality,
-        node.getAttribute('id')
-      );
-    }
     this.speechStructure.addNode(
       node,
       result,
