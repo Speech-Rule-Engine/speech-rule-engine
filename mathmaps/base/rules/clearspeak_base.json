@@ -1215,6 +1215,7 @@
       "@role=\"leftright\"",
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\") or name(children/*[1]/children/*[2]/children/*[1])=\"subscript\" or name(children/*[1]/children/*[2]/children/*[1])=\"superscript\" or children/*[1]/children/*[2]/children/*[1][@role=\"vulgar\"] "
     ],

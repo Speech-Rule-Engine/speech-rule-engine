@@ -1,34 +1,40 @@
 {
   "tests": {
-    "paren-simple_1": {
+    "paren-simple_0": {
       "input": "<mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo>"
     },
-    "paren-simple_2": {
+    "paren-simple_1": {
       "input": "<mo>[</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>]</mo>"
     },
-    "paren-simple_3": {
+    "paren-simple_2": {
       "input": "<mo>{</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>}</mo>"
     },
-    "paren-simple_4": {
+    "paren-simple_3": {
       "input": "<mo>⌊</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⌋</mo>"
     },
-    "paren-simple_5": {
+    "paren-simple_4": {
       "input": "<mo>⌈</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⌉</mo>"
     },
-    "paren-simple-exp_1": {
+    "paren-simple_5": {
+      "input": "<mo>⦃</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⦄</mo>"
+    },
+    "paren-simple-exp_0": {
       "input": "<mrow><msup><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow><mn>4</mn></msup></mrow>"
     },
-    "paren-simple-exp_2": {
+    "paren-simple-exp_1": {
       "input": "<mrow><msup><mrow><mrow><mo>[</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>]</mo></mrow></mrow><mn>4</mn></msup></mrow>"
     },
-    "paren-simple-exp_3": {
+    "paren-simple-exp_2": {
       "input": "<mrow><msup><mrow><mrow><mo>{</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>}</mo></mrow></mrow><mn>4</mn></msup></mrow>"
     },
-    "paren-simple-exp_4": {
+    "paren-simple-exp_3": {
       "input": "<mrow><msup><mrow><mrow><mo>⌊</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⌋</mo></mrow></mrow><mn>4</mn></msup></mrow>"
     },
-    "paren-simple-exp_5": {
+    "paren-simple-exp_4": {
       "input": "<mrow><msup><mrow><mrow><mo>⌈</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⌉</mo></mrow></mrow><mn>4</mn></msup></mrow>"
+    },
+    "paren-simple-exp_5": {
+      "input": "<mrow><msup><mrow><mrow><mo>⦃</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>⦄</mo></mrow></mrow><mn>4</mn></msup></mrow>"
     },
     "paren-simple-nested-func_0": {
       "input": "<math><mrow><mi>h</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
@@ -45,6 +51,9 @@
     "paren-simple-nested-func_4": {
       "input": "<math><mrow><mi>h</mi><mrow><mo>⌈</mo><mrow><mi>g</mi><mrow><mo>⌈</mo><mi>x</mi><mo>⌉</mo></mrow></mrow><mo>⌉</mo></mrow></mrow></math>"
     },
+    "paren-simple-nested-func_5": {
+      "input": "<math><mrow><mi>h</mi><mrow><mo>⦃</mo><mrow><mi>g</mi><mrow><mo>⦃</mo><mi>x</mi><mo>⦄</mo></mrow></mrow><mo>⦄</mo></mrow></mrow></math>"
+    },
     "paren-simple-nested-func-default_0": {
       "input": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>)</mo></mrow></mrow></math>"
     },
@@ -59,6 +68,9 @@
     },
     "paren-simple-nested-func-default_4": {
       "input": "<math><mrow><mi>f</mi><mrow><mo>⌈</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>⌉</mo></mrow></mrow></math>"
+    },
+    "paren-simple-nested-func-default_5": {
+      "input": "<math><mrow><mi>f</mi><mrow><mo>⦃</mo><mrow><mi>x</mi><mo>+</mo><mi>Δ</mi><mi>x</mi></mrow><mo>⦄</mo></mrow></mrow></math>"
     },
     "paren-simple-nested-func-no-bracket_0": {
       "preference": "Functions_None",
@@ -80,6 +92,10 @@
       "preference": "Functions_None",
       "input": "<math><mrow><mi>h</mi><mrow><mo>⌈</mo><mrow><mi>g</mi><mrow><mo>⌈</mo><mi>x</mi><mo>⌉</mo></mrow></mrow><mo>⌉</mo></mrow></mrow></math>"
     },
+    "paren-simple-nested-func-no-bracket_5": {
+      "preference": "Functions_None",
+      "input": "<math><mrow><mi>h</mi><mrow><mo>⦃</mo><mrow><mi>g</mi><mrow><mo>⦃</mo><mi>x</mi><mo>⦄</mo></mrow></mrow><mo>⦄</mo></mrow></mrow></math>"
+    },
     "paren-simple-nested-func-none_0": {
       "preference": "Functions_None",
       "input": "<math><mrow><mi>f</mi><mrow><mo>(</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
@@ -99,6 +115,10 @@
     "paren-simple-nested-func-none_4": {
       "preference": "Functions_None",
       "input": "<math><mrow><mi>f</mi><mrow><mo>⌈</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>⌈</mo><mi>x</mi><mo>⌉</mo></mrow></mrow><mo>⌉</mo></mrow></mrow></math>"
+    },
+    "paren-simple-nested-func-none_5": {
+      "preference": "Functions_None",
+      "input": "<math><mrow><mi>f</mi><mrow><mo>⦃</mo><mrow><msup><mi>f</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mo>⦃</mo><mi>x</mi><mo>⦄</mo></mrow></mrow><mo>⦄</mo></mrow></mrow></math>"
     }
   }
 }
