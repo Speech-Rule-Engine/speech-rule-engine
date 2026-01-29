@@ -48,6 +48,19 @@ export class SpeechStructure {
    */
   public speechMaps: Map<string, SpeechMap> = new Map();
 
+  public recompute: Map<string, Set<string>> = new Map();
+
+
+  public addRecompute(modality: string, id: string) {
+    let map = this.recompute.get(modality);
+    if (!map) {
+      map = new Set();
+      this.recompute.set(modality, map);
+    }
+    map.add(id);
+    return map;
+  }
+
   /**
    * Retrieve a speech map for a particular node id. If no map exists, an empy
    * one is created.
@@ -107,6 +120,7 @@ export class SpeechStructure {
       node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
       node.hasAttribute('id')
     ) {
+      console.log(`Adding: ${node.getAttribute('id')} for modality ${modality}`);
       this.setMap(modality, node.getAttribute('id'), descr);
     }
   }
@@ -155,10 +169,15 @@ export class SpeechStructure {
   public completeModality(modality: string, func: any) {
     const oldModality = Engine.getInstance().options.modality;
     Engine.getInstance().options.modality = modality;
-    for (const [id, descrs] of this.getNodeMap()) {
+    for (const id of (this.recompute.get(modality) ?? [])) {
+      const node = this.getNodeMap().get(id);
+      node.removeAttribute('grammar');
+      func(node);
+    }
+    for (const [id, node] of this.getNodeMap()) {
       const speechMap = this.getSpeechMap(id);
       if (!speechMap.has(modality)) {
-        func(descrs);
+        func(node);
       }
     }
     Engine.getInstance().options.modality = oldModality;
