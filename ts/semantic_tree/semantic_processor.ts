@@ -159,9 +159,7 @@ export class SemanticProcessor {
         SemanticProcessor.rewriteFencedLine_(table)
       );
     }
-    SemanticProcessor.binomialForm_(table);
-    SemanticProcessor.classifyMultiline(table);
-    return table;
+    return SemanticProcessor.classifyMultiline(table);
   }
 
   /**
@@ -186,8 +184,26 @@ export class SemanticProcessor {
    * might be.
    *
    * @param multiline A multiline expression.
+   * @returns The classified node. This can be changed for single lines.
    */
   public static classifyMultiline(multiline: SemanticNode) {
+    if (multiline.childNodes.length === 1) {
+      const newNode = multiline.childNodes[0].childNodes[0];
+      newNode.parent = null;
+      return newNode;
+    }
+    SemanticProcessor.binomialForm_(multiline);
+    SemanticProcessor.classifyMultiline_(multiline);
+    return multiline;
+  }
+
+  /**
+   * Semantically classifies a multiline table in terms of equation system it
+   * might be.
+   *
+   * @param multiline A multiline expression.
+   */
+  public static classifyMultiline_(multiline: SemanticNode) {
     let index = 0;
     const length = multiline.childNodes.length;
     let line;
@@ -1550,9 +1566,7 @@ export class SemanticProcessor {
         [child0, child1],
         []
       );
-      SemanticProcessor.binomialForm_(node);
-      SemanticProcessor.classifyMultiline(node);
-      return node;
+      return SemanticProcessor.classifyMultiline(node);
     } else {
       node = SemanticProcessor.getInstance().fractionNode_(denom, enume);
       if (bevelled) {
