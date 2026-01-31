@@ -1410,18 +1410,18 @@ export class SemanticProcessor {
   private cleanLimitNode(mmlTag: string, children: SemanticNode[], length: number): [string, SemanticNode[]] {
     const isEmpty = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
     if (length === 1) {
-      return isEmpty(children[1]) ? [mmlTag, [children[0]]] : [mmlTag, children];
+      return isEmpty(children[1]) ? [mmlTag, [annotateEmpty(mmlTag, children[0])]] : [mmlTag, children];
     }
     const child1 = children[1];
     const child2 = children[2];
     if (isEmpty(child1) && isEmpty(child2)) {
-      return [mmlTag, [children[0]]];
+      return [mmlTag, [annotateEmpty(mmlTag, children[0])]];
     }
     if (isEmpty(child1)) {
-      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER, [children[0], child2]];
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER, [annotateEmpty(mmlTag, children[0]), child2]];
     }
     if (isEmpty(child2)) {
-      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER, [children[0], child1]];
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER, [annotateEmpty(mmlTag, children[0]), child1]];
     }
     return [mmlTag, children];
   }
@@ -4058,4 +4058,18 @@ function ensureOperatorRelations(
     return [...before, text, ...after];
   }
   return null;
+}
+
+/**
+ * Add an annotation for an omitted empty element remembering the original
+ * tag. This is important for enrichment, where that particular tag needs to be
+ * "jumped over" during ascend when adding new nodes, like implicit multiplication.
+ *
+ * @param tag The tag.
+ * @param node The node that's annotated.
+ * @returns The node for pipelining.
+ */
+function annotateEmpty(tag: string, node: SemanticNode) {
+  node.addAnnotation('empty', tag);
+  return node;
 }
