@@ -2,147 +2,147 @@
   "tests": {
     "empty_0": {
       "tex": "a^{}b^{}",
-      "input": "<msup data-latex=\"a^{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msup><msup data-latex=\"b^{}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msup>"
+      "input": "<msup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup>"
     },
     "empty_1": {
       "tex": "a_{}b^{}",
-      "input": "<msub data-latex=\"a_{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub><msup data-latex=\"b^{}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msup>"
+      "input": "<msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup>"
     },
     "empty_2": {
       "tex": "a_{}b_{}",
-      "input": "<msub data-latex=\"a_{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub><msub data-latex=\"b_{}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><msub><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_3": {
       "tex": "a^{}_{}b^{}_{}",
-      "input": "<msubsup data-latex=\"a^{}_{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msubsup><msubsup data-latex=\"b^{}_{}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msubsup>"
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup>"
     },
     "empty_4": {
       "tex": "a^{1}_{}b^{2}_{}",
-      "input": "<msubsup data-latex=\"a^{1}_{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{1}\"><mn data-latex=\"1\">1</mn></mrow></msubsup><msubsup data-latex=\"b^{2}_{}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\"><mn data-latex=\"2\">2</mn></mrow></msubsup>"
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup>"
     },
     "empty_5": {
       "tex": "a^{}_{1}b^{}_{2}",
-      "input": "<msubsup data-latex=\"a^{}_{1}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{1}\"><mn data-latex=\"1\">1</mn></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msubsup><msubsup data-latex=\"b^{}_{2}\"><mi data-latex=\"b\">b</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{2}\"><mn data-latex=\"2\">2</mn></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msubsup>"
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup>"
     },
     "empty_6": {
       "tex": "\\underbrace{a}_{}\\underbrace{b}_{}",
-      "input": "<munder data-latex=\"\\underbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{a}\"><munder><mi data-latex=\"a\">a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_7": {
       "tex": "\\underbrace{ad}_{}\\underbrace{b}_{}",
-      "input": "<munder data-latex=\"\\underbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{ad}\"><munder><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_8": {
       "tex": "\\underbrace{a}_{}\\underbrace{be}_{}",
-      "input": "<munder data-latex=\"\\underbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{a}\"><munder><mi data-latex=\"a\">a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_9": {
       "tex": "\\underbrace{ad}_{}\\underbrace{be}_{}",
-      "input": "<munder data-latex=\"\\underbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{ad}\"><munder><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_10": {
       "tex": "\\underbrace{c}{\\underbrace{a}_{}\\underbrace{b}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{c}\"><munder><mi data-latex=\"c\">c</mi><mo>&#x23DF;</mo></munder></mrow><msub data-latex=\"{\\underbrace{a}_{}\\underbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\underbrace{a}_{}\\underbrace{b}_{}}\"><munder data-latex=\"\\underbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{a}\"><munder><mi data-latex=\"a\">a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mi>c</mi><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_11": {
       "tex": "\\underbrace{cf}{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{cf}\"><munder><mrow data-latex=\"cf\"><mi data-latex=\"c\">c</mi><mi data-latex=\"f\">f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub data-latex=\"{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\underbrace{ad}_{}\\underbrace{be}_{}}\"><munder data-latex=\"\\underbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{ad}\"><munder><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_12": {
       "tex": "\\underbrace{\\underbrace{a}_{}\\underbrace{b}_{}}_{}",
-      "input": "<munder data-latex=\"\\underbrace{\\underbrace{a}_{}\\underbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{\\underbrace{a}_{}\\underbrace{b}_{}}\"><munder><mrow data-latex=\"\\underbrace{a}_{}\\underbrace{b}_{}\"><munder data-latex=\"\\underbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{a}\"><munder><mi data-latex=\"a\">a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_13": {
       "tex": "\\underbrace{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}",
-      "input": "<munder data-latex=\"\\underbrace{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{\\underbrace{ad}_{}\\underbrace{be}_{}}\"><munder><mrow data-latex=\"\\underbrace{ad}_{}\\underbrace{be}_{}\"><munder data-latex=\"\\underbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{ad}\"><munder><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_14": {
       "tex": "\\overbrace{a}_{}\\underbrace{b}_{}",
-      "input": "<munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_15": {
       "tex": "\\overbrace{ad}_{}\\underbrace{b}_{}",
-      "input": "<munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_16": {
       "tex": "\\overbrace{a}_{}\\underbrace{be}_{}",
-      "input": "<munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_17": {
       "tex": "\\overbrace{ad}_{}\\underbrace{be}_{}",
-      "input": "<munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_18": {
       "tex": "\\underbrace{c}{\\overbrace{a}_{}\\underbrace{b}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{c}\"><munder><mi data-latex=\"c\">c</mi><mo>&#x23DF;</mo></munder></mrow><msub data-latex=\"{\\overbrace{a}_{}\\underbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\overbrace{a}_{}\\underbrace{b}_{}}\"><munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mi>c</mi><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_19": {
       "tex": "\\underbrace{cf}{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{cf}\"><munder><mrow data-latex=\"cf\"><mi data-latex=\"c\">c</mi><mi data-latex=\"f\">f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub data-latex=\"{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\overbrace{ad}_{}\\underbrace{be}_{}}\"><munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_20": {
       "tex": "\\underbrace{\\overbrace{a}_{}\\underbrace{b}_{}}_{}",
-      "input": "<munder data-latex=\"\\underbrace{\\overbrace{a}_{}\\underbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{\\overbrace{a}_{}\\underbrace{b}_{}}\"><munder><mrow data-latex=\"\\overbrace{a}_{}\\underbrace{b}_{}\"><munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{b}\"><munder><mi data-latex=\"b\">b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_21": {
       "tex": "\\underbrace{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}",
-      "input": "<munder data-latex=\"\\underbrace{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{\\overbrace{ad}_{}\\underbrace{be}_{}}\"><munder><mrow data-latex=\"\\overbrace{ad}_{}\\underbrace{be}_{}\"><munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\underbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\underbrace{be}\"><munder><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_22": {
       "tex": "\\overbrace{a}_{}\\overbrace{b}_{}",
-      "input": "<munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{b}\"><mover><mi data-latex=\"b\">b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_23": {
       "tex": "\\overbrace{ad}_{}\\overbrace{b}_{}",
-      "input": "<munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{b}\"><mover><mi data-latex=\"b\">b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_24": {
       "tex": "\\overbrace{a}_{}\\overbrace{be}_{}",
-      "input": "<munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{be}\"><mover><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_25": {
       "tex": "\\overbrace{ad}_{}\\overbrace{be}_{}",
-      "input": "<munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{be}\"><mover><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_26": {
       "tex": "\\overbrace{c}{\\overbrace{a}_{}\\overbrace{b}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{c}\"><mover><mi data-latex=\"c\">c</mi><mo>&#x23DE;</mo></mover></mrow><msub data-latex=\"{\\overbrace{a}_{}\\overbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\overbrace{a}_{}\\overbrace{b}_{}}\"><munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{b}\"><mover><mi data-latex=\"b\">b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><mover><mi>c</mi><mo>&#x23DE;</mo></mover></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_27": {
       "tex": "\\overbrace{cf}{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}",
-      "input": "<mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{cf}\"><mover><mrow data-latex=\"cf\"><mi data-latex=\"c\">c</mi><mi data-latex=\"f\">f</mi></mrow><mo>&#x23DE;</mo></mover></mrow><msub data-latex=\"{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\overbrace{ad}_{}\\overbrace{be}_{}}\"><munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{be}\"><mover><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+      "input": "<mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DE;</mo></mover></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
     },
     "empty_28": {
       "tex": "\\overbrace{\\overbrace{a}_{}\\overbrace{b}_{}}_{}",
-      "input": "<munder data-latex=\"\\overbrace{\\overbrace{a}_{}\\overbrace{b}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{\\overbrace{a}_{}\\overbrace{b}_{}}\"><mover><mrow data-latex=\"\\overbrace{a}_{}\\overbrace{b}_{}\"><munder data-latex=\"\\overbrace{a}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{a}\"><mover><mi data-latex=\"a\">a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{b}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{b}\"><mover><mi data-latex=\"b\">b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_29": {
       "tex": "\\overbrace{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}",
-      "input": "<munder data-latex=\"\\overbrace{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{\\overbrace{ad}_{}\\overbrace{be}_{}}\"><mover><mrow data-latex=\"\\overbrace{ad}_{}\\overbrace{be}_{}\"><munder data-latex=\"\\overbrace{ad}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{ad}\"><mover><mrow data-latex=\"ad\"><mi data-latex=\"a\">a</mi><mi data-latex=\"d\">d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder><munder data-latex=\"\\overbrace{be}_{}\"><mrow data-mjx-texclass=\"OP\" data-latex=\"\\overbrace{be}\"><mover><mrow data-latex=\"be\"><mi data-latex=\"b\">b</mi><mi data-latex=\"e\">e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></munder>"
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
     },
     "empty_30": {
       "tex": "\\underset{}{a}\\underset{}{b}",
-      "input": "<munder data-latex=\"\\underset{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow></munder><munder data-latex=\"\\underset{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow></munder>"
+      "input": "<munder><mi>a</mi><mrow></mrow></munder><munder><mi>b</mi><mrow></mrow></munder>"
     },
     "empty_31": {
       "tex": "\\underset{}{\\underset{}{a}\\underset{}{b}}",
-      "input": "<munder data-latex=\"\\underset{}{\\underset{}{a}\\underset{}{b}}\"><mrow data-latex=\"\\underset{}{a}\\underset{}{b}\"><munder data-latex=\"\\underset{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow></munder><munder data-latex=\"\\underset{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow></munder></mrow><mrow></mrow></munder>"
+      "input": "<munder><mrow><munder><mi>a</mi><mrow></mrow></munder><munder><mi>b</mi><mrow></mrow></munder></mrow><mrow></mrow></munder>"
     },
     "empty_32": {
       "tex": "\\overset{}{a}\\overset{}{b}",
-      "input": "<mover data-latex=\"\\overset{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow></mover><mover data-latex=\"\\overset{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow></mover>"
+      "input": "<mover><mi>a</mi><mrow></mrow></mover><mover><mi>b</mi><mrow></mrow></mover>"
     },
     "empty_33": {
       "tex": "\\overset{}{\\overset{}{a}\\overset{}{b}}",
-      "input": "<mover data-latex=\"\\overset{}{\\overset{}{a}\\overset{}{b}}\"><mrow data-latex=\"\\overset{}{a}\\overset{}{b}\"><mover data-latex=\"\\overset{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow></mover><mover data-latex=\"\\overset{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow></mover></mrow><mrow></mrow></mover>"
+      "input": "<mover><mrow><mover><mi>a</mi><mrow></mrow></mover><mover><mi>b</mi><mrow></mrow></mover></mrow><mrow></mrow></mover>"
     },
     "empty_34": {
       "tex": "\\overunderset{}{}{a}\\overunderset{}{}{b}",
-      "input": "<munderover data-latex=\"\\overunderset{}{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow><mrow></mrow></munderover><munderover data-latex=\"\\overunderset{}{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow><mrow></mrow></munderover>"
+      "input": "<munderover><mi>a</mi><mrow></mrow><mrow></mrow></munderover><munderover><mi>b</mi><mrow></mrow><mrow></mrow></munderover>"
     },
     "empty_35": {
       "tex": "\\overunderset{}{}{\\overunderset{}{}{a}\\overunderset{}{}{b}}",
-      "input": "<munderover data-latex=\"\\overunderset{}{}{\\overunderset{}{}{a}\\overunderset{}{}{b}}\"><mrow data-latex=\"\\overunderset{}{}{a}\\overunderset{}{}{b}\"><munderover data-latex=\"\\overunderset{}{}{a}\"><mi data-latex=\"a\">a</mi><mrow></mrow><mrow></mrow></munderover><munderover data-latex=\"\\overunderset{}{}{b}\"><mi data-latex=\"b\">b</mi><mrow></mrow><mrow></mrow></munderover></mrow><mrow></mrow><mrow></mrow></munderover>"
+      "input": "<munderover><mrow><munderover><mi>a</mi><mrow></mrow><mrow></mrow></munderover><munderover><mi>b</mi><mrow></mrow><mrow></mrow></munderover></mrow><mrow></mrow><mrow></mrow></munderover>"
     }
   }
 }
