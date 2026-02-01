@@ -162,11 +162,14 @@ export function walkTree(semantic: SemanticNode): Element {
     newChildren
   );
   newNode = semantic.mathmlTree;
+  let sem = false;
   if (newNode === null) {
     Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
     const attached = attachedElement(childrenList);
+    // We need to possibly ascend nodes with ignored empty elements.
+    sem = true;
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
@@ -183,7 +186,7 @@ export function walkTree(semantic: SemanticNode): Element {
     EnrichAttr.setAttributes(newNode, semantic);
   }
   Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
-  return ascendNewNode(newNode);
+  return ascendNewNode(newNode, sem && semantic);
 }
 
 /**
@@ -735,10 +738,18 @@ function validLca(left: Element, right: Element): boolean {
  * and that only has one child.
  *
  * @param newNode The node currently under consideration.
+ * @param semantic Optionally the original semantic element. If this is given
+ *     and has an annotation for empty, the parent node corresponding to the
+ *     given tag is skipped. This is important for elements like `a_{}b_{}`,
+ *     where empty subscripts are omitted, but newly added implicit times
+ *     elements need to be added between the msubs and not before the `b`.
  * @returns The parent node.
  */
-export function ascendNewNode(newNode: Element): Element {
-  while (!SemanticUtil.hasMathTag(newNode) && unitChild(newNode)) {
+export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
+  let empty = semantic && semantic.getAnnotation('empty')[0];
+  while (!SemanticUtil.hasMathTag(newNode) &&
+    (unitChild(newNode) ||
+      (empty && newNode.parentNode && parentNode(newNode).tagName?.toUpperCase() === empty))) {
     newNode = parentNode(newNode);
   }
   return newNode;
