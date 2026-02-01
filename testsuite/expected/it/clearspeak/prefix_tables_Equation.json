@@ -105,7 +105,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "Equazioni 1"
+      "expected": ""
     },
     "Table_1": {
       "expected": "Equazioni 1"
@@ -123,7 +123,7 @@
       "expected": "Equazioni 2"
     },
     "Table_Cell_0": {
-      "expected": "Equazioni 1"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "Colonna 1"
@@ -150,7 +150,7 @@
       "expected": "Colonna 2"
     },
     "Table_Cell_Depth_0": {
-      "expected": "Equazioni 1"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "Equazioni 1, Colonna 1"
