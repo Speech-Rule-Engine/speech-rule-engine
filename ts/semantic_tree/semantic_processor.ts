@@ -187,11 +187,6 @@ export class SemanticProcessor {
    * @returns The classified node. This can be changed for single lines.
    */
   public static classifyMultiline(multiline: SemanticNode) {
-    if (multiline.childNodes.length === 1) {
-      const newNode = multiline.childNodes[0].childNodes[0];
-      newNode.parent = null;
-      return newNode;
-    }
     SemanticProcessor.binomialForm_(multiline);
     SemanticProcessor.classifyMultiline_(multiline);
     return multiline;
@@ -1474,6 +1469,9 @@ export class SemanticProcessor {
         SemanticProcessor.tableToCases_(table, prevNodes.pop() as SemanticNode);
       }
       result = result.concat(prevNodes);
+      if (result.length || partition.comp[0].length) {
+        table = SemanticProcessor.rewriteTrivialTable(table);
+      }
       result.push(table);
     }
     return result.concat(partition.comp.shift());
@@ -1916,6 +1914,17 @@ export class SemanticProcessor {
       node.type = SemanticType.OPERATOR;
     }
     return SemanticHeuristics.run('multioperator', node) as SemanticNode;
+  }
+
+  /**
+   * Rewrite a trivial table into the element that constitutes the inner line.
+   *
+   * @param table The table.
+   * @returns If table is trivial, the stripped inner element. O/w the original
+   *     table.
+   */
+  public static rewriteTrivialTable(table: SemanticNode): SemanticNode {
+    return isTrivialTable(table) ? unwrapTrivialTable(table) : table;
   }
 
   /**
@@ -4072,4 +4081,29 @@ function ensureOperatorRelations(
     return [...before, text, ...after];
   }
   return null;
+}
+
+/**
+ * Check if a table is a trivial table. That is, it is multiline element with
+ * only a single line and no label.
+ *
+ * @param multiline The multiline table.
+ * @returns True if it is a trivial table.
+ */
+function isTrivialTable(multiline: SemanticNode) {
+  return SemanticPred.isType(multiline, SemanticType.MULTILINE) &&
+    multiline.childNodes.length === 1 &&
+    !SemanticPred.lineIsLabelled(multiline.childNodes[0])
+};
+
+/**
+ * Rewrite a trivial table into the element that constitutes the inner line.
+ *
+ * @param multiline The multiline table.
+ * @returns The stripped inner element.
+ */
+function unwrapTrivialTable(multiline: SemanticNode) {
+  const newNode = multiline.childNodes[0].childNodes[0];
+  newNode.parent = null;
+  return newNode;
 }

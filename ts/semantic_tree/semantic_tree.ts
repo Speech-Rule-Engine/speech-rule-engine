@@ -37,6 +37,7 @@ import { SemanticParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import './semantic_heuristics.js';
 import './special_annotators.js';
+import { SemanticProcessor } from './semantic_processor.js';
 
 export class SemanticTree {
   /**
@@ -137,6 +138,8 @@ export class SemanticTree {
   ) {
     this.parser = new SemanticMathml(options);
     this.root = this.parser.parse(mathml);
+    // TODO: Rewrite the parser to include this!
+    this.root = SemanticProcessor.rewriteTrivialTable(this.root);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
 
     const newDefault = this.collator.newDefault();
