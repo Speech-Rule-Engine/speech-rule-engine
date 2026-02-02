@@ -1138,6 +1138,7 @@
       "default",
       "self::fenced",
       "@role=\"leftright\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or contains(@annotation, \"fences:curly\")",
       "contains(children/*[1]/@annotation, \"clearspeak:simple\")",
       "name(../..)!=\"superscript\" and name(../..)!=\"subscript\""
     ],
@@ -1148,6 +1149,7 @@
       "self::fenced",
       "@role=\"leftright\"",
       "name(../..)=\"superscript\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "children/*[1][@role=\"integer\"] or children/*[1][@role=\"float\"] or (children/*[1][@role=\"vulgar\"] and contains(children/*[1]/@annotation, \"clearspeak:simple\")) or children/*[1][@role=\"latinletter\"] or children/*[1][@role=\"greekletter\"] or children/*[1][@role=\"otherletter\"]"
     ],
     [
@@ -1159,6 +1161,7 @@
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\") or name(children/*[1]/children/*[2]/children/*[1])=\"subscript\" or name(children/*[1]/children/*[2]/children/*[1])=\"superscript\" or children/*[1]/children/*[2]/children/*[1][@role=\"vulgar\"] "
     ],
     [
@@ -1170,6 +1173,7 @@
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "name(children/*[1]/children/*[1])=\"identifier\" or name(children/*[1]/children/*[1])=\"function\"",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\")",
       "name(children/*[1]/children/*[2]/children/*[1])=\"identifier\" or name(children/*[1]/children/*[2]/children/*[1])=\"number\""
@@ -1211,6 +1215,7 @@
       "@role=\"leftright\"",
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\") or name(children/*[1]/children/*[2]/children/*[1])=\"subscript\" or name(children/*[1]/children/*[2]/children/*[1])=\"superscript\" or children/*[1]/children/*[2]/children/*[1][@role=\"vulgar\"] "
     ],
@@ -2138,6 +2143,20 @@
       "AbsoluteValue_AbsEnd",
       "self::fenced",
       "@role=\"metric\""
+    ],
+    [
+      "Precondition",
+      "ceiling",
+      "default",
+      "self::fenced",
+      "contains(@annotation, \"fences:ceil\")"
+    ],
+    [
+      "Precondition",
+      "floor",
+      "default",
+      "self::fenced",
+      "contains(@annotation, \"fences:floor\")"
     ],
     [
       "Precondition",
