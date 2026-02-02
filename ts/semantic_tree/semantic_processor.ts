@@ -939,6 +939,8 @@ export class SemanticProcessor {
    * Rewrites a fenced node by pulling some embellishments from fences to the
    * outside.
    *
+   * Also annotates the node to distinguish particular fences.
+   *
    * @param fenced The fenced node.
    * @returns The rewritten node.
    */
@@ -951,6 +953,8 @@ export class SemanticProcessor {
     fenced.contentNodes[1] = rewritten.fence;
     fenced.contentNodes[0].parent = fenced;
     fenced.contentNodes[1].parent = fenced;
+    // Annotation is done here to ensure we catch all fenced expressions.
+    annotateFencedNode(fenced);
     rewritten.node.parent = null;
     return rewritten.node;
   }
@@ -3205,7 +3209,6 @@ export class SemanticProcessor {
       [childNode],
       [ofence, cfence]
     );
-    annotateFencedNode(newNode);
     if (ofence.role === SemanticRole.OPEN) {
       // newNode.role = SemanticRole.LEFTRIGHT;
       SemanticProcessor.getInstance().classifyHorizontalFence_(newNode);
@@ -4110,6 +4113,11 @@ function ensureOperatorRelations(
   return null;
 }
 
+/**
+ * Annotate the fences if both fences have the same secondary meaning.
+ *
+ * @param node The fenced node to annotate.
+ */
 function annotateFencedNode(node: SemanticNode) {
   const meaning1 = SemanticMap.FencesSecondary.get(node.contentNodes[0].textContent);
   const meaning2 = SemanticMap.FencesSecondary.get(node.contentNodes[1].textContent);
