@@ -4437,6 +4437,138 @@
         10,
         11
       ]
+    },
+    "Single": {
+      "expected": 0
+    },
+    "Single_Scalar": {
+      "expected": [
+        6,
+        0,
+        5,
+        1
+      ]
+    },
+    "Matrix_Inner": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1
+        ],
+        2
+      ]
+    },
+    "Matrix_Inner_Scalar": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2
+          ],
+          3
+        ]
+      ]
+    },
+    "Matrix_Outer": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1
+        ],
+        5
+      ]
+    },
+    "Matrix_Outer_Scalar": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          5,
+          1,
+          [
+            4,
+            2
+          ],
+          6
+        ]
+      ]
+    },
+    "Matrix_Double_Inner": {
+      "expected": [
+        12,
+        [
+          5,
+          [
+            3,
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          11,
+          [
+            9,
+            6,
+            7,
+            8
+          ]
+        ]
+      ]
+    },
+    "Case_Inner": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Case_Inner_Scalar": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "Case_Outer": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    "Case_Outer_Scalar": {
+      "expected": [
+        7,
+        0,
+        6,
+        [
+          5,
+          1,
+          [
+            4,
+            2
+          ]
+        ]
+      ]
     }
   }
 }

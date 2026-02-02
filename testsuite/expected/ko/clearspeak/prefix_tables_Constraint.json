@@ -105,7 +105,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "조건문 1"
+      "expected": ""
     },
     "Table_1": {
       "expected": "조건문 1"
@@ -123,7 +123,7 @@
       "expected": "조건문 2"
     },
     "Table_Cell_0": {
-      "expected": "조건문 1"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "1열"
@@ -150,7 +150,7 @@
       "expected": "2열"
     },
     "Table_Cell_Depth_0": {
-      "expected": "조건문 1"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "조건문 1, 1열"

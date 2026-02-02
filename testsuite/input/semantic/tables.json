@@ -984,6 +984,40 @@
     },
     "issue_564_3": {
       "input": "<mpadded mathbackground=\"blue\"><munder><mmultiscripts><mo>(</mo><mprescripts/><mn>4</mn><mn>3</mn></mmultiscripts><mo>~</mo></munder></mpadded><mi>x</mi><mpadded mathbackground=\"red\"><mover><msubsup><mo>)</mo><mn>1</mn><mn>2</mn></msubsup><mo>^</mo></mover></mpadded>"
+    },
+    "Single": {
+      "input": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Single_Scalar": {
+      "input": "<math><mn>2</mn><mrow><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Matrix_Inner": {
+      "input": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Matrix_Inner_Scalar": {
+      "input": "<math><mn>2</mn><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Matrix_Outer": {
+      "input": "<math><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>"
+    },
+    "Matrix_Outer_Scalar": {
+      "input": "<math><mn>2</mn><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math>"
+    },
+    "Matrix_Double_Inner": {
+      "input": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mo>(</mo><mn>4</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "_comment_case": "this could be a case statement.",
+    "Case_Inner": {
+      "input": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>{</mo><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Case_Inner_Scalar": {
+      "input": "<math><mn>2</mn><mrow><mtable><mtr><mtd><mrow><mrow><mo>{</mo><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Case_Outer": {
+      "input": "<math><mrow><mo>{</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
+    },
+    "Case_Outer_Scalar": {
+      "input": "<math><mn>2</mn><mrow><mo>{</mo><mtable><mtr><mtd><mrow><mrow><mn>3</mn></mrow></mrow></mtd></mtr></mtable></mrow></math>"
     }
   }
 }

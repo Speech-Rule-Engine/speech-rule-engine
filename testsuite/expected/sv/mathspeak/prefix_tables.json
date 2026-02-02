@@ -102,7 +102,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "1:a Raden"
+      "expected": ""
     },
     "Table_1": {
       "expected": "1:a Raden"
@@ -120,7 +120,7 @@
       "expected": "2:a Raden"
     },
     "Table_Cell_0": {
-      "expected": "1:a Raden"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "1:a Kolumn"
@@ -147,7 +147,7 @@
       "expected": "2:a Kolumn"
     },
     "Table_Cell_Depth_0": {
-      "expected": "1:a Raden"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "1:a Raden, 1:a Kolumnen"

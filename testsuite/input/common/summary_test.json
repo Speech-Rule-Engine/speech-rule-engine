@@ -204,19 +204,19 @@
     "_comment2_": " TODO",
     "AbstrLine_default": {
       "test": true,
-      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable>",
       "steps": ["DOWN"],
       "preference": "default"
     },
     "AbstrLine_brief": {
       "test": true,
-      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable>",
       "steps": ["DOWN"],
       "preference": "brief"
     },
     "AbstrLine_sbrief": {
       "test": true,
-      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable>",
       "steps": ["DOWN"],
       "preference": "sbrief"
     },

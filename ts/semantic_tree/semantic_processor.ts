@@ -159,9 +159,7 @@ export class SemanticProcessor {
         SemanticProcessor.rewriteFencedLine_(table)
       );
     }
-    SemanticProcessor.binomialForm_(table);
-    SemanticProcessor.classifyMultiline(table);
-    return table;
+    return SemanticProcessor.classifyMultiline(table);
   }
 
   /**
@@ -186,8 +184,21 @@ export class SemanticProcessor {
    * might be.
    *
    * @param multiline A multiline expression.
+   * @returns The classified node. This can be changed for single lines.
    */
   public static classifyMultiline(multiline: SemanticNode) {
+    SemanticProcessor.binomialForm_(multiline);
+    SemanticProcessor.classifyMultiline_(multiline);
+    return multiline;
+  }
+
+  /**
+   * Semantically classifies a multiline table in terms of equation system it
+   * might be.
+   *
+   * @param multiline A multiline expression.
+   */
+  public static classifyMultiline_(multiline: SemanticNode) {
     let index = 0;
     const length = multiline.childNodes.length;
     let line;
@@ -1407,21 +1418,29 @@ export class SemanticProcessor {
    *     original node.
    * @returns The newly created limit node.
    */
-  private cleanLimitNode(mmlTag: string, children: SemanticNode[], length: number): [string, SemanticNode[]] {
+  private cleanLimitNode(
+    mmlTag: string,
+    children: SemanticNode[],
+    length: number
+  ): [string, SemanticNode[]] {
     const isEmpty = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
     if (length === 1) {
-      return isEmpty(children[1]) ? [mmlTag, [children[0]]] : [mmlTag, children];
+      return isEmpty(children[1]) ?
+        [mmlTag, [annotateEmpty([mmlTag], children[0])]] :
+        [mmlTag, children];
     }
     const child1 = children[1];
     const child2 = children[2];
     if (isEmpty(child1) && isEmpty(child2)) {
-      return [mmlTag, [children[0]]];
+      return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
     }
     if (isEmpty(child1)) {
-      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER, [children[0], child2]];
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER,
+              [annotateEmpty([mmlTag], children[0]), child2]];
     }
     if (isEmpty(child2)) {
-      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER, [children[0], child1]];
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER,
+              [annotateEmpty([mmlTag], children[0]), child1]];
     }
     return [mmlTag, children];
   }
@@ -1458,6 +1477,9 @@ export class SemanticProcessor {
         SemanticProcessor.tableToCases_(table, prevNodes.pop() as SemanticNode);
       }
       result = result.concat(prevNodes);
+      if (result.length || partition.comp[0].length) {
+        table = SemanticProcessor.rewriteTrivialTable(table);
+      }
       result.push(table);
     }
     return result.concat(partition.comp.shift());
@@ -1550,9 +1572,7 @@ export class SemanticProcessor {
         [child0, child1],
         []
       );
-      SemanticProcessor.binomialForm_(node);
-      SemanticProcessor.classifyMultiline(node);
-      return node;
+      return SemanticProcessor.classifyMultiline(node);
     } else {
       node = SemanticProcessor.getInstance().fractionNode_(denom, enume);
       if (bevelled) {
@@ -1902,6 +1922,35 @@ export class SemanticProcessor {
       node.type = SemanticType.OPERATOR;
     }
     return SemanticHeuristics.run('multioperator', node) as SemanticNode;
+  }
+
+  /**
+   * Rewrite a trivial table into the element that constitutes the inner line.
+   *
+   * @param table The table.
+   * @returns If table is trivial, the stripped inner element. O/w the original
+   *     table.
+   */
+  public static rewriteTrivialTable(table: SemanticNode): SemanticNode {
+    return isTrivialTable(table) ?
+      SemanticProcessor.getInstance().unwrapTrivialTable(table) : table;
+  }
+
+  /**
+   * Rewrite a trivial table into the element that constitutes the inner line.
+   *
+   * @param multiline The multiline table.
+   * @returns The stripped inner element.
+   */
+  private unwrapTrivialTable(multiline: SemanticNode) {
+    if (!multiline.childNodes[0].childNodes.length) {
+      // TODO: this is currently not used.
+      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
+    }
+    const newNode = multiline.childNodes[0].childNodes[0];
+    newNode.parent = null;
+    annotateEmpty([MMLTAGS.MTD, MMLTAGS.MTR, MMLTAGS.MTABLE], newNode);
+    return newNode;
   }
 
   /**
@@ -4067,4 +4116,34 @@ function annotateFencedNode(node: SemanticNode) {
   if (meaning1 === meaning2) {
     node.addAnnotation('fences', meaning1);
   }
+}
+
+/**
+ * Check if a table is a trivial table. That is, it is multiline element with
+ * only a single line and no label.
+ *
+ * @param multiline The multiline table.
+ * @returns True if it is a trivial table.
+ */
+function isTrivialTable(multiline: SemanticNode) {
+  return SemanticPred.isType(multiline, SemanticType.MULTILINE) &&
+    multiline.childNodes.length === 1 &&
+    // TODO: This currently leaves incomplete/empty tables untouched!
+    // We could replace that with empty.
+    multiline.childNodes[0].childNodes.length &&
+    !SemanticPred.lineIsLabelled(multiline.childNodes[0])
+};
+
+/**
+ * Add an annotation for an omitted empty element remembering the original
+ * tag. This is important for enrichment, where that particular tag needs to be
+ * "jumped over" during ascend when adding new nodes, like implicit multiplication.
+ *
+ * @param tag The tag.
+ * @param node The node that's annotated.
+ * @returns The node for pipelining.
+ */
+function annotateEmpty(tags: string[], node: SemanticNode) {
+  tags.forEach((tag) => node.addAnnotation('empty', tag));
+  return node;
 }
