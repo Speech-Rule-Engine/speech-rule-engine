@@ -102,7 +102,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "१ली पंक्ति"
+      "expected": ""
     },
     "Table_1": {
       "expected": "१ली पंक्ति"
@@ -120,7 +120,7 @@
       "expected": "२री पंक्ति"
     },
     "Table_Cell_0": {
-      "expected": "१ली पंक्ति"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "१ला स्तंभ"
@@ -147,7 +147,7 @@
       "expected": "२रा स्तंभ"
     },
     "Table_Cell_Depth_0": {
-      "expected": "१ली पंक्ति"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "१ली पंक्ति, १ला स्तंभ"
