@@ -162,14 +162,12 @@ export function walkTree(semantic: SemanticNode): Element {
     newChildren
   );
   newNode = semantic.mathmlTree;
-  let sem = false;
   if (newNode === null) {
     Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
     const attached = attachedElement(childrenList);
     // We need to possibly ascend nodes with ignored empty elements.
-    sem = true;
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
@@ -186,7 +184,7 @@ export function walkTree(semantic: SemanticNode): Element {
     EnrichAttr.setAttributes(newNode, semantic);
   }
   Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
-  return ascendNewNode(newNode, sem && semantic);
+  return ascendNewNode(newNode, semantic);
 }
 
 /**
@@ -746,10 +744,10 @@ function validLca(left: Element, right: Element): boolean {
  * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
-  let empty = semantic && semantic.getAnnotation('empty')[0];
+  let empty = semantic && semantic.getAnnotation('empty');
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
-      (empty && newNode.parentNode && parentNode(newNode).tagName?.toUpperCase() === empty))) {
+      (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
     newNode = parentNode(newNode);
   }
   return newNode;

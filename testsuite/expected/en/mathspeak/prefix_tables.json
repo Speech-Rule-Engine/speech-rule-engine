@@ -102,7 +102,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "1st Row"
+      "expected": ""
     },
     "Table_1": {
       "expected": "1st Row"
@@ -120,7 +120,7 @@
       "expected": "2nd Row"
     },
     "Table_Cell_0": {
-      "expected": "1st Row"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "1st Column"
@@ -147,7 +147,7 @@
       "expected": "2nd Column"
     },
     "Table_Cell_Depth_0": {
-      "expected": "1st Row"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "1st Row, 1st Column"
