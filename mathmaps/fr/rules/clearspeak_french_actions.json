@@ -942,7 +942,7 @@
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"à\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sous\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
