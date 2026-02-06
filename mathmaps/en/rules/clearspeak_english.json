@@ -53,6 +53,5 @@
       "name(children/*[1]/children/*[1]/children/*[1])=\"operator\"",
       "not(contains(@grammar, \"layoutSummary\"))"
     ]
-
   ]
 }

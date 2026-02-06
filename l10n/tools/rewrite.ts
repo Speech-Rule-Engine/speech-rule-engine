@@ -109,6 +109,23 @@ export function rewriteRules(domain: string, rewriter: Rewriter, output = null, 
   }
 };
 
+export function rewriteActions(domain: string, rewriter: Rewriter, output = null, second = null) {
+  for (let [iso, name] of Variables.LOCALES.entries()) {
+    name = name.toLowerCase();
+    let file = `${PATH}/${iso}/rules/${domain}_${name}_actions.json`;
+    let out = output ?
+        (second ? `/tmp/${output}_${name}_${second}.json` :
+         `/tmp/${output}_${name}.json`) :
+        file;
+    try {
+      rewriteRuleSet(file, out, rewriter);
+    } catch (e) {
+      console.log(e);
+      continue;
+    }
+  }
+};
+
 function rewriteRuleSet(input: string, output: string, rewriter: Rewriter) {
   let json = JSON.parse(fs.readFileSync(input, {encoding: 'utf-8'}));
   let rules = json.rules;
