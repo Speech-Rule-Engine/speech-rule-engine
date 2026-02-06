@@ -952,7 +952,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

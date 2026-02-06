@@ -1027,7 +1027,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

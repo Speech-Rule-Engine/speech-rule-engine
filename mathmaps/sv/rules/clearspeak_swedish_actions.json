@@ -1017,7 +1017,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"från\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"över\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

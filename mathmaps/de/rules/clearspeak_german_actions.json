@@ -987,7 +987,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
