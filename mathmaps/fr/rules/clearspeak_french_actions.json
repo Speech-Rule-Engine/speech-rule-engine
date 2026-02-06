@@ -947,7 +947,7 @@
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"sur\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"avec\"; [n] children/*[2]; [t] \"dessous\""
     ],
     [
       "Action",

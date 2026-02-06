@@ -1017,7 +1017,7 @@
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"oor\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"onder\""
     ],
     [
       "Action",

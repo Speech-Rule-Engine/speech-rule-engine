@@ -1022,7 +1022,7 @@
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sotto\""
     ],
     [
       "Action",
