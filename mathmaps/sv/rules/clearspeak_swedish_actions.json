@@ -977,7 +977,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"från\"; [n] children/*[2]; [t] \"till\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"från\"; [n] children/*[2]; [t] \"till\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",

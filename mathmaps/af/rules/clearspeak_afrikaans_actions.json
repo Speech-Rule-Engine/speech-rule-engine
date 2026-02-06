@@ -982,7 +982,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
