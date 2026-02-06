@@ -80,7 +80,7 @@ function uniqueNameList(...lists: string[][]) {
 function compareRuleNames(domain: string, splitter = getRuleNames) {
   let splitRules = {};
   for (let [key, name] of Variables.LOCALES.entries()) {
-    name = name.toLowerCase();
+    name = cleanLocale(name)
     try {
       splitRules[key] = splitter(loadRules(key, `${domain}_${name}`));
     } catch (e) {
@@ -94,7 +94,7 @@ function compareRuleNames(domain: string, splitter = getRuleNames) {
 // Rewrites in place!
 export function rewriteRules(domain: string, rewriter: Rewriter, output = null, second = null) {
   for (let [iso, name] of Variables.LOCALES.entries()) {
-    name = name.toLowerCase();
+    name = cleanLocale(name)
     let file = `${PATH}/${iso}/rules/${domain}_${name}.json`;
     let out = output ?
         (second ? `/tmp/${output}_${name}_${second}.json` :
@@ -109,9 +109,16 @@ export function rewriteRules(domain: string, rewriter: Rewriter, output = null, 
   }
 };
 
+//
+// Actions Rewriters:
+// * Replace action and translate:
+//   Parameters: the action name, replacement string, translation structure
+//   We need to through all the [t] elements for replacement.
+// * Add new action after another
+//   Parameters: action structure, previous rule/action name, translation structure
 export function rewriteActions(domain: string, rewriter: Rewriter, output = null, second = null) {
   for (let [iso, name] of Variables.LOCALES.entries()) {
-    name = name.toLowerCase();
+    name = cleanLocale(name)
     let file = `${PATH}/${iso}/rules/${domain}_${name}_actions.json`;
     let out = output ?
         (second ? `/tmp/${output}_${name}_${second}.json` :
@@ -125,6 +132,53 @@ export function rewriteActions(domain: string, rewriter: Rewriter, output = null
     }
   }
 };
+
+type Translate = {[word: string]: {[lang: string]: string}};
+
+export function getTranslate(file: string): Translate {
+  let json = JSON.parse(
+    fs.readFileSync(`../tmp/${file}.json`, {encoding: 'utf-8'}));
+  return json;
+}
+
+export function replaceTranslateActions(
+  domain: string, name: string, replace: string, translate: Translate ) {
+  for (let [iso, language] of Variables.LOCALES.entries()) {
+    language = cleanLocale(language)
+    let file = `${PATH}/${iso}/rules/${domain}_${language}_actions.json`;
+    let rewriter = (action: Rule) => {
+      if (action[1] === name) {
+        const newStr = translateString(language, replace, translate);
+        if (newStr === replace) {
+          console.info(`No replacement for locale ${language}`);
+        } else {
+          action[2] = translateString(language, replace, translate);
+        }
+      }
+      return action
+    }
+    try {
+      rewriteRuleSet(file, file, rewriter);
+    } catch (_e) {
+      console.info(`Failed for locale ${language}`);
+      continue;
+    }
+  }
+};
+
+function translateString(locale: string, str: string, translate: Translate): string {
+  for (const [src, trans] of Object.entries(translate)) {
+    const dst = trans[locale];
+    const old = str;
+    if (dst) {
+      str = str.replace(src, dst);
+      if (old !== str) {
+        console.info(`Replaced ${src} by ${dst} in locale ${locale}`);
+      }
+    }
+  }
+  return str;
+}
 
 function rewriteRuleSet(input: string, output: string, rewriter: Rewriter) {
   let json = JSON.parse(fs.readFileSync(input, {encoding: 'utf-8'}));
@@ -260,3 +314,7 @@ export function removeAction(names, remove) {
     return null;
   };
 };
+
+function cleanLocale(str: string) {
+  return str.toLowerCase().replace(/å/g, 'a');
+}
