@@ -318,3 +318,11 @@ export function removeAction(names, remove) {
 function cleanLocale(str: string) {
   return str.toLowerCase().replace(/å/g, 'a');
 }
+
+export function isoToLocaleInText(file: string) {
+  let content = fs.readFileSync(file, {encoding: 'utf-8'});
+  for (let [iso, lang] of Variables.LOCALES.entries()) {
+    content = content.replace(`\/${iso}\/`, `\/${cleanLocale(lang)}\/`);
+  }
+  fs.writeFileSync(file, content);
+}
