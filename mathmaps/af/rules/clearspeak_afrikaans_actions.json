@@ -1007,7 +1007,7 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"onder\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"bo\""
     ],
     [
       "Action",

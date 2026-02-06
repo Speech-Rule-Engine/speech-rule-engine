@@ -972,7 +972,7 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"unter\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"mit\"; [n] children/*[2]; [t] \"oben\""
     ],
     [
       "Action",
