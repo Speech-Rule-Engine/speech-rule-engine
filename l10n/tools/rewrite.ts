@@ -137,8 +137,51 @@ type Translate = {[word: string]: {[lang: string]: string}};
 
 export function getTranslate(file: string): Translate {
   let json = JSON.parse(
-    fs.readFileSync(`../tmp/${file}.json`, {encoding: 'utf-8'}));
+    fs.readFileSync(`../l10n/tmp/${file}.json`, {encoding: 'utf-8'}));
   return json;
+}
+
+function findRule(name: string, rules: Rule[]) {
+  return rules.map(x => x[1]).indexOf(name);
+}
+
+// Copy a rule/action from original (default en) to other locales and translate.
+//
+// It is sorted after the same rule as the one before in the original.
+// If not found we add at the end.
+export function addTranslateActions(
+  domain: string, name: string, translate: Translate,
+  [oiso, olang]: [string, string] = ['en', 'english']
+) {
+  // const ofile = `${PATH}/${oiso}/rules/${domain}_${cleanLocale(olang)}_actions.json`;
+  const original = loadRules(oiso, `${domain}_${cleanLocale(olang)}_actions`);
+  const index = findRule(name, original);
+  if (index === -1) {
+    console.info(`Action for ${name} not found in ${olang} actions`);
+    return;
+  }
+  const rule = original[index];
+  const prev = (original[index - 1] || [])[1];
+  for (let [iso, language] of Variables.LOCALES.entries()) {
+    if (iso === oiso) continue;
+    language = cleanLocale(language);
+    let file: string;
+    let json = null;
+    try {
+      file = `${PATH}/${iso}/rules/${domain}_${language}_actions.json`;
+      json = JSON.parse(fs.readFileSync(file, {encoding: 'utf-8'}));
+    } catch {
+      console.info(`Omitted locale ${olang}`);
+      continue;
+    }
+    let pindex = findRule(prev, json.rules);
+    if (pindex === -1) {
+      pindex = json.rules.length;
+    }
+    json.rules.splice(pindex + 1, 0, rule);
+    fs.writeFileSync(file, JSON.stringify(json, null, 2) + '\n');
+    replaceTranslateActions(domain, name, rule[2], translate);
+  }
 }
 
 export function replaceTranslateActions(
