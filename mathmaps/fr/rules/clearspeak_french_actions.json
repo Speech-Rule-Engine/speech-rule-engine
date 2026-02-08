@@ -941,6 +941,11 @@
     ],
     [
       "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"avec\"; [n] children/*[1]/children/*[2]; [t] \"dessous\"; [t] \"et\"; [n] children/*[2]; [t] \"dessus\""
+    ],
+    [
+      "Action",
       "overscript-limits",
       "[n] children/*[1]; [t] \"sous\"; [n] children/*[2] (pause:short)"
     ],

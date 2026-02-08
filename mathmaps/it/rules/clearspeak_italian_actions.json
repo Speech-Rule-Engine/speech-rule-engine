@@ -1016,6 +1016,11 @@
     ],
     [
       "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"con\"; [n] children/*[1]/children/*[2]; [t] \"sotto\"; [t] \"e\"; [n] children/*[2]; [t] \"sopra\""
+    ],
+    [
+      "Action",
       "overscript-limits",
       "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2] (pause:short)"
     ],
