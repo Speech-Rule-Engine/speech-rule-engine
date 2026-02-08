@@ -2,7 +2,7 @@
   "domain": "clearspeak",
   "locale": "ko",
   "modality": "speech",
-  "inherits": "base",
+  "inherits": "nonlatin",
   "rules": [
     [
       "Precondition",
