@@ -1,0 +1,101 @@
+{
+  "name": "BokmålClearspeakCoverageLimits",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "Bokmål Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakBokmål",
+  "tests": {
+    "rel1": {
+      "expected": "q fra n er lik 1 til c"
+    },
+    "rel2": {
+      "expected": "normal q med c over"
+    },
+    "rel3": {
+      "expected": "q over n er lik 1"
+    },
+    "rel4": {
+      "expected": "normal q med n under"
+    },
+    "over": {
+      "expected": "a med y over"
+    },
+    "overaccent": {
+      "expected": "a høyrepil"
+    },
+    "overunder-sep": {
+      "expected": "a med x under og y over"
+    },
+    "overunder": {
+      "expected": "a med x under og y over"
+    },
+    "overunderaccent": {
+      "expected": "a med høyrepil under venstrepil"
+    },
+    "under": {
+      "expected": "a med x under"
+    },
+    "underaccent": {
+      "expected": "a med venstrepil under"
+    },
+    "cup1": {
+      "expected": "union fra n er lik 1 til c"
+    },
+    "cup2": {
+      "expected": "union fra c"
+    },
+    "cup3": {
+      "expected": "union under n er lik 1"
+    },
+    "cup4": {
+      "expected": "union tegn med n over"
+    },
+    "cup5": {
+      "expected": "union tegn med c over"
+    },
+    "cup6": {
+      "expected": "union over n er lik 1"
+    },
+    "cup7": {
+      "expected": "union fra n"
+    },
+    "let1": {
+      "expected": "normal q med n er lik 1 under og c over"
+    },
+    "let2": {
+      "expected": "normal q med c over"
+    },
+    "let3": {
+      "expected": "normal q med n er lik 1 under"
+    },
+    "let4": {
+      "expected": "normal q med n under"
+    },
+    "limits1": {
+      "expected": "q fra n er lik 1 til c"
+    },
+    "limits1a": {
+      "expected": "normal q med n under og c over"
+    },
+    "limits2": {
+      "expected": "normal q med n er lik 1 under og c over"
+    },
+    "limits2a": {
+      "expected": "normal q med n under og c over"
+    },
+    "sum1": {
+      "expected": "sum fra n er lik 1 til c"
+    },
+    "sum2": {
+      "expected": "sum under c"
+    },
+    "sum3": {
+      "expected": "sum over n er lik 1"
+    },
+    "sum4": {
+      "expected": "sum over n"
+    }
+  },
+  "compare": true
+}
