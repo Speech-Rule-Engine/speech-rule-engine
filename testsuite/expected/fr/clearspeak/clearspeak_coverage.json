@@ -98,16 +98,16 @@
       "expected": "12"
     },
     "Enclose_2": {
-      "expected": "2 sur 12"
+      "expected": "2 avec 12 dessous"
     },
     "Enclose_3": {
-      "expected": "12 sur 2"
+      "expected": "12 avec 2 dessous"
     },
     "Enclose_4": {
-      "expected": "12 sous 2"
+      "expected": "12 avec 2 dessus"
     },
     "Enclose_5": {
-      "expected": "2 sous 12"
+      "expected": "2 avec 12 dessus"
     },
     "Enclose_6": {
       "expected": "12"
@@ -116,16 +116,16 @@
       "expected": "12"
     },
     "Enclose_8": {
-      "expected": "2 sur 12"
+      "expected": "2 avec 12 dessous"
     },
     "Enclose_9": {
-      "expected": "12 sur 2"
+      "expected": "12 avec 2 dessous"
     },
     "Enclose_10": {
-      "expected": "12 sous 2"
+      "expected": "12 avec 2 dessus"
     },
     "Enclose_11": {
-      "expected": "2 sous 12"
+      "expected": "2 avec 12 dessus"
     },
     "EncloseSpecial_0": {
       "expected": "A majuscule"
@@ -272,7 +272,7 @@
       "expected": "sommation sous I"
     },
     "Overscript": {
-      "expected": "A sous B"
+      "expected": "A avec B dessus"
     },
     "DetFemale": {
       "expected": "déterminant A"
