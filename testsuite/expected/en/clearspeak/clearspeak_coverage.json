@@ -127,6 +127,18 @@
     "Enclose_11": {
       "expected": "crossed out 12 with 2 end crossout"
     },
+    "EncloseSpecial_0": {
+      "expected": "vertical bar A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A horizontal bar"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A vertical bar"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A over horizontal bar"
+    },
     "NestedRoots_0": {
       "expected": "the square root of, the cube root of a, plus b"
     },
@@ -141,6 +153,9 @@
     },
     "NestedRoots_4": {
       "expected": "the positive square root of, the positive square root of a, plus b, end root"
+    },
+    "NestedRoots_5": {
+      "expected": "the positive square root of, the negative square root of a, end root, plus b, end root"
     },
     "Tensor_0": {
       "expected": "left sub a left super b x right sub c right super d"
@@ -178,21 +193,6 @@
     "Set_5": {
       "expected": "the empty set"
     },
-    "EncloseSpecial_0": {
-      "expected": "vertical bar A"
-    },
-    "EncloseSpecial_1": {
-      "expected": "A horizontal bar"
-    },
-    "EncloseSpecial_2": {
-      "expected": "A vertical bar"
-    },
-    "EncloseSpecial_3": {
-      "expected": "A over horizontal bar"
-    },
-    "NestedRoots_5": {
-      "expected": "the positive square root of, the negative square root of a, end root, plus b, end root"
-    },
     "NamedSet_0": {
       "expected": "the positive rational numbers"
     },
@@ -226,11 +226,11 @@
     "MultiLines_1": {
       "expected": "2 constraints, Constraint 1: f of x, equals negative x; if x is less than 0. Constraint 2: f of x, equals x, if x is greater than or equal to 0"
     },
-    "UnitFraction": {
-      "expected": "2 kilometers over b"
-    },
     "VulgarFraction": {
       "expected": "10 over 20"
+    },
+    "UnitFraction": {
+      "expected": "2 kilometers over b"
     },
     "Decimal": {
       "expected": "the repeating decimal 1 point 4 followed by repeating digit 3"
@@ -272,7 +272,13 @@
       "expected": "sum under I"
     },
     "Overscript": {
-      "expected": "A under B"
+      "expected": "A with B above"
+    },
+    "DetFemale": {
+      "expected": "determinant A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x to the A"
     }
   }
 }

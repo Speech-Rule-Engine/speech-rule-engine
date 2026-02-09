@@ -168,10 +168,10 @@
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
-      "expected": "Summe von n ist gleich 1 bis 10 über n"
+      "expected": "Summe von n ist gleich 1 bis 10, über n"
     },
     "Sum002": {
-      "expected": "Summe von n ist gleich 1 bis unendlich über n"
+      "expected": "Summe von n ist gleich 1 bis unendlich, über n"
     },
     "Sum003": {
       "expected": "Summe über i Element von den positiven ganzen Zahlen, über i"
@@ -183,7 +183,7 @@
       "expected": "Summe über, a Index i"
     },
     "Sum006": {
-      "expected": "Produkt von i ist gleich 1 bis 10 über i"
+      "expected": "Produkt von i ist gleich 1 bis 10, über i"
     },
     "Sum007": {
       "expected": "Produkt über i Element von den positiven ganzen Zahlen, über, Bruch mit Zähler i, und Nenner i plus 1"
@@ -195,10 +195,10 @@
       "expected": "Produkt über, a Index i"
     },
     "Sum010": {
-      "expected": "Durchschnitt von i ist gleich 1 bis 10 über, S Index i"
+      "expected": "Durchschnitt von i ist gleich 1 bis 10, über, S Index i"
     },
     "Sum011": {
-      "expected": "Vereinigung von i ist gleich 1 bis 10 über, S Index i"
+      "expected": "Vereinigung von i ist gleich 1 bis 10, über, S Index i"
     },
     "Sum012": {
       "expected": "der Durchschnitt von, S Index i"
@@ -216,7 +216,7 @@
       "expected": "das Integral über f von x, d x"
     },
     "Sum017": {
-      "expected": "das Integral von 0 bis 1 über f von x, d x"
+      "expected": "das Integral von 0 bis 1, über f von x, d x"
     },
     "Sum018": {
       "expected": "das Integral über die reellen Zahlen, über f von x, d x"

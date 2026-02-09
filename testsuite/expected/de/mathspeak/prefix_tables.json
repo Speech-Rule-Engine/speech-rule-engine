@@ -102,7 +102,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "1. Zeile"
+      "expected": ""
     },
     "Table_1": {
       "expected": "1. Zeile"
@@ -120,7 +120,7 @@
       "expected": "2. Zeile"
     },
     "Table_Cell_0": {
-      "expected": "1. Zeile"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "1. Spalte"
@@ -147,7 +147,7 @@
       "expected": "2. Spalte"
     },
     "Table_Cell_Depth_0": {
-      "expected": "1. Zeile"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "1. Zeile, 1. Spalte"

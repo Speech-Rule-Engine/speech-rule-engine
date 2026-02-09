@@ -101,7 +101,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "1a fila"
+      "expected": ""
     },
     "Table_1": {
       "expected": "1a fila"
@@ -119,7 +119,7 @@
       "expected": "2a fila"
     },
     "Table_Cell_0": {
-      "expected": "1a fila"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "1a columna"
@@ -146,7 +146,7 @@
       "expected": "2a columna"
     },
     "Table_Cell_Depth_0": {
-      "expected": "1a fila"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "1a fila, 1a columna"

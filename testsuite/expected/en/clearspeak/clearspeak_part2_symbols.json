@@ -166,10 +166,10 @@
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
-      "expected": "the sum from n equals 1 to 10 of n"
+      "expected": "the sum from n equals 1 to 10, of n"
     },
     "Sum002": {
-      "expected": "the sum from n equals 1 to infinity of n"
+      "expected": "the sum from n equals 1 to infinity, of n"
     },
     "Sum003": {
       "expected": "the sum over i is a member of the positive integers, of i"
@@ -181,7 +181,7 @@
       "expected": "the sum of, a sub i"
     },
     "Sum006": {
-      "expected": "the product from i equals 1 to 10 of i"
+      "expected": "the product from i equals 1 to 10, of i"
     },
     "Sum007": {
       "expected": "the product over i is a member of the positive integers, of, the fraction with numerator i, and denominator i plus 1"
@@ -193,10 +193,10 @@
       "expected": "the product of, a sub i"
     },
     "Sum010": {
-      "expected": "the intersection from i equals 1 to 10 of, S sub i"
+      "expected": "the intersection from i equals 1 to 10, of, S sub i"
     },
     "Sum011": {
-      "expected": "the union from i equals 1 to 10 of, S sub i"
+      "expected": "the union from i equals 1 to 10, of, S sub i"
     },
     "Sum012": {
       "expected": "the intersection of, S sub i"
@@ -214,7 +214,7 @@
       "expected": "the integral of f of x, d x"
     },
     "Sum017": {
-      "expected": "the integral from 0 to 1 of f of x, d x"
+      "expected": "the integral from 0 to 1, of f of x, d x"
     },
     "Sum018": {
       "expected": "the integral over the real numbers, of f of x, d x"

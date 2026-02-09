@@ -98,16 +98,16 @@
       "expected": "12"
     },
     "Enclose_2": {
-      "expected": "2 über 12"
+      "expected": "2 mit 12 unten"
     },
     "Enclose_3": {
-      "expected": "12 über 2"
+      "expected": "12 mit 2 unten"
     },
     "Enclose_4": {
-      "expected": "12 unter 2"
+      "expected": "12 mit 2 oben"
     },
     "Enclose_5": {
-      "expected": "2 unter 12"
+      "expected": "2 mit 12 oben"
     },
     "Enclose_6": {
       "expected": "12"
@@ -116,16 +116,16 @@
       "expected": "12"
     },
     "Enclose_8": {
-      "expected": "2 über 12"
+      "expected": "2 mit 12 unten"
     },
     "Enclose_9": {
-      "expected": "12 über 2"
+      "expected": "12 mit 2 unten"
     },
     "Enclose_10": {
-      "expected": "12 unter 2"
+      "expected": "12 mit 2 oben"
     },
     "Enclose_11": {
-      "expected": "2 unter 12"
+      "expected": "2 mit 12 oben"
     },
     "EncloseSpecial_0": {
       "expected": "großes A"
@@ -272,7 +272,13 @@
       "expected": "Summe unter I"
     },
     "Overscript": {
-      "expected": "A unter B"
+      "expected": "A mit B oben"
+    },
+    "DetFemale": {
+      "expected": "Determinante A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x hoch A"
     }
   }
 }

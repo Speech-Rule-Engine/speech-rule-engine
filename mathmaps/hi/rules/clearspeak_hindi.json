@@ -2,7 +2,7 @@
   "domain": "clearspeak",
   "locale": "hi",
   "modality": "speech",
-  "inherits": "base",
+  "inherits": "nonlatin",
   "rules": [
     [
       "Rule",

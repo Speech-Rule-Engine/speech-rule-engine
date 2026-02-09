@@ -1,0 +1,101 @@
+{
+  "name": "ItalianClearspeakCoverageLimits",
+  "locale": "it",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "Italian Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakItalian",
+  "tests": {
+    "rel1": {
+      "expected": "q da n uguale a 1 a c"
+    },
+    "rel2": {
+      "expected": "q normale, con c sopra"
+    },
+    "rel3": {
+      "expected": "q sopra n uguale a 1"
+    },
+    "rel4": {
+      "expected": "q normale, con n sotto"
+    },
+    "over": {
+      "expected": "a con y sopra"
+    },
+    "overaccent": {
+      "expected": "a freccia verso destra"
+    },
+    "overunder-sep": {
+      "expected": "a con x sotto e y sopra"
+    },
+    "overunder": {
+      "expected": "a con x sotto e y sopra"
+    },
+    "overunderaccent": {
+      "expected": "a con freccia verso destra sotto freccia verso sinistra"
+    },
+    "under": {
+      "expected": "a con x sotto"
+    },
+    "underaccent": {
+      "expected": "a con freccia verso sinistra sotto"
+    },
+    "cup1": {
+      "expected": "unione da n uguale a 1 a c"
+    },
+    "cup2": {
+      "expected": "unione sopra c"
+    },
+    "cup3": {
+      "expected": "unione sotto n uguale a 1"
+    },
+    "cup4": {
+      "expected": "segno unione con n sopra esso"
+    },
+    "cup5": {
+      "expected": "segno unione con c sopra esso"
+    },
+    "cup6": {
+      "expected": "unione sopra n uguale a 1"
+    },
+    "cup7": {
+      "expected": "unione sopra n"
+    },
+    "let1": {
+      "expected": "q normale, con n uguale a 1 sotto e c sopra"
+    },
+    "let2": {
+      "expected": "q normale, con c sopra"
+    },
+    "let3": {
+      "expected": "q normale, con n uguale a 1 sotto"
+    },
+    "let4": {
+      "expected": "q normale, con n sotto"
+    },
+    "limits1": {
+      "expected": "q da n uguale a 1 a c"
+    },
+    "limits1a": {
+      "expected": "q normale, con n sotto e c sopra"
+    },
+    "limits2": {
+      "expected": "q normale, con n uguale a 1 sotto e c sopra"
+    },
+    "limits2a": {
+      "expected": "q normale, con n sotto e c sopra"
+    },
+    "sum1": {
+      "expected": "sommatoria da n uguale a 1 a c"
+    },
+    "sum2": {
+      "expected": "sommatoria sotto c"
+    },
+    "sum3": {
+      "expected": "sommatoria sopra n uguale a 1"
+    },
+    "sum4": {
+      "expected": "sommatoria sopra n"
+    }
+  },
+  "compare": true
+}

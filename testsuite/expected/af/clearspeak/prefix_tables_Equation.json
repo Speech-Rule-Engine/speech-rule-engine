@@ -105,7 +105,7 @@
       "expected": ""
     },
     "Table_0": {
-      "expected": "Vergelyking 1"
+      "expected": ""
     },
     "Table_1": {
       "expected": "Vergelyking 1"
@@ -123,7 +123,7 @@
       "expected": "Vergelyking 2"
     },
     "Table_Cell_0": {
-      "expected": "Vergelyking 1"
+      "expected": ""
     },
     "Table_Cell_1": {
       "expected": "Kolom 1"
@@ -150,7 +150,7 @@
       "expected": "Kolom 2"
     },
     "Table_Cell_Depth_0": {
-      "expected": "Vergelyking 1"
+      "expected": ""
     },
     "Table_Cell_Depth_1": {
       "expected": "Vergelyking 1, Kolom 1"

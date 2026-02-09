@@ -1,0 +1,39 @@
+{
+  "locale": "nonlatin",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "kind": "abstract",
+  "inherits": "base",
+  "rules": [
+    [
+      "Ignore",
+      "overunderscript"
+    ],
+    [
+      "Precondition",
+      "overunderscript",
+      "default",
+      "self::overscore",
+      "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role!=\"underaccent\"]"
+    ],
+    [
+      "Precondition",
+      "overscript-limits",
+      "default",
+      "self::overscore",
+      "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role!=\"underaccent\"]"
+    ],
+    [
+      "Precondition",
+      "underscript-limits",
+      "default",
+      "self::underscore",
+      "@role=\"underover\"",
+      "children/*[2][@role!=\"underaccent\"]"
+    ]
+  ]
+}
