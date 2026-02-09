@@ -982,7 +982,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1007,22 +1007,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"onder\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"bo\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"met\"; [n] children/*[1]/children/*[2]; [t] \"onder\"; [t] \"en\"; [n] children/*[2]; [t] \"bo\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"tot\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"onder\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"oor\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"onder\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"oor\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

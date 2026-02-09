@@ -27,6 +27,22 @@ import {
 } from '../base/test_util.js';
 import { get as factoryget } from '../classes/test_factory.js';
 import { addMissing, addActual } from './fill_tests.js';
+import { Variables } from '#js/common/variables.js';
+
+/**
+ * Copies and adapts a single test file from one locale to another.
+ *
+ * @param source The expected source file.
+ * @param locale Source locale (defaults to `en`).
+ */
+export async function copyAllLocales(source: string, exclude = ['nemeth', 'euro'], locale = 'en') {
+  const orig = Variables.LOCALES.get(locale);
+  for (const [iso, lang] of Variables.LOCALES.entries()) {
+    if (!exclude.includes(iso) && iso !== locale) {
+      await copyTestLocale(source, iso, orig, lang);
+    }
+  };
+}
 
 /**
  * Copies and adapts a single test file from one locale to another.

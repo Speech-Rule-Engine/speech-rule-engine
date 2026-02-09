@@ -157,10 +157,10 @@
       "expected": "mengda av x medlem av heiltala med x er større enn 5"
     },
     "Sum001": {
-      "expected": "sum frå n er lik 1 til 10 over n"
+      "expected": "sum frå n er lik 1 til 10, over n"
     },
     "Sum002": {
-      "expected": "sum frå n er lik 1 til uendeleg over n"
+      "expected": "sum frå n er lik 1 til uendeleg, over n"
     },
     "Sum003": {
       "expected": "sum over i er eit element av dei positive heiltala, over i"
@@ -172,7 +172,7 @@
       "expected": "sum over, a indeks i"
     },
     "Sum006": {
-      "expected": "produkt frå i er lik 1 til 10 over i"
+      "expected": "produkt frå i er lik 1 til 10, over i"
     },
     "Sum007": {
       "expected": "produkt over i er eit element av dei positive heiltala, over, brøk med tellar i, og nemnar i pluss 1"
@@ -184,10 +184,10 @@
       "expected": "produkt over, a indeks i"
     },
     "Sum010": {
-      "expected": "kryss frå i er lik 1 til 10 over, S indeks i"
+      "expected": "kryss frå i er lik 1 til 10, over, S indeks i"
     },
     "Sum011": {
-      "expected": "union frå i er lik 1 til 10 over, S indeks i"
+      "expected": "union frå i er lik 1 til 10, over, S indeks i"
     },
     "Sum012": {
       "expected": "kryss av, S indeks i"
@@ -196,16 +196,16 @@
       "expected": "union av, S indeks i"
     },
     "Sum014": {
-      "expected": "kryss over C, av, S indeks i"
+      "expected": "kryss frå C av, S indeks i"
     },
     "Sum015": {
-      "expected": "union over C, av, S indeks i"
+      "expected": "union frå C av, S indeks i"
     },
     "Sum016": {
       "expected": "integral over f av x, d x"
     },
     "Sum017": {
-      "expected": "integral frå 0 til 1 over f av x, d x"
+      "expected": "integral frå 0 til 1, over f av x, d x"
     },
     "Sum018": {
       "expected": "integral over dei reelle tala, over f av x, d x"

@@ -166,10 +166,10 @@
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
-      "expected": "die som vanaf n is gelyk aan 1 tot 10 van n"
+      "expected": "die som vanaf n is gelyk aan 1 tot 10, van n"
     },
     "Sum002": {
-      "expected": "die som vanaf n is gelyk aan 1 tot oneindigheid van n"
+      "expected": "die som vanaf n is gelyk aan 1 tot oneindigheid, van n"
     },
     "Sum003": {
       "expected": "die som oor i is 'n element van die positiewe heelgetalle, van i"
@@ -181,7 +181,7 @@
       "expected": "die som van, a onderskrif i"
     },
     "Sum006": {
-      "expected": "die produk vanaf i is gelyk aan 1 tot 10 van i"
+      "expected": "die produk vanaf i is gelyk aan 1 tot 10, van i"
     },
     "Sum007": {
       "expected": "die produk oor i is 'n element van die positiewe heelgetalle, van, die breuk met teller i, en noemer i plus 1"
@@ -193,10 +193,10 @@
       "expected": "die produk van, a onderskrif i"
     },
     "Sum010": {
-      "expected": "die interseksie vanaf i is gelyk aan 1 tot 10 van, S onderskrif i"
+      "expected": "die interseksie vanaf i is gelyk aan 1 tot 10, van, S onderskrif i"
     },
     "Sum011": {
-      "expected": "die eenheid vanaf i is gelyk aan 1 tot 10 van, S onderskrif i"
+      "expected": "die eenheid vanaf i is gelyk aan 1 tot 10, van, S onderskrif i"
     },
     "Sum012": {
       "expected": "die interseksie van, S onderskrif i"
@@ -214,7 +214,7 @@
       "expected": "die integraal van f van x, d x"
     },
     "Sum017": {
-      "expected": "die integraal vanaf 0 tot 1 van f van x, d x"
+      "expected": "die integraal vanaf 0 tot 1, van f van x, d x"
     },
     "Sum018": {
       "expected": "die integraal oor die riële getalle, van f van x, d x"

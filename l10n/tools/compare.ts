@@ -11,7 +11,7 @@ import { Action } from '@rule_engine/speech_rule.js';
 
 const mathmaps = '../mathmaps';
 
-const ruleSets = ['mathspeak', 'clearspeak', 'prefix', 'summary'];
+const RULE_SETS = ['mathspeak', 'clearspeak', 'prefix', 'summary'];
 const remove = ['nemeth', 'euro', 'en'];
 
 
@@ -26,7 +26,7 @@ function getLanguage(locale: string) {
   return language;
 }
 
-export function actionDiff(outdir: string) {
+export function actionDiff(outdir: string, ruleSets: string[] = RULE_SETS) {
   jsonDiff((json1, json2, _locale, language, rules) => {
     const struct1 = actionStructure(json1['rules']);
     const struct2 = actionStructure(json2['rules']);
@@ -44,7 +44,7 @@ export function actionDiff(outdir: string) {
     if (Object.keys(result).length) {
       fs.writeFileSync(filename, JSON.stringify(result, null, 2))
     }
-  });
+  }, ruleSets);
 }
 
 export function pushActions(locales: string[], domain: string, rules: string[] = []) {
@@ -151,21 +151,22 @@ export function pushNewAction(
 }
 
 
-// Diffing
+// Rule Diffing
 
-export function ruleDiff(outdir: string) {
+export function ruleDiff(outdir: string, ruleSets: string[] = RULE_SETS) {
   jsonDiff((json1, json2, _locale, language, rules) => {
     fs.writeFileSync(
       path.join(outdir, `${rules}_${language.toLowerCase()}.txt`),
       jsonRuleDiff(json1, json2));
-  });
+  }, ruleSets);
 }
 
 function jsonDiff(diff: (json1: JSON,
                          json2: JSON,
                          locale: string,
                          language: string,
-                         rules: string) => void) {
+                         rules: string) => void,
+                  ruleSets: string[]) {
   const en: {[key: string]: JSON} = {};
   for (const rules of ruleSets) {
     en[rules] = jsonLoadLocale('en', 'english', rules);
@@ -239,4 +240,21 @@ function formatTwoColumns(array1: string[], array2: string[], separator = " | ")
   lines.push(headerLine)
 
   return lines.join("\n")
+}
+
+
+// Message Diffing
+
+export function messageDiff(outdir: string) {
+  const readJSON = (locale: string) => {
+    const filename = path.join(mathmaps, locale, 'messages', `messages.json`);
+    return JSON.parse(fs.readFileSync(filename, {encoding: 'utf-8'}));
+  }
+  const en: {[key: string]: any} = readJSON('en');
+  for (const locale of Variables.LOCALES.keys()) {
+    const language = getLanguage(locale);
+    if (!language) continue;
+    const json = readJSON(locale);
+    return diff(en.messages.MS, json.messages.MS);
+  }
 }

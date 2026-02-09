@@ -1,0 +1,101 @@
+{
+  "name": "GermanClearspeakCoverageLimits",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "German Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakGerman",
+  "tests": {
+    "rel1": {
+      "expected": "q von n ist gleich 1 bis c"
+    },
+    "rel2": {
+      "expected": "normales q, mit c oben"
+    },
+    "rel3": {
+      "expected": "q über n ist gleich 1"
+    },
+    "rel4": {
+      "expected": "normales q, mit n unten"
+    },
+    "over": {
+      "expected": "a mit y oben"
+    },
+    "overaccent": {
+      "expected": "a Pfeil nach rechts"
+    },
+    "overunder-sep": {
+      "expected": "a mit x unten und y oben"
+    },
+    "overunder": {
+      "expected": "a mit x unten und y oben"
+    },
+    "overunderaccent": {
+      "expected": "a mit Pfeil nach rechts unten Pfeil nach links"
+    },
+    "under": {
+      "expected": "a mit x unten"
+    },
+    "underaccent": {
+      "expected": "a mit Pfeil nach links unten"
+    },
+    "cup1": {
+      "expected": "Vereinigung von n ist gleich 1 bis c"
+    },
+    "cup2": {
+      "expected": "Vereinigung über c"
+    },
+    "cup3": {
+      "expected": "Vereinigung unter n ist gleich 1"
+    },
+    "cup4": {
+      "expected": "Vereinigung Zeichen mit darüberstehendem n"
+    },
+    "cup5": {
+      "expected": "Vereinigung Zeichen mit darüberstehendem c"
+    },
+    "cup6": {
+      "expected": "Vereinigung über n ist gleich 1"
+    },
+    "cup7": {
+      "expected": "Vereinigung über n"
+    },
+    "let1": {
+      "expected": "normales q, mit n ist gleich 1 unten und c oben"
+    },
+    "let2": {
+      "expected": "normales q, mit c oben"
+    },
+    "let3": {
+      "expected": "normales q, mit n ist gleich 1 unten"
+    },
+    "let4": {
+      "expected": "normales q, mit n unten"
+    },
+    "limits1": {
+      "expected": "q von n ist gleich 1 bis c"
+    },
+    "limits1a": {
+      "expected": "normales q, mit n unten und c oben"
+    },
+    "limits2": {
+      "expected": "normales q, mit n ist gleich 1 unten und c oben"
+    },
+    "limits2a": {
+      "expected": "normales q, mit n unten und c oben"
+    },
+    "sum1": {
+      "expected": "Summe von n ist gleich 1 bis c"
+    },
+    "sum2": {
+      "expected": "Summe unter c"
+    },
+    "sum3": {
+      "expected": "Summe über n ist gleich 1"
+    },
+    "sum4": {
+      "expected": "Summe über n"
+    }
+  },
+  "compare": true
+}

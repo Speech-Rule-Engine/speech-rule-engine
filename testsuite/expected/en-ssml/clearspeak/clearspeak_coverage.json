@@ -127,6 +127,18 @@
     "Enclose_11": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> crossed out <mark name=\"1\"/> 12 <mark name=\"0\"/> with 2 <mark name=\"3\" kind=\"LAST\"/> end crossout </prosody></speak>"
     },
+    "EncloseSpecial_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> vertical bar <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "EncloseSpecial_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> horizontal bar </prosody></speak>"
+    },
+    "EncloseSpecial_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> vertical bar </prosody></speak>"
+    },
+    "EncloseSpecial_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> over horizontal bar </prosody></speak>"
+    },
     "NestedRoots_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the square root of <break time=\"250ms\"/> <mark name=\"2\"/> the cube root of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
     },
@@ -141,6 +153,9 @@
     },
     "NestedRoots_4": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"1\"/> the positive square root of <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"2\"/> plus <mark name=\"3\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root </prosody></speak>"
+    },
+    "NestedRoots_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"5\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> end root </prosody></speak>"
     },
     "Tensor_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> left sub <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> left super <say-as interpret-as=\"character\">b</say-as> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> right sub <say-as interpret-as=\"character\">c</say-as> <mark name=\"4\"/> right super <say-as interpret-as=\"character\">d</say-as> </prosody></speak>"
@@ -178,21 +193,6 @@
     "Set_5": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the empty set </prosody></speak>"
     },
-    "EncloseSpecial_0": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"1\"/> vertical bar <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
-    },
-    "EncloseSpecial_1": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> horizontal bar </prosody></speak>"
-    },
-    "EncloseSpecial_2": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> vertical bar </prosody></speak>"
-    },
-    "EncloseSpecial_3": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\" kind=\"LAST\"/> over horizontal bar </prosody></speak>"
-    },
-    "NestedRoots_5": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the positive square root of <break time=\"250ms\"/> <mark name=\"5\"/> the negative square root of <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"5\" kind=\"LAST\"/> end root <break time=\"250ms\"/> <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"7\" kind=\"LAST\"/> end root </prosody></speak>"
-    },
     "NamedSet_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the positive rational numbers </prosody></speak>"
     },
@@ -226,11 +226,11 @@
     "MultiLines_1": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"43\"/> 2 constraints <break time=\"250ms\"/> <mark name=\"0\"/> Constraint 1: f <mark name=\"7\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"4\"/> equals <mark name=\"5\"/> negative <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"500ms\"/> <mark name=\"13\"/> if <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"15\"/> is less than <mark name=\"16\"/> 0 <break time=\"750ms\"/> <mark name=\"22\"/> Constraint 2: f <mark name=\"26\"/> of <mark name=\"24\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"27\"/> equals <mark name=\"28\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"32\"/> if <mark name=\"33\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"34\"/> is greater than or equal to <mark name=\"35\"/> 0 </prosody></speak>"
     },
-    "UnitFraction": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> kilometers <mark name=\"4\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
-    },
     "VulgarFraction": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 10 <mark name=\"1\"/> over 20 </prosody></speak>"
+    },
+    "UnitFraction": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 2 <mark name=\"1\"/> kilometers <mark name=\"4\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
     },
     "Decimal": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> the repeating decimal <mark name=\"6\"/> 1 <mark name=\"7\"/> point <mark name=\"8\"/> 4 <mark name=\"1\"/> followed by repeating digit <mark name=\"9\"/> 3 </prosody></speak>"
@@ -272,7 +272,7 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sum <mark name=\"1\"/> under <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">I</say-as> </prosody> </prosody></speak>"
     },
     "Overscript": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> under <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"1\"/> with <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"2\" kind=\"LAST\"/> above </prosody></speak>"
     },
     "DetFemale": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> determinant <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"

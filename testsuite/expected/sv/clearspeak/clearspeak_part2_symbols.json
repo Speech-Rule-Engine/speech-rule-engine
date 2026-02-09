@@ -157,10 +157,10 @@
       "expected": "mängden av x medlem av heltalen med x större än 5"
     },
     "Sum001": {
-      "expected": "summa från n är lika med 1 till 10 av n"
+      "expected": "summa från n är lika med 1 till 10, av n"
     },
     "Sum002": {
-      "expected": "summa från n är lika med 1 till oändlighet av n"
+      "expected": "summa från n är lika med 1 till oändlighet, av n"
     },
     "Sum003": {
       "expected": "summa över I är medlem av de positiva heltalen, av I"
@@ -172,7 +172,7 @@
       "expected": "summa av, a index I"
     },
     "Sum006": {
-      "expected": "produkt från I är lika med 1 till 10 av I"
+      "expected": "produkt från I är lika med 1 till 10, av I"
     },
     "Sum007": {
       "expected": "produkt över I är medlem av de positiva heltalen, av, bråket med täljare I, och nämnare I plus 1"
@@ -184,10 +184,10 @@
       "expected": "produkt av, a index I"
     },
     "Sum010": {
-      "expected": "snitt från I är lika med 1 till 10 av, S index I"
+      "expected": "snitt från I är lika med 1 till 10, av, S index I"
     },
     "Sum011": {
-      "expected": "union från I är lika med 1 till 10 av, S index I"
+      "expected": "union från I är lika med 1 till 10, av, S index I"
     },
     "Sum012": {
       "expected": "snitt av, S index I"
@@ -205,7 +205,7 @@
       "expected": "integral av f av x, d x"
     },
     "Sum017": {
-      "expected": "integral från 0 till 1 av f av x, d x"
+      "expected": "integral från 0 till 1, av f av x, d x"
     },
     "Sum018": {
       "expected": "integral över de reella talen, av f av x, d x"

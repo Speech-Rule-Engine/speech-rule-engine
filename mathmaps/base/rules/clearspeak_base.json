@@ -2769,10 +2769,20 @@
     ],
     [
       "Precondition",
+      "overunderscript",
+      "default",
+      "self::overscore",
+      "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role!=\"underaccent\"]"
+    ],
+    [
+      "Precondition",
       "overscript-limits",
       "default",
       "self::overscore",
       "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\"",
       "name(children/*[1])=\"underscore\"",
       "children/*[1]/children/*[2][@role!=\"underaccent\"]"
     ],
@@ -2787,7 +2797,7 @@
       "underscript-limits",
       "default",
       "self::underscore",
-      "@role=\"underover\"",
+      "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\"",
       "children/*[2][@role!=\"underaccent\"]"
     ],
     [

@@ -1,0 +1,94 @@
+{
+  "tests": {
+    "rel1": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></munderover>"
+    },
+    "rel2": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "rel3": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder>"
+    },
+    "rel4": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mi>n</mi></munder>"
+    },
+    "over": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>y</mi></mover>"
+    },
+    "overaccent": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>→</mi></mover>"
+    },
+    "overunder-sep": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mi>a</mi><mi>x</mi></munder><mi>y</mi></mover>"
+    },
+    "overunder": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>x</mi><mi>y</mi></munderover>"
+    },
+    "overunderaccent": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>→</mi><mi>←</mi></munderover>"
+    },
+    "under": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>x</mi></munder>"
+    },
+    "underaccent": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>a</mi><mi>←</mi></munder>"
+    },
+    "cup1": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></munderover>"
+    },
+    "cup2": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></munder>"
+    },
+    "cup3": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></mover>"
+    },
+    "cup4": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mi>n</mi></mover>"
+    },
+    "cup5": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "cup6": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder>"
+    },
+    "cup7": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∪</mo><mi>n</mi></munder>"
+    },
+    "let1": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></munderover>"
+    },
+    "let2": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "let3": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder>"
+    },
+    "let4": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\">q</mi><mi>n</mi></munder>"
+    },
+    "limits1": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "limits1a": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mi data-mjx-texclass=\"OP\" mathvariant=\"normal\">q</mi><mi>n</mi></munder><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "limits2": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mi mathvariant=\"normal\">q</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "limits2a": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><munder><mi mathvariant=\"normal\">q</mi><mi>n</mi></munder><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "sum1": {
+      "input": "<munderover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></munderover>"
+    },
+    "sum2": {
+      "input": "<mover xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></mover>"
+    },
+    "sum3": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>=</mo><mn>1</mn></mrow></munder>"
+    },
+    "sum4": {
+      "input": "<munder xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo>∑</mo><mi>n</mi></munder>"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "name": "AfrikaansClearspeakCoverageLimits",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "Afrikaans Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakAfrikaans",
+  "tests": {
+    "rel1": {
+      "expected": "q vanaf n is gelyk aan 1 tot c"
+    },
+    "rel2": {
+      "expected": "normaal q, met c bo"
+    },
+    "rel3": {
+      "expected": "q oor n is gelyk aan 1"
+    },
+    "rel4": {
+      "expected": "normaal q, met n onder"
+    },
+    "over": {
+      "expected": "a met y bo"
+    },
+    "overaccent": {
+      "expected": "a regs pyltjie"
+    },
+    "overunder-sep": {
+      "expected": "a met x onder en y bo"
+    },
+    "overunder": {
+      "expected": "a met x onder en y bo"
+    },
+    "overunderaccent": {
+      "expected": "a met regs pyltjie onder links pyltjie"
+    },
+    "under": {
+      "expected": "a met x onder"
+    },
+    "underaccent": {
+      "expected": "a met links pyltjie onder"
+    },
+    "cup1": {
+      "expected": "eenheid vanaf n is gelyk aan 1 tot c"
+    },
+    "cup2": {
+      "expected": "eenheid oor c"
+    },
+    "cup3": {
+      "expected": "eenheid onder n is gelyk aan 1"
+    },
+    "cup4": {
+      "expected": "eenheid teken met n oor hom"
+    },
+    "cup5": {
+      "expected": "eenheid teken met c oor hom"
+    },
+    "cup6": {
+      "expected": "eenheid oor n is gelyk aan 1"
+    },
+    "cup7": {
+      "expected": "eenheid oor n"
+    },
+    "let1": {
+      "expected": "normaal q, met n is gelyk aan 1 onder en c bo"
+    },
+    "let2": {
+      "expected": "normaal q, met c bo"
+    },
+    "let3": {
+      "expected": "normaal q, met n is gelyk aan 1 onder"
+    },
+    "let4": {
+      "expected": "normaal q, met n onder"
+    },
+    "limits1": {
+      "expected": "q vanaf n is gelyk aan 1 tot c"
+    },
+    "limits1a": {
+      "expected": "normaal q, met n onder en c bo"
+    },
+    "limits2": {
+      "expected": "normaal q, met n is gelyk aan 1 onder en c bo"
+    },
+    "limits2a": {
+      "expected": "normaal q, met n onder en c bo"
+    },
+    "sum1": {
+      "expected": "som vanaf n is gelyk aan 1 tot c"
+    },
+    "sum2": {
+      "expected": "som onder c"
+    },
+    "sum3": {
+      "expected": "som oor n is gelyk aan 1"
+    },
+    "sum4": {
+      "expected": "som oor n"
+    }
+  },
+  "compare": true
+}

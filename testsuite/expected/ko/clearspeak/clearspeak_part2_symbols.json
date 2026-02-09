@@ -166,10 +166,10 @@
     },
     "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
     "Sum001": {
-      "expected": "시그마 n 은 1 에서 10 까지 n"
+      "expected": "시그마 n 은 1 에서 10 까지, n"
     },
     "Sum002": {
-      "expected": "시그마 n 은 1 에서 무한대 까지 n"
+      "expected": "시그마 n 은 1 에서 무한대 까지, n"
     },
     "Sum003": {
       "expected": "i 는 양의 정수 집합 의 원소이다 에 대한 시그마, i"
@@ -181,7 +181,7 @@
       "expected": "시그마, a 아래첨자 i"
     },
     "Sum006": {
-      "expected": "파이 i 는 1 에서 10 까지 i"
+      "expected": "파이 i 는 1 에서 10 까지, i"
     },
     "Sum007": {
       "expected": "i 는 양의 정수 집합 의 원소이다 에 대한 파이, 분모가 i 더하기 1, 이고 분자가 i, 인 분수"
@@ -214,7 +214,7 @@
       "expected": "인테그럴 f 의 x, d x"
     },
     "Sum017": {
-      "expected": "인테그럴 0 에서 1 까지 f 의 x, d x"
+      "expected": "인테그럴 0 에서 1 까지, f 의 x, d x"
     },
     "Sum018": {
       "expected": "실수 집합 에 대한 인테그럴, f 의 x, d x"
