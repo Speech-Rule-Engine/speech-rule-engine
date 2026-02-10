@@ -4,6 +4,7 @@
   "factory": "clearspeak",
   "information": "English Clearspeak Expressions with empty elements.",
   "active": "ClearspeakEnglishIssues",
+  "base": "input/clearspeak/clearspeak_coverage_empty.json",
   "tests": {
     "empty_base_superscript_0": {
       "expected": "super a"
@@ -99,8 +100,7 @@
       "expected": "1 with 2 below"
     },
     "mj_issue_3510": {
-      "expected": "1 lines, Line 1: dollars, empty with 1 above, 5 with 2 above, 5 with 1 above, .00"
+      "expected": "dollars, empty with 1 above, 5 with 2 above, 5 with 1 above, .00"
     }
-  },
-  "base": "/tmp/clearspeak_coverage_empty.json"
+  }
 }
