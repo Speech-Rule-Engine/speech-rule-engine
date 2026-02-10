@@ -693,6 +693,316 @@
         6,
         3
       ]
+    },
+    "collapseEmptySuperscript_00": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySuperscript_01": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          [
+            3,
+            1,
+            2
+          ],
+          5
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_02": {
+      "expected": [
+        10,
+        0,
+        8,
+        [
+          6,
+          [
+            3,
+            1,
+            2
+          ],
+          5
+        ],
+        9,
+        7
+      ]
+    },
+    "collapseEmptySuperscript_03": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySuperscript_04": {
+      "expected": [
+        8,
+        [
+          3,
+          0,
+          2
+        ],
+        7,
+        [
+          6,
+          4,
+          5
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_05": {
+      "expected": [
+        9,
+        0,
+        [
+          8,
+          [
+            3,
+            1,
+            2
+          ],
+          7,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_06": {
+      "expected": [
+        10,
+        0,
+        9,
+        [
+          8,
+          [
+            3,
+            1,
+            2
+          ],
+          7,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_07": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySuperscript_08": {
+      "expected": [
+        8,
+        [
+          3,
+          0,
+          2
+        ],
+        7,
+        [
+          6,
+          4,
+          5
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_09": {
+      "expected": [
+        12,
+        [
+          9,
+          0,
+          1,
+          2
+        ],
+        10,
+        [
+          5,
+          3,
+          4
+        ],
+        11,
+        [
+          8,
+          6,
+          7
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_10": {
+      "expected": [
+        10,
+        7,
+        0,
+        [
+          9,
+          [
+            3,
+            1,
+            2
+          ],
+          8,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "collapseEmptySuperscript_11": {
+      "expected": [
+        5,
+        [
+          2,
+          0,
+          1
+        ],
+        4
+      ]
+    },
+    "collapseEmptySuperscript_12": {
+      "expected": [
+        7,
+        [
+          2,
+          0,
+          1
+        ],
+        6,
+        [
+          5,
+          3,
+          4
+        ]
+      ]
+    },
+    "collapseEmptySubscript_0": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySubscript_1": {
+      "expected": [
+        5,
+        0,
+        4,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "collapseEmptySubscript_2": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySubscript_3": {
+      "expected": [
+        6,
+        [
+          3,
+          0,
+          2
+        ],
+        5,
+        4
+      ]
+    },
+    "collapseEmptySubscript_4": {
+      "expected": [
+        3,
+        0,
+        2
+      ]
+    },
+    "collapseEmptySubscript_5": {
+      "expected": [
+        6,
+        [
+          3,
+          0,
+          2
+        ],
+        5,
+        4
+      ]
+    },
+    "collapseEmptySubscript_6": {
+      "expected": [
+        8,
+        [
+          6,
+          0,
+          1,
+          2
+        ],
+        7,
+        [
+          5,
+          3,
+          4
+        ]
+      ]
+    },
+    "collapseEmptySubscript_7": {
+      "expected": [
+        10,
+        7,
+        0,
+        [
+          9,
+          [
+            3,
+            1,
+            2
+          ],
+          8,
+          [
+            6,
+            4,
+            5
+          ]
+        ]
+      ]
+    },
+    "collapseEmptySubscript_8": {
+      "expected": [
+        7,
+        [
+          2,
+          0,
+          1
+        ],
+        6,
+        [
+          5,
+          3,
+          4
+        ]
+      ]
     }
   }
 }
