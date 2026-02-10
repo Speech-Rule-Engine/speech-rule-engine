@@ -143,6 +143,72 @@
     "empty_35": {
       "tex": "\\overunderset{}{}{\\overunderset{}{}{a}\\overunderset{}{}{b}}",
       "input": "<munderover><mrow><munderover><mi>a</mi><mrow></mrow><mrow></mrow></munderover><munderover><mi>b</mi><mrow></mrow><mrow></mrow></munderover></mrow><mrow></mrow><mrow></mrow></munderover>"
+    },
+    "collapseEmptySuperscript_00": {
+      "input": "<math><mi>x</mi><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_01": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_02": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mi>b</mi></math>"
+    },
+    "collapseEmptySuperscript_03": {
+      "input": "<math><mi>a</mi><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_04": {
+      "input": "<math><mi>aa</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_05": {
+      "input": "<math><mi>∑</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_06": {
+      "input": "<math><mi>sin</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_07": {
+      "input": "<math><mn>3</mn><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_08": {
+      "input": "<math><mn>3</mn><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_09": {
+      "input": "<math><mo>(</mo><mi>a</mi><mo>)</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_10": {
+      "input": "<math><mo>=</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_11": {
+      "input": "<math><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_12": {
+      "input": "<math><msub><mi>x</mi><mn>1</mn></msub><msup><mspace width=\"1ex\"/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySubscript_0": {
+      "input": "<math><mi>x</mi><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapseEmptySubscript_1": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_2": {
+      "input": "<math><mi>a</mi><msub><mrow/><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_3": {
+      "input": "<math><mi>a</mi><msub><mrow/><mn>1</mn></msub><mi>b</mi></math>"
+    },
+    "collapseEmptySubscript_4": {
+      "input": "<math><mn>3</mn><msub><mrow/><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_5": {
+      "input": "<math><mn>3</mn><msub><mrow/><mn>1</mn></msub><mi>b</mi></math>"
+    },
+    "collapseEmptySubscript_6": {
+      "input": "<math><mo>(</mo><mi>a</mi><mo>)</mo><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapseEmptySubscript_7": {
+      "input": "<math><mo>=</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySubscript_8": {
+      "input": "<math><msup><mi>x</mi><mn>1</mn></msup><msub><mrow/><mn>2</mn></msub></math>"
     }
   }
 }

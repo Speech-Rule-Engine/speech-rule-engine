@@ -1225,6 +1225,7 @@ export class SemanticProcessor {
   public implicitNode(nodes: SemanticNode[]): SemanticNode {
     nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
     nodes = SemanticProcessor.getInstance().combineUnits_(nodes);
+    nodes = SemanticProcessor.getInstance().combineScripts_(nodes);
     if (nodes.length === 1) {
       return nodes[0];
     }
@@ -2186,6 +2187,62 @@ export class SemanticProcessor {
       postfixes,
       SemanticType.POSTFIXOP
     );
+  }
+
+  /**
+   * Combines oddly expressed scripts. I.e.
+   *  *  an empty superscript with an identifier/number or subscript.
+   *  *  an empty subscript with an identifier/number
+   *
+   * @param nodes The list of nodes.
+   * @returns The new list of nodes.
+   */
+  private combineScripts_(nodes: SemanticNode[]): SemanticNode[] {
+    const partition = SemanticUtil.partitionNodes(nodes, (x) => {
+      return (SemanticPred.isType(x, SemanticType.SUPERSCRIPT)
+        && SemanticPred.isType(x.childNodes[0], SemanticType.EMPTY)) ||
+        (SemanticPred.isType(x, SemanticType.SUBSCRIPT)
+          && SemanticPred.isType(x.childNodes[0], SemanticType.EMPTY))
+    });
+    if (!partition.rel.length) {
+      return nodes;
+    }
+    let result: SemanticNode[] = [];
+    do {
+      const comp = partition.comp.shift();
+      const rel = partition.rel.shift();
+      if (!comp.length) {
+        result.push(rel);
+        continue;
+      }
+      const last = comp.pop();
+      if (SemanticPred.isType(last, SemanticType.NUMBER) ||
+        SemanticPred.isType(last, SemanticType.IDENTIFIER)) {
+        rel.childNodes[0] = last;
+        last.parent = rel;
+        rel.role = last.type.toLowerCase() as SemanticRole;
+        rel.addAnnotation('collapsed', last.type.toLowerCase());
+        result = result.concat(comp);
+        result.push(rel);
+        continue;
+      }
+      if (SemanticPred.isType(last, SemanticType.SUBSCRIPT) &&
+        SemanticPred.isType(rel, SemanticType.SUPERSCRIPT)) {
+        rel.childNodes[0] = last;
+        last.parent = rel;
+        rel.role = last.type.toLowerCase() as SemanticRole;
+        rel.addAnnotation('collapsed', last.type.toLowerCase());
+        last.role = SemanticRole.SUBSUP;
+        result = result.concat(comp);
+        result.push(rel);
+        continue;
+      }
+      result = result.concat(comp);
+      result.push(last);
+      result.push(rel);
+    } while (partition.rel.length);
+    result = result.concat(partition.comp.pop());
+    return result;
   }
 
   /**

@@ -1,0 +1,106 @@
+{
+  "name": "EnglishClearspeakEmpty",
+  "locale": "en",
+  "factory": "clearspeak",
+  "information": "English Clearspeak Expressions with empty elements.",
+  "active": "ClearspeakEnglishIssues",
+  "base": "input/clearspeak/clearspeak_coverage_empty.json",
+  "tests": {
+    "empty_base_superscript_0": {
+      "expected": "super a"
+    },
+    "empty_base_superscript_1": {
+      "expected": "super 2"
+    },
+    "empty_base_superscript_2": {
+      "expected": "super 3"
+    },
+    "empty_base_superscript_3": {
+      "expected": "super 4"
+    },
+    "empty_base_subscript_0": {
+      "expected": "sub a"
+    },
+    "empty_base_subscript_1": {
+      "expected": "sub 2"
+    },
+    "empty_base_subsuperscript_0": {
+      "expected": "sub b and super a"
+    },
+    "empty_base_subsuperscript_1": {
+      "expected": "sub b and super 2"
+    },
+    "empty_base_subsuperscript_2": {
+      "expected": "sub b and super 3"
+    },
+    "empty_base_subsuperscript_3": {
+      "expected": "sub b and super 4"
+    },
+    "empty_superscript": {
+      "expected": "a"
+    },
+    "empty_subscript": {
+      "expected": "a"
+    },
+    "space_base_superscript_0": {
+      "expected": "empty to the a-th power"
+    },
+    "space_base_superscript_1": {
+      "expected": "empty to the second power"
+    },
+    "space_base_superscript_2": {
+      "expected": "empty to the third power"
+    },
+    "space_base_superscript_3": {
+      "expected": "empty to the fourth power"
+    },
+    "space_base_subscript_0": {
+      "expected": "empty sub a"
+    },
+    "space_base_subscript_1": {
+      "expected": "empty sub 2"
+    },
+    "space_base_subsuperscript_0": {
+      "expected": "empty sub b, to the a-th power"
+    },
+    "space_base_subsuperscript_1": {
+      "expected": "empty sub b, squared"
+    },
+    "space_base_subsuperscript_2": {
+      "expected": "empty sub b, cubed"
+    },
+    "space_base_subsuperscript_3": {
+      "expected": "empty sub b, to the fourth power"
+    },
+    "space_superscript": {
+      "expected": "a raised to the empty power"
+    },
+    "space_subscript": {
+      "expected": "a sub empty"
+    },
+    "empty_over_0": {
+      "expected": "empty with 1 above"
+    },
+    "empty_over_1": {
+      "expected": "1"
+    },
+    "empty_under_0": {
+      "expected": "empty with 1 below"
+    },
+    "empty_under_1": {
+      "expected": "1"
+    },
+    "empty_underover_0": {
+      "expected": "empty with 1 below and 2 above"
+    },
+    "empty_underover_1": {
+      "expected": "1 with 2 above"
+    },
+    "empty_underover_2": {
+      "expected": "1 with 2 below"
+    },
+    "mj_issue_3510": {
+      "expected": "dollars, empty with 1 above, 5 with 2 above, 5 with 1 above, .00"
+    }
+  }
+}

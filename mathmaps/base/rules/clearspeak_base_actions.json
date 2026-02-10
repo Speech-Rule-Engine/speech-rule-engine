@@ -387,7 +387,7 @@
     [
       "Action",
       "overscript-accent",
-      "[n] children/*[1]; [n] children/*[2]"
+      "[n] children/*[1] (grammar:?empty); [n] children/*[2]"
     ],
     [
       "Action",
