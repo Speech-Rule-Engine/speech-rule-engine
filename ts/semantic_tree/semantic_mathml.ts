@@ -478,7 +478,12 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private fenced_(node: Element, children: Element[]): SemanticNode {
-    const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
+    const semNodes = this.parseList(children);
+    // Annotate all empty elements so they are not purged!
+    semNodes.forEach((node) => {
+      if (SemanticPred.isType(node, SemanticType.EMPTY)) {
+        node.addAnnotation('empty', 'MFENCED')
+      }});
     const sepValue = SemanticMathml.getAttribute_(node, 'separators', ',');
     const open = SemanticMathml.getAttribute_(node, 'open', '(');
     const close = SemanticMathml.getAttribute_(node, 'close', ')');
@@ -578,8 +583,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @param _children The children of the node.
    * @returns The newly created semantic node.
    */
-  private empty_(_node: Element, _children: Element[]): SemanticNode {
-    return this.getFactory().makeEmptyNode();
+  private empty_(node: Element, _children: Element[]): SemanticNode {
+    const newNode = this.getFactory().makeEmptyNode();
+    newNode.mathml = [node];
+    newNode.mathmlTree = node;
+    return newNode;
   }
 
   /**

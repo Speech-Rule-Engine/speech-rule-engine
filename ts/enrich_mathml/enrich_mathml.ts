@@ -744,7 +744,8 @@ function validLca(left: Element, right: Element): boolean {
  * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
-  let empty = semantic && semantic.getAnnotation('empty');
+  let empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
+    && semantic.getAnnotation('empty');
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
@@ -932,6 +933,9 @@ export function setOperatorAttribute(
  *     itself.
  */
 export function getInnerNode(node: Element): Element {
+  if (SemanticUtil.hasIgnoreTag(node)) {
+    return node;
+  }
   const children = DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;

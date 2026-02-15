@@ -1293,7 +1293,8 @@ export class SemanticProcessor {
    */
   public row(nodes: SemanticNode[]): SemanticNode {
     nodes = nodes.filter(function (x) {
-      return !SemanticPred.isType(x, SemanticType.EMPTY);
+      return !SemanticPred.isType(x, SemanticType.EMPTY) ||
+        x.hasAnnotation('empty', 'MFENCED');
     });
     if (nodes.length === 0) {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
@@ -3251,8 +3252,7 @@ export class SemanticProcessor {
    *
    * @param ofence Opening fence.
    * @param cfence Closing fence.
-   * @param content The content
-   *     between the fences.
+   * @param content The content between the fences.
    * @returns The new node.
    */
   private horizontalFencedNode_(
