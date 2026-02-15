@@ -493,6 +493,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       sepValue,
       semNodes
     );
+    newNode.mathmlTree = node;
+    newNode.mathml = [node];
     const nodes = SemanticProcessor.getInstance().tablesInRow([newNode]);
     return nodes[0];
   }
