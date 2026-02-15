@@ -1,0 +1,31 @@
+{
+  "tests": {
+    "phantom_embellished_issue0": {
+      "input": "<mo stretchy=\"false\" xmlns=\"http://www.w3.org/1998/Math/MathML\">(</mo><mrow data-mjx-texclass=\"ORD\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mphantom><mi>x</mi></mphantom></mrow><msup xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo stretchy=\"false\">)</mo><mn>2</mn></msup>"
+    },
+    "phantom_fences_double": {
+      "input": "<mfenced xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>10</mn><mi>x</mi></mrow><mstyle class=\"primaryColor\"><mo>+</mo><mn>25</mn></mstyle></mrow></mfenced>"
+    },
+    "phantom_fences_empty0": {
+      "input": "<mfenced/>"
+    },
+    "phantom_fences_empty1": {
+      "input": "<mfenced><mphantom/></mfenced>"
+    },
+    "phantom_fences_empty2": {
+      "input": "<mfenced><mphantom/><mphantom/></mfenced>"
+    },
+    "phantom_fences_empty3": {
+      "input": "<mfenced><mphantom/><mphantom/><mphantom/></mfenced>"
+    },
+    "phantom_fences_nonempty0": {
+      "input": "<mrow><msup><mfenced><mphantom><mn>0</mn></mphantom></mfenced><mn>2</mn></msup></mrow>"
+    },
+    "phantom_fences_nonempty1": {
+      "input": "<mrow><mn>6</mn><mo>⁢</mo><msup><mfenced><mphantom><mn>0</mn></mphantom></mfenced><mn>2</mn></msup><mo>⁢</mo><mfenced><mrow><mphantom><mn>0</mn></mphantom><mo>−</mo><mphantom><mn>0</mn></mphantom></mrow></mfenced></mrow>"
+    },
+    "phantom_fences_nonempty2": {
+      "input": "<mrow><msub><mfenced><mphantom><mn>0</mn></mphantom></mfenced><mn>2</mn></msub></mrow>"
+    }
+  }
+}

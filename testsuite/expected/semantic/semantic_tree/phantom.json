@@ -1,0 +1,34 @@
+{
+  "factory": "stree",
+  "information": "Semantic tree phantom tests.",
+  "base": "input/semantic/phantom.json",
+  "tests": {
+    "phantom_embellished_issue0": {
+      "expected": "<stree><superscript role=\"leftright\" fencepointer=\"2\" id=\"4\"><children><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"6\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><empty role=\"unknown\" id=\"5\"/></children></fenced><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></superscript></stree>"
+    },
+    "phantom_fences_double": {
+      "expected": "<stree><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"16\"><content><fence role=\"open\" id=\"14\">(</fence><fence role=\"close\" id=\"15\">)</fence></content><children><infixop role=\"subtraction\" id=\"13\">−<content><operator role=\"subtraction\" id=\"3\">−</operator></content><children><superscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></superscript><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"12\">⁢<content><operator role=\"multiplication\" id=\"6\">⁢</operator><operator role=\"multiplication\" id=\"11\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">10</number><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">x</identifier><prefixop role=\"positive\" id=\"10\">+<content><operator role=\"addition\" id=\"8\">+</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"9\">25</number></children></prefixop></children></infixop></children></infixop></children></fenced></stree>"
+    },
+    "phantom_fences_empty0": {
+      "expected": "<stree><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"3\"><content><fence role=\"open\" id=\"0\">(</fence><fence role=\"close\" id=\"1\">)</fence></content><children><empty role=\"unknown\" id=\"2\"/></children></fenced></stree>"
+    },
+    "phantom_fences_empty1": {
+      "expected": "<stree><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"3\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"0\"/></children></fenced></stree>"
+    },
+    "phantom_fences_empty2": {
+      "expected": "<stree><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"6\"><content><fence role=\"open\" id=\"3\">(</fence><fence role=\"close\" id=\"4\">)</fence></content><children><punctuated role=\"sequence\" id=\"5\"><content><punctuation role=\"comma\" id=\"2\">,</punctuation></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"0\"/><punctuation role=\"comma\" id=\"2\">,</punctuation><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"1\"/></children></punctuated></children></fenced></stree>"
+    },
+    "phantom_fences_empty3": {
+      "expected": "<stree><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"8\"><content><fence role=\"open\" id=\"5\">(</fence><fence role=\"close\" id=\"6\">)</fence></content><children><punctuated role=\"sequence\" id=\"7\"><content><punctuation role=\"comma\" id=\"3\">,</punctuation><punctuation role=\"comma\" id=\"4\">,</punctuation></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"0\"/><punctuation role=\"comma\" id=\"3\">,</punctuation><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"1\"/><punctuation role=\"comma\" id=\"4\">,</punctuation><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"2\"/></children></punctuated></children></fenced></stree>"
+    },
+    "phantom_fences_nonempty0": {
+      "expected": "<stree><superscript role=\"leftright\" id=\"5\"><children><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"3\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"0\"/></children></fenced><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></superscript></stree>"
+    },
+    "phantom_fences_nonempty1": {
+      "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"13\">⁢<content><operator role=\"multiplication\" id=\"1\">⁢</operator><operator role=\"multiplication\" id=\"8\">⁢</operator></content><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"0\">6</number><superscript role=\"leftright\" id=\"7\"><children><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"5\"><content><fence role=\"open\" id=\"3\">(</fence><fence role=\"close\" id=\"4\">)</fence></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"2\"/></children></fenced><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"6\">2</number></children></superscript><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"12\"><content><fence role=\"open\" id=\"10\">(</fence><fence role=\"close\" id=\"11\">)</fence></content><children><operator role=\"subtraction\" id=\"9\">−</operator></children></fenced></children></infixop></stree>"
+    },
+    "phantom_fences_nonempty2": {
+      "expected": "<stree><subscript role=\"leftright\" id=\"5\"><children><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"3\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><empty role=\"unknown\" annotation=\"empty:MFENCED\" id=\"0\"/></children></fenced><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></subscript></stree>"
+    }
+  }
+}

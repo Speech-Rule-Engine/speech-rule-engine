@@ -1,0 +1,14 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Rebuild enriched phantom tests.",
+  "blacklist": [
+    "annotation",
+    "data-semantic-collapsed",
+    "fencepointer"
+  ],
+  "exclude": [
+    "phantom_fences_double", "phantom_fences_empty2", "phantom_fences_empty3"
+  ],
+  "base": "input/semantic/phantom.json"
+}
