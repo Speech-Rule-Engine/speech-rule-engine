@@ -147,7 +147,7 @@ export class RebuildStree {
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
     );
     if (content.length === 0 && children.length === 0) {
-      RebuildStree.textContent(snode, node);
+      RebuildStree.textContent(snode, node, this.isEmpty(snode));
       return snode;
     }
     if (content.length > 0) {
@@ -379,5 +379,10 @@ export class RebuildStree {
     const sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;
+  }
+
+  private isEmpty(snode: SemanticNode): boolean {
+    return snode.type === SemanticType.EMPTY ||
+      (snode.type === SemanticType.TEXT && snode.role === SemanticRole.SPACE);
   }
 }
