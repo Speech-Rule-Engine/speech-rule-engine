@@ -3264,6 +3264,15 @@ export class SemanticProcessor {
     content: SemanticNode[]
   ): SemanticNode {
     const childNode = SemanticProcessor.getInstance().row(content);
+    // Special case that we have ignored an empty input node.
+    // This is from MJ Issue #3028
+    if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
+      !childNode.mathmlTree && ofence.mathmlTree &&
+      ofence.mathmlTree.nextSibling !== cfence.mathmlTree
+       ) {
+      childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
+      childNode.mathml = [ofence.mathmlTree.nextSibling as Element];
+    }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
       [childNode],
