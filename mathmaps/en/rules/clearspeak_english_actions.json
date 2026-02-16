@@ -6,6 +6,11 @@
   "rules": [
     [
       "Action",
+      "empty",
+      "[t] \"empty\""
+    ],
+    [
+      "Action",
       "collapsed",
       "[t] \"collapsed\"; [n] . (engine:modality=summary, grammar:?collapsed)"
     ],
@@ -771,6 +776,16 @@
     ],
     [
       "Action",
+      "ceiling",
+      "[t] \"ceiling of\"; [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
+      "floor",
+      "[t] \"floor of\"; [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
       "matrix",
       "[t] \"the\"; [t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matrix\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Row-:\", pause:long)"
     ],
@@ -992,7 +1007,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"from\"; [n] children/*[2]; [t] \"to\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"from\"; [n] children/*[2]; [t] \"to\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1017,22 +1032,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"under\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1] (grammar:?empty); [t] \"with\"; [n] children/*[2]; [t] \"above\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1] (grammar:?empty); [t] \"with\"; [n] children/*[1]/children/*[2]; [t] \"below\"; [t] \"and\"; [n] children/*[2]; [t] \"above\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"to\"; [n] children/*[2]"
+      "[n] children/*[1] (grammar:?empty); [t] \"under\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1] (grammar:?empty); [t] \"with\"; [n] children/*[2]; [t] \"below\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"from\"; [n] children/*[2]"
+      "[n] children/*[1] (grammar:?empty); [t] \"over\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1278,6 +1298,21 @@
       "Action",
       "inference-short",
       "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-base-superscript",
+      "[t] \"super\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "empty-base-subsuper",
+      "[t] \"sub\"; [n] children/*[1]/children/*[2]; [t] \"and\"; [t] \"super\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "empty-base-subscript",
+      "[t] \"sub\"; [n] children/*[2]"
     ]
   ]
 }

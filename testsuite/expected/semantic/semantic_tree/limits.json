@@ -175,25 +175,37 @@
       "expected": "<stree><superscript role=\"latinletter\" id=\"4\"><children><subscript role=\"subsup\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">n</identifier></children></subscript><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">0</number></children></superscript></stree>"
     },
     "Additional_12": {
-      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" annotation=\"empty:MUNDEROVER\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
     },
     "Additional_13": {
-      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" annotation=\"empty:MSUBSUP\" id=\"0\">∑</largeop><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">2</number></children></limlower></stree>"
     },
     "Additional_14": {
-      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+      "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MUNDER\" id=\"0\">∑</largeop></stree>"
     },
     "Additional_15": {
-      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+      "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MOVER\" id=\"0\">∑</largeop></stree>"
     },
     "Additional_16": {
-      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+      "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MSUB\" id=\"0\">∑</largeop></stree>"
     },
     "Additional_17": {
-      "expected": "<stree><largeop role=\"sum\" id=\"0\">∑</largeop></stree>"
+      "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MSUP\" id=\"0\">∑</largeop></stree>"
     },
     "Additional_18": {
       "expected": "<stree><overscore role=\"sum\" id=\"4\"><children><underscore role=\"underover\" id=\"3\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><punctuation role=\"underaccent\" annotation=\"accent:bar\" id=\"1\">_</punctuation></children></underscore><relation role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\">~</relation></children></overscore></stree>"
+    },
+    "Overaccent_0": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"4\"><children><overscore role=\"underover\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">X</identifier><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></overscore><identifier role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">x</identifier></children></underscore></stree>"
+    },
+    "Empty_0": {
+      "expected": "<stree><overscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">X</identifier><punctuation role=\"overaccent\" annotation=\"accent:bar\" id=\"2\">_</punctuation></children></overscore></stree>"
+    },
+    "Empty_1": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">X</identifier><punctuation role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\">^</punctuation></children></underscore></stree>"
+    },
+    "Empty_2": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">X</identifier></stree>"
     }
   }
 }

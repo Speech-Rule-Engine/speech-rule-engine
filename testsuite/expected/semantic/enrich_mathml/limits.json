@@ -176,25 +176,37 @@
       "expected": "<math><msubsup type=\"subsup\" role=\"latinletter\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"4\">A</mi><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"4\">n</mi><mn type=\"number\" role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"4\">0</mn></msubsup></math>"
     },
     "Additional_12": {
-      "expected": "<math><munderover type=\"limlower\" role=\"sum\" id=\"2\" children=\"0,1\"><mo type=\"largeop\" role=\"sum\" id=\"0\" parent=\"2\">∑</mo><mn type=\"number\" role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\">2</mn></munderover></math>"
+      "expected": "<math><munderover type=\"limlower\" role=\"sum\" id=\"2\" children=\"0,1\"><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MUNDEROVER\" id=\"0\" parent=\"2\">∑</mo><mn type=\"number\" role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\">2</mn></munderover></math>"
     },
     "Additional_13": {
-      "expected": "<math><msubsup type=\"limlower\" role=\"sum\" id=\"2\" children=\"0,1\"><mo type=\"largeop\" role=\"sum\" id=\"0\" parent=\"2\">∑</mo><mn type=\"number\" role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\">2</mn></msubsup></math>"
+      "expected": "<math><msubsup type=\"limlower\" role=\"sum\" id=\"2\" children=\"0,1\"><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MSUBSUP\" id=\"0\" parent=\"2\">∑</mo><mn type=\"number\" role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"2\">2</mn></msubsup></math>"
     },
     "Additional_14": {
-      "expected": "<math><munder><mo type=\"largeop\" role=\"sum\" id=\"0\">∑</mo></munder></math>"
+      "expected": "<math><munder><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MUNDER\" id=\"0\">∑</mo></munder></math>"
     },
     "Additional_15": {
-      "expected": "<math><mover><mo type=\"largeop\" role=\"sum\" id=\"0\">∑</mo></mover></math>"
+      "expected": "<math><mover><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MOVER\" id=\"0\">∑</mo></mover></math>"
     },
     "Additional_16": {
-      "expected": "<math><msub><mo type=\"largeop\" role=\"sum\" id=\"0\">∑</mo></msub></math>"
+      "expected": "<math><msub><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MSUB\" id=\"0\">∑</mo></msub></math>"
     },
     "Additional_17": {
-      "expected": "<math><msup><mo type=\"largeop\" role=\"sum\" id=\"0\">∑</mo></msup></math>"
+      "expected": "<math><msup><mo type=\"largeop\" role=\"sum\" annotation=\"empty:MSUP\" id=\"0\">∑</mo></msup></math>"
     },
     "Additional_18": {
       "expected": "<math><munderover type=\"underover\" role=\"sum\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mo type=\"largeop\" role=\"sum\" id=\"0\" parent=\"4\">∑</mo><mo type=\"punctuation\" role=\"underaccent\" annotation=\"accent:bar\" id=\"1\" parent=\"4\">_</mo><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:tilde\" id=\"2\" parent=\"4\">~</mo></munderover></math>"
+    },
+    "Overaccent_0": {
+      "expected": "<math><munderover type=\"underover\" role=\"latinletter\" id=\"4\" children=\"0,2,1\" collapsed=\"(4 (3 0 2) 1)\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"4\">X</mi><mo type=\"identifier\" role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\" parent=\"4\">x</mo><mo type=\"punctuation\" role=\"overaccent\" annotation=\"accent:bar\" id=\"2\" parent=\"4\">_</mo></munderover></math>"
+    },
+    "Empty_0": {
+      "expected": "<math><munderover type=\"overscore\" role=\"latinletter\" id=\"3\" children=\"0,2\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\" parent=\"3\">X</mi><mo/><mo type=\"punctuation\" role=\"overaccent\" annotation=\"accent:bar\" id=\"2\" parent=\"3\">_</mo></munderover></math>"
+    },
+    "Empty_1": {
+      "expected": "<math><munderover type=\"underscore\" role=\"latinletter\" id=\"3\" children=\"0,1\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\" parent=\"3\">X</mi><mo type=\"punctuation\" role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\" parent=\"3\">^</mo><mo/></munderover></math>"
+    },
+    "Empty_2": {
+      "expected": "<math><munderover><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">X</mi><mo/><mo/></munderover></math>"
     }
   }
 }

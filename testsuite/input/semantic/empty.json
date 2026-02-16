@@ -1,0 +1,226 @@
+{
+  "tests": {
+    "empty_0": {
+      "tex": "a^{}b^{}",
+      "input": "<msup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup>"
+    },
+    "empty_1": {
+      "tex": "a_{}b^{}",
+      "input": "<msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msup>"
+    },
+    "empty_2": {
+      "tex": "a_{}b_{}",
+      "input": "<msub><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><msub><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_3": {
+      "tex": "a^{}_{}b^{}_{}",
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup>"
+    },
+    "empty_4": {
+      "tex": "a^{1}_{}b^{2}_{}",
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup>"
+    },
+    "empty_5": {
+      "tex": "a^{}_{1}b^{}_{2}",
+      "input": "<msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msubsup>"
+    },
+    "empty_6": {
+      "tex": "\\underbrace{a}_{}\\underbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_7": {
+      "tex": "\\underbrace{ad}_{}\\underbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_8": {
+      "tex": "\\underbrace{a}_{}\\underbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_9": {
+      "tex": "\\underbrace{ad}_{}\\underbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_10": {
+      "tex": "\\underbrace{c}{\\underbrace{a}_{}\\underbrace{b}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mi>c</mi><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_11": {
+      "tex": "\\underbrace{cf}{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_12": {
+      "tex": "\\underbrace{\\underbrace{a}_{}\\underbrace{b}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_13": {
+      "tex": "\\underbrace{\\underbrace{ad}_{}\\underbrace{be}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_14": {
+      "tex": "\\overbrace{a}_{}\\underbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_15": {
+      "tex": "\\overbrace{ad}_{}\\underbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_16": {
+      "tex": "\\overbrace{a}_{}\\underbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_17": {
+      "tex": "\\overbrace{ad}_{}\\underbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_18": {
+      "tex": "\\underbrace{c}{\\overbrace{a}_{}\\underbrace{b}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mi>c</mi><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_19": {
+      "tex": "\\underbrace{cf}{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DF;</mo></munder></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_20": {
+      "tex": "\\underbrace{\\overbrace{a}_{}\\underbrace{b}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>b</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_21": {
+      "tex": "\\underbrace{\\overbrace{ad}_{}\\underbrace{be}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_22": {
+      "tex": "\\overbrace{a}_{}\\overbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_23": {
+      "tex": "\\overbrace{ad}_{}\\overbrace{b}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_24": {
+      "tex": "\\overbrace{a}_{}\\overbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_25": {
+      "tex": "\\overbrace{ad}_{}\\overbrace{be}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_26": {
+      "tex": "\\overbrace{c}{\\overbrace{a}_{}\\overbrace{b}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><mover><mi>c</mi><mo>&#x23DE;</mo></mover></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_27": {
+      "tex": "\\overbrace{cf}{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}",
+      "input": "<mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>c</mi><mi>f</mi></mrow><mo>&#x23DE;</mo></mover></mrow><msub><mrow data-mjx-texclass=\"ORD\"><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub>"
+    },
+    "empty_28": {
+      "tex": "\\overbrace{\\overbrace{a}_{}\\overbrace{b}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>a</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mi>b</mi><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_29": {
+      "tex": "\\overbrace{\\overbrace{ad}_{}\\overbrace{be}_{}}_{}",
+      "input": "<munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>a</mi><mi>d</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><mover><mrow><mi>b</mi><mi>e</mi></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DE;</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder>"
+    },
+    "empty_30": {
+      "tex": "\\underset{}{a}\\underset{}{b}",
+      "input": "<munder><mi>a</mi><mrow></mrow></munder><munder><mi>b</mi><mrow></mrow></munder>"
+    },
+    "empty_31": {
+      "tex": "\\underset{}{\\underset{}{a}\\underset{}{b}}",
+      "input": "<munder><mrow><munder><mi>a</mi><mrow></mrow></munder><munder><mi>b</mi><mrow></mrow></munder></mrow><mrow></mrow></munder>"
+    },
+    "empty_32": {
+      "tex": "\\overset{}{a}\\overset{}{b}",
+      "input": "<mover><mi>a</mi><mrow></mrow></mover><mover><mi>b</mi><mrow></mrow></mover>"
+    },
+    "empty_33": {
+      "tex": "\\overset{}{\\overset{}{a}\\overset{}{b}}",
+      "input": "<mover><mrow><mover><mi>a</mi><mrow></mrow></mover><mover><mi>b</mi><mrow></mrow></mover></mrow><mrow></mrow></mover>"
+    },
+    "empty_34": {
+      "tex": "\\overunderset{}{}{a}\\overunderset{}{}{b}",
+      "input": "<munderover><mi>a</mi><mrow></mrow><mrow></mrow></munderover><munderover><mi>b</mi><mrow></mrow><mrow></mrow></munderover>"
+    },
+    "empty_35": {
+      "tex": "\\overunderset{}{}{\\overunderset{}{}{a}\\overunderset{}{}{b}}",
+      "input": "<munderover><mrow><munderover><mi>a</mi><mrow></mrow><mrow></mrow></munderover><munderover><mi>b</mi><mrow></mrow><mrow></mrow></munderover></mrow><mrow></mrow><mrow></mrow></munderover>"
+    },
+    "collapseEmptySuperscript_00": {
+      "input": "<math><mi>x</mi><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_01": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_02": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup><mi>b</mi></math>"
+    },
+    "collapseEmptySuperscript_03": {
+      "input": "<math><mi>a</mi><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_04": {
+      "input": "<math><mi>aa</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_05": {
+      "input": "<math><mi>∑</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_06": {
+      "input": "<math><mi>sin</mi><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_07": {
+      "input": "<math><mn>3</mn><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_08": {
+      "input": "<math><mn>3</mn><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_09": {
+      "input": "<math><mo>(</mo><mi>a</mi><mo>)</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_10": {
+      "input": "<math><mo>=</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_11": {
+      "input": "<math><msub><mi>x</mi><mn>1</mn></msub><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySuperscript_12": {
+      "input": "<math><msub><mi>x</mi><mn>1</mn></msub><msup><mspace width=\"1ex\"/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySubscript_0": {
+      "input": "<math><mi>x</mi><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapseEmptySubscript_1": {
+      "input": "<math><mi>a</mi><msub><mi>x</mi><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_2": {
+      "input": "<math><mi>a</mi><msub><mrow/><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_3": {
+      "input": "<math><mi>a</mi><msub><mrow/><mn>1</mn></msub><mi>b</mi></math>"
+    },
+    "collapseEmptySubscript_4": {
+      "input": "<math><mn>3</mn><msub><mrow/><mn>1</mn></msub></math>"
+    },
+    "collapseEmptySubscript_5": {
+      "input": "<math><mn>3</mn><msub><mrow/><mn>1</mn></msub><mi>b</mi></math>"
+    },
+    "collapseEmptySubscript_6": {
+      "input": "<math><mo>(</mo><mi>a</mi><mo>)</mo><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapseEmptySubscript_7": {
+      "input": "<math><mo>=</mo><msup><mrow/><mn>2</mn></msup><msup><mrow/><mn>2</mn></msup></math>"
+    },
+    "collapseEmptySubscript_8": {
+      "input": "<math><msup><mi>x</mi><mn>1</mn></msup><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapsePhantomSuperscript_0": {
+      "input": "<math><msup><mi>a</mi><mphantom><mi>c</mi></mphantom></msup><msup><mphantom/><mn>2</mn></msup></math>"
+    },
+    "collapsePhantomSuperscript_1": {
+      "input": "<math><msup><mi>a</mi><mphantom/></msup><msup><mphantom/><mn>2</mn></msup></math>"
+    },
+    "collapsePhantomSubscript_0": {
+      "input": "<math><msub><mi>a</mi><mphantom><mi>c</mi></mphantom></msub><msub><mphantom/><mn>2</mn></msub></math>"
+    },
+    "collapsePhantomSubscript_1": {
+      "input": "<math><msub><mi>a</mi><mphantom/></msub><msub><mphantom/><mn>2</mn></msub></math>"
+    }
+  }
+}

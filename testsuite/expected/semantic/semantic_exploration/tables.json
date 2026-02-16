@@ -3032,18 +3032,16 @@
     },
     "EmptyAccents_0": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_1": {
       "expected": [
-        4,
+        3,
         0,
-        2,
-        1
+        2
       ]
     },
     "EmptyAccents_2": {
@@ -3056,18 +3054,16 @@
     },
     "EmptyAccents_3": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_4": {
       "expected": [
-        4,
+        3,
         0,
-        2,
-        1
+        2
       ]
     },
     "EmptyAccents_5": {
@@ -3080,17 +3076,15 @@
     },
     "EmptyAccents_6": {
       "expected": [
-        4,
+        3,
         0,
-        1,
-        2
+        1
       ]
     },
     "EmptyAccents_7": {
       "expected": [
-        4,
+        3,
         0,
-        1,
         2
       ]
     },
@@ -3167,6 +3161,59 @@
           3
         ],
         4
+      ]
+    },
+    "EllipsesCombined_5": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "EllipsesCombined_6": {
+      "expected": [
+        5,
+        0,
+        [
+          4,
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "EllipsesCombined_7": {
+      "expected": [
+        6,
+        0,
+        [
+          4,
+          1,
+          2,
+          3
+        ],
+        5
+      ]
+    },
+    "EllipsesCombined_8": {
+      "expected": [
+        8,
+        0,
+        7,
+        [
+          6,
+          [
+            5,
+            1,
+            2,
+            3
+          ],
+          4
+        ]
       ]
     },
     "LabelledLines_0": {
@@ -4391,10 +4438,106 @@
         11
       ]
     },
-    "EllipsesCombined_5": {
+    "Single": {
+      "expected": 0
+    },
+    "Single_Scalar": {
+      "expected": [
+        6,
+        0,
+        5,
+        1
+      ]
+    },
+    "Matrix_Inner": {
+      "expected": [
+        6,
+        0,
+        [
+          5,
+          1
+        ],
+        2
+      ]
+    },
+    "Matrix_Inner_Scalar": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          7,
+          1,
+          [
+            6,
+            2
+          ],
+          3
+        ]
+      ]
+    },
+    "Matrix_Outer": {
       "expected": [
         4,
         0,
+        [
+          3,
+          1
+        ],
+        5
+      ]
+    },
+    "Matrix_Outer_Scalar": {
+      "expected": [
+        9,
+        0,
+        8,
+        [
+          5,
+          1,
+          [
+            4,
+            2
+          ],
+          6
+        ]
+      ]
+    },
+    "Matrix_Double_Inner": {
+      "expected": [
+        12,
+        [
+          5,
+          [
+            3,
+            0,
+            1,
+            2
+          ]
+        ],
+        [
+          11,
+          [
+            9,
+            6,
+            7,
+            8
+          ]
+        ]
+      ]
+    },
+    "Case_Inner": {
+      "expected": [
+        2,
+        0,
+        1
+      ]
+    },
+    "Case_Inner_Scalar": {
+      "expected": [
+        8,
+        0,
+        7,
         [
           3,
           1,
@@ -4402,45 +4545,28 @@
         ]
       ]
     },
-    "EllipsesCombined_6": {
+    "Case_Outer": {
       "expected": [
-        5,
+        4,
         0,
         [
-          4,
-          1,
-          2,
-          3
+          3,
+          1
         ]
       ]
     },
-    "EllipsesCombined_7": {
+    "Case_Outer_Scalar": {
       "expected": [
-        6,
-        0,
-        [
-          4,
-          1,
-          2,
-          3
-        ],
-        5
-      ]
-    },
-    "EllipsesCombined_8": {
-      "expected": [
-        8,
-        0,
         7,
+        0,
+        6,
         [
-          6,
+          5,
+          1,
           [
-            5,
-            1,
-            2,
-            3
-          ],
-          4
+            4,
+            2
+          ]
         ]
       ]
     }

@@ -98,16 +98,16 @@
       "expected": "12"
     },
     "Enclose_2": {
-      "expected": "2 sopra 12"
+      "expected": "2 con 12 sotto"
     },
     "Enclose_3": {
-      "expected": "12 sopra 2"
+      "expected": "12 con 2 sotto"
     },
     "Enclose_4": {
-      "expected": "12 sotto 2"
+      "expected": "12 con 2 sopra"
     },
     "Enclose_5": {
-      "expected": "2 sotto 12"
+      "expected": "2 con 12 sopra"
     },
     "Enclose_6": {
       "expected": "12"
@@ -116,16 +116,16 @@
       "expected": "12"
     },
     "Enclose_8": {
-      "expected": "2 sopra 12"
+      "expected": "2 con 12 sotto"
     },
     "Enclose_9": {
-      "expected": "12 sopra 2"
+      "expected": "12 con 2 sotto"
     },
     "Enclose_10": {
-      "expected": "12 sotto 2"
+      "expected": "12 con 2 sopra"
     },
     "Enclose_11": {
-      "expected": "2 sotto 12"
+      "expected": "2 con 12 sopra"
     },
     "EncloseSpecial_0": {
       "expected": "A maiuscola"
@@ -272,7 +272,7 @@
       "expected": "sommatoria sotto I"
     },
     "Overscript": {
-      "expected": "A sotto B"
+      "expected": "A con B sopra"
     },
     "DetFemale": {
       "expected": "determinante della A"

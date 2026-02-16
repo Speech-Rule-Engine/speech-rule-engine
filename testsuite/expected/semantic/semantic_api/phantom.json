@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api phantom tests.",
+  "base": "input/semantic/phantom.json"
+}

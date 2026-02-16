@@ -1,0 +1,118 @@
+{
+  "name": "EnglishClearspeakCoverageFences",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_fences.json",
+  "information": "English Clearspeak Various Fenced Expressions tests.",
+  "active": "ClearspeakEnglish",
+  "tests": {
+    "paren-simple_0": {
+      "expected": "one half"
+    },
+    "paren-simple_1": {
+      "expected": "one half"
+    },
+    "paren-simple_2": {
+      "expected": "the set one half"
+    },
+    "paren-simple_3": {
+      "expected": "floor of one half"
+    },
+    "paren-simple_4": {
+      "expected": "ceiling of one half"
+    },
+    "paren-simple_5": {
+      "expected": "left white brace, one half, right white brace"
+    },
+    "paren-simple-exp_0": {
+      "expected": "one half to the fourth power"
+    },
+    "paren-simple-exp_1": {
+      "expected": "one half to the fourth power"
+    },
+    "paren-simple-exp_2": {
+      "expected": "the set one half to the fourth power"
+    },
+    "paren-simple-exp_3": {
+      "expected": "floor of one half, to the fourth power"
+    },
+    "paren-simple-exp_4": {
+      "expected": "ceiling of one half, to the fourth power"
+    },
+    "paren-simple-exp_5": {
+      "expected": "left white brace, one half, right white brace, to the fourth power"
+    },
+    "paren-simple-nested-func_0": {
+      "expected": "h of, g of x"
+    },
+    "paren-simple-nested-func_1": {
+      "expected": "h of, g of x"
+    },
+    "paren-simple-nested-func_2": {
+      "expected": "h of, g of x"
+    },
+    "paren-simple-nested-func_3": {
+      "expected": "h of, floor of g of floor of x"
+    },
+    "paren-simple-nested-func_4": {
+      "expected": "h of, ceiling of g of ceiling of x"
+    },
+    "paren-simple-nested-func_5": {
+      "expected": "h of, left white brace, g of, left white brace, x, right white brace, right white brace"
+    },
+    "paren-simple-nested-func-default_0": {
+      "expected": "f of, open paren, x plus triangle x, close paren"
+    },
+    "paren-simple-nested-func-default_1": {
+      "expected": "f of, open bracket, x plus triangle x, close bracket"
+    },
+    "paren-simple-nested-func-default_2": {
+      "expected": "f of, open brace, x plus triangle x, close brace"
+    },
+    "paren-simple-nested-func-default_3": {
+      "expected": "f of, left floor, x plus triangle x, right floor"
+    },
+    "paren-simple-nested-func-default_4": {
+      "expected": "f of, left ceiling, x plus triangle x, right ceiling"
+    },
+    "paren-simple-nested-func-default_5": {
+      "expected": "f of, left white brace, x plus triangle x, right white brace"
+    },
+    "paren-simple-nested-func-no-bracket_0": {
+      "expected": "h times, g times x"
+    },
+    "paren-simple-nested-func-no-bracket_1": {
+      "expected": "h times, g times x"
+    },
+    "paren-simple-nested-func-no-bracket_2": {
+      "expected": "h times, g times x"
+    },
+    "paren-simple-nested-func-no-bracket_3": {
+      "expected": "h times floor of, g times floor of x"
+    },
+    "paren-simple-nested-func-no-bracket_4": {
+      "expected": "h times ceiling of, g times ceiling of x"
+    },
+    "paren-simple-nested-func-no-bracket_5": {
+      "expected": "h times, left white brace, g times, left white brace, x, right white brace, right white brace"
+    },
+    "paren-simple-nested-func-none_0": {
+      "expected": "f times, open paren, f to the negative 1 power, times x, close paren"
+    },
+    "paren-simple-nested-func-none_1": {
+      "expected": "f times, open bracket, f to the negative 1 power, times x, close bracket"
+    },
+    "paren-simple-nested-func-none_2": {
+      "expected": "f times, open brace, f to the negative 1 power, times x, close brace"
+    },
+    "paren-simple-nested-func-none_3": {
+      "expected": "f times floor of, f to the negative 1 power, times floor of x"
+    },
+    "paren-simple-nested-func-none_4": {
+      "expected": "f times ceiling of, f to the negative 1 power, times ceiling of x"
+    },
+    "paren-simple-nested-func-none_5": {
+      "expected": "f times, left white brace, f to the negative 1 power, times, left white brace, x, right white brace, right white brace"
+    }
+  }
+}

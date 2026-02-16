@@ -273,7 +273,7 @@
       "expected": "sum under I"
     },
     "Overscript": {
-      "expected": "A under B"
+      "expected": "A med B over"
     },
     "DetFemale": {
       "expected": "det A"

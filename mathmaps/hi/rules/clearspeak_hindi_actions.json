@@ -937,7 +937,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"से\"; [n] children/*[2]; [t] \"से\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"से\"; [n] children/*[2]; [t] \"से\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",

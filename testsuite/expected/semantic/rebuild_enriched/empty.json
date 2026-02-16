@@ -1,0 +1,6 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Rebuild enriched empty tests.",
+  "base": "input/semantic/empty.json"
+}

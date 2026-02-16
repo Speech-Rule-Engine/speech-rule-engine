@@ -1,0 +1,101 @@
+{
+  "name": "FrenchClearspeakCoverageLimits",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "French Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakFrench",
+  "tests": {
+    "rel1": {
+      "expected": "q de n égale 1 à c"
+    },
+    "rel2": {
+      "expected": "q en normal, avec c dessus"
+    },
+    "rel3": {
+      "expected": "q sur n égale 1"
+    },
+    "rel4": {
+      "expected": "q en normal, avec n dessous"
+    },
+    "over": {
+      "expected": "a avec y dessus"
+    },
+    "overaccent": {
+      "expected": "a flèche droite"
+    },
+    "overunder-sep": {
+      "expected": "a avec x dessous et y dessus"
+    },
+    "overunder": {
+      "expected": "a avec x dessous et y dessus"
+    },
+    "overunderaccent": {
+      "expected": "a avec flèche droite dessous flèche gauche"
+    },
+    "under": {
+      "expected": "a avec x dessous"
+    },
+    "underaccent": {
+      "expected": "a avec flèche gauche dessous"
+    },
+    "cup1": {
+      "expected": "union de n égale 1 à c"
+    },
+    "cup2": {
+      "expected": "union sus c"
+    },
+    "cup3": {
+      "expected": "union sous n égale 1"
+    },
+    "cup4": {
+      "expected": "signe union avec n dessus"
+    },
+    "cup5": {
+      "expected": "signe union avec c dessus"
+    },
+    "cup6": {
+      "expected": "union sur n égale 1"
+    },
+    "cup7": {
+      "expected": "union sus n"
+    },
+    "let1": {
+      "expected": "q en normal, avec n égale 1 dessous et c dessus"
+    },
+    "let2": {
+      "expected": "q en normal, avec c dessus"
+    },
+    "let3": {
+      "expected": "q en normal, avec n égale 1 dessous"
+    },
+    "let4": {
+      "expected": "q en normal, avec n dessous"
+    },
+    "limits1": {
+      "expected": "q de n égale 1 à c"
+    },
+    "limits1a": {
+      "expected": "q en normal, avec n dessous et c dessus"
+    },
+    "limits2": {
+      "expected": "q en normal, avec n égale 1 dessous et c dessus"
+    },
+    "limits2a": {
+      "expected": "q en normal, avec n dessous et c dessus"
+    },
+    "sum1": {
+      "expected": "sommation de n égale 1 à c"
+    },
+    "sum2": {
+      "expected": "sommation sous c"
+    },
+    "sum3": {
+      "expected": "sommation sur n égale 1"
+    },
+    "sum4": {
+      "expected": "sommation sur n"
+    }
+  },
+  "compare": true
+}

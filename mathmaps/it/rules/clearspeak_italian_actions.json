@@ -987,7 +987,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]; [t] \"a\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]; [t] \"a\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1012,22 +1012,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sopra\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"con\"; [n] children/*[1]/children/*[2]; [t] \"sotto\"; [t] \"e\"; [n] children/*[2]; [t] \"sopra\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"a\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sotto\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

@@ -1082,7 +1082,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [n] children/*[2]; [t] \"에서\"; [n] children/*[3]; [t] \"까지\""
+      "[n] children/*[1]; [n] children/*[2]; [t] \"에서\"; [n] children/*[3]; [t] \"까지\" (pause:short)"
     ],
     [
       "Action",

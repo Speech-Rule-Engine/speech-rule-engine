@@ -135,7 +135,8 @@
     },
     "Table_0": {
       "tex": "\\begin{matrix}a\\end{matrix}",
-      "input": "<mtable><mtr extid=\"A\"><mtd><mi>a</mi></mtd></mtr></mtable>"
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "id": 0
     },
     "Table_1": {
       "tex": "\\begin{matrix}a & c\\end{matrix}",
@@ -160,7 +161,7 @@
     "Table_Cell_0": {
       "tex": "\\begin{matrix}a\\end{matrix}",
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
-      "id": 2
+      "id": 0
     },
     "Table_Cell_1": {
       "tex": "\\begin{matrix}a & c\\end{matrix}",
@@ -200,7 +201,7 @@
       "grammar": "depth",
       "tex": "\\begin{matrix}a\\end{matrix}",
       "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
-      "id": 2
+      "id": 0
     },
     "Table_Cell_Depth_1": {
       "grammar": "depth",
