@@ -15,6 +15,30 @@
         3
       ]
     },
+    "phantom_embellished_issue1": {
+      "expected": [
+        3,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2
+      ]
+    },
+    "phantom_embellished_issue2": {
+      "expected": [
+        3,
+        [
+          5,
+          0,
+          4,
+          1
+        ],
+        2
+      ]
+    },
     "phantom_fences_double": {
       "expected": [
         16,

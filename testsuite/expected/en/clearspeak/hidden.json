@@ -9,13 +9,13 @@
   "exclude": [],
   "tests": {
     "SimplePhantom_0": {
-      "expected": "the fraction with numerator and denominator c"
+      "expected": "empty over c"
     },
     "SimplePhantom_1": {
-      "expected": "the fraction with numerator a and denominator"
+      "expected": "a over empty"
     },
     "SimplePhantom_2": {
-      "expected": "super c"
+      "expected": "empty to the c-th power"
     },
     "SimplePhantom_3": {
       "expected": "a"

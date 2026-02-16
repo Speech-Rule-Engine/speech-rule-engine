@@ -176,6 +176,18 @@
     },
     "collapseEmptySubscript_8": {
       "expected": "<stree><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"7\">⁢<content><operator role=\"multiplication\" id=\"6\">⁢</operator></content><children><superscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"1\">1</number></children></superscript><subscript role=\"unknown\" id=\"5\"><children><empty role=\"unknown\" id=\"3\"/><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"4\">2</number></children></subscript></children></infixop></stree>"
+    },
+    "collapsePhantomSuperscript_0": {
+      "expected": "<stree><superscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUP;clearspeak:simple\" id=\"0\">a</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></superscript></stree>"
+    },
+    "collapsePhantomSuperscript_1": {
+      "expected": "<stree><superscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUP;clearspeak:simple\" id=\"0\">a</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></superscript></stree>"
+    },
+    "collapsePhantomSubscript_0": {
+      "expected": "<stree><subscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></subscript></stree>"
+    },
+    "collapsePhantomSubscript_1": {
+      "expected": "<stree><subscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></subscript></stree>"
     }
   }
 }

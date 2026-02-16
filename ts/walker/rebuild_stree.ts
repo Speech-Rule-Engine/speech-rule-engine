@@ -30,7 +30,6 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
-// import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from './walker_util.js';
@@ -147,7 +146,7 @@ export class RebuildStree {
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
     );
     if (content.length === 0 && children.length === 0) {
-      RebuildStree.textContent(snode, node, this.isEmpty(snode));
+      RebuildStree.textContent(snode, node, this.isEmpty(snode, node));
       return snode;
     }
     if (content.length > 0) {
@@ -381,8 +380,17 @@ export class RebuildStree {
     return sn;
   }
 
-  private isEmpty(snode: SemanticNode): boolean {
-    return snode.type === SemanticType.EMPTY ||
-      (snode.type === SemanticType.TEXT && snode.role === SemanticRole.SPACE);
+  private isEmpty(snode: SemanticNode, node?: Element): boolean {
+    if (snode.type === SemanticType.EMPTY) {
+      return true;
+    }
+    if (snode.type !== SemanticType.TEXT && snode.role !== SemanticRole.SPACE) {
+      return false;
+    }
+    // const children = node.childNodes;
+    if (node.tagName.toUpperCase() === 'MPHANTOM') {
+      return true;
+    }
+    return false;
   }
 }

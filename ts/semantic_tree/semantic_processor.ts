@@ -1429,7 +1429,10 @@ export class SemanticProcessor {
     children: SemanticNode[],
     length: number
   ): [string, SemanticNode[]] {
-    const isEmpty = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    const isNoSpace = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    const isSpace = (x: SemanticNode) => x &&
+      (SemanticPred.isType(x, SemanticType.TEXT) && SemanticPred.isRole(x, SemanticRole.SPACE));
+    const isEmpty = (x: SemanticNode) => isNoSpace(x) || isSpace(x);
     if (length === 1) {
       return isEmpty(children[1]) ?
         [mmlTag, [annotateEmpty([mmlTag], children[0])]] :
@@ -3261,6 +3264,15 @@ export class SemanticProcessor {
     content: SemanticNode[]
   ): SemanticNode {
     const childNode = SemanticProcessor.getInstance().row(content);
+    // Special case that we have ignored an empty input node.
+    // This is from MJ Issue #3028
+    if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
+      !childNode.mathmlTree && ofence.mathmlTree &&
+      ofence.mathmlTree.nextSibling !== cfence.mathmlTree
+       ) {
+      childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
+      childNode.mathml = [ofence.mathmlTree.nextSibling as Element];
+    }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
       [childNode],
