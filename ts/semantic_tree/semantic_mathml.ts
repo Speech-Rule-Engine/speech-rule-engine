@@ -102,7 +102,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
       [MMLTAGS.MACTION, this.action_.bind(this)],
-      [MMLTAGS.MPHANTOM, this.empty_.bind(this)],
+      [MMLTAGS.MPHANTOM, this.phantom_.bind(this)],
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
@@ -380,6 +380,26 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   }
 
   /**
+   * Parses an phantom element.
+   *
+   * @param node A MathML node.
+   * @param children The children of the node.
+   * @returns The newly created semantic node.
+   */
+  private phantom_(node: Element, children: Element[]): SemanticNode {
+    // TODO: this could be more refined.
+    let newNode: SemanticNode;
+    if (children.length) {
+      newNode = this.getFactory().makeUnprocessed(node);
+      newNode.type = SemanticType.TEXT;
+      newNode.role = SemanticRole.SPACE;
+    } else {
+      newNode = this.empty_(node, children);
+    }
+    return newNode;
+  }
+
+  /**
    * Parse a space element. If sufficiently wide, create an empty text element.
    * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
    *
@@ -493,6 +513,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       sepValue,
       semNodes
     );
+    newNode.mathmlTree = node;
+    newNode.mathml = [node];
     const nodes = SemanticProcessor.getInstance().tablesInRow([newNode]);
     return nodes[0];
   }
@@ -579,7 +601,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses an empty element.
    *
-   * @param _node A MathML node.
+   * @param node A MathML node.
    * @param _children The children of the node.
    * @returns The newly created semantic node.
    */

@@ -166,6 +166,7 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
+    newNode = rewriteMfenced(newNode);
     const attached = attachedElement(childrenList);
     // We need to possibly ascend nodes with ignored empty elements.
     Debugger.getInstance().output('Walktree Case 2');
@@ -177,7 +178,6 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = getInnerNode(newNode);
     }
   }
-  newNode = rewriteMfenced(newNode);
   mergeChildren(newNode, childrenList, semantic);
   if (!IDS.has(semantic.id)) {
     IDS.set(semantic.id, true);

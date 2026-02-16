@@ -1003,6 +1003,34 @@
           4
         ]
       ]
+    },
+    "collapsePhantomSuperscript_0": {
+      "expected": [
+        4,
+        0,
+        3
+      ]
+    },
+    "collapsePhantomSuperscript_1": {
+      "expected": [
+        4,
+        0,
+        3
+      ]
+    },
+    "collapsePhantomSubscript_0": {
+      "expected": [
+        4,
+        0,
+        3
+      ]
+    },
+    "collapsePhantomSubscript_1": {
+      "expected": [
+        4,
+        0,
+        3
+      ]
     }
   }
 }
