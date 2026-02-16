@@ -30,11 +30,9 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
-// import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from './walker_util.js';
-import * as DomUtil from '../common/dom_util.js';
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
