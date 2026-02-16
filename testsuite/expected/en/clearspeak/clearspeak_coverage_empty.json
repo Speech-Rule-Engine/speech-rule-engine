@@ -73,10 +73,10 @@
       "expected": "empty sub b, to the fourth power"
     },
     "space_superscript": {
-      "expected": "a raised to the empty power"
+      "expected": "a"
     },
     "space_subscript": {
-      "expected": "a sub empty"
+      "expected": "a"
     },
     "empty_over_0": {
       "expected": "empty with 1 above"

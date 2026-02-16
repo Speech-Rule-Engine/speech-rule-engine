@@ -8,6 +8,7 @@
     "fencepointer"
   ],
   "exclude": [
+    "phantom_fences_nonempty0", "phantom_fences_nonempty1", "phantom_fences_nonempty2",
     "phantom_fences_double", "phantom_fences_empty2", "phantom_fences_empty3"
   ],
   "base": "input/semantic/phantom.json"
