@@ -209,6 +209,18 @@
     },
     "collapseEmptySubscript_8": {
       "input": "<math><msup><mi>x</mi><mn>1</mn></msup><msub><mrow/><mn>2</mn></msub></math>"
+    },
+    "collapsePhantomSuperscript_0": {
+      "input": "<math><msup><mi>a</mi><mphantom><mi>c</mi></mphantom></msup><msup><mphantom/><mn>2</mn></msup></math>"
+    },
+    "collapsePhantomSuperscript_1": {
+      "input": "<math><msup><mi>a</mi><mphantom/></msup><msup><mphantom/><mn>2</mn></msup></math>"
+    },
+    "collapsePhantomSubscript_0": {
+      "input": "<math><msub><mi>a</mi><mphantom><mi>c</mi></mphantom></msub><msub><mphantom/><mn>2</mn></msub></math>"
+    },
+    "collapsePhantomSubscript_1": {
+      "input": "<math><msub><mi>a</mi><mphantom/></msub><msub><mphantom/><mn>2</mn></msub></math>"
     }
   }
 }

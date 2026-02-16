@@ -1429,7 +1429,10 @@ export class SemanticProcessor {
     children: SemanticNode[],
     length: number
   ): [string, SemanticNode[]] {
-    const isEmpty = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    const isNoSpace = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    const isSpace = (x: SemanticNode) => x &&
+      (SemanticPred.isType(x, SemanticType.TEXT) && SemanticPred.isRole(x, SemanticRole.SPACE));
+    const isEmpty = (x: SemanticNode) => isNoSpace(x) || isSpace(x);
     if (length === 1) {
       return isEmpty(children[1]) ?
         [mmlTag, [annotateEmpty([mmlTag], children[0])]] :
