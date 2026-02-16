@@ -1,7 +1,19 @@
 {
   "tests": {
+    "__comment0__": "MathJax issue 3028",
     "phantom_embellished_issue0": {
       "input": "<mo stretchy=\"false\" xmlns=\"http://www.w3.org/1998/Math/MathML\">(</mo><mrow data-mjx-texclass=\"ORD\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mphantom><mi>x</mi></mphantom></mrow><msup xmlns=\"http://www.w3.org/1998/Math/MathML\"><mo stretchy=\"false\">)</mo><mn>2</mn></msup>"
+    },
+    "phantom_embellished_issue1": {
+      "input": "<math><mo>(</mo><mphantom><mi>a</mi></mphantom><msup><mo>)</mo><mn>2</mn></msup></math>"
+    },
+    "phantom_embellished_issue2": {
+      "input": "<math><mo>(</mo><mphantom><mi>a</mi><mi>b</mi></mphantom><msup><mo>)</mo><mn>2</mn></msup></math>"
+    },
+    "__comment1__": "TODO: This one is still not functioning correctly.",
+    "phantom_embellished_issue3": {
+      "test": false,
+      "input": "<math><mo>(</mo><mphantom><mi>a</mi></mphantom><mo>,</mo><mphantom><mi>b</mi></mphantom><msup><mo>)</mo><mn>2</mn></msup></math>"
     },
     "phantom_fences_double": {
       "input": "<mfenced xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>10</mn><mi>x</mi></mrow><mstyle class=\"primaryColor\"><mo>+</mo><mn>25</mn></mstyle></mrow></mfenced>"
