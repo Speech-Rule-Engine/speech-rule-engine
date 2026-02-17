@@ -1434,13 +1434,16 @@ export class SemanticProcessor {
       (SemanticPred.isType(x, SemanticType.TEXT) && SemanticPred.isRole(x, SemanticRole.SPACE));
     const isEmpty = (x: SemanticNode) => isNoSpace(x) || isSpace(x);
     if (length === 1) {
-      return isEmpty(children[1]) ?
-        [mmlTag, [annotateEmpty([mmlTag], children[0])]] :
-        [mmlTag, children];
+      if (isEmpty(children[1])) {
+        children[0].noupdate = true;
+        return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
+      }
+      return [mmlTag, children];
     }
     const child1 = children[1];
     const child2 = children[2];
     if (isEmpty(child1) && isEmpty(child2)) {
+      children[0].noupdate = true;
       return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
     }
     if (isEmpty(child1)) {
