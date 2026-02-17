@@ -77,48 +77,47 @@ jobs:
           pnpm -r i --ignore-scripts
 
       - name: Run tests for ${{ matrix.block }}
-        run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts
-     ## --coverageReporters=json
+        run: pnpm test:action tests/actions/${{ matrix.block }}.test.ts --coverageReporters=json
 
-      # - name: Upload coverage artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: coverage-${{ matrix.block }}
-      #     path: coverage/coverage-final.json
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.block }}
+          path: coverage/coverage-final.json
 
-  # combine-coverage:
-  #   needs: test
-  #   runs-on: ubuntu-latest
-  #   name: Combine Coverage Reports
-  #   steps:
-  #     - uses: actions/checkout@v4
+  combine-coverage:
+    needs: test
+    runs-on: ubuntu-latest
+    name: Combine Coverage Reports
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: pnpm/action-setup@v4
-  #       name: Install pnpm
-  #       with:
-  #         version: 10
-  #         run_install: false
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
 
-  #     - name: Install merge tool
-  #       run: pnpm add -g nyc
+      - name: Install merge tool
+        run: pnpm add -g nyc
 
-  #     - name: Download all coverage artifacts
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         path: coverage-artifacts
+      - name: Download all coverage artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: coverage-artifacts
 
-  #     - name: Merge coverage reports
-  #       run: |
-  #         mkdir -p combine
-  #         cd coverage-artifacts
-  #         for i in coverage-*; do cp $i/coverage-final.json ../combine/$i.json; done
-  #         cd ..
-  #         nyc merge ./combine/ coverage.json
+      - name: Merge coverage reports
+        run: |
+          mkdir -p combine
+          cd coverage-artifacts
+          for i in coverage-*; do cp $i/coverage-final.json ../combine/$i.json; done
+          cd ..
+          nyc merge ./combine/ coverage.json
 
-  #     - name: Upload to Codecov
-  #       uses: codecov/codecov-action@v5
-  #       with:
-  #         token: ${{ secrets.CODECOV_TOKEN }}
-  #         slug: speech-rule-engine/speech-rule-engine
-  #         file: coverage.json
-  #         name: codecov-$(date +%Y%m%d)
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: speech-rule-engine/speech-rule-engine
+          file: coverage.json
+          name: codecov-$(date +%Y%m%d)
