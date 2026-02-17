@@ -1031,6 +1031,27 @@
         0,
         3
       ]
+    },
+    "spaceSuperscript_0": {
+      "expected": 0
+    },
+    "spaceSuperscript_1": {
+      "expected": 0
+    },
+    "spaceSubcript_0": {
+      "expected": 0
+    },
+    "spaceSubscript_1": {
+      "expected": 0
+    },
+    "spaceSubSuperscript_0": {
+      "expected": 0
+    },
+    "spaceSubSuperscript_1": {
+      "expected": 0
+    },
+    "spaceSubSuperscript_2": {
+      "expected": 0
     }
   }
 }
