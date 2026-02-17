@@ -119,6 +119,11 @@ export class SemanticNode {
   public nobreaking = false;
 
   /**
+   * This not should not be updated during recursive parsing.
+   */
+  public noupdate = false;
+
+  /**
    * Generates a semantic node from its XML representation.
    *
    * @param xml The XML representation.

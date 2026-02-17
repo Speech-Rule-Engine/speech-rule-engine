@@ -188,6 +188,27 @@
     },
     "collapsePhantomSubscript_1": {
       "expected": "<stree><subscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"3\">2</number></children></subscript></stree>"
+    },
+    "spaceSuperscript_0": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSuperscript_1": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSubcript_0": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSubscript_1": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSubSuperscript_0": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUBSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSubSuperscript_1": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUBSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
+    },
+    "spaceSubSuperscript_2": {
+      "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUBSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
     }
   }
 }

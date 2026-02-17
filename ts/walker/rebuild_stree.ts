@@ -387,7 +387,6 @@ export class RebuildStree {
     if (snode.type !== SemanticType.TEXT && snode.role !== SemanticRole.SPACE) {
       return false;
     }
-    // const children = node.childNodes;
     if (node.tagName.toUpperCase() === 'MPHANTOM') {
       return true;
     }
