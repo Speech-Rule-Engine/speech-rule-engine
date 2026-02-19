@@ -752,19 +752,16 @@ splitNemethForFire
 
 
 
-
-
-## L10n Tools
-
-### Copying tests
+## Copying L10n Tests
 
 ``` javascript
 ct = await (await import('./js/module_loader.js')).loadPromise('ct');
 ```
 
 Methods to copy test files from existing tests for a locale to tests for a new
-locale.  Replaces all expected test entries with the actual results of
-tests. Hence can also overwrite already existing tests.
+locale or for a new set of semantic tests. **Replaces all expected test entries
+with the actual results of tests.** Hence can also overwrite already existing
+tests.
 
 Simple message replacement for information, output and analysis files is carried
 out. This assumes that these files are canonically named as described above.
@@ -791,6 +788,21 @@ Show the difference between test files existing in locale directories.
 ``` javascript
 ct.localeDifference('en', 'it');
 ```
+
+``` javascript
+ct.copyTestLocale('en/mathspeak/mathspeak_tests.json', 'it', 'English', 'Italian');
+```
+
+### Copying tests for all Locales
+
+``` javascript
+ct.copyAllLocales(FILE, EXCLUDE, SRC);
+```
+
+Copies tests in file `FILE` from a source locale `SRC` to all other available
+locales, excluding the locales given in `EXCLUDE`. `EXCLUDE` defaults to the
+Braille locales and `SRC` to English.
+
 
 ## Semantic Tests
 
@@ -822,8 +834,9 @@ Note that tests -- with exceptions of `enrich_mathml`, `enrich_structure`,
 
 ### Copying tests
 
-Given a base file `BASE` in the `input` directory, we can generate the basic
-structure for the above tests using
+Uses the copy tools describe in the l10n section. Given a base file `BASE` in
+the `input` directory, we can generate the basic structure for the above tests
+using
 
 ``` javascript
 ct.copySemanticTest(BASE, fill?, targetdir?);

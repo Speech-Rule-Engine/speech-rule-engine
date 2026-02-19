@@ -30,9 +30,10 @@ import { addMissing, addActual } from './fill_tests.js';
 import { Variables } from '#js/common/variables.js';
 
 /**
- * Copies and adapts a single test file from one locale to another.
+ * Copies and adapts a single test file from one locale to all other locales.
  *
  * @param source The expected source file.
+ * @param exclude The excluded locales.
  * @param locale Source locale (defaults to `en`).
  */
 export async function copyAllLocales(source: string, exclude = ['nemeth', 'euro'], locale = 'en') {
