@@ -1188,7 +1188,7 @@ export class SemanticProcessor {
     font: SemanticFont,
     unit: string
   ): SemanticNode {
-    if (unit === 'MathML-Unit') {
+    if (unit === 'MathML-Unit' && !SemanticPred.unitException(leaf)) {
       leaf.type = SemanticType.IDENTIFIER;
       leaf.role = SemanticRole.UNIT;
     } else if (
@@ -1334,6 +1334,14 @@ export class SemanticProcessor {
     }
 
     let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+
+    // Special case if the superscript is a degree
+    if (length === 1 && children[1].role === SemanticRole.DEGREE) {
+      return SemanticProcessor.getInstance().row(
+        [children[0], children[1]]
+      );
+    }
+
     SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
       // Heuristic to deal with accents around limit functions/operators.
