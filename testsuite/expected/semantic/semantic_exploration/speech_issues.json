@@ -1,0 +1,169 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration Test cases that are relevant both for semantic interpretation and speech generation. Mainly from MathJax issues.",
+  "base": "input/semantic/speech_issues.json",
+  "tests": {
+    "mj_issue_3527": {
+      "expected": [
+        25,
+        [
+          11,
+          0,
+          10,
+          [
+            9,
+            2,
+            [
+              8,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ]
+        ],
+        12,
+        [
+          24,
+          [
+            22,
+            13,
+            [
+              20,
+              [
+                17,
+                14,
+                15,
+                16
+              ],
+              18,
+              19
+            ],
+            21
+          ],
+          23
+        ]
+      ]
+    },
+    "mj_issue_3527_1": {
+      "expected": [
+        11,
+        [
+          9,
+          0,
+          [
+            7,
+            [
+              4,
+              1,
+              2,
+              3
+            ],
+            5,
+            6
+          ],
+          8
+        ],
+        10
+      ]
+    },
+    "mj_issue_3527_2": {
+      "expected": [
+        11,
+        [
+          9,
+          0,
+          [
+            7,
+            [
+              4,
+              1,
+              2,
+              3
+            ],
+            5,
+            6
+          ],
+          8
+        ],
+        10
+      ]
+    },
+    "mj_issue_3527_3": {
+      "expected": [
+        11,
+        [
+          9,
+          0,
+          [
+            7,
+            [
+              4,
+              1,
+              2,
+              3
+            ],
+            5,
+            6
+          ],
+          8
+        ],
+        10
+      ]
+    },
+    "mj_issue_3527_4": {
+      "expected": [
+        14,
+        [
+          9,
+          0,
+          [
+            7,
+            [
+              4,
+              1,
+              2,
+              3
+            ],
+            5,
+            6
+          ],
+          8
+        ],
+        13,
+        [
+          12,
+          10,
+          11
+        ]
+      ]
+    },
+    "mj_issue_3527_5": {
+      "expected": [
+        13,
+        [
+          9,
+          0,
+          [
+            7,
+            [
+              4,
+              1,
+              2,
+              3
+            ],
+            5,
+            6
+          ],
+          8
+        ],
+        [
+          12,
+          10,
+          11
+        ]
+      ]
+    }
+  }
+}

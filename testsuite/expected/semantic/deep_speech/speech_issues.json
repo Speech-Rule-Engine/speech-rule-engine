@@ -1,0 +1,6 @@
+{
+  "factory": "deepSpeech",
+  "tests": "ALL",
+  "information": "Deep speech Test cases that are relevant both for semantic interpretation and speech generation. Mainly from MathJax issues.",
+  "base": "input/semantic/speech_issues.json"
+}
