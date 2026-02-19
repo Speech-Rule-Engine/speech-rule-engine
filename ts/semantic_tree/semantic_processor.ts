@@ -1188,7 +1188,7 @@ export class SemanticProcessor {
     font: SemanticFont,
     unit: string
   ): SemanticNode {
-    if (unit === 'MathML-Unit') {
+    if (unit === 'MathML-Unit' && !SemanticPred.unitException(leaf)) {
       leaf.type = SemanticType.IDENTIFIER;
       leaf.role = SemanticRole.UNIT;
     } else if (
@@ -1334,6 +1334,14 @@ export class SemanticProcessor {
     }
 
     let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+
+    // Special case if the superscript is a degree
+    if (length === 1 && children[1].role === SemanticRole.DEGREE) {
+      return SemanticProcessor.getInstance().row(
+        [children[0], children[1]]
+      );
+    }
+
     SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
       // Heuristic to deal with accents around limit functions/operators.
@@ -1434,13 +1442,16 @@ export class SemanticProcessor {
       (SemanticPred.isType(x, SemanticType.TEXT) && SemanticPred.isRole(x, SemanticRole.SPACE));
     const isEmpty = (x: SemanticNode) => isNoSpace(x) || isSpace(x);
     if (length === 1) {
-      return isEmpty(children[1]) ?
-        [mmlTag, [annotateEmpty([mmlTag], children[0])]] :
-        [mmlTag, children];
+      if (isEmpty(children[1])) {
+        children[0].noupdate = true;
+        return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
+      }
+      return [mmlTag, children];
     }
     const child1 = children[1];
     const child2 = children[2];
     if (isEmpty(child1) && isEmpty(child2)) {
+      children[0].noupdate = true;
       return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
     }
     if (isEmpty(child1)) {

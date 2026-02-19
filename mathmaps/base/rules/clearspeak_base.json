@@ -3060,6 +3060,7 @@
       "Alias",
       "unit-singular",
       "self::identifier[@font=\"normal\"]",
+      "not(contains(@role,\"function\"))",
       "CQFisUnit",
       "contains(@grammar, \"singular\")",
       "priority=500"
@@ -3075,6 +3076,7 @@
       "Alias",
       "unit-plural",
       "self::identifier[@font=\"normal\"]",
+      "not(contains(@role,\"function\"))",
       "CQFisUnit",
       "not(parent::stree)",
       "not(contains(@grammar, \"singular\"))",

@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "SwedishClearspeakIssues",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesSwedish",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "normal m, av vinkel C F D, är lika med, öppna, 7 a, minus 8, stäng, grader"
+    },
+    "mj_issue_3527_1": {
+      "expected": "öppna, 7 a, minus 8, stäng, grader"
+    },
+    "mj_issue_3527_2": {
+      "expected": "öppna, 7 a, minus 8, stäng, grader"
+    },
+    "mj_issue_3527_3": {
+      "expected": "öppna, 7 a, minus 8, stäng, grader"
+    },
+    "mj_issue_3527_4": {
+      "expected": "öppna, 7 a, minus 8, stäng, gånger 5 grader"
+    },
+    "mj_issue_3527_5": {
+      "expected": "öppna, 7 a, minus 8, stäng, upphöjt till 5 grader"
+    }
+  },
+  "compare": true
+}

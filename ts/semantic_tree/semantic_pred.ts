@@ -782,3 +782,16 @@ export function isMembership(element: SemanticNode): boolean {
     SemanticRole.RENONELEMENT
   ].includes(element.role);
 }
+
+/**
+ * Tests if a node should not be transformed into a unit element, even if it was
+ * designated as unit in the input expression.
+ *
+ * @param element The node to test.
+ * @returns True if the node should not be treated as a unit.
+ */
+export function unitException(element: SemanticNode): boolean {
+  const nonUnitType: SemanticType[] = [];
+  const nonUnitRole: SemanticRole[] = [SemanticRole.DEGREE];
+  return nonUnitRole.includes(element.role) || nonUnitType.includes(element.type);
+}

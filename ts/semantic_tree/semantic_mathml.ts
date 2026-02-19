@@ -138,6 +138,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const tag = DomUtil.tagName(mml) as MMLTAGS;
     const func = this.parseMap_.get(tag);
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
+    if (newNode.noupdate) {
+      return newNode;
+    }
     SemanticUtil.addAttributes(newNode, mml);
     if (
       [

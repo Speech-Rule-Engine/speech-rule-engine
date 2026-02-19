@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "NynorskClearspeakIssues",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesNynorsk",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "normal m, av vinkel C F D, er lik, venstreparentes, 7 a, minus 8, høgreparentes, grader"
+    },
+    "mj_issue_3527_1": {
+      "expected": "venstreparentes, 7 a, minus 8, høgreparentes, grader"
+    },
+    "mj_issue_3527_2": {
+      "expected": "venstreparentes, 7 a, minus 8, høgreparentes, grader"
+    },
+    "mj_issue_3527_3": {
+      "expected": "venstreparentes, 7 a, minus 8, høgreparentes, grader"
+    },
+    "mj_issue_3527_4": {
+      "expected": "venstreparentes, 7 a, minus 8, høgreparentes, ganger 5 grader"
+    },
+    "mj_issue_3527_5": {
+      "expected": "venstreparentes, 7 a, minus 8, høgreparentes, heva til 5 grader"
+    }
+  },
+  "compare": true
+}

@@ -221,6 +221,34 @@
     },
     "collapsePhantomSubscript_1": {
       "input": "<math><msub><mi>a</mi><mphantom/></msub><msub><mphantom/><mn>2</mn></msub></math>"
+    },
+    "spaceSuperscript_0": {
+      "tex": "a^{\\ }",
+      "input": "<msup><mi>a</mi><mrow><mtext>&#xA0;</mtext></mrow></msup>"
+    },
+    "spaceSuperscript_1": {
+      "tex": "a^{}",
+      "input": "<msup><mi>a</mi><mrow/></msup>"
+    },
+    "spaceSubcript_0": {
+      "tex": "a_{\\ }",
+      "input": "<msub><mi>a</mi><mrow><mtext>&#xA0;</mtext></mrow></msub>"
+    },
+    "spaceSubscript_1": {
+      "tex": "a^{}",
+      "input": "<msub><mi>a</mi><mrow/></msub>"
+    },
+    "spaceSubSuperscript_0": {
+      "tex": "a_{}^{\\ }",
+      "input": "<msubsup><mi>a</mi><mrow/><mrow><mtext>&#xA0;</mtext></mrow></msubsup>"
+    },
+    "spaceSubSuperscript_1": {
+      "tex": "a_{\\ }^{}",
+      "input": "<msubsup><mi>a</mi><mrow><mtext>&#xA0;</mtext></mrow><mrow/></msubsup>"
+    },
+    "spaceSubSuperscript_2": {
+      "tex": "a_{\\ }^{\\ }",
+      "input": "<msubsup><mi>a</mi><mrow><mtext>&#xA0;</mtext></mrow><mrow><mtext>&#xA0;</mtext></mrow></msubsup>"
     }
   }
 }

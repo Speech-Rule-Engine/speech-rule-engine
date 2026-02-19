@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "GermanClearspeakIssues",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesGerman",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "normales m, von Winkel C F D, ist gleich, Klammer auf, 7 a, minus 8, Klammer zu, Grad"
+    },
+    "mj_issue_3527_1": {
+      "expected": "Klammer auf, 7 a, minus 8, Klammer zu, Grad"
+    },
+    "mj_issue_3527_2": {
+      "expected": "Klammer auf, 7 a, minus 8, Klammer zu, Grad"
+    },
+    "mj_issue_3527_3": {
+      "expected": "Klammer auf, 7 a, minus 8, Klammer zu, Grad"
+    },
+    "mj_issue_3527_4": {
+      "expected": "Klammer auf, 7 a, minus 8, Klammer zu, mal 5 Grad"
+    },
+    "mj_issue_3527_5": {
+      "expected": "Klammer auf, 7 a, minus 8, Klammer zu, hoch 5 Grad"
+    }
+  },
+  "compare": true
+}
