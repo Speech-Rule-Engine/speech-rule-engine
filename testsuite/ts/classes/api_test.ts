@@ -28,7 +28,35 @@ import { Key } from './keycodes.js';
 
 import { AbstractJsonTest } from './abstract_test.js';
 import { jest, expect } from '@jest/globals';
+// For the workers
+import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
 
+// Mocking the filesystem methods.
+
+import { Debugger } from '#js/common/debugger.js';
+import { SystemExternal } from '#js/common/system_external.js';
+
+const mockStreamWrite: any = jest.fn();
+const mockStreamEnd: any = jest.fn((_data: any, _encoding: any, callback: () => void) => {
+  // Simulate stream ending and executing callback
+  if (callback) callback();
+});
+const mockStreamOn: any = jest.fn();
+const mockCreateWriteStream: any = jest.fn(() => ({
+  write: mockStreamWrite,
+  end: mockStreamEnd,
+  on: mockStreamOn,
+}));
+
+// --- Mock File Handle Component ---
+const mockOpen: any = jest.fn((_filename: string, _mode: string) => {
+  return Promise.resolve({
+  // The file handle needs to provide a method to create a write stream
+    createWriteStream: mockCreateWriteStream,
+  })});
+
+
+// Some standard expressions.
 enum Expression {
   Quadratic = 'quadratic',
   Square = 'square',
@@ -70,7 +98,7 @@ const Samples: Record<Expression, string> = {
     '<mn>2</mn>' +
     '</msup>' +
     '</math>',
-  [Expression.Maction]: 
+  [Expression.Maction]:
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<maction actiontype="toggle" selection="2" data-collapsible="true" id="mjx-collapse-0">' +
     '<mtext>&#x25C2;f()&#x25B8;</mtext>' +
@@ -106,11 +134,13 @@ const Samples: Record<Expression, string> = {
     '</math>'
 }
 
+type FeatureVector = { [key: string]: string | boolean };
+
 export class ApiTest extends AbstractJsonTest {
   /**
    * Feature vector for setting up the engine.
    */
-  public static SETUP: { [key: string]: string | boolean } = {
+  public static SETUP: FeatureVector  = {
     domain: 'mathspeak',
     style: 'default',
     modality: 'speech',
@@ -127,10 +157,13 @@ export class ApiTest extends AbstractJsonTest {
    */
   public pickFields = ['type', 'input', 'expected', 'setup', 'json', 'move'];
 
+  private oldSetup: FeatureVector;
+
   /**
    * @override
    */
   public async setUpTest() {
+    this.oldSetup = Object.assign({}, System.engineSetup());
     deactivate('nemeth', 'number');
     return System.setupEngine({
       locale: 'en'
@@ -160,15 +193,15 @@ export class ApiTest extends AbstractJsonTest {
    * @param json Json output expected?
    * @param move Is this a move with some keyboard input?
    */
-  public executeTest(
+  public async executeTest(
     func: string,
     input: any,
     result: string | null,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     json: boolean,
     move: boolean
   ) {
-    System.setupEngine(feature || ApiTest.SETUP);
+    await System.setupEngine(feature || ApiTest.SETUP);
     const expr = move ? Key.get(input) : this.getSample(input);
     let output = (System as any)[func](expr);
     output = output
@@ -192,9 +225,83 @@ export class ApiTest extends AbstractJsonTest {
       this.field('move')
     );
   }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    await System.setupEngine(this.oldSetup);
+    return super.tearDownTest();
+  }
+
 }
 
-import { semanticMathmlSync } from '#js/enrich_mathml/enrich.js';
+export class ApiFileTest extends ApiTest {
+
+  /**
+   * Executes single API File tests.
+   *
+   * @param func The API function to test.
+   * @param expr The input expression.
+   * @param result The expected result.
+   * @param feature Feature vector for engine setup.
+   * @param json Json output expected?
+   * @param move Is this a move with some keyboard input?
+   */
+  public async executeTest(
+    func: string,
+    input: Expression,
+    result: string | null,
+    feature: FeatureVector,
+    _json: boolean,
+    _move: boolean
+  ) {
+    const sample = this.getSample(input);
+    await System.setupEngine(feature || ApiTest.SETUP);
+    await this.asyncTest(func, sample, result);
+    await this.syncTest(func, sample, result);
+    System.setupEngine({mode: 'async'});
+  }
+
+  private async asyncTest(func: string, sample: string, result: string) {
+    System.setupEngine({mode: 'async'});
+    SystemExternal.fs.promises.readFile = jest.fn((_file: string) => {
+      return Promise.resolve(sample);
+    });
+    SystemExternal.fs.promises.writeFile = jest.fn();
+    let promise = (System.file as any)[func]('input', 'output');
+    promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
+    let output = await promise;
+    this.assert.equal(output.toString(), result);
+  }
+
+  private async syncTest(func: string, sample: string, result: string) {
+    System.setupEngine({mode: 'sync'});
+    SystemExternal.fs.readFileSync = jest.fn((_file: string) => sample);
+    SystemExternal.fs.writeFileSync = jest.fn();
+    let output = (System.file as any)[func]('input', 'output');
+    this.assert.equal(output, result);
+  }
+
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    ApiTest.SETUP['locale'] = 'en';
+    ApiTest.SETUP['braille'] = 'nemeth';
+    jest.clearAllMocks();
+    return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    jest.clearAllMocks();
+    return super.tearDownTest();
+  }
+
+}
 
 export class WorkerTest extends ApiTest {
 
@@ -212,7 +319,7 @@ export class WorkerTest extends ApiTest {
     func: string,
     input: Expression,
     result: string | null,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     json: boolean,
     _move: boolean
   ) {
@@ -251,7 +358,7 @@ export class DebugTest extends ApiTest {
   public information = 'Debugger test.';
 
   private oldDebug: boolean | string = null;
-  
+
   constructor() {
     super();
     this.pickFields.push('strings');
@@ -263,6 +370,7 @@ export class DebugTest extends ApiTest {
   public async setUpTest() {
     this.oldDebug = ApiTest.SETUP['debug'] ?? null;
     ApiTest.SETUP['debug'] = true;
+    console.info = jest.fn();
     jest.clearAllMocks();
     return super.setUpTest();
   }
@@ -271,12 +379,12 @@ export class DebugTest extends ApiTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
+    Debugger.getInstance().exit();
     if (this.oldDebug === null) {
       delete ApiTest.SETUP['debug'];
     } else {
       ApiTest.SETUP['debug'] = this.oldDebug;
     }
-    jest.clearAllMocks();
     return super.tearDownTest();
   }
 
@@ -287,12 +395,11 @@ export class DebugTest extends ApiTest {
     func: string,
     input: string,
     result: string,
-    feature: { [key: string]: string },
+    feature: FeatureVector,
     _json: boolean,
     _move: boolean
   ) {
     await System.setupEngine(feature || ApiTest.SETUP);
-    console.info = jest.fn();
     await (System as any)[func](input);
     expect(console.info).toHaveBeenCalledTimes(parseInt(result, 10));
     const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
@@ -300,6 +407,55 @@ export class DebugTest extends ApiTest {
       expect(console.info).
         toHaveBeenNthCalledWith(parseInt(index, 10), "Speech Rule Engine Debugger:", ...res);
     }
+  }
+
+}
+
+export class DebugFileTest extends DebugTest {
+
+  private static testFilename = 'test_debug.log';
+
+  /**
+   * @override
+   */
+  public async setUpTest() {
+    SystemExternal.fs.promises.open = mockOpen;
+    return super.setUpTest();
+  }
+
+  /**
+   * @override
+   */
+  public async executeTest(
+    func: string,
+    input: string,
+    result: string,
+    feature: FeatureVector,
+    _json: boolean,
+    _move: boolean
+  ) {
+    await Debugger.getInstance().init(DebugFileTest.testFilename);
+    await System.setupEngine(feature || ApiTest.SETUP);
+    await (System as any)[func](input);
+    const strings = Object.entries(this.field('strings') as null | { [key: string]: string[]});
+    expect(console.info).toHaveBeenCalledTimes(0);
+    expect(mockStreamWrite).toHaveBeenCalledTimes(parseInt(result, 10) * 2);
+    expect(mockOpen).toHaveBeenCalledWith(DebugFileTest.testFilename, 'w');
+    for (let [index, res] of strings) {
+      expect(mockStreamWrite).
+        toHaveBeenNthCalledWith(
+          ((parseInt(index, 10) - 1) * 2) + 1,
+          ["Speech Rule Engine Debugger:", ...res].join(' '));
+    }
+  }
+
+  /**
+   * @override
+   */
+  public async tearDownTest(): Promise<string> {
+    (Debugger.getInstance() as any).stream_ = null;
+    jest.clearAllMocks();
+    return super.tearDownTest();
   }
 
 }

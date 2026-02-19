@@ -300,7 +300,7 @@ export function processFile(
       return processFileSync(processor, input, opt_output);
     default:
       throw new SREError(
-        `Can process files in ${Engine.getInstance().mode} mode`
+        `Cannot process files in ${Engine.getInstance().mode} mode`
       );
   }
 }

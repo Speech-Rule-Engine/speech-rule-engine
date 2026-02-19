@@ -20,7 +20,7 @@ for (const [key, entry] of Object.entries(compilerOptions.paths)) {
 
 const config = {
   rootDir: '..',
-  preset: tsjest,
+  preset: 'ts-jest',
   clearMocks: true,
   coverageDirectory: 'coverage',
   coverageProvider: "v8",
