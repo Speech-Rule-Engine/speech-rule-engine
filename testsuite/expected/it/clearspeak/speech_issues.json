@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "ItalianClearspeakIssues",
+  "locale": "it",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesItalian",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "m normale, di angolo C F D, uguale a, parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, grado"
+    },
+    "mj_issue_3527_1": {
+      "expected": "parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, grado"
+    },
+    "mj_issue_3527_2": {
+      "expected": "parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, grado"
+    },
+    "mj_issue_3527_3": {
+      "expected": "parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, grado"
+    },
+    "mj_issue_3527_4": {
+      "expected": "parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, per 5 grado"
+    },
+    "mj_issue_3527_5": {
+      "expected": "parentesi tonda aperta, 7 a, meno 8, parentesi tonda chiusa, elevato alla 5 grado"
+    }
+  },
+  "compare": true
+}

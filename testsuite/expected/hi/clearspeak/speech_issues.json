@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "HindiClearspeakIssues",
+  "locale": "hi",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesHindi",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "कोण सी एफ डी का फलन सामान्य एम, बराबर का चिह्न, कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, अंश"
+    },
+    "mj_issue_3527_1": {
+      "expected": "कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, अंश"
+    },
+    "mj_issue_3527_2": {
+      "expected": "कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, अंश"
+    },
+    "mj_issue_3527_3": {
+      "expected": "कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, अंश"
+    },
+    "mj_issue_3527_4": {
+      "expected": "कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, गुणन चिह्न 5 अंश"
+    },
+    "mj_issue_3527_5": {
+      "expected": "कोष्ठ आरंभ, 7 ए, घटाव का चिन्ह 8, कोष्ठ अंत, का घात 5 अंश, घातांक"
+    }
+  },
+  "compare": true
+}
