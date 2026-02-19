@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "KoreanClearspeakIssues",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesKorean",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "기본 m, 의 각 C F D, 는, 괄호 열고, 7 a, 빼기 8, 괄호 닫고, 도"
+    },
+    "mj_issue_3527_1": {
+      "expected": "괄호 열고, 7 a, 빼기 8, 괄호 닫고, 도"
+    },
+    "mj_issue_3527_2": {
+      "expected": "괄호 열고, 7 a, 빼기 8, 괄호 닫고, 도"
+    },
+    "mj_issue_3527_3": {
+      "expected": "괄호 열고, 7 a, 빼기 8, 괄호 닫고, 도"
+    },
+    "mj_issue_3527_4": {
+      "expected": "괄호 열고, 7 a, 빼기 8, 괄호 닫고, 곱하기 5 도"
+    },
+    "mj_issue_3527_5": {
+      "expected": "괄호 열고, 7 a, 빼기 8, 괄호 닫고, 의 5 도, 제곱"
+    }
+  },
+  "compare": true
+}

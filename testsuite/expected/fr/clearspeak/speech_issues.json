@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "FrenchClearspeakIssues",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesFrench",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "m en normal, de angle C F D, égale, parenthèse gauche, 7 a, moins 8, parenthèse droite, degrés"
+    },
+    "mj_issue_3527_1": {
+      "expected": "parenthèse gauche, 7 a, moins 8, parenthèse droite, degrés"
+    },
+    "mj_issue_3527_2": {
+      "expected": "parenthèse gauche, 7 a, moins 8, parenthèse droite, degrés"
+    },
+    "mj_issue_3527_3": {
+      "expected": "parenthèse gauche, 7 a, moins 8, parenthèse droite, degrés"
+    },
+    "mj_issue_3527_4": {
+      "expected": "parenthèse gauche, 7 a, moins 8, parenthèse droite, multiplié par 5 degrés"
+    },
+    "mj_issue_3527_5": {
+      "expected": "parenthèse gauche, 7 a, moins 8, parenthèse droite, à la puissance 5 degrés"
+    }
+  },
+  "compare": true
+}

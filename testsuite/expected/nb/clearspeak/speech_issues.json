@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "BokmålClearspeakIssues",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesBokmål",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "normal m av vinkel C F D, er lik, venstre parentes, 7 a, minus 8, høyre parentes, grader"
+    },
+    "mj_issue_3527_1": {
+      "expected": "venstre parentes, 7 a, minus 8, høyre parentes, grader"
+    },
+    "mj_issue_3527_2": {
+      "expected": "venstre parentes, 7 a, minus 8, høyre parentes, grader"
+    },
+    "mj_issue_3527_3": {
+      "expected": "venstre parentes, 7 a, minus 8, høyre parentes, grader"
+    },
+    "mj_issue_3527_4": {
+      "expected": "venstre parentes, 7 a, minus 8, høyre parentes, ganger 5 grader"
+    },
+    "mj_issue_3527_5": {
+      "expected": "venstre parentes, 7 a, minus 8, høyre parentes, hevet til 5 grader"
+    }
+  },
+  "compare": true
+}

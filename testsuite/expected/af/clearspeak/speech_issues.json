@@ -1,0 +1,30 @@
+{
+  "_comment0_": " Tests from issues with speech output due to semantic interpretation.",
+  "name": "AfrikaansClearspeakIssues",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/semantic/speech_issues.json",
+  "active": "ClearspeakIssuesAfrikaans",
+  "exclude": [],
+  "tests": {
+    "mj_issue_3527": {
+      "expected": "normaal m, van hoek C F D, is gelyk aan, links hakkie, 7 a, minus 8, regs hakkie, grade"
+    },
+    "mj_issue_3527_1": {
+      "expected": "links hakkie, 7 a, minus 8, regs hakkie, grade"
+    },
+    "mj_issue_3527_2": {
+      "expected": "links hakkie, 7 a, minus 8, regs hakkie, grade"
+    },
+    "mj_issue_3527_3": {
+      "expected": "links hakkie, 7 a, minus 8, regs hakkie, grade"
+    },
+    "mj_issue_3527_4": {
+      "expected": "links hakkie, 7 a, minus 8, regs hakkie, maal 5 grade"
+    },
+    "mj_issue_3527_5": {
+      "expected": "links hakkie, 7 a, minus 8, regs hakkie, verhef tot die 5 grade, mag"
+    }
+  },
+  "compare": true
+}

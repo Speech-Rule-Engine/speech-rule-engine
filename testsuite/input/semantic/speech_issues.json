@@ -1,0 +1,23 @@
+{
+  "information": "Test cases that are relevant both for semantic interpretation and speech generation. Mainly from MathJax issues.",
+  "tests": {
+    "mj_issue_3527": {
+      "input": "<mrow xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi mathvariant=\"normal\">m</mi><mo>⁡</mo><mrow><mo>∠</mo><mrow><mi>C</mi><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mi>D</mi></mrow></mrow></mrow><mo xmlns=\"http://www.w3.org/1998/Math/MathML\">=</mo><msup xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mi class=\"MathML-Unit\">°</mi></msup>"
+    },
+    "mj_issue_3527_1": {
+      "input": "<msup><mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mi class=\"MathML-Unit\">°</mi></msup>"
+    },
+    "mj_issue_3527_2": {
+      "input": "<msup><mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mi>°</mi></msup>"
+    },
+    "mj_issue_3527_3": {
+      "input": "<mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mi>°</mi>"
+    },
+    "mj_issue_3527_4": {
+      "input": "<mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mrow><mn>5</mn><mi>°</mi></mrow>"
+    },
+    "mj_issue_3527_5": {
+      "input": "<msup><mrow><mo>(</mo><mrow><mrow><mn>7</mn><mo>⁢</mo><mi>a</mi></mrow><mo>−</mo><mn>8</mn></mrow><mo>)</mo></mrow><mrow><mn>5</mn><mi class=\"MathML-Unit\">°</mi></mrow></msup>"
+    }
+  }
+}
