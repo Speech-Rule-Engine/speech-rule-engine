@@ -408,7 +408,7 @@ export class SemanticProcessor {
       }
       const spacer = SemanticProcessor.getSpacer_(sibling);
       if (spacer && spacer !== mt2) {
-        op.mathml.push(spacer);
+        op.addMathmlNodes([spacer]);
         op.mathmlTree = spacer;
         op.role = SemanticRole.SPACE;
       }
@@ -996,7 +996,7 @@ export class SemanticProcessor {
     }
     fence.replaceChild(newFence, rewritten.fence);
     if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
-      fence.mathml.push(fence.mathmlTree);
+      fence.addMathmlNodes([fence.mathmlTree]);
     }
     return { node: rewritten.node, fence: fence };
   }
@@ -3282,7 +3282,7 @@ export class SemanticProcessor {
       ofence.mathmlTree.nextSibling !== cfence.mathmlTree
        ) {
       childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
-      childNode.mathml = [ofence.mathmlTree.nextSibling as Element];
+      childNode.addMathmlNodes([ofence.mathmlTree.nextSibling as Element]);
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
@@ -3937,7 +3937,7 @@ export class SemanticProcessor {
     if (appl) {
       // TODO: Work out why we cannot just take appl.
       applNode.mathmlTree = appl.mathmlTree;
-      applNode.mathml = appl.mathml;
+      applNode.addMathmlNodes(appl.mathml);
       applNode.annotation = appl.annotation;
       applNode.attributes = appl.attributes;
       delete SemanticProcessor.getInstance().funcAppls[func.id];

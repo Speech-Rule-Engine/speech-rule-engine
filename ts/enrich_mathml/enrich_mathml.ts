@@ -117,6 +117,9 @@ export function walkTree(semantic: SemanticNode): Element {
     ]);
     return ascendNewNode(newNode);
   }
+  // console.log(semantic.toString());
+  // console.log(semantic.mathml.toString());
+  // console.log(semantic.mathmlTree ? semantic.mathmlTree.toString() : 'Nothing');
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
     if (!semantic.childNodes.length) {
@@ -147,7 +150,7 @@ export function walkTree(semantic: SemanticNode): Element {
     // Children should not all be empty.
     semantic.childNodes.forEach((child) => {
       if (!child.mathml.length) {
-        child.mathml = [createInvisibleOperator(child)];
+        child.addMathmlNodes([createInvisibleOperator(child)]);
       }
     });
   }
@@ -862,7 +865,7 @@ export function cloneContentNode(content: SemanticNode): Element {
   const clone = SETTINGS.implicit
     ? createInvisibleOperator(content)
     : EnrichAttr.addMrow();
-  content.mathml = [clone];
+  content.addMathmlNodes([clone]);
   return clone;
 }
 

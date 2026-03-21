@@ -60,7 +60,7 @@ export class SemanticNodeFactory {
    */
   public makeUnprocessed(mml: Element): SemanticNode {
     const node = this.createNode_();
-    node.mathml = [mml];
+    node.addMathmlNodes([mml]);
     node.mathmlTree = mml;
     return node;
   }

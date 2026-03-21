@@ -154,6 +154,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     ) {
       return newNode;
     }
+    // TODO (issue_853): Check if this is the real issue why we are seeing the mml
+    // node in the prefix operator.
     newNode.mathml.unshift(mml);
     newNode.mathmlTree = mml;
     return newNode;
@@ -517,7 +519,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       semNodes
     );
     newNode.mathmlTree = node;
-    newNode.mathml = [node];
+    newNode.addMathmlNodes([node]);
     const nodes = SemanticProcessor.getInstance().tablesInRow([newNode]);
     return nodes[0];
   }
@@ -610,7 +612,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    */
   private empty_(node: Element, _children: Element[]): SemanticNode {
     const newNode = this.getFactory().makeEmptyNode();
-    newNode.mathml = [node];
+    newNode.addMathmlNodes([node]);
     newNode.mathmlTree = node;
     return newNode;
   }
