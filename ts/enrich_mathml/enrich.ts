@@ -36,7 +36,9 @@ import './enrich_case_factory.js';
 export function semanticMathmlNode(mml: Element, options: Options): Element {
   const clone = DomUtil.cloneNode(mml);
   const tree = Semantic.getTree(clone, options);
-  return EnrichMathml.enrich(clone, tree, options);
+  // return EnrichMathml.enrich(clone, tree, options);
+  const node = EnrichMathml.enrich(clone, tree, options);
+  return node;
 }
 
 /**

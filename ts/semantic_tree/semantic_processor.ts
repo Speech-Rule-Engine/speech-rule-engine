@@ -2107,6 +2107,42 @@ export class SemanticProcessor {
     if (nodeList.length > 1) {
       newNode.role = SemanticRole.MULTIOP;
     }
+    // Should this be a heuristic?
+    this.findMathmlTree(newNode, [inner, ...nodeList]);
+    return newNode;
+  }
+
+  private findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) {
+    // Case 1: If all nodes have the same mathml tree parent, we can use that
+    // for the new node.
+    const mathmlTrees = new Set<Element>();
+    nodeList.forEach((x) => mathmlTrees.add(x.mathmlTree?.parentElement));
+    // console.log(10);
+    // nodeList.forEach(x => console.log(x.mathmlTree?.toString()));
+    // console.log(11);
+    // mathmlTrees.forEach(x => console.log(x?.toString()));
+    if (mathmlTrees.size === 1) {
+      const singleton = [...mathmlTrees][0];
+      if (SemanticUtil.hasEmptyTag(singleton) && singleton.childNodes.length === nodeList.length) {
+        newNode.mathmlTree = [...mathmlTrees][0];
+      }
+      console.log('Tag: ' + newNode.mathmlTree?.tagName);
+    }
+    console.log(7);
+    console.log(newNode.mathmlTree?.toString());
+  };
+
+
+  private multiopNode_(operators: SemanticNode[]): SemanticNode {
+    const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      SemanticType.OPERATOR,
+      operators,
+      []);
+    newNode.role = SemanticRole.MULTIOP;
+    // console.log(9);
+    // console.log(newNode.mathml.toString());
+    // operators.forEach(x => console.log(x.mathmlTree?.toString()));
+    this.findMathmlTree(newNode, operators);
     return newNode;
   }
 
@@ -2123,7 +2159,11 @@ export class SemanticProcessor {
     node: SemanticNode,
     prefixes: SemanticNode[]
   ): SemanticNode {
+    // console.log(4);
+    // prefixes.forEach(x => console.log(x.mathmlTree?.toString()));
     const newPrefixes = this.splitSingles(prefixes);
+    // console.log(5);
+    // console.log(newPrefixes.toString());
     let newNode = node;
     while (newPrefixes.length > 0) {
       const op = newPrefixes.pop();
@@ -2136,6 +2176,14 @@ export class SemanticProcessor {
         newNode.role = this.splitRoles.get(op[0].role);
       }
     }
+    // console.log(1);
+    // console.log(newNode.mathml.toString());
+    // console.log(newNode.mathmlTree?.toString());
+    // console.log(node.mathml.toString());
+    // console.log(node.mathmlTree?.toString());
+    // console.log(2);
+    // prefixes.forEach(x => console.log(x.mathmlTree?.toString()));
+    // console.log(3);
     return newNode;
   }
 
@@ -2570,7 +2618,8 @@ export class SemanticProcessor {
     }
     // Pathological case: only operators in row.
     if (nodes.length === 0) {
-      return SemanticProcessor.getInstance().prefixNode_(prefix.pop(), prefix);
+      // console.log(8);
+      return SemanticProcessor.getInstance().multiopNode_(prefix);
     }
     if (nodes.length === 1) {
       return SemanticProcessor.getInstance().prefixNode_(nodes[0], prefix);
