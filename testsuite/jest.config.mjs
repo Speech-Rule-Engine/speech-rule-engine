@@ -39,7 +39,17 @@ const config = {
   }),
   setupFiles:  ["./lib/require.mjs"],
   transform: {
-    "^.+\\.tsx?$": [ tsjest, { useESM: true, isolatedModules: false } ],
+    "^.+\\.tsx?$": [
+      'ts-jest',
+      {
+        useESM: true,
+        isolatedModules: false,
+        tsconfig: {
+          module: 'nodenext',
+          target: 'es2022',
+        },
+      }
+    ],
   }
 };
 

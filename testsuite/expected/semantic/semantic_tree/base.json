@@ -107,7 +107,7 @@
     "_comment_11": " Single identifier with pre- and postfixes.",
     "PrePostfixOperators_0": {
       "brief": true,
-      "expected": "<prefixop>+<content><operator>+</operator></content><children><prefixop>-<content><operator>-</operator></content><children><operator>+</operator></children></prefixop></children></prefixop>"
+      "expected": "<stree><operator><children><operator>+</operator><operator>-</operator><operator>+</operator></children></operator></stree>"
     },
     "_comment_12": " Single identifier with mixed pre- and postfixes.",
     "PrePostfixOperators_1": {

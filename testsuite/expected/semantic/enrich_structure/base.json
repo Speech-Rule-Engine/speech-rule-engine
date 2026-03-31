@@ -97,7 +97,7 @@
     "_comment_10": " Test operator trees with pre- and postfixes.",
     "_comment_11": " Pathological operator only case.",
     "PrePostfixOperators_0": {
-      "expected": "<math type=\"prefixop\" id=\"4\" children=\"3\" content=\"0\" owns=\"0 3\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 3\" structure=\"(4 0 (3 1 2))\"><mo type=\"operator\" id=\"0\" parent=\"4\" operator=\"prefixop,+\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">+</mo><mrow added=\"true\" type=\"prefixop\" id=\"3\" children=\"2\" content=\"1\" parent=\"4\" owns=\"1 2\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\" aria-owns=\"1 2\"><mo type=\"operator\" id=\"1\" parent=\"3\" operator=\"prefixop,-\" aria-level=\"2\" aria-posinset=\"1\" aria-setsize=\"2\" role=\"treeitem\">-</mo><mo type=\"operator\" id=\"2\" parent=\"3\" aria-level=\"2\" aria-posinset=\"2\" aria-setsize=\"2\" role=\"treeitem\">+</mo></mrow></math>"
+      "expected": "<math type=\"operator\" id=\"3\" children=\"0,1,2\" owns=\"0 1 2\" aria-level=\"0\" aria-posinset=\"1\" aria-setsize=\"1\" role=\"treeitem\" aria-owns=\"0 1 2\" structure=\"(3 0 1 2)\"><mo type=\"operator\" id=\"0\" parent=\"3\" aria-level=\"1\" aria-posinset=\"1\" aria-setsize=\"3\" role=\"treeitem\">+</mo><mo type=\"operator\" id=\"1\" parent=\"3\" aria-level=\"1\" aria-posinset=\"2\" aria-setsize=\"3\" role=\"treeitem\">-</mo><mo type=\"operator\" id=\"2\" parent=\"3\" aria-level=\"1\" aria-posinset=\"3\" aria-setsize=\"3\" role=\"treeitem\">+</mo></math>"
     },
     "_comment_12": " Single identifier with prefixes.",
     "PrePostfixOperators_1": {

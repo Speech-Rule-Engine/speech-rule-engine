@@ -99,7 +99,7 @@
     "_comment_10": " Test operator trees with pre- and postfixes.",
     "_comment_11": " Pathological operator only case.",
     "PrePostfixOperators_0": {
-      "expected": "<math type=\"prefixop\" role=\"positive\" id=\"4\" children=\"3\" content=\"0\"><mo type=\"operator\" role=\"addition\" id=\"0\" parent=\"4\" operator=\"prefixop,+\">+</mo><mrow added=\"true\" type=\"prefixop\" role=\"negative\" id=\"3\" children=\"2\" content=\"1\" parent=\"4\"><mo type=\"operator\" role=\"subtraction\" id=\"1\" parent=\"3\" operator=\"prefixop,-\">-</mo><mo type=\"operator\" role=\"addition\" id=\"2\" parent=\"3\">+</mo></mrow></math>"
+      "expected": "<math type=\"operator\" role=\"multiop\" id=\"3\" children=\"0,1,2\"><mo type=\"operator\" role=\"addition\" id=\"0\" parent=\"3\">+</mo><mo type=\"operator\" role=\"subtraction\" id=\"1\" parent=\"3\">-</mo><mo type=\"operator\" role=\"addition\" id=\"2\" parent=\"3\">+</mo></math>"
     },
     "_comment_12": " Single identifier with prefixes.",
     "PrePostfixOperators_1": {

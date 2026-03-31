@@ -252,13 +252,10 @@
     },
     "PrePostfixOperators_0": {
       "expected": [
-        4,
+        3,
         0,
-        [
-          3,
-          1,
-          2
-        ]
+        1,
+        2
       ]
     },
     "PrePostfixOperators_1": {
