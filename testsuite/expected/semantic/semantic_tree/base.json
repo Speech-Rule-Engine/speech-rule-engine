@@ -144,6 +144,15 @@
       "brief": true,
       "expected": "<infixop>+<content><operator>+</operator></content><children><infixop>∓<content><operator>∓</operator></content><children><prefixop>+ +<content><operator>+</operator><operator>+</operator></content><children><identifier>a</identifier></children></prefixop><prefixop>+<content><operator>+</operator></content><children><identifier>b</identifier></children></prefixop></children></infixop><postfixop>+<content><operator>+</operator></content><children><prefixop>∓<content><operator>∓</operator></content><children><identifier>c</identifier></children></prefixop></children></postfixop></children></infixop>"
     },
+    "PrePostfixCollatedOperators_0": {
+      "expected": "<stree><prefixop role=\"unknown\" id=\"4\"><content><operator role=\"multiop\" id=\"2\"><children><operator role=\"addition\" id=\"0\">+</operator><operator role=\"addition\" id=\"1\">+</operator></children></operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">a</identifier></children></prefixop></stree>"
+    },
+    "PrePostfixCollatedOperators_1": {
+      "expected": "<stree><postfixop role=\"unknown\" id=\"4\"><content><operator role=\"multiop\" id=\"3\"><children><operator role=\"addition\" id=\"1\">+</operator><operator role=\"addition\" id=\"2\">+</operator></children></operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier></children></postfixop></stree>"
+    },
+    "PrePostfixCollatedOperators_2": {
+      "expected": "<stree><postfixop role=\"unknown\" id=\"8\"><content><operator role=\"multiop\" id=\"6\"><children><operator role=\"addition\" id=\"4\">+</operator><operator role=\"addition\" id=\"5\">+</operator></children></operator></content><children><prefixop role=\"unknown\" id=\"7\"><content><operator role=\"multiop\" id=\"2\"><children><operator role=\"addition\" id=\"0\">+</operator><operator role=\"addition\" id=\"1\">+</operator></children></operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">a</identifier></children></prefixop></children></postfixop></stree>"
+    },
     "_comment_19": " Single addition.",
     "_comment_20": " Multi addition.",
     "SingleOperators_0": {

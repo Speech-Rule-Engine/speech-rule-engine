@@ -362,6 +362,47 @@
         ]
       ]
     },
+    "PrePostfixCollatedOperators_0": {
+      "expected": [
+        4,
+        [
+          2,
+          0,
+          1
+        ],
+        3
+      ]
+    },
+    "PrePostfixCollatedOperators_1": {
+      "expected": [
+        4,
+        0,
+        [
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "PrePostfixCollatedOperators_2": {
+      "expected": [
+        8,
+        [
+          7,
+          [
+            2,
+            0,
+            1
+          ],
+          3
+        ],
+        [
+          6,
+          4,
+          5
+        ]
+      ]
+    },
     "SingleOperators_0": {
       "expected": 0
     },
