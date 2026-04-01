@@ -1234,6 +1234,14 @@ export class SemanticProcessor {
       'combine_juxtaposition',
       node
     ) as SemanticNode;
+    // this.findMathmlTree(node, nodes);
+    // Debugger.getInstance().init()
+    // console.log(node.mathml.toString());
+    // console.log(node.toString());
+    // console.log(node.childNodes.map((x) => x.toString()).join(', '));
+    // console.log(node.mathmlTree?.toString());
+    // Debugger.getInstance().exit()
+    // return node;
   }
 
   /**
@@ -2005,6 +2013,7 @@ export class SemanticProcessor {
       op.parent = newNode;
     });
     newNode.contentNodes = operators;
+    // console.log(newNode.mathmlTree?.toString());
     return newNode;
   }
 
@@ -2113,24 +2122,60 @@ export class SemanticProcessor {
   }
 
   private findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) {
+
+    const parentTrees = new Set<Element>();
+    nodeList.forEach((x) => parentTrees.add(x.mathmlTree?.parentElement || null));
+
+    // console.log(10);
+    // nodeList.forEach(x => console.log(x.mathmlTree ? x.mathmlTree?.toString() : x.mathmlTree));
+    // nodeList.forEach(x => console.log(x.mathml?.toString()));
+    // console.log(11);
+    // parentTrees.forEach(x => console.log(x?.toString()));
+    // nodeList.forEach(x => console.log(x.mathmlTree));
+
     // Case 1: If all nodes have the same mathml tree parent, we can use that
     // for the new node.
-    const mathmlTrees = new Set<Element>();
-    nodeList.forEach((x) => mathmlTrees.add(x.mathmlTree?.parentElement));
-    // console.log(10);
-    // nodeList.forEach(x => console.log(x.mathmlTree?.toString()));
-    // console.log(11);
-    // mathmlTrees.forEach(x => console.log(x?.toString()));
-    if (mathmlTrees.size === 1) {
-      const singleton = [...mathmlTrees][0];
-      if (SemanticUtil.hasEmptyTag(singleton) && singleton.childNodes.length === nodeList.length) {
-        newNode.mathmlTree = [...mathmlTrees][0];
+    if (parentTrees.size === 1 && !parentTrees.has(null)) {
+      const singleton = [...parentTrees][0];
+      // console.log(3);
+      // console.log(singleton);
+      // console.log(singleton.childNodes.length);
+      // console.log(nodeList.length);
+      if (
+        SemanticUtil.hasEmptyTag(singleton) &&
+          singleton.childNodes.length === nodeList.length
+      ) {
+        newNode.mathmlTree = singleton;
+        return;
       }
-      console.log('Tag: ' + newNode.mathmlTree?.tagName);
+      return;
     }
-    console.log(7);
-    console.log(newNode.mathmlTree?.toString());
-  };
+
+    // Case 2: If all nodes that have a mathml tree have the same parent, and
+    // the top level nodes of the constituent mathml nodes have the same parent,
+    // we can use that as the mathml tree for the new node.
+    if (parentTrees.has(null) && parentTrees.size <= 2) {
+      parentTrees.delete(null);
+      newNode.mathml.forEach(x => {
+        if (x.parentElement && !newNode.mathml.includes(x)) {
+          parentTrees.add(x.parentElement);
+        }
+      });
+    }
+    if (parentTrees.size === 1 && !parentTrees.has(null)) {
+      const singleton = [...parentTrees][0];
+      if (SemanticUtil.hasEmptyTag(singleton)
+        && DomUtil.toArray(singleton.childNodes).every(x => newNode.mathml.includes(x))) {
+        newNode.mathmlTree = singleton;
+        return;
+      }
+    };
+
+    //   console.log(2);
+    // parentTrees.forEach(x => console.log(x?.toString()));
+    // console.log(7);
+    // console.log(newNode.mathmlTree?.toString());
+  }
 
 
   private multiopNode_(operators: SemanticNode[]): SemanticNode {
