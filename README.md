@@ -99,13 +99,14 @@ Current API functions are divided into three categories.
 
 #### Methods that take a string containing a MathML expression:
 
-| Method                  | Return Value                                                        |
-|-------------------------|---------------------------------------------------------------------|
-| `toSpeech(mathml)`      | Speech string for the MathML.                                       |
-| `toSemantic(mathml)`    | XML representation of the semantic tree for the MathML.             |
-| `toJson(mathml)`        | The semantic tree in JSON.                                          |
-| `toDescription(mathml)` | The array of auditory description objects of the MathML expression. |
-| `toEnriched(mathml)`    | The semantically enriched MathML expression.                        |
+| Method                      | Return Value                                                        |
+|-----------------------------|---------------------------------------------------------------------|
+| `toSpeech(mathml)`          | Speech string for the MathML.                                       |
+| `toSemantic(mathml)`        | XML representation of the semantic tree for the MathML.             |
+| `toJson(mathml)`            | The semantic tree in JSON.                                          |
+| `toDescription(mathml)`     | The array of auditory description objects of the MathML expression. |
+| `toEnriched(mathml)`        | The semantically enriched MathML expression.                        |
+| `toSpeechStructure(mathml)` | Complete speech structure that can be used in a web worker.         |
 
 **Note that in asynchronous operation mode for these methods to work correctly,
 it is necessary to ensure that the Engine is ready for processing. In other
