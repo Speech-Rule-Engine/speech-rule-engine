@@ -282,6 +282,8 @@ export class Engine {
     this.options = new Options();
   }
 }
+// Backwards compatibility for 4.X
+export default Engine;
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
