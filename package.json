@@ -15,10 +15,10 @@
     "test:json": "cd testsuite; export SRE_JSON_PATH=../lib/mathmaps; pnpm test tests/json",
     "test:action": "cd testsuite; export SRE_JSON_PATH=../lib/mathmaps; pnpm test --silent --coverage",
     "docs": "pnpm typedoc --entryPointStrategy ts/",
-    "commonjs": "pnpm tsc --module commonjs --outDir js --moduleResolution node",
-    "postcommonjs": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
-    "module": "pnpm tsc --module nodenext --outDir mjs --moduleResolution nodenext",
-    "postmodule": "node -e 'require(\"fs\").writeFileSync(\"mjs/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
+    "commonjs": "pnpm tsc --module commonjs --outDir cjs --moduleResolution node",
+    "postcommonjs": "node -e 'require(\"fs\").writeFileSync(\"cjs/package.json\", \"{\\n  \\\"type\\\": \\\"commonjs\\\"\\n}\\n\");'",
+    "module": "pnpm tsc --module nodenext --outDir js --moduleResolution nodenext",
+    "postmodule": "node -e 'require(\"fs\").writeFileSync(\"js/package.json\", \"{\\n  \\\"type\\\": \\\"module\\\"\\n}\\n\");'",
     "require": "node -e \"require(\\\"fs\\\").writeFileSync(\\\"lib/require.mjs\\\", \\\"import {createRequire} from 'module';\\nglobal.require = createRequire(import.meta.url);\\n\\\");\"",
     "compile": "pnpm module",
     "clean": "rimraf js lib cjs",
@@ -80,7 +80,7 @@
     "lib/",
     "bin/",
     "js/",
-    "mjs/"
+    "cjs/"
   ],
   "main": "lib/sre.js"
 }
