@@ -1,0 +1,64 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakSetsEnclosedInSetBrackets",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Nynorsk Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Set001": {
+      "expected": "heile mengda x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set002": {
+      "expected": "heile mengda x med, den absolutte verdien av x, er større enn 2"
+    },
+    "Set003": {
+      "expected": "heile mengda x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set004": {
+      "expected": "heile mengda x i dei naturlege tala med x is an even number"
+    },
+    "Set005": {
+      "expected": "mengda 1 komma 2 komma 3"
+    },
+    "Set006": {
+      "expected": "mengda 1 komma 112 komma 1 komma 253"
+    },
+    "Set007": {
+      "expected": "mengda av x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set008": {
+      "expected": "mengda av x med, den absolutte verdien av x, er større enn 2"
+    },
+    "Set009": {
+      "expected": "mengda av x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set010": {
+      "expected": "mengda 1 komma 2 komma 3"
+    },
+    "Set011": {
+      "expected": "mengda 1 komma 112 komma 1 komma 253"
+    },
+    "Set012": {
+      "expected": "heile mengda x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set013": {
+      "expected": "heile mengda x med, den absolutte verdien av x, er større enn 2"
+    },
+    "Set014": {
+      "expected": "heile mengda x i heiltala med 2 er mindre enn x er mindre enn 7"
+    },
+    "Set015": {
+      "expected": "heile mengda x i dei naturlege tala med x is an even number"
+    },
+    "Set016": {
+      "expected": "1 komma 2 komma 3"
+    },
+    "Set017": {
+      "expected": "1 komma 112 komma 1 komma 253"
+    }
+  }
+}

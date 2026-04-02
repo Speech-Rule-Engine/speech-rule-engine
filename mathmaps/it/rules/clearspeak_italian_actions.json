@@ -397,12 +397,17 @@
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"cubo\""
+      "[n] children/*[1]; [t] \"cubo\" (span:children/*[2])"
     ],
     [
       "Action",
       "fences-points",
       "[t] \"punto con coordinate\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "fences-auto-interval",
+      "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -677,7 +682,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"diviso per\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"diviso per\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -742,7 +747,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1] (pause:short); [t] \"fine valore assoluto\" (pause:short)"
+      "[p] (pause:short); [t] \"valore assoluto di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine valore assoluto\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -757,12 +762,12 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"metrica di\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"metrica di\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -982,7 +987,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]; [t] \"a\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]; [t] \"a\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1007,22 +1012,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sopra\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"con\"; [n] children/*[1]/children/*[2]; [t] \"sotto\"; [t] \"e\"; [n] children/*[2]; [t] \"sopra\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"a\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sotto\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1138,6 +1148,41 @@
       "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premessa\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"etichetta\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"assioma\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"assioma vuoto\""
     ]
   ]
 }

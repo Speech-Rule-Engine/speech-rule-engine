@@ -113,6 +113,61 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition; [t] \"स्तंभ\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"सूचक पर्चा\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cases-case",
+      "[t] \"फलन उपशर्त\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-line",
+      "[t] \"रेखा\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-case",
+      "[t] \"फलन उपशर्त\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-equation",
+      "[t] \"समीकरण\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-step",
+      "[t] \"चरण\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-row",
+      "[t] \"पंक्ति\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-constraint",
+      "[t] \"व्यवरोध\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple-short",
+      "[t] \"स्तंभ\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-short",
+      "[n] ../..; [t] \"स्तंभ\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[t] \"पंक्ति\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ]
   ]
 }

@@ -39,6 +39,7 @@ export class MathStore extends BaseRuleStore {
     super();
 
     this.parseMethods['Alias'] = this.defineAlias;
+    this.parseMethods['AliasRule'] = this.defineRulesAlias;
     this.parseMethods['SpecializedRule'] = this.defineSpecializedRule;
     this.parseMethods['Specialized'] = this.defineSpecialized;
   }
@@ -76,7 +77,8 @@ export class MathStore extends BaseRuleStore {
       console.error(`Precondition Error: ${prec} ${args}`);
       return;
     }
-    const condition = this.preconditions.get(name);
+    const condition =
+      this.preconditions.get(name) || this.getFullPreconditions(name);
     if (!condition) {
       console.error(`Alias Error: No precondition by the name of ${name}`);
       return;

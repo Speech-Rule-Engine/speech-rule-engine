@@ -24,9 +24,12 @@ import {
   SemanticHeuristicTypes
 } from './semantic_heuristic.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
+import { Options } from '../common/options.js';
 
 export const SemanticHeuristics = {
   factory: null as SemanticNodeFactory,
+
+  options: new Options(),
 
   /**
    * Updates the semantic node factory.

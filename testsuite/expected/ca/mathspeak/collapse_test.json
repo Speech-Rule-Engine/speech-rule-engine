@@ -1,0 +1,417 @@
+{
+  "name": "CatalanMathspeakCollapse",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Catalan Mathspeak Collapse tests.",
+  "locale": "ca",
+  "active": "CollapseCatalan",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "suma amb 2 sumands plegat"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "suma plegat"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "suma plegat"
+    },
+    "CollapsedBigop_default": {
+      "expected": "sumatori plegat"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "sumatori plegat"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "sumatori plegat"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "binomi plegat"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "binomi plegat"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "binomi plegat"
+    },
+    "CollapsedCases_default": {
+      "expected": "declaració de cas amb 2 casos plegat"
+    },
+    "CollapsedCases_brief": {
+      "expected": "declaració de cas plegat"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "declaració de cas plegat"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "fracció contínua plegat"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "frac contínua plegat"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "frac contínua plegat"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "determinant de dimensió 2 plegat"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "determinant plegat"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "determinant plegat"
+    },
+    "CollapsedFraction_default": {
+      "expected": "fracció plegat"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "frac plegat"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "frac plegat"
+    },
+    "CollapsedFunction_default": {
+      "expected": "expressió funcional plegat"
+    },
+    "CollapsedFunction_brief": {
+      "expected": "funció plegat"
+    },
+    "CollapsedFunction_sbrief": {
+      "expected": "funció plegat"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "identificador llarg plegat"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "identificador llarg plegat"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "identificador llarg plegat"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "divisió amb 2 elements plegat"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "divisió plegat"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "divisió plegat"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "integral plegat"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "integral plegat"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "integral plegat"
+    },
+    "CollapsedLim_default": {
+      "expected": "funció de límit plegat"
+    },
+    "CollapsedLim_brief": {
+      "expected": "límit plegat"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "límit plegat"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "3 per 2 matriu plegat"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "matriu plegat"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "matriu plegat"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "nombre llarg mixt plegat"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "nombre llarg mixt plegat"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "nombre llarg mixt plegat"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "producte amb 2 factors plegat"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "seqüència de relació amb 3 elements plegat"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "seqüència de relació plegat"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "seqüència de relació plegat"
+    },
+    "CollapsedNumber_default": {
+      "expected": "nombre llarg plegat"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "nombre llarg plegat"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "nombre llarg plegat"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "llista separada per comes de longitud 3 plegat"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "llista separada per comes plegat"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "llista separada per comes plegat"
+    },
+    "CollapsedRelation_default": {
+      "expected": "igualtat plegat"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "igualtat plegat"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "igualtat plegat"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "seqüència de igualtat amb 3 elements plegat"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "seqüència de igualtat plegat"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "seqüència de igualtat plegat"
+    },
+    "CollapsedRoot_default": {
+      "expected": "arrel de l'índex 3 plegat"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "arrel plegat"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "arrel plegat"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "arrel jerarquitzada de l'índex 3 plegat"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "arrel jerarquitzada plegat"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "arrel jerarquitzada plegat"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "vector fila de dimensió 2 plegat"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "vector fila plegat"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "vector fila plegat"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "arrel quadrada plegat"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "arrel quadrada plegat"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "arrel quadrada plegat"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "arrel quadrada jerarquitzada plegat"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "arrel quadrada jerarquitzada plegat"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "arrel quadrada jerarquitzada plegat"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "matriu quadrada de dimensió 2 plegat"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "matriu quadrada plegat"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "matriu quadrada plegat"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "subíndex plegat"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "subíndex plegat"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "subíndex plegat"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "potència amb subíndex plegat"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "potència amb subíndex plegat"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "potència amb subíndex plegat"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "potència plegat"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "potència plegat"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "potència plegat"
+    },
+    "CollapsedTable_default": {
+      "expected": "taula amb 2 files i 2 columnes plegat"
+    },
+    "CollapsedTable_brief": {
+      "expected": "taula amb 2 files i 2 columnes plegat"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "taula amb 2 files i 2 columnes plegat"
+    },
+    "CollapsedText_default": {
+      "expected": "text plegat"
+    },
+    "CollapsedText_brief": {
+      "expected": "text plegat"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "text plegat"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "suma amb nombre variable de sumands plegat"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "suma plegat"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "suma plegat"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "declaració de cas amb nombre variable de casos plegat"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "declaració de cas plegat"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "declaració de cas plegat"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "determinant de dimensió n plegat"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "determinant plegat"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "determinant plegat"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "matriu de dimensió n per m plegat"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "matriu quadrada plegat"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "matriu quadrada plegat"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "producte amb una quantitat variable de factors plegat"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "seqüència de relació amb nombre variable d'elements plegat"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "seqüència de relació plegat"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "seqüència de relació plegat"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "llista separada per comes de longitud variable plegat"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "llista separada per comes plegat"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "llista separada per comes plegat"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "seqüència de igualtat amb una quantitat variable d'elements plegat"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "seqüència de igualtat plegat"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "seqüència de igualtat plegat"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "vector de dimensió n plegat"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "vector plegat"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "vector plegat"
+    },
+    "CollapsedVector_default": {
+      "expected": "vector de dimensió 3 plegat"
+    },
+    "CollapsedVector_brief": {
+      "expected": "vector plegat"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "vector plegat"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "resta amb una quantitat variable d'elements plegat"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "resta plegat"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "resta plegat"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "producte amb 3 factors plegat"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "producte plegat"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "producte amb una quantitat variable de factors plegat"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "seqüència de fletxa amb una quantitat variable d'elements plegat"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "fletxa plegat"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "vector fila de dimensió n plegat"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "arrel de l'índex 3 finalitzar índex plegat a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "arrel jerarquitzada de l'índex 3 finalitzar índex plegat a"
+    }
+  }
+}

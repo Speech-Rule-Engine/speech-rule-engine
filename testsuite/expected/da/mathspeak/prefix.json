@@ -1,0 +1,156 @@
+{
+  "name": "DanishPrefix",
+  "locale": "da",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Danish Prefix rule tests.",
+  "active": "PrefixDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sub_0": {
+      "expected": "Grundtal"
+    },
+    "Sub_1": {
+      "expected": "Sænket"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Grundtal"
+    },
+    "Super_1": {
+      "expected": "Eksponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Grundtal"
+    },
+    "Over_1": {
+      "expected": "Overtekst"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Grundtal"
+    },
+    "Under_1": {
+      "expected": "Undertekst"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Tæller"
+    },
+    "Fractions_1": {
+      "expected": "Nævner"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikand"
+    },
+    "Root_1": {
+      "expected": "Rodeksponent"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Grundtal"
+    },
+    "SimpleTensors_1": {
+      "expected": "Venstre Sænket"
+    },
+    "SimpleTensors_2": {
+      "expected": "Venstre Hævet"
+    },
+    "SimpleTensors_3": {
+      "expected": "Højre Sænket"
+    },
+    "SimpleTensors_4": {
+      "expected": "Højre Hævet"
+    },
+    "ComplexTensors_0": {
+      "expected": "Grundtal"
+    },
+    "ComplexTensors_1": {
+      "expected": "1. Venstre Sænket"
+    },
+    "ComplexTensors_2": {
+      "expected": "2. Venstre Sænket"
+    },
+    "ComplexTensors_3": {
+      "expected": "1. Venstre Hævet"
+    },
+    "ComplexTensors_4": {
+      "expected": "2. Venstre Hævet"
+    },
+    "ComplexTensors_5": {
+      "expected": "1. Højre Sænket"
+    },
+    "ComplexTensors_6": {
+      "expected": "2. Højre Sænket"
+    },
+    "ComplexTensors_7": {
+      "expected": "1. Højre Sænket"
+    },
+    "ComplexTensors_8": {
+      "expected": "2. Højre Sænket"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "Grundtal"
+    },
+    "LimBoth_1": {
+      "expected": "Overtekst"
+    },
+    "LimBoth_2": {
+      "expected": "Undertekst"
+    },
+    "LimBoth_3": {
+      "expected": "Grundtal"
+    },
+    "LimBoth_4": {
+      "expected": "Grundtal"
+    },
+    "LimUpper_0": {
+      "expected": "Overtekst"
+    },
+    "LimUpper_1": {
+      "expected": "Overtekst"
+    },
+    "LimUpper_2": {
+      "expected": "Grundtal"
+    },
+    "LimUpper_3": {
+      "expected": "Grundtal"
+    },
+    "LimLower_0": {
+      "expected": "Undertekst"
+    },
+    "LimLower_1": {
+      "expected": "Undertekst"
+    },
+    "LimLower_2": {
+      "expected": "Grundtal"
+    },
+    "LimLower_3": {
+      "expected": "Grundtal"
+    }
+  }
+}

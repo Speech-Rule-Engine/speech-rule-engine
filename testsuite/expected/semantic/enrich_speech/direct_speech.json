@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich speech direct speech tests.",
+  "base": "input/common/direct_speech.json"
+}

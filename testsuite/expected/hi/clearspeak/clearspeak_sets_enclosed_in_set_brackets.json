@@ -1,0 +1,64 @@
+{
+  "_comment0_": "With support from a UKIERI grant.",
+  "name": "HindiClearspeakSetsEnclosedInSetBrackets",
+  "locale": "hi",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "Hindi Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Set001": {
+      "expected": "पूर्णांक में सभीं एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set002": {
+      "expected": "एक्स का समुच्चय जिस में, एक्स का निरपेक्ष मान, अधिक है 2"
+    },
+    "Set003": {
+      "expected": "पूर्णांक में सभीं एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set004": {
+      "expected": "प्राकृत संख्याएं में सभीं एक्स का समुच्चय जिस में एक्स is an even number"
+    },
+    "Set005": {
+      "expected": "समुच्चय 1 अल्पविराम 2 अल्पविराम 3"
+    },
+    "Set006": {
+      "expected": "समुच्चय 1 अल्पविराम 112 अल्पविराम 1 अल्पविराम 253"
+    },
+    "Set007": {
+      "expected": "पूर्णांक में एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set008": {
+      "expected": "एक्स का समुच्चय जिस में, एक्स का निरपेक्ष मान, अधिक है 2"
+    },
+    "Set009": {
+      "expected": "पूर्णांक में एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set010": {
+      "expected": "समुच्चय 1 अल्पविराम 2 अल्पविराम 3"
+    },
+    "Set011": {
+      "expected": "समुच्चय 1 अल्पविराम 112 अल्पविराम 1 अल्पविराम 253"
+    },
+    "Set012": {
+      "expected": "पूर्णांक में सभीं एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set013": {
+      "expected": "एक्स का समुच्चय जिस में, एक्स का निरपेक्ष मान, अधिक है 2"
+    },
+    "Set014": {
+      "expected": "पूर्णांक में सभीं एक्स का समुच्चय जिस में 2 कम है एक्स कम है 7"
+    },
+    "Set015": {
+      "expected": "प्राकृत संख्याएं में सभीं एक्स का समुच्चय जिस में एक्स is an even number"
+    },
+    "Set016": {
+      "expected": "1 अल्पविराम 2 अल्पविराम 3"
+    },
+    "Set017": {
+      "expected": "1 अल्पविराम 112 अल्पविराम 1 अल्पविराम 253"
+    }
+  }
+}

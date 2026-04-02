@@ -1,0 +1,456 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakTrigometry",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "English Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": ["TrigReciprocal001", "TrigReciprocal002", "TrigReciprocal003", "TrigReciprocal004", "TrigReciprocal005", "TrigReciprocal006", "TrigReciprocal007", "TrigReciprocal008", "TrigReciprocal009", "TrigReciprocal010", "TrigReciprocal011", "TrigReciprocal012", "TrigReciprocal013", "TrigReciprocal014", "TrigReciprocal015", "TrigReciprocal016", "TrigReciprocal017", "TrigReciprocal018", "TrigReciprocal019", "TrigReciprocal020", "TrigReciprocal021", "TrigReciprocal022", "TrigReciprocal023", "TrigReciprocal024", "TrigReciprocal025", "TrigReciprocal026", "HypTrigReciprocal001", "HypTrigReciprocal002", "HypTrigReciprocal003", "HypTrigReciprocal004", "HypTrigReciprocal005", "HypTrigReciprocal006", "HypTrigReciprocal007", "HypTrigReciprocal008", "HypTrigReciprocal009", "HypTrigReciprocal010", "HypTrigReciprocal011", "HypTrigReciprocal012", "HypTrigReciprocal013", "HypTrigReciprocal014", "HypTrigReciprocal015", "HypTrigReciprocal016", "HypTrigReciprocal017", "HypTrigReciprocal018", "HypTrigReciprocal019", "HypTrigReciprocal020"],
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "sine x"
+    },
+    "Trig002": {
+      "expected": "cosine x"
+    },
+    "Trig003": {
+      "expected": "tangent theta"
+    },
+    "Trig004": {
+      "expected": "secant theta"
+    },
+    "Trig005": {
+      "expected": "cosecant x"
+    },
+    "Trig006": {
+      "expected": "cotangent x"
+    },
+    "Trig007": {
+      "expected": "sine squared x"
+    },
+    "Trig008": {
+      "expected": "cosine cubed x"
+    },
+    "Trig009": {
+      "expected": "tangent squared x"
+    },
+    "Trig010": {
+      "expected": "secant cubed x"
+    },
+    "Trig011": {
+      "expected": "cosecant squared x"
+    },
+    "Trig012": {
+      "expected": "cotangent squared x"
+    },
+    "Trig013": {
+      "expected": "sine 2 pi"
+    },
+    "Trig014": {
+      "expected": "the sine of, open paren, pi k, plus, pi over 2, close paren"
+    },
+    "Trig015": {
+      "expected": "the cosine of, pi over 2"
+    },
+    "Trig016": {
+      "expected": "the sine of, pi over 2"
+    },
+    "Trig017": {
+      "expected": "sine pi over 2"
+    },
+    "Trig018": {
+      "expected": "2 over sine pi"
+    },
+    "Trig019": {
+      "expected": "the fraction with numerator, the sine of, pi over 2, and denominator 3"
+    },
+    "Trig020": {
+      "expected": "tangent negative pi"
+    },
+    "Trig021": {
+      "expected": "the sine of, open paren, x plus pi, close paren"
+    },
+    "Trig022": {
+      "expected": "the cosine of, open paren, x plus, pi over 2, close paren"
+    },
+    "Trig023": {
+      "expected": "the cosine of, open paren, pi over 2, plus x, close paren"
+    },
+    "Trig024": {
+      "expected": "sine squared x, plus, cosine squared x, equals 1"
+    },
+    "Trig025": {
+      "expected": "the fourth power of sine x"
+    },
+    "Trig026": {
+      "expected": "the fifth power of cosine x"
+    },
+    "Trig027": {
+      "expected": "the n-th power of tangent x"
+    },
+    "Trig028": {
+      "expected": "sine x over cosine x"
+    },
+    "Trig029": {
+      "expected": "tangent 35 degrees"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "expected": "the sine of, open paren, 45 degrees plus 30 degrees, close paren"
+    },
+    "Trig031": {
+      "expected": "the tangent of, open paren, angle D E F, close paren"
+    },
+    "Trig032": {
+      "expected": "the tangent of, open paren, angle D, close paren"
+    },
+    "Trig033": {
+      "expected": "the sine of, open paren, x plus y, close paren, equals, sine x cosine y, plus, cosine x sine y"
+    },
+    "Trig034": {
+      "expected": "the cosine of, open paren, x plus y, close paren, equals, cosine x cosine y, minus, sine x sine y"
+    },
+    "Trig035": {
+      "expected": "the tangent of, open paren, x plus y, close paren, equals, the fraction with numerator tangent x minus tangent y, and denominator 1 minus, tangent x tangent y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "expected": "sine 30 degrees cosine 15 degrees, plus, cosine 30 degrees sine 15 degrees"
+    },
+    "Trig037": {
+      "expected": "the tangent of, open paren, pi over 6, plus, 2 pi over 3, close paren, equals, the fraction with numerator, the tangent of, pi over 6, minus, the tangent of, 2 pi over 3, and denominator 1 minus, the tangent of, pi over 6, the tangent of, 2 pi over 3"
+    },
+    "Trig038": {
+      "expected": "tangent 2 x, equals, the fraction with numerator 2 tangent x, and denominator 1 minus, tangent squared x"
+    },
+    "Trig039": {
+      "expected": "cosine 2 x, equals 2, cosine squared x, minus 1"
+    },
+    "Trig040": {
+      "expected": "the sine of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 2"
+    },
+    "Trig041": {
+      "expected": "the tangent of, x over 2, equals plus or minus the square root of, the fraction with numerator 1 minus cosine x, and denominator 1 plus cosine x"
+    },
+    "Trig042": {
+      "expected": "cosine x cosine y, equals 2, the cosine of, the fraction with numerator x plus y, and denominator 2, the cosine of, the fraction with numerator x minus y, and denominator 2"
+    },
+    "Trig043": {
+      "expected": "the sine of, open paren, negative, pi over 8, close paren, equals negative one half the square root of 2 minus the square root of 2, end root, end root"
+    },
+    "Trig044": {
+      "expected": "the tangent of, 3 pi over 8, equals, the fraction with numerator the square root of, the square root of 2, end root, plus 1, end root, and denominator the square root of, the square root of 2, end root, minus 1, end root"
+    },
+    "Trig045": {
+      "expected": "the tangent of, pi over 12, equals one half the square root of 2 minus the square root of 3, end root, end root"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "the inverse sine of x"
+    },
+    "TrigInvAuto002": {
+      "expected": "the inverse cosine of x"
+    },
+    "TrigInvAuto003": {
+      "expected": "the inverse tangent of x"
+    },
+    "TrigInvAuto004": {
+      "expected": "the inverse cotangent of x"
+    },
+    "TrigInvAuto005": {
+      "expected": "the inverse secant of x"
+    },
+    "TrigInvAuto006": {
+      "expected": "the inverse cosecant of x"
+    },
+    "TrigInvAuto007": {
+      "expected": "the inverse sine of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "TrigInvAuto008": {
+      "expected": "the inverse cosine of one half"
+    },
+    "TrigInvAuto009": {
+      "expected": "the inverse tangent of 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "the inverse cotangent of 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "the inverse secant of 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "the inverse cosecant of 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "the inverse sine of negative x"
+    },
+    "TrigInvAuto014": {
+      "expected": "the inverse cosine of negative x"
+    },
+    "TrigInvAuto015": {
+      "expected": "the inverse tangent of, open paren, negative x plus 12, close paren"
+    },
+    "TrigInvAuto016": {
+      "expected": "the inverse cotangent of, open paren, negative x minus 1, close paren"
+    },
+    "TrigInvAuto017": {
+      "expected": "the inverse sine of sine 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "the inverse cosecant of cosecant x"
+    },
+    "TrigInvAuto019": {
+      "expected": "the cosine of, open paren, the inverse cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInvAuto020": {
+      "expected": "the cosine of, open paren, negative, the inverse cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInvAuto021": {
+      "expected": "the inverse sine of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "TrigInvAuto022": {
+      "expected": "sine, the inverse cosine of one half"
+    },
+    "TrigInvAuto023": {
+      "expected": "sine, the inverse tangent of 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "the sine of, open paren, negative, the inverse tangent of 1, close paren"
+    },
+    "TrigInvAuto025": {
+      "expected": "the sine of, open paren, negative, the inverse tangent of negative 1, close paren"
+    },
+    "TrigInvAuto026": {
+      "expected": "the inverse secant of secant x"
+    },
+    "TrigInverse001": {
+      "expected": "sine inverse of x"
+    },
+    "TrigInverse002": {
+      "expected": "cosine inverse of x"
+    },
+    "TrigInverse003": {
+      "expected": "tangent inverse of x"
+    },
+    "TrigInverse004": {
+      "expected": "cotangent inverse of x"
+    },
+    "TrigInverse005": {
+      "expected": "secant inverse of x"
+    },
+    "TrigInverse006": {
+      "expected": "cosecant inverse of x"
+    },
+    "TrigInverse007": {
+      "expected": "sine inverse of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "TrigInverse008": {
+      "expected": "cosine inverse of one half"
+    },
+    "TrigInverse009": {
+      "expected": "tangent inverse of 17"
+    },
+    "TrigInverse010": {
+      "expected": "cotangent inverse of 32"
+    },
+    "TrigInverse011": {
+      "expected": "secant inverse of 100"
+    },
+    "TrigInverse012": {
+      "expected": "cosecant inverse of 85"
+    },
+    "TrigInverse013": {
+      "expected": "sine inverse of negative x"
+    },
+    "TrigInverse014": {
+      "expected": "cosine inverse of negative x"
+    },
+    "TrigInverse015": {
+      "expected": "tangent inverse of, open paren, negative x plus 12, close paren"
+    },
+    "TrigInverse016": {
+      "expected": "cotangent inverse of, open paren, negative x minus 1, close paren"
+    },
+    "TrigInverse017": {
+      "expected": "sine inverse of sine 0"
+    },
+    "TrigInverse018": {
+      "expected": "cosecant inverse of cosecant x"
+    },
+    "TrigInverse019": {
+      "expected": "the cosine of, open paren, cosine inverse of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInverse020": {
+      "expected": "the cosine of, open paren, negative, cosine inverse of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "TrigInverse021": {
+      "expected": "sine inverse of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "TrigInverse022": {
+      "expected": "sine, cosine inverse of one half"
+    },
+    "TrigInverse023": {
+      "expected": "sine, tangent inverse of 1"
+    },
+    "TrigInverse024": {
+      "expected": "the sine of, open paren, negative, tangent inverse of 1, close paren"
+    },
+    "TrigInverse025": {
+      "expected": "the sine of, open paren, negative, tangent inverse of negative 1, close paren"
+    },
+    "TrigInverse026": {
+      "expected": "secant inverse of secant x"
+    },
+    "ArcTrig001": {
+      "expected": "arc sine x"
+    },
+    "ArcTrig002": {
+      "expected": "arc cosine x"
+    },
+    "ArcTrig003": {
+      "expected": "arc tangent x"
+    },
+    "ArcTrig004": {
+      "expected": "arc cotangent x"
+    },
+    "ArcTrig005": {
+      "expected": "arc secant x"
+    },
+    "ArcTrig006": {
+      "expected": "arc cosecant x"
+    },
+    "ArcTrig007": {
+      "expected": "arc sine of, the fraction with numerator the square root of 2, and denominator 2"
+    },
+    "ArcTrig008": {
+      "expected": "arc cosine one half"
+    },
+    "ArcTrig009": {
+      "expected": "arc tangent 17"
+    },
+    "ArcTrig010": {
+      "expected": "arc cotangent 32"
+    },
+    "ArcTrig011": {
+      "expected": "arc secant 100"
+    },
+    "ArcTrig012": {
+      "expected": "arc cosecant 85"
+    },
+    "ArcTrig013": {
+      "expected": "arc sine negative x"
+    },
+    "ArcTrig014": {
+      "expected": "arc cosine negative x"
+    },
+    "ArcTrig015": {
+      "expected": "arc tangent of, open paren, negative x plus 12, close paren"
+    },
+    "ArcTrig016": {
+      "expected": "arc cotangent of, open paren, negative x minus 1, close paren"
+    },
+    "ArcTrig017": {
+      "expected": "arc sine, sine 0"
+    },
+    "ArcTrig018": {
+      "expected": "arc cosecant, cosecant x"
+    },
+    "ArcTrig019": {
+      "expected": "the cosine of, open paren, arc cosine of, open paren, negative, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "ArcTrig020": {
+      "expected": "the cosine of, open paren, negative, arc cosine of, open paren, the fraction with numerator the square root of 2, and denominator 2, close paren, close paren"
+    },
+    "ArcTrig021": {
+      "expected": "arc sine of, open paren, the cosine of, pi over 4, close paren"
+    },
+    "ArcTrig022": {
+      "expected": "sine, arc cosine one half"
+    },
+    "ArcTrig023": {
+      "expected": "sine, arc tangent 1"
+    },
+    "ArcTrig024": {
+      "expected": "the sine of, open paren, negative, arc tangent 1, close paren"
+    },
+    "ArcTrig025": {
+      "expected": "the sine of, open paren, negative, arc tangent negative 1, close paren"
+    },
+    "ArcTrig026": {
+      "expected": "arc secant, secant x"
+    },
+    "AllTrig01": {
+      "expected": "arc sine x"
+    },
+    "AllTrig02": {
+      "expected": "arc cosine x"
+    },
+    "AllTrig03": {
+      "expected": "arc tangent x"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "expected": "hyperbolic sine of x"
+    },
+    "HypTrig002": {
+      "expected": "hyperbolic cosine of x"
+    },
+    "HypTrig003": {
+      "expected": "hyperbolic tangent of x"
+    },
+    "HypTrig004": {
+      "expected": "hyperbolic cotangent of x"
+    },
+    "HypTrig005": {
+      "expected": "hyperbolic secant of x"
+    },
+    "HypTrig006": {
+      "expected": "hyperbolic cosecant of x"
+    },
+    "HypTrig007": {
+      "expected": "the inverse hyperbolic sine of x"
+    },
+    "HypTrig008": {
+      "expected": "the inverse hyperbolic cosine of x"
+    },
+    "HypTrig009": {
+      "expected": "the inverse hyperbolic tangent of x"
+    },
+    "HypTrig010": {
+      "expected": "the inverse hyperbolic cotangent of x"
+    },
+    "HypTrig011": {
+      "expected": "the inverse hyperbolic secant of x"
+    },
+    "HypTrig012": {
+      "expected": "the inverse hyperbolic cosecant of x"
+    },
+    "HypTrig013": {
+      "expected": "hyperbolic sine of, the inverse hyperbolic sine of x"
+    },
+    "HypTrig014": {
+      "expected": "hyperbolic cosine of, the inverse hyperbolic cosine of x"
+    },
+    "HypTrig015": {
+      "expected": "hyperbolic tangent of, the inverse hyperbolic tangent of x"
+    },
+    "HypTrig016": {
+      "expected": "hyperbolic cotangent of, the inverse hyperbolic cotangent of x"
+    },
+    "HypTrig017": {
+      "expected": "the inverse hyperbolic sine of, hyperbolic sine of x"
+    },
+    "HypTrig018": {
+      "expected": "the inverse hyperbolic cosine of, hyperbolic cosine of x"
+    },
+    "HypTrig019": {
+      "expected": "the inverse hyperbolic tangent of, hyperbolic tangent of x"
+    },
+    "HypTrig020": {
+      "expected": "the inverse hyperbolic cotangent of, hyperbolic cotangent of x"
+    }
+  }
+}

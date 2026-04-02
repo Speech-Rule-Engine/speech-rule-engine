@@ -1,0 +1,193 @@
+{
+  "name": "FrenchClearspeakPrefixTablesNone",
+  "locale": "fr",
+  "factory": "prefix",
+  "domain": "clearspeak",
+  "style": "MultiLineLabel_None",
+  "base": "input/common/prefix_tables.json",
+  "information": "French Prefix Tables Clearspeak None tests.",
+  "active": "PrefixFrench",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "Ligne 1"
+    },
+    "Binomials_1": {
+      "expected": "Ligne 2"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "nombre d'éléments disponibles"
+    },
+    "Binomials_1_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "nombre d'éléments choisis"
+    },
+    "Vectors_0": {
+      "expected": "Rangée 1"
+    },
+    "Vectors_1": {
+      "expected": "Rangée 2"
+    },
+    "Vectors_2": {
+      "expected": "Rangée 3"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "Rangée 1"
+    },
+    "Matrices_depth_1": {
+      "expected": "Rangée 1, colonne 1"
+    },
+    "Matrices_depth_2": {
+      "expected": "Rangée 1, colonne 2"
+    },
+    "Matrices_depth_3": {
+      "expected": "Rangée 2"
+    },
+    "Matrices_depth_4": {
+      "expected": "Rangée 2, colonne 1"
+    },
+    "Matrices_depth_5": {
+      "expected": "Rangée 2, colonne 2"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "Rangée 1"
+    },
+    "Matrices_1": {
+      "expected": "colonne 1"
+    },
+    "Matrices_2": {
+      "expected": "colonne 2"
+    },
+    "Matrices_3": {
+      "expected": "Rangée 2"
+    },
+    "Matrices_4": {
+      "expected": "colonne 1"
+    },
+    "Matrices_5": {
+      "expected": "colonne 2"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "Ligne 1"
+    },
+    "Table_2": {
+      "expected": "Ligne 1"
+    },
+    "Table_3": {
+      "expected": "Ligne 2"
+    },
+    "Table_4": {
+      "expected": "Ligne 1"
+    },
+    "Table_5": {
+      "expected": "Ligne 2"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "colonne 1"
+    },
+    "Table_Cell_1a": {
+      "expected": "colonne 2"
+    },
+    "Table_Cell_2": {
+      "expected": "Ligne 1"
+    },
+    "Table_Cell_3": {
+      "expected": "Ligne 2"
+    },
+    "Table_Cell_4": {
+      "expected": "colonne 1"
+    },
+    "Table_Cell_4a": {
+      "expected": "colonne 2"
+    },
+    "Table_Cell_5": {
+      "expected": "colonne 1"
+    },
+    "Table_Cell_5a": {
+      "expected": "colonne 2"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "Ligne 1, colonne 1"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "Ligne 1, colonne 2"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "Ligne 1"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "Ligne 2"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "Ligne 1, colonne 1"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "Ligne 1, colonne 2"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "Ligne 2, colonne 1"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "Ligne 2, colonne 2"
+    },
+    "Table_Label_0": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_1": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_2": {
+      "expected": "Étiquette"
+    },
+    "Table_Label_3": {
+      "expected": "Étiquette"
+    }
+  },
+  "compare": true
+}

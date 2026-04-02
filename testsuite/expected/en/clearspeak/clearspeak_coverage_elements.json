@@ -1,0 +1,158 @@
+{
+  "name": "EnglishClearspeakCoverageElements",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_elements.json",
+  "information": "English Clearspeak Coverage for Elements symbol tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "In_set_0": {
+      "expected": "the set of all z in A such that z"
+    },
+    "In_set_1": {
+      "expected": "the set of all z in A such that z"
+    },
+    "In_set_2": {
+      "expected": "the set of all z not in A such that z"
+    },
+    "In_set_3": {
+      "expected": "the set of all A contains as member z such that z"
+    },
+    "In_set_4": {
+      "expected": "the set of all A contains as member z such that z"
+    },
+    "In_set_5": {
+      "expected": "the set of all A does not contain as member z such that z"
+    },
+    "Free_standing_0": {
+      "expected": "z is a member of A"
+    },
+    "Free_standing_1": {
+      "expected": "z is a member of A"
+    },
+    "Free_standing_2": {
+      "expected": "z is not a member of A"
+    },
+    "Free_standing_3": {
+      "expected": "A contains as member z"
+    },
+    "Free_standing_4": {
+      "expected": "A contains as member z"
+    },
+    "Free_standing_5": {
+      "expected": "A does not contain as member z"
+    },
+    "Under_bigop_0": {
+      "expected": "sum over z is a member of A"
+    },
+    "Under_bigop_1": {
+      "expected": "sum over z is a member of A"
+    },
+    "Under_bigop_2": {
+      "expected": "sum over z is not a member of A"
+    },
+    "Under_bigop_3": {
+      "expected": "sum over A contains as member z"
+    },
+    "Under_bigop_4": {
+      "expected": "sum over A contains as member z"
+    },
+    "Under_bigop_5": {
+      "expected": "sum over A does not contain as member z"
+    },
+    "Preferences_in_0": {
+      "expected": "z is a member of A"
+    },
+    "Preferences_in_1": {
+      "expected": "the set of all z in A such that z"
+    },
+    "Preferences_in_2": {
+      "expected": "sum over z is a member of A"
+    },
+    "Preferences_in_3": {
+      "expected": "z is a member of A"
+    },
+    "Preferences_in_4": {
+      "expected": "the set of all z member of A such that z"
+    },
+    "Preferences_in_5": {
+      "expected": "sum over z is a member of A"
+    },
+    "Preferences_in_6": {
+      "expected": "z is an element of A"
+    },
+    "Preferences_in_7": {
+      "expected": "the set of all z element of A such that z"
+    },
+    "Preferences_in_8": {
+      "expected": "sum over z is an element of A"
+    },
+    "Preferences_in_9": {
+      "expected": "z is in A"
+    },
+    "Preferences_in_10": {
+      "expected": "the set of all z in A such that z"
+    },
+    "Preferences_in_11": {
+      "expected": "sum over z is in A"
+    },
+    "Preferences_in_12": {
+      "expected": "z belongs to A"
+    },
+    "Preferences_in_13": {
+      "expected": "the set of all z belonging to A such that z"
+    },
+    "Preferences_in_14": {
+      "expected": "sum over z belongs to A"
+    },
+    "Preferences_not_in_0": {
+      "expected": "z is not a member of A"
+    },
+    "Preferences_not_in_1": {
+      "expected": "the set of all z not in A such that z"
+    },
+    "Preferences_not_in_2": {
+      "expected": "sum over z is not a member of A"
+    },
+    "Preferences_not_in_3": {
+      "expected": "z is not a member of A"
+    },
+    "Preferences_not_in_4": {
+      "expected": "the set of all z not a member of A such that z"
+    },
+    "Preferences_not_in_5": {
+      "expected": "sum over z is not a member of A"
+    },
+    "Preferences_not_in_6": {
+      "expected": "z is not an element of A"
+    },
+    "Preferences_not_in_7": {
+      "expected": "the set of all z not an element of A such that z"
+    },
+    "Preferences_not_in_8": {
+      "expected": "sum over z is not an element of A"
+    },
+    "Preferences_not_in_9": {
+      "expected": "z is not in A"
+    },
+    "Preferences_not_in_10": {
+      "expected": "the set of all z not in A such that z"
+    },
+    "Preferences_not_in_11": {
+      "expected": "sum over z is not in A"
+    },
+    "Preferences_not_in_12": {
+      "expected": "z does not belong to A"
+    },
+    "Preferences_not_in_13": {
+      "expected": "the set of all z not belonging to A such that z"
+    },
+    "Preferences_not_in_14": {
+      "expected": "sum over z does not belong to A"
+    },
+    "Complex": {
+      "expected": "the set of all a belonging to, cap A such that, the fraction with numerator 1, and denominator a, end fraction"
+    }
+  }
+}

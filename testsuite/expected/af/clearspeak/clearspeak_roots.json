@@ -1,0 +1,426 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakRoots",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "Afrikaans Clearspeak Roots rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "expected": "die vierkantswortel van 2"
+    },
+    "Root002": {
+      "expected": "3 plus die vierkantswortel van 2"
+    },
+    "Root003": {
+      "expected": "3 plus of minus die vierkantswortel van 2"
+    },
+    "Root004": {
+      "expected": "3 minus of plus die vierkantswortel van 2"
+    },
+    "Root005": {
+      "expected": "the negative square root of 2"
+    },
+    "Root006": {
+      "expected": "3 minus die vierkantswortel van 2"
+    },
+    "Root007": {
+      "expected": "3 plus the negative square root of 2"
+    },
+    "Root008": {
+      "expected": "3 minus the negative square root of 2"
+    },
+    "Root009": {
+      "expected": "3 plus, links hakkie, the negative square root of 2, regs hakkie"
+    },
+    "Root010": {
+      "expected": "3 minus, links hakkie, the negative square root of 2, regs hakkie"
+    },
+    "Root011": {
+      "expected": "die vierkantswortel van x plus 1"
+    },
+    "Root011a": {
+      "expected": "die vierkantswortel van x, plus 1"
+    },
+    "Root012": {
+      "expected": "the negative square root of x"
+    },
+    "Root013": {
+      "expected": "links hakkie, die vierkantswortel van x, regs hakkie, kwadraat"
+    },
+    "Root014": {
+      "expected": "negatiewe, links hakkie, die vierkantswortel van x, regs hakkie, kwadraat"
+    },
+    "Root015": {
+      "expected": "die vierkantswortel van x, kwadraat"
+    },
+    "Root016": {
+      "expected": "die vierkantswortel van x kwadraat"
+    },
+    "Root017": {
+      "expected": "die vierkantswortel van x kwadraat plus y kwadraat"
+    },
+    "Root018": {
+      "expected": "die vierkantswortel van, x onderskrif 1, kwadraat plus, x onderskrif 2, kwadraat"
+    },
+    "Root019": {
+      "expected": "die vierkantswortel van, links hakkie, x onderskrif 2, minus, x onderskrif 1, regs hakkie, kwadraat plus, links hakkie, y onderskrif 2, minus, y onderskrif 1, regs hakkie, kwadraat"
+    },
+    "Root020": {
+      "expected": "die vierkantswortel van een helfte"
+    },
+    "Root021": {
+      "expected": "die vierkantswortel van, 23 oor 66"
+    },
+    "Root022": {
+      "expected": "die vierkantswortel van, die breuk met teller x plus 1, en noemer 2 x, plus 5"
+    },
+    "Root023": {
+      "expected": "die breuk met teller negatiewe b plus of minus die vierkantswortel van b kwadraat minus 4 a c, en noemer 2 a"
+    },
+    "Root024": {
+      "expected": "die positiewe vierkantswortel van 2"
+    },
+    "Root025": {
+      "expected": "3 plus die positiewe vierkantswortel van 2"
+    },
+    "Root026": {
+      "expected": "3 plus of minus die vierkantswortel van 2"
+    },
+    "Root027": {
+      "expected": "3 minus of plus die vierkantswortel van 2"
+    },
+    "Root028": {
+      "expected": "the negative square root of 2"
+    },
+    "Root029": {
+      "expected": "3 minus die positiewe vierkantswortel van 2"
+    },
+    "Root030": {
+      "expected": "3 plus the negative square root of 2"
+    },
+    "Root031": {
+      "expected": "3 minus the negative square root of 2"
+    },
+    "Root032": {
+      "expected": "3 plus, links hakkie, the negative square root of 2, regs hakkie"
+    },
+    "Root033": {
+      "expected": "3 minus, links hakkie, the negative square root of 2, regs hakkie"
+    },
+    "Root034": {
+      "expected": "die positiewe vierkantswortel van x plus 1"
+    },
+    "Root034a": {
+      "expected": "die positiewe vierkantswortel van x, plus 1"
+    },
+    "Root035": {
+      "expected": "the negative square root of x"
+    },
+    "Root036": {
+      "expected": "links hakkie, die positiewe vierkantswortel van x, regs hakkie, kwadraat"
+    },
+    "Root037": {
+      "expected": "links hakkie, the negative square root of x, regs hakkie, kwadraat"
+    },
+    "Root038": {
+      "expected": "negatiewe, links hakkie, die positiewe vierkantswortel van x, regs hakkie, kwadraat"
+    },
+    "Root039": {
+      "expected": "die positiewe vierkantswortel van x, kwadraat"
+    },
+    "Root040": {
+      "expected": "die positiewe vierkantswortel van x kwadraat"
+    },
+    "Root041": {
+      "expected": "die positiewe vierkantswortel van x kwadraat plus y kwadraat"
+    },
+    "Root042": {
+      "expected": "die positiewe vierkantswortel van, x onderskrif 1, kwadraat plus, x onderskrif 2, kwadraat"
+    },
+    "Root043": {
+      "expected": "die positiewe vierkantswortel van, links hakkie, x onderskrif 2, minus, x onderskrif 1, regs hakkie, kwadraat plus, links hakkie, y onderskrif 2, minus, y onderskrif 1, regs hakkie, kwadraat"
+    },
+    "Root044": {
+      "expected": "die positiewe vierkantswortel van een helfte"
+    },
+    "Root045": {
+      "expected": "die positiewe vierkantswortel van, 23 oor 66"
+    },
+    "Root046": {
+      "expected": "die positiewe vierkantswortel van, die breuk met teller x plus 1, en noemer 2 x, plus 5"
+    },
+    "Root047": {
+      "expected": "die breuk met teller negatiewe b plus of minus die vierkantswortel van b kwadraat minus 4 a c, en noemer 2 a"
+    },
+    "Root048": {
+      "expected": "die vierkantswortel van 2, end wortel"
+    },
+    "Root049": {
+      "expected": "3 plus die vierkantswortel van 2, end wortel"
+    },
+    "Root050": {
+      "expected": "3 plus of minus die vierkantswortel van 2, end wortel"
+    },
+    "Root051": {
+      "expected": "3 minus of plus die vierkantswortel van 2, end wortel"
+    },
+    "Root052": {
+      "expected": "the negative square root of 2, end wortel"
+    },
+    "Root053": {
+      "expected": "3 minus die vierkantswortel van 2, end wortel"
+    },
+    "Root054": {
+      "expected": "3 plus the negative square root of 2, end wortel"
+    },
+    "Root055": {
+      "expected": "3 minus the negative square root of 2, end wortel"
+    },
+    "Root056": {
+      "expected": "3 plus, links hakkie, the negative square root of 2, end wortel, regs hakkie"
+    },
+    "Root057": {
+      "expected": "3 minus, links hakkie, the negative square root of 2, end wortel, regs hakkie"
+    },
+    "Root058": {
+      "expected": "die vierkantswortel van x plus 1, end wortel"
+    },
+    "Root058a": {
+      "expected": "die vierkantswortel van x, end wortel, plus 1"
+    },
+    "Root059": {
+      "expected": "the negative square root of x, end wortel"
+    },
+    "Root060": {
+      "expected": "links hakkie, die vierkantswortel van x, end wortel, regs hakkie, kwadraat"
+    },
+    "Root061": {
+      "expected": "negatiewe, links hakkie, die vierkantswortel van x, end wortel, regs hakkie, kwadraat"
+    },
+    "Root062": {
+      "expected": "die vierkantswortel van x, end wortel, kwadraat"
+    },
+    "Root063": {
+      "expected": "die vierkantswortel van x kwadraat, end wortel"
+    },
+    "Root064": {
+      "expected": "die vierkantswortel van x kwadraat plus y kwadraat, end wortel"
+    },
+    "Root065": {
+      "expected": "die vierkantswortel van, x onderskrif 1, kwadraat plus, x onderskrif 2, kwadraat, end wortel"
+    },
+    "Root066": {
+      "expected": "die vierkantswortel van, links hakkie, x onderskrif 2, minus, x onderskrif 1, regs hakkie, kwadraat plus, links hakkie, y onderskrif 2, minus, y onderskrif 1, regs hakkie, kwadraat, end wortel"
+    },
+    "Root067": {
+      "expected": "die vierkantswortel van een helfte, end wortel"
+    },
+    "Root068": {
+      "expected": "die vierkantswortel van, 23 oor 66, end wortel"
+    },
+    "Root069": {
+      "expected": "die vierkantswortel van, die breuk met teller x plus 1, en noemer 2 x, plus 5, end wortel"
+    },
+    "Root070": {
+      "expected": "die breuk met teller negatiewe b plus of minus die vierkantswortel van b kwadraat minus 4 a c, end wortel, en noemer 2 a"
+    },
+    "Root071": {
+      "expected": "die positiewe vierkantswortel van 2, end wortel"
+    },
+    "Root072": {
+      "expected": "3 plus die positiewe vierkantswortel van 2, end wortel"
+    },
+    "Root073": {
+      "expected": "3 plus of minus die vierkantswortel van 2, end wortel"
+    },
+    "Root074": {
+      "expected": "3 minus of plus die vierkantswortel van 2, end wortel"
+    },
+    "Root075": {
+      "expected": "the negative square root of 2, end wortel"
+    },
+    "Root076": {
+      "expected": "3 minus die positiewe vierkantswortel van 2, end wortel"
+    },
+    "Root077": {
+      "expected": "3 plus the negative square root of 2, end wortel"
+    },
+    "Root078": {
+      "expected": "3 minus the negative square root of 2, end wortel"
+    },
+    "Root079": {
+      "expected": "3 plus, links hakkie, the negative square root of 2, end wortel, regs hakkie"
+    },
+    "Root080": {
+      "expected": "3 minus, links hakkie, the negative square root of 2, end wortel, regs hakkie"
+    },
+    "Root081": {
+      "expected": "die positiewe vierkantswortel van x plus 1, end wortel"
+    },
+    "Root081a": {
+      "expected": "die positiewe vierkantswortel van x, end wortel, plus 1"
+    },
+    "Root082": {
+      "expected": "the negative square root of x, end wortel"
+    },
+    "Root083": {
+      "expected": "links hakkie, die positiewe vierkantswortel van x, end wortel, regs hakkie, kwadraat"
+    },
+    "Root084": {
+      "expected": "links hakkie, the negative square root of x, end wortel, regs hakkie, kwadraat"
+    },
+    "Root085": {
+      "expected": "die positiewe vierkantswortel van x, end wortel, kwadraat"
+    },
+    "Root086": {
+      "expected": "die positiewe vierkantswortel van x kwadraat, end wortel"
+    },
+    "Root087": {
+      "expected": "die positiewe vierkantswortel van x kwadraat plus y kwadraat, end wortel"
+    },
+    "Root088": {
+      "expected": "die positiewe vierkantswortel van, x onderskrif 1, kwadraat plus, x onderskrif 2, kwadraat, end wortel"
+    },
+    "Root089": {
+      "expected": "die positiewe vierkantswortel van, links hakkie, x onderskrif 2, minus, x onderskrif 1, regs hakkie, kwadraat plus, links hakkie, y onderskrif 2, minus, y onderskrif 1, regs hakkie, kwadraat, end wortel"
+    },
+    "Root090": {
+      "expected": "die positiewe vierkantswortel van een helfte, end wortel"
+    },
+    "Root091": {
+      "expected": "die positiewe vierkantswortel van, 23 oor 66, end wortel"
+    },
+    "Root092": {
+      "expected": "die positiewe vierkantswortel van, die breuk met teller x plus 1, en noemer 2 x, plus 5, end wortel"
+    },
+    "Root093": {
+      "expected": "die breuk met teller negatiewe b plus of minus die vierkantswortel van b kwadraat minus 4 a c, end wortel, en noemer 2 a"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "expected": "die derdemagswortel van y"
+    },
+    "HighRoot002": {
+      "expected": "die vierde wortel van n"
+    },
+    "HighRoot003": {
+      "expected": "die vyfde wortel van 35"
+    },
+    "HighRoot004": {
+      "expected": "die negende wortel van 146"
+    },
+    "HighRoot005": {
+      "expected": "die n-de wortel van d"
+    },
+    "HighRoot006": {
+      "expected": "die m-de wortel van 243"
+    },
+    "HighRoot007": {
+      "expected": "die i-de wortel van 2 tot die i-de mag"
+    },
+    "HighRoot008": {
+      "expected": "die j-de wortel van 125"
+    },
+    "HighRoot009": {
+      "expected": "negatiewe die derdemagswortel van y"
+    },
+    "HighRoot010": {
+      "expected": "negatiewe die vierde wortel van n"
+    },
+    "HighRoot011": {
+      "expected": "die derdemagswortel van y, end wortel"
+    },
+    "HighRoot012": {
+      "expected": "die vierde wortel van n, end wortel"
+    },
+    "HighRoot013": {
+      "expected": "die vyfde wortel van 35, end wortel"
+    },
+    "HighRoot014": {
+      "expected": "die negende wortel van 146, end wortel"
+    },
+    "HighRoot015": {
+      "expected": "die n-de wortel van d, end wortel"
+    },
+    "HighRoot016": {
+      "expected": "die m-de wortel van 243, end wortel"
+    },
+    "HighRoot017": {
+      "expected": "die i-de wortel van 2 tot die i-de mag, end wortel"
+    },
+    "HighRoot018": {
+      "expected": "die j-de wortel van 125, end wortel"
+    },
+    "HighRoot019": {
+      "expected": "negatiewe die derdemagswortel van y, end wortel"
+    },
+    "HighRoot020": {
+      "expected": "negatiewe die vierde wortel van n, end wortel"
+    },
+    "HighRoot021": {
+      "expected": "die derdemagswortel van y"
+    },
+    "HighRoot022": {
+      "expected": "die vierde wortel van n"
+    },
+    "HighRoot023": {
+      "expected": "die vyfde wortel van 35"
+    },
+    "HighRoot024": {
+      "expected": "die negende wortel van 146"
+    },
+    "HighRoot025": {
+      "expected": "die n-de wortel van d"
+    },
+    "HighRoot026": {
+      "expected": "die m-de wortel van 243"
+    },
+    "HighRoot027": {
+      "expected": "die i-de wortel van 2 tot die i-de mag"
+    },
+    "HighRoot028": {
+      "expected": "die j-de wortel van 125"
+    },
+    "HighRoot029": {
+      "expected": "negatiewe die derdemagswortel van y"
+    },
+    "HighRoot030": {
+      "expected": "negatiewe die vierde wortel van n"
+    },
+    "HighRoot031": {
+      "expected": "die derdemagswortel van y, end wortel"
+    },
+    "HighRoot032": {
+      "expected": "die vierde wortel van n, end wortel"
+    },
+    "HighRoot033": {
+      "expected": "die vyfde wortel van 35, end wortel"
+    },
+    "HighRoot034": {
+      "expected": "die negende wortel van 146, end wortel"
+    },
+    "HighRoot035": {
+      "expected": "die n-de wortel van d, end wortel"
+    },
+    "HighRoot036": {
+      "expected": "die m-de wortel van 243, end wortel"
+    },
+    "HighRoot037": {
+      "expected": "die i-de wortel van 2 tot die i-de mag, end wortel"
+    },
+    "HighRoot038": {
+      "expected": "die j-de wortel van 125, end wortel"
+    },
+    "HighRoot039": {
+      "expected": "negatiewe die derdemagswortel van y, end wortel"
+    },
+    "HighRoot040": {
+      "expected": "negatiewe die vierde wortel van n, end wortel"
+    }
+  }
+}

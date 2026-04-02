@@ -1,0 +1,271 @@
+{
+  "tests": {
+    "Issue_633_0": {
+      "input": "<mi>A</mi><mo>&#x2192;</mo><mrow><mrow><mrow><mi mathvariant=\"script\">B</mi></mrow></mrow><mi>c</mi></mrow><mo>(</mo><mi>d</mi><mo>)</mo>"
+    },
+    "Issue_633_1": {
+      "input": "<mi>&#x3B9;</mi><mo>:</mo><mrow><mrow><mi mathvariant=\"script\">C</mi></mrow></mrow><mo>&#x2192;</mo><mrow><mrow><mrow><mi mathvariant=\"script\">C</mi></mrow></mrow><mi>o</mi><mi>n</mi><mi>e</mi></mrow><mo>(</mo><mrow><mrow><mi mathvariant=\"script\">C</mi></mrow></mrow><mo>)</mo></math>"
+    },
+    "Mfenced_issue": {
+      "input": "<mfenced open=\"&lt;\" close=\"&gt;\"><mi>a</mi><mo>|</mo><mi>a</mi><mo>|</mo><mi>a</mi></mfenced>"
+    },
+    "MJ_Issue_2979_0": {
+      "tex": "\\underbrace{\\int\\underbrace{a}_{}\\underbrace{b(c,d)e}_{}}_{}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mo data-mjx-texclass=\"OP\">&#x222B;</mo><munder><mrow data-mjx-texclass=\"OP\"><munder><mi>a</mi><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mo stretchy=\"false\">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy=\"false\">)</mo><mi>e</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></munder></math>"
+    },
+    "MJ_Issue_2979_1": {
+      "tex": "\\begin{equation}0\\le u_0(t)=\\lambda \\underbrace{\\int _0^1\\underbrace{\\big (M(\\rho )\\big )^{-1}}_{&lt;0}\\underbrace{G(t,s)f\\big (s,u_0(s)\\big )}_{&gt;0}\\ ds}_{&lt;0}&lt;0,\\end{equation}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mn>0</mn><mo>&#x2264;</mo><msub><mi>u</mi><mn>0</mn></msub><mo stretchy=\"false\">(</mo><mi>t</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>&#x3BB;</mi><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mn>0</mn><mn>1</mn></msubsup><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.2em\" maxsize=\"1.2em\">(</mo></mrow><mi>M</mi><mo stretchy=\"false\">(</mo><mi>&#x3C1;</mi><mo stretchy=\"false\">)</mo><msup><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.2em\" maxsize=\"1.2em\">)</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"><mo>&lt;</mo><mn>0</mn></mrow></munder><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>G</mi><mo stretchy=\"false\">(</mo><mi>t</mi><mo>,</mo><mi>s</mi><mo stretchy=\"false\">)</mo><mi>f</mi><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.2em\" maxsize=\"1.2em\">(</mo></mrow><mi>s</mi><mo>,</mo><msub><mi>u</mi><mn>0</mn></msub><mo stretchy=\"false\">(</mo><mi>s</mi><mo stretchy=\"false\">)</mo><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.2em\" maxsize=\"1.2em\">)</mo></mrow></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"><mo>&gt;</mo><mn>0</mn></mrow></munder><mtext>&#xA0;</mtext><mi>d</mi><mi>s</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"><mo>&lt;</mo><mn>0</mn></mrow></munder><mo>&lt;</mo><mn>0</mn><mo>,</mo></math>"
+    },
+    "MJ_Issue_2979_2": {
+      "tex": "\\int a\\underbrace{(b)c}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>a</mi><mrow data-mjx-texclass=\"OP\"><munder><mrow><mo stretchy=\"false\">(</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mi>c</mi></mrow><mo>&#x23DF;</mo></munder></mrow></math>"
+    },
+    "MJ_Issue_2979_3": {
+      "tex": "\\begin{equation*} \\langle F_s, g\\rangle _{L^2(\\mu )} = \\int _{S^{n-1}} \\widehat{\\mu f}(s\\omega ) \\overline{\\widehat{\\mu g}(s\\omega )}\\,d\\omega = s^{1-n} \\langle \\widehat{\\mu f}, \\widehat{\\mu g}\\rangle _{L^2(sS^{n-1})}. \\end{equation*}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo fence=\"false\" stretchy=\"false\">&#x27E8;</mo><msub><mi>F</mi><mi>s</mi></msub><mo>,</mo><mi>g</mi><msub><mo fence=\"false\" stretchy=\"false\">&#x27E9;</mo><mrow data-mjx-texclass=\"ORD\"><msup><mi>L</mi><mn>2</mn></msup><mo stretchy=\"false\">(</mo><mi>&#x3BC;</mi><mo stretchy=\"false\">)</mo></mrow></msub><mo>=</mo><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><msup><mi>S</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mover><mrow><mi>&#x3BC;</mi><mi>f</mi></mrow><mo>^</mo></mover></mrow><mo stretchy=\"false\">(</mo><mi>s</mi><mi>&#x3C9;</mi><mo stretchy=\"false\">)</mo><mover><mrow><mrow data-mjx-texclass=\"ORD\"><mover><mrow><mi>&#x3BC;</mi><mi>g</mi></mrow><mo>^</mo></mover></mrow><mo stretchy=\"false\">(</mo><mi>s</mi><mi>&#x3C9;</mi><mo stretchy=\"false\">)</mo></mrow><mo accent=\"true\">&#x2015;</mo></mover><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mi>d</mi><mi>&#x3C9;</mi><mo>=</mo><msup><mi>s</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>&#x2212;</mo><mi>n</mi></mrow></msup><mo fence=\"false\" stretchy=\"false\">&#x27E8;</mo><mrow data-mjx-texclass=\"ORD\"><mover><mrow><mi>&#x3BC;</mi><mi>f</mi></mrow><mo>^</mo></mover></mrow><mo>,</mo><mrow data-mjx-texclass=\"ORD\"><mover><mrow><mi>&#x3BC;</mi><mi>g</mi></mrow><mo>^</mo></mover></mrow><msub><mo fence=\"false\" stretchy=\"false\">&#x27E9;</mo><mrow data-mjx-texclass=\"ORD\"><msup><mi>L</mi><mn>2</mn></msup><mo stretchy=\"false\">(</mo><mi>s</mi><msup><mi>S</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">)</mo></mrow></msub><mo>.</mo></math>"
+    },
+    "MJ_Issue_2979_4": {
+      "tex": "\\int\\widehat{\\mu f}(s)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mover><mrow><mi>&#x3BC;</mi><mi>f</mi></mrow><mo>^</mo></mover></mrow><mo stretchy=\"false\">(</mo><mi>s</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "MJ_Issue_2979_5": {
+      "tex": "\\int _{b} \\operatorname {\\mathrm{a}{b}}_{c}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow></msub><msub><mrow data-mjx-texclass=\"OP\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\">a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></msub></math>"
+    },
+    "MJ_Issue_2979_6": {
+      "tex": "\\begin{eqnarray*} \\frac{1}{2} \\operatorname {Vol}(\\mathcal{M}_{1,1}) &=& \\int _{\\mathcal{M}_{1,1}} \\sum _\\alpha \\frac{1}{1+e^{\\ell _X(\\alpha )}} \\operatorname {\\mathrm{d}{Vol}}_{WP} \\\\ &=& \\int _{\\mathcal{M}_{1,1}^*} \\frac{1}{1+e^{\\ell _X(\\alpha )}} \\operatorname {\\mathrm{d}{Vol}}_{WP}. \\end{eqnarray*}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right center left\" columnspacing=\"0em 0.278em\" rowspacing=\"3pt\"><mtr><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>Vol</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mo stretchy=\"false\">(</mo><msub><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msub><mo stretchy=\"false\">)</mo></mtd><mtd><mi></mi><mo>=</mo></mtd><mtd><mi></mi><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><msub><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msub></mrow></msub><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>&#x3B1;</mi></munder><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x2113;</mi><mi>X</mi></msub><mo stretchy=\"false\">(</mo><mi>&#x3B1;</mi><mo stretchy=\"false\">)</mo></mrow></msup></mrow></mfrac><msub><mrow data-mjx-texclass=\"OP\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\">d</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">V</mi><mi mathvariant=\"normal\">o</mi><mi mathvariant=\"normal\">l</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mi>W</mi><mi>P</mi></mrow></msub></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo></mtd><mtd><mi></mi><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><msubsup><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>&#x2217;</mo></msubsup></mrow></msub><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x2113;</mi><mi>X</mi></msub><mo stretchy=\"false\">(</mo><mi>&#x3B1;</mi><mo stretchy=\"false\">)</mo></mrow></msup></mrow></mfrac><msub><mrow data-mjx-texclass=\"OP\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\" mathvariant=\"normal\">d</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">V</mi><mi mathvariant=\"normal\">o</mi><mi mathvariant=\"normal\">l</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mi>W</mi><mi>P</mi></mrow></msub><mo>.</mo></mtd></mtr></mtable></math>"
+    },
+    "MJ_Issue_2979_7": {
+      "tex": "\\int {{a}b}_{c}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mo data-mjx-texclass=\"OP\">&#x222B;</mo><msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>c</mi></mrow></msub></math>"
+    },
+    "MJ_Issue_2979_8": {
+      "tex": "B \\int \\underbrace{\\Pi ^m \\phi }_{{}<0}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>B</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><msup><mi mathvariant=\"normal\">&#x3A0;</mi><mi>m</mi></msup><mi>&#x3D5;</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow><mo>&lt;</mo><mn>0</mn></mrow></munder></math>"
+    },
+    "MJ_Issue_2979_9": {
+      "tex": "a \\int \\underbrace{bc}_{d}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo data-mjx-texclass=\"OP\">&#x222B;</mo><munder><mrow data-mjx-texclass=\"OP\"><munder><mrow><mi>b</mi><mi>c</mi></mrow><mo>&#x23DF;</mo></munder></mrow><mrow data-mjx-texclass=\"ORD\"><mi>d</mi></mrow></munder></math>"
+    },
+    "SRE_Issue_726_1": {
+      "tex": "\\prescript {h_{l-1}}{}{P}",
+      "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><none></none><msub><mi>h</mi><mrow><mi>l</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub></mmultiscripts>"
+    },
+    "SRE_Issue_726_2": {
+      "tex": "\\prescript {h^{l-1}}{}{P}",
+      "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><none></none><msup><mi>h</mi><mrow><mi>l</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mmultiscripts>"
+    },
+    "SRE_Issue_726_3": {
+      "tex": "\\prescript {h_{l}}{}{P}",
+      "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><none></none><msub><mi>h</mi><mrow><mi>l</mi></mrow></msub></mmultiscripts>"
+    },
+    "SRE_Issue_726_4": {
+      "tex": "\\prescript {h_{ab}}{1}{P}",
+      "input": "<mmultiscripts><mi>P</mi><mprescripts></mprescripts><mn>1</mn><msub><mi>h</mi><mrow><mi>a</mi><mi>b</mi></mrow></msub></mmultiscripts>"
+    },
+    "SRE_Issue_726_5": {
+      "input": "<math><mmultiscripts><mi>x</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>d</mi><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
+    },
+    "SRE_Issue_726_6": {
+      "input": "<math><mmultiscripts><mi>x</mi><mi>d</mi><msub><mi>c</mi><msup><mi>l</mi><mi>k</mi></msup></msub><mi>e</mi><none/><mprescripts/><mi>a</mi><mi>q</mi><mi>r</mi><msup><mi>b</mi><mrow><mn>1</mn><mi>a</mi></mrow></msup></mmultiscripts></math>"
+    },
+    "issue_767_0": {
+      "tex": "A_n|_{{Ker} P_n}",
+      "input": "<msub><mi>A</mi><mi>n</mi></msub><msub><mo data-mjx-texclass=\"ORD\">|</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>K</mi><mi>e</mi><mi>r</mi></mrow><msub><mi>P</mi><mi>n</mi></msub></mrow></msub>"
+    },
+    "issue_767_1": {
+      "tex": "A_n|_{{abc} P_n}",
+      "input": "<msub><mi>A</mi><mi>n</mi></msub><msub><mo data-mjx-texclass=\"ORD\">|</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>a</mi><mi>b</mi><mi>c</mi></mrow><msub><mi>P</mi><mi>n</mi></msub></mrow></msub>"
+    },
+    "issue_767_2": {
+      "tex": "A_n|_{\\mathrm{abc} P_n}",
+      "input": "<msub><mi>A</mi><mi>n</mi></msub><msub><mo data-mjx-texclass=\"ORD\">|</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-auto-op=\"false\">abc</mi></mrow><msub><mi>P</mi><mi>n</mi></msub></mrow></msub>"
+    },
+    "issue_749_0": {
+      "tex": "L\\left([2,+\\infty [\\backslash \\bigcup _{k\\in \\mathcal{K}}[n_k,n_{k+1}[\\right)",
+      "input": "<mi>L</mi><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mo>[</mo><mn>2</mn><mo>,</mo><mo>+</mo><mi mathvariant=\"normal\">&#x221E;</mi><mo>[</mo><mi mathvariant=\"normal\">\\</mi><munder><mo>&#x22C3;</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>&#x2208;</mo><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">K</mi></mrow></mrow></munder><mo>[</mo><msub><mi>n</mi><mi>k</mi></msub><mo>,</mo><msub><mi>n</mi><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>[</mo><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow>"
+    },
+    "issue_749_1": {
+      "tex": "]a,b[+[c,d[+[e,f]",
+      "input": "<mo>]</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>[</mo><mo>+</mo><mo>[</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>[</mo><mo>+</mo><mo>[</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo>]</mo>"
+    },
+    "issue_749_2": {
+      "tex": "]a,b[+[c,d[",
+      "input": "<mo>]</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>[</mo><mo>+</mo><mo>[</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>[</mo>"
+    },
+    "issue_749_3": {
+      "tex": "[e,f]",
+      "input": "<mo>[</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo>]</mo>"
+    },
+    "issue_749_4": {
+      "tex": "]a,b[",
+      "input": "<mo>]</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>[</mo>"
+    },
+    "issue_749_5": {
+      "tex": "[c,d[",
+      "input": "<mo>[</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>[</mo>"
+    },
+    "issue_749_6": {
+      "tex": "]g,h]",
+      "input": "<mo>]</mo><mi>g</mi><mo>,</mo><mi>h</mi><mo>]</mo>"
+    },
+    "issue_749_7": {
+      "tex": "([a,b[)",
+      "input": "<mo>(</mo><mo>[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>[</mo><mo>)</mo>"
+    },
+    "issue_749_8": {
+      "tex": "]a,b[d,d]",
+      "input": "<mo>]</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>[</mo><mi>d</mi><mo>,</mo><mi>d</mi><mo>]</mo>"
+    },
+    "issue_767_3": {
+      "tex": "sin(x)",
+      "input": "<mi>s</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "issue_767_4": {
+      "tex": "{sin}(x)",
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mi>s</mi><mi>i</mi><mi>n</mi></mrow><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "issue_814_00": {
+      "tex": "x+\\text{A}+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>A</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_01": {
+      "tex": "x+\\text{AA}+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>AA</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_02": {
+      "tex": "x+\\text{ AA }+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>&#xA0;AA&#xA0;</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_03": {
+      "tex": "x+\\text{AA BB}+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>AA BB</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_04": {
+      "tex": "x+\\text{ AA BB }+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>&#xA0;AA BB&#xA0;</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_05": {
+      "tex": "x+\\text{AA}\\text{BB}+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>AA</mtext><mtext>BB</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_06": {
+      "tex": "x+\\text{ }+y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>&#xA0;</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_07": {
+      "tex": "x+\\qquad+y",
+      "input": "<mi>x</mi><mo>+</mo><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_08": {
+      "tex": "x+\\text{AA}y",
+      "input": "<mi>x</mi><mo>+</mo><mtext>AA</mtext><mi>y</mi>"
+    },
+    "issue_814_09": {
+      "tex": "x\\text{AA}+y",
+      "input": "<mi>x</mi><mtext>AA</mtext><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_10": {
+      "tex": "x\\qquad+y",
+      "input": "<mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_10_new": {
+      "tex": "x\\qquad+y",
+      "input": "<mi>x</mi><mspace width=\"2em\"></mspace><mo>+</mo><mi>y</mi>"
+    },
+    "issue_814_11": {
+      "tex": "x+\\qquad y",
+      "input": "<mi>x</mi><mo>+</mo><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>y</mi>"
+    },
+    "issue_815_0": {
+      "tex": " \\int _{C} {\\mathbb{P}f}\\mathcal{M} ",
+      "input": "<msub><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow><mi>f</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow>"
+    },
+    "issue_815_1": {
+      "tex": "\\int _{C} {\\mathbb{P}\\sin}\\mathcal{M} ",
+      "input": "<msub><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mi>C</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow><mi>sin</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">M</mi></mrow>"
+    },
+    "issue_815_2": {
+      "tex": "u(x) \\int  {\\mathcal{D} u} A d\\xi ",
+      "input": "<mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x222B;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi data-mjx-variant=\"-tex-calligraphic\" mathvariant=\"script\">D</mi></mrow><mi>u</mi></mrow><mi>A</mi><mi>d</mi><mi>&#x3BE;</mi>"
+    },
+    "MJ_Issue_3431_0": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>&#x2013;</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_1": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mo>&#x2013;</mo><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_2": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>aber</mtext><mtext>nicht</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_3": {
+      "input": "<mmultiscripts><mi>Cu</mi><none></none><mo>*</mo><mprescripts></mprescripts><none></none><mrow><mn>58</mn><mtext>aber nicht</mtext><mn>61</mn></mrow></mmultiscripts>"
+    },
+    "MJ_Issue_3431_small_0": {
+      "input": "<mn>58</mn><mo>–</mo><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_1": {
+      "input": "<mn>58</mn><mtext>-</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_2": {
+      "input": "<mn>58</mn><mtext>aber</mtext><mtext>nicht</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_3": {
+      "input": "<mn>58</mn><mtext>aber nicht</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_small_4": {
+      "input": "<mn>58</mn><mtext>–</mtext><mn>61</mn>"
+    },
+    "MJ_Issue_3431_text": {
+      "input": "<mtext>aber</mtext><mtext>,</mtext><mtext>nicht</mtext>"
+    },
+    "issue_toogle_times_0": {
+      "tex": "D\\toggle{f}{m}\\endtoggle x",
+      "input": "<mi data-latex=\"D\">D</mi><maction data-latex=\"\\toggle{f}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_times_1": {
+      "tex": "D\\toggle{f}{g}{m}\\endtoggle x",
+      "input": "<mi data-latex=\"D\">D</mi><maction data-latex=\"\\toggle{f}{g}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"g\">g</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_times_2": {
+      "tex": "D\\toggle{m}{f}\\endtoggle x",
+      "input": "<mi data-latex=\"D\">D</mi><maction data-latex=\"\\toggle{m}{f}\\endtoggle\"><mi data-latex=\"m\">m</mi><mi data-latex=\"f\">f</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_appl_0": {
+      "tex": "F\\toggle{f}{m}\\endtoggle x",
+      "input": "<mi data-latex=\"F\">F</mi><maction data-latex=\"\\toggle{f}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_appl_1": {
+      "tex": "F\\toggle{f}{g}{m}\\endtoggle x",
+      "input": "<mi data-latex=\"F\">F</mi><maction data-latex=\"\\toggle{f}{g}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"g\">g</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_appl_2": {
+      "tex": "F\\toggle{m}{f}\\endtoggle x",
+      "input": "<mi data-latex=\"F\">F</mi><maction data-latex=\"\\toggle{m}{f}\\endtoggle\"><mi data-latex=\"m\">m</mi><mi data-latex=\"f\">f</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_2appl_0": {
+      "tex": "\\toggle{F}{M}\\endtoggle\\toggle{f}{m}\\endtoggle x",
+      "input": "<maction data-latex=\"\\toggle{F}{M}\\endtoggle\"><mi data-latex=\"F\">F</mi><mi data-latex=\"M\">M</mi></maction><maction data-latex=\"\\toggle{f}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_2appl_1": {
+      "tex": "\\toggle{F}{G}{M}\\endtoggle\\toggle{f}{m}\\endtoggle x",
+      "input": "<maction data-latex=\"\\toggle{F}{G}{M}\\endtoggle\"><mi data-latex=\"F\">F</mi><mi data-latex=\"G\">G</mi><mi data-latex=\"M\">M</mi></maction><maction data-latex=\"\\toggle{f}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_2appl_2": {
+      "tex": "\\toggle{M}{F}\\endtoggle\\toggle{f}{m}\\endtoggle x",
+      "input": "<maction data-latex=\"\\toggle{M}{F}\\endtoggle\"><mi data-latex=\"M\">M</mi><mi data-latex=\"F\">F</mi></maction><maction data-latex=\"\\toggle{f}{m}\\endtoggle\"><mi data-latex=\"f\">f</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "issue_toogle_2appl_3": {
+      "tex": "\\toggle{M}{F}\\endtoggle\\toggle{a}{m}\\endtoggle x",
+      "input": "<maction data-latex=\"\\toggle{M}{F}\\endtoggle\"><mi data-latex=\"M\">M</mi><mi data-latex=\"F\">F</mi></maction><maction data-latex=\"\\toggle{a}{m}\\endtoggle\"><mi data-latex=\"a\">a</mi><mi data-latex=\"m\">m</mi></maction><mi data-latex=\"x\">x</mi>"
+    },
+    "MJ_Issue_3453_0": {
+      "input": "<mtable><mtr /><mtr><mtd></mtd><mtd></mtd></mtr></mtable>"
+    },
+    "MJ_Issue_3453_1": {
+      "input": "<mrow><mrow><mspace width=\"4em\" /><mtable><mtr /><mtr><mtd columnalign=\"right\"><msup><mi></mi><mn></mn></msup><mo></mo><mi></mi></mtd><mtd columnalign=\"left\"><mo></mo></mtd><mtd columnalign=\"left\"><mn></mn></mtd></mtr></mtable></mrow></mrow>"
+    }
+  }
+}

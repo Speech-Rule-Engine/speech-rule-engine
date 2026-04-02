@@ -1,0 +1,92 @@
+{
+  "name": "NemethDefaultAlphabetNegativeSquared",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet negative-squared tests.",
+  "tests": {
+    "🅰": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠁⠻"
+    },
+    "🅱": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠃⠻"
+    },
+    "🅲": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠉⠻"
+    },
+    "🅳": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠙⠻"
+    },
+    "🅴": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠑⠻"
+    },
+    "🅵": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠋⠻"
+    },
+    "🅶": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠛⠻"
+    },
+    "🅷": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠓⠻"
+    },
+    "🅸": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠊⠻"
+    },
+    "🅹": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠚⠻"
+    },
+    "🅺": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠅⠻"
+    },
+    "🅻": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠇⠻"
+    },
+    "🅼": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠍⠻"
+    },
+    "🅽": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠝⠻"
+    },
+    "🅾": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠕⠻"
+    },
+    "🅿": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠏⠻"
+    },
+    "🆀": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠟⠻"
+    },
+    "🆁": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠗⠻"
+    },
+    "🆂": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠎⠻"
+    },
+    "🆃": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠞⠻"
+    },
+    "🆄": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠥⠻"
+    },
+    "🆅": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠧⠻"
+    },
+    "🆆": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠺⠻"
+    },
+    "🆇": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠭⠻"
+    },
+    "🆈": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠽⠻"
+    },
+    "🆉": {
+      "expected": "⠫⠸⠲⠸⠫⠠⠵⠻"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakNamedSets",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Nynorsk Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NumSys001": {
+      "expected": "dei reelle tala"
+    },
+    "NumSys001a": {
+      "expected": "dei reelle tala"
+    },
+    "NumSys002": {
+      "expected": "dei komplekse tala"
+    },
+    "NumSys002a": {
+      "expected": "dei komplekse tala"
+    },
+    "NumSys003": {
+      "expected": "heiltala"
+    },
+    "NumSys003a": {
+      "expected": "heiltala"
+    },
+    "NumSys004": {
+      "expected": "dei rasjonale tala"
+    },
+    "NumSys004a": {
+      "expected": "dei rasjonale tala"
+    },
+    "NumSys005": {
+      "expected": "dei naturlege tala"
+    },
+    "NumSys005a": {
+      "expected": "dei naturlege tala"
+    },
+    "NumSys005_1": {
+      "expected": "dei naturlege tala med null"
+    },
+    "NumSys005_1a": {
+      "expected": "dei naturlege tala med null"
+    },
+    "NumSys006": {
+      "expected": "dei positive heiltala"
+    },
+    "NumSys006a": {
+      "expected": "dei positive heiltala"
+    },
+    "NumSys006_1": {
+      "expected": "dei negative heltala"
+    },
+    "NumSys006_1a": {
+      "expected": "dei negative heltala"
+    },
+    "NumSys007": {
+      "expected": "r-to"
+    },
+    "NumSys007a": {
+      "expected": "r-to"
+    },
+    "NumSys008": {
+      "expected": "z-tre"
+    },
+    "NumSys008a": {
+      "expected": "z-tre"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-uendeleg"
+    },
+    "NumSys010a": {
+      "expected": "r-uendeleg"
+    }
+  }
+}

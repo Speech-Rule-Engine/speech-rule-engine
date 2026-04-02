@@ -1,0 +1,126 @@
+{
+  "tests": {
+    "_comment1_": " Absolute Value",
+    "Abs01": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>"
+    },
+    "Abs02": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "Abs03": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo><mn>1</mn></mrow>"
+    },
+    "Abs04": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|</mo><mi>z</mi><mo>|</mo></mrow></mrow>"
+    },
+    "AbsEnd01": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow></mrow>"
+    },
+    "AbsEnd02": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsEnd03": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo><mn>1</mn></mrow>"
+    },
+    "AbsEnd04": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>+</mo><mrow><mo>|</mo><mi>y</mi><mo>|</mo></mrow><mo>≥</mo><mrow><mo>|</mo><mi>z</mi><mo>|</mo></mrow></mrow>"
+    },
+    "Card01": {
+      "test": true,
+      "preference": "AbsoluteValue_Cardinality",
+      "input": "<mrow><mrow><mo>|</mo><mi>S</mi><mo>|</mo></mrow></mrow>"
+    },
+    "Determinant01": {
+      "test": true,
+      "preference": "AbsoluteValue_Determinant",
+      "input": "<mrow><mrow><mo>|</mo><mi>M</mi><mo>|</mo></mrow></mrow>"
+    },
+    "_comment2_": " Absolute Value (Determinants)",
+    "AbsDet01": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet02": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet03": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet04": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet05": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet06": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet07": {
+      "test": true,
+      "preference": "AbsoluteValue_Auto",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet08": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet09": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet10": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet11": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mn>5</mn><mo>+</mo><mi>x</mi></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet12": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet13": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mn>2</mn><mi>x</mi></mrow></mtd><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    },
+    "AbsDet14": {
+      "test": true,
+      "preference": "AbsoluteValue_AbsEnd",
+      "input": "<mrow><mrow><mo>|</mo><mrow><mtable><mtr><mtd><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mtd></mtr><mtr><mtd><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow></mtd><mtd><mrow><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow></mtd></mtr></mtable></mrow><mo>|</mo></mrow></mrow>"
+    }
+  }
+}

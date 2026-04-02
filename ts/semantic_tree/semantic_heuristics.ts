@@ -21,7 +21,6 @@
  */
 
 import { Debugger } from '../common/debugger.js';
-import { Engine } from '../common/engine.js';
 import { SemanticMap, NamedSymbol } from './semantic_attr.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 import {
@@ -35,7 +34,7 @@ import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
 import { SemanticSkeleton } from './semantic_skeleton.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 
 import * as DomUtil from '../common/dom_util.js';
 
@@ -90,7 +89,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -111,7 +110,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -131,7 +130,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => SemanticHeuristics.options.domain === 'clearspeak'
   )
 );
 
@@ -210,7 +209,7 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      Engine.getInstance().modality === 'braille' &&
+      SemanticHeuristics.options.modality === 'braille' &&
       node.type === SemanticType.IDENTIFIER
   )
 );
@@ -478,6 +477,7 @@ SemanticHeuristics.add(
 function implicitUnpack(nodes: SemanticNode[]) {
   const children = nodes[0].childNodes;
   nodes.splice(0, 1, ...children);
+  nodes.forEach((x) => (x.parent = null));
 }
 
 /**
@@ -551,6 +551,9 @@ SemanticHeuristics.add(
       let left = true;
       let right = true;
       const topLeft = table.childNodes[0].childNodes[0];
+      if (!topLeft) {
+        return false;
+      }
       if (!eligibleNode(topLeft.mathmlTree)) {
         left = false;
       } else {
@@ -805,8 +808,8 @@ function combinedNodes(nodes: SemanticNode[], role: SemanticRole) {
 }
 
 /**
- * Rewrites a simple function to a prefix function if it consists of multiple
- * letters. (Currently restricted to Braille!)
+ * Rewrites simple operations with indexing style limits into large operators of
+ * role sum.
  */
 SemanticHeuristics.add(
   new SemanticMultiHeuristic(
@@ -819,7 +822,10 @@ SemanticHeuristics.add(
     },
     (nodes: SemanticNode[]) => {
       return (
-        nodes[0].type === SemanticType.OPERATOR &&
+        (nodes[0].type === SemanticType.OPERATOR ||
+          (nodes[0].type === SemanticType.IDENTIFIER &&
+            nodes[0].attributes['texclass'] === 'OP'
+          )) &&
         nodes
           .slice(1)
           .some(
@@ -831,54 +837,6 @@ SemanticHeuristics.add(
               (node.type === SemanticType.PUNCTUATED &&
                 node.role === SemanticRole.SEQUENCE)
           )
-      );
-    }
-  )
-);
-
-/**
- * "Continential" Interval Heuristic:
- * We look for two square brakets, regardless of direction, enclosing a
- * punctuated pair.
- */
-SemanticHeuristics.add(
-  new SemanticMultiHeuristic(
-    'bracketed_interval',
-    (nodes: SemanticNode[]) => {
-      const leftFence = nodes[0];
-      const rightFence = nodes[1];
-      const content = nodes.slice(2);
-      const childNode = SemanticProcessor.getInstance().row(content);
-      const fenced = SemanticHeuristics.factory.makeBranchNode(
-        SemanticType.FENCED,
-        [childNode],
-        [leftFence, rightFence]
-      );
-      fenced.role = SemanticRole.LEFTRIGHT;
-      return fenced;
-    },
-    (nodes: SemanticNode[]) => {
-      const leftFence = nodes[0];
-      const rightFence = nodes[1];
-      const content = nodes.slice(2);
-      if (
-        !(
-          leftFence &&
-          (leftFence.textContent === ']' || leftFence.textContent === '[') &&
-          rightFence &&
-          (rightFence.textContent === ']' || rightFence.textContent === '[')
-        )
-      ) {
-        return false;
-      }
-      const partition = SemanticUtil.partitionNodes(
-        content,
-        SemanticPred.isPunctuation
-      );
-      return !!(
-        partition.rel.length === 1 &&
-        partition.comp[0].length &&
-        partition.comp[1].length
       );
     }
   )
@@ -917,6 +875,197 @@ SemanticHeuristics.add(
           SemanticMap.Meaning.get(child.textContent.trim()).role ===
             SemanticRole.LATINLETTER
       );
+    }
+  )
+);
+
+/**
+ * "Continential" Interval Heuristic:
+ * We look for two square brakets, regardless of direction, enclosing a
+ * punctuated pair.
+ */
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'bracketed_interval',
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      const childNode = SemanticProcessor.getInstance().row(content);
+      const fenced = SemanticHeuristics.factory.makeBranchNode(
+        SemanticType.FENCED,
+        [childNode],
+        [leftFence, rightFence]
+      );
+      fenced.role = SemanticRole.INTERVAL;
+      return fenced;
+    },
+    (nodes: SemanticNode[]) => {
+      const leftFence = nodes[0];
+      const rightFence = nodes[1];
+      const content = nodes.slice(2);
+      if (
+        !(
+          leftFence &&
+          rightFence &&
+          ((isCloseBrack(leftFence.textContent) &&
+            (isOpenBrack(rightFence.textContent) ||
+              isCloseBrack(rightFence.textContent))) ||
+            (isOpenBrack(rightFence.textContent) &&
+              (isOpenBrack(leftFence.textContent) ||
+                isCloseBrack(leftFence.textContent))))
+        )
+      ) {
+        return false;
+      }
+      if (
+        content.length === 1 &&
+        content[0].type === SemanticType.PUNCTUATED &&
+        content[0].contentNodes.length === 1
+      ) {
+        return true;
+      }
+      const partition = SemanticUtil.partitionNodes(
+        content,
+        SemanticPred.isPunctuation
+      );
+      return !!(
+        partition.rel.length === 1 &&
+        partition.comp[0].length &&
+        partition.comp[1].length
+      );
+    }
+  )
+);
+
+/**
+ * Identify opening brackets.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an opening bracket.
+ */
+function isOpenBrack(str: string) {
+  return ['[', '［'].includes(str);
+}
+
+/**
+ * Identify closing brackets.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an closing bracket.
+ */
+function isCloseBrack(str: string) {
+  return [']', '］'].includes(str);
+}
+
+/**
+ * Identify opening parentheses.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an opening parenthesis.
+ */
+function isOpenParen(str: string) {
+  return ['(', '⁽', '₍'].includes(str);
+}
+
+/**
+ * Identify closing parentheses.
+ *
+ * @param str Input string to test.
+ * @returns True if string is an closing parenthesis.
+ */
+function isCloseParen(str: string) {
+  return [')', '⁾', '₎'].includes(str);
+}
+
+/**
+ * Identifies infinity.
+ *
+ * @param node The semantic node to test.
+ * @returns True if the node is a positive or negative infinity.
+ */
+function isInfty(node: SemanticNode) {
+  return (
+    node.role === SemanticRole.INFTY ||
+    (node.type === SemanticType.PREFIXOP &&
+      node.childNodes[0].role === SemanticRole.INFTY)
+  );
+}
+
+/**
+ * "Continential" Interval Heuristic:
+ * We look for two square brakets, regardless of direction, enclosing a
+ * punctuated pair.
+ */
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'interval_heuristic',
+    (node: SemanticNode) => {
+      node.role = SemanticRole.INTERVAL;
+      return node;
+    },
+    (node: SemanticNode) => {
+      return isPotentialInterval(node);
+    }
+  )
+);
+
+/**
+ * Check if a fenced expression is a potential interval.
+ *
+ * @param node The node to test.
+ * @returns True if expression is potentially an interval.
+ */
+function isPotentialInterval(node: SemanticNode) {
+  const child = node.childNodes[0];
+  if (
+    node.type !== SemanticType.FENCED ||
+    // Check for comma separated pair!
+    child?.type !== SemanticType.PUNCTUATED ||
+    child?.childNodes.length !== 3 ||
+    child?.contentNodes.length !== 1 ||
+    child?.childNodes[1].role !== SemanticRole.COMMA
+  ) {
+    return false;
+  }
+  const first = node.childNodes[0].childNodes[0];
+  const second = node.childNodes[0].childNodes[2];
+  const left = node.contentNodes[0].textContent;
+  const right = node.contentNodes[1].textContent;
+  if (
+    (isOpenBrack(left) && isCloseParen(right)) ||
+    (isOpenParen(left) && isCloseBrack(right))
+  ) {
+    return true;
+  }
+  // if we have both brackets or parens and at least one infty.
+  if (
+    isOpenParen(left) &&
+    isCloseParen(right) &&
+    (isInfty(first) || isInfty(second))
+  ) {
+    return true;
+  }
+  return false;
+}
+
+// We go over every element in the
+// If interval we recurse
+// If leftright, we check if it is potential interval
+// then we recurse
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'propagateInterval',
+    (node: SemanticNode) => {
+      node.childNodes.forEach((child) => {
+        if (isPotentialInterval(child)) {
+          child.role = SemanticRole.INTERVAL;
+        }
+      });
+      return node;
+    },
+    (node: SemanticNode) => {
+      return SemanticPred.isMembership(node);
     }
   )
 );

@@ -1,0 +1,266 @@
+{
+  "name": "NynorskMathspeakFencesNeutral",
+  "locale": "nn",
+  "factory": "speech",
+  "base": "input/common/fences_neutral.json",
+  "information": "Nynorsk Mathspeak Neutral Fences tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakNynorsk",
+  "exclude": [
+    "BarFenced_0_AbsoluteValue_AbsEnd",
+    "BarFenced_1_AbsoluteValue_AbsEnd",
+    "BarFenced_2_AbsoluteValue_AbsEnd",
+    "BarFenced_3_AbsoluteValue_AbsEnd",
+    "BarFenced_4_AbsoluteValue_AbsEnd",
+    "BarFenced_5_AbsoluteValue_AbsEnd",
+    "BarFenced_6_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd",
+    "CenterBar_0_AbsoluteValue_AbsEnd",
+    "CenterBar_1_AbsoluteValue_AbsEnd",
+    "CenterBar_2_AbsoluteValue_AbsEnd",
+    "CenterBar_3_AbsoluteValue_AbsEnd",
+    "CenterBar_4_AbsoluteValue_AbsEnd",
+    "CenterBar_5_AbsoluteValue_AbsEnd",
+    "Function_0_AbsoluteValue_AbsEnd",
+    "Function_1_AbsoluteValue_AbsEnd",
+    "Function_2_AbsoluteValue_AbsEnd",
+    "Function_3_AbsoluteValue_AbsEnd",
+    "Function_4_AbsoluteValue_AbsEnd",
+    "Function_5_AbsoluteValue_AbsEnd",
+    "FunctionMetric0_AbsoluteValue_AbsEnd",
+    "FunctionMetric1_AbsoluteValue_AbsEnd",
+    "FunctionMetric2_AbsoluteValue_AbsEnd",
+    "FunctionMetric3_AbsoluteValue_AbsEnd",
+    "FunctionMetric4_AbsoluteValue_AbsEnd",
+    "FunctionMetric5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd"
+  ],
+  "compare": true,
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_1_default": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_2_default": {
+      "expected": "StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_3_default": {
+      "expected": "StartMetrisk a StoppMetrisk"
+    },
+    "BarFenced_4_default": {
+      "expected": "StartMetrisk a StoppMetrisk"
+    },
+    "BarFenced_5_default": {
+      "expected": "StartMetrisk a StoppMetrisk"
+    },
+    "BarFenced_6_default": {
+      "expected": "StartMetrisk a StoppMetrisk"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "vertikal strek a dobbel vertikal strek"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "parallell til a dobbel vertikal strek"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "vertikal strek a brutt vertikalstrek"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "trippel vertikalstrek-avgrensing a dobbel vertikal strek"
+    },
+    "CenterBar_0_default": {
+      "expected": "a vertikal strek b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a vertikalstrek b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a brutt vertikalstrek b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a dobbel vertikal strek b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a parallell til b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a trippel vertikalstrek-avgrensing b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f vertikal strek g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f vertikalstrek g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f brutt vertikalstrek g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f dobbel vertikal strek g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f parallell til g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f trippel vertikalstrek-avgrensing g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sinus trippel vertikalstrek-avgrensing g"
+    },
+    "Function_0_default": {
+      "expected": "f StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_1_default": {
+      "expected": "g StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_2_default": {
+      "expected": "h StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_3_default": {
+      "expected": "r StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_4_default": {
+      "expected": "sinus StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_5_default": {
+      "expected": "sum StartAbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f StartMetrisk a StoppMetrisk"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g StartMetrisk a StoppMetrisk"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h StartMetrisk a StoppMetrisk"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r StartMetrisk a StoppMetrisk"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sinus StartMetrisk a StoppMetrisk"
+    },
+    "FunctionMetric5_default": {
+      "expected": "sum StartMetrisk a StoppMetrisk"
+    },
+    "BarFenced_0_sbrief": {
+      "expected": "AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_1_sbrief": {
+      "expected": "AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_2_sbrief": {
+      "expected": "AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "BarFenced_3_sbrief": {
+      "expected": "Metrisk a StoppMetrisk"
+    },
+    "BarFenced_4_sbrief": {
+      "expected": "Metrisk a StoppMetrisk"
+    },
+    "BarFenced_5_sbrief": {
+      "expected": "Metrisk a StoppMetrisk"
+    },
+    "BarFenced_6_sbrief": {
+      "expected": "Metrisk a StoppMetrisk"
+    },
+    "BarFencedMixed_0_sbrief": {
+      "expected": "vertikal strek a dobbel vertikal strek"
+    },
+    "BarFencedMixed_1_sbrief": {
+      "expected": "parallell til a dobbel vertikal strek"
+    },
+    "BarFencedMixed_2_sbrief": {
+      "expected": "vertikal strek a brutt vertikalstrek"
+    },
+    "BarFencedMixed_3_sbrief": {
+      "expected": "trippel vertikalstrek-avgrensing a dobbel vertikal strek"
+    },
+    "CenterBar_0_sbrief": {
+      "expected": "a vertikal strek b"
+    },
+    "CenterBar_1_sbrief": {
+      "expected": "a vertikalstrek b"
+    },
+    "CenterBar_2_sbrief": {
+      "expected": "a brutt vertikalstrek b"
+    },
+    "CenterBar_3_sbrief": {
+      "expected": "a dobbel vertikal strek b"
+    },
+    "CenterBar_4_sbrief": {
+      "expected": "a parallell til b"
+    },
+    "CenterBar_5_sbrief": {
+      "expected": "a trippel vertikalstrek-avgrensing b"
+    },
+    "Function_0_sbrief": {
+      "expected": "f AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_1_sbrief": {
+      "expected": "g AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_2_sbrief": {
+      "expected": "h AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_3_sbrief": {
+      "expected": "r AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_4_sbrief": {
+      "expected": "sinus AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "Function_5_sbrief": {
+      "expected": "sum AbsoluttVerdi a StoppAbsoluttVerdi"
+    },
+    "FunctionMetric0_sbrief": {
+      "expected": "f Metrisk a StoppMetrisk"
+    },
+    "FunctionMetric1_sbrief": {
+      "expected": "g Metrisk a StoppMetrisk"
+    },
+    "FunctionMetric2_sbrief": {
+      "expected": "h Metrisk a StoppMetrisk"
+    },
+    "FunctionMetric3_sbrief": {
+      "expected": "r Metrisk a StoppMetrisk"
+    },
+    "FunctionMetric4_sbrief": {
+      "expected": "sinus Metrisk a StoppMetrisk"
+    },
+    "FunctionMetric5_sbrief": {
+      "expected": "sum Metrisk a StoppMetrisk"
+    },
+    "CenterBarFunc_0_sbrief": {
+      "expected": "f vertikal strek g"
+    },
+    "CenterBarFunc_1_sbrief": {
+      "expected": "f vertikalstrek g"
+    },
+    "CenterBarFunc_2_sbrief": {
+      "expected": "f brutt vertikalstrek g"
+    },
+    "CenterBarFunc_3_sbrief": {
+      "expected": "f dobbel vertikal strek g"
+    },
+    "CenterBarFunc_4_sbrief": {
+      "expected": "f parallell til g"
+    },
+    "CenterBarFunc_5_sbrief": {
+      "expected": "f trippel vertikalstrek-avgrensing g"
+    },
+    "CenterBarFunc_6_sbrief": {
+      "expected": "sinus trippel vertikalstrek-avgrensing g"
+    }
+  }
+}

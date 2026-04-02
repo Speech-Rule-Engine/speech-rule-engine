@@ -1,0 +1,259 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakPart3Adornments",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
+  "information": "Italian Clearspeak Part3Adornments rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Prime001": {
+      "expected": "A primo, B primo"
+    },
+    "Prime002": {
+      "expected": "A doppio primo, B doppio primo"
+    },
+    "Prime003": {
+      "expected": "A triplo primo, B triplo primo"
+    },
+    "Prime004": {
+      "expected": "f primo di x"
+    },
+    "Prime005": {
+      "expected": "f doppio primo di x"
+    },
+    "Prime006": {
+      "expected": "f triplo primo di x"
+    },
+    "Prime007": {
+      "expected": "1 piede"
+    },
+    "Prime008": {
+      "expected": "2 piedi"
+    },
+    "Prime009": {
+      "expected": "1 pollice"
+    },
+    "Prime010": {
+      "expected": "2 pollici"
+    },
+    "Prime011": {
+      "expected": "16 piedi, 10 pollici"
+    },
+    "Prime012": {
+      "expected": "45 grado, 10 minuti"
+    },
+    "Prime013": {
+      "expected": "x grado, y minuti"
+    },
+    "Prime016": {
+      "expected": "1 minuto"
+    },
+    "Prime017": {
+      "expected": "x minuti"
+    },
+    "Prime018": {
+      "expected": "2 minuti"
+    },
+    "Prime019": {
+      "expected": "1 secondo"
+    },
+    "Prime020": {
+      "expected": "x secondi"
+    },
+    "Prime021": {
+      "expected": "2 secondi"
+    },
+    "Prime022": {
+      "expected": "16 minuti, 10 secondi"
+    },
+    "Prime023": {
+      "expected": "x minuti, y secondi"
+    },
+    "Prime024": {
+      "expected": "45 grado, 10 minuti"
+    },
+    "Prime025": {
+      "expected": "45 grado, 10 minuti, 25 secondi"
+    },
+    "Prime026": {
+      "expected": "A primo, B primo"
+    },
+    "Prime027": {
+      "expected": "A doppio primo, B doppio primo"
+    },
+    "Prime028": {
+      "expected": "A triplo primo, B triplo primo"
+    },
+    "Prime029": {
+      "expected": "f primo di x"
+    },
+    "Prime030": {
+      "expected": "f doppio primo di x"
+    },
+    "Prime031": {
+      "expected": "f triplo primo di x"
+    },
+    "Prime032": {
+      "expected": "1 piede"
+    },
+    "Prime033": {
+      "expected": "x piedi"
+    },
+    "Prime034": {
+      "expected": "2 piedi"
+    },
+    "Prime035": {
+      "expected": "1 pollice"
+    },
+    "Prime036": {
+      "expected": "x pollici"
+    },
+    "Prime037": {
+      "expected": "2 pollici"
+    },
+    "Prime042": {
+      "expected": "A primo, B primo"
+    },
+    "Prime043": {
+      "expected": "A doppio primo, B doppio primo"
+    },
+    "Prime044": {
+      "expected": "A triplo primo, B triplo primo"
+    },
+    "Prime045": {
+      "expected": "f primo di x"
+    },
+    "Prime046": {
+      "expected": "f doppio primo di x"
+    },
+    "Prime047": {
+      "expected": "f triplo primo di x"
+    },
+    "CombPerm001a": {
+      "expected": "n C r"
+    },
+    "CombPerm002a": {
+      "expected": "n P r"
+    },
+    "CombPerm003a": {
+      "expected": "10 C 3"
+    },
+    "CombPerm004a": {
+      "expected": "10 P 3"
+    },
+    "CombPerm005a": {
+      "expected": "combinazione di n per r"
+    },
+    "CombPerm006a": {
+      "expected": "permutazione di n per r"
+    },
+    "CombPerm007a": {
+      "expected": "combinazione di 10 per 3"
+    },
+    "CombPerm008a": {
+      "expected": "permutazione di 10 per 3"
+    },
+    "Bar001": {
+      "expected": "f barra sopra"
+    },
+    "Bar002": {
+      "expected": "f barra sopra di x"
+    },
+    "Bar003": {
+      "expected": "f pedice 1, barra sopra"
+    },
+    "Bar004": {
+      "expected": "f pedice 1, barra sopra di x"
+    },
+    "Bar005": {
+      "expected": "z barra sopra"
+    },
+    "Bar006": {
+      "expected": "decimale periodico 0 virgola 3 periodico"
+    },
+    "Bar007": {
+      "expected": "decimale periodico 0 virgola 1 2 periodico"
+    },
+    "Bar008": {
+      "expected": "decimale periodico 2 virgola 1 3 4 periodico"
+    },
+    "Bar009": {
+      "expected": "decimale periodico punto 1 3 seguito da 4 6 7 periodico"
+    },
+    "Bar010": {
+      "expected": "decimale periodico 2 5 punto 1 2 seguito da 6 3 2 periodico"
+    },
+    "Bar011": {
+      "expected": "z, z barra sopra"
+    },
+    "Bar012": {
+      "expected": "linea segmento C D"
+    },
+    "Bar013": {
+      "expected": "linea segmento C primo D primo"
+    },
+    "Bar014": {
+      "expected": "linea segmento C doppio primo D doppio primo"
+    },
+    "Bar015": {
+      "expected": "linea segmento C triplo primo D triplo primo"
+    },
+    "Bar016": {
+      "expected": "coniugato complesso di z"
+    },
+    "Bar017": {
+      "expected": "z, coniugato complesso di z"
+    },
+    "Bar018": {
+      "expected": "coniugato complesso di 3 meno 2 i, uguale a 3 più 2 i"
+    },
+    "Bar006a": {
+      "expected": "decimale periodico 0 virgola 3 periodico"
+    },
+    "Bar007a": {
+      "expected": "decimale periodico 0 virgola 1 2 periodico"
+    },
+    "Bar008a": {
+      "expected": "decimale periodico 2 virgola 1 3 4 periodico"
+    },
+    "Bar009a": {
+      "expected": "decimale periodico punto 1 3 seguito da 4 6 7 periodico"
+    },
+    "Bar010a": {
+      "expected": "decimale periodico 2 5 punto 1 2 seguito da 6 3 2 periodico"
+    },
+    "Equal001": {
+      "expected": "è definito essere"
+    },
+    "Equal002": {
+      "expected": "parentesi tonda aperta, f composizione g, parentesi tonda chiusa, di x, è definito essere, f di, g di x"
+    },
+    "Equal003": {
+      "expected": "segno uguale a con punto interrogativo sopra esso"
+    },
+    "Equal004": {
+      "expected": "x più 2 segno uguale a con punto interrogativo sopra esso 4"
+    },
+    "Prime014": {
+      "expected": "45 grado, 10 minuti, 25 secondi"
+    },
+    "Prime015": {
+      "expected": "x grado, y minuti, z secondi"
+    },
+    "Prime038": {
+      "expected": "16 piedi, 10 pollici"
+    },
+    "Prime039": {
+      "expected": "x piedi, y pollici"
+    },
+    "Prime040": {
+      "expected": "45 grado, 10 minuti"
+    },
+    "Prime041": {
+      "expected": "45 grado, 10 minuti, 25 secondi"
+    }
+  }
+}

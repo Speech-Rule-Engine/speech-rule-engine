@@ -1,0 +1,6 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Rebuild enriched postfix rewrite tests.",
+  "base": "input/semantic/postfix_rewrite.json"
+}

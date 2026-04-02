@@ -462,12 +462,17 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"메트릭\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"메트릭\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"메트릭시작\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"메트릭끝\" (span:content/*[1], pause: short)"
+      "[p] (pause:short); [t] \"메트릭시작\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"메트릭끝\" (span:content/*[2], pause: short)"
+    ],
+    [
+      "Action",
+      "fences-auto-interval",
+      "[n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -642,7 +647,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -652,7 +657,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"마이너스 루트\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"마이너스 루트\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -662,7 +667,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -672,7 +677,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"플러스 루트\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -767,27 +772,27 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"자연수 집합\" (span:.)"
+      "[t] \"자연수 집합\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"정수 집합\" (span:.)"
+      "[t] \"정수 집합\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"유리수 집합\" (span:.)"
+      "[t] \"유리수 집합\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"실수 집합\" (span:.)"
+      "[t] \"실수 집합\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"복소수 집합\" (span:.)"
+      "[t] \"복소수 집합\""
     ],
     [
       "Action",
@@ -817,47 +822,47 @@
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"영을 포함한 자연수 집합\" (span:.)"
+      "[t] \"영을 포함한 자연수 집합\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"양의 정수 집합\" (span:.)"
+      "[t] \"양의 정수 집합\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"음의 정수 집합\" (span:.)"
+      "[t] \"음의 정수 집합\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"양의 유리수 집합\" (span:.)"
+      "[t] \"양의 유리수 집합\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"음의 유리수 집합\" (span:.)"
+      "[t] \"음의 유리수 집합\""
     ],
     [
       "Action",
       "fences-neutral",
-      "[p] (pause:short); [t] \"절댓값\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"절댓값\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"절댓값시작\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"절댓값끝\"  (span:content/*[1], pause: short)"
+      "[p] (pause:short); [t] \"절댓값시작\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"절댓값끝\"  (span:content/*[2], pause: short)"
     ],
     [
       "Action",
       "fences-neutral-cardinality",
-      "[p] (pause:short); [n] children/*[1]; [t] \"의 기수\" (span:.); [p] (pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의 기수\"; [p] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"행렬식\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"행렬식\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -1077,7 +1082,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [n] children/*[2]; [t] \"에서\"; [n] children/*[3]; [t] \"까지\""
+      "[n] children/*[1]; [n] children/*[2]; [t] \"에서\"; [n] children/*[3]; [t] \"까지\" (pause:short)"
     ],
     [
       "Action",
@@ -1363,10 +1368,41 @@
       "Action",
       "line-segment",
       "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"추론 규칙\"; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"추론 규칙\"; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFwordCounter,context:\"전제 \");"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"꼬리표\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"공리\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"빈 공리\""
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

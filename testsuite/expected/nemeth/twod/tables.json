@@ -1,0 +1,28 @@
+{
+  "factory": "braille2D",
+  "name": "Nemeth2dTablesTests",
+  "information": "Two Dimensional rules for table structures.",
+  "locale": "nemeth",
+  "domain": "default",
+  "style": "default",
+  "modality": "braille",
+  "active": "Nemeth2D",
+  "tests": {
+    "simple_cayley": {
+      "input": "<mtable columnalign=\"left left left\" columnspacing=\"1em\" rowspacing=\"4pt\" columnlines=\"solid none\" rowlines=\"solid none\"><mtr><mtd><mo>&#x22C5;</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></math>",
+      "expected": "⠡⠀⠀⠀⠼⠴⠀⠀⠼⠂\n⠐⠒⠀⠀⠐⠒⠀⠀⠐⠒\n⠼⠴⠀⠀⠼⠴⠀⠀⠼⠴\n⠼⠂⠀⠀⠼⠴⠀⠀⠼⠂"
+    },
+    "aata_9.11": {
+      "input": "<math><mtable columnalign=\"center center center center\" columnspacing=\"1em\" rowspacing=\"4pt\" columnlines=\"solid none none\" rowlines=\"solid none\"><mtr><mtd><mo>+</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></math>",
+      "expected": "⠬⠀⠀⠀⠼⠴⠀⠀⠼⠂⠀⠀⠼⠆\n⠐⠒⠀⠀⠐⠒⠀⠀⠐⠒⠀⠀⠐⠒\n⠼⠴⠀⠀⠼⠴⠀⠀⠼⠂⠀⠀⠼⠆\n⠼⠂⠀⠀⠼⠂⠀⠀⠼⠆⠀⠀⠼⠴\n⠼⠆⠀⠀⠼⠆⠀⠀⠼⠴⠀⠀⠼⠂"
+    },
+    "aata_10.5": {
+      "input": "<math><mtable columnalign=\"center center center\" columnspacing=\"1em\" rowspacing=\"4pt\" columnlines=\"solid none\" rowlines=\"solid none\"><mtr><mtd></mtd><mtd><mi>N</mi></mtd><mtd><mo stretchy=\"false\">(</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mn>2</mn><mo stretchy=\"false\">)</mo><mi>N</mi></mtd></mtr><mtr><mtd><mi>N</mi></mtd><mtd><mi>N</mi></mtd><mtd><mo stretchy=\"false\">(</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mn>2</mn><mo stretchy=\"false\">)</mo><mi>N</mi></mtd></mtr><mtr><mtd><mo stretchy=\"false\">(</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mn>2</mn><mo stretchy=\"false\">)</mo><mi>N</mi></mtd><mtd><mo stretchy=\"false\">(</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mn>2</mn><mo stretchy=\"false\">)</mo><mi>N</mi></mtd><mtd><mi>N</mi></mtd></mtr></mtable></math>",
+      "expected": "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠷⠼⠂⠀⠼⠆⠾⠠⠝\n⠐⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠐⠒⠒⠒⠒⠒⠒⠒⠒⠀⠀⠐⠒⠒⠒⠒⠒⠒⠒⠒\n⠠⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠷⠼⠂⠀⠼⠆⠾⠠⠝\n⠷⠼⠂⠀⠼⠆⠾⠠⠝⠀⠀⠷⠼⠂⠀⠼⠆⠾⠠⠝⠀⠀⠠⠝⠀⠀⠀⠀⠀⠀⠀"
+    },
+    "aata_10.6": {
+      "input": "<math><mtable columnalign=\"center center center center\" columnspacing=\"1em\" rowspacing=\"4pt\" columnlines=\"solid none none\" rowlines=\"solid none\"><mtr><mtd><mo>+</mo></mtd><mtd><mn>0</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>1</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>2</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>0</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>1</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>2</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd></mtr><mtr><mtd><mn>1</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>1</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>2</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>0</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd></mtr><mtr><mtd><mn>2</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>2</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>0</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd><mtd><mn>1</mn><mo>+</mo><mn>3</mn><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow></mtd></mtr></mtable></math>",
+      "expected": "⠬⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⠴⠬⠒⠈⠰⠠⠵⠀⠀⠼⠂⠬⠒⠈⠰⠠⠵⠀⠀⠼⠆⠬⠒⠈⠰⠠⠵\n⠐⠒⠒⠒⠒⠒⠒⠒⠀⠀⠐⠒⠒⠒⠒⠒⠒⠒⠀⠀⠐⠒⠒⠒⠒⠒⠒⠒⠀⠀⠐⠒⠒⠒⠒⠒⠒⠒\n⠼⠴⠬⠒⠈⠰⠠⠵⠀⠀⠼⠴⠬⠒⠈⠰⠠⠵⠀⠀⠼⠂⠬⠒⠈⠰⠠⠵⠀⠀⠼⠆⠬⠒⠈⠰⠠⠵\n⠼⠂⠬⠒⠈⠰⠠⠵⠀⠀⠼⠂⠬⠒⠈⠰⠠⠵⠀⠀⠼⠆⠬⠒⠈⠰⠠⠵⠀⠀⠼⠴⠬⠒⠈⠰⠠⠵\n⠼⠆⠬⠒⠈⠰⠠⠵⠀⠀⠼⠆⠬⠒⠈⠰⠠⠵⠀⠀⠼⠴⠬⠒⠈⠰⠠⠵⠀⠀⠼⠂⠬⠒⠈⠰⠠⠵"
+    }
+  }
+}

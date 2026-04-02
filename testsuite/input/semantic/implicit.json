@@ -1,0 +1,256 @@
+{
+  "_comment0_": "Tests for the juxtaposition heuristic",
+  "tests": {
+    "Juxta_0": {
+      "input": "<mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi><mo mathvariant=\"italic\">⁢</mo><mi>n</mi>"
+    },
+    "Juxta_1": {
+      "input": "<mrow><mpadded><mi>n</mi><mo mathvariant=\"normal\">/</mo><mi>ϕ</mi></mpadded></mrow><mo mathvariant=\"italic\">⁢</mo><mi>m</mi>"
+    },
+    "Juxta_2": {
+      "_comment1_": "⁢⁢ab",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow><mo>&#x2062;</mo></mrow><mrow><mo>&#x2062;</mo></mrow><mi>a</mi><mi>b</mi></mstyle>"
+    },
+    "Juxta_3": {
+      "_comment2_": "a(b+c)⁢d*e",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mo stretchy=\"false\">(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo stretchy=\"false\">)</mo><mrow><mo>&#x2062;</mo></mrow><mi>d</mi><mo>&#x2217;</mo><mi>e</mi></mstyle>"
+    },
+    "Juxta_4": {
+      "_comment3_": "a(b+c)⁢d*e",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mo stretchy=\"false\">(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo stretchy=\"false\">)</mo><mrow><mo>&#x2062;</mo></mrow><mi>d</mi><mo>&#x2217;</mo><mi>e</mi></mstyle>"
+    },
+    "Juxta_5": {
+      "_comment4_": "a⁢db⁢c",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mi>d</mi><mi>b</mi><mi>c</mi></mstyle>"
+    },
+    "Juxta_6": {
+      "_comment5_": "a⁢d/b⁢c",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mrow><mo>&#x2062;</mo></mrow><mi>d</mi><mrow><mo>/</mo></mrow><mi>b</mi><mrow><mo>&#x2062;</mo></mrow><mi>c</mi></mstyle>"
+    },
+    "Juxta_7": {
+      "_comment6_": "a⁢d/b⁢c/e⁢f",
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>a</mi><mrow><mo>&#x2062;</mo></mrow><mi>d</mi><mrow><mo>/</mo></mrow><mi>b</mi><mrow><mo>&#x2062;</mo></mrow><mi>c</mi><mrow><mo>/</mo></mrow><mi>e</mi><mrow><mo>&#x2062;</mo></mrow><mi>f</mi></mstyle>"
+    },
+    "Juxta_8": {
+      "input": "<mi>a</mi><mi>b</mi><mo>/</mo><mi>c</mi><mi>d</mi>"
+    },
+    "Juxta_9": {
+      "input": "<mo>&#x2211;</mo><mrow> <mi>a</mi><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi></mrow>"
+    },
+    "Juxta_10": {
+      "input": "<mo>&#x2211;</mo><mi>a</mi><mrow><mi>b</mi><mo>+</mo><mi>c</mi><mi>d</mi></mrow>"
+    },
+    "Juxta_11": {
+      "_comment7_": "Cases: 9",
+      "input": "<mi>a</mi><mrow><mi>c</mi><mi>d</mi></mrow>"
+    },
+    "Juxta_12": {
+      "_comment8_": "Cases: 3",
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mi>c</mi>"
+    },
+    "Juxta_13": {
+      "_comment9_": "Cases: 3+9",
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mrow><mi>c</mi><mi>d</mi></mrow>"
+    },
+    "Juxta_14": {
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi><mrow><mi>d</mi><mi>e</mi></mrow>"
+    },
+    "Juxta_15": {
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mrow><mi>d</mi><mi>e</mi></mrow>"
+    },
+    "Juxta_16": {
+      "_comment10_": "Cases: 8",
+      "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mi>c</mi>"
+    },
+    "Juxta_17": {
+      "_comment11_": "Cases: 6 + 8",
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo><mi>c</mi>"
+    },
+    "Juxta_18": {
+      "_comment12_": "Cases: 3 + 6 ",
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mi>d</mi>"
+    },
+    "Juxta_19": {
+      "_comment13_": "Cases: 6 + 8 + 9",
+      "input": "<mi>f</mi><mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mi>d</mi>"
+    },
+    "Juxta_20": {
+      "_comment14_": "Cases: 6 + 8 + 9",
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mi>d</mi>"
+    },
+    "Juxta_21": {
+      "_comment15_": "b\\sin⁢\\sin(a)",
+      "input": "<mi>b</mi><mi>sin</mi><mrow><mo>&#x2062;</mo></mrow><mi>sin</mi><mo>(</mo><mi>a</mi><mo>)</mo>"
+    },
+    "Juxta_22": {
+      "_comment16_": "b+⁢\\sin(a)",
+      "input": "<mi>b</mi><mo>+</mo><mo>&#x2062;</mo><mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mi>a</mi><mo>)</mo>"
+    },
+    "Juxta_23": {
+      "_comment17_": "b+⁢+a",
+      "input": "<mi>b</mi><mo>+</mo><mo>&#x2062;</mo><mo>+</mo><mi>a</mi>"
+    },
+    "Juxta_24": {
+      "input": "<mrow><mrow><mi>a</mi><mi>c</mi></mrow><mo>&#x2062;</mo><mi>d</mi><mo>/</mo><mi>e</mi><mrow><mi>d</mi><mo>&#x2062;</mo><mi>e</mi></mrow></mrow>"
+    },
+    "Juxta_25": {
+      "input": "<mrow><mi>a</mi><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>d</mi><mo>/</mo><mi>e</mi><mrow><mi>d</mi><mo>&#x2062;</mo><mi>e</mi></mrow></mrow>"
+    },
+    "Juxta_26": {
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mrow><mi>d</mi><mi>e</mi></mrow>"
+    },
+    "Juxta_27": {
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mrow><mi>d</mi><mi>e</mi></mrow>"
+    },
+    "Juxta_28": {
+      "input": "<mrow><mi>a</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mrow><mi>d</mi><mi>e</mi></mrow>"
+    },
+    "Juxta_29": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mi>b</mi></mrow><mrow><mi>d</mi><mo>&#x2062;</mo><mi>e</mi></mrow>"
+    },
+    "Juxta_Unit_0": {
+      "input": "<mn>1</mn><mo>&#x2062;</mo><mi class=\"MathML-Unit\">mm</mi>"
+    },
+    "Juxta_Unit_1": {
+      "input": "<mn>1</mn><mo>&#x2062;</mo><mi class=\"MathML-Unit\">mm</mi><mi class=\"MathML-Unit\">h</mi>"
+    },
+    "Juxta_Unit_2": {
+      "input": "<mn>1</mn><mo>&#x2062;</mo><mi class=\"MathML-Unit\">mm</mi><mo>&#x2062;</mo><mi class=\"MathML-Unit\">h</mi>"
+    },
+    "Juxta_Unit_3": {
+      "input": "<mn>1</mn><mo>&#x2062;</mo><mi class=\"MathML-Unit\">mm</mi><mo>&#x2062;</mo><mi>h</mi>"
+    },
+    "Issue_457_0": {
+      "tex": "{aa}_{b}a=",
+      "input": "<msub><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msub><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_1": {
+      "input": "<msup><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msup><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_2": {
+      "input": "<munder><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi></mrow></munder><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_3": {
+      "input": "<mover><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mover><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_4": {
+      "tex": "{aa}_{b}a=",
+      "input": "<msub><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi><mi>b</mi></mrow></msub><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_5": {
+      "input": "<msup><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi><mi>b</mi></mrow></msup><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_6": {
+      "input": "<munder><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi><mi>b</mi></mrow></munder><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_7": {
+      "input": "<mover><mrow><mi>a</mi><mi>a</mi></mrow><mrow><mi>b</mi><mi>b</mi></mrow></mover><mi>a</mi><mo>=</mo>"
+    },
+    "Issue_457_8": {
+      "input": "<msub><mrow><mi>O</mi><mi>o</mi></mrow><mi>A</mi></msub><mo>(</mo><mo>)</mo><mo>,</mo>"
+    },
+    "Issue_457_9": {
+      "input": "<msup><mrow><mi>O</mi><mi>o</mi></mrow><mi>A</mi></msup><mo>(</mo><mo>)</mo><mo>,</mo>"
+    },
+    "Issue_457_10": {
+      "input": "<mrow><msub><mrow><mi>a</mi><mo>&#x2062;</mo><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msub><mo>&#x2062;</mo><mi>a</mi></mrow><mo>=</mo>"
+    },
+    "Issue_457_11": {
+      "input": "<mrow><msub><mrow><mi>a</mi><mi>a</mi></mrow><mi>b</mi></msub><mo>&#x2062;</mo><mi>a</mi></mrow>"
+    },
+    "Issue_457_12": {
+      "tex": "{aa}_{b}a=",
+      "input": "<msub><mrow><mi>a</mi><mo>&#x2062;</mo><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msub><mo>&#x2062;</mo><mi>a</mi><mo>=</mo>"
+    },
+    "Prefix_0": {
+      "input": "<mi>a</mi><mi>b</mi>"
+    },
+    "Prefix_1": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mi>b</mi>"
+    },
+    "Prefix_2": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mi>b</mi>"
+    },
+    "Prefix_3": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi>"
+    },
+    "Prefix_4": {
+      "input": "<mo>&#x2062;</mo><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi>"
+    },
+    "Prefix_5": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi>"
+    },
+    "Prefix_6": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi>"
+    },
+    "Prefix_7": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mrow><mo>&#x2062;</mo><mi>b</mi></mrow><mrow><mo>&#x2062;</mo><mi>c</mi></mrow>"
+    },
+    "Prefix_8": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi><mrow><mo>&#x2062;</mo><mi>c</mi></mrow>"
+    },
+    "Prefix_9": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mrow><mo>&#x2062;</mo><mi>b</mi></mrow><mo>&#x2062;</mo><mi>c</mi>"
+    },
+    "Postfix_0": {
+      "input": "<mi>b</mi><mo>&#x2062;</mo>"
+    },
+    "Postfix_1": {
+      "input": "<mi>a</mi><mi>b</mi><mo>&#x2062;</mo>"
+    },
+    "Postfix_2": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo>"
+    },
+    "Postfix_3": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo>"
+    },
+    "Postfix_4": {
+      "input": "<mi>b</mi><mo>&#x2062;</mo><mo>&#x2062;</mo>"
+    },
+    "Postfix_5": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow><mi>b</mi><mo>&#x2062;</mo></mrow><mi>c</mi>"
+    },
+    "Postfix_6": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo></mrow><mo>&#x2062;</mo><mrow><mi>b</mi><mo>&#x2062;</mo></mrow><mi>c</mi>"
+    },
+    "Postfix_7": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo></mrow><mrow><mi>b</mi><mo>&#x2062;</mo></mrow><mi>c</mi>"
+    },
+    "MixFix_0": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo></mrow><mrow><mo>&#x2062;</mo><mi>d</mi></mrow><mrow><mi>c</mi><mo>&#x2062;</mo><mi>e</mi></mrow>"
+    },
+    "MixFix_1": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo></mrow><mrow><mo>&#x2062;</mo><mi>d</mi></mrow><mi>c</mi>"
+    },
+    "MixFix_2": {
+      "input": "<mrow><mi>a</mi><mo>&#x2062;</mo></mrow><mrow><mo>&#x2062;</mo><mi>d</mi></mrow><mo>&#x2062;</mo><mi>c</mi>"
+    },
+    "MixFix_3": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow><mrow><mo>&#x2062;</mo><mi>q</mi></mrow><mo>&#x2062;</mo><mi>d</mi></mrow><mo>&#x2062;</mo><mi>c</mi>"
+    },
+    "MixFix_4": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo><mrow><mi>c</mi><mo>&#x2062;</mo><mi>d</mi></mrow><mo>&#x2062;</mo><mi>e</mi>"
+    },
+    "MixFix_5": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow><mi>b</mi><mi>q</mi><mi>b</mi></mrow><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>q</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>b</mi><mo>&#x2062;</mo>"
+    },
+    "OutsideNesting_0": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something=\"other\"><mi>b</mi><mi>q</mi><mi>b</mi></mrow>"
+    },
+    "OutsideNesting_1": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something=\"other\"><mi>b</mi><mi>q</mi><mi>b</mi></mrow><mrow something=\"other2\"><mi>b</mi><mi>q</mi><mi>b</mi></mrow>"
+    },
+    "OutsideNesting_2": {
+      "input": "<mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mrow something=\"other2\"><mi>b</mi><mi>q</mi></mrow>"
+    },
+    "OutsideNesting_3": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>b</mi><mi>q</mi><mi>b</mi></mrow>"
+    },
+    "OutsideNesting_4": {
+      "input": "<mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>q</mi><mi>b</mi></mrow>"
+    },
+    "SingletonNesting_0": {
+      "input": "<mi>a</mi><mrow><mi>b</mi><mrow><mi>c</mi><mrow><mi>d</mi></mrow><mi>e</mi></mrow><mi>f</mi></mrow><mi>g</mi>"
+    }
+  }
+}

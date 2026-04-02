@@ -1,0 +1,344 @@
+{
+  "name": "NemethDefaultAlphabetItalic",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet italic tests.",
+  "tests": {
+    "𝐴": {
+      "expected": "⠨⠰⠠⠁"
+    },
+    "𝐵": {
+      "expected": "⠨⠰⠠⠃"
+    },
+    "𝐶": {
+      "expected": "⠨⠰⠠⠉"
+    },
+    "𝐷": {
+      "expected": "⠨⠰⠠⠙"
+    },
+    "𝐸": {
+      "expected": "⠨⠰⠠⠑"
+    },
+    "𝐹": {
+      "expected": "⠨⠰⠠⠋"
+    },
+    "𝐺": {
+      "expected": "⠨⠰⠠⠛"
+    },
+    "𝐻": {
+      "expected": "⠨⠰⠠⠓"
+    },
+    "𝐼": {
+      "expected": "⠨⠰⠠⠊"
+    },
+    "𝐽": {
+      "expected": "⠨⠰⠠⠚"
+    },
+    "𝐾": {
+      "expected": "⠨⠰⠠⠅"
+    },
+    "𝐿": {
+      "expected": "⠨⠰⠠⠇"
+    },
+    "𝑀": {
+      "expected": "⠨⠰⠠⠍"
+    },
+    "𝑁": {
+      "expected": "⠨⠰⠠⠝"
+    },
+    "𝑂": {
+      "expected": "⠨⠰⠠⠕"
+    },
+    "𝑃": {
+      "expected": "⠨⠰⠠⠏"
+    },
+    "𝑄": {
+      "expected": "⠨⠰⠠⠟"
+    },
+    "𝑅": {
+      "expected": "⠨⠰⠠⠗"
+    },
+    "𝑆": {
+      "expected": "⠨⠰⠠⠎"
+    },
+    "𝑇": {
+      "expected": "⠨⠰⠠⠞"
+    },
+    "𝑈": {
+      "expected": "⠨⠰⠠⠥"
+    },
+    "𝑉": {
+      "expected": "⠨⠰⠠⠧"
+    },
+    "𝑊": {
+      "expected": "⠨⠰⠠⠺"
+    },
+    "𝑋": {
+      "expected": "⠨⠰⠠⠭"
+    },
+    "𝑌": {
+      "expected": "⠨⠰⠠⠽"
+    },
+    "𝑍": {
+      "expected": "⠨⠰⠠⠵"
+    },
+    "𝑎": {
+      "expected": "⠨⠰⠁"
+    },
+    "𝑏": {
+      "expected": "⠨⠰⠃"
+    },
+    "𝑐": {
+      "expected": "⠨⠰⠉"
+    },
+    "𝑑": {
+      "expected": "⠨⠰⠙"
+    },
+    "𝑒": {
+      "expected": "⠨⠰⠑"
+    },
+    "𝑓": {
+      "expected": "⠨⠰⠋"
+    },
+    "𝑔": {
+      "expected": "⠨⠰⠛"
+    },
+    "ℎ": {
+      "expected": "⠨⠰⠓"
+    },
+    "𝑖": {
+      "expected": "⠨⠰⠊"
+    },
+    "𝑗": {
+      "expected": "⠨⠰⠚"
+    },
+    "𝑘": {
+      "expected": "⠨⠰⠅"
+    },
+    "𝑙": {
+      "expected": "⠨⠰⠇"
+    },
+    "𝑚": {
+      "expected": "⠨⠰⠍"
+    },
+    "𝑛": {
+      "expected": "⠨⠰⠝"
+    },
+    "𝑜": {
+      "expected": "⠨⠰⠕"
+    },
+    "𝑝": {
+      "expected": "⠨⠰⠏"
+    },
+    "𝑞": {
+      "expected": "⠨⠰⠟"
+    },
+    "𝑟": {
+      "expected": "⠨⠰⠗"
+    },
+    "𝑠": {
+      "expected": "⠨⠰⠎"
+    },
+    "𝑡": {
+      "expected": "⠨⠰⠞"
+    },
+    "𝑢": {
+      "expected": "⠨⠰⠥"
+    },
+    "𝑣": {
+      "expected": "⠨⠰⠧"
+    },
+    "𝑤": {
+      "expected": "⠨⠰⠺"
+    },
+    "𝑥": {
+      "expected": "⠨⠰⠭"
+    },
+    "𝑦": {
+      "expected": "⠨⠰⠽"
+    },
+    "𝑧": {
+      "expected": "⠨⠰⠵"
+    },
+    "𝛢": {
+      "expected": "⠨⠨⠠⠁"
+    },
+    "𝛣": {
+      "expected": "⠨⠨⠠⠃"
+    },
+    "𝛤": {
+      "expected": "⠨⠨⠠⠛"
+    },
+    "𝛥": {
+      "expected": "⠨⠨⠠⠙"
+    },
+    "𝛦": {
+      "expected": "⠨⠨⠠⠑"
+    },
+    "𝛧": {
+      "expected": "⠨⠨⠠⠵"
+    },
+    "𝛨": {
+      "expected": "⠨⠨⠠⠱"
+    },
+    "𝛩": {
+      "expected": "⠨⠨⠠⠹"
+    },
+    "𝛪": {
+      "expected": "⠨⠨⠠⠊"
+    },
+    "𝛫": {
+      "expected": "⠨⠨⠠⠅"
+    },
+    "𝛬": {
+      "expected": "⠨⠨⠠⠇"
+    },
+    "𝛭": {
+      "expected": "⠨⠨⠠⠍"
+    },
+    "𝛮": {
+      "expected": "⠨⠨⠠⠝"
+    },
+    "𝛯": {
+      "expected": "⠨⠨⠠⠭"
+    },
+    "𝛰": {
+      "expected": "⠨⠨⠠⠕"
+    },
+    "𝛱": {
+      "expected": "⠨⠨⠠⠏"
+    },
+    "𝛲": {
+      "expected": "⠨⠨⠠⠗"
+    },
+    "𝛳": {
+      "expected": "⠨⠨⠠⠹"
+    },
+    "𝛴": {
+      "expected": "⠨⠨⠠⠎"
+    },
+    "𝛵": {
+      "expected": "⠨⠨⠠⠞"
+    },
+    "𝛶": {
+      "expected": "⠨⠨⠠⠥"
+    },
+    "𝛷": {
+      "expected": "⠨⠨⠠⠋"
+    },
+    "𝛸": {
+      "expected": "⠨⠨⠠⠯"
+    },
+    "𝛹": {
+      "expected": "⠨⠨⠠⠽"
+    },
+    "𝛺": {
+      "expected": "⠨⠨⠠⠺"
+    },
+    "𝛻": {
+      "expected": "⠨⠨⠫"
+    },
+    "𝛼": {
+      "expected": "⠨⠨⠁"
+    },
+    "𝛽": {
+      "expected": "⠨⠨⠃"
+    },
+    "𝛾": {
+      "expected": "⠨⠨⠛"
+    },
+    "𝛿": {
+      "expected": "⠨⠨⠙"
+    },
+    "𝜀": {
+      "expected": "⠨⠨⠑"
+    },
+    "𝜁": {
+      "expected": "⠨⠨⠵"
+    },
+    "𝜂": {
+      "expected": "⠨⠨⠱"
+    },
+    "𝜃": {
+      "expected": "⠨⠨⠹"
+    },
+    "𝜄": {
+      "expected": "⠨⠨⠊"
+    },
+    "𝜅": {
+      "expected": "⠨⠨⠅"
+    },
+    "𝜆": {
+      "expected": "⠨⠨⠇"
+    },
+    "𝜇": {
+      "expected": "⠨⠨⠍"
+    },
+    "𝜈": {
+      "expected": "⠨⠨⠝"
+    },
+    "𝜉": {
+      "expected": "⠨⠨⠭"
+    },
+    "𝜊": {
+      "expected": "⠨⠨⠕"
+    },
+    "𝜋": {
+      "expected": "⠨⠨⠏"
+    },
+    "𝜌": {
+      "expected": "⠨⠨⠗"
+    },
+    "𝜍": {
+      "expected": "⠨⠨⠈⠎"
+    },
+    "𝜎": {
+      "expected": "⠨⠨⠎"
+    },
+    "𝜏": {
+      "expected": "⠨⠨⠞"
+    },
+    "𝜐": {
+      "expected": "⠨⠨⠥"
+    },
+    "𝜑": {
+      "expected": "⠨⠨⠈⠋"
+    },
+    "𝜒": {
+      "expected": "⠨⠨⠯"
+    },
+    "𝜓": {
+      "expected": "⠨⠨⠽"
+    },
+    "𝜔": {
+      "expected": "⠨⠨⠺"
+    },
+    "𝜕": {
+      "expected": "⠨⠈⠙"
+    },
+    "𝜖": {
+      "expected": "⠨⠨⠑"
+    },
+    "𝜗": {
+      "expected": "⠨⠨⠈⠹"
+    },
+    "𝜘": {
+      "expected": "⠨⠨⠅"
+    },
+    "𝜙": {
+      "expected": "⠨⠨⠋"
+    },
+    "𝜚": {
+      "expected": "⠨⠨⠗"
+    },
+    "𝜛": {
+      "expected": "⠨⠨⠏"
+    }
+  }
+}

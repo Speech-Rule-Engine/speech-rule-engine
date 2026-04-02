@@ -1,0 +1,244 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakMultiLineEntries",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_multi_line_entries.json",
+  "information": "Bokmal Clearspeak MultiLineEntries rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Multiline001": {
+      "expected": "2 rader, rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline002": {
+      "expected": "2 rader, rad 1: x pluss y; er lik; 7. rad 2: 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline003": {
+      "expected": "2 rader, rad 1: x; pluss; y; er lik; 7. rad 2: 2 x; pluss; 3 y; er lik; 17"
+    },
+    "Multiline004": {
+      "expected": "2 rader, rad 1: Equation 1 kolon x pluss y er lik 7. rad 2: Equation 2 kolon 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline005": {
+      "expected": "2 rader, rad 1: Equation 1 kolon; x pluss y er lik 7. rad 2: Equation 2 kolon; 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline006": {
+      "expected": "2 rader, rad 1: Equation 1 kolon; x pluss y; er lik; 7. rad 2: Equation 2 kolon; 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline007": {
+      "expected": "3 rader, rad 1: 4 x, pluss 3 y, pluss 2 z, er lik 17. rad 2: 2 x, pluss 4 y, pluss 6 z, er lik 6. rad 3: 3 x, pluss 2 y, pluss 5 z, er lik 1"
+    },
+    "Multiline008": {
+      "expected": "3 rader, rad 1: 4 x; pluss; 3 y; pluss; 2 z; er lik; 1. rad 2: 2 x; pluss; 4 y; pluss; 6 z; er lik; 6. rad 3: 3 x; pluss; 2 y; pluss; 5 z; er lik; 1"
+    },
+    "Multiline009": {
+      "expected": "3 rader, rad 1: Equation 1 kolon 4 x, pluss 3 y, pluss 2 z, er lik 17. rad 2: Equation 2 kolon 2 x, pluss 4 y, pluss 6 z, er lik 6. rad 3: Equation 3 kolon 3 x, pluss 2 y, pluss 5 z, er lik 1"
+    },
+    "Multiline010": {
+      "expected": "3 rader, rad 1: x er større enn eller er lik 0. rad 2: y er større enn eller er lik 0. rad 3: 3 x, minus 5 y, er mindre enn eller er lik 30"
+    },
+    "Multiline011": {
+      "expected": "4 rader, rad 1: 3 x, pluss 8 er lik 5 x. rad 2: 8 er lik 5 x, minus 3 x. rad 3: 8 er lik 2 x. rad 4: 4 er lik x"
+    },
+    "Multiline012": {
+      "expected": "4 rader, rad 1: 3 x; pluss; 8; er lik; 5 x; tom; tom. rad 2: tom; tom; 8; er lik; 5 x; minus; 3 x. rad 3: tom; tom; 8; er lik; 2 x; tom; tom. rad 4: tom; tom; 4; er lik; x; tom; tom"
+    },
+    "Multiline013": {
+      "expected": "4 rader, rad 1: Step 1 kolon 3 x, pluss 8 er lik 5 x. rad 2: Step 2 kolon 8 er lik 5 x, minus 3 x. rad 3: Step 3 kolon 8 er lik 2 x. rad 4: Step 4 kolon 4 er lik x"
+    },
+    "Multiline014": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x if x er mindre enn 0. tilfelle 2: x if x er større enn eller er lik 0"
+    },
+    "Multiline015": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x; if x er mindre enn 0. tilfelle 2: x; if x er større enn eller er lik 0"
+    },
+    "Multiline016": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x if x er mindre enn 0. tilfelle 2: x if x er større enn eller er lik 0"
+    },
+    "Multiline017": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x; if x er mindre enn 0. tilfelle 2: x; if x er større enn eller er lik 0"
+    },
+    "Multiline018": {
+      "expected": "2 tilfeller, tilfelle 1: f av x, er lik minus x; if x er mindre enn 0. tilfelle 2: f av x, er lik x; if x er større enn eller er lik 0"
+    },
+    "Multiline019": {
+      "expected": "2 ligninger, ligning 1: x pluss y er lik 7. ligning 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline019a": {
+      "expected": "2 ligninger, ligning 1: x pluss y; er lik; 7. ligning 2: 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline020": {
+      "expected": "2 rader, rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline021": {
+      "expected": "2 rader, rad 1: x pluss y; er lik; 7. rad 2: 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline022": {
+      "expected": "2 rader, rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline023": {
+      "expected": "2 rader, rad 1: x pluss y; er lik; 7. rad 2: 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline024": {
+      "expected": "4 steg, steg 1: 3 x, pluss 8 er lik 5 x. steg 2: 8 er lik 5 x, minus 3 x. steg 3: 8 er lik 2 x. steg 4: 4 er lik x"
+    },
+    "Multiline025": {
+      "expected": "4 steg, steg 1: 3 x; pluss; 8; er lik; 5 x; tom; tom. steg 2: tom; tom; 8; er lik; 5 x; minus; 3 x. steg 3: tom; tom; 8; er lik; 2 x; tom; tom. steg 4: tom; tom; 4; er lik; x; tom; tom"
+    },
+    "Multiline026": {
+      "expected": "3 betingelser, betingelse 1: x er større enn eller er lik 0. betingelse 2: y er større enn eller er lik 0. betingelse 3: 3 x, minus 5 y, er mindre enn eller er lik 30"
+    },
+    "Multiline026a": {
+      "expected": "3 rader, x er større enn eller er lik 0. y er større enn eller er lik 0. 3 x, minus 5 y, er mindre enn eller er lik 30"
+    },
+    "Multiline026b": {
+      "expected": "4 rader, 3 x; pluss; 8; er lik; 5 x; tom; tom. tom; tom; 8; er lik; 5 x; minus; 3 x. tom; tom; 8; er lik; 2 x; tom; tom. tom; tom; 4; er lik; x; tom; tom"
+    },
+    "Multiline026c": {
+      "expected": "f av x, er lik, 2 tilfeller, minus x if x er mindre enn 0. x if x er større enn eller er lik 0"
+    },
+    "Multiline027": {
+      "expected": "2 rader, rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline028": {
+      "expected": "2 rader, rad 1: x pluss y. er lik. 7. rad 2: 2 x, pluss 3 y. er lik. 17"
+    },
+    "Multiline029": {
+      "expected": "2 rader, rad 1: x. pluss. y. er lik. 7. rad 2: 2 x. pluss. 3 y. er lik. 17"
+    },
+    "Multiline030": {
+      "expected": "2 rader, rad 1: Equation 1 kolon. x pluss y er lik 7. rad 2: Equation 2 kolon. 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline031": {
+      "expected": "2 rader, rad 1: Equation 1 kolon. x pluss y. er lik. 7. rad 2: Equation 2 kolon. 2 x, pluss 3 y. er lik. 17"
+    },
+    "Multiline032": {
+      "expected": "3 rader, rad 1: 4 x. pluss. 3 y. pluss. 2 z. er lik. 1. rad 2: 2 x. pluss. 4 y. pluss. 6 z. er lik. 6. rad 3: 3 x. pluss. 2 y. pluss. 5 z. er lik. 1"
+    },
+    "Multiline033": {
+      "expected": "4 rader, rad 1: 3 x. pluss. 8. er lik. 5 x. tom. tom. rad 2: tom. tom. 8. er lik. 5 x. minus. 3 x. rad 3: tom. tom. 8. er lik. 2 x. tom. tom. rad 4: tom. tom. 4. er lik. x. tom. tom"
+    },
+    "Multiline034": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x. if x er mindre enn 0. tilfelle 2: x. if x er større enn eller er lik 0"
+    },
+    "Multiline035": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x. if x er mindre enn 0. tilfelle 2: x. if x er større enn eller er lik 0"
+    },
+    "Multiline036": {
+      "expected": "2 tilfeller, tilfelle 1: f av x, er lik minus x. if x er mindre enn 0. tilfelle 2: f av x, er lik x. if x er større enn eller er lik 0"
+    },
+    "Multiline037": {
+      "expected": "2 ligninger, ligning 1: x pluss y. er lik. 7. ligning 2: 2 x, pluss 3 y. er lik. 17"
+    },
+    "Multiline038": {
+      "expected": "2 rader, rad 1: x pluss y. er lik. 7. rad 2: 2 x, pluss 3 y. er lik. 17"
+    },
+    "Multiline039": {
+      "expected": "2 rader, rad 1: x pluss y. er lik. 7. rad 2: 2 x, pluss 3 y. er lik. 17"
+    },
+    "Multiline040": {
+      "expected": "4 steg, steg 1: 3 x. pluss. 8. er lik. 5 x. tom. tom. steg 2: tom. tom. 8. er lik. 5 x. minus. 3 x. steg 3: tom. tom. 8. er lik. 2 x. tom. tom. steg 4: tom. tom. 4. er lik. x. tom. tom"
+    },
+    "Multiline041": {
+      "expected": "2 rader, rad 1: x pluss y, er lik, 7. rad 2: 2 x, pluss 3 y, er lik, 17"
+    },
+    "Multiline042": {
+      "expected": "2 rader, rad 1: x, pluss, y, er lik, 7. rad 2: 2 x, pluss, 3 y, er lik, 17"
+    },
+    "Multiline043": {
+      "expected": "2 rader, rad 1: Equation 1 kolon, x pluss y er lik 7. rad 2: Equation 2 kolon, 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline044": {
+      "expected": "2 rader, rad 1: Equation 1 kolon, x pluss y, er lik, 7. rad 2: Equation 2 kolon, 2 x, pluss 3 y, er lik, 17"
+    },
+    "Multiline045": {
+      "expected": "3 rader, rad 1: 4 x, pluss, 3 y, pluss, 2 z, er lik, 1. rad 2: 2 x, pluss, 4 y, pluss, 6 z, er lik, 6. rad 3: 3 x, pluss, 2 y, pluss, 5 z, er lik, 1"
+    },
+    "Multiline046": {
+      "expected": "4 rader, rad 1: 3 x, pluss, 8, er lik, 5 x, tom, tom. rad 2: tom, tom, 8, er lik, 5 x, minus, 3 x. rad 3: tom, tom, 8, er lik, 2 x, tom, tom. rad 4: tom, tom, 4, er lik, x, tom, tom"
+    },
+    "Multiline047": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x, if x er mindre enn 0. tilfelle 2: x, if x er større enn eller er lik 0"
+    },
+    "Multiline048": {
+      "expected": "f av x, er lik, 2 tilfeller, tilfelle 1: minus x, if x er mindre enn 0. tilfelle 2: x, if x er større enn eller er lik 0"
+    },
+    "Multiline049": {
+      "expected": "2 tilfeller, tilfelle 1: f av x, er lik minus x, if x er mindre enn 0. tilfelle 2: f av x, er lik x, if x er større enn eller er lik 0"
+    },
+    "Multiline050": {
+      "expected": "2 ligninger, ligning 1: x pluss y, er lik, 7. ligning 2: 2 x, pluss 3 y, er lik, 17"
+    },
+    "Multiline051": {
+      "expected": "2 rader, rad 1: x pluss y, er lik, 7. rad 2: 2 x, pluss 3 y, er lik, 17"
+    },
+    "Multiline052": {
+      "expected": "2 rader, rad 1: x pluss y, er lik, 7. rad 2: 2 x, pluss 3 y, er lik, 17"
+    },
+    "Multiline053": {
+      "expected": "4 steg, steg 1: 3 x, pluss, 8, er lik, 5 x, tom, tom. steg 2: tom, tom, 8, er lik, 5 x, minus, 3 x. steg 3: tom, tom, 8, er lik, 2 x, tom, tom. steg 4: tom, tom, 4, er lik, x, tom, tom"
+    },
+    "Multiline054": {
+      "expected": "rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline055": {
+      "expected": "rad 1: x pluss y; er lik; 7. rad 2: 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline056": {
+      "expected": "rad 1: x; pluss; y; er lik; 7. rad 2: 2 x; pluss; 3 y; er lik; 17"
+    },
+    "Multiline057": {
+      "expected": "rad 1: Equation 1 kolon x pluss y er lik 7. rad 2: Equation 2 kolon 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline058": {
+      "expected": "rad 1: Equation 1 kolon; x pluss y er lik 7. rad 2: Equation 2 kolon; 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline059": {
+      "expected": "rad 1: Equation 1 kolon; x pluss y; er lik; 7. rad 2: Equation 2 kolon; 2 x, pluss 3 y; er lik; 17"
+    },
+    "Multiline060": {
+      "expected": "rad 1: 4 x, pluss 3 y, pluss 2 z, er lik 17. rad 2: 2 x, pluss 4 y, pluss 6 z, er lik 6. rad 3: 3 x, pluss 2 y, pluss 5 z, er lik 1"
+    },
+    "Multiline061": {
+      "expected": "rad 1: 4 x; pluss; 3 y; pluss; 2 z; er lik; 1. rad 2: 2 x; pluss; 4 y; pluss; 6 z; er lik; 6. rad 3: 3 x; pluss; 2 y; pluss; 5 z; er lik; 1"
+    },
+    "Multiline062": {
+      "expected": "rad 1: Equation 1 kolon 4 x, pluss 3 y, pluss 2 z, er lik 17. rad 2: Equation 2 kolon 2 x, pluss 4 y, pluss 6 z, er lik 6. rad 3: Equation 3 kolon 3 x, pluss 2 y, pluss 5 z, er lik 1"
+    },
+    "Multiline063": {
+      "expected": "rad 1: Step 1 kolon 3 x, pluss 8 er lik 5 x. rad 2: Step 2 kolon 8 er lik 5 x, minus 3 x. rad 3: Step 3 kolon 8 er lik 2 x. rad 4: Step 4 kolon 4 er lik x"
+    },
+    "Multiline064": {
+      "expected": "f av x, er lik, tilfelle 1: minus x if x er mindre enn 0. tilfelle 2: x if x er større enn eller er lik 0"
+    },
+    "Multiline065": {
+      "expected": "f av x, er lik, tilfelle 1: minus x; if x er mindre enn 0. tilfelle 2: x; if x er større enn eller er lik 0"
+    },
+    "Multiline066": {
+      "expected": "f av x, er lik, tilfelle 1: minus x if x er mindre enn 0. tilfelle 2: x if x er større enn eller er lik 0"
+    },
+    "Multiline067": {
+      "expected": "tilfelle 1: f av x, er lik minus x; if x er mindre enn 0. tilfelle 2: f av x, er lik x; if x er større enn eller er lik 0"
+    },
+    "Multiline068": {
+      "expected": "ligning 1: x pluss y er lik 7. ligning 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline069": {
+      "expected": "rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline070": {
+      "expected": "rad 1: x pluss y er lik 7. rad 2: 2 x, pluss 3 y, er lik 17"
+    },
+    "Multiline071": {
+      "expected": "steg 1: 3 x, pluss 8 er lik 5 x. steg 2: 8 er lik 5 x, minus 3 x. steg 3: 8 er lik 2 x. steg 4: 4 er lik x"
+    },
+    "Multiline072": {
+      "expected": "steg 1: 3 x; pluss; 8; er lik; 5 x; tom; tom. steg 2: tom; tom; 8; er lik; 5 x; minus; 3 x. steg 3: tom; tom; 8; er lik; 2 x; tom; tom. steg 4: tom; tom; 4; er lik; x; tom; tom"
+    },
+    "Multiline073": {
+      "expected": "betingelse 1: x er større enn eller er lik 0. betingelse 2: y er større enn eller er lik 0. betingelse 3: 3 x, minus 5 y, er mindre enn eller er lik 30"
+    }
+  }
+}

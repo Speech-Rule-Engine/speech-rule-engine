@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakFrench rules.",
+  "name": "FrenchClearspeakIssues",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "French Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5 et, 3 sur 224"
+    },
+    "Issue230_2": {
+      "expected": "5 et trois-quarts"
+    },
+    "IssueNumbers_1": {
+      "expected": "nombre t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "nombre dièse F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "nombre dièse F F F F"
+    },
+    "Issue320_1": {
+      "expected": "dérivée partielle"
+    },
+    "Issue320_2": {
+      "expected": "x factorielle"
+    },
+    "Issue320_3": {
+      "expected": "moins moins x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_6": {
+      "expected": "dérivée partielle dérivée partielle x"
+    },
+    "Issue320_7": {
+      "expected": "parenthèse gauche, fraction avec numérateur dérivée partielle au carré, et dénominateur dérivée partielle x au carré, plus, fraction avec numérateur dérivée partielle au carré, et dénominateur dérivée partielle y au carré, parenthèse droite, multiplié par, la valeur absolue de phi multiplié par, parenthèse gauche, x plus i en normal, y, parenthèse droite, au carré égale 0"
+    },
+    "Issue301_1": {
+      "expected": "4 millimètres"
+    },
+    "Issue301_2": {
+      "expected": "1 millimètre"
+    },
+    "Issue301_3": {
+      "expected": "4 millimètres"
+    },
+    "Issue301_4": {
+      "expected": "1 millimètre"
+    },
+    "Issue_442_0": {
+      "expected": "9 divisé par 3 pas égal à 9 multiplié par 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 divisé par 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 divisé par 3 pas égal à 9 multiplié par 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 divisé par 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "le intégrale de f de x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "le intégrale de f de x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "le intégrale de f de x, d x, égale 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 lignes, Ligne 1:, 2 lignes, Ligne 1: 100. Ligne 2: 200. Ligne 2:, 2 lignes, Ligne 1: 300. Ligne 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 lignes, Ligne 1: a; b. Ligne 2:, 2 lignes, Ligne 1:, c sub 1; c sub 2. Ligne 2:, c sub 3; c sub 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 cas, Cas 1:, 2 cas, Cas 1: b. Cas 2: c. Cas 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "la matrice de dimension 2 par 2. Rangée 1: Colonne 1, a; Colonne 2, b. Rangée 2: Colonne 1, la matrice de dimension 2 par 2. Rangée 1: c sub 1, c sub 2 Rangée 2: c sub 3, c sub 4. fin matrice; Colonne 2, d. fin matrice"
+    },
+    "Issue_689_4": {
+      "expected": "la matrice de dimension 2 par 2. Rangée 1: Colonne 1, a; Colonne 2, b. Rangée 2: Colonne 1, la matrice de dimension 2 par 2. Rangée 1: Colonne 1,, c sub 1; Colonne 2,, c sub 2. Rangée 2: Colonne 1,, c sub 3, plus a plus b; Colonne 2,, c sub 4. fin matrice; Colonne 2, d. fin matrice"
+    }
+  }
+}

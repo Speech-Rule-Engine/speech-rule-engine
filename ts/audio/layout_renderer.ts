@@ -28,8 +28,8 @@ import { XmlRenderer } from './xml_renderer.js';
 
 export class LayoutRenderer extends XmlRenderer {
   public static options = {
-    cayleyshort: Engine.getInstance().cayleyshort,
-    linebreaks: Engine.getInstance().linebreaks
+    cayleyshort: Engine.getInstance().options.cayleyshort,
+    linebreaks: Engine.getInstance().options.linebreaks
   };
 
   /**
@@ -194,7 +194,7 @@ function setRelValues(values: { [key: string]: boolean }) {
 function setTwoDim(str: string): string {
   twodExpr = '';
   const dom = DomUtil.parseInput(`<all>${str}</all>`);
-  Debugger.getInstance().output(DomUtil.formatXml(dom.toString()));
+  Debugger.getInstance().generate(() => [DomUtil.formatXml(dom.toString())]);
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
@@ -508,7 +508,7 @@ function handleCayley(cayley: Element): string {
     height: 1,
     sep: mat[0].sep
   };
-  if (Engine.getInstance().cayleyshort && mat[0].cells[0] === '⠀') {
+  if (Engine.getInstance().options.cayleyshort && mat[0].cells[0] === '⠀') {
     bar.cells[0] = '⠀';
   }
   mat.splice(1, 0, bar);
@@ -627,7 +627,7 @@ function handleFractionPart(prt: Element): string {
  * @returns A markup string with the correct linebreaking value.
  */
 function handleRelation(rel: Element): string {
-  if (!Engine.getInstance().linebreaks) {
+  if (!Engine.getInstance().options.linebreaks) {
     return recurseTree(rel);
   }
   const value = relValues.get(parseInt(rel.getAttribute('value')));

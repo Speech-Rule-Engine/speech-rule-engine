@@ -1,0 +1,7 @@
+{
+  "factory": "rebuild",
+  "base": "input/semantic/implicit.json",
+  "information": "Semantic Tree Rebuilding for juxtaposition heuristic.",
+  "exclude": [],
+  "tests": "ALL"
+}

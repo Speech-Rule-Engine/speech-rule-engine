@@ -20,20 +20,17 @@
 
 import { Span } from '../audio/span.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { LOCALE } from '../l10n/locale.js';
 import { vulgarFractionSmall } from '../l10n/transformers.js';
 import { Grammar } from '../rule_engine/grammar.js';
 import * as StoreUtil from '../rule_engine/store_util.js';
-import { register } from '../semantic_tree/semantic_annotations.js';
-import { SemanticAnnotator } from '../semantic_tree/semantic_annotator.js';
 import { isMatchingFence } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
-import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { lookupCategory } from '../rule_engine/math_compound_store.js';
 
 /**
  * Count list of nodes and combine this according to the formatted context
@@ -74,231 +71,6 @@ export function nodeCounter(
     }
   };
 }
-
-/**
- * Predicate that implements the definition of a simple expression from the
- * ClearSpeak Rules manual p.10. Quote:
- *
- * 1. A number that is an integer, a decimal, or a fraction that is spoken as an
- * ordinal
- *
- * 2. A letter, two juxtaposed letters (e.g., x, y, z, xy, yz, etc.), the
- * negative of a letter, or the negative of two juxtaposed letters (e.g., -x ,
- * -y , -z , -xy , -yz , etc.)
- *
- * 3. An integer, decimal, letter, or the negative of a letter that is followed
- * by the degree sign (e.g., 45° , -32.5° , x° , - x° )
- *
- * 4. A number that is an integer, a decimal, or a fraction that is spoken as an
- * ordinal and is followed by a letter or pair of juxtaposed letters (e.g., 2x,
- * -3y , 4.1z, 2xy, -4 yz )
- *
- * 5. A function (including trigonometric and logarithmic functions) with an
- * argument that is a simple expression (e.g., sin 2x , log y , f (x))
- *
- * @param node The semantic node.
- * @returns True if the node is a simple expression.
- */
-function isSimpleExpression(node: SemanticNode): boolean {
-  return (
-    isSimpleNumber_(node) ||
-    isSimpleLetters_(node) ||
-    isSimpleDegree_(node) ||
-    isSimpleNegative_(node) ||
-    isSimpleFunction_(node)
-  );
-}
-
-/**
- * A function (including trigonometric and logarithmic functions) with an
- * argument that is a simple expression.
- *
- * (5, including nested functions and also embellished function symbols).
- *
- * @param node The semantic node.
- * @returns True if the node is a simple function.
- */
-function isSimpleFunction_(node: SemanticNode): boolean {
-  return (
-    node.type === SemanticType.APPL &&
-    // The types are there for distinguishing non-embellished
-    // functions.
-    // TODO: (MS 2.3) Make this more robust, i.e., make sure the
-    // embellished functions are only embellished with simple
-    // expressions. node.childNodes[0].type ===
-    // SemanticType.FUNCTION &&
-    (node.childNodes[0].role === SemanticRole.PREFIXFUNC ||
-      // node.childNodes[0].type === SemanticType.IDENTIFIER &&
-      node.childNodes[0].role === SemanticRole.SIMPLEFUNC) &&
-    (isSimple_(node.childNodes[1]) ||
-      (node.childNodes[1].type === SemanticType.FENCED &&
-        isSimple_(node.childNodes[1].childNodes[0])))
-  );
-}
-
-/**
- * The negation of simple expression defined in item 1, 2, 4.
- *
- * (1 + 2 + 4, including negation).
- *
- * @param node The semantic node.
- * @returns True if the node is negated simple expression.
- */
-function isSimpleNegative_(node: SemanticNode): boolean {
-  return (
-    node.type === SemanticType.PREFIXOP &&
-    node.role === SemanticRole.NEGATIVE &&
-    isSimple_(node.childNodes[0]) &&
-    node.childNodes[0].type !== SemanticType.PREFIXOP &&
-    node.childNodes[0].type !== SemanticType.APPL &&
-    node.childNodes[0].type !== SemanticType.PUNCTUATED
-  );
-}
-
-/**
- * An integer, decimal, letter, or the negative of a letter that is followed by
- * the degree sign.
- *
- * (3, including negation).
- *
- * @param node The semantic node.
- * @returns True if the node is simple degree expression.
- */
-function isSimpleDegree_(node: SemanticNode): boolean {
-  return (
-    node.type === SemanticType.PUNCTUATED &&
-    node.role === SemanticRole.ENDPUNCT &&
-    node.childNodes.length === 2 &&
-    node.childNodes[1].role === SemanticRole.DEGREE &&
-    (isLetter_(node.childNodes[0]) ||
-      isNumber_(node.childNodes[0]) ||
-      (node.childNodes[0].type === SemanticType.PREFIXOP &&
-        node.childNodes[0].role === SemanticRole.NEGATIVE &&
-        (isLetter_(node.childNodes[0].childNodes[0]) ||
-          isNumber_(node.childNodes[0].childNodes[0]))))
-  );
-}
-
-/**
- * A letter, two juxtaposed letters (e.g., x, y, z, xy, yz, etc.), or a number
- * that is an integer, a decimal, or a fraction that is spoken as an ordinal and
- * is followed by a letter or pair of juxtaposed letters.
- *
- * (2 + 4 without negation).
- *
- * @param node The semantic node.
- * @returns True if the node is simple non-negative letter expression.
- */
-function isSimpleLetters_(node: SemanticNode): boolean {
-  return (
-    isLetter_(node) ||
-    (node.type === SemanticType.INFIXOP &&
-      node.role === SemanticRole.IMPLICIT &&
-      ((node.childNodes.length === 2 &&
-        (isLetter_(node.childNodes[0]) ||
-          isSimpleNumber_(node.childNodes[0])) &&
-        isLetter_(node.childNodes[1])) ||
-        (node.childNodes.length === 3 &&
-          isSimpleNumber_(node.childNodes[0]) &&
-          isLetter_(node.childNodes[1]) &&
-          isLetter_(node.childNodes[2]))))
-  );
-}
-
-/**
- * Node has a annotation indicating that it is a simple expression.
- *
- * @param node The semantic node.
- * @returns True if the node is already annotated as simple.
- */
-function isSimple_(node: SemanticNode): boolean {
-  return node.hasAnnotation('clearspeak', 'simple');
-}
-
-/**
- * Test for single letter.
- *
- * @param node The semantic node.
- * @returns True if the node is a single letter from any alphabet.
- */
-function isLetter_(node: SemanticNode): boolean {
-  return (
-    node.type === SemanticType.IDENTIFIER &&
-    (node.role === SemanticRole.LATINLETTER ||
-      node.role === SemanticRole.GREEKLETTER ||
-      node.role === SemanticRole.OTHERLETTER ||
-      node.role === SemanticRole.SIMPLEFUNC)
-  );
-}
-
-/**
- * Tests if a number an integer or a decimal?
- *
- * (1 without negation).
- *
- * @param node The semantic node.
- * @returns True if the number is an integer or a decimal.
- */
-function isNumber_(node: SemanticNode): boolean {
-  return (
-    node.type === SemanticType.NUMBER &&
-    (node.role === SemanticRole.INTEGER || node.role === SemanticRole.FLOAT)
-  );
-}
-
-/**
- * A number that is an integer, a decimal, or a fraction that is spoken as an
- * ordinal, but not negative.
- *
- * @param node The semantic node.
- * @returns True if node is number or a vulgar fraction.
- */
-function isSimpleNumber_(node: SemanticNode): boolean {
-  return isNumber_(node) || isSimpleFraction_(node);
-}
-
-/**
- * A fraction that is spoken as an ordinal.
- *
- * @param node The semantic node.
- * @returns True if node is a vulgar fraction that would be spoken as
- *   ordinal for the current preference settings.
- */
-function isSimpleFraction_(node: SemanticNode): boolean {
-  if (hasPreference('Fraction_Over') || hasPreference('Fraction_FracOver')) {
-    return false;
-  }
-  if (
-    node.type !== SemanticType.FRACTION ||
-    node.role !== SemanticRole.VULGAR
-  ) {
-    return false;
-  }
-  if (hasPreference('Fraction_Ordinal')) {
-    return true;
-  }
-  const enumerator = parseInt(node.childNodes[0].textContent, 10);
-  const denominator = parseInt(node.childNodes[1].textContent, 10);
-  return (
-    enumerator > 0 && enumerator < 20 && denominator > 0 && denominator < 11
-  );
-}
-
-/**
- * Checks for a preference setting.
- *
- * @param pref The preference.
- * @returns True of the given preference is set.
- */
-function hasPreference(pref: string): boolean {
-  return Engine.getInstance().style === pref;
-}
-
-register(
-  new SemanticAnnotator('clearspeak', 'simple', function (node) {
-    return isSimpleExpression(node) ? 'simple' : '';
-  })
-);
 
 /**
  * Decides if node has markup of simple node in clearspeak.
@@ -385,6 +157,7 @@ export function allCellsSimple(node: Element): Element[] {
   const result = nodes.every(simpleCell_);
   return result ? [node] : [];
 }
+
 /**
  * Custom query function to check if a vulgar fraction is small enough to be
  * spoken as numbers in MathSpeak.
@@ -396,48 +169,6 @@ export function allCellsSimple(node: Element): Element[] {
 export function isSmallVulgarFraction(node: Element): Element[] {
   return vulgarFractionSmall(node, 20, 11) ? [node] : [];
 }
-
-/**
- * Checks if a semantic subtree represents a unit expression.
- *
- * @param node The semantic node in question.
- * @returns True if the node is a unit expression.
- */
-function isUnitExpression(node: SemanticNode): boolean {
-  return (
-    (node.type === SemanticType.TEXT && node.role !== SemanticRole.LABEL) ||
-    (node.type === SemanticType.PUNCTUATED &&
-      node.role === SemanticRole.TEXT &&
-      isNumber_(node.childNodes[0]) &&
-      allTextLastContent_(node.childNodes.slice(1))) ||
-    (node.type === SemanticType.IDENTIFIER &&
-      node.role === SemanticRole.UNIT) ||
-    (node.type === SemanticType.INFIXOP &&
-      // TODO: Fix: Only integers are considered to be units.
-      (node.role === SemanticRole.IMPLICIT || node.role === SemanticRole.UNIT))
-  );
-}
-
-/**
- * Tests if all nodes a text nodes but only the last can be non-empty.
- *
- * @param nodes A list of semantic nodes.
- * @returns True if condition holds.
- */
-function allTextLastContent_(nodes: SemanticNode[]): boolean {
-  for (let i = 0; i < nodes.length - 1; i++) {
-    if (!(nodes[i].type === SemanticType.TEXT && nodes[i].textContent === '')) {
-      return false;
-    }
-  }
-  return nodes[nodes.length - 1].type === SemanticType.TEXT;
-}
-
-register(
-  new SemanticAnnotator('clearspeak', 'unit', function (node) {
-    return isUnitExpression(node) ? 'unit' : '';
-  })
-);
 
 /**
  * Translates a node into a word for an ordinal exponent.
@@ -632,4 +363,15 @@ export function wordOrdinal(node: Element): Span[] {
   return [
     Span.stringEmpty(LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10)))
   ];
+}
+
+// TODO: This only works at run time as a workaround for the worker.
+/**
+ * Checks if the node is possibly a unit.
+ *
+ * @param node The node in question.
+ * @returns The element if it contains a unit.
+ */
+export function isUnit(node: Element): Element[] {
+  return lookupCategory(node.textContent + ':unit') ? [node] : [];
 }

@@ -1,0 +1,72 @@
+{
+  "tests": {
+    "SimplePhantom_0": {
+      "input": "<mfrac><mphantom><mi>a</mi></mphantom><mi>c</mi></mfrac>"
+    },
+    "SimplePhantom_1": {
+      "input": "<mfrac><mi>a</mi><mphantom><mi>c</mi></mphantom></mfrac>"
+    },
+    "SimplePhantom_2": {
+      "input": "<msup><mphantom><mi>a</mi></mphantom><mi>c</mi></msup>"
+    },
+    "SimplePhantom_3": {
+      "input": "<msup><mi>a</mi><mphantom><mi>c</mi></mphantom></msup>"
+    },
+    "HiddenIgnoreElements_0": {
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+    },
+    "HiddenIgnoreElements_1": {
+      "input": "<mfrac><mrow><mi>a</mi><mrow><mi>d</mi><mphantom><mi>c</mi></mphantom></mrow></mrow><mi>b</mi></mfrac>"
+    },
+    "HiddenIgnoreElements_2": {
+      "input": "<mfrac><mrow><mi>a</mi><mstyle><mrow><mrow><mphantom><mi>c</mi></mphantom></mrow></mrow></mstyle><mstyle><merror><mi>x</mi></merror></mstyle></mrow><mi>b</mi></mfrac>"
+    },
+    "_comment_172": " Tests originating from issue #227. Ignore empty token elements.",
+    "HiddenEmptyTokens_0": {
+      "input": "<msub><mrow><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "HiddenEmptyTokens_1": {
+      "input": "<msub><mrow><mi></mi><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "HiddenEmptyTokens_2": {
+      "input": "<msub><mrow><mo></mo><mo></mo><mo>|</mo></mrow><mi>t</mi></msub>"
+    },
+    "PseudoUnitChildren_0": {
+      "input": "<mi>a</mi><mspace/>"
+    },
+    "PseudoUnitChildren_1": {
+      "input": "<mi>i</mi><merror><mi>Y</mi></merror>"
+    },
+    "PseudoUnitChildren_2": {
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror>"
+    },
+    "PseudoUnitChildren_3": {
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow>"
+    },
+    "PseudoUnitChildren_4": {
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+    },
+    "PseudoUnitChildren_5": {
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+    },
+    "PseudoUnitChildren_6": {
+      "input": "<mrow><mphantom><mtext>nix</mtext></mphantom><mrow><mi>i</mi><mi>j</mi></mrow><merror><mi>Y</mi></merror></mrow><merror><mtext>nothing</mtext></merror>"
+    },
+    "_comment_138": " Expressions with ignore tags, introducing a new mrow.",
+    "InterspersedIgnore_0": {
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mi>j</mi><merror><mi>Y</mi></merror>"
+    },
+    "InterspersedIgnore_1": {
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
+    },
+    "InterspersedIgnore_2": {
+      "input": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi>"
+    },
+    "InterspersedIgnore_3": {
+      "input": "<mi>i</mi><merror><mtext>nothing</mtext></merror><mi>j</mi>"
+    },
+    "InterspersedIgnore_4": {
+      "input": "<mphantom><mtext>nix</mtext></mphantom><mi>i</mi><merror><mtext>nothing</mtext></merror><mo>+</mo><mi>j</mi><merror><mi>Y</mi></merror>"
+    }
+  }
+}

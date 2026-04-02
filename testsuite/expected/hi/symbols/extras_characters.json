@@ -1,0 +1,23 @@
+{
+  "locale": "hi",
+  "name": "HindiExtraCharacter",
+  "type": "character",
+  "factory": "symbol",
+  "active": "ExtraSymbolsHindi",
+  "information": "Hindi Extra Character tests.",
+  "compare": true,
+  "tests": {
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "ग्रीक कैपिटल लेटर डेल्टा"
+    },
+    "22C5-clearspeak-MultsymbolDot_Dot": {
+      "key": "⋅",
+      "domain": "clearspeak",
+      "style": "MultsymbolDot_Dot",
+      "expected": "गुणन चिह्न"
+    }
+  }
+}

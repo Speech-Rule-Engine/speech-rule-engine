@@ -1,0 +1,130 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "SwedishClearspeakLogarithms",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "Swedish Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Log001": {
+      "expected": "logaritmen x"
+    },
+    "Log002": {
+      "expected": "logaritmen bas 10 av, x"
+    },
+    "Log003": {
+      "expected": "logaritmen bas b av, a x, är lika med, logaritmen bas b av, a, plus, logaritmen bas b av, x"
+    },
+    "Log004": {
+      "expected": "logaritmen bas b av, S delat med T, är lika med, logaritmen bas b av, S, minus, logaritmen bas b av, T"
+    },
+    "Log005": {
+      "expected": "logaritmen bas b av, öppna, x upphöjt till k, stäng, är lika med k, logaritmen bas b av, x"
+    },
+    "Log006": {
+      "expected": "10 upphöjt till logaritmen bas 10 av, x, är lika med x"
+    },
+    "Log007": {
+      "expected": "logaritmen bas 10 av, 10 upphöjt till x, är lika med x"
+    },
+    "Log008": {
+      "expected": "10 upphöjt till logaritmen bas 10 av, 5, är lika med 5"
+    },
+    "Log009": {
+      "expected": "logaritmen bas 10 av, 10 kubik, är lika med 3"
+    },
+    "Log010": {
+      "expected": "logaritmen bas a av, x, är lika med, logaritmen bas b av, x, delat med, logaritmen bas b av, a"
+    },
+    "Log011": {
+      "expected": "logaritmen bas 10 av, 18, delat med, logaritmen bas 10 av, 3, är lika med, logaritmen bas 3 av, 18"
+    },
+    "Log012": {
+      "expected": "logaritmen x delat med logaritmen a"
+    },
+    "Log013": {
+      "expected": "logaritmen av, öppna, x plus 1, stäng"
+    },
+    "Log014": {
+      "expected": "logaritmen av, öppna, x plus 1, stäng, kvadrat"
+    },
+    "Log015": {
+      "expected": "logaritmen x y"
+    },
+    "Log016": {
+      "expected": "bråket med täljare, logaritmen av, öppna, x plus 1, stäng, och nämnare, logaritmen av, öppna, x plus 2, stäng"
+    },
+    "Log017": {
+      "expected": "bråket med täljare, logaritmen bas 6 av, öppna, x plus 1, stäng, och nämnare, logaritmen bas 6 av, öppna, x plus 2, stäng"
+    },
+    "Log018": {
+      "expected": "bråket med täljare logaritmen 40 plus logaritmen 60, och nämnare logaritmen 5"
+    },
+    "Log019": {
+      "expected": "bråket med täljare, logaritmen bas 3 av, 40, plus, logaritmen bas 3 av, 60, och nämnare, logaritmen bas 3 av, 5"
+    },
+    "Log020": {
+      "expected": "logaritmen av, öppna, 3 upphöjt till fjärde, 12 upphöjt till nionde, stäng, är lika med 4 logaritmen 3, plus 9 logaritmen 12"
+    },
+    "Log021": {
+      "expected": "logaritmen av, öppna, x delat med y, stäng"
+    },
+    "Log022": {
+      "expected": "logaritmen av, öppna, bråket med täljare 3 upphöjt till fjärde, och nämnare 8 upphöjt till tionde, stäng, är lika med 4 logaritmen 3, minus 10 logaritmen 8"
+    },
+    "Log023": {
+      "expected": "10 upphöjt till logaritmen x"
+    },
+    "NatLog001": {
+      "expected": "l n x"
+    },
+    "NatLog002": {
+      "expected": "l n x, minus l n av, öppna, x minus 1, stäng, är lika med l n av, öppna, bråket med täljare x, och nämnare x minus 1, stäng"
+    },
+    "NatLog003": {
+      "expected": "l n av, öppna, e upphöjt till x, stäng, är lika med x"
+    },
+    "NatLog004": {
+      "expected": "e upphöjt till l n x är lika med x"
+    },
+    "NatLog005": {
+      "expected": "l n av, öppna, e upphöjt till x, stäng, är lika med x"
+    },
+    "NatLog006": {
+      "expected": "e upphöjt till l n 4 är lika med 4"
+    },
+    "NatLog007": {
+      "expected": "l n 40, delat med l n 5, är lika med, logaritmen bas 5 av, 40"
+    },
+    "NatLog008": {
+      "expected": "bråket med täljare l n 40, plus l n 60, och nämnare l n 5"
+    },
+    "NatLog009": {
+      "expected": "naturliga logaritmen x"
+    },
+    "NatLog010": {
+      "expected": "naturliga logaritmen x, minus, naturliga logaritmen av, öppna, x minus 1, stäng, är lika med, naturliga logaritmen av, öppna, bråket med täljare x, och nämnare x minus 1, stäng"
+    },
+    "NatLog011": {
+      "expected": "naturliga logaritmen av, öppna, e upphöjt till x, stäng, är lika med x"
+    },
+    "NatLog012": {
+      "expected": "e upphöjt till naturliga logaritmen x är lika med x"
+    },
+    "NatLog013": {
+      "expected": "naturliga logaritmen av, öppna, e upphöjt till x, stäng, är lika med x"
+    },
+    "NatLog014": {
+      "expected": "e upphöjt till naturliga logaritmen 4 är lika med 4"
+    },
+    "NatLog015": {
+      "expected": "naturliga logaritmen 40, delat med naturliga logaritmen 5, är lika med, logaritmen bas 5 av, 40"
+    },
+    "NatLog016": {
+      "expected": "bråket med täljare naturliga logaritmen 40, plus naturliga logaritmen 60, och nämnare naturliga logaritmen 5"
+    }
+  }
+}

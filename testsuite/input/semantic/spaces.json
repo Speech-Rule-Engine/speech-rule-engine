@@ -1,0 +1,122 @@
+{
+  "information": "Tests for semantically annotated spacing elements",
+  "tests": {
+    "FootnoteWithText": {
+      "input": "<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mtext>&#x00A0;</mtext><msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow>"
+    },
+    "_comment_spaces03": "Tests for text and spaces",
+    "ExprWithSpaces_0": {
+      "tex": "\\quad x \\quad",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle></math>"
+    },
+    "ExprWithSpaces_1": {
+      "tex": "\\quad x \\quad y \\quad",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>y</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle></math>"
+    },
+    "ExprWithSpaces_2": {
+      "tex": "a,b\\;c,d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo>,</mo><mi>b</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>c</mi><mo>,</mo><mi>d</mi></math>"
+    },
+    "ExprWithSpaces_3": {
+      "tex": "a,b\\,c,d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo>,</mo><mi>b</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.16666666666666666em\"></mspace></mstyle><mi>c</mi><mo>,</mo><mi>d</mi></math>"
+    },
+    "ExprWithSpaces_4": {
+      "tex": "a,b\\quad c,d",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>a</mi><mo>,</mo><mi>b</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>c</mi><mo>,</mo><mi>d</mi></math>"
+    },
+    "ExprWithSpaces_5": {
+      "tex": "q\\not\\equiv 1\\pmod p",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>q</mi><mo>&#x2262;</mo><mn>1</mn><mspace width=\"1em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>p</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "ExprWithSpaces_6": {
+      "tex": "q\\not\\equiv 1\\;(\\text{mod}\\; p)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>q</mi><mo>&#x2262;</mo><mn>1</mn><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mo stretchy=\"false\">(</mo><mtext>mod</mtext><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>p</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "_comment_spaces02": "Tests for functions, bigops and integrals",
+    "FunctionsWithSpaces_0": {
+      "tex": "\\sin\\quad (x) \\quad",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle></math>"
+    },
+    "FunctionsWithSpaces_1": {
+      "tex": "\\sin\\quad (x \\quad y) \\quad",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mo stretchy=\"false\">(</mo><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>y</mi><mo stretchy=\"false\">)</mo><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle></math>"
+    },
+    "FunctionsWithSpaces_2": {
+      "tex": "\\sin\\;\\cos x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>cos</mi><mo data-mjx-texclass=\"NONE\">&#x2061;</mo><mi>x</mi></math>"
+    },
+    "FunctionsWithSpaces_3": {
+      "tex": "\\sin\\;\\cos\\; x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>cos</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi></math>"
+    },
+    "FunctionsWithSpaces_4": {
+      "tex": "\\cos\\; \\sin \\; x\\qquad x=f(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>cos</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "FunctionsWithSpaces_5": {
+      "tex": "\\cos\\; \\sin \\; x=f(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>cos</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "FunctionsWithSpaces_6": {
+      "tex": "f\\;\\sin \\; x\\qquad x=f(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>f</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "FunctionsWithSpaces_7": {
+      "tex": "f \\; x\\qquad x=f(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>f</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"2em\"></mspace></mstyle><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "FunctionsWithSpaces_8": {
+      "tex": "f\\;\\sin \\; x=f(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mi>f</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>sin</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo></math>"
+    },
+    "BigopsWithSpaces_0": {
+      "tex": "\\sum_A\\; x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi></math>"
+    },
+    "BigopsWithSpaces_1": {
+      "tex": "\\sum_A\\;\\; x",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi></math>"
+    },
+    "BigopsWithSpaces_2": {
+      "tex": "\\sum_A\\; xy",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mi>y</mi></math>"
+    },
+    "BigopsWithSpaces_3": {
+      "tex": "\\sum_A\\; x\\,y",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.16666666666666666em\"></mspace></mstyle><mi>y</mi></math>"
+    },
+    "BigopsWithSpaces_4": {
+      "tex": "\\sum_A\\; x\\;y",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>y</mi></math>"
+    },
+    "BigopsWithSpaces_5": {
+      "tex": "\\sum_A\\; x\\;y+z",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><munder><mo data-mjx-texclass=\"OP\">&#x2211;</mo><mi>A</mi></munder><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>y</mi><mo>+</mo><mi>z</mi></math>"
+    },
+    "IntegralsWithSpaces_0": {
+      "tex": "\\int_A x\\, dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.16666666666666666em\"></mspace></mstyle><mi>d</mi><mi>x</mi></math>"
+    },
+    "IntegralsWithSpaces_1": {
+      "tex": "\\int_A x\\; dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>d</mi><mi>x</mi></math>"
+    },
+    "IntegralsWithSpaces_2": {
+      "tex": "\\int_A x\\quad dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"1em\"></mspace></mstyle><mi>d</mi><mi>x</mi></math>"
+    },
+    "IntegralsWithSpaces_3": {
+      "tex": "\\int_A \\;x\\; dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>d</mi><mi>x</mi></math>"
+    },
+    "IntegralsWithSpaces_4": {
+      "tex": "\\int_B\\int_A \\;x\\; dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>B</mi></msub><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>d</mi><mi>x</mi></math>"
+    },
+    "IntegralsWithSpaces_5": {
+      "tex": "\\int_B\\int_A \\;x\\; dx\\;dy",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>B</mi></msub><msub><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>A</mi></msub><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>d</mi><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.2777777777777778em\"></mspace></mstyle><mi>d</mi><mi>y</mi></math>"
+    }
+  }
+}

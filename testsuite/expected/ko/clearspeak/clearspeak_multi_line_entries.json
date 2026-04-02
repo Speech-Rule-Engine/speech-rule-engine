@@ -1,0 +1,245 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakMultiLineEntries",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_multi_line_entries.json",
+  "information": "Korean Clearspeak MultiLineEntries rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Multi-Line Entries Examples",
+    "Multiline001": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline002": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y; 같다; 7.  2행: 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline003": {
+      "expected": "총 줄 수 2,  1행: x; 더하기; y; 같다; 7.  2행: 2 x; 더하기; 3 y; 같다; 17"
+    },
+    "Multiline004": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론 x 더하기 y 는 7.  2행: Equation 2 콜론 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline005": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론; x 더하기 y 는 7.  2행: Equation 2 콜론; 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline006": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론; x 더하기 y; 같다; 7.  2행: Equation 2 콜론; 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline007": {
+      "expected": "총 줄 수 3,  1행: 4 x, 더하기 3 y, 더하기 2 z, 는 17.  2행: 2 x, 더하기 4 y, 더하기 6 z, 는 6.  3행: 3 x, 더하기 2 y, 더하기 5 z, 는 1"
+    },
+    "Multiline008": {
+      "expected": "총 줄 수 3,  1행: 4 x; 더하기; 3 y; 더하기; 2 z; 같다; 1.  2행: 2 x; 더하기; 4 y; 더하기; 6 z; 같다; 6.  3행: 3 x; 더하기; 2 y; 더하기; 5 z; 같다; 1"
+    },
+    "Multiline009": {
+      "expected": "총 줄 수 3,  1행: Equation 1 콜론 4 x, 더하기 3 y, 더하기 2 z, 는 17.  2행: Equation 2 콜론 2 x, 더하기 4 y, 더하기 6 z, 는 6.  3행: Equation 3 콜론 3 x, 더하기 2 y, 더하기 5 z, 는 1"
+    },
+    "Multiline010": {
+      "expected": "총 줄 수 3,  1행: x 는 0 보다 크거나 같다.  2행: y 는 0 보다 크거나 같다.  3행: 3 x, 빼기 5 y, 는 30 보다 작거나 같다"
+    },
+    "Multiline011": {
+      "expected": "총 줄 수 4,  1행: 3 x, 더하기 8 은 5 x.  2행: 8 은 5 x, 빼기 3 x.  3행: 8 은 2 x.  4행: 4 는 x"
+    },
+    "Multiline012": {
+      "expected": "총 줄 수 4,  1행: 3 x; 더하기; 8; 같다; 5 x; 빈 칸; 빈 칸.  2행: 빈 칸; 빈 칸; 8; 같다; 5 x; 빼기; 3 x.  3행: 빈 칸; 빈 칸; 8; 같다; 2 x; 빈 칸; 빈 칸.  4행: 빈 칸; 빈 칸; 4; 같다; x; 빈 칸; 빈 칸"
+    },
+    "Multiline013": {
+      "expected": "총 줄 수 4,  1행: Step 1 콜론 3 x, 더하기 8 은 5 x.  2행: Step 2 콜론 8 은 5 x, 빼기 3 x.  3행: Step 3 콜론 8 은 2 x.  4행: Step 4 콜론 4 는 x"
+    },
+    "Multiline014": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x if x 는 0 보다 작다. 케이스 2: x if x 는 0 보다 크거나 같다"
+    },
+    "Multiline015": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x; if x 는 0 보다 작다. 케이스 2: x; if x 는 0 보다 크거나 같다"
+    },
+    "Multiline016": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x if x 는 0 보다 작다. 케이스 2: x if x 는 0 보다 크거나 같다"
+    },
+    "Multiline017": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x; if x 는 0 보다 작다. 케이스 2: x; if x 는 0 보다 크거나 같다"
+    },
+    "Multiline018": {
+      "expected": "총 케이스 수 2, 케이스 1: f 의 x, 는 마이너스 x; if x 는 0 보다 작다. 케이스 2: f 의 x, 는 x; if x 는 0 보다 크거나 같다"
+    },
+    "Multiline019": {
+      "expected": "총 방정식 수 2, 방정식 1: x 더하기 y 는 7. 방정식 2: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline019a": {
+      "expected": "총 방정식 수 2, 방정식 1: x 더하기 y; 같다; 7. 방정식 2: 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline020": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline021": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y; 같다; 7.  2행: 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline022": {
+      "expected": "총 2 행,  1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline023": {
+      "expected": "총 2 행,  1행: x 더하기 y; 같다; 7.  2행: 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline024": {
+      "expected": "총 단계 수 4,  1단계: 3 x, 더하기 8 은 5 x.  2단계: 8 은 5 x, 빼기 3 x.  3단계: 8 은 2 x.  4단계: 4 는 x"
+    },
+    "Multiline025": {
+      "expected": "총 단계 수 4,  1단계: 3 x; 더하기; 8; 같다; 5 x; 빈 칸; 빈 칸.  2단계: 빈 칸; 빈 칸; 8; 같다; 5 x; 빼기; 3 x.  3단계: 빈 칸; 빈 칸; 8; 같다; 2 x; 빈 칸; 빈 칸.  4단계: 빈 칸; 빈 칸; 4; 같다; x; 빈 칸; 빈 칸"
+    },
+    "Multiline026": {
+      "expected": "총 조건문 수 3, 조건문 1: x 는 0 보다 크거나 같다. 조건문 2: y 는 0 보다 크거나 같다. 조건문 3: 3 x, 빼기 5 y, 는 30 보다 작거나 같다"
+    },
+    "_comment2_": " Added examples for preference Label_None.",
+    "Multiline026a": {
+      "expected": "총 줄 수 3, x 는 0 보다 크거나 같다. y 는 0 보다 크거나 같다. 3 x, 빼기 5 y, 는 30 보다 작거나 같다"
+    },
+    "Multiline026b": {
+      "expected": "총 줄 수 4, 3 x; 더하기; 8; 같다; 5 x; 빈 칸; 빈 칸. 빈 칸; 빈 칸; 8; 같다; 5 x; 빼기; 3 x. 빈 칸; 빈 칸; 8; 같다; 2 x; 빈 칸; 빈 칸. 빈 칸; 빈 칸; 4; 같다; x; 빈 칸; 빈 칸"
+    },
+    "Multiline026c": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 마이너스 x if x 는 0 보다 작다. x if x 는 0 보다 크거나 같다"
+    },
+    "Multiline027": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline028": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y. 같다. 7.  2행: 2 x, 더하기 3 y. 같다. 17"
+    },
+    "Multiline029": {
+      "expected": "총 줄 수 2,  1행: x. 더하기. y. 같다. 7.  2행: 2 x. 더하기. 3 y. 같다. 17"
+    },
+    "Multiline030": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론. x 더하기 y 는 7.  2행: Equation 2 콜론. 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline031": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론. x 더하기 y. 같다. 7.  2행: Equation 2 콜론. 2 x, 더하기 3 y. 같다. 17"
+    },
+    "Multiline032": {
+      "expected": "총 줄 수 3,  1행: 4 x. 더하기. 3 y. 더하기. 2 z. 같다. 1.  2행: 2 x. 더하기. 4 y. 더하기. 6 z. 같다. 6.  3행: 3 x. 더하기. 2 y. 더하기. 5 z. 같다. 1"
+    },
+    "Multiline033": {
+      "expected": "총 줄 수 4,  1행: 3 x. 더하기. 8. 같다. 5 x. 빈 칸. 빈 칸.  2행: 빈 칸. 빈 칸. 8. 같다. 5 x. 빼기. 3 x.  3행: 빈 칸. 빈 칸. 8. 같다. 2 x. 빈 칸. 빈 칸.  4행: 빈 칸. 빈 칸. 4. 같다. x. 빈 칸. 빈 칸"
+    },
+    "Multiline034": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x. if x 는 0 보다 작다. 케이스 2: x. if x 는 0 보다 크거나 같다"
+    },
+    "Multiline035": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x. if x 는 0 보다 작다. 케이스 2: x. if x 는 0 보다 크거나 같다"
+    },
+    "Multiline036": {
+      "expected": "총 케이스 수 2, 케이스 1: f 의 x, 는 마이너스 x. if x 는 0 보다 작다. 케이스 2: f 의 x, 는 x. if x 는 0 보다 크거나 같다"
+    },
+    "Multiline037": {
+      "expected": "총 방정식 수 2, 방정식 1: x 더하기 y. 같다. 7. 방정식 2: 2 x, 더하기 3 y. 같다. 17"
+    },
+    "Multiline038": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y. 같다. 7.  2행: 2 x, 더하기 3 y. 같다. 17"
+    },
+    "Multiline039": {
+      "expected": "총 2 행,  1행: x 더하기 y. 같다. 7.  2행: 2 x, 더하기 3 y. 같다. 17"
+    },
+    "Multiline040": {
+      "expected": "총 단계 수 4,  1단계: 3 x. 더하기. 8. 같다. 5 x. 빈 칸. 빈 칸.  2단계: 빈 칸. 빈 칸. 8. 같다. 5 x. 빼기. 3 x.  3단계: 빈 칸. 빈 칸. 8. 같다. 2 x. 빈 칸. 빈 칸.  4단계: 빈 칸. 빈 칸. 4. 같다. x. 빈 칸. 빈 칸"
+    },
+    "Multiline041": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y, 같다, 7.  2행: 2 x, 더하기 3 y, 같다, 17"
+    },
+    "Multiline042": {
+      "expected": "총 줄 수 2,  1행: x, 더하기, y, 같다, 7.  2행: 2 x, 더하기, 3 y, 같다, 17"
+    },
+    "Multiline043": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론, x 더하기 y 는 7.  2행: Equation 2 콜론, 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline044": {
+      "expected": "총 줄 수 2,  1행: Equation 1 콜론, x 더하기 y, 같다, 7.  2행: Equation 2 콜론, 2 x, 더하기 3 y, 같다, 17"
+    },
+    "Multiline045": {
+      "expected": "총 줄 수 3,  1행: 4 x, 더하기, 3 y, 더하기, 2 z, 같다, 1.  2행: 2 x, 더하기, 4 y, 더하기, 6 z, 같다, 6.  3행: 3 x, 더하기, 2 y, 더하기, 5 z, 같다, 1"
+    },
+    "Multiline046": {
+      "expected": "총 줄 수 4,  1행: 3 x, 더하기, 8, 같다, 5 x, 빈 칸, 빈 칸.  2행: 빈 칸, 빈 칸, 8, 같다, 5 x, 빼기, 3 x.  3행: 빈 칸, 빈 칸, 8, 같다, 2 x, 빈 칸, 빈 칸.  4행: 빈 칸, 빈 칸, 4, 같다, x, 빈 칸, 빈 칸"
+    },
+    "Multiline047": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x, if x 는 0 보다 작다. 케이스 2: x, if x 는 0 보다 크거나 같다"
+    },
+    "Multiline048": {
+      "expected": "f 의 x, 는, 총 케이스 수 2, 케이스 1: 마이너스 x, if x 는 0 보다 작다. 케이스 2: x, if x 는 0 보다 크거나 같다"
+    },
+    "Multiline049": {
+      "expected": "총 케이스 수 2, 케이스 1: f 의 x, 는 마이너스 x, if x 는 0 보다 작다. 케이스 2: f 의 x, 는 x, if x 는 0 보다 크거나 같다"
+    },
+    "Multiline050": {
+      "expected": "총 방정식 수 2, 방정식 1: x 더하기 y, 같다, 7. 방정식 2: 2 x, 더하기 3 y, 같다, 17"
+    },
+    "Multiline051": {
+      "expected": "총 줄 수 2,  1행: x 더하기 y, 같다, 7.  2행: 2 x, 더하기 3 y, 같다, 17"
+    },
+    "Multiline052": {
+      "expected": "총 2 행,  1행: x 더하기 y, 같다, 7.  2행: 2 x, 더하기 3 y, 같다, 17"
+    },
+    "Multiline053": {
+      "expected": "총 단계 수 4,  1단계: 3 x, 더하기, 8, 같다, 5 x, 빈 칸, 빈 칸.  2단계: 빈 칸, 빈 칸, 8, 같다, 5 x, 빼기, 3 x.  3단계: 빈 칸, 빈 칸, 8, 같다, 2 x, 빈 칸, 빈 칸.  4단계: 빈 칸, 빈 칸, 4, 같다, x, 빈 칸, 빈 칸"
+    },
+    "Multiline054": {
+      "expected": " 1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline055": {
+      "expected": " 1행: x 더하기 y; 같다; 7.  2행: 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline056": {
+      "expected": " 1행: x; 더하기; y; 같다; 7.  2행: 2 x; 더하기; 3 y; 같다; 17"
+    },
+    "Multiline057": {
+      "expected": " 1행: Equation 1 콜론 x 더하기 y 는 7.  2행: Equation 2 콜론 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline058": {
+      "expected": " 1행: Equation 1 콜론; x 더하기 y 는 7.  2행: Equation 2 콜론; 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline059": {
+      "expected": " 1행: Equation 1 콜론; x 더하기 y; 같다; 7.  2행: Equation 2 콜론; 2 x, 더하기 3 y; 같다; 17"
+    },
+    "Multiline060": {
+      "expected": " 1행: 4 x, 더하기 3 y, 더하기 2 z, 는 17.  2행: 2 x, 더하기 4 y, 더하기 6 z, 는 6.  3행: 3 x, 더하기 2 y, 더하기 5 z, 는 1"
+    },
+    "Multiline061": {
+      "expected": " 1행: 4 x; 더하기; 3 y; 더하기; 2 z; 같다; 1.  2행: 2 x; 더하기; 4 y; 더하기; 6 z; 같다; 6.  3행: 3 x; 더하기; 2 y; 더하기; 5 z; 같다; 1"
+    },
+    "Multiline062": {
+      "expected": " 1행: Equation 1 콜론 4 x, 더하기 3 y, 더하기 2 z, 는 17.  2행: Equation 2 콜론 2 x, 더하기 4 y, 더하기 6 z, 는 6.  3행: Equation 3 콜론 3 x, 더하기 2 y, 더하기 5 z, 는 1"
+    },
+    "Multiline063": {
+      "expected": " 1행: Step 1 콜론 3 x, 더하기 8 은 5 x.  2행: Step 2 콜론 8 은 5 x, 빼기 3 x.  3행: Step 3 콜론 8 은 2 x.  4행: Step 4 콜론 4 는 x"
+    },
+    "Multiline064": {
+      "expected": "f 의 x, 는, 케이스 1: 마이너스 x if x 는 0 보다 작다. 케이스 2: x if x 는 0 보다 크거나 같다"
+    },
+    "Multiline065": {
+      "expected": "f 의 x, 는, 케이스 1: 마이너스 x; if x 는 0 보다 작다. 케이스 2: x; if x 는 0 보다 크거나 같다"
+    },
+    "Multiline066": {
+      "expected": "f 의 x, 는, 케이스 1: 마이너스 x if x 는 0 보다 작다. 케이스 2: x if x 는 0 보다 크거나 같다"
+    },
+    "Multiline067": {
+      "expected": "케이스 1: f 의 x, 는 마이너스 x; if x 는 0 보다 작다. 케이스 2: f 의 x, 는 x; if x 는 0 보다 크거나 같다"
+    },
+    "Multiline068": {
+      "expected": "방정식 1: x 더하기 y 는 7. 방정식 2: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline069": {
+      "expected": " 1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline070": {
+      "expected": " 1행: x 더하기 y 는 7.  2행: 2 x, 더하기 3 y, 는 17"
+    },
+    "Multiline071": {
+      "expected": " 1단계: 3 x, 더하기 8 은 5 x.  2단계: 8 은 5 x, 빼기 3 x.  3단계: 8 은 2 x.  4단계: 4 는 x"
+    },
+    "Multiline072": {
+      "expected": " 1단계: 3 x; 더하기; 8; 같다; 5 x; 빈 칸; 빈 칸.  2단계: 빈 칸; 빈 칸; 8; 같다; 5 x; 빼기; 3 x.  3단계: 빈 칸; 빈 칸; 8; 같다; 2 x; 빈 칸; 빈 칸.  4단계: 빈 칸; 빈 칸; 4; 같다; x; 빈 칸; 빈 칸"
+    },
+    "Multiline073": {
+      "expected": "조건문 1: x 는 0 보다 크거나 같다. 조건문 2: y 는 0 보다 크거나 같다. 조건문 3: 3 x, 빼기 5 y, 는 30 보다 작거나 같다"
+    }
+  }
+}

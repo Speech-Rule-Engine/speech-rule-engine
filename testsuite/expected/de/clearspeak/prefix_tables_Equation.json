@@ -1,0 +1,193 @@
+{
+  "name": "GermanClearspeakPrefixTablesEquation",
+  "locale": "de",
+  "factory": "prefix",
+  "domain": "clearspeak",
+  "style": "MultiLineLabel_Equation",
+  "base": "input/common/prefix_tables.json",
+  "information": "German Prefix Tables Clearspeak Equation tests.",
+  "active": "PrefixGerman",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "Gleichung 1"
+    },
+    "Binomials_1": {
+      "expected": "Gleichung 2"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "Grundgesamtheit"
+    },
+    "Binomials_1_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "Stichprobengröße"
+    },
+    "Vectors_0": {
+      "expected": "Zeile 1"
+    },
+    "Vectors_1": {
+      "expected": "Zeile 2"
+    },
+    "Vectors_2": {
+      "expected": "Zeile 3"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "Zeile 1"
+    },
+    "Matrices_depth_1": {
+      "expected": "Zeile 1, Spalte 1"
+    },
+    "Matrices_depth_2": {
+      "expected": "Zeile 1, Spalte 2"
+    },
+    "Matrices_depth_3": {
+      "expected": "Zeile 2"
+    },
+    "Matrices_depth_4": {
+      "expected": "Zeile 2, Spalte 1"
+    },
+    "Matrices_depth_5": {
+      "expected": "Zeile 2, Spalte 2"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "Zeile 1"
+    },
+    "Matrices_1": {
+      "expected": "Spalte 1"
+    },
+    "Matrices_2": {
+      "expected": "Spalte 2"
+    },
+    "Matrices_3": {
+      "expected": "Zeile 2"
+    },
+    "Matrices_4": {
+      "expected": "Spalte 1"
+    },
+    "Matrices_5": {
+      "expected": "Spalte 2"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "Gleichung 1"
+    },
+    "Table_2": {
+      "expected": "Gleichung 1"
+    },
+    "Table_3": {
+      "expected": "Gleichung 2"
+    },
+    "Table_4": {
+      "expected": "Gleichung 1"
+    },
+    "Table_5": {
+      "expected": "Gleichung 2"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "Spalte 1"
+    },
+    "Table_Cell_1a": {
+      "expected": "Spalte 2"
+    },
+    "Table_Cell_2": {
+      "expected": "Gleichung 1"
+    },
+    "Table_Cell_3": {
+      "expected": "Gleichung 2"
+    },
+    "Table_Cell_4": {
+      "expected": "Spalte 1"
+    },
+    "Table_Cell_4a": {
+      "expected": "Spalte 2"
+    },
+    "Table_Cell_5": {
+      "expected": "Spalte 1"
+    },
+    "Table_Cell_5a": {
+      "expected": "Spalte 2"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "Gleichung 1, Spalte 1"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "Gleichung 1, Spalte 2"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "Gleichung 1"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "Gleichung 2"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "Gleichung 1, Spalte 1"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "Gleichung 1, Spalte 2"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "Gleichung 2, Spalte 1"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "Gleichung 2, Spalte 2"
+    },
+    "Table_Label_0": {
+      "expected": "Bezeichner"
+    },
+    "Table_Label_1": {
+      "expected": "Bezeichner"
+    },
+    "Table_Label_2": {
+      "expected": "Bezeichner"
+    },
+    "Table_Label_3": {
+      "expected": "Bezeichner"
+    }
+  },
+  "compare": true
+}

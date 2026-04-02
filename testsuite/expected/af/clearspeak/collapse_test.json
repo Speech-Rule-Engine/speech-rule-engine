@@ -1,0 +1,261 @@
+{
+  "name": "AfrikaansClearspeakCollapse",
+  "locale": "af",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Afrikaans Clearspeak Collapse tests.",
+  "domain": "clearspeak",
+  "active": "CollapseAfrikaans",
+  "exclude": [
+    "CollapsedAddition_brief",
+    "CollapsedAddition_sbrief",
+    "CollapsedBigop_brief",
+    "CollapsedBigop_sbrief",
+    "CollapsedBinomial_brief",
+    "CollapsedBinomial_sbrief",
+    "CollapsedCases_brief",
+    "CollapsedCases_sbrief",
+    "CollapsedCell_brief",
+    "CollapsedCell_sbrief",
+    "CollapsedContinuedFraction_brief",
+    "CollapsedContinuedFraction_sbrief",
+    "CollapsedDeterminant_brief",
+    "CollapsedDeterminant_sbrief",
+    "CollapsedFraction_brief",
+    "CollapsedFraction_sbrief",
+    "CollapsedFunction_brief",
+    "CollapsedFunction_sbrief",
+    "CollapsedIdentifier_brief",
+    "CollapsedIdentifier_sbrief",
+    "CollapsedInfixop_brief",
+    "CollapsedInfixop_sbrief",
+    "CollapsedIntegral_brief",
+    "CollapsedIntegral_sbrief",
+    "CollapsedLim_brief",
+    "CollapsedLim_sbrief",
+    "CollapsedLine_brief",
+    "CollapsedLine_sbrief",
+    "CollapsedMatrix_brief",
+    "CollapsedMatrix_sbrief",
+    "CollapsedMixedNumber_brief",
+    "CollapsedMixedNumber_sbrief",
+    "CollapsedMultiplication_brief",
+    "CollapsedMultiplication_sbrief",
+    "CollapsedMultirel_brief",
+    "CollapsedMultirel_sbrief",
+    "CollapsedNumber_brief",
+    "CollapsedNumber_sbrief",
+    "CollapsedPunctuated_brief",
+    "CollapsedPunctuated_sbrief",
+    "CollapsedRelation_brief",
+    "CollapsedRelation_sbrief",
+    "CollapsedRelationSeq_brief",
+    "CollapsedRelationSeq_sbrief",
+    "CollapsedRoot_brief",
+    "CollapsedRoot_sbrief",
+    "CollapsedRootNested_brief",
+    "CollapsedRootNested_sbrief",
+    "CollapsedRow_brief",
+    "CollapsedRow_sbrief",
+    "CollapsedRowvector_brief",
+    "CollapsedRowvector_sbrief",
+    "CollapsedSqrt_brief",
+    "CollapsedSqrt_sbrief",
+    "CollapsedSqrtNested_brief",
+    "CollapsedSqrtNested_sbrief",
+    "CollapsedSquarematrix_brief",
+    "CollapsedSquarematrix_sbrief",
+    "CollapsedSubscript_brief",
+    "CollapsedSubscript_sbrief",
+    "CollapsedSubsup_brief",
+    "CollapsedSubsup_sbrief",
+    "CollapsedSuperscript_brief",
+    "CollapsedSuperscript_sbrief",
+    "CollapsedTable_brief",
+    "CollapsedTable_sbrief",
+    "CollapsedText_brief",
+    "CollapsedText_sbrief",
+    "CollapsedVarAddition_brief",
+    "CollapsedVarAddition_sbrief",
+    "CollapsedVarCases_brief",
+    "CollapsedVarCases_sbrief",
+    "CollapsedVarDeterminant_brief",
+    "CollapsedVarDeterminant_sbrief",
+    "CollapsedVarMatrix_brief",
+    "CollapsedVarMatrix_sbrief",
+    "CollapsedVarMultiplication_brief",
+    "CollapsedVarMultiplication_sbrief",
+    "CollapsedVarMultirel_brief",
+    "CollapsedVarMultirel_sbrief",
+    "CollapsedVarPunctuated_brief",
+    "CollapsedVarPunctuated_sbrief",
+    "CollapsedVarRelation_brief",
+    "CollapsedVarRelation_sbrief",
+    "CollapsedVarVector_brief",
+    "CollapsedVarVector_sbrief",
+    "CollapsedVector_brief",
+    "CollapsedVector_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "opgesom som met 2 terme"
+    },
+    "CollapsedBigop_default": {
+      "expected": "opgesom som"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "opgesom binomiaal"
+    },
+    "CollapsedCases_default": {
+      "expected": "opgesom gevalstelling met 2 gevalle"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "opgesom voortgesette breuk"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "opgesom 2 dimensionele determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "opgesom breuk"
+    },
+    "CollapsedFunction_default": {
+      "expected": "opgesom funksionele uitdrukking"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "opgesom lang identifiseerder"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "opgesom deling met 2 elemente"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "opgesom integraal"
+    },
+    "CollapsedLim_default": {
+      "expected": "opgesom limiet funksie"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "opgesom 3 by 2 matriks"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "opgesom lang gemengde getal"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "opgesom produk met 2 faktore"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "opgesom verwantskapsketting met 3 elemente"
+    },
+    "CollapsedNumber_default": {
+      "expected": "opgesom lang getal"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "opgesom komma opgebreekte lys met lengte 3"
+    },
+    "CollapsedRelation_default": {
+      "expected": "opgesom gelykheid"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "opgesom gelykheid ketting met 3 elemente"
+    },
+    "CollapsedRoot_default": {
+      "expected": "opgesom wortel van indeks 3"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "opgesom genesde wortel van indeks 3"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "opgesom 2 dimensionele ry vektor"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "opgesom vierkantswortel"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "opgesom genesde vierkantswortel"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "opgesom 2 dimensionele vierkant matriks"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "opgesom onderskrif"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "opgesom mag met onderskrif"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "opgesom mag"
+    },
+    "CollapsedTable_default": {
+      "expected": "opgesom tabêl met 2 rye en 2 kolomme"
+    },
+    "CollapsedText_default": {
+      "expected": "opgesom teks"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "opgesom som met wisselende aantal terme"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "opgesom gevalstelling met wisselende hoeveelheid gevalle"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "opgesom n dimensional determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "opgesom n by m dimensionele matriks"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "opgesom produk met wisselende hoeveelheid faktore"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "opgesom verwantskapsketting met 'n wisselende aantal elemente"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "opgesom komma opgebreekte lys met wisselende lengte"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "opgesom gelykheid ketting met wisselende hoeveelheid elemente"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "opgesom n dimensionele vektor"
+    },
+    "CollapsedVector_default": {
+      "expected": "opgesom 3 dimensionele vektor"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "opgesom aftrekking met wisselende hoeveelheid elemente"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "opgesom aftrekking met wisselende hoeveelheid elemente"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "opgesom aftrekking met wisselende hoeveelheid elemente"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "opgesom produk met 3 faktore"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "opgesom produk met 3 faktore"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "opgesom produk met 3 faktore"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "opgesom produk met wisselende hoeveelheid faktore"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "opgesom pyltjie ketting met wisselende hoeveelheid elemente"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "opgesom pyltjie"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "opgesom n dimensionele ry vektor"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "opgesom wortel van indeks 3 endindeks a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "opgesom genesde wortel van indeks 3 end indeks a"
+    }
+  }
+}

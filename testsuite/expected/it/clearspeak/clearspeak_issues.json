@@ -1,0 +1,97 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "ItalianClearspeakIssues",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "Italian Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesItalian",
+  "exclude": [],
+  "tests": {
+    "Issue230_1": {
+      "expected": "5 e, 3 fratto 224"
+    },
+    "Issue230_2": {
+      "expected": "5 e tre quarti"
+    },
+    "IssueNumbers_1": {
+      "expected": "numero t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "numero cancelletto F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "numero cancelletto F F F F"
+    },
+    "Issue320_1": {
+      "expected": "derivata parziale"
+    },
+    "Issue320_2": {
+      "expected": "x fattoriale"
+    },
+    "Issue320_3": {
+      "expected": "meno meno x"
+    },
+    "Issue320_4": {
+      "expected": "più più x"
+    },
+    "Issue320_5": {
+      "expected": "seno di seno di x"
+    },
+    "Issue320_6": {
+      "expected": "derivata parziale derivata parziale x"
+    },
+    "Issue320_7": {
+      "expected": "parentesi tonda aperta, frazione con numeratore derivata parziale quadrato, e denominatore derivata parziale x quadrato, più, frazione con numeratore derivata parziale quadrato, e denominatore derivata parziale y quadrato, parentesi tonda chiusa, per, valore assoluto di phi per, parentesi tonda aperta, x più i normale, y, parentesi tonda chiusa, quadrato uguale a 0"
+    },
+    "Issue301_1": {
+      "expected": "4 millimetri"
+    },
+    "Issue301_2": {
+      "expected": "1 millimetro"
+    },
+    "Issue301_3": {
+      "expected": "4 millimetri"
+    },
+    "Issue301_4": {
+      "expected": "1 millimetro"
+    },
+    "Issue_442_0": {
+      "expected": "9 diviso per 3 diverso da 9 per 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 diviso per 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 diviso per 3 diverso da 9 per 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 diviso per 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "il integrale di f di x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "il integrale di f di x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "il integrale di f di x, d x, uguale a 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 linee, Riga 1:, 2 linee, Riga 1: 100. Riga 2: 200. Riga 2:, 2 linee, Riga 1: 300. Riga 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 linee, Riga 1: a; b. Riga 2:, 2 linee, Riga 1:, c pedice 1; c pedice 2. Riga 2:, c pedice 3; c pedice 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 casi, Caso 1:, 2 casi, Caso 1: b. Caso 2: c. Caso 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, a; Colonna 2, b. Riga 2: Colonna 1, matrice 2 per 2. Riga 1: c pedice 1, c pedice 2 Riga 2: c pedice 3, c pedice 4. fine matrice; Colonna 2, d. fine matrice"
+    },
+    "Issue_689_4": {
+      "expected": "matrice 2 per 2. Riga 1: Colonna 1, a; Colonna 2, b. Riga 2: Colonna 1, matrice 2 per 2. Riga 1: Colonna 1,, c pedice 1; Colonna 2,, c pedice 2. Riga 2: Colonna 1,, c pedice 3, più a più b; Colonna 2,, c pedice 4. fine matrice; Colonna 2, d. fine matrice"
+    }
+  }
+}

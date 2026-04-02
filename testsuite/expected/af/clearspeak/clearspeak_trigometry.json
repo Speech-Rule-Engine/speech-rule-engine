@@ -1,0 +1,499 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakTrigometry",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "Afrikaans Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [
+    "TrigReciprocal001",
+    "TrigReciprocal002",
+    "TrigReciprocal003",
+    "TrigReciprocal004",
+    "TrigReciprocal005",
+    "TrigReciprocal006",
+    "TrigReciprocal007",
+    "TrigReciprocal008",
+    "TrigReciprocal009",
+    "TrigReciprocal010",
+    "TrigReciprocal011",
+    "TrigReciprocal012",
+    "TrigReciprocal013",
+    "TrigReciprocal014",
+    "TrigReciprocal015",
+    "TrigReciprocal016",
+    "TrigReciprocal017",
+    "TrigReciprocal018",
+    "TrigReciprocal019",
+    "TrigReciprocal020",
+    "TrigReciprocal021",
+    "TrigReciprocal022",
+    "TrigReciprocal023",
+    "TrigReciprocal024",
+    "TrigReciprocal025",
+    "TrigReciprocal026",
+    "HypTrigReciprocal001",
+    "HypTrigReciprocal002",
+    "HypTrigReciprocal003",
+    "HypTrigReciprocal004",
+    "HypTrigReciprocal005",
+    "HypTrigReciprocal006",
+    "HypTrigReciprocal007",
+    "HypTrigReciprocal008",
+    "HypTrigReciprocal009",
+    "HypTrigReciprocal010",
+    "HypTrigReciprocal011",
+    "HypTrigReciprocal012",
+    "HypTrigReciprocal013",
+    "HypTrigReciprocal014",
+    "HypTrigReciprocal015",
+    "HypTrigReciprocal016",
+    "HypTrigReciprocal017",
+    "HypTrigReciprocal018",
+    "HypTrigReciprocal019",
+    "HypTrigReciprocal020"
+  ],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "sinus x"
+    },
+    "Trig002": {
+      "expected": "kosinus x"
+    },
+    "Trig003": {
+      "expected": "tangens theta"
+    },
+    "Trig004": {
+      "expected": "sekans theta"
+    },
+    "Trig005": {
+      "expected": "kosekans x"
+    },
+    "Trig006": {
+      "expected": "kotangens x"
+    },
+    "Trig007": {
+      "expected": "sinus kwadraat x"
+    },
+    "Trig008": {
+      "expected": "kosinus tot die mag drie x"
+    },
+    "Trig009": {
+      "expected": "tangens kwadraat x"
+    },
+    "Trig010": {
+      "expected": "sekans tot die mag drie x"
+    },
+    "Trig011": {
+      "expected": "kosekans kwadraat x"
+    },
+    "Trig012": {
+      "expected": "kotangens kwadraat x"
+    },
+    "Trig013": {
+      "expected": "sinus 2 pi"
+    },
+    "Trig014": {
+      "expected": "die sinus van, links hakkie, pi k, plus, pi oor 2, regs hakkie"
+    },
+    "Trig015": {
+      "expected": "die kosinus van, pi oor 2"
+    },
+    "Trig016": {
+      "expected": "die sinus van, pi oor 2"
+    },
+    "Trig017": {
+      "expected": "sinus pi oor 2"
+    },
+    "Trig018": {
+      "expected": "2 oor sinus pi"
+    },
+    "Trig019": {
+      "expected": "die breuk met teller, die sinus van, pi oor 2, en noemer 3"
+    },
+    "Trig020": {
+      "expected": "tangens negatiewe pi"
+    },
+    "Trig021": {
+      "expected": "die sinus van, links hakkie, x plus pi, regs hakkie"
+    },
+    "Trig022": {
+      "expected": "die kosinus van, links hakkie, x plus, pi oor 2, regs hakkie"
+    },
+    "Trig023": {
+      "expected": "die kosinus van, links hakkie, pi oor 2, plus x, regs hakkie"
+    },
+    "Trig024": {
+      "expected": "sinus kwadraat x, plus, kosinus kwadraat x, is gelyk aan 1"
+    },
+    "Trig025": {
+      "expected": "die vierde mag van sinus x"
+    },
+    "Trig026": {
+      "expected": "die vyfde mag van kosinus x"
+    },
+    "Trig027": {
+      "expected": "die n-de mag van tangens x"
+    },
+    "Trig028": {
+      "expected": "sinus x oor kosinus x"
+    },
+    "Trig029": {
+      "expected": "tangens 35 grade"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig031": {
+      "expected": "die tangens van, links hakkie, hoek D E F, regs hakkie"
+    },
+    "Trig032": {
+      "expected": "die tangens van, links hakkie, hoek D, regs hakkie"
+    },
+    "Trig033": {
+      "expected": "die sinus van, links hakkie, x plus y, regs hakkie, is gelyk aan, sinus x kosinus y, plus, kosinus x sinus y"
+    },
+    "Trig034": {
+      "expected": "die kosinus van, links hakkie, x plus y, regs hakkie, is gelyk aan, kosinus x kosinus y, minus, sinus x sinus y"
+    },
+    "Trig035": {
+      "expected": "die tangens van, links hakkie, x plus y, regs hakkie, is gelyk aan, die breuk met teller tangens x minus tangens y, en noemer 1 minus, tangens x tangens y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig037": {
+      "expected": "die tangens van, links hakkie, pi oor 6, plus, 2 pi oor 3, regs hakkie, is gelyk aan, die breuk met teller, die tangens van, pi oor 6, minus, die tangens van, 2 pi oor 3, en noemer 1 minus, die tangens van, pi oor 6, die tangens van, 2 pi oor 3"
+    },
+    "Trig038": {
+      "expected": "tangens 2 x, is gelyk aan, die breuk met teller 2 tangens x, en noemer 1 minus, tangens kwadraat x"
+    },
+    "Trig039": {
+      "expected": "kosinus 2 x, is gelyk aan 2, kosinus kwadraat x, minus 1"
+    },
+    "Trig040": {
+      "expected": "die sinus van, x oor 2, is gelyk aan plus of minus die vierkantswortel van, die breuk met teller 1 minus kosinus x, en noemer 2"
+    },
+    "Trig041": {
+      "expected": "die tangens van, x oor 2, is gelyk aan plus of minus die vierkantswortel van, die breuk met teller 1 minus kosinus x, en noemer 1 plus kosinus x"
+    },
+    "Trig042": {
+      "expected": "kosinus x kosinus y, is gelyk aan 2, die kosinus van, die breuk met teller x plus y, en noemer 2, die kosinus van, die breuk met teller x minus y, en noemer 2"
+    },
+    "Trig043": {
+      "expected": "die sinus van, links hakkie, negatiewe, pi oor 8, regs hakkie, is gelyk aan negatiewe een helfte die vierkantswortel van 2 minus die vierkantswortel van 2, end wortel, end wortel"
+    },
+    "Trig044": {
+      "expected": "die tangens van, 3 pi oor 8, is gelyk aan, die breuk met teller die vierkantswortel van, die vierkantswortel van 2, end wortel, plus 1, end wortel, en noemer die vierkantswortel van, die vierkantswortel van 2, end wortel, minus 1, end wortel"
+    },
+    "Trig045": {
+      "expected": "die tangens van, pi oor 12, is gelyk aan een helfte die vierkantswortel van 2 minus die vierkantswortel van 3, end wortel, end wortel"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "die inverse sinus van x"
+    },
+    "TrigInvAuto002": {
+      "expected": "die inverse kosinus van x"
+    },
+    "TrigInvAuto003": {
+      "expected": "die inverse tangens van x"
+    },
+    "TrigInvAuto004": {
+      "expected": "die inverse kotangens van x"
+    },
+    "TrigInvAuto005": {
+      "expected": "die inverse sekans van x"
+    },
+    "TrigInvAuto006": {
+      "expected": "die inverse kosekans van x"
+    },
+    "TrigInvAuto007": {
+      "expected": "die inverse sinus van, die breuk met teller die vierkantswortel van 2, en noemer 2"
+    },
+    "TrigInvAuto008": {
+      "expected": "die inverse kosinus van een helfte"
+    },
+    "TrigInvAuto009": {
+      "expected": "die inverse tangens van 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "die inverse kotangens van 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "die inverse sekans van 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "die inverse kosekans van 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "die inverse sinus van negatiewe x"
+    },
+    "TrigInvAuto014": {
+      "expected": "die inverse kosinus van negatiewe x"
+    },
+    "TrigInvAuto015": {
+      "expected": "die inverse tangens van, links hakkie, negatiewe x plus 12, regs hakkie"
+    },
+    "TrigInvAuto016": {
+      "expected": "die inverse kotangens van, links hakkie, negatiewe x minus 1, regs hakkie"
+    },
+    "TrigInvAuto017": {
+      "expected": "die inverse sinus van sinus 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "die inverse kosekans van kosekans x"
+    },
+    "TrigInvAuto019": {
+      "expected": "die kosinus van, links hakkie, die inverse kosinus van, links hakkie, negatiewe, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "TrigInvAuto020": {
+      "expected": "die kosinus van, links hakkie, negatiewe, die inverse kosinus van, links hakkie, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "TrigInvAuto021": {
+      "expected": "die inverse sinus van, links hakkie, die kosinus van, pi oor 4, regs hakkie"
+    },
+    "TrigInvAuto022": {
+      "expected": "sinus, die inverse kosinus van een helfte"
+    },
+    "TrigInvAuto023": {
+      "expected": "sinus, die inverse tangens van 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "die sinus van, links hakkie, negatiewe, die inverse tangens van 1, regs hakkie"
+    },
+    "TrigInvAuto025": {
+      "expected": "die sinus van, links hakkie, negatiewe, die inverse tangens van negatiewe 1, regs hakkie"
+    },
+    "TrigInvAuto026": {
+      "expected": "die inverse sekans van sekans x"
+    },
+    "_comment6_": " Table 3: Hyperbolic Trigonometric Functions",
+    "TrigInverse001": {
+      "expected": "sinus inverse van x"
+    },
+    "TrigInverse002": {
+      "expected": "kosinus inverse van x"
+    },
+    "TrigInverse003": {
+      "expected": "tangens inverse van x"
+    },
+    "TrigInverse004": {
+      "expected": "kotangens inverse van x"
+    },
+    "TrigInverse005": {
+      "expected": "sekans inverse van x"
+    },
+    "TrigInverse006": {
+      "expected": "kosekans inverse van x"
+    },
+    "TrigInverse007": {
+      "expected": "sinus inverse van, die breuk met teller die vierkantswortel van 2, en noemer 2"
+    },
+    "TrigInverse008": {
+      "expected": "kosinus inverse van een helfte"
+    },
+    "TrigInverse009": {
+      "expected": "tangens inverse van 17"
+    },
+    "TrigInverse010": {
+      "expected": "kotangens inverse van 32"
+    },
+    "TrigInverse011": {
+      "expected": "sekans inverse van 100"
+    },
+    "TrigInverse012": {
+      "expected": "kosekans inverse van 85"
+    },
+    "TrigInverse013": {
+      "expected": "sinus inverse van negatiewe x"
+    },
+    "TrigInverse014": {
+      "expected": "kosinus inverse van negatiewe x"
+    },
+    "TrigInverse015": {
+      "expected": "tangens inverse van, links hakkie, negatiewe x plus 12, regs hakkie"
+    },
+    "TrigInverse016": {
+      "expected": "kotangens inverse van, links hakkie, negatiewe x minus 1, regs hakkie"
+    },
+    "TrigInverse017": {
+      "expected": "sinus inverse van sinus 0"
+    },
+    "TrigInverse018": {
+      "expected": "kosekans inverse van kosekans x"
+    },
+    "TrigInverse019": {
+      "expected": "die kosinus van, links hakkie, kosinus inverse van, links hakkie, negatiewe, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "TrigInverse020": {
+      "expected": "die kosinus van, links hakkie, negatiewe, kosinus inverse van, links hakkie, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "TrigInverse021": {
+      "expected": "sinus inverse van, links hakkie, die kosinus van, pi oor 4, regs hakkie"
+    },
+    "TrigInverse022": {
+      "expected": "sinus, kosinus inverse van een helfte"
+    },
+    "TrigInverse023": {
+      "expected": "sinus, tangens inverse van 1"
+    },
+    "TrigInverse024": {
+      "expected": "die sinus van, links hakkie, negatiewe, tangens inverse van 1, regs hakkie"
+    },
+    "TrigInverse025": {
+      "expected": "die sinus van, links hakkie, negatiewe, tangens inverse van negatiewe 1, regs hakkie"
+    },
+    "TrigInverse026": {
+      "expected": "sekans inverse van sekans x"
+    },
+    "ArcTrig001": {
+      "expected": "boog sinus x"
+    },
+    "ArcTrig002": {
+      "expected": "boog kosinus x"
+    },
+    "ArcTrig003": {
+      "expected": "boog tangens x"
+    },
+    "ArcTrig004": {
+      "expected": "boog kotangens x"
+    },
+    "ArcTrig005": {
+      "expected": "boog sekans x"
+    },
+    "ArcTrig006": {
+      "expected": "boog kosekans x"
+    },
+    "ArcTrig007": {
+      "expected": "boog sinus van, die breuk met teller die vierkantswortel van 2, en noemer 2"
+    },
+    "ArcTrig008": {
+      "expected": "boog kosinus een helfte"
+    },
+    "ArcTrig009": {
+      "expected": "boog tangens 17"
+    },
+    "ArcTrig010": {
+      "expected": "boog kotangens 32"
+    },
+    "ArcTrig011": {
+      "expected": "boog sekans 100"
+    },
+    "ArcTrig012": {
+      "expected": "boog kosekans 85"
+    },
+    "ArcTrig013": {
+      "expected": "boog sinus negatiewe x"
+    },
+    "ArcTrig014": {
+      "expected": "boog kosinus negatiewe x"
+    },
+    "ArcTrig015": {
+      "expected": "boog tangens van, links hakkie, negatiewe x plus 12, regs hakkie"
+    },
+    "ArcTrig016": {
+      "expected": "boog kotangens van, links hakkie, negatiewe x minus 1, regs hakkie"
+    },
+    "ArcTrig017": {
+      "expected": "boog sinus, sinus 0"
+    },
+    "ArcTrig018": {
+      "expected": "boog kosekans, kosekans x"
+    },
+    "ArcTrig019": {
+      "expected": "die kosinus van, links hakkie, boog kosinus van, links hakkie, negatiewe, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "ArcTrig020": {
+      "expected": "die kosinus van, links hakkie, negatiewe, boog kosinus van, links hakkie, die breuk met teller die vierkantswortel van 2, en noemer 2, regs hakkie, regs hakkie"
+    },
+    "ArcTrig021": {
+      "expected": "boog sinus van, links hakkie, die kosinus van, pi oor 4, regs hakkie"
+    },
+    "ArcTrig022": {
+      "expected": "sinus, boog kosinus een helfte"
+    },
+    "ArcTrig023": {
+      "expected": "sinus, boog tangens 1"
+    },
+    "ArcTrig024": {
+      "expected": "die sinus van, links hakkie, negatiewe, boog tangens 1, regs hakkie"
+    },
+    "ArcTrig025": {
+      "expected": "die sinus van, links hakkie, negatiewe, boog tangens negatiewe 1, regs hakkie"
+    },
+    "ArcTrig026": {
+      "expected": "boog sekans, sekans x"
+    },
+    "AllTrig01": {
+      "expected": "boog sinus x"
+    },
+    "AllTrig02": {
+      "expected": "boog kosinus x"
+    },
+    "AllTrig03": {
+      "expected": "boog tangens x"
+    },
+    "HypTrig001": {
+      "expected": "hiperboliese sinus van x"
+    },
+    "HypTrig002": {
+      "expected": "hiperboliese kosinus van x"
+    },
+    "HypTrig003": {
+      "expected": "hiperboliese tangens van x"
+    },
+    "HypTrig004": {
+      "expected": "hiperboliese kotangens van x"
+    },
+    "HypTrig005": {
+      "expected": "hiperboliese sekans van x"
+    },
+    "HypTrig006": {
+      "expected": "hiperboliese kosekans van x"
+    },
+    "HypTrig007": {
+      "expected": "die inverse hiperboliese sinus van x"
+    },
+    "HypTrig008": {
+      "expected": "die inverse hiperboliese kosinus van x"
+    },
+    "HypTrig009": {
+      "expected": "die inverse hiperboliese tangens van x"
+    },
+    "HypTrig010": {
+      "expected": "die inverse hiperboliese kotangens van x"
+    },
+    "HypTrig011": {
+      "expected": "die inverse hiperboliese sekans van x"
+    },
+    "HypTrig012": {
+      "expected": "die inverse hiperboliese kosekans van x"
+    },
+    "HypTrig013": {
+      "expected": "hiperboliese sinus van, die inverse hiperboliese sinus van x"
+    },
+    "HypTrig014": {
+      "expected": "hiperboliese kosinus van, die inverse hiperboliese kosinus van x"
+    },
+    "HypTrig015": {
+      "expected": "hiperboliese tangens van, die inverse hiperboliese tangens van x"
+    },
+    "HypTrig016": {
+      "expected": "hiperboliese kotangens van, die inverse hiperboliese kotangens van x"
+    },
+    "HypTrig017": {
+      "expected": "die inverse hiperboliese sinus van, hiperboliese sinus van x"
+    },
+    "HypTrig018": {
+      "expected": "die inverse hiperboliese kosinus van, hiperboliese kosinus van x"
+    },
+    "HypTrig019": {
+      "expected": "die inverse hiperboliese tangens van, hiperboliese tangens van x"
+    },
+    "HypTrig020": {
+      "expected": "die inverse hiperboliese kotangens van, hiperboliese kotangens van x"
+    },
+    "_comment8_": "New: Reciprocal. Not in English"
+  }
+}

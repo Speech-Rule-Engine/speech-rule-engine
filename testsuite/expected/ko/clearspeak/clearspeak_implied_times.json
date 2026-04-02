@@ -1,0 +1,524 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakImpliedTimes",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "Korean Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Implied Times",
+    "ImpTimes001": {
+      "expected": "2 곱하기 3"
+    },
+    "ImpTimes002": {
+      "expected": "2 곱하기 3"
+    },
+    "ImpTimes003": {
+      "expected": "2 네제곱 곱하기 3"
+    },
+    "ImpTimes004": {
+      "expected": "2 곱하기, 괄호 열고, 3 더하기 4, 괄호 닫고"
+    },
+    "ImpTimes005": {
+      "expected": "2 곱하기, 대괄호 열고, 3 더하기 4, 대괄호 닫고"
+    },
+    "ImpTimes006": {
+      "expected": "3 곱하기 2"
+    },
+    "ImpTimes007": {
+      "expected": "2 곱하기, 괄호 열고, 3 더하기 4, 괄호 닫고, 제곱"
+    },
+    "ImpTimes008": {
+      "expected": "괄호 열고, 2 더하기 7, 괄호 닫고, 곱하기, 괄호 열고, 3 빼기 6, 괄호 닫고"
+    },
+    "ImpTimes009": {
+      "expected": "대괄호 열고, 2 더하기 7, 대괄호 닫고, 곱하기, 대괄호 열고, 3 빼기 6, 대괄호 닫고"
+    },
+    "_comment2_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes010": {
+      "expected": "x 곱하기, y z"
+    },
+    "ImpTimes011": {
+      "expected": "x 곱하기, 괄호 열고, y 더하기 z, 괄호 닫고"
+    },
+    "ImpTimes012": {
+      "expected": "2 곱하기, 괄호 열고, y 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes013": {
+      "expected": "괄호 열고, 2 빼기 1, 괄호 닫고, 곱하기 x"
+    },
+    "ImpTimes014": {
+      "expected": "p 아래첨자 1, 곱하기, 괄호 열고, 3 더하기 7, 괄호 닫고"
+    },
+    "ImpTimes015": {
+      "expected": "p 아래첨자 1, 의, a 아래첨자 1, 제곱, p 아래첨자 2, 의, a 아래첨자 2, 제곱"
+    },
+    "ImpTimes016": {
+      "expected": "괄호 열고, x 더하기 y, 괄호 닫고, 의 마이너스 4 제곱, 곱하기, 괄호 열고, x 빼기 y, 괄호 닫고, 의 마이너스 4 제곱"
+    },
+    "ImpTimes017": {
+      "expected": "2 의 4 곱하기, 괄호 열고, x 더하기 y, 괄호 닫고, 제곱"
+    },
+    "ImpTimes018": {
+      "expected": "x y"
+    },
+    "ImpTimes019": {
+      "expected": "x 제곱, y 세제곱"
+    },
+    "ImpTimes020": {
+      "expected": "x 의 y 더하기 1 제곱, x 의 y 더하기 2 제곱"
+    },
+    "ImpTimes021": {
+      "expected": "루트 a, 루트 b, 는 루트 a b"
+    },
+    "ImpTimes022": {
+      "expected": "루트 3, 루트 10, 은 루트 30"
+    },
+    "ImpTimes023": {
+      "expected": "2 루트 3"
+    },
+    "ImpTimes024": {
+      "expected": "1 더하기 2 루트 3"
+    },
+    "ImpTimes025": {
+      "expected": "f 의 x, 는 x 제곱 곱하기, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes026": {
+      "expected": "f 의 x, 는 x 제곱 곱하기, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes027": {
+      "expected": "싸인 x 코싸인 y, 더하기, 코싸인 x 싸인 y"
+    },
+    "ImpTimes027a": {
+      "expected": "싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 코싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고"
+    },
+    "ImpTimes028": {
+      "expected": "밑이 10 인 로그 의, x y"
+    },
+    "ImpTimes029": {
+      "expected": "로그 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 로그 x 로그 y"
+    },
+    "ImpTimes030": {
+      "expected": "2 행 2 열의 행렬.  1행: 1, 3  2행: 5, 2. 곱하기 2 행 2 열의 행렬.  1행: 7, 4  2행: 0, 1"
+    },
+    "ImpTimes031": {
+      "expected": "2 곱하기, 괄호 열고, 3 곱하기, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes032": {
+      "expected": "2 곱하기, 괄호 열고, 3 곱하기, 두 괄호 열고, 세 괄호 열고, 4 더하기 5, 세 괄호 닫고, 더하기 6, 두 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes033": {
+      "expected": "2 곱하기, 대괄호 열고, 3 곱하기, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes034": {
+      "expected": "2 곱하기, 대괄호 열고, 3 곱하기, 괄호 열고, 두 괄호 열고, 4 더하기 5, 두 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes035": {
+      "expected": "2 곱하기, 절댓값 x"
+    },
+    "ImpTimes036": {
+      "expected": "절댓값 x, 곱하기, 절댓값 y"
+    },
+    "ImpTimes037": {
+      "expected": "절댓값 x 더하기 1, 곱하기, 절댓값 y 빼기 1"
+    },
+    "ImpTimes037a": {
+      "expected": "절댓값시작 x 더하기 1, 절댓값끝, 곱하기, 절댓값시작 y 빼기 1, 절댓값끝"
+    },
+    "ImpTimes038": {
+      "expected": "절댓값 x 더하기 1, 곱하기, 절댓값 y, 빼기 1"
+    },
+    "ImpTimes0381": {
+      "expected": "절댓값시작 x 더하기 1, 절댓값끝, 곱하기, 절댓값시작 y, 절댓값끝, 빼기 1"
+    },
+    "ImpTimes039": {
+      "expected": "2 곱하기 3"
+    },
+    "ImpTimes040": {
+      "expected": "2 곱하기 3"
+    },
+    "ImpTimes041": {
+      "expected": "2 네제곱 곱하기 3"
+    },
+    "ImpTimes042": {
+      "expected": "2 곱하기, 괄호 열고, 3 더하기 4, 괄호 닫고"
+    },
+    "ImpTimes043": {
+      "expected": "2 곱하기, 대괄호 열고, 3 더하기 4, 대괄호 닫고"
+    },
+    "ImpTimes044": {
+      "expected": "3 곱하기 2"
+    },
+    "ImpTimes045": {
+      "expected": "2 곱하기, 괄호 열고, 3 더하기 4, 괄호 닫고, 제곱"
+    },
+    "ImpTimes046": {
+      "expected": "괄호 열고, 2 더하기 7, 괄호 닫고, 곱하기, 괄호 열고, 3 빼기 6, 괄호 닫고"
+    },
+    "ImpTimes047": {
+      "expected": "대괄호 열고, 2 더하기 7, 대괄호 닫고, 곱하기, 대괄호 열고, 3 빼기 6, 대괄호 닫고"
+    },
+    "_comment3_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes048": {
+      "expected": "x 곱하기 y 곱하기 z"
+    },
+    "ImpTimes049": {
+      "expected": "x 곱하기, 괄호 열고, y 더하기 z, 괄호 닫고"
+    },
+    "ImpTimes050": {
+      "expected": "2 곱하기, 괄호 열고, y 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes051": {
+      "expected": "괄호 열고, 2 빼기 1, 괄호 닫고, 곱하기 x"
+    },
+    "ImpTimes052": {
+      "expected": "p 아래첨자 1, 곱하기, 괄호 열고, 3 더하기 7, 괄호 닫고"
+    },
+    "ImpTimes053": {
+      "expected": "p 아래첨자 1, 의, a 아래첨자 1, 제곱, 곱하기, p 아래첨자 2, 의, a 아래첨자 2, 제곱"
+    },
+    "ImpTimes054": {
+      "expected": "괄호 열고, x 더하기 y, 괄호 닫고, 의 마이너스 4 제곱, 곱하기, 괄호 열고, x 빼기 y, 괄호 닫고, 의 마이너스 4 제곱"
+    },
+    "ImpTimes055": {
+      "expected": "2 의 4 곱하기, 괄호 열고, x 더하기 y, 괄호 닫고, 제곱"
+    },
+    "ImpTimes056": {
+      "expected": "x 곱하기 y"
+    },
+    "ImpTimes057": {
+      "expected": "x 제곱 곱하기 y 세제곱"
+    },
+    "ImpTimes058": {
+      "expected": "x 의 y 더하기 1 제곱, 곱하기 x 의 y 더하기 2 제곱"
+    },
+    "ImpTimes059": {
+      "expected": "루트 a, 곱하기 루트 b, 는 루트 a 곱하기 b"
+    },
+    "ImpTimes060": {
+      "expected": "루트 3, 곱하기 루트 10, 은 루트 30"
+    },
+    "ImpTimes061": {
+      "expected": "2 곱하기 루트 3"
+    },
+    "ImpTimes062": {
+      "expected": "1 더하기 2 곱하기 루트 3"
+    },
+    "ImpTimes063": {
+      "expected": "f 의 x, 는 x 제곱 곱하기, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes064": {
+      "expected": "f 의 x, 는 x 제곱 곱하기, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes065": {
+      "expected": "싸인 x, 곱하기 코싸인 y 더하기 코싸인 x, 곱하기 싸인 y"
+    },
+    "ImpTimes065a": {
+      "expected": "싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고, 곱하기, 코싸인 의, 괄호 열고, x 더하기 y, 괄호 닫고"
+    },
+    "ImpTimes066": {
+      "expected": "밑이 10 인 로그 의, x 곱하기 y"
+    },
+    "ImpTimes067": {
+      "expected": "로그 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는 로그 x, 곱하기 로그 y"
+    },
+    "ImpTimes068": {
+      "expected": "2 행 2 열의 행렬.  1행: 1, 3  2행: 5, 2. 곱하기 2 행 2 열의 행렬.  1행: 7, 4  2행: 0, 1"
+    },
+    "ImpTimes069": {
+      "expected": "2 곱하기, 괄호 열고, 3 곱하기, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes070": {
+      "expected": "2 곱하기, 괄호 열고, 3 곱하기, 두 괄호 열고, 세 괄호 열고, 4 더하기 5, 세 괄호 닫고, 더하기 6, 두 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes070a": {
+      "expected": "2 곱하기, 대괄호 열고, 3 곱하기, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes071": {
+      "expected": "2 곱하기, 대괄호 열고, 3 곱하기, 괄호 열고, 두 괄호 열고, 4 더하기 5, 두 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes072": {
+      "expected": "2 곱하기, 절댓값 x"
+    },
+    "ImpTimes073": {
+      "expected": "절댓값 x, 곱하기, 절댓값 y"
+    },
+    "ImpTimes074": {
+      "expected": "절댓값 x 더하기 1, 곱하기, 절댓값 y 빼기 1"
+    },
+    "ImpTimes074a": {
+      "expected": "절댓값시작 x 더하기 1, 절댓값끝, 곱하기, 절댓값시작 y 빼기 1, 절댓값끝"
+    },
+    "ImpTimes075": {
+      "expected": "절댓값 x 더하기 1, 곱하기, 절댓값 y, 빼기 1"
+    },
+    "ImpTimes076": {
+      "expected": "절댓값시작 x 더하기 1, 절댓값끝, 곱하기, 절댓값시작 y, 절댓값끝, 빼기 1"
+    },
+    "ImpTimes077": {
+      "expected": "2, 괄호 열고, 3, 괄호 닫고"
+    },
+    "ImpTimes078": {
+      "expected": "2, 대괄호 열고, 3, 대괄호 닫고"
+    },
+    "ImpTimes079": {
+      "expected": "2 네제곱, 괄호 열고, 3, 괄호 닫고"
+    },
+    "ImpTimes080": {
+      "expected": "2, 괄호 열고, 3 더하기 4, 괄호 닫고"
+    },
+    "ImpTimes081": {
+      "expected": "2, 대괄호 열고, 3 더하기 4, 대괄호 닫고"
+    },
+    "ImpTimes082": {
+      "expected": "괄호 열고, 3, 괄호 닫고, 괄호 열고, 2, 괄호 닫고"
+    },
+    "ImpTimes083": {
+      "expected": "2, 괄호 열고, 3 더하기 4, 괄호 닫고, 제곱"
+    },
+    "ImpTimes084": {
+      "expected": "괄호 열고, 2 더하기 7, 괄호 닫고, 괄호 열고, 3 빼기 6, 괄호 닫고"
+    },
+    "ImpTimes085": {
+      "expected": "대괄호 열고, 2 더하기 7, 대괄호 닫고, 대괄호 열고, 3 빼기 6, 대괄호 닫고"
+    },
+    "_comment4_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes086": {
+      "expected": "x, 괄호 열고, y z, 괄호 닫고"
+    },
+    "ImpTimes087": {
+      "expected": "x, 괄호 열고, y 더하기 z, 괄호 닫고"
+    },
+    "ImpTimes088": {
+      "expected": "2, 괄호 열고, y 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes089": {
+      "expected": "괄호 열고, 2 빼기 1, 괄호 닫고, x"
+    },
+    "ImpTimes090": {
+      "expected": "p 아래첨자 1, 괄호 열고, 3 더하기 7, 괄호 닫고"
+    },
+    "ImpTimes091": {
+      "expected": "p 아래첨자 1, 의, a 아래첨자 1, 제곱, p 아래첨자 2, 의, a 아래첨자 2, 제곱"
+    },
+    "ImpTimes092": {
+      "expected": "괄호 열고, x 더하기 y, 괄호 닫고, 의 마이너스 4 제곱, 괄호 열고, x 빼기 y, 괄호 닫고, 의 마이너스 4 제곱"
+    },
+    "ImpTimes093": {
+      "expected": "2 의 4, 괄호 열고, x 더하기 y, 괄호 닫고, 제곱"
+    },
+    "ImpTimes094": {
+      "expected": "x y"
+    },
+    "ImpTimes095": {
+      "expected": "x 제곱 y 세제곱"
+    },
+    "ImpTimes096": {
+      "expected": "x 의 y 더하기 1 제곱, x 의 y 더하기 2 제곱"
+    },
+    "ImpTimes097": {
+      "expected": "루트 a, 루트 b, 는 루트 a b"
+    },
+    "ImpTimes098": {
+      "expected": "루트 3, 루트 10, 은 루트 30"
+    },
+    "ImpTimes099": {
+      "expected": "2 루트 3"
+    },
+    "ImpTimes100": {
+      "expected": "1 더하기 2 루트 3"
+    },
+    "ImpTimes101": {
+      "expected": "f 의 x, 는 x 제곱, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimes102": {
+      "expected": "f, 괄호 열고, x, 괄호 닫고, 등호 x 제곱, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "ImpTimes103": {
+      "expected": "싸인 x 코싸인 y, 더하기, 코싸인 x 싸인 y"
+    },
+    "ImpTimes104": {
+      "expected": "밑이 10 인 로그 의, x y"
+    },
+    "ImpTimes105": {
+      "expected": "로그 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 로그 x 로그 y"
+    },
+    "ImpTimes106": {
+      "expected": "2 행 2 열의 행렬.  1행: 1, 3  2행: 5, 2. 2 행 2 열의 행렬.  1행: 7, 4  2행: 0, 1"
+    },
+    "ImpTimes107": {
+      "expected": "2, 괄호 열고, 3, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes108": {
+      "expected": "2, 괄호 열고, 3, 두 괄호 열고, 세 괄호 열고, 4 더하기 5, 세 괄호 닫고, 더하기 6, 두 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimes109": {
+      "expected": "2, 대괄호 열고, 3, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes110": {
+      "expected": "2, 대괄호 열고, 3, 괄호 열고, 두 괄호 열고, 4 더하기 5, 두 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimes111": {
+      "expected": "2, 절댓값 x"
+    },
+    "ImpTimes112": {
+      "expected": "절댓값 x, 절댓값 y"
+    },
+    "ImpTimes113": {
+      "expected": "절댓값 x 더하기 1, 절댓값 y 빼기 1"
+    },
+    "ImpTimes114": {
+      "expected": "절댓값 x 더하기 1, 절댓값 y, 빼기 1"
+    },
+    "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
+    "ImpTimesSilPar001": {
+      "expected": "2, 괄호 열고, 3, 괄호 닫고"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "2, 대괄호 열고, 3, 대괄호 닫고"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "2 네제곱, 괄호 열고, 3, 괄호 닫고"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "2, 괄호 열고, 3 더하기 4, 괄호 닫고"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "2, 대괄호 열고, 3 더하기 4, 대괄호 닫고"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "괄호 열고, 3, 괄호 닫고, 괄호 열고, 2, 괄호 닫고"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "2, 괄호 열고, 3 더하기 4, 괄호 닫고, 제곱"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "괄호 열고, 2 더하기 7, 괄호 닫고, 괄호 열고, 3 빼기 6, 괄호 닫고"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "대괄호 열고, 2 더하기 7, 대괄호 닫고, 대괄호 열고, 3 빼기 6, 대괄호 닫고"
+    },
+    "_comment7_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimesSilPar010": {
+      "expected": "x, 괄호 열고, y z, 괄호 닫고"
+    },
+    "ImpTimesSilPar011": {
+      "expected": "x, 괄호 열고, y 더하기 z, 괄호 닫고"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "2, 괄호 열고, y 더하기 1, 괄호 닫고"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "괄호 열고, 2 빼기 1, 괄호 닫고, x"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "p 아래첨자 1, 괄호 열고, 3 더하기 7, 괄호 닫고"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "괄호 열고, x 더하기 y, 괄호 닫고, 의 마이너스 4 제곱, 괄호 열고, x 빼기 y, 괄호 닫고, 의 마이너스 4 제곱"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "2 의 4, 괄호 열고, x 더하기 y, 괄호 닫고, 제곱"
+    },
+    "ImpTimesSilPar017": {
+      "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "f 의 x, 는 x 제곱, 괄호 열고, x 더하기 1, 괄호 닫고"
+    },
+    "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimesSilPar018": {
+      "expected": "f, 괄호 열고, x, 괄호 닫고, 등호, x 제곱, 괄호 열고, x 더하기 1"
+    },
+    "ImpTimesSilPar019": {
+      "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "로그 의, 괄호 열고, x 더하기 y, 괄호 닫고, 는, 로그 x 로그 y"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "2 행 2 열의 행렬.  1행: 1, 3  2행: 5, 2. 2 행 2 열의 행렬.  1행: 7, 4  2행: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "2, 괄호 열고, 3, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "2, 괄호 열고, 3, 두 괄호 열고, 세 괄호 열고, 4 더하기 5, 세 괄호 닫고, 더하기 6, 두 괄호 닫고, 괄호 닫고"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "2, 대괄호 열고, 3, 괄호 열고, 괄호 열고, 4 더하기 5, 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "2, 대괄호 열고, 3, 괄호 열고, 두 괄호 열고, 4 더하기 5, 두 괄호 닫고, 더하기 6, 괄호 닫고, 대괄호 닫고"
+    },
+    "_comment11_": " Implied Times, Functions, or Something Else",
+    "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
+    "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
+    "_comment14_": "       Times_Auto.",
+    "Extra001": {
+      "expected": "A 는 h 의, 괄호 열고, 분모가 2, 이고 분자가, b 아래첨자 1, 더하기, b 아래첨자 2, 인 분수, 괄호 닫고"
+    },
+    "Extra002": {
+      "expected": "A 는, h 의, 괄호 열고, 분모가 2, 이고 분자가, b 아래첨자 1, 더하기, b 아래첨자 2, 인 분수, 괄호 닫고"
+    },
+    "Extra003": {
+      "expected": "a 의 0, 같다 0 곱하기 a 같다 0"
+    },
+    "Extra004": {
+      "expected": "a 의 0, 같다 0 곱하기 a 같다 0"
+    },
+    "Extra005": {
+      "expected": "a 의 마이너스 1, 은 마이너스 a"
+    },
+    "Extra006": {
+      "expected": "a 의 마이너스 1, 은 마이너스 a"
+    },
+    "_comment15_": " TODO: (Simons) a is categorised as function!",
+    "Extra007": {
+      "expected": "a 곱하기 b c, 등호, a b 곱하기 c"
+    },
+    "_comment16_": " TODO: (Simons) a is categorised as function!",
+    "Extra008": {
+      "expected": "a 곱하기, 괄호 열고, a 분의 1, 괄호 닫고, 등호, 1"
+    },
+    "_comment17_": " TODO: (Simons) a is categorised as function!",
+    "Extra009": {
+      "expected": "마이너스 u 곱하기 v, 등호 u 곱하기 마이너스 v, 등호 마이너스 u v"
+    },
+    "Extra010": {
+      "expected": "B 의, 괄호 열고, 2 콤마 6, 괄호 닫고"
+    },
+    "Extra012": {
+      "expected": "B 의, 괄호 열고, 2 콤마 6, 괄호 닫고"
+    },
+    "_comment18_": " TODO: (Simons) Explore exact speech.",
+    "Extra013": {
+      "expected": "점 B, 괄호 열고, 2 콤마 6, 괄호 닫고"
+    },
+    "Extra014": {
+      "expected": "p 의 w"
+    },
+    "Extra015": {
+      "expected": "x 의 t, 는 2 t, 더하기 4"
+    },
+    "Extra016": {
+      "expected": "k 의 x, 는, 괄호 열고, x 더하기 3, 괄호 닫고, 곱하기, 괄호 열고, x 빼기 5, 괄호 닫고"
+    },
+    "_comment19_": " TODO: (Simons) a is categorised as function!",
+    "Extra017": {
+      "expected": "3 a 제곱 빼기 12 a, 등호, 3 a, 곱하기 a, 빼기 3 a, 곱하기 4"
+    },
+    "Extra018": {
+      "expected": "T 의 t, 는, T 아래첨자 s, 더하기, 괄호 열고, T 아래첨자 0, 빼기, T 아래첨자 s, 괄호 닫고, 곱하기 e 의 마이너스 k t, 제곱"
+    },
+    "Extra019": {
+      "expected": "V 는 필기체 l, w 의 8",
+      "_comment20_": " w is considered a simple function.",
+      "_comment21_": "var speech = 'V, 등호, script l, w, 곱하기 8';"
+    },
+    "_comment22_": " TODO: (Simons) Explore exact speech.",
+    "Extra020": {
+      "expected": "V, 등호, l w, 곱하기 8"
+    }
+  }
+}
+

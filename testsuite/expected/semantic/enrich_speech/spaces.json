@@ -1,0 +1,6 @@
+{
+  "factory": "enrichSpeech",
+  "tests": "ALL",
+  "information": "Enrich Speech Tests for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json"
+}

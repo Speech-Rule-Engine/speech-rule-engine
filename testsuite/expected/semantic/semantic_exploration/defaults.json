@@ -1,0 +1,103 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration defaults tests.",
+  "base": "input/semantic/defaults.json",
+  "tests": {
+    "function_propagation_0": {
+      "expected": [
+        27,
+        [
+          25,
+          0,
+          24,
+          [
+            17,
+            1,
+            [
+              16,
+              2,
+              3,
+              4
+            ],
+            5
+          ]
+        ],
+        6,
+        [
+          26,
+          [
+            23,
+            7,
+            22,
+            [
+              18,
+              8,
+              9,
+              10
+            ]
+          ],
+          11,
+          [
+            21,
+            12,
+            20,
+            [
+              19,
+              13,
+              14,
+              15
+            ]
+          ]
+        ]
+      ]
+    },
+    "function_propagation_1": {
+      "expected": [
+        27,
+        [
+          26,
+          [
+            25,
+            0,
+            24,
+            [
+              16,
+              1,
+              2,
+              3
+            ]
+          ],
+          4,
+          [
+            23,
+            5,
+            22,
+            [
+              17,
+              6,
+              7,
+              8
+            ]
+          ]
+        ],
+        9,
+        [
+          21,
+          10,
+          20,
+          [
+            19,
+            11,
+            [
+              18,
+              12,
+              13,
+              14
+            ],
+            15
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -87,12 +87,12 @@
     [
       "Action",
       "not-member",
-      "[t] \"is nie 'n element van\"; [t] %1:; [t] \"nie\""
+      "[t] \"is nie 'n element van\""
     ],
     [
       "Action",
       "not-member-member",
-      "[t] \"is nie 'n element vanf\""
+      "[t] \"is nie 'n element van\""
     ],
     [
       "Action",
@@ -401,6 +401,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[t] \"die interval van\"; [n] children/*[1]/children/*[1]; [t] \"tot\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"die interval van\"; [n] children/*[1]/children/*[1]; [t] \"tot\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
@@ -567,7 +572,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"die vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -577,7 +582,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"die negatiewe vierkantswortel van\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die negatiewe vierkantswortel van\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -587,7 +592,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -597,7 +602,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die positiewe vierkantswortel van\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -737,7 +742,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"die absolute waarde van\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end absolute waarde van\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"die absolute waarde van\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end absolute waarde van\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -757,7 +762,7 @@
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"die norm van\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"die norm van\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"end metric\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -977,7 +982,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]; [t] \"tot\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1002,22 +1007,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"onder\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"bo\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"met\"; [n] children/*[1]/children/*[2]; [t] \"onder\"; [t] \"en\"; [n] children/*[2]; [t] \"bo\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"tot\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"onder\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"oor\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"met\"; [n] children/*[2]; [t] \"onder\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"vanaf\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"oor\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1213,6 +1223,41 @@
       "Action",
       "cancel-under-end",
       "[t] \"oorskryf\"; [n] children/*[2]/children/*[1]; [t] \"met\"; [n] children/*[1]; [t] \"end oorskryf\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"afleidingsreël\"; [m] content/*; [t] \"met gevolgtrekking\"; [n] children/*[1]; [t] \"en\"; [t] count(children/*[2]/children/*); [t] \"uitgangspunte\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"afleidingsreël\"; [m] content/*; [t] \"met gevolgtrekking\"; [n] children/*[1]; [t] \"en\"; [t] count(children/*[2]/children/*); [t] \"uitgangspunt\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"uitgangspunt \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"opskrif\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"aksioom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"leë aksioom\""
     ]
   ]
 }

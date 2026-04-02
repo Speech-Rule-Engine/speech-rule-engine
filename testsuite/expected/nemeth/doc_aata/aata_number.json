@@ -1,0 +1,2724 @@
+{
+  "factory": "speech",
+  "name": "PreTeXtAataNumberTests",
+  "information": "PreTeXt Aata document Number expressions.",
+  "locale": "nemeth",
+  "domain": "default",
+  "style": "default",
+  "modality": "braille",
+  "tests": {
+    "Number_0": {
+      "id": "m-54",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#VjS",
+      "input": "<math><mo>−</mo><mn>3</mn></math>",
+      "tex": "-3",
+      "expected": "⠤⠼⠒",
+      "reference": {
+        "m-54": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#VjS",
+        "m-2402": "http://abstract.ups.edu/aata/exercises-cyclic.html#aik",
+        "m-15510": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Number_1": {
+      "id": "m-209",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#qRW",
+      "input": "<math><mn>2</mn></math>",
+      "tex": "2",
+      "expected": "⠼⠆",
+      "reference": {
+        "m-209": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#qRW",
+        "m-693": "http://abstract.ups.edu/aata/section-math-induction.html#xoP",
+        "m-1036": "http://abstract.ups.edu/aata/section-division-algorithm.html#eBr",
+        "m-1204": "http://abstract.ups.edu/aata/exercises-integers.html#gcj",
+        "m-1210": "http://abstract.ups.edu/aata/exercises-integers.html#cMe",
+        "m-1218": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn",
+        "m-1260": "http://abstract.ups.edu/aata/integers-sage.html#Ajv",
+        "m-1306": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1425": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-1659": "http://abstract.ups.edu/aata/section-subgroups.html#aRn",
+        "m-1992": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#qbc",
+        "m-2053": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Wil",
+        "m-2290": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#JcV",
+        "m-2486": "http://abstract.ups.edu/aata/exercises-cyclic.html#GDO",
+        "m-2540": "http://abstract.ups.edu/aata/cyclic-exercises-programming.html#oAk",
+        "m-2603": "http://abstract.ups.edu/aata/section-permutation-definitions.html#cBN",
+        "m-2604": "http://abstract.ups.edu/aata/section-permutation-definitions.html#cBN",
+        "m-2706": "http://abstract.ups.edu/aata/section-permutation-definitions.html#TSi",
+        "m-2837": "http://abstract.ups.edu/aata/section-dihedral-groups.html#PDO",
+        "m-2851": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG",
+        "m-3053": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3076": "http://abstract.ups.edu/aata/permute-sage-exercises.html#Pip",
+        "m-3238": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3424": "http://abstract.ups.edu/aata/exercises-cosets.html#oeh",
+        "m-3495": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#qKs",
+        "m-3631": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-3699": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#BEj",
+        "m-3803": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3805": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3806": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3810": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3811": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3813": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3909": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#wwr",
+        "m-3920": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3921": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3922": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3923": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3924": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3925": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3928": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3930": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3931": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3932": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3933": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3935": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3937": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3938": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3940": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3941": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3943": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3944": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3946": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3947": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3948": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3951": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3952": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3953": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3955": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3956": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3957": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3960": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3961": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3962": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3964": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3965": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3967": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3968": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3970": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3971": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3973": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3975": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3976": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3977": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3978": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3980": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3983": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3984": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3985": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3986": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3987": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3988": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-4297": "http://abstract.ups.edu/aata/section-parity-check.html#hng",
+        "m-4298": "http://abstract.ups.edu/aata/section-parity-check.html#hng",
+        "m-4313": "http://abstract.ups.edu/aata/section-parity-check.html#xgl",
+        "m-4318": "http://abstract.ups.edu/aata/section-parity-check.html#shX",
+        "m-4518": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4542": "http://abstract.ups.edu/aata/exercises-algcodes.html#nTD",
+        "m-4543": "http://abstract.ups.edu/aata/exercises-algcodes.html#nTD",
+        "m-4866": "http://abstract.ups.edu/aata/section-direct-products.html#tmD",
+        "m-4981": "http://abstract.ups.edu/aata/section-direct-products.html#edF",
+        "m-5239": "http://abstract.ups.edu/aata/exercises-isomorph.html#PbL",
+        "m-5256": "http://abstract.ups.edu/aata/exercises-isomorph.html#Hxm",
+        "m-5261": "http://abstract.ups.edu/aata/exercises-isomorph.html#nEv",
+        "m-5269": "http://abstract.ups.edu/aata/exercises-isomorph.html#TLE",
+        "m-5281": "http://abstract.ups.edu/aata/exercises-isomorph.html#fZW",
+        "m-5290": "http://abstract.ups.edu/aata/exercises-isomorph.html#Mhf",
+        "m-5310": "http://abstract.ups.edu/aata/isomorph-sage.html#WNB",
+        "m-5329": "http://abstract.ups.edu/aata/isomorph-sage.html#HED",
+        "m-5332": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5336": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5338": "http://abstract.ups.edu/aata/isomorph-sage.html#Mow",
+        "m-5342": "http://abstract.ups.edu/aata/isomorph-sage.html#Mow",
+        "m-5343": "http://abstract.ups.edu/aata/isomorph-sage.html#Mow",
+        "m-5365": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-5587": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5679": "http://abstract.ups.edu/aata/exercises-normal.html#JEu",
+        "m-5749": "http://abstract.ups.edu/aata/normal-sage.html#crS",
+        "m-5752": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5764": "http://abstract.ups.edu/aata/normal-sage.html#lLE",
+        "m-6284": "http://abstract.ups.edu/aata/homomorph-sage-exercises.html#TyJ",
+        "m-6285": "http://abstract.ups.edu/aata/homomorph-sage-exercises.html#zFS",
+        "m-6809": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#Blb",
+        "m-7195": "http://abstract.ups.edu/aata/exercises-struct.html#CLT",
+        "m-7267": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-7324": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Xyv",
+        "m-7638": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#Dkf",
+        "m-8019": "http://abstract.ups.edu/aata/actions-sage.html#mVO",
+        "m-8020": "http://abstract.ups.edu/aata/actions-sage.html#TcX",
+        "m-8108": "http://abstract.ups.edu/aata/section-sylow-theorems.html#OIm",
+        "m-8302": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8479": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8480": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8481": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8482": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8486": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8488": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8490": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8530": "http://abstract.ups.edu/aata/section-sylow-applications.html#rUP",
+        "m-8532": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8567": "http://abstract.ups.edu/aata/exercises-sylow.html#NYs",
+        "m-8568": "http://abstract.ups.edu/aata/exercises-sylow.html#NYs",
+        "m-8591": "http://abstract.ups.edu/aata/exercises-sylow.html#amK",
+        "m-8592": "http://abstract.ups.edu/aata/exercises-sylow.html#amK",
+        "m-8601": "http://abstract.ups.edu/aata/exercises-sylow.html#amK",
+        "m-8695": "http://abstract.ups.edu/aata/exercises-sylow.html#YLS",
+        "m-8740": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8741": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8772": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8784": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8789": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8793": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8796": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8806": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8841": "http://abstract.ups.edu/aata/sylow-sage.html#wjj",
+        "m-8846": "http://abstract.ups.edu/aata/sylow-sage.html#wjj",
+        "m-8850": "http://abstract.ups.edu/aata/sylow-sage.html#cqs",
+        "m-8853": "http://abstract.ups.edu/aata/sylow-sage.html#cqs",
+        "m-8870": "http://abstract.ups.edu/aata/sylow-sage.html#ZvM",
+        "m-8873": "http://abstract.ups.edu/aata/sylow-sage.html#FCV",
+        "m-8956": "http://abstract.ups.edu/aata/section-rings-definitions.html#xOf",
+        "m-9997": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10529": "http://abstract.ups.edu/aata/exercises-poly.html#YRw",
+        "m-10899": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10908": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10911": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-11217": "http://abstract.ups.edu/aata/section-factorization-domains.html#HHD",
+        "m-11409": "http://abstract.ups.edu/aata/exercises-domains.html#pLd",
+        "m-12588": "http://abstract.ups.edu/aata/exercises-vect.html#agt",
+        "m-12613": "http://abstract.ups.edu/aata/exercises-vect.html#tpq",
+        "m-12805": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq",
+        "m-13671": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-13677": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-13906": "http://abstract.ups.edu/aata/fields-sage.html#RdG",
+        "m-14267": "http://abstract.ups.edu/aata/section-poly-codes.html#YMs",
+        "m-15307": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#nGi",
+        "m-15586": "http://abstract.ups.edu/aata/section-galois-applications.html#cLr",
+        "m-15801": "http://abstract.ups.edu/aata/galois-sage.html#Mxn",
+        "m-15813": "http://abstract.ups.edu/aata/galois-sage.html#BYi",
+        "m-15814": "http://abstract.ups.edu/aata/galois-sage.html#ifr",
+        "m-15815": "http://abstract.ups.edu/aata/galois-sage.html#ifr",
+        "m-15824": "http://abstract.ups.edu/aata/galois-sage.html#LrU",
+        "m-15831": "http://abstract.ups.edu/aata/galois-sage-exercises.html#Fon"
+      }
+    },
+    "Number_2": {
+      "id": "m-308",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hTJ",
+      "input": "<math><mn>0</mn></math>",
+      "tex": "0",
+      "expected": "⠼⠴",
+      "reference": {
+        "m-308": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#hTJ",
+        "m-664": "http://abstract.ups.edu/aata/exercises-sets.html#hjP",
+        "m-1302": "http://abstract.ups.edu/aata/section-mod-n-sym.html#gGz",
+        "m-1409": "http://abstract.ups.edu/aata/section-groups-define.html#Zca",
+        "m-1423": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-1440": "http://abstract.ups.edu/aata/section-groups-define.html#RxB",
+        "m-1658": "http://abstract.ups.edu/aata/section-subgroups.html#aRn",
+        "m-2286": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#cVM",
+        "m-2374": "http://abstract.ups.edu/aata/exercises-cyclic.html#hMJ",
+        "m-3086": "http://abstract.ups.edu/aata/section-cosets.html#zIF",
+        "m-3764": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3773": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-3778": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#VuA",
+        "m-3781": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3783": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3789": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3800": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3816": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3824": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp",
+        "m-3831": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp",
+        "m-3919": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3929": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3939": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3949": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3959": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3969": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3979": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3989": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-4046": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4052": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4058": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4064": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4287": "http://abstract.ups.edu/aata/section-parity-check.html#ARP",
+        "m-4365": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ypg",
+        "m-4516": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4613": "http://abstract.ups.edu/aata/exercises-algcodes.html#dIT",
+        "m-5763": "http://abstract.ups.edu/aata/normal-sage.html#lLE",
+        "m-7754": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7755": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7756": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7757": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7758": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7759": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7760": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7761": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7762": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7763": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7764": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7766": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7767": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7768": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7769": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7775": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7776": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7777": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7780": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7781": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7786": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7788": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7790": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7792": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7802": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7803": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7812": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7814": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7815": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7816": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7817": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7823": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7824": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7825": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7828": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7829": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7834": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7836": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7838": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7840": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7886": "http://abstract.ups.edu/aata/exercises-actions.html#nMM",
+        "m-8001": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+        "m-8917": "http://abstract.ups.edu/aata/section-rings-definitions.html#yqI",
+        "m-9138": "http://abstract.ups.edu/aata/section-domains-and-fields.html#ucB",
+        "m-9186": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#GqT",
+        "m-9270": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#aqB",
+        "m-9766": "http://abstract.ups.edu/aata/exercises-rings.html#fpc",
+        "m-12315": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12316": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12318": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12319": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12320": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12324": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12326": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12327": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12329": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12332": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12903": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-13952": "http://abstract.ups.edu/aata/section-finite-field.html#Gnp",
+        "m-14649": "http://abstract.ups.edu/aata/finite-sage-exercises.html#iPY",
+        "m-14922": "http://abstract.ups.edu/aata/section-field-automorphisms.html#hhc",
+        "m-15513": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15514": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Number_3": {
+      "id": "m-491",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+      "input": "<math><mn>8</mn></math>",
+      "tex": "8",
+      "expected": "⠼⠦",
+      "reference": {
+        "m-491": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#Lgm",
+        "m-1949": "http://abstract.ups.edu/aata/groups-sage.html#QGD",
+        "m-2841": "http://abstract.ups.edu/aata/section-dihedral-groups.html#PDO",
+        "m-3049": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3759": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3761": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3770": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-4524": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4916": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-5058": "http://abstract.ups.edu/aata/exercises-isomorph.html#QJU",
+        "m-5355": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#soo",
+        "m-5741": "http://abstract.ups.edu/aata/normal-sage.html#QdA",
+        "m-5776": "http://abstract.ups.edu/aata/normal-sage-exercises.html#uvw",
+        "m-5779": "http://abstract.ups.edu/aata/normal-sage-exercises.html#aCF",
+        "m-5781": "http://abstract.ups.edu/aata/normal-sage-exercises.html#GJO",
+        "m-7132": "http://abstract.ups.edu/aata/reading-questions-13.html#gte",
+        "m-7272": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-8011": "http://abstract.ups.edu/aata/actions-sage.html#aHw",
+        "m-8027": "http://abstract.ups.edu/aata/actions-sage-exercises.html#ncS",
+        "m-8458": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8487": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8527": "http://abstract.ups.edu/aata/section-sylow-applications.html#rUP",
+        "m-8776": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-10021": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-12810": "http://abstract.ups.edu/aata/vect-sage-exercises.html#gFz",
+        "m-13900": "http://abstract.ups.edu/aata/fields-sage.html#nRd",
+        "m-13901": "http://abstract.ups.edu/aata/fields-sage.html#nRd",
+        "m-14493": "http://abstract.ups.edu/aata/exercises-finite.html#uuw",
+        "m-14653": "http://abstract.ups.edu/aata/finite-sage-exercises.html#veq",
+        "m-14654": "http://abstract.ups.edu/aata/finite-sage-exercises.html#veq",
+        "m-15299": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#nGi",
+        "m-15788": "http://abstract.ups.edu/aata/galois-sage.html#ytI",
+        "m-15789": "http://abstract.ups.edu/aata/galois-sage.html#ytI",
+        "m-15790": "http://abstract.ups.edu/aata/galois-sage.html#ytI",
+        "m-15791": "http://abstract.ups.edu/aata/galois-sage.html#ytI",
+        "m-15796": "http://abstract.ups.edu/aata/galois-sage.html#gqe",
+        "m-15797": "http://abstract.ups.edu/aata/galois-sage.html#gqe"
+      }
+    },
+    "Number_4": {
+      "id": "m-513",
+      "url": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#rnv",
+      "input": "<math><mn>3</mn></math>",
+      "tex": "3",
+      "expected": "⠼⠒",
+      "reference": {
+        "m-513": "http://abstract.ups.edu/aata/section-sets-and-equivalence-relations.html#rnv",
+        "m-694": "http://abstract.ups.edu/aata/section-math-induction.html#xoP",
+        "m-1065": "http://abstract.ups.edu/aata/exercises-integers.html#ZhE",
+        "m-1205": "http://abstract.ups.edu/aata/exercises-integers.html#gcj",
+        "m-1219": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn",
+        "m-1426": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-1977": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#JTT",
+        "m-1979": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#JTT",
+        "m-1980": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#JTT",
+        "m-1981": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#JTT",
+        "m-2052": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Wil",
+        "m-2184": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2308": "http://abstract.ups.edu/aata/reading-questions-4.html#LQt",
+        "m-2641": "http://abstract.ups.edu/aata/section-permutation-definitions.html#yFD",
+        "m-2838": "http://abstract.ups.edu/aata/section-dihedral-groups.html#PDO",
+        "m-2852": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG",
+        "m-2948": "http://abstract.ups.edu/aata/exercises-permute.html#IJj",
+        "m-2951": "http://abstract.ups.edu/aata/exercises-permute.html#oQs",
+        "m-3087": "http://abstract.ups.edu/aata/section-cosets.html#zIF",
+        "m-3239": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3246": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3248": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3250": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3261": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#ihE",
+        "m-3263": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#ihE",
+        "m-3520": "http://abstract.ups.edu/aata/section-private-key-crypt.html#RSA",
+        "m-3700": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#BEj",
+        "m-3807": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3809": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3819": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#qsK",
+        "m-4013": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IKJ",
+        "m-4047": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4048": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4051": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4054": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4056": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4059": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4062": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4063": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4072": "http://abstract.ups.edu/aata/section-linear-codes.html#vcD",
+        "m-4091": "http://abstract.ups.edu/aata/section-linear-codes.html#UZb",
+        "m-4099": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4100": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4314": "http://abstract.ups.edu/aata/section-parity-check.html#xgl",
+        "m-4345": "http://abstract.ups.edu/aata/section-parity-check.html#dnu",
+        "m-4519": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4549": "http://abstract.ups.edu/aata/exercises-algcodes.html#UaM",
+        "m-4653": "http://abstract.ups.edu/aata/algcodes-sage-exercises.html#OzV",
+        "m-4922": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-4977": "http://abstract.ups.edu/aata/section-direct-products.html#edF",
+        "m-5085": "http://abstract.ups.edu/aata/exercises-isomorph.html#tWx",
+        "m-5086": "http://abstract.ups.edu/aata/exercises-isomorph.html#tWx",
+        "m-5311": "http://abstract.ups.edu/aata/isomorph-sage.html#WNB",
+        "m-5314": "http://abstract.ups.edu/aata/isomorph-sage.html#WNB",
+        "m-5341": "http://abstract.ups.edu/aata/isomorph-sage.html#Mow",
+        "m-5512": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#mhd",
+        "m-5514": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#YkC",
+        "m-5516": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#YkC",
+        "m-5522": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#Som",
+        "m-5525": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5531": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5532": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5537": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5542": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5545": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#ErL",
+        "m-5551": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#yvv",
+        "m-5556": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5567": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5575": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5585": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5596": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#kyU",
+        "m-5602": "http://abstract.ups.edu/aata/section-simplicity-of-an.html#sdt",
+        "m-5743": "http://abstract.ups.edu/aata/normal-sage.html#wkJ",
+        "m-5746": "http://abstract.ups.edu/aata/normal-sage.html#crS",
+        "m-5748": "http://abstract.ups.edu/aata/normal-sage.html#crS",
+        "m-5751": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5754": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5756": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5759": "http://abstract.ups.edu/aata/normal-sage.html#Zxm",
+        "m-5760": "http://abstract.ups.edu/aata/normal-sage.html#FEv",
+        "m-5762": "http://abstract.ups.edu/aata/normal-sage.html#lLE",
+        "m-5782": "http://abstract.ups.edu/aata/normal-sage-exercises.html#mQX",
+        "m-6250": "http://abstract.ups.edu/aata/homomorph-sage.html#YiC",
+        "m-6811": "http://abstract.ups.edu/aata/section-finite-abelian-groups.html#Blb",
+        "m-7265": "http://abstract.ups.edu/aata/struct-sage.html#EfH",
+        "m-7268": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-7323": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Xyv",
+        "m-7527": "http://abstract.ups.edu/aata/section-class-equation.html#AKY",
+        "m-8023": "http://abstract.ups.edu/aata/actions-sage-exercises.html#mlU",
+        "m-8109": "http://abstract.ups.edu/aata/section-sylow-theorems.html#OIm",
+        "m-8303": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8308": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8373": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8378": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8569": "http://abstract.ups.edu/aata/exercises-sylow.html#NYs",
+        "m-8571": "http://abstract.ups.edu/aata/exercises-sylow.html#tKc",
+        "m-8573": "http://abstract.ups.edu/aata/exercises-sylow.html#ufB",
+        "m-8623": "http://abstract.ups.edu/aata/exercises-sylow.html#KIn",
+        "m-8748": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8843": "http://abstract.ups.edu/aata/sylow-sage.html#wjj",
+        "m-8858": "http://abstract.ups.edu/aata/sylow-sage.html#oEK",
+        "m-8859": "http://abstract.ups.edu/aata/sylow-sage.html#oEK",
+        "m-8860": "http://abstract.ups.edu/aata/sylow-sage.html#oEK",
+        "m-8862": "http://abstract.ups.edu/aata/sylow-sage.html#ULT",
+        "m-8863": "http://abstract.ups.edu/aata/sylow-sage.html#ULT",
+        "m-8890": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#OmN",
+        "m-8978": "http://abstract.ups.edu/aata/section-rings-definitions.html#Jlz",
+        "m-10004": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10012": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10018": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10456": "http://abstract.ups.edu/aata/exercises-poly.html#bMc",
+        "m-10517": "http://abstract.ups.edu/aata/exercises-poly.html#rqz",
+        "m-10530": "http://abstract.ups.edu/aata/exercises-poly.html#YRw",
+        "m-11111": "http://abstract.ups.edu/aata/section-factorization-domains.html#WQB",
+        "m-13676": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-14248": "http://abstract.ups.edu/aata/section-poly-codes.html#sFj",
+        "m-14502": "http://abstract.ups.edu/aata/exercises-finite.html#iBD",
+        "m-15654": "http://abstract.ups.edu/aata/exercises-galois.html#Xdw",
+        "m-15657": "http://abstract.ups.edu/aata/exercises-galois.html#Xdw"
+      }
+    },
+    "Number_5": {
+      "id": "m-687",
+      "url": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+      "input": "<math><mn>10</mn></math>",
+      "tex": "10",
+      "expected": "⠼⠂⠴",
+      "reference": {
+        "m-687": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+        "m-2327": "http://abstract.ups.edu/aata/exercises-cyclic.html#JjZ",
+        "m-3493": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#ewa",
+        "m-3663": "http://abstract.ups.edu/aata/exercises-crypt.html#JiI",
+        "m-5321": "http://abstract.ups.edu/aata/isomorph-sage.html#jbT",
+        "m-5362": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-5367": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-5369": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-8021": "http://abstract.ups.edu/aata/actions-sage.html#zkg",
+        "m-8787": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_6": {
+      "id": "m-688",
+      "url": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+      "input": "<math><mn>66</mn></math>",
+      "tex": "66",
+      "expected": "⠼⠖⠖",
+      "reference": {
+        "m-688": "http://abstract.ups.edu/aata/sets-sage.html#RjT"
+      }
+    },
+    "Number_7": {
+      "id": "m-689",
+      "url": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+      "input": "<math><mn>46</mn></math>",
+      "tex": "46",
+      "expected": "⠼⠲⠖",
+      "reference": {
+        "m-689": "http://abstract.ups.edu/aata/sets-sage.html#RjT",
+        "m-8739": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_8": {
+      "id": "m-695",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#xoP",
+      "input": "<math><mn>4</mn></math>",
+      "tex": "4",
+      "expected": "⠼⠲",
+      "reference": {
+        "m-695": "http://abstract.ups.edu/aata/section-math-induction.html#xoP",
+        "m-1221": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn",
+        "m-1307": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1310": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1427": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-1972": "http://abstract.ups.edu/aata/groups-sage-exercises.html#Zqv",
+        "m-1973": "http://abstract.ups.edu/aata/groups-sage-exercises.html#Zqv",
+        "m-2488": "http://abstract.ups.edu/aata/exercises-cyclic.html#GDO",
+        "m-2642": "http://abstract.ups.edu/aata/section-permutation-definitions.html#eMM",
+        "m-2839": "http://abstract.ups.edu/aata/section-dihedral-groups.html#PDO",
+        "m-2853": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG",
+        "m-3046": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3240": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3926": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3934": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3942": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3950": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3958": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3966": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3974": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3982": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-4049": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4053": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4057": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4061": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4106": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4317": "http://abstract.ups.edu/aata/section-parity-check.html#shX",
+        "m-4520": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4534": "http://abstract.ups.edu/aata/exercises-algcodes.html#yHd",
+        "m-4550": "http://abstract.ups.edu/aata/exercises-algcodes.html#UaM",
+        "m-4648": "http://abstract.ups.edu/aata/algcodes-sage.html#esN",
+        "m-5093": "http://abstract.ups.edu/aata/exercises-isomorph.html#GkP",
+        "m-5301": "http://abstract.ups.edu/aata/isomorph-sage.html#esa",
+        "m-5304": "http://abstract.ups.edu/aata/isomorph-sage.html#Kzj",
+        "m-5305": "http://abstract.ups.edu/aata/isomorph-sage.html#Kzj",
+        "m-5306": "http://abstract.ups.edu/aata/isomorph-sage.html#Kzj",
+        "m-5744": "http://abstract.ups.edu/aata/normal-sage.html#wkJ",
+        "m-5769": "http://abstract.ups.edu/aata/normal-sage.html#Koo",
+        "m-5770": "http://abstract.ups.edu/aata/normal-sage.html#Koo",
+        "m-5771": "http://abstract.ups.edu/aata/normal-sage.html#Koo",
+        "m-5772": "http://abstract.ups.edu/aata/normal-sage.html#Koo",
+        "m-5774": "http://abstract.ups.edu/aata/normal-sage.html#CJP",
+        "m-5777": "http://abstract.ups.edu/aata/normal-sage-exercises.html#uvw",
+        "m-5778": "http://abstract.ups.edu/aata/normal-sage-exercises.html#aCF",
+        "m-5780": "http://abstract.ups.edu/aata/normal-sage-exercises.html#GJO",
+        "m-6249": "http://abstract.ups.edu/aata/homomorph-sage.html#LUk",
+        "m-6252": "http://abstract.ups.edu/aata/homomorph-sage.html#YiC",
+        "m-6262": "http://abstract.ups.edu/aata/homomorph-sage.html#wLm",
+        "m-7269": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-7270": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-7325": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Xyv",
+        "m-7998": "http://abstract.ups.edu/aata/actions-sage.html#RnK",
+        "m-7999": "http://abstract.ups.edu/aata/actions-sage.html#RnK",
+        "m-8005": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+        "m-8304": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8309": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8457": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8467": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8754": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8816": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8822": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8842": "http://abstract.ups.edu/aata/sylow-sage.html#wjj",
+        "m-8854": "http://abstract.ups.edu/aata/sylow-sage.html#cqs",
+        "m-8857": "http://abstract.ups.edu/aata/sylow-sage.html#oEK",
+        "m-8979": "http://abstract.ups.edu/aata/section-rings-definitions.html#Jlz",
+        "m-9994": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10518": "http://abstract.ups.edu/aata/exercises-poly.html#rqz",
+        "m-10897": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-10914": "http://abstract.ups.edu/aata/section-factorization-domains.html#qJs",
+        "m-11577": "http://abstract.ups.edu/aata/domains-sage.html#Wvc",
+        "m-12350": "http://abstract.ups.edu/aata/boolean-sage-exercises.html#UgQ",
+        "m-12582": "http://abstract.ups.edu/aata/exercises-vect.html#tZk",
+        "m-12812": "http://abstract.ups.edu/aata/vect-sage-exercises.html#MMI",
+        "m-15306": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#nGi",
+        "m-15515": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15823": "http://abstract.ups.edu/aata/galois-sage.html#SWt",
+        "m-15832": "http://abstract.ups.edu/aata/galois-sage-exercises.html#Fon"
+      }
+    },
+    "Number_9": {
+      "id": "m-724",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+      "input": "<math><mn>9</mn></math>",
+      "tex": "9",
+      "expected": "⠼⠔",
+      "reference": {
+        "m-724": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+        "m-727": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+        "m-729": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+        "m-731": "http://abstract.ups.edu/aata/section-math-induction.html#Xsr",
+        "m-2187": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-8374": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8384": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8459": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8468": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8570": "http://abstract.ups.edu/aata/exercises-sylow.html#NYs",
+        "m-8580": "http://abstract.ups.edu/aata/exercises-sylow.html#ZRl",
+        "m-8781": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8844": "http://abstract.ups.edu/aata/sylow-sage.html#wjj",
+        "m-8849": "http://abstract.ups.edu/aata/sylow-sage.html#cqs",
+        "m-8851": "http://abstract.ups.edu/aata/sylow-sage.html#cqs",
+        "m-13770": "http://abstract.ups.edu/aata/exercises-fields.html#smB",
+        "m-14655": "http://abstract.ups.edu/aata/finite-sage-exercises.html#veq"
+      }
+    },
+    "Number_10": {
+      "id": "m-739",
+      "url": "http://abstract.ups.edu/aata/section-math-induction.html#DzA",
+      "input": "<math><mn>1</mn></math>",
+      "tex": "1",
+      "expected": "⠼⠂",
+      "reference": {
+        "m-739": "http://abstract.ups.edu/aata/section-math-induction.html#DzA",
+        "m-753": "http://abstract.ups.edu/aata/section-math-induction.html#Gug",
+        "m-959": "http://abstract.ups.edu/aata/section-division-algorithm.html#yui",
+        "m-1020": "http://abstract.ups.edu/aata/section-division-algorithm.html#Rap",
+        "m-1266": "http://abstract.ups.edu/aata/integers-sage-exercises.html#NDg",
+        "m-1267": "http://abstract.ups.edu/aata/integers-sage-exercises.html#tKp",
+        "m-1349": "http://abstract.ups.edu/aata/section-mod-n-sym.html#QGq",
+        "m-1424": "http://abstract.ups.edu/aata/section-groups-define.html#Fjj",
+        "m-1492": "http://abstract.ups.edu/aata/section-groups-define.html#Whu",
+        "m-1611": "http://abstract.ups.edu/aata/section-subgroups.html#CoD",
+        "m-1616": "http://abstract.ups.edu/aata/section-subgroups.html#CoD",
+        "m-1941": "http://abstract.ups.edu/aata/groups-exercises-detecting-errors.html#ozt",
+        "m-1965": "http://abstract.ups.edu/aata/groups-sage.html#SvQ",
+        "m-2047": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Wil",
+        "m-2057": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#wAi",
+        "m-2183": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2259": "http://abstract.ups.edu/aata/section-mult-group-c.html#xTW",
+        "m-2548": "http://abstract.ups.edu/aata/cyclic-sage.html#CDP",
+        "m-2550": "http://abstract.ups.edu/aata/cyclic-sage.html#seK",
+        "m-2558": "http://abstract.ups.edu/aata/cyclic-sage.html#YOw",
+        "m-2601": "http://abstract.ups.edu/aata/section-permutation-definitions.html#cBN",
+        "m-2602": "http://abstract.ups.edu/aata/section-permutation-definitions.html#cBN",
+        "m-2836": "http://abstract.ups.edu/aata/section-dihedral-groups.html#PDO",
+        "m-2850": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG",
+        "m-3030": "http://abstract.ups.edu/aata/permute-sage.html#llS",
+        "m-3045": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3047": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3051": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3072": "http://abstract.ups.edu/aata/permute-sage-exercises.html#KFA",
+        "m-3237": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3494": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#KDj",
+        "m-3736": "http://abstract.ups.edu/aata/crypt-sage-exercises.html#yJD",
+        "m-3765": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3766": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3768": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+        "m-3774": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-3775": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-3776": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#ees",
+        "m-3777": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#ees",
+        "m-3779": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#VuA",
+        "m-3782": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3785": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3788": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#KlB",
+        "m-3801": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3802": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3804": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3812": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3814": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3815": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3825": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp",
+        "m-3828": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp",
+        "m-3829": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#LFp",
+        "m-3877": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#EaQ",
+        "m-4035": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#cDn",
+        "m-4086": "http://abstract.ups.edu/aata/section-linear-codes.html#FPQ",
+        "m-4101": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4104": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4108": "http://abstract.ups.edu/aata/section-linear-codes.html#bjM",
+        "m-4167": "http://abstract.ups.edu/aata/section-parity-check.html#zMw",
+        "m-4168": "http://abstract.ups.edu/aata/section-parity-check.html#zMw",
+        "m-4277": "http://abstract.ups.edu/aata/section-parity-check.html#kRT",
+        "m-4285": "http://abstract.ups.edu/aata/section-parity-check.html#ARP",
+        "m-4335": "http://abstract.ups.edu/aata/section-parity-check.html#Nup",
+        "m-4366": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ypg",
+        "m-4517": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4611": "http://abstract.ups.edu/aata/exercises-algcodes.html#dIT",
+        "m-5238": "http://abstract.ups.edu/aata/exercises-isomorph.html#PbL",
+        "m-5361": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-5742": "http://abstract.ups.edu/aata/normal-sage.html#wkJ",
+        "m-5745": "http://abstract.ups.edu/aata/normal-sage.html#crS",
+        "m-5747": "http://abstract.ups.edu/aata/normal-sage.html#crS",
+        "m-5750": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5753": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5755": "http://abstract.ups.edu/aata/normal-sage.html#Izb",
+        "m-5758": "http://abstract.ups.edu/aata/normal-sage.html#Zxm",
+        "m-5761": "http://abstract.ups.edu/aata/normal-sage.html#lLE",
+        "m-5903": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#Jvd",
+        "m-6409": "http://abstract.ups.edu/aata/section-matrix-groups.html#pFQ",
+        "m-7322": "http://abstract.ups.edu/aata/section-groups-acting-on-sets.html#Xyv",
+        "m-7765": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7770": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7771": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7772": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7773": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7774": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7778": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7779": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7782": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7783": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7784": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7785": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7787": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7789": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7791": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7793": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7804": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7805": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7806": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7807": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7808": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7809": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7810": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7811": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7813": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7818": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7819": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7820": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7821": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7822": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7826": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7827": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7830": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7831": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7832": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7833": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7835": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7837": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7839": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-7841": "http://abstract.ups.edu/aata/section-burnsides-counting-theorem.html#xJo",
+        "m-8002": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+        "m-8292": "http://abstract.ups.edu/aata/section-sylow-theorems.html#RJW",
+        "m-8417": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8433": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8447": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8549": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8734": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8738": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8743": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8747": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8751": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8762": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8774": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8778": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8798": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8810": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8814": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8818": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8820": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8856": "http://abstract.ups.edu/aata/sylow-sage.html#oEK",
+        "m-8910": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#SWG",
+        "m-8958": "http://abstract.ups.edu/aata/section-rings-definitions.html#xOf",
+        "m-9001": "http://abstract.ups.edu/aata/section-rings-definitions.html#CxY",
+        "m-9075": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI",
+        "m-9152": "http://abstract.ups.edu/aata/section-domains-and-fields.html#FsE",
+        "m-9156": "http://abstract.ups.edu/aata/section-domains-and-fields.html#jKn",
+        "m-9231": "http://abstract.ups.edu/aata/section-ring-homomorphisms.html#yMu",
+        "m-9437": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#yTl",
+        "m-9455": "http://abstract.ups.edu/aata/section-maximal-prime-ideals.html#Zlv",
+        "m-9767": "http://abstract.ups.edu/aata/exercises-rings.html#fpc",
+        "m-9819": "http://abstract.ups.edu/aata/rings-sage-exercises.html#DRM",
+        "m-10368": "http://abstract.ups.edu/aata/section-irreducible-poly.html#qVa",
+        "m-10895": "http://abstract.ups.edu/aata/section-factorization-domains.html#KCj",
+        "m-10963": "http://abstract.ups.edu/aata/section-factorization-domains.html#KuS",
+        "m-10965": "http://abstract.ups.edu/aata/section-factorization-domains.html#KuS",
+        "m-11214": "http://abstract.ups.edu/aata/section-factorization-domains.html#HHD",
+        "m-11398": "http://abstract.ups.edu/aata/exercises-domains.html#kUg",
+        "m-11417": "http://abstract.ups.edu/aata/exercises-domains.html#dpH",
+        "m-11673": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Zmi",
+        "m-12317": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12321": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12322": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12323": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12325": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12328": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12330": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12331": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12333": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12334": "http://abstract.ups.edu/aata/boolean-exercises-programming.html#Uvl",
+        "m-12346": "http://abstract.ups.edu/aata/boolean-sage.html#ekw",
+        "m-12904": "http://abstract.ups.edu/aata/section-extension-fields.html#UPk",
+        "m-13669": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-13670": "http://abstract.ups.edu/aata/section-constructions.html#kmD",
+        "m-13678": "http://abstract.ups.edu/aata/section-constructions.html#QtM",
+        "m-14263": "http://abstract.ups.edu/aata/section-poly-codes.html#YMs",
+        "m-14401": "http://abstract.ups.edu/aata/section-poly-codes.html#daM",
+        "m-14588": "http://abstract.ups.edu/aata/exercises-finite.html#tpd",
+        "m-14967": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EiH",
+        "m-15802": "http://abstract.ups.edu/aata/galois-sage.html#sEw"
+      }
+    },
+    "Number_11": {
+      "id": "m-915",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+      "input": "<math><mn>945</mn></math>",
+      "tex": "945",
+      "expected": "⠼⠔⠲⠢",
+      "reference": {
+        "m-915": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-922": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-926": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-929": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "Number_12": {
+      "id": "m-916",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+      "input": "<math><mn>2415</mn></math>",
+      "tex": "2415",
+      "expected": "⠼⠆⠲⠂⠢",
+      "reference": {
+        "m-916": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-924": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-927": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-930": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "Number_13": {
+      "id": "m-917",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+      "input": "<math><mn>105</mn></math>",
+      "tex": "105",
+      "expected": "⠼⠂⠴⠢",
+      "reference": {
+        "m-917": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-919": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-921": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-923": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-925": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+        "m-932": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "Number_14": {
+      "id": "m-918",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+      "input": "<math><mn>420</mn></math>",
+      "tex": "420",
+      "expected": "⠼⠲⠆⠴",
+      "reference": {
+        "m-918": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "Number_15": {
+      "id": "m-920",
+      "url": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ",
+      "input": "<math><mn>525</mn></math>",
+      "tex": "525",
+      "expected": "⠼⠢⠆⠢",
+      "reference": {
+        "m-920": "http://abstract.ups.edu/aata/section-division-algorithm.html#jGJ"
+      }
+    },
+    "Number_16": {
+      "id": "m-1042",
+      "url": "http://abstract.ups.edu/aata/reading-questions-2.html#fCg",
+      "input": "<math><mn>123456792</mn></math>",
+      "tex": "123456792",
+      "expected": "⠼⠂⠆⠒⠲⠢⠖⠶⠔⠆",
+      "reference": {
+        "m-1042": "http://abstract.ups.edu/aata/reading-questions-2.html#fCg"
+      }
+    },
+    "Number_17": {
+      "id": "m-1043",
+      "url": "http://abstract.ups.edu/aata/reading-questions-2.html#LJp",
+      "input": "<math><mn>84</mn></math>",
+      "tex": "84",
+      "expected": "⠼⠦⠲",
+      "reference": {
+        "m-1043": "http://abstract.ups.edu/aata/reading-questions-2.html#LJp"
+      }
+    },
+    "Number_18": {
+      "id": "m-1044",
+      "url": "http://abstract.ups.edu/aata/reading-questions-2.html#LJp",
+      "input": "<math><mn>52</mn></math>",
+      "tex": "52",
+      "expected": "⠼⠢⠆",
+      "reference": {
+        "m-1044": "http://abstract.ups.edu/aata/reading-questions-2.html#LJp",
+        "m-5107": "http://abstract.ups.edu/aata/exercises-isomorph.html#yGq",
+        "m-8753": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8775": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_19": {
+      "id": "m-1068",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#FoN",
+      "input": "<math><mn>99</mn></math>",
+      "tex": "99",
+      "expected": "⠼⠔⠔",
+      "reference": {
+        "m-1068": "http://abstract.ups.edu/aata/exercises-integers.html#FoN",
+        "m-8371": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8396": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-9543": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9619": "http://abstract.ups.edu/aata/exercises-rings.html#nYU",
+        "m-9622": "http://abstract.ups.edu/aata/exercises-rings.html#Ugd"
+      }
+    },
+    "Number_20": {
+      "id": "m-1104",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+      "input": "<math><mn>14</mn></math>",
+      "tex": "14",
+      "expected": "⠼⠂⠲",
+      "reference": {
+        "m-1104": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+        "m-2555": "http://abstract.ups.edu/aata/cyclic-sage.html#MAe",
+        "m-3633": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-3649": "http://abstract.ups.edu/aata/exercises-crypt.html#FEi",
+        "m-5322": "http://abstract.ups.edu/aata/isomorph-sage.html#jbT",
+        "m-7263": "http://abstract.ups.edu/aata/struct-sage.html#XYy",
+        "m-8736": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8768": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8791": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8812": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_21": {
+      "id": "m-1105",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+      "input": "<math><mn>39</mn></math>",
+      "tex": "39",
+      "expected": "⠼⠒⠔",
+      "reference": {
+        "m-1105": "http://abstract.ups.edu/aata/exercises-integers.html#bNP",
+        "m-8783": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_22": {
+      "id": "m-1106",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#HUY",
+      "input": "<math><mn>234</mn></math>",
+      "tex": "234",
+      "expected": "⠼⠆⠒⠲",
+      "reference": {
+        "m-1106": "http://abstract.ups.edu/aata/exercises-integers.html#HUY"
+      }
+    },
+    "Number_23": {
+      "id": "m-1107",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#HUY",
+      "input": "<math><mn>165</mn></math>",
+      "tex": "165",
+      "expected": "⠼⠂⠖⠢",
+      "reference": {
+        "m-1107": "http://abstract.ups.edu/aata/exercises-integers.html#HUY"
+      }
+    },
+    "Number_24": {
+      "id": "m-1108",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#och",
+      "input": "<math><mn>1739</mn></math>",
+      "tex": "1739",
+      "expected": "⠼⠂⠶⠒⠔",
+      "reference": {
+        "m-1108": "http://abstract.ups.edu/aata/exercises-integers.html#och"
+      }
+    },
+    "Number_25": {
+      "id": "m-1109",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#och",
+      "input": "<math><mn>9923</mn></math>",
+      "tex": "9923",
+      "expected": "⠼⠔⠔⠆⠒",
+      "reference": {
+        "m-1109": "http://abstract.ups.edu/aata/exercises-integers.html#och"
+      }
+    },
+    "Number_26": {
+      "id": "m-1110",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq",
+      "input": "<math><mn>471</mn></math>",
+      "tex": "471",
+      "expected": "⠼⠲⠶⠂",
+      "reference": {
+        "m-1110": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq"
+      }
+    },
+    "Number_27": {
+      "id": "m-1111",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq",
+      "input": "<math><mn>562</mn></math>",
+      "tex": "562",
+      "expected": "⠼⠢⠖⠆",
+      "reference": {
+        "m-1111": "http://abstract.ups.edu/aata/exercises-integers.html#Ujq"
+      }
+    },
+    "Number_28": {
+      "id": "m-1112",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz",
+      "input": "<math><mn>23771</mn></math>",
+      "tex": "23771",
+      "expected": "⠼⠆⠒⠶⠶⠂",
+      "reference": {
+        "m-1112": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz"
+      }
+    },
+    "Number_29": {
+      "id": "m-1113",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz",
+      "input": "<math><mn>19945</mn></math>",
+      "tex": "19945",
+      "expected": "⠼⠂⠔⠔⠲⠢",
+      "reference": {
+        "m-1113": "http://abstract.ups.edu/aata/exercises-integers.html#Aqz"
+      }
+    },
+    "Number_30": {
+      "id": "m-1114",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#gxI",
+      "input": "<math><mo>−</mo><mn>4357</mn></math>",
+      "tex": "-4357",
+      "expected": "⠤⠼⠲⠒⠢⠶",
+      "reference": {
+        "m-1114": "http://abstract.ups.edu/aata/exercises-integers.html#gxI"
+      }
+    },
+    "Number_31": {
+      "id": "m-1115",
+      "url": "http://abstract.ups.edu/aata/exercises-integers.html#gxI",
+      "input": "<math><mn>3754</mn></math>",
+      "tex": "3754",
+      "expected": "⠼⠒⠶⠢⠲",
+      "reference": {
+        "m-1115": "http://abstract.ups.edu/aata/exercises-integers.html#gxI"
+      }
+    },
+    "Number_32": {
+      "id": "m-1220",
+      "url": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn",
+      "input": "<math><mn>5</mn></math>",
+      "tex": "5",
+      "expected": "⠼⠢",
+      "reference": {
+        "m-1220": "http://abstract.ups.edu/aata/integers-exercises-programming.html#ITn",
+        "m-1499": "http://abstract.ups.edu/aata/section-groups-define.html#EdQ",
+        "m-2048": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#Wil",
+        "m-2185": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2310": "http://abstract.ups.edu/aata/reading-questions-4.html#rXC",
+        "m-3048": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3050": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3343": "http://abstract.ups.edu/aata/exercises-cosets.html#aaC",
+        "m-4123": "http://abstract.ups.edu/aata/section-linear-codes.html#HqV",
+        "m-4127": "http://abstract.ups.edu/aata/section-linear-codes.html#HqV",
+        "m-4355": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ypg",
+        "m-4521": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-5076": "http://abstract.ups.edu/aata/exercises-isomorph.html#WUF",
+        "m-5094": "http://abstract.ups.edu/aata/exercises-isomorph.html#GkP",
+        "m-6256": "http://abstract.ups.edu/aata/homomorph-sage.html#EpL",
+        "m-6259": "http://abstract.ups.edu/aata/homomorph-sage.html#kwU",
+        "m-8110": "http://abstract.ups.edu/aata/section-sylow-theorems.html#OIm",
+        "m-8305": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8310": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8313": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8316": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8318": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8319": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8322": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8422": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8434": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8444": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8448": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8449": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8758": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8760": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8764": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8801": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8803": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8874": "http://abstract.ups.edu/aata/sylow-sage.html#FCV",
+        "m-8902": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#GIo",
+        "m-8904": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#GIo",
+        "m-8906": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#GIo",
+        "m-8909": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#SWG",
+        "m-10022": "http://abstract.ups.edu/aata/section-poly-division-algorithm.html#rxQ",
+        "m-10658": "http://abstract.ups.edu/aata/poly-sage.html#BIA",
+        "m-11406": "http://abstract.ups.edu/aata/exercises-domains.html#xpC",
+        "m-12345": "http://abstract.ups.edu/aata/boolean-sage.html#RWe",
+        "m-12352": "http://abstract.ups.edu/aata/boolean-sage-exercises.html#AnZ",
+        "m-12803": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq",
+        "m-13289": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-13291": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-14222": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs",
+        "m-14228": "http://abstract.ups.edu/aata/section-poly-codes.html#fVs",
+        "m-15545": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15547": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Number_33": {
+      "id": "m-1265",
+      "url": "http://abstract.ups.edu/aata/integers-sage.html#YMf",
+      "input": "<math><mn>2600</mn></math>",
+      "tex": "2600",
+      "expected": "⠼⠆⠖⠴⠴",
+      "reference": {
+        "m-1265": "http://abstract.ups.edu/aata/integers-sage.html#YMf"
+      }
+    },
+    "Number_34": {
+      "id": "m-1286",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+      "input": "<math><mn>12</mn></math>",
+      "tex": "12",
+      "expected": "⠼⠂⠆",
+      "reference": {
+        "m-1286": "http://abstract.ups.edu/aata/section-mod-n-sym.html#xTf",
+        "m-2326": "http://abstract.ups.edu/aata/exercises-cyclic.html#JjZ",
+        "m-2549": "http://abstract.ups.edu/aata/cyclic-sage.html#seK",
+        "m-2551": "http://abstract.ups.edu/aata/cyclic-sage.html#seK",
+        "m-2552": "http://abstract.ups.edu/aata/cyclic-sage.html#seK",
+        "m-3234": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3236": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3462": "http://abstract.ups.edu/aata/cosets-sage.html#XPQ",
+        "m-5075": "http://abstract.ups.edu/aata/exercises-isomorph.html#WUF",
+        "m-5327": "http://abstract.ups.edu/aata/isomorph-sage.html#HED",
+        "m-6246": "http://abstract.ups.edu/aata/homomorph-sage.html#LUk",
+        "m-6251": "http://abstract.ups.edu/aata/homomorph-sage.html#YiC",
+        "m-6268": "http://abstract.ups.edu/aata/homomorph-sage-exercises.html#uVZ",
+        "m-6269": "http://abstract.ups.edu/aata/homomorph-sage-exercises.html#uVZ",
+        "m-7271": "http://abstract.ups.edu/aata/struct-sage.html#kmQ",
+        "m-7938": "http://abstract.ups.edu/aata/exercises-actions.html#fMO",
+        "m-7957": "http://abstract.ups.edu/aata/exercises-actions.html#cSi",
+        "m-8039": "http://abstract.ups.edu/aata/sylow.html#Ejh",
+        "m-8800": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-11670": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Zmi",
+        "m-11672": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Zmi"
+      }
+    },
+    "Number_35": {
+      "id": "m-1308",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+      "input": "<math><mn>6</mn></math>",
+      "tex": "6",
+      "expected": "⠼⠖",
+      "reference": {
+        "m-1308": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1311": "http://abstract.ups.edu/aata/section-mod-n-sym.html#MNI",
+        "m-1944": "http://abstract.ups.edu/aata/groups-sage.html#QGD",
+        "m-1948": "http://abstract.ups.edu/aata/groups-sage.html#QGD",
+        "m-2640": "http://abstract.ups.edu/aata/section-permutation-definitions.html#yFD",
+        "m-2844": "http://abstract.ups.edu/aata/section-dihedral-groups.html#suS",
+        "m-3052": "http://abstract.ups.edu/aata/permute-sage.html#Liq",
+        "m-3073": "http://abstract.ups.edu/aata/permute-sage-exercises.html#KFA",
+        "m-3235": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3241": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3243": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3251": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#kzH",
+        "m-3253": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#uYM",
+        "m-3274": "http://abstract.ups.edu/aata/section-lagranges-theorem.html#ihE",
+        "m-4141": "http://abstract.ups.edu/aata/section-linear-codes.html#nye",
+        "m-4166": "http://abstract.ups.edu/aata/section-parity-check.html#zMw",
+        "m-4397": "http://abstract.ups.edu/aata/section-efficient-decoding.html#Ewp",
+        "m-4522": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-5057": "http://abstract.ups.edu/aata/exercises-isomorph.html#kCL",
+        "m-5087": "http://abstract.ups.edu/aata/exercises-isomorph.html#adG",
+        "m-5307": "http://abstract.ups.edu/aata/isomorph-sage.html#qGs",
+        "m-5319": "http://abstract.ups.edu/aata/isomorph-sage.html#CUK",
+        "m-5320": "http://abstract.ups.edu/aata/isomorph-sage.html#jbT",
+        "m-5328": "http://abstract.ups.edu/aata/isomorph-sage.html#HED",
+        "m-5330": "http://abstract.ups.edu/aata/isomorph-sage.html#HED",
+        "m-5331": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5333": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5334": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5335": "http://abstract.ups.edu/aata/isomorph-sage.html#nLM",
+        "m-5337": "http://abstract.ups.edu/aata/isomorph-sage.html#Mow",
+        "m-8009": "http://abstract.ups.edu/aata/actions-sage.html#aHw",
+        "m-8040": "http://abstract.ups.edu/aata/sylow.html#Ejh",
+        "m-8765": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8867": "http://abstract.ups.edu/aata/sylow-sage.html#toD",
+        "m-8892": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#OmN",
+        "m-12804": "http://abstract.ups.edu/aata/vect-sage-exercises.html#Ayq",
+        "m-13306": "http://abstract.ups.edu/aata/section-extension-fields.html#lNv",
+        "m-15653": "http://abstract.ups.edu/aata/exercises-galois.html#Xdw",
+        "m-15857": "http://abstract.ups.edu/aata/galois-sage-exercises.html#HdA"
+      }
+    },
+    "Number_36": {
+      "id": "m-1319",
+      "url": "http://abstract.ups.edu/aata/section-mod-n-sym.html#aYr",
+      "input": "<math><mo>−</mo><mi>a</mi></math>",
+      "tex": "-a",
+      "expected": "⠤⠁",
+      "reference": {
+        "m-1319": "http://abstract.ups.edu/aata/section-mod-n-sym.html#aYr",
+        "m-8922": "http://abstract.ups.edu/aata/section-rings-definitions.html#exR"
+      }
+    },
+    "Number_37": {
+      "id": "m-1411",
+      "url": "http://abstract.ups.edu/aata/section-groups-define.html#Zca",
+      "input": "<math><mo>−</mo><mi>n</mi></math>",
+      "tex": "-n",
+      "expected": "⠤⠝",
+      "reference": {
+        "m-1411": "http://abstract.ups.edu/aata/section-groups-define.html#Zca",
+        "m-1417": "http://abstract.ups.edu/aata/section-groups-define.html#rPy",
+        "m-2100": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#gHd"
+      }
+    },
+    "Number_38": {
+      "id": "m-1946",
+      "url": "http://abstract.ups.edu/aata/groups-sage.html#QGD",
+      "input": "<math><mn>6.00000</mn></math>",
+      "tex": "6.00000",
+      "expected": "⠼⠖⠨⠴⠴⠴⠴⠴",
+      "reference": {
+        "m-1946": "http://abstract.ups.edu/aata/groups-sage.html#QGD"
+      }
+    },
+    "Number_39": {
+      "id": "m-1961",
+      "url": "http://abstract.ups.edu/aata/groups-sage.html#moH",
+      "input": "<math><mo>−</mo><mn>1</mn></math>",
+      "tex": "-1",
+      "expected": "⠤⠼⠂",
+      "reference": {
+        "m-1961": "http://abstract.ups.edu/aata/groups-sage.html#moH",
+        "m-1966": "http://abstract.ups.edu/aata/groups-sage.html#yCZ",
+        "m-2058": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#wAi",
+        "m-2260": "http://abstract.ups.edu/aata/section-mult-group-c.html#xTW",
+        "m-2520": "http://abstract.ups.edu/aata/exercises-cyclic.html#XBZ",
+        "m-6410": "http://abstract.ups.edu/aata/section-matrix-groups.html#pFQ",
+        "m-6549": "http://abstract.ups.edu/aata/section-symmetry.html#RFJ",
+        "m-8959": "http://abstract.ups.edu/aata/section-rings-definitions.html#xOf",
+        "m-9076": "http://abstract.ups.edu/aata/section-domains-and-fields.html#baI",
+        "m-10896": "http://abstract.ups.edu/aata/section-factorization-domains.html#KCj",
+        "m-11399": "http://abstract.ups.edu/aata/exercises-domains.html#kUg"
+      }
+    },
+    "Number_40": {
+      "id": "m-1969",
+      "url": "http://abstract.ups.edu/aata/groups-sage.html#yCZ",
+      "input": "<math><mo>−</mo><mi>I</mi></math>",
+      "tex": "-I",
+      "expected": "⠤⠠⠊",
+      "reference": {
+        "m-1969": "http://abstract.ups.edu/aata/groups-sage.html#yCZ"
+      }
+    },
+    "Number_41": {
+      "id": "m-2186",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+      "input": "<math><mn>7</mn></math>",
+      "tex": "7",
+      "expected": "⠼⠶",
+      "reference": {
+        "m-2186": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2329": "http://abstract.ups.edu/aata/exercises-cyclic.html#YAb",
+        "m-2339": "http://abstract.ups.edu/aata/exercises-cyclic.html#VFv",
+        "m-2566": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#gVL",
+        "m-2569": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#gVL",
+        "m-2570": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#NcU",
+        "m-3345": "http://abstract.ups.edu/aata/exercises-cosets.html#aaC",
+        "m-3490": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#pTu",
+        "m-4523": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4552": "http://abstract.ups.edu/aata/exercises-algcodes.html#rcE",
+        "m-4646": "http://abstract.ups.edu/aata/algcodes-sage.html#esN",
+        "m-4647": "http://abstract.ups.edu/aata/algcodes-sage.html#esN",
+        "m-4650": "http://abstract.ups.edu/aata/algcodes-sage.html#esN",
+        "m-4652": "http://abstract.ups.edu/aata/algcodes-sage.html#byh",
+        "m-5921": "http://abstract.ups.edu/aata/section-group-homomorphisms.html#VJv",
+        "m-6261": "http://abstract.ups.edu/aata/homomorph-sage.html#wLm",
+        "m-8026": "http://abstract.ups.edu/aata/actions-sage-exercises.html#ncS",
+        "m-8423": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8435": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8474": "http://abstract.ups.edu/aata/section-sylow-applications.html#fGx",
+        "m-8475": "http://abstract.ups.edu/aata/section-sylow-applications.html#fGx",
+        "m-8476": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8478": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8484": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8485": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8770": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-14519": "http://abstract.ups.edu/aata/exercises-finite.html#enj",
+        "m-15678": "http://abstract.ups.edu/aata/exercises-galois.html#jGj",
+        "m-15856": "http://abstract.ups.edu/aata/galois-sage-exercises.html#HdA"
+      }
+    },
+    "Number_42": {
+      "id": "m-2188",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+      "input": "<math><mn>11</mn></math>",
+      "tex": "11",
+      "expected": "⠼⠂⠂",
+      "reference": {
+        "m-2188": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-8018": "http://abstract.ups.edu/aata/actions-sage.html#GOF",
+        "m-8022": "http://abstract.ups.edu/aata/actions-sage-exercises.html#GeL",
+        "m-8377": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8382": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8385": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8394": "http://abstract.ups.edu/aata/section-sylow-applications.html#HdN",
+        "m-8794": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_43": {
+      "id": "m-2189",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+      "input": "<math><mn>13</mn></math>",
+      "tex": "13",
+      "expected": "⠼⠂⠒",
+      "reference": {
+        "m-2189": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-5300": "http://abstract.ups.edu/aata/isomorph-sage.html#ykR",
+        "m-8807": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8825": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_44": {
+      "id": "m-2190",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+      "input": "<math><mn>15</mn></math>",
+      "tex": "15",
+      "expected": "⠼⠂⠢",
+      "reference": {
+        "m-2190": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2331": "http://abstract.ups.edu/aata/exercises-cyclic.html#EHk",
+        "m-2451": "http://abstract.ups.edu/aata/exercises-cyclic.html#VMM",
+        "m-2904": "http://abstract.ups.edu/aata/exercises-permute.html#Oyv",
+        "m-3664": "http://abstract.ups.edu/aata/exercises-crypt.html#JiI",
+        "m-3684": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Vxa",
+        "m-4921": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-4923": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-4924": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-4926": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-8366": "http://abstract.ups.edu/aata/section-sylow-applications.html#aWE",
+        "m-8786": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8819": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-14465": "http://abstract.ups.edu/aata/section-poly-codes.html#RhT",
+        "m-14520": "http://abstract.ups.edu/aata/exercises-finite.html#Kus"
+      }
+    },
+    "Number_45": {
+      "id": "m-2192",
+      "url": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+      "input": "<math><mn>16</mn></math>",
+      "tex": "16",
+      "expected": "⠼⠂⠖",
+      "reference": {
+        "m-2192": "http://abstract.ups.edu/aata/section-cyclic-subgroups.html#uKV",
+        "m-2452": "http://abstract.ups.edu/aata/exercises-cyclic.html#VMM",
+        "m-2575": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#Zrm",
+        "m-3771": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-5295": "http://abstract.ups.edu/aata/isomorph-sage.html#biZ",
+        "m-5298": "http://abstract.ups.edu/aata/isomorph-sage.html#ykR",
+        "m-7127": "http://abstract.ups.edu/aata/section-solvable-groups.html#cIr",
+        "m-7246": "http://abstract.ups.edu/aata/struct-sage.html#bYx",
+        "m-7275": "http://abstract.ups.edu/aata/struct-sage.html#wBi",
+        "m-8000": "http://abstract.ups.edu/aata/actions-sage.html#RnK",
+        "m-8031": "http://abstract.ups.edu/aata/actions-sage-exercises.html#KOE",
+        "m-8460": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8528": "http://abstract.ups.edu/aata/section-sylow-applications.html#rUP",
+        "m-8531": "http://abstract.ups.edu/aata/section-sylow-applications.html#rUP",
+        "m-8546": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8548": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8735": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-12349": "http://abstract.ups.edu/aata/boolean-sage-exercises.html#UgQ",
+        "m-12351": "http://abstract.ups.edu/aata/boolean-sage-exercises.html#AnZ",
+        "m-14402": "http://abstract.ups.edu/aata/section-poly-codes.html#daM"
+      }
+    },
+    "Number_46": {
+      "id": "m-2262",
+      "url": "http://abstract.ups.edu/aata/section-mult-group-c.html#xTW",
+      "input": "<math><mo>−</mo><mi>i</mi></math>",
+      "tex": "-i",
+      "expected": "⠤⠊",
+      "reference": {
+        "m-2262": "http://abstract.ups.edu/aata/section-mult-group-c.html#xTW"
+      }
+    },
+    "Number_47": {
+      "id": "m-2287",
+      "url": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#cVM",
+      "input": "<math><mn>46,388</mn></math>",
+      "tex": "46{,}388",
+      "expected": "⠼⠲⠖⠠⠒⠦⠦",
+      "reference": {
+        "m-2287": "http://abstract.ups.edu/aata/section-method-of-repeated-squares.html#cVM"
+      }
+    },
+    "Number_48": {
+      "id": "m-2404",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#fJb",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo>−</mo><mn>5</mn></mstyle></math>",
+      "tex": "-5",
+      "expected": "⠤⠼⠢",
+      "reference": {
+        "m-2404": "http://abstract.ups.edu/aata/exercises-cyclic.html#fJb"
+      }
+    },
+    "Number_49": {
+      "id": "m-2407",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#YeC",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mo>−</mo><mn>3</mn><mi>i</mi></mstyle></math>",
+      "tex": "-3i",
+      "expected": "⠤⠼⠒⠊",
+      "reference": {
+        "m-2407": "http://abstract.ups.edu/aata/exercises-cyclic.html#YeC"
+      }
+    },
+    "Number_50": {
+      "id": "m-2432",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#SDL",
+      "input": "<math><mn>292</mn></math>",
+      "tex": "292",
+      "expected": "⠼⠆⠔⠆",
+      "reference": {
+        "m-2432": "http://abstract.ups.edu/aata/exercises-cyclic.html#SDL"
+      }
+    },
+    "Number_51": {
+      "id": "m-2433",
+      "url": "http://abstract.ups.edu/aata/exercises-cyclic.html#SDL",
+      "input": "<math><mn>1523</mn></math>",
+      "tex": "1523",
+      "expected": "⠼⠂⠢⠆⠒",
+      "reference": {
+        "m-2433": "http://abstract.ups.edu/aata/exercises-cyclic.html#SDL"
+      }
+    },
+    "Number_52": {
+      "id": "m-2563",
+      "url": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#AOC",
+      "input": "<math><mn>40</mn></math>",
+      "tex": "40",
+      "expected": "⠼⠲⠴",
+      "reference": {
+        "m-2563": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#AOC",
+        "m-2564": "http://abstract.ups.edu/aata/cyclic-sage-exercises.html#AOC",
+        "m-7134": "http://abstract.ups.edu/aata/exercises-struct.html#omP",
+        "m-8790": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8876": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#JCU"
+      }
+    },
+    "Number_53": {
+      "id": "m-2846",
+      "url": "http://abstract.ups.edu/aata/section-dihedral-groups.html#tVK",
+      "input": "<math><mn>24</mn></math>",
+      "tex": "24",
+      "expected": "⠼⠆⠲",
+      "reference": {
+        "m-2846": "http://abstract.ups.edu/aata/section-dihedral-groups.html#tVK",
+        "m-2848": "http://abstract.ups.edu/aata/section-dihedral-groups.html#hlG",
+        "m-3054": "http://abstract.ups.edu/aata/permute-sage.html#rpz",
+        "m-3070": "http://abstract.ups.edu/aata/permute-sage-exercises.html#jbg",
+        "m-8003": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+        "m-8562": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+        "m-8782": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-11638": "http://abstract.ups.edu/aata/section-boolean-lattices.html#teZ",
+        "m-11640": "http://abstract.ups.edu/aata/section-boolean-lattices.html#pOU",
+        "m-11671": "http://abstract.ups.edu/aata/section-boolean-lattices.html#Zmi",
+        "m-14398": "http://abstract.ups.edu/aata/section-poly-codes.html#daM"
+      }
+    },
+    "Number_54": {
+      "id": "m-2907",
+      "url": "http://abstract.ups.edu/aata/exercises-permute.html#uFE",
+      "input": "<math><mn>26</mn></math>",
+      "tex": "26",
+      "expected": "⠼⠆⠖",
+      "reference": {
+        "m-2907": "http://abstract.ups.edu/aata/exercises-permute.html#uFE",
+        "m-3521": "http://abstract.ups.edu/aata/section-private-key-crypt.html#RSA",
+        "m-3522": "http://abstract.ups.edu/aata/section-private-key-crypt.html#xZJ",
+        "m-3529": "http://abstract.ups.edu/aata/section-private-key-crypt.html#rOY",
+        "m-8795": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8871": "http://abstract.ups.edu/aata/sylow-sage.html#FCV"
+      }
+    },
+    "Number_55": {
+      "id": "m-3077",
+      "url": "http://abstract.ups.edu/aata/permute-sage-exercises.html#Pip",
+      "input": "<math><mn>30</mn></math>",
+      "tex": "30",
+      "expected": "⠼⠒⠴",
+      "reference": {
+        "m-3077": "http://abstract.ups.edu/aata/permute-sage-exercises.html#Pip",
+        "m-8821": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-12161": "http://abstract.ups.edu/aata/exercises-boolean.html#wJz"
+      }
+    },
+    "Number_56": {
+      "id": "m-3351",
+      "url": "http://abstract.ups.edu/aata/exercises-cosets.html#GhL",
+      "input": "<math><mn>60</mn></math>",
+      "tex": "60",
+      "expected": "⠼⠖⠴",
+      "reference": {
+        "m-3351": "http://abstract.ups.edu/aata/exercises-cosets.html#GhL",
+        "m-3353": "http://abstract.ups.edu/aata/exercises-cosets.html#Lnd",
+        "m-8314": "http://abstract.ups.edu/aata/section-sylow-applications.html#uPv",
+        "m-8731": "http://abstract.ups.edu/aata/sylow-exercises-project.html#hvK",
+        "m-8824": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-13904": "http://abstract.ups.edu/aata/fields-sage.html#RdG"
+      }
+    },
+    "Number_57": {
+      "id": "m-3481",
+      "url": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK",
+      "input": "<math><mn>100</mn></math>",
+      "tex": "100",
+      "expected": "⠼⠂⠴⠴",
+      "reference": {
+        "m-3481": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK",
+        "m-3486": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#dFc",
+        "m-3795": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4200": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-8013": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "Number_58": {
+      "id": "m-3482",
+      "url": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK",
+      "input": "<math><mn>1000</mn></math>",
+      "tex": "1000",
+      "expected": "⠼⠂⠴⠴⠴",
+      "reference": {
+        "m-3482": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#RqK",
+        "m-3487": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#dFc",
+        "m-4565": "http://abstract.ups.edu/aata/exercises-algcodes.html#vMx"
+      }
+    },
+    "Number_59": {
+      "id": "m-3496",
+      "url": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#ChM",
+      "input": "<math><mn>5040</mn></math>",
+      "tex": "5040",
+      "expected": "⠼⠢⠴⠲⠴",
+      "reference": {
+        "m-3496": "http://abstract.ups.edu/aata/cosets-sage-exercises.html#ChM"
+      }
+    },
+    "Number_60": {
+      "id": "m-3577",
+      "url": "http://abstract.ups.edu/aata/section-public-key-crypt.html#qvk",
+      "input": "<math><mn>25</mn></math>",
+      "tex": "25",
+      "expected": "⠼⠆⠢",
+      "reference": {
+        "m-3577": "http://abstract.ups.edu/aata/section-public-key-crypt.html#qvk",
+        "m-3634": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-8461": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8469": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8788": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_61": {
+      "id": "m-3635",
+      "url": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+      "input": "<math><mn>28</mn></math>",
+      "tex": "28",
+      "expected": "⠼⠆⠦",
+      "reference": {
+        "m-3635": "http://abstract.ups.edu/aata/exercises-crypt.html#YrG",
+        "m-8808": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_62": {
+      "id": "m-3640",
+      "url": "http://abstract.ups.edu/aata/exercises-crypt.html#ZwZ",
+      "input": "<math><mn>2791</mn></math>",
+      "tex": "2791",
+      "expected": "⠼⠆⠶⠔⠂",
+      "reference": {
+        "m-3640": "http://abstract.ups.edu/aata/exercises-crypt.html#ZwZ"
+      }
+    },
+    "Number_63": {
+      "id": "m-3648",
+      "url": "http://abstract.ups.edu/aata/exercises-crypt.html#FEi",
+      "input": "<math><mn>31</mn></math>",
+      "tex": "31",
+      "expected": "⠼⠒⠂",
+      "reference": {
+        "m-3648": "http://abstract.ups.edu/aata/exercises-crypt.html#FEi",
+        "m-8737": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_64": {
+      "id": "m-3685",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Vxa",
+      "input": "<math><mn>17</mn></math>",
+      "tex": "17",
+      "expected": "⠼⠂⠶",
+      "reference": {
+        "m-3685": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Vxa",
+        "m-8742": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-11387": "http://abstract.ups.edu/aata/section-factorization-domains.html#gUh"
+      }
+    },
+    "Number_65": {
+      "id": "m-3687",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#pLq",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>342</mn></mstyle></math>",
+      "tex": "342",
+      "expected": "⠼⠒⠲⠆",
+      "reference": {
+        "m-3687": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#pLq"
+      }
+    },
+    "Number_66": {
+      "id": "m-3688",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#VSz",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>811</mn></mstyle></math>",
+      "tex": "811",
+      "expected": "⠼⠦⠂⠂",
+      "reference": {
+        "m-3688": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#VSz"
+      }
+    },
+    "Number_67": {
+      "id": "m-3689",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#igR",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>561</mn></mstyle></math>",
+      "tex": "561",
+      "expected": "⠼⠢⠖⠂",
+      "reference": {
+        "m-3689": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#igR"
+      }
+    },
+    "Number_68": {
+      "id": "m-3690",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Ooa",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>771</mn></mstyle></math>",
+      "tex": "771",
+      "expected": "⠼⠶⠶⠂",
+      "reference": {
+        "m-3690": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#Ooa"
+      }
+    },
+    "Number_69": {
+      "id": "m-3691",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#uvj",
+      "input": "<math><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mn>631</mn></mstyle></math>",
+      "tex": "631",
+      "expected": "⠼⠖⠒⠂",
+      "reference": {
+        "m-3691": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#uvj"
+      }
+    },
+    "Number_70": {
+      "id": "m-3698",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#BEj",
+      "input": "<math><mn>341</mn></math>",
+      "tex": "341",
+      "expected": "⠼⠒⠲⠂",
+      "reference": {
+        "m-3698": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#BEj"
+      }
+    },
+    "Number_71": {
+      "id": "m-3701",
+      "url": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs",
+      "input": "<math><mn>2000</mn></math>",
+      "tex": "2000",
+      "expected": "⠼⠆⠴⠴⠴",
+      "reference": {
+        "m-3701": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs",
+        "m-3702": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs",
+        "m-3703": "http://abstract.ups.edu/aata/crypt-exercises-additional.html#hLs"
+      }
+    },
+    "Number_72": {
+      "id": "m-3707",
+      "url": "http://abstract.ups.edu/aata/crypt-sage.html#MNi",
+      "input": "<math><mn>21</mn></math>",
+      "tex": "21",
+      "expected": "⠼⠆⠂",
+      "reference": {
+        "m-3707": "http://abstract.ups.edu/aata/crypt-sage.html#MNi",
+        "m-8766": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_73": {
+      "id": "m-3763",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa",
+      "input": "<math><mn>128</mn></math>",
+      "tex": "128",
+      "expected": "⠼⠂⠆⠦",
+      "reference": {
+        "m-3763": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#RQa"
+      }
+    },
+    "Number_74": {
+      "id": "m-3772",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+      "input": "<math><mn>32</mn></math>",
+      "tex": "32",
+      "expected": "⠼⠒⠆",
+      "reference": {
+        "m-3772": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#xXj",
+        "m-4664": "http://abstract.ups.edu/aata/algcodes-sage-exercises.html#zqX",
+        "m-8463": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8744": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_75": {
+      "id": "m-3791",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>000</mn></math>",
+      "tex": "000",
+      "expected": "⠼⠴⠴⠴",
+      "reference": {
+        "m-3791": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3799": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4192": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4525": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4532": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-8008": "http://abstract.ups.edu/aata/actions-sage.html#uAn",
+        "m-8012": "http://abstract.ups.edu/aata/actions-sage.html#aHw",
+        "m-8016": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "Number_76": {
+      "id": "m-3792",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>001</mn></math>",
+      "tex": "001",
+      "expected": "⠼⠴⠴⠂",
+      "reference": {
+        "m-3792": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4194": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4526": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-4533": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-8015": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "Number_77": {
+      "id": "m-3793",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>010</mn></math>",
+      "tex": "010",
+      "expected": "⠼⠴⠂⠴",
+      "reference": {
+        "m-3793": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4196": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4527": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg",
+        "m-8014": "http://abstract.ups.edu/aata/actions-sage.html#aHw"
+      }
+    },
+    "Number_78": {
+      "id": "m-3794",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>011</mn></math>",
+      "tex": "011",
+      "expected": "⠼⠴⠂⠂",
+      "reference": {
+        "m-3794": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4198": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4528": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "Number_79": {
+      "id": "m-3796",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>101</mn></math>",
+      "tex": "101",
+      "expected": "⠼⠂⠴⠂",
+      "reference": {
+        "m-3796": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4202": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4529": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "Number_80": {
+      "id": "m-3797",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>110</mn></math>",
+      "tex": "110",
+      "expected": "⠼⠂⠂⠴",
+      "reference": {
+        "m-3797": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4204": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4530": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "Number_81": {
+      "id": "m-3798",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+      "input": "<math><mn>111</mn></math>",
+      "tex": "111",
+      "expected": "⠼⠂⠂⠂",
+      "reference": {
+        "m-3798": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-3808": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#IDF",
+        "m-4206": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+        "m-4531": "http://abstract.ups.edu/aata/exercises-algcodes.html#AZg"
+      }
+    },
+    "Number_82": {
+      "id": "m-3852",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#WzT",
+      "input": "<math><mn>500</mn></math>",
+      "tex": "500",
+      "expected": "⠼⠢⠴⠴",
+      "reference": {
+        "m-3852": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#WzT"
+      }
+    },
+    "Number_83": {
+      "id": "m-3910",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>0000</mn></math>",
+      "tex": "0000",
+      "expected": "⠼⠴⠴⠴⠴",
+      "reference": {
+        "m-3910": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3918": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_84": {
+      "id": "m-3911",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>0011</mn></math>",
+      "tex": "0011",
+      "expected": "⠼⠴⠴⠂⠂",
+      "reference": {
+        "m-3911": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3927": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_85": {
+      "id": "m-3912",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>0101</mn></math>",
+      "tex": "0101",
+      "expected": "⠼⠴⠂⠴⠂",
+      "reference": {
+        "m-3912": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3936": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_86": {
+      "id": "m-3913",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>0110</mn></math>",
+      "tex": "0110",
+      "expected": "⠼⠴⠂⠂⠴",
+      "reference": {
+        "m-3913": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3945": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_87": {
+      "id": "m-3914",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>1001</mn></math>",
+      "tex": "1001",
+      "expected": "⠼⠂⠴⠴⠂",
+      "reference": {
+        "m-3914": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3954": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_88": {
+      "id": "m-3915",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>1010</mn></math>",
+      "tex": "1010",
+      "expected": "⠼⠂⠴⠂⠴",
+      "reference": {
+        "m-3915": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3963": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_89": {
+      "id": "m-3916",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>1100</mn></math>",
+      "tex": "1100",
+      "expected": "⠼⠂⠂⠴⠴",
+      "reference": {
+        "m-3916": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3972": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_90": {
+      "id": "m-3917",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+      "input": "<math><mn>1111</mn></math>",
+      "tex": "1111",
+      "expected": "⠼⠂⠂⠂⠂",
+      "reference": {
+        "m-3917": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny",
+        "m-3981": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#Nny"
+      }
+    },
+    "Number_91": {
+      "id": "m-4041",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+      "input": "<math><mn>00000</mn></math>",
+      "tex": "00000",
+      "expected": "⠼⠴⠴⠴⠴⠴",
+      "reference": {
+        "m-4041": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4045": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX"
+      }
+    },
+    "Number_92": {
+      "id": "m-4042",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+      "input": "<math><mn>00111</mn></math>",
+      "tex": "00111",
+      "expected": "⠼⠴⠴⠂⠂⠂",
+      "reference": {
+        "m-4042": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4050": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX"
+      }
+    },
+    "Number_93": {
+      "id": "m-4043",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+      "input": "<math><mn>11100</mn></math>",
+      "tex": "11100",
+      "expected": "⠼⠂⠂⠂⠴⠴",
+      "reference": {
+        "m-4043": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4055": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX"
+      }
+    },
+    "Number_94": {
+      "id": "m-4044",
+      "url": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+      "input": "<math><mn>11011</mn></math>",
+      "tex": "11011",
+      "expected": "⠼⠂⠂⠴⠂⠂",
+      "reference": {
+        "m-4044": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX",
+        "m-4060": "http://abstract.ups.edu/aata/section-error-detecting-correcting-codes.html#URX"
+      }
+    },
+    "Number_95": {
+      "id": "m-4069",
+      "url": "http://abstract.ups.edu/aata/section-linear-codes.html#NQb",
+      "input": "<math><mrow><mrow><mn mathvariant=\"bold\">0</mn></mrow></mrow></math>",
+      "tex": "{\\mathbf 0}",
+      "expected": "⠸⠼⠴",
+      "reference": {
+        "m-4069": "http://abstract.ups.edu/aata/section-linear-codes.html#NQb",
+        "m-4392": "http://abstract.ups.edu/aata/section-efficient-decoding.html#oDx",
+        "m-4643": "http://abstract.ups.edu/aata/exercises-algcodes.html#xIO",
+        "m-12371": "http://abstract.ups.edu/aata/section-vect-definitions-and-examples.html#Bik",
+        "m-12644": "http://abstract.ups.edu/aata/exercises-vect.html#XlN"
+      }
+    },
+    "Number_96": {
+      "id": "m-4193",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>000000</mn></math>",
+      "tex": "000000",
+      "expected": "⠼⠴⠴⠴⠴⠴⠴",
+      "reference": {
+        "m-4193": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_97": {
+      "id": "m-4195",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>001101</mn></math>",
+      "tex": "001101",
+      "expected": "⠼⠴⠴⠂⠂⠴⠂",
+      "reference": {
+        "m-4195": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_98": {
+      "id": "m-4197",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>010110</mn></math>",
+      "tex": "010110",
+      "expected": "⠼⠴⠂⠴⠂⠂⠴",
+      "reference": {
+        "m-4197": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_99": {
+      "id": "m-4199",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>011011</mn></math>",
+      "tex": "011011",
+      "expected": "⠼⠴⠂⠂⠴⠂⠂",
+      "reference": {
+        "m-4199": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_100": {
+      "id": "m-4201",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>100011</mn></math>",
+      "tex": "100011",
+      "expected": "⠼⠂⠴⠴⠴⠂⠂",
+      "reference": {
+        "m-4201": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_101": {
+      "id": "m-4203",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>101110</mn></math>",
+      "tex": "101110",
+      "expected": "⠼⠂⠴⠂⠂⠂⠴",
+      "reference": {
+        "m-4203": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_102": {
+      "id": "m-4205",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>110101</mn></math>",
+      "tex": "110101",
+      "expected": "⠼⠂⠂⠴⠂⠴⠂",
+      "reference": {
+        "m-4205": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_103": {
+      "id": "m-4207",
+      "url": "http://abstract.ups.edu/aata/section-parity-check.html#yeA",
+      "input": "<math><mn>111000</mn></math>",
+      "tex": "111000",
+      "expected": "⠼⠂⠂⠂⠴⠴⠴",
+      "reference": {
+        "m-4207": "http://abstract.ups.edu/aata/section-parity-check.html#yeA"
+      }
+    },
+    "Number_104": {
+      "id": "m-4608",
+      "url": "http://abstract.ups.edu/aata/exercises-algcodes.html#xnp",
+      "input": "<math><mn>20</mn></math>",
+      "tex": "20",
+      "expected": "⠼⠆⠴",
+      "reference": {
+        "m-4608": "http://abstract.ups.edu/aata/exercises-algcodes.html#xnp",
+        "m-5089": "http://abstract.ups.edu/aata/exercises-isomorph.html#GkP",
+        "m-6247": "http://abstract.ups.edu/aata/homomorph-sage.html#LUk",
+        "m-6253": "http://abstract.ups.edu/aata/homomorph-sage.html#YiC",
+        "m-6255": "http://abstract.ups.edu/aata/homomorph-sage.html#EpL",
+        "m-6292": "http://abstract.ups.edu/aata/homomorph-sage-exercises.html#fNb",
+        "m-8442": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8446": "http://abstract.ups.edu/aata/section-sylow-applications.html#Tsf",
+        "m-8759": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-13771": "http://abstract.ups.edu/aata/exercises-fields.html#smB",
+        "m-13905": "http://abstract.ups.edu/aata/fields-sage.html#RdG"
+      }
+    },
+    "Number_105": {
+      "id": "m-4919",
+      "url": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+      "input": "<math><mn>56</mn></math>",
+      "tex": "56",
+      "expected": "⠼⠢⠖",
+      "reference": {
+        "m-4919": "http://abstract.ups.edu/aata/section-direct-products.html#FAV",
+        "m-8489": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8799": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_106": {
+      "id": "m-5106",
+      "url": "http://abstract.ups.edu/aata/exercises-isomorph.html#Szh",
+      "input": "<math><mn>51</mn></math>",
+      "tex": "51",
+      "expected": "⠼⠢⠂",
+      "reference": {
+        "m-5106": "http://abstract.ups.edu/aata/exercises-isomorph.html#Szh",
+        "m-8745": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8769": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_107": {
+      "id": "m-5363",
+      "url": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+      "input": "<math><mn>180</mn></math>",
+      "tex": "180",
+      "expected": "⠼⠂⠦⠴",
+      "reference": {
+        "m-5363": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt"
+      }
+    },
+    "Number_108": {
+      "id": "m-5366",
+      "url": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+      "input": "<math><mn>72</mn></math>",
+      "tex": "72",
+      "expected": "⠼⠶⠆",
+      "reference": {
+        "m-5366": "http://abstract.ups.edu/aata/isomorph-sage-exercises.html#fxt",
+        "m-6260": "http://abstract.ups.edu/aata/homomorph-sage.html#kwU",
+        "m-7131": "http://abstract.ups.edu/aata/reading-questions-13.html#gte",
+        "m-8564": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+        "m-8885": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#ifE"
+      }
+    },
+    "Number_109": {
+      "id": "m-7135",
+      "url": "http://abstract.ups.edu/aata/exercises-struct.html#UtY",
+      "input": "<math><mn>200</mn></math>",
+      "tex": "200",
+      "expected": "⠼⠆⠴⠴",
+      "reference": {
+        "m-7135": "http://abstract.ups.edu/aata/exercises-struct.html#UtY"
+      }
+    },
+    "Number_110": {
+      "id": "m-7136",
+      "url": "http://abstract.ups.edu/aata/exercises-struct.html#ABh",
+      "input": "<math><mn>720</mn></math>",
+      "tex": "720",
+      "expected": "⠼⠶⠆⠴",
+      "reference": {
+        "m-7136": "http://abstract.ups.edu/aata/exercises-struct.html#ABh"
+      }
+    },
+    "Number_111": {
+      "id": "m-7276",
+      "url": "http://abstract.ups.edu/aata/struct-sage.html#OTh",
+      "input": "<math><mrow><mn mathvariant=\"bold\">16</mn></mrow></math>",
+      "tex": "\\mathbf{16}",
+      "expected": "⠸⠼⠂⠖",
+      "reference": {
+        "m-7276": "http://abstract.ups.edu/aata/struct-sage.html#OTh"
+      }
+    },
+    "Number_112": {
+      "id": "m-7881",
+      "url": "http://abstract.ups.edu/aata/reading-questions-14.html#ubk",
+      "input": "<math><mn>49</mn></math>",
+      "tex": "49",
+      "expected": "⠼⠲⠔",
+      "reference": {
+        "m-7881": "http://abstract.ups.edu/aata/reading-questions-14.html#ubk",
+        "m-8464": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8470": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8757": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_113": {
+      "id": "m-8004",
+      "url": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+      "input": "<math><mn>48</mn></math>",
+      "tex": "48",
+      "expected": "⠼⠲⠦",
+      "reference": {
+        "m-8004": "http://abstract.ups.edu/aata/actions-sage.html#VXD",
+        "m-8010": "http://abstract.ups.edu/aata/actions-sage.html#aHw",
+        "m-8483": "http://abstract.ups.edu/aata/section-sylow-applications.html#LNG",
+        "m-8494": "http://abstract.ups.edu/aata/section-sylow-applications.html#Lsh",
+        "m-8495": "http://abstract.ups.edu/aata/section-sylow-applications.html#Lsh",
+        "m-8525": "http://abstract.ups.edu/aata/section-sylow-applications.html#rUP",
+        "m-8550": "http://abstract.ups.edu/aata/section-sylow-applications.html#YbY",
+        "m-8752": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8897": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#utW"
+      }
+    },
+    "Number_114": {
+      "id": "m-8412",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+      "input": "<math><mn>47</mn></math>",
+      "tex": "47",
+      "expected": "⠼⠲⠶",
+      "reference": {
+        "m-8412": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8418": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8437": "http://abstract.ups.edu/aata/section-sylow-applications.html#nkW",
+        "m-8746": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_115": {
+      "id": "m-8462",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+      "input": "<math><mn>27</mn></math>",
+      "tex": "27",
+      "expected": "⠼⠆⠶",
+      "reference": {
+        "m-8462": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8802": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-14499": "http://abstract.ups.edu/aata/exercises-finite.html#aBF",
+        "m-14504": "http://abstract.ups.edu/aata/exercises-finite.html#iBD"
+      }
+    },
+    "Number_116": {
+      "id": "m-8465",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+      "input": "<math><mn>64</mn></math>",
+      "tex": "64",
+      "expected": "⠼⠖⠲",
+      "reference": {
+        "m-8465": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+        "m-8868": "http://abstract.ups.edu/aata/sylow-sage.html#ZvM",
+        "m-8869": "http://abstract.ups.edu/aata/sylow-sage.html#ZvM"
+      }
+    },
+    "Number_117": {
+      "id": "m-8466",
+      "url": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo",
+      "input": "<math><mn>81</mn></math>",
+      "tex": "81",
+      "expected": "⠼⠦⠂",
+      "reference": {
+        "m-8466": "http://abstract.ups.edu/aata/section-sylow-applications.html#zzo"
+      }
+    },
+    "Number_118": {
+      "id": "m-8556",
+      "url": "http://abstract.ups.edu/aata/reading-questions-15.html#CpD",
+      "input": "<math><mn>69</mn></math>",
+      "tex": "69",
+      "expected": "⠼⠖⠔",
+      "reference": {
+        "m-8556": "http://abstract.ups.edu/aata/reading-questions-15.html#CpD"
+      }
+    },
+    "Number_119": {
+      "id": "m-8561",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+      "input": "<math><mn>18</mn></math>",
+      "tex": "18",
+      "expected": "⠼⠂⠦",
+      "reference": {
+        "m-8561": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+        "m-8749": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8852": "http://abstract.ups.edu/aata/sylow-sage.html#cqs"
+      }
+    },
+    "Number_120": {
+      "id": "m-8563",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+      "input": "<math><mn>54</mn></math>",
+      "tex": "54",
+      "expected": "⠼⠢⠲",
+      "reference": {
+        "m-8563": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+        "m-8785": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_121": {
+      "id": "m-8565",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT",
+      "input": "<math><mn>80</mn></math>",
+      "tex": "80",
+      "expected": "⠼⠦⠴",
+      "reference": {
+        "m-8565": "http://abstract.ups.edu/aata/exercises-sylow.html#NCT"
+      }
+    },
+    "Number_122": {
+      "id": "m-8579",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#ZRl",
+      "input": "<math><mn>45</mn></math>",
+      "tex": "45",
+      "expected": "⠼⠲⠢",
+      "reference": {
+        "m-8579": "http://abstract.ups.edu/aata/exercises-sylow.html#ZRl",
+        "m-8823": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_123": {
+      "id": "m-8588",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#mfD",
+      "input": "<math><mn>96</mn></math>",
+      "tex": "96",
+      "expected": "⠼⠔⠖",
+      "reference": {
+        "m-8588": "http://abstract.ups.edu/aata/exercises-sylow.html#mfD"
+      }
+    },
+    "Number_124": {
+      "id": "m-8602",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#SmM",
+      "input": "<math><mn>160</mn></math>",
+      "tex": "160",
+      "expected": "⠼⠂⠖⠴",
+      "reference": {
+        "m-8602": "http://abstract.ups.edu/aata/exercises-sylow.html#SmM"
+      }
+    },
+    "Number_125": {
+      "id": "m-8622",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#KIn",
+      "input": "<math><mn>33</mn></math>",
+      "tex": "33",
+      "expected": "⠼⠒⠒",
+      "reference": {
+        "m-8622": "http://abstract.ups.edu/aata/exercises-sylow.html#KIn",
+        "m-8750": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_126": {
+      "id": "m-8646",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#vzp",
+      "input": "<math><mn>108</mn></math>",
+      "tex": "108",
+      "expected": "⠼⠂⠴⠦",
+      "reference": {
+        "m-8646": "http://abstract.ups.edu/aata/exercises-sylow.html#vzp"
+      }
+    },
+    "Number_127": {
+      "id": "m-8647",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#bGy",
+      "input": "<math><mn>175</mn></math>",
+      "tex": "175",
+      "expected": "⠼⠂⠶⠢",
+      "reference": {
+        "m-8647": "http://abstract.ups.edu/aata/exercises-sylow.html#bGy"
+      }
+    },
+    "Number_128": {
+      "id": "m-8648",
+      "url": "http://abstract.ups.edu/aata/exercises-sylow.html#HNH",
+      "input": "<math><mn>255</mn></math>",
+      "tex": "255",
+      "expected": "⠼⠆⠢⠢",
+      "reference": {
+        "m-8648": "http://abstract.ups.edu/aata/exercises-sylow.html#HNH"
+      }
+    },
+    "Number_129": {
+      "id": "m-8755",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>19</mn></math>",
+      "tex": "19",
+      "expected": "⠼⠂⠔",
+      "reference": {
+        "m-8755": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-9533": "http://abstract.ups.edu/aata/section-software-application.html#cPV",
+        "m-9535": "http://abstract.ups.edu/aata/section-software-application.html#cPV"
+      }
+    },
+    "Number_130": {
+      "id": "m-8756",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>34</mn></math>",
+      "tex": "34",
+      "expected": "⠼⠒⠲",
+      "reference": {
+        "m-8756": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_131": {
+      "id": "m-8761",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>35</mn></math>",
+      "tex": "35",
+      "expected": "⠼⠒⠢",
+      "reference": {
+        "m-8761": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_132": {
+      "id": "m-8763",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>50</mn></math>",
+      "tex": "50",
+      "expected": "⠼⠢⠴",
+      "reference": {
+        "m-8763": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_133": {
+      "id": "m-8767",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>36</mn></math>",
+      "tex": "36",
+      "expected": "⠼⠒⠖",
+      "reference": {
+        "m-8767": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+        "m-8882": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#BYv",
+        "m-8887": "http://abstract.ups.edu/aata/sylow-sage-exercises.html#OmN"
+      }
+    },
+    "Number_134": {
+      "id": "m-8771",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>22</mn></math>",
+      "tex": "22",
+      "expected": "⠼⠆⠆",
+      "reference": {
+        "m-8771": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_135": {
+      "id": "m-8773",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>37</mn></math>",
+      "tex": "37",
+      "expected": "⠼⠒⠶",
+      "reference": {
+        "m-8773": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_136": {
+      "id": "m-8777",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>23</mn></math>",
+      "tex": "23",
+      "expected": "⠼⠆⠒",
+      "reference": {
+        "m-8777": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_137": {
+      "id": "m-8779",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>38</mn></math>",
+      "tex": "38",
+      "expected": "⠼⠒⠦",
+      "reference": {
+        "m-8779": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_138": {
+      "id": "m-8780",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>53</mn></math>",
+      "tex": "53",
+      "expected": "⠼⠢⠒",
+      "reference": {
+        "m-8780": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_139": {
+      "id": "m-8792",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>55</mn></math>",
+      "tex": "55",
+      "expected": "⠼⠢⠢",
+      "reference": {
+        "m-8792": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_140": {
+      "id": "m-8797",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>41</mn></math>",
+      "tex": "41",
+      "expected": "⠼⠲⠂",
+      "reference": {
+        "m-8797": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_141": {
+      "id": "m-8804",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>42</mn></math>",
+      "tex": "42",
+      "expected": "⠼⠲⠆",
+      "reference": {
+        "m-8804": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_142": {
+      "id": "m-8805",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>57</mn></math>",
+      "tex": "57",
+      "expected": "⠼⠢⠶",
+      "reference": {
+        "m-8805": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_143": {
+      "id": "m-8809",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>43</mn></math>",
+      "tex": "43",
+      "expected": "⠼⠲⠒",
+      "reference": {
+        "m-8809": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_144": {
+      "id": "m-8811",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>58</mn></math>",
+      "tex": "58",
+      "expected": "⠼⠢⠦",
+      "reference": {
+        "m-8811": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_145": {
+      "id": "m-8813",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>29</mn></math>",
+      "tex": "29",
+      "expected": "⠼⠆⠔",
+      "reference": {
+        "m-8813": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_146": {
+      "id": "m-8815",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>44</mn></math>",
+      "tex": "44",
+      "expected": "⠼⠲⠲",
+      "reference": {
+        "m-8815": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_147": {
+      "id": "m-8817",
+      "url": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP",
+      "input": "<math><mn>59</mn></math>",
+      "tex": "59",
+      "expected": "⠼⠢⠔",
+      "reference": {
+        "m-8817": "http://abstract.ups.edu/aata/sylow-exercises-project.html#GmP"
+      }
+    },
+    "Number_148": {
+      "id": "m-9536",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#cPV",
+      "input": "<math><mn>1260</mn></math>",
+      "tex": "1260",
+      "expected": "⠼⠂⠆⠖⠴",
+      "reference": {
+        "m-9536": "http://abstract.ups.edu/aata/section-software-application.html#cPV"
+      }
+    },
+    "Number_149": {
+      "id": "m-9538",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+      "input": "<math><mn>2134</mn></math>",
+      "tex": "2134",
+      "expected": "⠼⠆⠂⠒⠲",
+      "reference": {
+        "m-9538": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "Number_150": {
+      "id": "m-9539",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+      "input": "<math><mn>1531</mn></math>",
+      "tex": "1531",
+      "expected": "⠼⠂⠢⠒⠂",
+      "reference": {
+        "m-9539": "http://abstract.ups.edu/aata/section-software-application.html#IXe"
+      }
+    },
+    "Number_151": {
+      "id": "m-9540",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+      "input": "<math><mn>95</mn></math>",
+      "tex": "95",
+      "expected": "⠼⠔⠢",
+      "reference": {
+        "m-9540": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9616": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "Number_152": {
+      "id": "m-9541",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+      "input": "<math><mn>97</mn></math>",
+      "tex": "97",
+      "expected": "⠼⠔⠶",
+      "reference": {
+        "m-9541": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9617": "http://abstract.ups.edu/aata/exercises-rings.html#nYU"
+      }
+    },
+    "Number_153": {
+      "id": "m-9542",
+      "url": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+      "input": "<math><mn>98</mn></math>",
+      "tex": "98",
+      "expected": "⠼⠔⠦",
+      "reference": {
+        "m-9542": "http://abstract.ups.edu/aata/section-software-application.html#IXe",
+        "m-9618": "http://abstract.ups.edu/aata/exercises-rings.html#nYU",
+        "m-9621": "http://abstract.ups.edu/aata/exercises-rings.html#Ugd"
+      }
+    },
+    "Number_154": {
+      "id": "m-9807",
+      "url": "http://abstract.ups.edu/aata/rings-sage.html#Nly",
+      "input": "<math><mo>−</mo><msqrt><mn>7</mn></msqrt></math>",
+      "tex": "-\\sqrt{7}",
+      "expected": "⠤⠜⠶⠻",
+      "reference": {
+        "m-9807": "http://abstract.ups.edu/aata/rings-sage.html#Nly"
+      }
+    },
+    "Number_155": {
+      "id": "m-9856",
+      "url": "http://abstract.ups.edu/aata/section-poly-rings.html#NWS",
+      "input": "<math><mo>−</mo><mi mathvariant=\"normal\">∞</mi></math>",
+      "tex": "-\\infty",
+      "expected": "⠤⠠⠿",
+      "reference": {
+        "m-9856": "http://abstract.ups.edu/aata/section-poly-rings.html#NWS"
+      }
+    },
+    "Number_156": {
+      "id": "m-10671",
+      "url": "http://abstract.ups.edu/aata/poly-sage-exercises.html#elj",
+      "input": "<math><mn>729</mn></math>",
+      "tex": "729",
+      "expected": "⠼⠶⠆⠔",
+      "reference": {
+        "m-10671": "http://abstract.ups.edu/aata/poly-sage-exercises.html#elj"
+      }
+    },
+    "Number_157": {
+      "id": "m-12164",
+      "url": "http://abstract.ups.edu/aata/exercises-boolean.html#IXR",
+      "input": "<math><mn>210</mn></math>",
+      "tex": "210",
+      "expected": "⠼⠆⠂⠴",
+      "reference": {
+        "m-12164": "http://abstract.ups.edu/aata/exercises-boolean.html#IXR"
+      }
+    },
+    "Number_158": {
+      "id": "m-14091",
+      "url": "http://abstract.ups.edu/aata/section-finite-field.html#RaC",
+      "input": "<math><mo>−</mo><mi>α</mi></math>",
+      "tex": "-\\alpha",
+      "expected": "⠤⠨⠁",
+      "reference": {
+        "m-14091": "http://abstract.ups.edu/aata/section-finite-field.html#RaC"
+      }
+    },
+    "Number_159": {
+      "id": "m-14397",
+      "url": "http://abstract.ups.edu/aata/section-poly-codes.html#daM",
+      "input": "<math><mn>231</mn></math>",
+      "tex": "231",
+      "expected": "⠼⠆⠒⠂",
+      "reference": {
+        "m-14397": "http://abstract.ups.edu/aata/section-poly-codes.html#daM"
+      }
+    },
+    "Number_160": {
+      "id": "m-14763",
+      "url": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EEt",
+      "input": "<math><mo>−</mo><msqrt><mn>2</mn></msqrt></math>",
+      "tex": "-\\sqrt{2}",
+      "expected": "⠤⠜⠆⠻",
+      "reference": {
+        "m-14763": "http://abstract.ups.edu/aata/section-field-automorphisms.html#EEt"
+      }
+    },
+    "Number_161": {
+      "id": "m-15025",
+      "url": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Pdy",
+      "input": "<math><mo>−</mo><msqrt><mn>3</mn></msqrt></math>",
+      "tex": "-\\sqrt{3}",
+      "expected": "⠤⠜⠒⠻",
+      "reference": {
+        "m-15025": "http://abstract.ups.edu/aata/section-fund-theorem-galois-theory.html#Pdy"
+      }
+    },
+    "Number_162": {
+      "id": "m-15511",
+      "url": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+      "input": "<math><mo>−</mo><mn>2</mn></math>",
+      "tex": "-2",
+      "expected": "⠤⠼⠆",
+      "reference": {
+        "m-15511": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA",
+        "m-15512": "http://abstract.ups.edu/aata/section-galois-applications.html#zUA"
+      }
+    },
+    "Number_163": {
+      "id": "m-15819",
+      "url": "http://abstract.ups.edu/aata/galois-sage.html#mPk",
+      "input": "<math><mo>−</mo><mn>14</mn></math>",
+      "tex": "-14",
+      "expected": "⠤⠼⠂⠲",
+      "reference": {
+        "m-15819": "http://abstract.ups.edu/aata/galois-sage.html#mPk"
+      }
+    },
+    "Number_164": {
+      "id": "m-15858",
+      "url": "http://abstract.ups.edu/aata/galois-sage-exercises.html#HdA",
+      "input": "<math><mn>168</mn></math>",
+      "tex": "168",
+      "expected": "⠼⠂⠖⠦",
+      "reference": {
+        "m-15858": "http://abstract.ups.edu/aata/galois-sage-exercises.html#HdA"
+      }
+    }
+  }
+}

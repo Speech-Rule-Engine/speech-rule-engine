@@ -19,7 +19,6 @@
  */
 
 import { Engine } from '../common/engine.js';
-import * as EngineConst from '../common/engine_const.js';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr.js';
 import {
   Axis,
@@ -36,10 +35,13 @@ import {
   SemanticType
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import {
+  fromPreference,
+  toPreference,
+  PREFERENCES
+} from './clearspeak_preference_string.js';
 
 export class ClearspeakPreferences extends DynamicCstr {
-  private static AUTO = 'Auto';
-
   /**
    * Exports the Clearspeak comparator with default settings.
    *
@@ -55,52 +57,6 @@ export class ClearspeakPreferences extends DynamicCstr {
         [DynamicCstr.DEFAULT_VALUES[Axis.STYLE]]
       )
     );
-  }
-
-  /**
-   * Parse the preferences from a string of the form:
-   * preference1_setting1:preference2_setting2:....:preferenceN_settingN
-   *
-   * @param pref The preference string.
-   * @returns The preference settings.
-   */
-  public static fromPreference(pref: string): AxisMap {
-    const pairs = pref.split(':');
-    const preferences: AxisMap = {};
-    const properties = PREFERENCES.getProperties();
-    const validKeys = Object.keys(properties);
-    for (let i = 0, key; (key = pairs[i]); i++) {
-      const pair = key.split('_');
-      if (validKeys.indexOf(pair[0]) === -1) {
-        continue;
-      }
-      const value = pair[1];
-      if (
-        value &&
-        value !== ClearspeakPreferences.AUTO &&
-        properties[pair[0] as Axis].indexOf(value) !== -1
-      ) {
-        preferences[pair[0]] = pair[1];
-      }
-    }
-    return preferences;
-  }
-
-  /**
-   * Creates a style string from a set of preference mappings, by joining them
-   * via underscore and colon in the form:
-   * preference1_setting1:preference2_setting2:....:preferenceN_settingN
-   *
-   * @param pref A preference mapping.
-   * @returns A style string created from the preferences.
-   */
-  public static toPreference(pref: AxisMap): string {
-    const keys = Object.keys(pref);
-    const str = [];
-    for (let i = 0; i < keys.length; i++) {
-      str.push(keys[i] + '_' + pref[keys[i]]);
-    }
-    return str.length ? str.join(':') : DynamicCstr.DEFAULT_VALUE;
   }
 
   /**
@@ -122,13 +78,6 @@ export class ClearspeakPreferences extends DynamicCstr {
   }
 
   /**
-   * @returns The current clearspeak styles selection, if any is set.
-   */
-  public static currentPreference() {
-    return EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-  }
-
-  /**
    * Computes a relevant selection of clearspeak preferences for a given
    * semantic node.
    *
@@ -140,46 +89,15 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!roles) {
       return 'ImpliedTimes';
     }
-    return roles[node.role] || roles[''] || 'ImpliedTimes';
-  }
-
-  /**
-   * Look up the setting of a preference in a preference settings string.
-   *
-   * @param prefs Preference settings.
-   * @param kind The preference to look up.
-   * @returns The setting of that preference. If it does not exist,
-   *     returns Auto.
-   */
-  public static findPreference(prefs: string, kind: string): string {
-    if (prefs === 'default') {
-      return ClearspeakPreferences.AUTO;
+    const cons = roles[node.role] || roles[''];
+    if (!cons) {
+      return 'ImpliedTimes';
     }
-    const parsed = ClearspeakPreferences.fromPreference(prefs);
-    return parsed[kind] || ClearspeakPreferences.AUTO;
-  }
-
-  /**
-   * Takes the string representation of a clearspeak preference setting and adds
-   * a new preference setting via a preference name and value pair. The updated
-   * setting is then returned again as a string.
-   *
-   * @param prefs Preference settings.
-   * @param kind New preference name.
-   * @param value New preference value.
-   * @returns The updated preference settings.
-   */
-  public static addPreference(
-    prefs: string,
-    kind: string,
-    value: string
-  ): string {
-    if (prefs === 'default') {
-      return kind + '_' + value;
+    if (typeof cons === 'string') {
+      return cons;
+    } else {
+      return testSpecial(cons, node) || 'ImpliedTimes';
     }
-    const parsed = ClearspeakPreferences.fromPreference(prefs);
-    parsed[kind] = value;
-    return ClearspeakPreferences.toPreference(parsed);
   }
 
   /**
@@ -254,87 +172,6 @@ export class ClearspeakPreferences extends DynamicCstr {
     return true;
   }
 }
-
-const PREFERENCES = new DynamicProperties({
-  AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
-  Bar: ['Auto', 'Conjugate'],
-  Caps: ['Auto', 'SayCaps'],
-  CombinationPermutation: ['Auto', 'ChoosePermute'],
-  Currency: ['Auto', 'Position', 'Prefix'],
-  Ellipses: ['Auto', 'AndSoOn'],
-  Enclosed: ['Auto', 'EndEnclose'],
-  Exponent: [
-    'Auto',
-    'AfterPower',
-    'Ordinal',
-    'OrdinalPower',
-    // The following are German
-    'Exponent'
-  ],
-  Fraction: [
-    'Auto',
-    'EndFrac',
-    'FracOver',
-    'General',
-    'GeneralEndFrac',
-    'Ordinal',
-    'Over',
-    'OverEndFrac',
-    'Per'
-  ],
-  Functions: [
-    'Auto',
-    'None',
-    // Reciprocal is French
-    'Reciprocal'
-  ],
-  ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
-  Log: ['Auto', 'LnAsNaturalLog'],
-  Matrix: [
-    'Auto',
-    'Combinatoric',
-    'EndMatrix',
-    'EndVector',
-    'SilentColNum',
-    'SpeakColNum',
-    'Vector'
-  ],
-  MultiLineLabel: [
-    'Auto',
-    'Case',
-    'Constraint',
-    'Equation',
-    'Line',
-    'None',
-    'Row',
-    'Step'
-  ],
-  MultiLineOverview: ['Auto', 'None'],
-  MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
-  MultsymbolDot: ['Auto', 'Dot'],
-  MultsymbolX: ['Auto', 'By', 'Cross'],
-  Paren: [
-    'Auto',
-    'CoordPoint',
-    'Interval',
-    'Silent',
-    'Speak',
-    'SpeakNestingLevel'
-  ],
-  Prime: ['Auto', 'Angle', 'Length'],
-  Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
-  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member', 'In'],
-  Sets: ['Auto', 'SilentBracket', 'woAll'],
-  TriangleSymbol: ['Auto', 'Delta'],
-  Trig: [
-    'Auto',
-    'ArcTrig',
-    'TrigInverse',
-    // Reciprocal French
-    'Reciprocal'
-  ],
-  VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-});
 
 class Comparator extends DefaultComparator {
   /**
@@ -442,7 +279,7 @@ class Parser extends DynamicCstrParser {
    * @returns The preference settings.
    */
   public fromPreference(pref: string): { [key: string]: string } {
-    return ClearspeakPreferences.fromPreference(pref);
+    return fromPreference(pref);
   }
 
   /**
@@ -454,7 +291,7 @@ class Parser extends DynamicCstrParser {
    * @returns A style string created from the preferences.
    */
   public toPreference(pref: { [key: string]: string }): string {
-    return ClearspeakPreferences.toPreference(pref);
+    return toPreference(pref);
   }
 }
 
@@ -463,58 +300,157 @@ class Parser extends DynamicCstrParser {
  */
 // TODO (TS): Replace with a Map to partial meaning elements.
 const REVERSE_MAPPING: string[][] = [
-  [
-    'AbsoluteValue',
-    SemanticType.FENCED,
-    SemanticRole.NEUTRAL,
-    SemanticRole.METRIC
-  ],
-  ['Bar', SemanticType.OVERSCORE, SemanticRole.OVERACCENT], // more
-  ['Caps', SemanticType.IDENTIFIER, SemanticRole.LATINLETTER], // more
+  ['AbsoluteValue', SemanticType.FENCED, SemanticRole.NEUTRAL],
+  ['AbsoluteValue', SemanticType.FENCED, SemanticRole.METRIC],
+  ['Bar', SemanticType.OVERSCORE, ''], // more
+  ['Caps', SemanticType.IDENTIFIER, SemanticRole.LATINLETTER, 'category:Lu'], // more
   ['CombinationPermutation', SemanticType.APPL, SemanticRole.UNKNOWN], // more
+  ['Currency', SemanticType.IDENTIFIER, SemanticRole.UNIT, 'unit:currency'],
+  ['Currency', SemanticType.INFIXOP, SemanticRole.UNIT, 'unit:currency'],
+  ['Enclosed', SemanticType.ENCLOSE, ''],
   ['Ellipses', SemanticType.PUNCTUATION, SemanticRole.ELLIPSIS],
   ['Exponent', SemanticType.SUPERSCRIPT, ''],
   ['Fraction', SemanticType.FRACTION, ''],
   ['Functions', SemanticType.APPL, SemanticRole.SIMPLEFUNC],
   ['ImpliedTimes', SemanticType.OPERATOR, SemanticRole.IMPLICIT],
-  ['Log', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
+  ['Log', SemanticType.APPL, SemanticRole.PREFIXFUNC, 'appl:Logarithm'], // specific
+  ['Log', SemanticType.FUNCTION, SemanticRole.PREFIXFUNC, 'category:Logarithm'], // specific
   ['Matrix', SemanticType.MATRIX, ''], // multiple
   ['Matrix', SemanticType.VECTOR, ''], // multiple
+  ['MultiLineLabel', SemanticType.ROW, ''],
   ['MultiLineLabel', SemanticType.MULTILINE, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
   ['MultiLinePausesBetweenColumns', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.MULTILINE, ''], // more, multiple (table)
   ['MultiLineLabel', SemanticType.TABLE, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', SemanticType.TABLE, ''], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.TABLE, ''], // more, multiple (table)
   ['MultiLineLabel', SemanticType.CASES, SemanticRole.LABEL], // more, multiple (table)
-  ['MultiLineOverview', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
-  ['MultiLinePausesBetweenColumns', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
-  ['MultsymbolDot', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
-  ['MultsymbolX', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
+  ['MultiLinePausesBetweenColumns', SemanticType.CASES, ''], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.CASES, ''], // more, multiple (table)
+  [
+    'MultsymbolDot',
+    SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION,
+    'content:22C5'
+  ], // multiple?
+  [
+    'MultsymbolX',
+    SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION,
+    'content:00D7'
+  ], // multiple?
   ['Paren', SemanticType.FENCED, SemanticRole.LEFTRIGHT],
-  ['Prime', SemanticType.SUPERSCRIPT, SemanticRole.PRIME],
+  ['Prime', SemanticType.PUNCTUATION, SemanticRole.PRIME],
   ['Roots', SemanticType.ROOT, ''], // multiple (sqrt)
   ['Roots', SemanticType.SQRT, ''], // multiple (sqrt)
-  ['SetMemberSymbol', SemanticType.RELATION, SemanticRole.ELEMENT],
+  ['SetMemberSymbol', SemanticType.OPERATOR, SemanticRole.ELEMENT],
   ['Sets', SemanticType.FENCED, SemanticRole.SETEXT], // multiple
-  ['TriangleSymbol', SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER], // ????
-  ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
-  ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR]
+  [
+    'TriangleSymbol',
+    SemanticType.IDENTIFIER,
+    SemanticRole.GREEKLETTER,
+    'content:0394'
+  ], // ????
+  ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC, 'appl:Trigonometric'], // specific
+  [
+    'Trig',
+    SemanticType.FUNCTION,
+    SemanticRole.PREFIXFUNC,
+    'category:Trigonometric'
+  ], // specific
+  ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR],
+  ['VerticalLine', SemanticType.PUNCTUATION, SemanticRole.VBAR],
+  ['Inference', SemanticType.INFERENCE, ''],
+  ['Inference', SemanticType.PREMISES, ''],
+  ['Inference', SemanticType.RULELABEL, ''],
+  ['Inference', SemanticType.CONCLUSION, '']
 ];
 
-const SEMANTIC_MAPPING_: { [key: string]: AxisMap } = (function () {
-  const result: { [key: string]: AxisMap } = {};
+const SEMANTIC_MAPPING_: {
+  [key: string]: { [key: string]: string | { [key: string]: string } };
+} = (function () {
+  const result: {
+    [key: string]: { [key: string]: string | { [key: string]: string } };
+  } = {};
   for (let i = 0, triple; (triple = REVERSE_MAPPING[i]); i++) {
     const pref = triple[0];
+    const special = triple[3];
     let role = result[triple[1]];
     if (!role) {
       role = {};
       result[triple[1]] = role;
     }
-    role[triple[2]] = pref;
+    if (!special) {
+      role[triple[2]] = pref;
+      continue;
+    }
+    let specialize = role[triple[2]] as { [key: string]: string };
+    if (!specialize) {
+      specialize = {};
+      role[triple[2]] = specialize;
+    }
+    specialize[special] = pref;
   }
   return result;
 })();
+
+/**
+ * Test mappings of special predicates on the semantic node.
+ *
+ * @param special Special predicate mapping.
+ * @param node The semantic node to test.
+ * @returns Preference computed by the special test.
+ */
+function testSpecial(
+  special: { [key: string]: string },
+  node: SemanticNode
+): string {
+  for (const [pred, res] of Object.entries(special)) {
+    if (executeSpecial(pred, node)) {
+      return res;
+    }
+  }
+  return '';
+}
+
+/**
+ * Executes a special predicate on the semantic node.
+ *
+ * @param special Special predicate specification of the form "PRED:ARG".
+ * @param node The semantic node to test.
+ * @returns True if a specialized preference predicate holds on the node.
+ */
+function executeSpecial(special: string, node: SemanticNode) {
+  const [pred, arg] = special.split(':');
+  if (!pred) {
+    return false;
+  }
+  const func = specialPred[pred];
+  if (!func) {
+    return false;
+  }
+  return func(node, arg);
+}
+
+const specialPred: {
+  [key: string]: (node: SemanticNode, arg: string) => boolean;
+} = {
+  category: (node: SemanticNode, arg: string) => {
+    return MathCompoundStore.lookupCategory(node.textContent) === arg;
+  },
+  content: (node: SemanticNode, arg: string) => {
+    return node.textContent === String.fromCodePoint(parseInt(arg, 16));
+  },
+  appl: (node: SemanticNode, arg: string) => {
+    const func = node.childNodes[0];
+    return func
+      ? MathCompoundStore.lookupCategory(func.textContent) === arg
+      : false;
+  },
+  unit: (node: SemanticNode, arg: string) => {
+    return MathCompoundStore.lookupCategory(node.textContent + ':unit') === arg;
+  }
+};
 
 /**
  * Add new comparator and parser.

@@ -1,0 +1,132 @@
+{
+    "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+    "name": "KoreanClearspeakLogarithms",
+    "locale": "ko",
+    "factory": "clearspeak",
+    "base": "input/clearspeak/clearspeak_logarithms.json",
+    "information": "Korean Clearspeak Logarithms rule tests.",
+    "active": "ClearspeakKorean",
+    "exclude": [],
+    "tests": {
+      "_comment1_": " Logarithms",
+      "Log001": {
+        "expected": "로그 x"
+      },
+      "Log002": {
+        "expected": "밑이 10 인 로그 의, x"
+      },
+      "Log003": {
+        "expected": "밑이 b 인 로그 의, a x, 는, 밑이 b 인 로그 의, a, 더하기, 밑이 b 인 로그 의, x"
+      },
+      "Log004": {
+        "expected": "밑이 b 인 로그 의, T 분의 S, 는, 밑이 b 인 로그 의, S, 빼기, 밑이 b 인 로그 의, T"
+      },
+      "Log005": {
+        "expected": "밑이 b 인 로그 의, 괄호 열고, x 의 k 제곱, 괄호 닫고, 는 k, 밑이 b 인 로그 의, x"
+      },
+      "Log006": {
+        "expected": "10 의 밑이 10 인 로그 의, x, 제곱, 은 x"
+      },
+      "Log007": {
+        "expected": "밑이 10 인 로그 의, 10 의 x 제곱, 은 x"
+      },
+      "Log008": {
+        "expected": "10 의 밑이 10 인 로그 의, 5, 제곱, 은 5"
+      },
+      "Log009": {
+        "expected": "밑이 10 인 로그 의, 10 세제곱, 은 3"
+      },
+      "Log010": {
+        "expected": "밑이 a 인 로그 의, x, 는, 밑이 b 인 로그 의, a, 분의, 밑이 b 인 로그 의, x"
+      },
+      "Log011": {
+        "expected": "밑이 10 인 로그 의, 3, 분의, 밑이 10 인 로그 의, 18, 은, 밑이 3 인 로그 의, 18"
+      },
+      "Log012": {
+        "expected": "로그 a 분의 로그 x"
+      },
+      "Log013": {
+        "expected": "로그 의, 괄호 열고, x 더하기 1, 괄호 닫고"
+      },
+      "Log014": {
+        "expected": "로그 의, 괄호 열고, x 더하기 1, 괄호 닫고, 제곱"
+      },
+      "Log015": {
+        "expected": "로그 x y"
+      },
+      "Log016": {
+        "expected": "분모가, 로그 의, 괄호 열고, x 더하기 2, 괄호 닫고, 이고 분자가, 로그 의, 괄호 열고, x 더하기 1, 괄호 닫고, 인 분수"
+      },
+      "Log017": {
+        "expected": "분모가, 밑이 6 인 로그 의, 괄호 열고, x 더하기 2, 괄호 닫고, 이고 분자가, 밑이 6 인 로그 의, 괄호 열고, x 더하기 1, 괄호 닫고, 인 분수"
+      },
+      "Log018": {
+        "expected": "분모가 로그 5, 이고 분자가 로그 40 더하기 로그 60, 인 분수"
+      },
+      "Log019": {
+        "expected": "분모가, 밑이 3 인 로그 의, 5, 이고 분자가, 밑이 3 인 로그 의, 40, 더하기, 밑이 3 인 로그 의, 60, 인 분수"
+      },
+      "Log020": {
+        "expected": "로그 의, 괄호 열고, 3 네제곱, 12 의 9 제곱, 괄호 닫고, 는 4 로그 3, 더하기 9 로그 12"
+      },
+      "Log021": {
+        "expected": "로그 의, 괄호 열고, y 분의 x, 괄호 닫고"
+      },
+      "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+      "Log022": {
+        "expected": "로그 의, 괄호 열고, 분모가 8 의 10 제곱, 이고 분자가 3 네제곱, 인 분수, 괄호 닫고, 는 4 로그 3, 빼기 10 로그 8"
+      },
+      "Log023": {
+        "expected": "10 의 로그 x 제곱"
+      },
+      "NatLog001": {
+        "expected": "엘 엔 x"
+      },
+      "NatLog002": {
+        "expected": "엘 엔 x, 빼기 엘 엔 의, 괄호 열고, x 빼기 1, 괄호 닫고, 는 엘 엔 의, 괄호 열고, 분모가 x 빼기 1, 이고 분자가 x, 인 분수, 괄호 닫고"
+      },
+      "NatLog003": {
+        "expected": "엘 엔 의, 괄호 열고, e 의 x 제곱, 괄호 닫고, 는 x"
+      },
+      "NatLog004": {
+        "expected": "e 의 엘 엔 x 제곱, 은 x"
+      },
+      "NatLog005": {
+        "expected": "엘 엔 의, 괄호 열고, e 의 x 제곱, 괄호 닫고, 는 x"
+      },
+      "NatLog006": {
+        "expected": "e 의 엘 엔 4 제곱, 은 4"
+      },
+      "NatLog007": {
+        "expected": "엘 엔 5 분의 엘 엔 40, 은, 밑이 5 인 로그 의, 40"
+      },
+      "NatLog008": {
+        "expected": "분모가 엘 엔 5, 이고 분자가 엘 엔 40, 더하기 엘 엔 60, 인 분수"
+      },
+      "NatLog009": {
+        "expected": "자연로그 x"
+      },
+      "NatLog010": {
+        "expected": "자연로그 x, 빼기, 자연로그 의, 괄호 열고, x 빼기 1, 괄호 닫고, 는, 자연로그 의, 괄호 열고, 분모가 x 빼기 1, 이고 분자가 x, 인 분수, 괄호 닫고"
+      },
+      "NatLog011": {
+        "expected": "자연로그 의, 괄호 열고, e 의 x 제곱, 괄호 닫고, 는 x"
+      },
+      "NatLog012": {
+        "expected": "e 의 자연로그 x 제곱, 은 x"
+      },
+      "NatLog013": {
+        "expected": "자연로그 의, 괄호 열고, e 의 x 제곱, 괄호 닫고, 는 x"
+      },
+      "NatLog014": {
+        "expected": "e 의 자연로그 4 제곱, 은 4"
+      },
+      "NatLog015": {
+        "expected": "자연로그 5 분의 자연로그 40, 은, 밑이 5 인 로그 의, 40"
+      },
+      "NatLog016": {
+        "expected": "분모가 자연로그 5, 이고 분자가 자연로그 40, 더하기 자연로그 60, 인 분수"
+      }
+    }
+  }
+  

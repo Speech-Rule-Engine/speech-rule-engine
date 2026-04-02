@@ -347,17 +347,22 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"वर्गित\""
+      "[n] children/*[1]; [t] \"वर्गित\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"घनित\""
+      "[n] children/*[1]; [t] \"घनित\" (span:children/*[2])"
     ],
     [
       "Action",
       "fences-points",
       "[t] \"निर्देशांक वाला बिंदु\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "fences-auto-interval",
+      "[n] children/*[1]/children/*[1]; [t] \"से\"; [n] children/*[1]/children/*[3]; [t] \"तक का अन्तराल\" (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -522,7 +527,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
+      "[p] (pause:short); [n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
@@ -532,7 +537,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
+      "[p] (pause:short); [n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
@@ -627,7 +632,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"द्वारा विभाजित\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"द्वारा विभाजित\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -692,7 +697,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"निरपेक्ष मान प्रारम्भ\"; [n] children/*[1] (pause:short); [t] \"निरपेक्ष मान समाप्त\" (pause:short)"
+      "[p] (pause:short); [t] \"निरपेक्ष मान प्रारम्भ\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"निरपेक्ष मान समाप्त\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -707,12 +712,12 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"की दूरी फलन\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"की दूरी फलन\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"की दूरी फलन\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"दूरी फलन समाप्त\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"की दूरी फलन\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"दूरी फलन समाप्त\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -932,7 +937,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"से\"; [n] children/*[2]; [t] \"से\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"से\"; [n] children/*[2]; [t] \"से\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -1108,6 +1113,41 @@
       "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"प्रति\"; [n] children/*[2] (grammar:singular)"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"सूचक पर्चा\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"अभिगृहीत\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"रिक्त अभिगृहीत\""
     ]
   ]
 }

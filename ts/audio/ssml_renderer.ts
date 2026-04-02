@@ -35,7 +35,7 @@ export class SsmlRenderer extends XmlRenderer {
     return (
       '<?xml version="1.0"?><speak version="1.1"' +
       ' xmlns="http://www.w3.org/2001/10/synthesis"' +
-      ` xml:lang="${Engine.getInstance().locale}">` +
+      ` xml:lang="${Engine.getInstance().options.locale}">` +
       '<prosody rate="' +
       Engine.getInstance().getRate() +
       '%">' +
@@ -112,9 +112,9 @@ export class SsmlRenderer extends XmlRenderer {
       const span = spans[i];
       if (this.isEmptySpan(span)) continue;
       const kind = SsmlRenderer.MARK_KIND ? span.attributes['kind'] : '';
-      const id = Engine.getInstance().automark
+      const id = Engine.getInstance().options.automark
         ? span.attributes['id']
-        : Engine.getInstance().mark
+        : Engine.getInstance().options.mark
           ? span.attributes['extid']
           : '';
       // TODO:
@@ -132,7 +132,7 @@ export class SsmlRenderer extends XmlRenderer {
         SsmlRenderer.MARKS[id] = true;
       }
       if (
-        Engine.getInstance().character &&
+        Engine.getInstance().options.character &&
         span.speech.length === 1 &&
         span.speech.match(/[a-zA-Z]/)
       ) {

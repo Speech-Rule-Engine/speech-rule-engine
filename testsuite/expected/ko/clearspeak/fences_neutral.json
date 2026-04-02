@@ -1,0 +1,264 @@
+{
+  "name": "KoreanClearspeakFencesNeutral",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/common/fences_neutral.json",
+  "information": "Korean Clearspeak Neutral Fences rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [
+    "BarFenced_0_sbrief",
+    "BarFenced_1_sbrief",
+    "BarFenced_2_sbrief",
+    "BarFenced_3_sbrief",
+    "BarFenced_4_sbrief",
+    "BarFenced_5_sbrief",
+    "BarFenced_6_sbrief",
+    "BarFencedMixed_0_sbrief",
+    "BarFencedMixed_1_sbrief",
+    "BarFencedMixed_2_sbrief",
+    "BarFencedMixed_3_sbrief",
+    "CenterBar_0_sbrief",
+    "CenterBar_1_sbrief",
+    "CenterBar_2_sbrief",
+    "CenterBar_3_sbrief",
+    "CenterBar_4_sbrief",
+    "CenterBar_5_sbrief",
+    "Function_0_sbrief",
+    "Function_1_sbrief",
+    "Function_2_sbrief",
+    "Function_3_sbrief",
+    "Function_4_sbrief",
+    "Function_5_sbrief",
+    "FunctionMetric0_sbrief",
+    "FunctionMetric1_sbrief",
+    "FunctionMetric2_sbrief",
+    "FunctionMetric3_sbrief",
+    "FunctionMetric4_sbrief",
+    "FunctionMetric5_sbrief",
+    "CenterBarFunc_0_sbrief",
+    "CenterBarFunc_1_sbrief",
+    "CenterBarFunc_2_sbrief",
+    "CenterBarFunc_3_sbrief",
+    "CenterBarFunc_4_sbrief",
+    "CenterBarFunc_5_sbrief",
+    "CenterBarFunc_6_sbrief"
+  ],
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "절댓값 a"
+    },
+    "BarFenced_1_default": {
+      "expected": "절댓값 a"
+    },
+    "BarFenced_2_default": {
+      "expected": "절댓값 a"
+    },
+    "BarFenced_3_default": {
+      "expected": "메트릭 a"
+    },
+    "BarFenced_4_default": {
+      "expected": "메트릭 a"
+    },
+    "BarFenced_5_default": {
+      "expected": "메트릭 a"
+    },
+    "BarFenced_6_default": {
+      "expected": "메트릭 a"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "세로선 a 이중 세로선"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "평행하다 는 이중 세로선 과 평행하다"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "세로선 a 끊어진 세로선"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "삼중 세로선 a 이중 세로선"
+    },
+    "CenterBar_0_default": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_1_default": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_2_default": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_3_default": {
+      "expected": "a 이중 세로선 b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a 는 b 와 평행하다"
+    },
+    "CenterBar_5_default": {
+      "expected": "a 삼중 세로선 b"
+    },
+    "BarFenced_0_AbsoluteValue_AbsEnd": {
+      "expected": "절댓값시작 a, 절댓값끝"
+    },
+    "BarFenced_1_AbsoluteValue_AbsEnd": {
+      "expected": "절댓값시작 a, 절댓값끝"
+    },
+    "BarFenced_2_AbsoluteValue_AbsEnd": {
+      "expected": "절댓값시작 a, 절댓값끝"
+    },
+    "BarFenced_3_AbsoluteValue_AbsEnd": {
+      "expected": "메트릭시작 a, 메트릭끝"
+    },
+    "BarFenced_4_AbsoluteValue_AbsEnd": {
+      "expected": "메트릭시작 a, 메트릭끝"
+    },
+    "BarFenced_5_AbsoluteValue_AbsEnd": {
+      "expected": "메트릭시작 a, 메트릭끝"
+    },
+    "BarFenced_6_AbsoluteValue_AbsEnd": {
+      "expected": "메트릭시작 a, 메트릭끝"
+    },
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd": {
+      "expected": "세로선 a 이중 세로선"
+    },
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd": {
+      "expected": "평행하다 는 이중 세로선 과 평행하다"
+    },
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd": {
+      "expected": "세로선 a 끊어진 세로선"
+    },
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd": {
+      "expected": "삼중 세로선 a 이중 세로선"
+    },
+    "CenterBar_0_AbsoluteValue_AbsEnd": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_1_AbsoluteValue_AbsEnd": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_2_AbsoluteValue_AbsEnd": {
+      "expected": "a 는 b 의 약수이다"
+    },
+    "CenterBar_3_AbsoluteValue_AbsEnd": {
+      "expected": "a 이중 세로선 b"
+    },
+    "CenterBar_4_AbsoluteValue_AbsEnd": {
+      "expected": "a 는 b 와 평행하다"
+    },
+    "CenterBar_5_AbsoluteValue_AbsEnd": {
+      "expected": "a 삼중 세로선 b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f 이중 세로선 g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f 는 g 와 평행하다"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f 삼중 세로선 g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "싸인 삼중 세로선 g"
+    },
+    "Function_0_default": {
+      "expected": "f 의, 절댓값 a"
+    },
+    "Function_1_default": {
+      "expected": "g 의, 절댓값 a"
+    },
+    "Function_2_default": {
+      "expected": "h 의, 절댓값 a"
+    },
+    "Function_3_default": {
+      "expected": "r 곱하기, 절댓값 a"
+    },
+    "Function_4_default": {
+      "expected": "싸인, 절댓값 a"
+    },
+    "Function_5_default": {
+      "expected": "시그마, 절댓값 a"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f 의, 메트릭 a"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g 의, 메트릭 a"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h 의, 메트릭 a"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r 곱하기, 메트릭 a"
+    },
+    "FunctionMetric4_default": {
+      "expected": "싸인, 메트릭 a"
+    },
+    "FunctionMetric5_default": {
+      "expected": "시그마, 메트릭 a"
+    },
+    "Function_0_AbsoluteValue_AbsEnd": {
+      "expected": "f 의, 절댓값시작 a, 절댓값끝"
+    },
+    "Function_1_AbsoluteValue_AbsEnd": {
+      "expected": "g 의, 절댓값시작 a, 절댓값끝"
+    },
+    "Function_2_AbsoluteValue_AbsEnd": {
+      "expected": "h 의, 절댓값시작 a, 절댓값끝"
+    },
+    "Function_3_AbsoluteValue_AbsEnd": {
+      "expected": "r 곱하기, 절댓값시작 a, 절댓값끝"
+    },
+    "Function_4_AbsoluteValue_AbsEnd": {
+      "expected": "싸인, 절댓값시작 a, 절댓값끝"
+    },
+    "Function_5_AbsoluteValue_AbsEnd": {
+      "expected": "시그마, 절댓값시작 a, 절댓값끝"
+    },
+    "FunctionMetric0_AbsoluteValue_AbsEnd": {
+      "expected": "f 의, 메트릭시작 a, 메트릭끝"
+    },
+    "FunctionMetric1_AbsoluteValue_AbsEnd": {
+      "expected": "g 의, 메트릭시작 a, 메트릭끝"
+    },
+    "FunctionMetric2_AbsoluteValue_AbsEnd": {
+      "expected": "h 의, 메트릭시작 a, 메트릭끝"
+    },
+    "FunctionMetric3_AbsoluteValue_AbsEnd": {
+      "expected": "r 곱하기, 메트릭시작 a, 메트릭끝"
+    },
+    "FunctionMetric4_AbsoluteValue_AbsEnd": {
+      "expected": "싸인, 메트릭시작 a, 메트릭끝"
+    },
+    "FunctionMetric5_AbsoluteValue_AbsEnd": {
+      "expected": "시그마, 메트릭시작 a, 메트릭끝"
+    },
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd": {
+      "expected": "f 는 g 의 약수이다"
+    },
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd": {
+      "expected": "f 이중 세로선 g"
+    },
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd": {
+      "expected": "f 는 g 와 평행하다"
+    },
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd": {
+      "expected": "f 삼중 세로선 g"
+    },
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd": {
+      "expected": "싸인 삼중 세로선 g"
+    }
+  }
+}

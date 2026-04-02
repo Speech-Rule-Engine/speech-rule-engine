@@ -1,0 +1,223 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakPart2Symbols",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "English Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 6 <mark name=\"1\"/> times <mark name=\"2\"/> 8 </prosody></speak>"
+    },
+    "X002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "X003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "X004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 6 <mark name=\"1\"/> by <mark name=\"2\"/> 8 </prosody></speak>"
+    },
+    "X005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> by <mark name=\"2\"/> <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "X006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> by <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "X007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">u</say-as> <mark name=\"1\"/> cross <mark name=\"2\"/> <say-as interpret-as=\"character\">v</say-as> </prosody></speak>"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 6 <mark name=\"1\"/> times <mark name=\"2\"/> 8 </prosody></speak>"
+    },
+    "Dot002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> times <mark name=\"2\"/> <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "Dot003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> times <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "Dot004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 6 <mark name=\"1\"/> dot <mark name=\"2\"/> 8 </prosody></speak>"
+    },
+    "Dot005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">m</say-as> <mark name=\"1\"/> dot <mark name=\"2\"/> <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "Dot006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> dot <mark name=\"2\"/> 3 </prosody></speak>"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> triangle <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> <mark name=\"2\"/> <say-as interpret-as=\"character\">B</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> </prosody></speak>"
+    },
+    "Triangle002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> triangle <mark name=\"1\"/> <say-as interpret-as=\"character\">D</say-as> <mark name=\"2\"/> <say-as interpret-as=\"character\">E</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">F</say-as> </prosody> </prosody></speak>"
+    },
+    "Triangle003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> Delta </prosody> <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> </prosody></speak>"
+    },
+    "Triangle004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> open paren <break time=\"250ms\"/> <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> plus <prosody rate=\"+25%\"> <prosody pitch=\"+30%\"> <mark name=\"4\"/> Delta </prosody> <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"9\"/> close paren </prosody></speak>"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> comma <mark name=\"3\"/> 2 <mark name=\"4\"/> comma <mark name=\"6\"/> 3 <mark name=\"7\"/> comma <mark name=\"9\"/> dot dot dot </prosody></speak>"
+    },
+    "Ellipses002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> comma <mark name=\"3\"/> 2 <mark name=\"4\"/> comma <mark name=\"6\"/> 3 <mark name=\"7\"/> comma <mark name=\"9\"/> dot dot dot <mark name=\"11\"/> comma <mark name=\"12\"/> 20 </prosody></speak>"
+    },
+    "Ellipses003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dot dot dot <mark name=\"2\"/> comma <break time=\"250ms\"/> <mark name=\"3\"/> negative <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"5\"/> comma <break time=\"250ms\"/> <mark name=\"7\"/> negative <mark name=\"8\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> comma <mark name=\"11\"/> 0 <mark name=\"12\"/> comma <mark name=\"14\"/> 1 <mark name=\"15\"/> comma <mark name=\"17\"/> 2 <mark name=\"18\"/> comma <mark name=\"20\"/> dot dot dot </prosody></speak>"
+    },
+    "Ellipses004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> comma <mark name=\"3\"/> 2 <mark name=\"4\"/> comma <mark name=\"6\"/> 3 <mark name=\"7\"/> comma <mark name=\"9\"/> and so on </prosody></speak>"
+    },
+    "Ellipses005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 1 <mark name=\"1\"/> comma <mark name=\"3\"/> 2 <mark name=\"4\"/> comma <mark name=\"6\"/> 3 <mark name=\"7\"/> comma <mark name=\"9\"/> and so on up to <mark name=\"11\"/> comma <mark name=\"12\"/> 20 </prosody></speak>"
+    },
+    "Ellipses006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> dot dot dot <mark name=\"2\"/> comma <break time=\"250ms\"/> <mark name=\"3\"/> negative <mark name=\"4\"/> 2 <break time=\"250ms\"/> <mark name=\"5\"/> comma <break time=\"250ms\"/> <mark name=\"7\"/> negative <mark name=\"8\"/> 1 <break time=\"250ms\"/> <mark name=\"9\"/> comma <mark name=\"11\"/> 0 <mark name=\"12\"/> comma <mark name=\"14\"/> 1 <mark name=\"15\"/> comma <mark name=\"17\"/> 2 <mark name=\"18\"/> comma <mark name=\"20\"/> dot dot dot </prosody></speak>"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> divides <mark name=\"2\"/> 6 </prosody></speak>"
+    },
+    "VertLine002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> such that <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> is greater than <mark name=\"5\"/> 0 </prosody></speak>"
+    },
+    "VertLine003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"9\"/> such that <break time=\"250ms\"/> <mark name=\"6\"/> the absolute value of <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> is greater than <mark name=\"8\"/> 2 </prosody></speak>"
+    },
+    "VertLine004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"4\"/> of <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> evaluated at <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"7\"/> equals <mark name=\"8\"/> 5 </prosody></speak>"
+    },
+    "VertLine005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <prosody rate=\"+25%\"> <mark name=\"4\"/> 2 <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> evaluated at <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> equals <mark name=\"9\"/> 2 </prosody></speak>"
+    },
+    "VertLine006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> plus <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"7\"/> evaluated at 1 <break time=\"250ms\"/> <mark name=\"6\"/> minus the same expression evaluated at 0 </prosody></speak>"
+    },
+    "VertLine007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"9\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> such that <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"4\"/> is greater than <mark name=\"5\"/> 0 </prosody></speak>"
+    },
+    "VertLine008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> divides <mark name=\"2\"/> 6 </prosody></speak>"
+    },
+    "VertLine009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">P</say-as> </prosody> <mark name=\"8\"/> of <break time=\"250ms\"/> <mark name=\"2\"/> open paren <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"4\"/> given <prosody pitch=\"+30%\"> <mark name=\"5\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"7\"/> close paren </prosody></speak>"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> If <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> is a member of <mark name=\"3\"/> the integers <mark name=\"5\"/> then <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> is an even number period </prosody></speak>"
+    },
+    "MembSym002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> in <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "MembSym003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> is not a member of <mark name=\"5\"/> the real numbers </prosody></speak>"
+    },
+    "MembSym004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> If <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> is a member of <mark name=\"3\"/> the integers <mark name=\"5\"/> then <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> is an even number period </prosody></speak>"
+    },
+    "MembSym005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> member of <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "MembSym006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> is not a member of <mark name=\"5\"/> the real numbers </prosody></speak>"
+    },
+    "MembSym007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> If <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> is an element of <mark name=\"3\"/> the integers <mark name=\"5\"/> then <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> is an even number period </prosody></speak>"
+    },
+    "MembSym008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> element of <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "MembSym009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> is not an element of <mark name=\"5\"/> the real numbers </prosody></speak>"
+    },
+    "MembSym010": {
+      "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> If <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> belongs to <mark name=\"3\"/> the integers <mark name=\"5\"/> then <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> is an even number period </prosody></speak>"
+    },
+    "MembSym011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> belonging to <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "MembSym012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> does not belong to <mark name=\"5\"/> the real numbers </prosody></speak>"
+    },
+    "MembSym013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> If <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> belongs to <mark name=\"3\"/> the integers <mark name=\"5\"/> then <prosody rate=\"+25%\"> <mark name=\"6\"/> 2 <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"10\"/> is an even number period </prosody></speak>"
+    },
+    "MembSym014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of all <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> belonging to <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "MembSym015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 3 <mark name=\"1\"/> plus <prosody rate=\"+25%\"> <mark name=\"2\"/> 2 <mark name=\"3\"/> <say-as interpret-as=\"character\">i</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"4\"/> does not belong to <mark name=\"5\"/> the real numbers </prosody></speak>"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"14\"/> the set of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> belonging to <mark name=\"3\"/> the integers <mark name=\"12\"/> such that <mark name=\"5\"/> 2 <mark name=\"6\"/> is less than <mark name=\"7\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"8\"/> is less than <mark name=\"9\"/> 7 </prosody></speak>"
+    },
+    "SetMemb002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"12\"/> the set of <mark name=\"1\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"2\"/> member of <mark name=\"3\"/> the integers <mark name=\"10\"/> such that <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> is greater than <mark name=\"7\"/> 5 </prosody></speak>"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> sum <mark name=\"4\"/> from <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> to 10 <break time=\"250ms\"/> <mark name=\"7\"/> of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "Sum002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> sum <mark name=\"4\"/> from <mark name=\"1\"/> <say-as interpret-as=\"character\">n</say-as> <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> to infinity <break time=\"250ms\"/> <mark name=\"7\"/> of <say-as interpret-as=\"character\">n</say-as> </prosody></speak>"
+    },
+    "Sum003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"0\"/> sum <mark name=\"6\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> is a member of <mark name=\"5\"/> the positive integers <break time=\"250ms\"/> <mark name=\"8\"/> of <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> sum <mark name=\"1\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"3\"/> of <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the sum <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> product <mark name=\"4\"/> from <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> to 10 <break time=\"250ms\"/> <mark name=\"7\"/> of <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"7\"/> the <mark name=\"0\"/> product <mark name=\"6\"/> over <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> is a member of <mark name=\"5\"/> the positive integers <break time=\"250ms\"/> <mark name=\"13\"/> of <break time=\"250ms\"/> <mark name=\"13\"/> the <mark name=\"8\"/> fraction with numerator <say-as interpret-as=\"character\">i</say-as> <break time=\"250ms\"/> <mark name=\"12\"/> and denominator <mark name=\"9\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"10\"/> plus <mark name=\"11\"/> 1 </prosody></speak>"
+    },
+    "Sum008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"4\"/> the <mark name=\"0\"/> product <mark name=\"3\"/> over the positive integers <break time=\"250ms\"/> <mark name=\"10\"/> of <break time=\"250ms\"/> <mark name=\"10\"/> the <mark name=\"5\"/> fraction with numerator <say-as interpret-as=\"character\">i</say-as> <break time=\"250ms\"/> <mark name=\"9\"/> and denominator <mark name=\"6\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"7\"/> plus <mark name=\"8\"/> 1 </prosody></speak>"
+    },
+    "Sum009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the product <mark name=\"3\"/> of <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"2\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> intersection <mark name=\"4\"/> from <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> to 10 <break time=\"250ms\"/> <mark name=\"9\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"7\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"8\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum011": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"6\"/> the <mark name=\"0\"/> union <mark name=\"4\"/> from <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> equals <mark name=\"3\"/> 1 <mark name=\"5\"/> to 10 <break time=\"250ms\"/> <mark name=\"9\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"7\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"8\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the intersection of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"2\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the union of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"2\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> intersection <mark name=\"1\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"4\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> union <mark name=\"1\"/> over <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> <break time=\"250ms\"/> <mark name=\"2\" kind=\"LAST\"/> of <break time=\"250ms\"/> <prosody pitch=\"+30%\"> <mark name=\"3\"/> <say-as interpret-as=\"character\">S</say-as> </prosody> <mark name=\"4\"/> sub <say-as interpret-as=\"character\">i</say-as> </prosody></speak>"
+    },
+    "Sum016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> the integral <mark name=\"8\"/> of <mark name=\"1\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"5\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"11\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"12\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Sum017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the <mark name=\"0\"/> integral <mark name=\"1\"/> from 0 <mark name=\"2\"/> to 1 <break time=\"250ms\"/> <mark name=\"10\"/> of <mark name=\"4\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"8\"/> of <mark name=\"6\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"14\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"15\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Sum018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"2\"/> the <mark name=\"0\"/> integral <mark name=\"1\"/> over the real numbers <break time=\"250ms\"/> <mark name=\"9\"/> of <mark name=\"3\"/> <say-as interpret-as=\"character\">f</say-as> <mark name=\"7\"/> of <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <break time=\"250ms\"/> <mark name=\"13\"/> <say-as interpret-as=\"character\">d</say-as> <mark name=\"14\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    }
+  }
+}

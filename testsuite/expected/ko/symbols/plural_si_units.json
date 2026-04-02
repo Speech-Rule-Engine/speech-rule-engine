@@ -1,0 +1,808 @@
+{
+  "name": "KoreanPluralSiUnit",
+  "locale": "ko",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsKorean",
+  "grammar": {
+    "annotation": "unit",
+    "plural": true
+  },
+  "factory": "symbol",
+  "base": "input/common/si_units.json",
+  "information": "Korean Plural SI Unit tests.",
+  "tests": {
+    "YW": {
+      "expected": "요타와트"
+    },
+    "Yw": {
+      "expected": "요타와트"
+    },
+    "ZW": {
+      "expected": "제타와트"
+    },
+    "Zw": {
+      "expected": "제타와트"
+    },
+    "EW": {
+      "expected": "엑사와트"
+    },
+    "Ew": {
+      "expected": "엑사와트"
+    },
+    "PW": {
+      "expected": "페타와트"
+    },
+    "Pw": {
+      "expected": "페타와트"
+    },
+    "TW": {
+      "expected": "테라와트"
+    },
+    "Tw": {
+      "expected": "테라와트"
+    },
+    "GW": {
+      "expected": "기가와트"
+    },
+    "Gw": {
+      "expected": "기가와트"
+    },
+    "MW": {
+      "expected": "메가와트"
+    },
+    "Mw": {
+      "expected": "메가와트"
+    },
+    "kW": {
+      "expected": "킬로와트"
+    },
+    "kw": {
+      "expected": "킬로와트"
+    },
+    "hW": {
+      "expected": "헥토와트"
+    },
+    "hw": {
+      "expected": "헥토와트"
+    },
+    "daW": {
+      "expected": "데카와트"
+    },
+    "daw": {
+      "expected": "데카와트"
+    },
+    "dW": {
+      "expected": "데시와트"
+    },
+    "dw": {
+      "expected": "데시와트"
+    },
+    "cW": {
+      "expected": "센티와트"
+    },
+    "cw": {
+      "expected": "센티와트"
+    },
+    "mW": {
+      "expected": "밀리와트"
+    },
+    "mw": {
+      "expected": "밀리와트"
+    },
+    "µW": {
+      "expected": "마이크로와트"
+    },
+    "µw": {
+      "expected": "마이크로와트"
+    },
+    "μW": {
+      "expected": "마이크로와트"
+    },
+    "μw": {
+      "expected": "마이크로와트"
+    },
+    "nW": {
+      "expected": "나노와트"
+    },
+    "nw": {
+      "expected": "나노와트"
+    },
+    "pW": {
+      "expected": "피코와트"
+    },
+    "pw": {
+      "expected": "피코와트"
+    },
+    "fW": {
+      "expected": "펨토와트"
+    },
+    "fw": {
+      "expected": "펨토와트"
+    },
+    "aW": {
+      "expected": "아토와트"
+    },
+    "aw": {
+      "expected": "아토와트"
+    },
+    "zW": {
+      "expected": "젭토와트"
+    },
+    "zw": {
+      "expected": "젭토와트"
+    },
+    "yW": {
+      "expected": "욕토와트"
+    },
+    "yw": {
+      "expected": "욕토와트"
+    },
+    "W": {
+      "expected": "와트"
+    },
+    "w": {
+      "expected": "와트"
+    },
+    "YJ": {
+      "expected": "요타줄"
+    },
+    "ZJ": {
+      "expected": "제타줄"
+    },
+    "EJ": {
+      "expected": "엑사줄"
+    },
+    "PJ": {
+      "expected": "페타줄"
+    },
+    "TJ": {
+      "expected": "테라줄"
+    },
+    "GJ": {
+      "expected": "기가줄"
+    },
+    "MJ": {
+      "expected": "메가줄"
+    },
+    "kJ": {
+      "expected": "킬로줄"
+    },
+    "hJ": {
+      "expected": "헥토줄"
+    },
+    "daJ": {
+      "expected": "데카줄"
+    },
+    "dJ": {
+      "expected": "데시줄"
+    },
+    "cJ": {
+      "expected": "센티줄"
+    },
+    "mJ": {
+      "expected": "밀리줄"
+    },
+    "µJ": {
+      "expected": "마이크로줄"
+    },
+    "μJ": {
+      "expected": "마이크로줄"
+    },
+    "nJ": {
+      "expected": "나노줄"
+    },
+    "pJ": {
+      "expected": "피코줄"
+    },
+    "fJ": {
+      "expected": "펨토줄"
+    },
+    "aJ": {
+      "expected": "아토줄"
+    },
+    "zJ": {
+      "expected": "젭토줄"
+    },
+    "yJ": {
+      "expected": "욕토줄"
+    },
+    "J": {
+      "expected": "줄"
+    },
+    "YN": {
+      "expected": "요타뉴턴"
+    },
+    "ZN": {
+      "expected": "제타뉴턴"
+    },
+    "EN": {
+      "expected": "엑사뉴턴"
+    },
+    "PN": {
+      "expected": "페타뉴턴"
+    },
+    "TN": {
+      "expected": "테라뉴턴"
+    },
+    "GN": {
+      "expected": "기가뉴턴"
+    },
+    "MN": {
+      "expected": "메가뉴턴"
+    },
+    "kN": {
+      "expected": "킬로뉴턴"
+    },
+    "hN": {
+      "expected": "헥토뉴턴"
+    },
+    "daN": {
+      "expected": "데카뉴턴"
+    },
+    "dN": {
+      "expected": "데시뉴턴"
+    },
+    "cN": {
+      "expected": "센티뉴턴"
+    },
+    "mN": {
+      "expected": "밀리뉴턴"
+    },
+    "µN": {
+      "expected": "마이크로뉴턴"
+    },
+    "μN": {
+      "expected": "마이크로뉴턴"
+    },
+    "nN": {
+      "expected": "나노뉴턴"
+    },
+    "pN": {
+      "expected": "피코뉴턴"
+    },
+    "fN": {
+      "expected": "펨토뉴턴"
+    },
+    "aN": {
+      "expected": "아토뉴턴"
+    },
+    "zN": {
+      "expected": "젭토뉴턴"
+    },
+    "yN": {
+      "expected": "욕토뉴턴"
+    },
+    "N": {
+      "expected": "뉴턴"
+    },
+    "YA": {
+      "expected": "요타암페어"
+    },
+    "ZA": {
+      "expected": "제타암페어"
+    },
+    "EA": {
+      "expected": "엑사암페어"
+    },
+    "PA": {
+      "expected": "페타암페어"
+    },
+    "TA": {
+      "expected": "테라암페어"
+    },
+    "GA": {
+      "expected": "기가암페어"
+    },
+    "MA": {
+      "expected": "메가암페어"
+    },
+    "kA": {
+      "expected": "킬로암페어"
+    },
+    "hA": {
+      "expected": "헥토암페어"
+    },
+    "daA": {
+      "expected": "데카암페어"
+    },
+    "dA": {
+      "expected": "데시암페어"
+    },
+    "cA": {
+      "expected": "센티암페어"
+    },
+    "mA": {
+      "expected": "밀리암페어"
+    },
+    "µA": {
+      "expected": "마이크로암페어"
+    },
+    "μA": {
+      "expected": "마이크로암페어"
+    },
+    "nA": {
+      "expected": "나노암페어"
+    },
+    "pA": {
+      "expected": "피코암페어"
+    },
+    "fA": {
+      "expected": "펨토암페어"
+    },
+    "aA": {
+      "expected": "아토암페어"
+    },
+    "zA": {
+      "expected": "젭토암페어"
+    },
+    "yA": {
+      "expected": "욕토암페어"
+    },
+    "A": {
+      "expected": "암페어"
+    },
+    "YV": {
+      "expected": "요타볼트"
+    },
+    "ZV": {
+      "expected": "제타볼트"
+    },
+    "EV": {
+      "expected": "엑사볼트"
+    },
+    "PV": {
+      "expected": "페타볼트"
+    },
+    "TV": {
+      "expected": "테라볼트"
+    },
+    "GV": {
+      "expected": "기가볼트"
+    },
+    "MV": {
+      "expected": "메가볼트"
+    },
+    "kV": {
+      "expected": "킬로볼트"
+    },
+    "hV": {
+      "expected": "헥토볼트"
+    },
+    "daV": {
+      "expected": "데카볼트"
+    },
+    "dV": {
+      "expected": "데시볼트"
+    },
+    "cV": {
+      "expected": "센티볼트"
+    },
+    "mV": {
+      "expected": "밀리볼트"
+    },
+    "µV": {
+      "expected": "마이크로볼트"
+    },
+    "μV": {
+      "expected": "마이크로볼트"
+    },
+    "nV": {
+      "expected": "나노볼트"
+    },
+    "pV": {
+      "expected": "피코볼트"
+    },
+    "fV": {
+      "expected": "펨토볼트"
+    },
+    "aV": {
+      "expected": "아토볼트"
+    },
+    "zV": {
+      "expected": "젭토볼트"
+    },
+    "yV": {
+      "expected": "욕토볼트"
+    },
+    "V": {
+      "expected": "볼트"
+    },
+    "YΩ": {
+      "expected": "요타옴"
+    },
+    "ZΩ": {
+      "expected": "제타옴"
+    },
+    "EΩ": {
+      "expected": "엑사옴"
+    },
+    "PΩ": {
+      "expected": "페타옴"
+    },
+    "TΩ": {
+      "expected": "테라옴"
+    },
+    "GΩ": {
+      "expected": "기가옴"
+    },
+    "MΩ": {
+      "expected": "메가옴"
+    },
+    "kΩ": {
+      "expected": "킬로옴"
+    },
+    "hΩ": {
+      "expected": "헥토옴"
+    },
+    "daΩ": {
+      "expected": "데카옴"
+    },
+    "dΩ": {
+      "expected": "데시옴"
+    },
+    "cΩ": {
+      "expected": "센티옴"
+    },
+    "mΩ": {
+      "expected": "밀리옴"
+    },
+    "µΩ": {
+      "expected": "마이크로옴"
+    },
+    "μΩ": {
+      "expected": "마이크로옴"
+    },
+    "nΩ": {
+      "expected": "나노옴"
+    },
+    "pΩ": {
+      "expected": "피코옴"
+    },
+    "fΩ": {
+      "expected": "펨토옴"
+    },
+    "aΩ": {
+      "expected": "아토옴"
+    },
+    "zΩ": {
+      "expected": "젭토옴"
+    },
+    "yΩ": {
+      "expected": "욕토옴"
+    },
+    "Ω": {
+      "expected": "옴"
+    },
+    "Ym": {
+      "expected": "요타미터"
+    },
+    "Zm": {
+      "expected": "제타미터"
+    },
+    "Em": {
+      "expected": "엑사미터"
+    },
+    "Pm": {
+      "expected": "페타미터"
+    },
+    "Tm": {
+      "expected": "테라미터"
+    },
+    "Gm": {
+      "expected": "기가미터"
+    },
+    "Mm": {
+      "expected": "메가미터"
+    },
+    "km": {
+      "expected": "킬로미터"
+    },
+    "hm": {
+      "expected": "헥토미터"
+    },
+    "dam": {
+      "expected": "데카미터"
+    },
+    "dm": {
+      "expected": "데시미터"
+    },
+    "cm": {
+      "expected": "센티미터"
+    },
+    "mm": {
+      "expected": "밀리미터"
+    },
+    "µm": {
+      "expected": "마이크로미터"
+    },
+    "μm": {
+      "expected": "마이크로미터"
+    },
+    "nm": {
+      "expected": "나노미터"
+    },
+    "pm": {
+      "expected": "피코미터"
+    },
+    "fm": {
+      "expected": "펨토미터"
+    },
+    "am": {
+      "expected": "아토미터"
+    },
+    "zm": {
+      "expected": "젭토미터"
+    },
+    "ym": {
+      "expected": "욕토미터"
+    },
+    "m": {
+      "expected": "미터"
+    },
+    "YB": {
+      "expected": "요타바이트"
+    },
+    "ZB": {
+      "expected": "제타바이트"
+    },
+    "EB": {
+      "expected": "엑사바이트"
+    },
+    "PB": {
+      "expected": "페타바이트"
+    },
+    "TB": {
+      "expected": "테라바이트"
+    },
+    "GB": {
+      "expected": "기가바이트"
+    },
+    "MB": {
+      "expected": "메가바이트"
+    },
+    "kB": {
+      "expected": "킬로바이트"
+    },
+    "hB": {
+      "expected": "헥토바이트"
+    },
+    "daB": {
+      "expected": "데카바이트"
+    },
+    "dB": {
+      "expected": "데시바이트"
+    },
+    "cB": {
+      "expected": "센티바이트"
+    },
+    "mB": {
+      "expected": "밀리바이트"
+    },
+    "µB": {
+      "expected": "마이크로바이트"
+    },
+    "μB": {
+      "expected": "마이크로바이트"
+    },
+    "nB": {
+      "expected": "나노바이트"
+    },
+    "pB": {
+      "expected": "피코바이트"
+    },
+    "fB": {
+      "expected": "펨토바이트"
+    },
+    "aB": {
+      "expected": "아토바이트"
+    },
+    "zB": {
+      "expected": "젭토바이트"
+    },
+    "yB": {
+      "expected": "욕토바이트"
+    },
+    "B": {
+      "expected": "바이트"
+    },
+    "Ys": {
+      "expected": "요타초"
+    },
+    "Zs": {
+      "expected": "제타초"
+    },
+    "Es": {
+      "expected": "엑사초"
+    },
+    "Ps": {
+      "expected": "페타초"
+    },
+    "Ts": {
+      "expected": "테라초"
+    },
+    "Gs": {
+      "expected": "기가초"
+    },
+    "Ms": {
+      "expected": "메가초"
+    },
+    "ks": {
+      "expected": "킬로초"
+    },
+    "hs": {
+      "expected": "헥토초"
+    },
+    "das": {
+      "expected": "데카초"
+    },
+    "ds": {
+      "expected": "데시초"
+    },
+    "cs": {
+      "expected": "센티초"
+    },
+    "ms": {
+      "expected": "밀리초"
+    },
+    "µs": {
+      "expected": "마이크로초"
+    },
+    "μs": {
+      "expected": "마이크로초"
+    },
+    "ns": {
+      "expected": "나노초"
+    },
+    "ps": {
+      "expected": "피코초"
+    },
+    "fs": {
+      "expected": "펨토초"
+    },
+    "as": {
+      "expected": "아토초"
+    },
+    "zs": {
+      "expected": "젭토초"
+    },
+    "ys": {
+      "expected": "욕토초"
+    },
+    "s": {
+      "expected": "초"
+    },
+    "Yl": {
+      "expected": "요타리터"
+    },
+    "Zl": {
+      "expected": "제타리터"
+    },
+    "El": {
+      "expected": "엑사리터"
+    },
+    "Pl": {
+      "expected": "페타리터"
+    },
+    "Tl": {
+      "expected": "테라리터"
+    },
+    "Gl": {
+      "expected": "기가리터"
+    },
+    "Ml": {
+      "expected": "메가리터"
+    },
+    "kl": {
+      "expected": "킬로리터"
+    },
+    "hl": {
+      "expected": "헥토리터"
+    },
+    "dal": {
+      "expected": "데카리터"
+    },
+    "dl": {
+      "expected": "데시리터"
+    },
+    "cl": {
+      "expected": "센티리터"
+    },
+    "ml": {
+      "expected": "밀리리터"
+    },
+    "µl": {
+      "expected": "마이크로리터"
+    },
+    "μl": {
+      "expected": "마이크로리터"
+    },
+    "nl": {
+      "expected": "나노리터"
+    },
+    "pl": {
+      "expected": "피코리터"
+    },
+    "fl": {
+      "expected": "펨토리터"
+    },
+    "al": {
+      "expected": "아토리터"
+    },
+    "zl": {
+      "expected": "젭토리터"
+    },
+    "yl": {
+      "expected": "욕토리터"
+    },
+    "l": {
+      "expected": "리터"
+    },
+    "Yg": {
+      "expected": "요타그램"
+    },
+    "Zg": {
+      "expected": "제타그램"
+    },
+    "Eg": {
+      "expected": "엑사그램"
+    },
+    "Pg": {
+      "expected": "페타그램"
+    },
+    "Tg": {
+      "expected": "테라그램"
+    },
+    "Gg": {
+      "expected": "기가그램"
+    },
+    "Mg": {
+      "expected": "메가그램"
+    },
+    "kg": {
+      "expected": "킬로그램"
+    },
+    "hg": {
+      "expected": "헥토그램"
+    },
+    "dag": {
+      "expected": "데카그램"
+    },
+    "dg": {
+      "expected": "데시그램"
+    },
+    "cg": {
+      "expected": "센티그램"
+    },
+    "mg": {
+      "expected": "밀리그램"
+    },
+    "µg": {
+      "expected": "마이크로그램"
+    },
+    "μg": {
+      "expected": "마이크로그램"
+    },
+    "ng": {
+      "expected": "나노그램"
+    },
+    "pg": {
+      "expected": "피코그램"
+    },
+    "fg": {
+      "expected": "펨토그램"
+    },
+    "ag": {
+      "expected": "아토그램"
+    },
+    "zg": {
+      "expected": "젭토그램"
+    },
+    "yg": {
+      "expected": "욕토그램"
+    },
+    "g": {
+      "expected": "그램"
+    }
+  }
+}

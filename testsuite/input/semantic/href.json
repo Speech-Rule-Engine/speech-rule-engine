@@ -1,0 +1,32 @@
+{
+  "tests": {
+    "href_0": {
+      "tex": "\\href{a}{a}",
+      "input": "<mi href=\"a\">a</mi>"
+    },
+    "href_1": {
+      "tex": "\\href{c}{a + b}",
+      "input": "<mrow href=\"c\"><mi>a</mi><mo>+</mo><mi>b</mi></mrow>"
+    },
+    "href_2": {
+      "tex": "a \\href{c}{+} b",
+      "input": "<mi>a</mi><mo href=\"c\">+</mo><mi>b</mi>"
+    },
+    "href_3": {
+      "tex": "\\href{a}{a} + \\href{b}{b}",
+      "input": "<mi href=\"a\">a</mi><mo>+</mo><mi href=\"b\">b</mi>"
+    },
+    "href_4": {
+      "tex": "\\href{c}{\\href{a}{a} + \\href{b}{b}}",
+      "input": "<mrow href=\"c\"><mi href=\"a\">a</mi><mo>+</mo><mi href=\"b\">b</mi></mrow>"
+    },
+    "href_5": {
+      "tex": "\\href{a}{a}",
+      "input": "<math href=\"a\"><mi>a</mi></math>"
+    },
+    "href_6": {
+      "tex": "\\href{c}{a + b}",
+      "input": "<math href=\"c\"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>"
+    }
+  }
+}

@@ -27,18 +27,6 @@ import * as EngineConst from '../common/engine_const.js';
 import { SystemExternal } from './system_external.js';
 
 /**
- * Returns whether or not xpath is supported.
- *
- * @returns True if xpath is supported.
- */
-function xpathSupported(): boolean {
-  if (typeof XPathResult === 'undefined') {
-    return false;
-  }
-  return true;
-}
-
-/**
  * Holds variables that might need to be adjusted during document evaluation.
  *
  * currentDocument:  Current XML Document inside a browser.
@@ -59,17 +47,8 @@ export const xpath: {
     result: XPathResult
   ) => XPathResult;
   result: any;
-  createNSResolver: (nodeResolver: Element) => XPathNSResolver;
-} = {
-  currentDocument: null,
-  evaluate: xpathSupported()
-    ? document.evaluate
-    : SystemExternal.xpath.evaluate,
-  result: xpathSupported() ? XPathResult : SystemExternal.xpath.XPathResult,
-  createNSResolver: xpathSupported()
-    ? document.createNSResolver
-    : SystemExternal.xpath.createNSResolver
-};
+  createNSResolver: (nodeResolver: Node) => XPathNSResolver;
+} = SystemExternal.xpath;
 
 /**
  * Mapping for some default namespaces.
@@ -115,17 +94,7 @@ function evaluateXpath(
   rootNode: Element,
   type: number
 ): XPathResult {
-  return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-    !Engine.getInstance().isIE &&
-    !Engine.getInstance().isEdge
-    ? xpath.currentDocument.evaluate(
-        expression,
-        rootNode,
-        resolveNameSpace,
-        type,
-        null
-      )
-    : xpath.evaluate(expression, rootNode, new Resolver(), type, null);
+  return xpath.evaluate(expression, rootNode, new Resolver(), type, null);
 }
 
 /**
@@ -167,7 +136,10 @@ export function evalXPath(expression: string, rootNode: Element): Element[] {
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @returns The result of evaluating the xpath expression.
  */
-export function evaluateBoolean(expression: string, rootNode: Element): boolean {
+export function evaluateBoolean(
+  expression: string,
+  rootNode: Element
+): boolean {
   let result: XPathResult;
   try {
     result = evaluateXpath(expression, rootNode, xpath.result.BOOLEAN_TYPE);

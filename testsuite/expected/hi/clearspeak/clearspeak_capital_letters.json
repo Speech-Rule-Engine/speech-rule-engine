@@ -1,0 +1,76 @@
+{
+  "_comment0_": "With support from a UKIERI grant.",
+  "name": "HindiClearspeakCapitalLetters",
+  "locale": "hi",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "Hindi Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Cap001": {
+      "expected": "साइन ए के हर में ए, बराबर का चिह्न, साइन बी के हर में बी"
+    },
+    "Cap002": {
+      "expected": "सी वर्गित बराबर का चिह्न ए वर्गित धन चिह्न बी वर्गित घटाव का चिन्ह 2 ए बी कोस सी"
+    },
+    "Cap003": {
+      "expected": "टेन ए बराबर का चिह्न, ए के हर में बी"
+    },
+    "Cap004": {
+      "expected": "ए बी"
+    },
+    "Cap005": {
+      "expected": "ए ए"
+    },
+    "Cap006": {
+      "expected": "बी ए"
+    },
+    "Cap007": {
+      "expected": "बी ए"
+    },
+    "Cap008": {
+      "expected": "कोण ए बी सी"
+    },
+    "Cap009": {
+      "expected": "कोण ए बी सी का मापन"
+    },
+    "Cap010": {
+      "expected": "कोण ए का मापन"
+    },
+    "Cap011": {
+      "expected": "साइन कैपिटल ए के हर में ए, बराबर का चिह्न, साइन कैपिटल बी के हर में बी"
+    },
+    "Cap012": {
+      "expected": "सी वर्गित बराबर का चिह्न ए वर्गित धन चिह्न बी वर्गित घटाव का चिन्ह 2 ए बी कोस कैपिटल सी"
+    },
+    "Cap013": {
+      "expected": "टेन कैपिटल ए बराबर का चिह्न, ए के हर में बी"
+    },
+    "Cap014": {
+      "expected": "कैपिटल ए, कैपिटल बी"
+    },
+    "Cap015": {
+      "expected": "ए, कैपिटल ए"
+    },
+    "Cap016": {
+      "expected": "बी, कैपिटल ए"
+    },
+    "Cap017": {
+      "expected": "कैपिटल बी, ए"
+    },
+    "Cap018": {
+      "expected": "कोण कैपिटल ए, कैपिटल बी, कैपिटल सी"
+    },
+    "Cap019": {
+      "expected": "कोण कैपिटल ए, कैपिटल बी, कैपिटल सी का मापन"
+    },
+    "Cap020": {
+      "expected": "कोण कैपिटल ए का मापन"
+    },
+    "Cap020a": {
+      "expected": "कोण कैपिटल ए"
+    }
+  }
+}

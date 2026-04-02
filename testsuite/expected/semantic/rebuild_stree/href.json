@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild stree href tests.",
+  "base": "input/semantic/href.json"
+}

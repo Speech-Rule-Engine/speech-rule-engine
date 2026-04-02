@@ -1,0 +1,466 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakImpliedTimes",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "Italian Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "ImpTimes001": {
+      "expected": "2 per 3"
+    },
+    "ImpTimes002": {
+      "expected": "2 per 3"
+    },
+    "ImpTimes003": {
+      "expected": "2 alla quarta potenza, per 3"
+    },
+    "ImpTimes004": {
+      "expected": "2 per, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa"
+    },
+    "ImpTimes005": {
+      "expected": "2 per, parentesi quadra aperta, 3 più 4, parentesi quadra chiusa"
+    },
+    "ImpTimes006": {
+      "expected": "3 per 2"
+    },
+    "ImpTimes007": {
+      "expected": "2 per, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa, quadrato"
+    },
+    "ImpTimes008": {
+      "expected": "parentesi tonda aperta, 2 più 7, parentesi tonda chiusa, per, parentesi tonda aperta, 3 meno 6, parentesi tonda chiusa"
+    },
+    "ImpTimes009": {
+      "expected": "parentesi quadra aperta, 2 più 7, parentesi quadra chiusa, per, parentesi quadra aperta, 3 meno 6, parentesi quadra chiusa"
+    },
+    "ImpTimes011": {
+      "expected": "x per, parentesi tonda aperta, y più z, parentesi tonda chiusa"
+    },
+    "ImpTimes012": {
+      "expected": "2 per, parentesi tonda aperta, y più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes013": {
+      "expected": "parentesi tonda aperta, 2 meno 1, parentesi tonda chiusa, per x"
+    },
+    "ImpTimes014": {
+      "expected": "p pedice 1, per, parentesi tonda aperta, 3 più 7, parentesi tonda chiusa"
+    },
+    "ImpTimes015": {
+      "expected": "p pedice 1, elevato alla, a pedice 1; p pedice 2, elevato alla, a pedice 2"
+    },
+    "ImpTimes016": {
+      "expected": "parentesi tonda aperta, x più y, parentesi tonda chiusa, alla meno 4, per, parentesi tonda aperta, x meno y, parentesi tonda chiusa, alla meno 4"
+    },
+    "ImpTimes017": {
+      "expected": "2 elevato alla 4 per, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimes018": {
+      "expected": "x y"
+    },
+    "ImpTimes019": {
+      "expected": "x quadrato, y cubo"
+    },
+    "ImpTimes020": {
+      "expected": "x elevato alla y più 1; x elevato alla y più 2"
+    },
+    "ImpTimes021": {
+      "expected": "radice quadrata di a, radice quadrata di b, uguale a radice quadrata di a b"
+    },
+    "ImpTimes022": {
+      "expected": "radice quadrata di 3, radice quadrata di 10, uguale a radice quadrata di 30"
+    },
+    "ImpTimes023": {
+      "expected": "2 radice quadrata di 3"
+    },
+    "ImpTimes024": {
+      "expected": "1 più 2 radice quadrata di 3"
+    },
+    "ImpTimes025": {
+      "expected": "f di x, uguale a x quadrato per, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes026": {
+      "expected": "f per x, uguale a x quadrato per, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes027": {
+      "expected": "seno di x coseno di y, più, coseno di x seno di y"
+    },
+    "ImpTimes027a": {
+      "expected": "seno di, parentesi tonda aperta, x più y, parentesi tonda chiusa, coseno di, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimes028": {
+      "expected": "logaritmo base 10 di, x y"
+    },
+    "ImpTimes029": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più y, parentesi tonda chiusa, uguale a, logaritmo di x logaritmo di y"
+    },
+    "ImpTimes030": {
+      "expected": "matrice 2 per 2. Riga 1: 1, 3 Riga 2: 5, 2. per matrice 2 per 2. Riga 1: 7, 4 Riga 2: 0, 1"
+    },
+    "ImpTimes031": {
+      "expected": "2 per, parentesi tonda aperta, 3 per, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes032": {
+      "expected": "2 per, parentesi tonda aperta, 3 per, seconda parentesi tonda aperta, terza parentesi tonda aperta, 4 più 5, terza parentesi tonda chiusa, più 6, seconda parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes033": {
+      "expected": "2 per, parentesi quadra aperta, 3 per, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes034": {
+      "expected": "2 per, parentesi quadra aperta, 3 per, parentesi tonda aperta, seconda parentesi tonda aperta, 4 più 5, seconda parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes035": {
+      "expected": "2 per, valore assoluto di x"
+    },
+    "ImpTimes036": {
+      "expected": "valore assoluto di x, per, valore assoluto di y"
+    },
+    "ImpTimes037": {
+      "expected": "valore assoluto di x più 1, per, valore assoluto di y meno 1"
+    },
+    "ImpTimes037a": {
+      "expected": "valore assoluto di x più 1, fine valore assoluto, per, valore assoluto di y meno 1, fine valore assoluto"
+    },
+    "ImpTimes038": {
+      "expected": "valore assoluto di x più 1, per, valore assoluto di y, meno 1"
+    },
+    "ImpTimes0381": {
+      "expected": "valore assoluto di x più 1, fine valore assoluto, per, valore assoluto di y, fine valore assoluto, meno 1"
+    },
+    "ImpTimes039": {
+      "expected": "2 per 3"
+    },
+    "ImpTimes040": {
+      "expected": "2 per 3"
+    },
+    "ImpTimes041": {
+      "expected": "2 alla quarta potenza, per 3"
+    },
+    "ImpTimes042": {
+      "expected": "2 per, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa"
+    },
+    "ImpTimes043": {
+      "expected": "2 per, parentesi quadra aperta, 3 più 4, parentesi quadra chiusa"
+    },
+    "ImpTimes044": {
+      "expected": "3 per 2"
+    },
+    "ImpTimes045": {
+      "expected": "2 per, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa, quadrato"
+    },
+    "ImpTimes046": {
+      "expected": "parentesi tonda aperta, 2 più 7, parentesi tonda chiusa, per, parentesi tonda aperta, 3 meno 6, parentesi tonda chiusa"
+    },
+    "ImpTimes047": {
+      "expected": "parentesi quadra aperta, 2 più 7, parentesi quadra chiusa, per, parentesi quadra aperta, 3 meno 6, parentesi quadra chiusa"
+    },
+    "ImpTimes049": {
+      "expected": "x per, parentesi tonda aperta, y più z, parentesi tonda chiusa"
+    },
+    "ImpTimes050": {
+      "expected": "2 per, parentesi tonda aperta, y più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes051": {
+      "expected": "parentesi tonda aperta, 2 meno 1, parentesi tonda chiusa, per x"
+    },
+    "ImpTimes052": {
+      "expected": "p pedice 1, per, parentesi tonda aperta, 3 più 7, parentesi tonda chiusa"
+    },
+    "ImpTimes053": {
+      "expected": "p pedice 1, elevato alla, a pedice 1; per, p pedice 2, elevato alla, a pedice 2"
+    },
+    "ImpTimes054": {
+      "expected": "parentesi tonda aperta, x più y, parentesi tonda chiusa, alla meno 4, per, parentesi tonda aperta, x meno y, parentesi tonda chiusa, alla meno 4"
+    },
+    "ImpTimes055": {
+      "expected": "2 elevato alla 4 per, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimes056": {
+      "expected": "x per y"
+    },
+    "ImpTimes057": {
+      "expected": "x quadrato per y cubo"
+    },
+    "ImpTimes058": {
+      "expected": "x elevato alla y più 1; per x elevato alla y più 2"
+    },
+    "ImpTimes059": {
+      "expected": "radice quadrata di a, per radice quadrata di b, uguale a radice quadrata di a per b"
+    },
+    "ImpTimes060": {
+      "expected": "radice quadrata di 3, per radice quadrata di 10, uguale a radice quadrata di 30"
+    },
+    "ImpTimes061": {
+      "expected": "2 per radice quadrata di 3"
+    },
+    "ImpTimes062": {
+      "expected": "1 più 2 per radice quadrata di 3"
+    },
+    "ImpTimes063": {
+      "expected": "f di x, uguale a x quadrato per, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes064": {
+      "expected": "f per x, uguale a x quadrato per, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes065": {
+      "expected": "seno di x, per coseno di y più coseno di x, per seno di y"
+    },
+    "ImpTimes065a": {
+      "expected": "seno di, parentesi tonda aperta, x più y, parentesi tonda chiusa, per, coseno di, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimes066": {
+      "expected": "logaritmo base 10 di, x per y"
+    },
+    "ImpTimes067": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più y, parentesi tonda chiusa, uguale a logaritmo di x, per logaritmo di y"
+    },
+    "ImpTimes068": {
+      "expected": "matrice 2 per 2. Riga 1: 1, 3 Riga 2: 5, 2. per matrice 2 per 2. Riga 1: 7, 4 Riga 2: 0, 1"
+    },
+    "ImpTimes069": {
+      "expected": "2 per, parentesi tonda aperta, 3 per, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes070": {
+      "expected": "2 per, parentesi tonda aperta, 3 per, seconda parentesi tonda aperta, terza parentesi tonda aperta, 4 più 5, terza parentesi tonda chiusa, più 6, seconda parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes070a": {
+      "expected": "2 per, parentesi quadra aperta, 3 per, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes071": {
+      "expected": "2 per, parentesi quadra aperta, 3 per, parentesi tonda aperta, seconda parentesi tonda aperta, 4 più 5, seconda parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes072": {
+      "expected": "2 per, valore assoluto di x"
+    },
+    "ImpTimes073": {
+      "expected": "valore assoluto di x, per, valore assoluto di y"
+    },
+    "ImpTimes074": {
+      "expected": "valore assoluto di x più 1, per, valore assoluto di y meno 1"
+    },
+    "ImpTimes074a": {
+      "expected": "valore assoluto di x più 1, fine valore assoluto, per, valore assoluto di y meno 1, fine valore assoluto"
+    },
+    "ImpTimes075": {
+      "expected": "valore assoluto di x più 1, per, valore assoluto di y, meno 1"
+    },
+    "ImpTimes076": {
+      "expected": "valore assoluto di x più 1, fine valore assoluto, per, valore assoluto di y, fine valore assoluto, meno 1"
+    },
+    "ImpTimes077": {
+      "expected": "2, parentesi tonda aperta, 3, parentesi tonda chiusa"
+    },
+    "ImpTimes078": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi quadra chiusa"
+    },
+    "ImpTimes079": {
+      "expected": "2 alla quarta potenza, parentesi tonda aperta, 3, parentesi tonda chiusa"
+    },
+    "ImpTimes080": {
+      "expected": "2, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa"
+    },
+    "ImpTimes081": {
+      "expected": "2, parentesi quadra aperta, 3 più 4, parentesi quadra chiusa"
+    },
+    "ImpTimes082": {
+      "expected": "parentesi tonda aperta, 3, parentesi tonda chiusa, parentesi tonda aperta, 2, parentesi tonda chiusa"
+    },
+    "ImpTimes083": {
+      "expected": "2, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa, quadrato"
+    },
+    "ImpTimes084": {
+      "expected": "parentesi tonda aperta, 2 più 7, parentesi tonda chiusa, parentesi tonda aperta, 3 meno 6, parentesi tonda chiusa"
+    },
+    "ImpTimes085": {
+      "expected": "parentesi quadra aperta, 2 più 7, parentesi quadra chiusa, parentesi quadra aperta, 3 meno 6, parentesi quadra chiusa"
+    },
+    "ImpTimes087": {
+      "expected": "x, parentesi tonda aperta, y più z, parentesi tonda chiusa"
+    },
+    "ImpTimes088": {
+      "expected": "2, parentesi tonda aperta, y più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes089": {
+      "expected": "parentesi tonda aperta, 2 meno 1, parentesi tonda chiusa, x"
+    },
+    "ImpTimes090": {
+      "expected": "p pedice 1, parentesi tonda aperta, 3 più 7, parentesi tonda chiusa"
+    },
+    "ImpTimes091": {
+      "expected": "p pedice 1, elevato alla, a pedice 1; p pedice 2, elevato alla, a pedice 2"
+    },
+    "ImpTimes092": {
+      "expected": "parentesi tonda aperta, x più y, parentesi tonda chiusa, alla meno 4, parentesi tonda aperta, x meno y, parentesi tonda chiusa, alla meno 4"
+    },
+    "ImpTimes093": {
+      "expected": "2 elevato alla 4, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimes094": {
+      "expected": "x y"
+    },
+    "ImpTimes095": {
+      "expected": "x quadrato y cubo"
+    },
+    "ImpTimes096": {
+      "expected": "x elevato alla y più 1; x elevato alla y più 2"
+    },
+    "ImpTimes097": {
+      "expected": "radice quadrata di a, radice quadrata di b, uguale a radice quadrata di a b"
+    },
+    "ImpTimes098": {
+      "expected": "radice quadrata di 3, radice quadrata di 10, uguale a radice quadrata di 30"
+    },
+    "ImpTimes099": {
+      "expected": "2 radice quadrata di 3"
+    },
+    "ImpTimes100": {
+      "expected": "1 più 2 radice quadrata di 3"
+    },
+    "ImpTimes101": {
+      "expected": "f di x, uguale a x quadrato, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimes103": {
+      "expected": "seno di x coseno di y, più, coseno di x seno di y"
+    },
+    "ImpTimes104": {
+      "expected": "logaritmo base 10 di, x y"
+    },
+    "ImpTimes105": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più y, parentesi tonda chiusa, uguale a, logaritmo di x logaritmo di y"
+    },
+    "ImpTimes106": {
+      "expected": "matrice 2 per 2. Riga 1: 1, 3 Riga 2: 5, 2. matrice 2 per 2. Riga 1: 7, 4 Riga 2: 0, 1"
+    },
+    "ImpTimes107": {
+      "expected": "2, parentesi tonda aperta, 3, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes108": {
+      "expected": "2, parentesi tonda aperta, 3, seconda parentesi tonda aperta, terza parentesi tonda aperta, 4 più 5, terza parentesi tonda chiusa, più 6, seconda parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimes109": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes110": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi tonda aperta, seconda parentesi tonda aperta, 4 più 5, seconda parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimes111": {
+      "expected": "2, valore assoluto di x"
+    },
+    "ImpTimes112": {
+      "expected": "valore assoluto di x, valore assoluto di y"
+    },
+    "ImpTimes113": {
+      "expected": "valore assoluto di x più 1, valore assoluto di y meno 1"
+    },
+    "ImpTimes114": {
+      "expected": "valore assoluto di x più 1, valore assoluto di y, meno 1"
+    },
+    "ImpTimesSilPar001": {
+      "expected": "2, parentesi tonda aperta, 3, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi quadra chiusa"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "2 alla quarta potenza, parentesi tonda aperta, 3, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "2, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "2, parentesi quadra aperta, 3 più 4, parentesi quadra chiusa"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "parentesi tonda aperta, 3, parentesi tonda chiusa, parentesi tonda aperta, 2, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "2, parentesi tonda aperta, 3 più 4, parentesi tonda chiusa, quadrato"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "parentesi tonda aperta, 2 più 7, parentesi tonda chiusa, parentesi tonda aperta, 3 meno 6, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "parentesi quadra aperta, 2 più 7, parentesi quadra chiusa, parentesi quadra aperta, 3 meno 6, parentesi quadra chiusa"
+    },
+    "ImpTimesSilPar011": {
+      "expected": "x, parentesi tonda aperta, y più z, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "2, parentesi tonda aperta, y più 1, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "parentesi tonda aperta, 2 meno 1, parentesi tonda chiusa, x"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "p pedice 1, parentesi tonda aperta, 3 più 7, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "parentesi tonda aperta, x più y, parentesi tonda chiusa, alla meno 4, parentesi tonda aperta, x meno y, parentesi tonda chiusa, alla meno 4"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "2 elevato alla 4, parentesi tonda aperta, x più y, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar017": {
+      "expected": "f di x, uguale a x quadrato, parentesi tonda aperta, x più 1, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar019": {
+      "expected": "logaritmo di, parentesi tonda aperta, x più y, parentesi tonda chiusa, uguale a, logaritmo di x logaritmo di y"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "matrice 2 per 2. Riga 1: 1, 3 Riga 2: 5, 2. matrice 2 per 2. Riga 1: 7, 4 Riga 2: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "2, parentesi tonda aperta, 3, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "2, parentesi tonda aperta, 3, seconda parentesi tonda aperta, terza parentesi tonda aperta, 4 più 5, terza parentesi tonda chiusa, più 6, seconda parentesi tonda chiusa, parentesi tonda chiusa"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi tonda aperta, parentesi tonda aperta, 4 più 5, parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "2, parentesi quadra aperta, 3, parentesi tonda aperta, seconda parentesi tonda aperta, 4 più 5, seconda parentesi tonda chiusa, più 6, parentesi tonda chiusa, parentesi quadra chiusa"
+    },
+    "Extra001": {
+      "expected": "A uguale a h di, parentesi tonda aperta, frazione con numeratore, b pedice 1, più, b pedice 2, e denominatore 2, parentesi tonda chiusa"
+    },
+    "Extra002": {
+      "expected": "A uguale a, h per, parentesi tonda aperta, frazione con numeratore, b pedice 1, più, b pedice 2, e denominatore 2, parentesi tonda chiusa"
+    },
+    "Extra003": {
+      "expected": "a di 0, uguale a 0 per a uguale a 0"
+    },
+    "Extra004": {
+      "expected": "a per 0, uguale a 0 per a uguale a 0"
+    },
+    "Extra005": {
+      "expected": "a per meno 1, uguale a meno a"
+    },
+    "Extra006": {
+      "expected": "a di meno 1, uguale a meno a"
+    },
+    "Extra010": {
+      "expected": "B di, parentesi tonda aperta, 2 virgola 6, parentesi tonda chiusa"
+    },
+    "Extra012": {
+      "expected": "B per, parentesi tonda aperta, 2 virgola 6, parentesi tonda chiusa"
+    },
+    "Extra014": {
+      "expected": "p di w"
+    },
+    "Extra015": {
+      "expected": "x di t, uguale a 2 t, più 4"
+    },
+    "Extra016": {
+      "expected": "k di x, uguale a, parentesi tonda aperta, x più 3, parentesi tonda chiusa, per, parentesi tonda aperta, x meno 5, parentesi tonda chiusa"
+    },
+    "Extra018": {
+      "expected": "T di t, uguale a, T pedice s, più, parentesi tonda aperta, T pedice 0, meno, T pedice s, parentesi tonda chiusa, per e elevato alla meno k t"
+    },
+    "Extra019": {
+      "expected": "V uguale a l script, w di 8"
+    }
+  }
+}

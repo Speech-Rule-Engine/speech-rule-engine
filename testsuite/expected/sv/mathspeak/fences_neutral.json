@@ -1,0 +1,266 @@
+{
+  "name": "SwedishMathspeakFencesNeutral",
+  "locale": "sv",
+  "factory": "speech",
+  "base": "input/common/fences_neutral.json",
+  "information": "Swedish Mathspeak Neutral Fences tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakSwedish",
+  "exclude": [
+    "BarFenced_0_AbsoluteValue_AbsEnd",
+    "BarFenced_1_AbsoluteValue_AbsEnd",
+    "BarFenced_2_AbsoluteValue_AbsEnd",
+    "BarFenced_3_AbsoluteValue_AbsEnd",
+    "BarFenced_4_AbsoluteValue_AbsEnd",
+    "BarFenced_5_AbsoluteValue_AbsEnd",
+    "BarFenced_6_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_0_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_1_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_2_AbsoluteValue_AbsEnd",
+    "BarFencedMixed_3_AbsoluteValue_AbsEnd",
+    "CenterBar_0_AbsoluteValue_AbsEnd",
+    "CenterBar_1_AbsoluteValue_AbsEnd",
+    "CenterBar_2_AbsoluteValue_AbsEnd",
+    "CenterBar_3_AbsoluteValue_AbsEnd",
+    "CenterBar_4_AbsoluteValue_AbsEnd",
+    "CenterBar_5_AbsoluteValue_AbsEnd",
+    "Function_0_AbsoluteValue_AbsEnd",
+    "Function_1_AbsoluteValue_AbsEnd",
+    "Function_2_AbsoluteValue_AbsEnd",
+    "Function_3_AbsoluteValue_AbsEnd",
+    "Function_4_AbsoluteValue_AbsEnd",
+    "Function_5_AbsoluteValue_AbsEnd",
+    "FunctionMetric0_AbsoluteValue_AbsEnd",
+    "FunctionMetric1_AbsoluteValue_AbsEnd",
+    "FunctionMetric2_AbsoluteValue_AbsEnd",
+    "FunctionMetric3_AbsoluteValue_AbsEnd",
+    "FunctionMetric4_AbsoluteValue_AbsEnd",
+    "FunctionMetric5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_0_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_1_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_2_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_3_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_4_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_5_AbsoluteValue_AbsEnd",
+    "CenterBarFunc_6_AbsoluteValue_AbsEnd"
+  ],
+  "compare": true,
+  "tests": {
+    "BarFenced_0_default": {
+      "expected": "StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_1_default": {
+      "expected": "StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_2_default": {
+      "expected": "StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_3_default": {
+      "expected": "StartBelopp a SlutBelopp"
+    },
+    "BarFenced_4_default": {
+      "expected": "StartBelopp a SlutBelopp"
+    },
+    "BarFenced_5_default": {
+      "expected": "StartBelopp a SlutBelopp"
+    },
+    "BarFenced_6_default": {
+      "expected": "StartBelopp a SlutBelopp"
+    },
+    "BarFencedMixed_0_default": {
+      "expected": "vertikal linje a dubbelt vertikalt streck"
+    },
+    "BarFencedMixed_1_default": {
+      "expected": "parallellt med a dubbelt vertikalt streck"
+    },
+    "BarFencedMixed_2_default": {
+      "expected": "vertikal linje a brutet streck"
+    },
+    "BarFencedMixed_3_default": {
+      "expected": "trippla vertikala streck a dubbelt vertikalt streck"
+    },
+    "CenterBar_0_default": {
+      "expected": "a vertikal linje b"
+    },
+    "CenterBar_1_default": {
+      "expected": "a vertikal linje b"
+    },
+    "CenterBar_2_default": {
+      "expected": "a brutet streck b"
+    },
+    "CenterBar_3_default": {
+      "expected": "a dubbelt vertikalt streck b"
+    },
+    "CenterBar_4_default": {
+      "expected": "a parallellt med b"
+    },
+    "CenterBar_5_default": {
+      "expected": "a trippla vertikala streck b"
+    },
+    "CenterBarFunc_0_default": {
+      "expected": "f vertikal linje g"
+    },
+    "CenterBarFunc_1_default": {
+      "expected": "f vertikal linje g"
+    },
+    "CenterBarFunc_2_default": {
+      "expected": "f brutet streck g"
+    },
+    "CenterBarFunc_3_default": {
+      "expected": "f dubbelt vertikalt streck g"
+    },
+    "CenterBarFunc_4_default": {
+      "expected": "f parallellt med g"
+    },
+    "CenterBarFunc_5_default": {
+      "expected": "f trippla vertikala streck g"
+    },
+    "CenterBarFunc_6_default": {
+      "expected": "sinus trippla vertikala streck g"
+    },
+    "Function_0_default": {
+      "expected": "f StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_1_default": {
+      "expected": "g StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_2_default": {
+      "expected": "h StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_3_default": {
+      "expected": "r StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_4_default": {
+      "expected": "sinus StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_5_default": {
+      "expected": "summa StartAbsolutVärde a SlutAbsolutVärde"
+    },
+    "FunctionMetric0_default": {
+      "expected": "f StartBelopp a SlutBelopp"
+    },
+    "FunctionMetric1_default": {
+      "expected": "g StartBelopp a SlutBelopp"
+    },
+    "FunctionMetric2_default": {
+      "expected": "h StartBelopp a SlutBelopp"
+    },
+    "FunctionMetric3_default": {
+      "expected": "r StartBelopp a SlutBelopp"
+    },
+    "FunctionMetric4_default": {
+      "expected": "sinus StartBelopp a SlutBelopp"
+    },
+    "FunctionMetric5_default": {
+      "expected": "summa StartBelopp a SlutBelopp"
+    },
+    "BarFenced_0_sbrief": {
+      "expected": "AbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_1_sbrief": {
+      "expected": "AbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_2_sbrief": {
+      "expected": "AbsolutVärde a SlutAbsolutVärde"
+    },
+    "BarFenced_3_sbrief": {
+      "expected": "Belopp a SlutBelopp"
+    },
+    "BarFenced_4_sbrief": {
+      "expected": "Belopp a SlutBelopp"
+    },
+    "BarFenced_5_sbrief": {
+      "expected": "Belopp a SlutBelopp"
+    },
+    "BarFenced_6_sbrief": {
+      "expected": "Belopp a SlutBelopp"
+    },
+    "BarFencedMixed_0_sbrief": {
+      "expected": "vertikal linje a dubbelt vertikalt streck"
+    },
+    "BarFencedMixed_1_sbrief": {
+      "expected": "parallellt med a dubbelt vertikalt streck"
+    },
+    "BarFencedMixed_2_sbrief": {
+      "expected": "vertikal linje a brutet streck"
+    },
+    "BarFencedMixed_3_sbrief": {
+      "expected": "trippla vertikala streck a dubbelt vertikalt streck"
+    },
+    "CenterBar_0_sbrief": {
+      "expected": "a vertikal linje b"
+    },
+    "CenterBar_1_sbrief": {
+      "expected": "a vertikal linje b"
+    },
+    "CenterBar_2_sbrief": {
+      "expected": "a brutet streck b"
+    },
+    "CenterBar_3_sbrief": {
+      "expected": "a dubbelt vertikalt streck b"
+    },
+    "CenterBar_4_sbrief": {
+      "expected": "a parallellt med b"
+    },
+    "CenterBar_5_sbrief": {
+      "expected": "a trippla vertikala streck b"
+    },
+    "Function_0_sbrief": {
+      "expected": "f AbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_1_sbrief": {
+      "expected": "g AbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_2_sbrief": {
+      "expected": "h AbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_3_sbrief": {
+      "expected": "r AbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_4_sbrief": {
+      "expected": "sinus AbsolutVärde a SlutAbsolutVärde"
+    },
+    "Function_5_sbrief": {
+      "expected": "summa AbsolutVärde a SlutAbsolutVärde"
+    },
+    "FunctionMetric0_sbrief": {
+      "expected": "f Belopp a SlutBelopp"
+    },
+    "FunctionMetric1_sbrief": {
+      "expected": "g Belopp a SlutBelopp"
+    },
+    "FunctionMetric2_sbrief": {
+      "expected": "h Belopp a SlutBelopp"
+    },
+    "FunctionMetric3_sbrief": {
+      "expected": "r Belopp a SlutBelopp"
+    },
+    "FunctionMetric4_sbrief": {
+      "expected": "sinus Belopp a SlutBelopp"
+    },
+    "FunctionMetric5_sbrief": {
+      "expected": "summa Belopp a SlutBelopp"
+    },
+    "CenterBarFunc_0_sbrief": {
+      "expected": "f vertikal linje g"
+    },
+    "CenterBarFunc_1_sbrief": {
+      "expected": "f vertikal linje g"
+    },
+    "CenterBarFunc_2_sbrief": {
+      "expected": "f brutet streck g"
+    },
+    "CenterBarFunc_3_sbrief": {
+      "expected": "f dubbelt vertikalt streck g"
+    },
+    "CenterBarFunc_4_sbrief": {
+      "expected": "f parallellt med g"
+    },
+    "CenterBarFunc_5_sbrief": {
+      "expected": "f trippla vertikala streck g"
+    },
+    "CenterBarFunc_6_sbrief": {
+      "expected": "sinus trippla vertikala streck g"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "NemethDefaultAlphabetPeriod",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Alphabet period tests.",
+  "tests": {
+    "🄀": {
+      "expected": "⠴⠸⠲"
+    },
+    "⒈": {
+      "expected": "⠂⠸⠲"
+    },
+    "⒉": {
+      "expected": "⠆⠸⠲"
+    },
+    "⒊": {
+      "expected": "⠒⠸⠲"
+    },
+    "⒋": {
+      "expected": "⠲⠸⠲"
+    },
+    "⒌": {
+      "expected": "⠢⠸⠲"
+    },
+    "⒍": {
+      "expected": "⠖⠸⠲"
+    },
+    "⒎": {
+      "expected": "⠶⠸⠲"
+    },
+    "⒏": {
+      "expected": "⠦⠸⠲"
+    },
+    "⒐": {
+      "expected": "⠔⠸⠲"
+    },
+    "⒑": {
+      "expected": "⠂⠴⠸⠲"
+    },
+    "⒒": {
+      "expected": "⠂⠂⠸⠲"
+    },
+    "⒓": {
+      "expected": "⠂⠆⠸⠲"
+    },
+    "⒔": {
+      "expected": "⠂⠒⠸⠲"
+    },
+    "⒕": {
+      "expected": "⠂⠲⠸⠲"
+    },
+    "⒖": {
+      "expected": "⠂⠢⠸⠲"
+    },
+    "⒗": {
+      "expected": "⠂⠖⠸⠲"
+    },
+    "⒘": {
+      "expected": "⠂⠶⠸⠲"
+    },
+    "⒙": {
+      "expected": "⠂⠦⠸⠲"
+    },
+    "⒚": {
+      "expected": "⠂⠔⠸⠲"
+    },
+    "⒛": {
+      "expected": "⠆⠴⠸⠲"
+    }
+  }
+}

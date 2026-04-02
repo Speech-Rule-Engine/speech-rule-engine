@@ -1,0 +1,274 @@
+{
+  "name": "HindiMathspeakIssues1",
+  "locale": "hi",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Hindi Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "निरपेक्ष मान आरंभ ए निरपेक्ष मान समाप्त"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "निरपेक्ष मान आरंभ ए निरपेक्ष मान समाप्त"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "निरपेक्ष मान ए निरपेक्ष मान समाप्त"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "निरपेक्ष मान आरंभ ए निरपेक्ष मान समाप्त"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "निरपेक्ष मान आरंभ ए निरपेक्ष मान समाप्त"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "निरपेक्ष मान ए निरपेक्ष मान समाप्त"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "ऋण पाँच अठारहवाँ अंश"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "ऋण पाँच अठारहवाँ अंश"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "ऋण पाँच अठारहवाँ अंश"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 अंश चिह्न"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 अंश चिह्न"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 अंश चिह्न"
+    },
+    "MixedIdentifier_default": {
+      "expected": "कैपिटल एस आय सामान्य कैपिटल ओ 2 धन चिह्न 6 सामान्य कैपिटल एच सामान्य कैपिटल एफ दाईं ओर तीर सामान्य कैपिटल एच 2 कैपिटल एस आय सामान्य कैपिटल एफ 6 धन चिह्न 2 सामान्य कैपिटल एच 2 सामान्य कैपिटल ओ"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "कैपिटल एस आय सामान्य कैपिटल ओ 2 धन चिह्न 6 सामान्य कैपिटल एच सामान्य कैपिटल एफ दाईं ओर तीर सामान्य कैपिटल एच 2 कैपिटल एस आय सामान्य कैपिटल एफ 6 धन चिह्न 2 सामान्य कैपिटल एच 2 सामान्य कैपिटल ओ"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "कैपिटल एस आय सामान्य कैपिटल ओ 2 धन चिह्न 6 सामान्य कैपिटल एच सामान्य कैपिटल एफ दाईं ओर तीर सामान्य कैपिटल एच 2 कैपिटल एस आय सामान्य कैपिटल एफ 6 धन चिह्न 2 सामान्य कैपिटल एच 2 सामान्य कैपिटल ओ"
+    },
+    "ParenSuper_default": {
+      "expected": "कोष्ठ आरंभ ए कोष्ठ अंत वर्ग"
+    },
+    "ParenSuper_brief": {
+      "expected": "कोष्ठ आरंभ ए कोष्ठ अंत वर्ग"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "कोष्ठ आरंभ ए कोष्ठ अंत वर्ग"
+    },
+    "ParenConvoluted_default": {
+      "expected": "कोष्ठ आरंभ बाकी एक्स वर्ग विभाजन (For division.) 2 कोष्ठ अंत"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "कोष्ठ आरंभ बाकी एक्स वर्ग विभाजन (For division.) 2 कोष्ठ अंत"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "कोष्ठ आरंभ बाकी एक्स वर्ग विभाजन (For division.) 2 कोष्ठ अंत"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "सी 1 एच उर्ध्वान्क 4 बाकी 2 एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर सी 2 एच उर्ध्वान्क 4 बाकी 2 एस"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "सी 1 एच उर्ध्व 4 बाकी 2 एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर सी 2 एच उर्ध्व 4 बाकी 2 एस"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "सी 1 एच उर्ध्व 4 बाकी 2 एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त से कम या बराबर सी 2 एच उर्ध्व 4 बाकी 2 एस"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "सी 1 एच उर्ध्वान्क 4 बाकी 2 एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न सी 2 एच उर्ध्वान्क 4 बाकी 2 एस"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "सी 1 एच उर्ध्व 4 बाकी 2 एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न सी 2 एच उर्ध्व 4 बाकी 2 एस"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "सी 1 एच उर्ध्व 4 बाकी 2 एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त बराबर का चिह्न सी 2 एच उर्ध्व 4 बाकी 2 एस"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "एच पादांक एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर एच पादांक एस"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "एच अधो एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर एच अधो एस"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "एच अधो एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त से कम या बराबर एच अधो एस"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "एच पादांक एस आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न एच पादांक एस"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "एच अधो एस आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न एच अधो एस"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "एच अधो एस आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त बराबर का चिह्न एच अधो एस"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "एच पादांक एस उर्ध्वान्क टी आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर एच पादांक एस उर्ध्वान्क टी"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "एच अधो एस उर्ध्व टी आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न से कम या बराबर एच अधो एस उर्ध्व टी"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "एच अधो एस उर्ध्व टी आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त से कम या बराबर एच अधो एस उर्ध्व टी"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "एच पादांक एस उर्ध्वान्क टी आधार रेखा से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न एच पादांक एस उर्ध्वान्क टी"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "एच अधो एस उर्ध्व टी आधार से कम या बराबर आरंभभिन्न 1 के हर में 2 कैपिटल टी अंतभिन्न बराबर का चिह्न एच अधो एस उर्ध्व टी"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "एच अधो एस उर्ध्व टी आधार से कम या बराबर भिन्न 1 के हर में 2 कैपिटल टी भिन्न समाप्त बराबर का चिह्न एच अधो एस उर्ध्व टी"
+    },
+    "SquareWithText_default": {
+      "expected": "आरंभभिन्न area of triangle के हर में area of square अंतभिन्न बराबर का चिह्न आरंभभिन्न 1 unit वर्ग के हर में 16 units घन अंतभिन्न"
+    },
+    "SquareWithText_brief": {
+      "expected": "आरंभभिन्न area of triangle के हर में area of square अंतभिन्न बराबर का चिह्न आरंभभिन्न 1 unit वर्ग के हर में 16 units घन अंतभिन्न"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "भिन्न area of triangle के हर में area of square भिन्न समाप्त बराबर का चिह्न भिन्न 1 unit वर्ग के हर में 16 units घन भिन्न समाप्त"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square उर्ध्वान्क 1 आधार रेखा 1 unit उर्ध्वान्क 2 आधार रेखा 16 units उर्ध्वान्क 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square उर्ध्व 1 आधार 1 unit उर्ध्व 2 आधार 16 units उर्ध्व 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square उर्ध्व 1 आधार 1 unit उर्ध्व 2 आधार 16 units उर्ध्व 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle उर्ध्वान्क 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle उर्ध्व 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle उर्ध्व 2"
+    },
+    "LabelledRow_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 1 कोष्ठ अंत लेबल समाप्त १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "LabelledRow_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "खाका १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "LabelledLine_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 1 कोष्ठ अंत लेबल समाप्त ए खाका समाप्त"
+    },
+    "LabelledLine_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत ए खाका समाप्त"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "खाका १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत ए खाका समाप्त"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 1 कोष्ठ अंत लेबल समाप्त रिक्त खाका समाप्त"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत रिक्त खाका समाप्त"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "खाका १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत रिक्त खाका समाप्त"
+    },
+    "EmptyLine_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyLine_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "खाका १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyRow_default": {
+      "expected": "खाका आरंभ १ली पंक्ति १ली स्तंभ ए २री स्तंभ बी २री पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyRow_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति १ली स्तंभ ए २री स्तंभ बी २री पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "खाका १ली पंक्ति १ली स्तंभ ए २री स्तंभ बी २री पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyCell_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyCell_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "खाका १ली पंक्ति  रिक्त खाका समाप्त"
+    },
+    "TextLabelledLine_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 1 कोष्ठ अंत लेबल समाप्त ए खाका समाप्त"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत ए खाका समाप्त"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "खाका १ली पंक्ति  लेबल 1 ए खाका समाप्त"
+    },
+    "TextLabelledRow_default": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल के साथ कोष्ठ आरंभ 1 कोष्ठ अंत लेबल समाप्त १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "खाका आरंभ १ली पंक्ति  लेबल कोष्ठ आरंभ 1 कोष्ठ अंत १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "खाका १ली पंक्ति  लेबल 1 १ली स्तंभ ए २री स्तंभ बी खाका समाप्त"
+    },
+    "EncloseOverbar_default": {
+      "expected": "ए उर्ध्व दंड"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "ए उर्ध्व दंड"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "ए उर्ध्व दंड"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "ए अधो दंड"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "ए अधो दंड"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "ए अधो दंड"
+    },
+    "PrefixopSquare_default": {
+      "expected": "आंशिक अवकलन वर्ग एक्स"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "आंशिक अवकलन वर्ग एक्स"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "आंशिक अवकलन वर्ग एक्स"
+    },
+    "PrefixopCube_default": {
+      "expected": "आंशिक अवकलन घन एक्स"
+    },
+    "PrefixopCube_brief": {
+      "expected": "आंशिक अवकलन घन एक्स"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "आंशिक अवकलन घन एक्स"
+    },
+    "Vector_default": {
+      "expected": "आरंभ 3 बाय 1 आव्यूह १ली पंक्ति  ए २री पंक्ति  बी ३री पंक्ति  सी आव्यूह समाप्त"
+    },
+    "Vector_brief": {
+      "expected": "आरंभ 3 बाय 1 आव्यूह १ली पंक्ति  ए २री पंक्ति  बी ३री पंक्ति  सी आव्यूह समाप्त"
+    },
+    "Vector_sbrief": {
+      "expected": "3 बाय 1 आव्यूह १ली पंक्ति  ए २री पंक्ति  बी ३री पंक्ति  सी आव्यूह समाप्त"
+    }
+  }
+}

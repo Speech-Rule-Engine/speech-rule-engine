@@ -1,0 +1,152 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "SwedishClearspeakFontCaps",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_font_caps.json",
+  "information": "Swedish Clearspeak Font tests with Caps preference.",
+  "domain": "clearspeak",
+  "locale": "sv",
+  "active": "ClearspeakSwedishFont",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "stort A"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "expected": "stort A"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "expected": "fetstil stort A"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "expected": "stort A"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "expected": "fetstil kursiv stort A"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "expected": "skrivstil stort A"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "expected": "fetstil skrivstil stort A"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "expected": "fraktur stort A"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "expected": "stort A med dubbelstreck"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "expected": "fetstil fraktur stort A"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "expected": "sans-serif stort A"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "expected": "sans-serif fetstil stort A"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "expected": "sans-serif kursiv stort A"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "expected": "sans-serif fetstil kursiv stort A"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "expected": "monospace stort A"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "expected": "stort Alpha"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "expected": "fetstil stort Alpha"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "expected": "stort Alpha"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "expected": "fetstil kursiv stort Alpha"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "expected": "sans-serif fetstil stort Alpha"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "expected": "sans-serif fetstil kursiv stort Alpha"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "expected": "normal stort A"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "expected": "fetstil stort A"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "expected": "stort A"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "expected": "fetstil kursiv stort A"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "expected": "skrivstil stort A"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "expected": "fetstil skrivstil stort A"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "expected": "fraktur stort A"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "expected": "stort A med dubbelstreck"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "expected": "fetstil fraktur stort A"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "expected": "sans-serif stort A"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "expected": "sans-serif fetstil stort A"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "expected": "sans-serif kursiv stort A"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "expected": "sans-serif fetstil kursiv stort A"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "expected": "monospace stort A"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "expected": "kalligrafisk stort A"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "expected": "kalligrafisk fetstil stort A"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "expected": "kalligrafisk stort A"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "expected": "kalligrafisk fetstil stort A"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "expected": "stort A"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "expected": "normal stort Alpha"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "expected": "fetstil stort Alpha"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "expected": "stort Alpha"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "expected": "fetstil kursiv stort Alpha"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "expected": "sans-serif fetstil stort Alpha"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "expected": "sans-serif fetstil kursiv stort Alpha"
+    }
+  }
+}

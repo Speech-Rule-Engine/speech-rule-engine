@@ -1,0 +1,278 @@
+{
+  "name": "KoreanClearspeakCoverage",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Korean Clearspeak Coverage tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f 의, g 의 x"
+    },
+    "ApplSimple_1": {
+      "expected": "f 의, g 의 x, 는 f 의 x, 더하기 g 의 x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "싸인 x y"
+    },
+    "Empty_Line_0": {
+      "expected": "총 줄 수 2,  1행: a.  2행: 빈 칸"
+    },
+    "Empty_Line_1": {
+      "expected": "총 줄 수 2,  1행: a.  2행: 빈 칸"
+    },
+    "Empty_Line_2": {
+      "expected": "총 줄 수 2,  1행: a.  2행: 빈 칸"
+    },
+    "Empty_Cell_0": {
+      "expected": "총 줄 수 2,  1행: a; 같다; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "총 줄 수 2,  1행: a; 같다; b.  2행: 빈 칸"
+    },
+    "Empty_Cell_2": {
+      "expected": "총 줄 수 2,  1행: a; 같다; b.  2행: 빈 칸"
+    },
+    "Empty_Cell_3": {
+      "expected": "총 줄 수 2,  1행: a; 같다; b.  2행: 1; 빈 칸; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 도, 10 분, 20 초"
+    },
+    "Angle_1_default": {
+      "expected": "1 도, 10 분, 20 초"
+    },
+    "Angle_2_default": {
+      "expected": "45 도, 1 분, 20 초"
+    },
+    "Angle_3_default": {
+      "expected": "45 도, 10 분, 1 초"
+    },
+    "Angle_4_default": {
+      "expected": "1 피트, 20 인치"
+    },
+    "Angle_5_default": {
+      "expected": "10 피트, 1 인치"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 도, 10 분, 20 초"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 도, 10 분, 20 초"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 도, 1 분, 20 초"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 도, 10 분, 1 초"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 분, 20 초"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 분, 1 초"
+    },
+    "Angle_0_Length": {
+      "expected": "45 도, 10 분, 20 초"
+    },
+    "Angle_1_Length": {
+      "expected": "1 도, 10 분, 20 초"
+    },
+    "Angle_2_Length": {
+      "expected": "45 도, 1 분, 20 초"
+    },
+    "Angle_3_Length": {
+      "expected": "45 도, 10 분, 1 초"
+    },
+    "Angle_4_Length": {
+      "expected": "1 피트, 20 인치"
+    },
+    "Angle_5_Length": {
+      "expected": "10 피트, 1 인치"
+    },
+    "Enclose_0": {
+      "expected": "12"
+    },
+    "Enclose_1": {
+      "expected": "소거된 12"
+    },
+    "Enclose_2": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_3": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_4": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_5": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_6": {
+      "expected": "12"
+    },
+    "Enclose_7": {
+      "expected": "소거시작 12 소거끝"
+    },
+    "Enclose_8": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_9": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_10": {
+      "expected": "12 를 2 로 소거"
+    },
+    "Enclose_11": {
+      "expected": "12 를 2 로 소거"
+    },
+    "NestedRoots_0": {
+      "expected": "루트, 세제곱근 a, 더하기 b"
+    },
+    "NestedRoots_1": {
+      "expected": "루트, 네제곱근 a, 더하기 b"
+    },
+    "NestedRoots_2": {
+      "expected": "루트, 루트 a, 더하기 b"
+    },
+    "NestedRoots_3": {
+      "expected": "플러스 루트, 플러스 루트 a, 더하기 b"
+    },
+    "NestedRoots_4": {
+      "expected": "플러스 루트, 플러스 루트 a, 더하기 b, 루트끝"
+    },
+    "Tensor_0": {
+      "expected": "왼쪽 아래첨자 a 왼쪽 위첨자 b x 오른쪽 아래첨자 c 오른쪽 위첨자 d"
+    },
+    "Tensor_1": {
+      "expected": "왼쪽 아래첨자 a b 왼쪽 위첨자 g h x 오른쪽 아래첨자 c d 오른쪽 위첨자 e f"
+    },
+    "Tensor_2": {
+      "expected": "왼쪽 아래첨자 a 왼쪽 위첨자 b x; 오른쪽 위첨자 d"
+    },
+    "Tensor_3": {
+      "expected": "왼쪽 아래첨자 a 왼쪽 위첨자 b x 오른쪽 아래첨자 c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; 왼쪽 위첨자 b x 오른쪽 아래첨자 c 오른쪽 위첨자 d"
+    },
+    "Tensor_5": {
+      "expected": "왼쪽 아래첨자 a; x 오른쪽 아래첨자 c 오른쪽 위첨자 d"
+    },
+    "Set_0": {
+      "expected": "B 를 만족하는 모든 x 는 A 의 원소가 아니다 의 집합"
+    },
+    "Set_1": {
+      "expected": "B 를 만족하는 모든 A 에 속하지 않는 x 의 집합"
+    },
+    "Set_2": {
+      "expected": "B 를 만족하는 모든 A 의 원소가 아닌 x 의 집합"
+    },
+    "Set_3": {
+      "expected": "B 를 만족하는 모든 A 의 원소가 아닌 x 의 집합"
+    },
+    "Set_4": {
+      "expected": "집합 B"
+    },
+    "Set_5": {
+      "expected": "공집합"
+    },
+    "EncloseSpecial_0": {
+      "expected": "세로선 A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A 윗줄"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A 세로선"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A 아랫 줄"
+    },
+    "NestedRoots_5": {
+      "expected": "플러스 루트, 마이너스 루트 a, 루트끝, 더하기 b, 루트끝"
+    },
+    "NamedSet_0": {
+      "expected": "양의 유리수 집합"
+    },
+    "NamedSet_1": {
+      "expected": "양의 유리수 집합"
+    },
+    "NamedSet_2": {
+      "expected": "음의 유리수 집합"
+    },
+    "NamedSet_3": {
+      "expected": "음의 유리수 집합"
+    },
+    "NamedSet_4": {
+      "expected": "이 차원 유리수 집합"
+    },
+    "NamedSet_5": {
+      "expected": "이 차원 유리수 집합"
+    },
+    "NamedSet_6": {
+      "expected": "이 차원 자연수 집합"
+    },
+    "NamedSet_7": {
+      "expected": "이 차원 자연수 집합"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "총 케이스 수 2, 케이스 1: f 의 x, 는 마이너스 x, if x 는 0 보다 작다. 케이스 2: f 의 x, 는 x, if x 는 0 보다 크거나 같다"
+    },
+    "MultiLines_1": {
+      "expected": "총 조건문 수 2, 조건문 1: f 의 x, 는 마이너스 x; if x 는 0 보다 작다. 조건문 2: f 의 x, 는 x, if x 는 0 보다 크거나 같다"
+    },
+    "UnitFraction": {
+      "expected": "b 분의 2 킬로미터"
+    },
+    "VulgarFraction": {
+      "expected": "20 분의 10"
+    },
+    "Decimal": {
+      "expected": "순환소수 1 점 4 순환마디 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 은 6 의 약수이다"
+    },
+    "VectorEndDeterminant": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2, 1  2행: 7, 5. 행렬식끝"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 의 2 제곱 제곱"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 의 i 제곱 제곱"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 의 3 분의 2 제곱 제곱"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 의 2 세제곱 제곱"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 의 i 세제곱 제곱"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 의 3 분의 2 세제곱 제곱"
+    },
+    "MultiRel": {
+      "expected": "a 작거나 같다 b 같다 c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 의 싸인 의, 괄호 열고, 2 더하기 x, 괄호 닫고, 제곱"
+    },
+    "CompositeFunctionFences": {
+      "expected": "괄호 열고, f 더하기 g, 괄호 닫고, 의, 괄호 열고, 2 더하기 x, 괄호 닫고"
+    },
+    "LimUpper": {
+      "expected": "I 에 대한 시그마"
+    },
+    "Overscript": {
+      "expected": "A B 까지"
+    }
+  }
+}

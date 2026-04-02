@@ -1,0 +1,82 @@
+{
+  "name": "NemethIssues",
+  "locale": "nemeth",
+  "factory": "speech",
+  "modality": "braille",
+  "base": "input/nemeth/nemeth_issues.json",
+  "information": "Nemeth Tensor tests.",
+  "domain": "default",
+  "style": "default",
+  "active": "NemethIssues",
+  "tests": {
+    "bar_0": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠻"
+    },
+    "bar_1": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠻"
+    },
+    "bar_2": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠣⠱⠻"
+    },
+    "bar_3": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠣⠱⠻"
+    },
+    "bar_4": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠣⠱⠻"
+    },
+    "bar_5": {
+      "expected": "⠐⠵⠬⠗⠣⠱⠣⠱⠻"
+    },
+    "bar_6": {
+      "expected": "⠵⠱"
+    },
+    "bar_7": {
+      "expected": "⠵⠱"
+    },
+    "bar_8": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠻"
+    },
+    "bar_9": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠻"
+    },
+    "bar_10": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠩⠱⠻"
+    },
+    "bar_11": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠩⠱⠻"
+    },
+    "bar_12": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠩⠱⠻"
+    },
+    "bar_13": {
+      "expected": "⠐⠵⠬⠗⠩⠱⠩⠱⠻"
+    },
+    "bar_14": {
+      "expected": "⠵⠩⠱"
+    },
+    "bar_15": {
+      "expected": "⠵⠩⠱"
+    },
+    "issue_552_1": {
+      "expected": "⠸⠠⠁"
+    },
+    "issue_552_2": {
+      "expected": "⠠⠃⠸⠠⠁"
+    },
+    "nueb_12.6.3_0": {
+      "expected": "⠐⠥⠣⠈⠱⠻⠀⠨⠅⠀⠼⠴⠨⠦"
+    },
+    "nueb_12.6.3_1": {
+      "expected": "⠐⠠⠁⠣⠈⠱⠻⠨⠬⠐⠠⠃⠣⠈⠱⠻"
+    },
+    "nueb_12.6.3_2": {
+      "expected": "⠐⠗⠬⠎⠬⠞⠣⠈⠱⠻"
+    },
+    "nueb_12.6.3_3": {
+      "expected": "⠐⠗⠬⠎⠣⠈⠱⠻"
+    },
+    "issue_552_0": {
+      "expected": "⠡⠈⠰⠠⠕⠰⠐⠠⠭⠣⠈⠱⠻⠀⠨⠅⠀⠈⠰⠠⠇⠡⠸⠐⠠⠵⠣⠈⠱⠻"
+    }
+  }
+}

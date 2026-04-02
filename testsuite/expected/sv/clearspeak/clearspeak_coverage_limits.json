@@ -1,0 +1,101 @@
+{
+  "name": "SwedishClearspeakCoverageLimits",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_limits.json",
+  "information": "Swedish Clearspeak Various Stacked Expressions tests.",
+  "active": "ClearspeakSwedish",
+  "tests": {
+    "rel1": {
+      "expected": "q från n är lika med 1 till c"
+    },
+    "rel2": {
+      "expected": "normal q, med c över"
+    },
+    "rel3": {
+      "expected": "q över n är lika med 1"
+    },
+    "rel4": {
+      "expected": "normal q, med n under"
+    },
+    "over": {
+      "expected": "a med y över"
+    },
+    "overaccent": {
+      "expected": "a pil åt höger"
+    },
+    "overunder-sep": {
+      "expected": "a med x under och y över"
+    },
+    "overunder": {
+      "expected": "a med x under och y över"
+    },
+    "overunderaccent": {
+      "expected": "a med pil åt höger under pil åt vänster"
+    },
+    "under": {
+      "expected": "a med x under"
+    },
+    "underaccent": {
+      "expected": "a med pil åt vänster under"
+    },
+    "cup1": {
+      "expected": "union från n är lika med 1 till c"
+    },
+    "cup2": {
+      "expected": "union över c"
+    },
+    "cup3": {
+      "expected": "union under n är lika med 1"
+    },
+    "cup4": {
+      "expected": "union tecken med n över"
+    },
+    "cup5": {
+      "expected": "union tecken med c över"
+    },
+    "cup6": {
+      "expected": "union över n är lika med 1"
+    },
+    "cup7": {
+      "expected": "union över n"
+    },
+    "let1": {
+      "expected": "normal q, med n är lika med 1 under och c över"
+    },
+    "let2": {
+      "expected": "normal q, med c över"
+    },
+    "let3": {
+      "expected": "normal q, med n är lika med 1 under"
+    },
+    "let4": {
+      "expected": "normal q, med n under"
+    },
+    "limits1": {
+      "expected": "q från n är lika med 1 till c"
+    },
+    "limits1a": {
+      "expected": "normal q, med n under och c över"
+    },
+    "limits2": {
+      "expected": "normal q, med n är lika med 1 under och c över"
+    },
+    "limits2a": {
+      "expected": "normal q, med n under och c över"
+    },
+    "sum1": {
+      "expected": "summa från n är lika med 1 till c"
+    },
+    "sum2": {
+      "expected": "summa under c"
+    },
+    "sum3": {
+      "expected": "summa över n är lika med 1"
+    },
+    "sum4": {
+      "expected": "summa över n"
+    }
+  },
+  "compare": true
+}

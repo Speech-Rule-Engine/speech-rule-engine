@@ -83,11 +83,11 @@ export function setLocale() {
  * @param msg The current locale message structure.
  */
 function setSubiso(msg: Locale) {
-  const subiso = Engine.getInstance().subiso;
+  const subiso = Engine.getInstance().options.subiso;
   if (msg.SUBISO.all.indexOf(subiso) === -1) {
-    Engine.getInstance().subiso = msg.SUBISO.default;
+    Engine.getInstance().options.subiso = msg.SUBISO.default;
   }
-  msg.SUBISO.current = Engine.getInstance().subiso;
+  msg.SUBISO.current = Engine.getInstance().options.subiso;
 }
 
 /**
@@ -98,10 +98,10 @@ function setSubiso(msg: Locale) {
  */
 function getLocale(): Locale {
   const locale = Variables.ensureLocale(
-    Engine.getInstance().locale,
+    Engine.getInstance().options.locale,
     Engine.getInstance().defaultLocale
   );
-  Engine.getInstance().locale = locale;
+  Engine.getInstance().options.locale = locale;
   return locales[locale]();
 }
 

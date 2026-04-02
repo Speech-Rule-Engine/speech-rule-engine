@@ -25,6 +25,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 
 import { annotate } from './semantic_annotations.js';
 import { SemanticVisitor } from './semantic_annotator.js';
@@ -35,12 +36,14 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import './semantic_heuristics.js';
+import './special_annotators.js';
+import { SemanticProcessor } from './semantic_processor.js';
 
 export class SemanticTree {
   /**
    * The root of the tree.
    */
-  public parser: SemanticParser<Element> = new SemanticMathml();
+  public parser: SemanticParser<Element>;
 
   /**
    * The root of the tree.
@@ -59,7 +62,7 @@ export class SemanticTree {
    */
   public static empty(): SemanticTree {
     const empty = DomUtil.parseInput('<math/>');
-    const stree = new SemanticTree(empty);
+    const stree = new SemanticTree(empty, new Options());
     stree.mathml = empty;
     return stree;
   }
@@ -127,15 +130,22 @@ export class SemanticTree {
    * Create an initial semantic tree.
    *
    * @param mathml The original MathML node.
+   * @param options An options object.
    */
-  constructor(public mathml: Element) {
+  constructor(
+    public mathml: Element,
+    public options: Options
+  ) {
+    this.parser = new SemanticMathml(options);
     this.root = this.parser.parse(mathml);
+    // TODO: Rewrite the parser to include this!
+    this.root = SemanticProcessor.rewriteTrivialTable(this.root);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
 
     const newDefault = this.collator.newDefault();
     if (newDefault) {
       // Reparse!
-      this.parser = new SemanticMathml();
+      this.parser = new SemanticMathml(options);
       this.parser.getFactory().defaultMap = newDefault;
       this.root = this.parser.parse(mathml);
     }

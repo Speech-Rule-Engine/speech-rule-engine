@@ -1,0 +1,152 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "NynorskClearspeakFontCaps",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_font_caps.json",
+  "information": "Nynorsk Clearspeak Font tests with Caps preference.",
+  "domain": "clearspeak",
+  "locale": "nn",
+  "active": "ClearspeakNynorskFont",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "expected": "stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "expected": "feit stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "expected": "stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "expected": "feit kursiv stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "expected": "script stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "expected": "feit  stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "expected": "gotisk stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "expected": "double-struck stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "expected": "feit gotisk stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "expected": "utan seriffar stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "expected": "utan seriffar feit stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "expected": "utan seriffar kursiv stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "expected": "utan seriffar feit kursiv stor bokstav A"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "expected": "smal stor bokstav A"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "expected": "stor bokstav Alfa"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "expected": "feit stor bokstav Alfa"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "expected": "stor bokstav Alfa"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "expected": "feit kursiv stor bokstav Alfa"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "expected": "utan seriffar feit stor bokstav Alfa"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "expected": "utan seriffar feit kursiv stor bokstav Alfa"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "expected": "normal stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "expected": "feit stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "expected": "stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "expected": "feit kursiv stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "expected": "script stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "expected": "feit  stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "expected": "gotisk stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "expected": "double-struck stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "expected": "feit gotisk stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "expected": "utan seriffar stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "expected": "utan seriffar feit stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "expected": "utan seriffar kursiv stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "expected": "utan seriffar feit kursiv stor bokstav A"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "expected": "smal stor bokstav A"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "expected": "kalligrafisk stor bokstav A"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "expected": "kalligrafisk feit stor bokstav A"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "expected": "kalligrafisk stor bokstav A"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "expected": "kalligrafisk feit stor bokstav A"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "expected": "stor bokstav A"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "expected": "normal stor bokstav Alfa"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "expected": "feit stor bokstav Alfa"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "expected": "stor bokstav Alfa"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "expected": "feit kursiv stor bokstav Alfa"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "expected": "utan seriffar feit stor bokstav Alfa"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "expected": "utan seriffar feit kursiv stor bokstav Alfa"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "tests": {
+    "empty_base_superscript_0": {
+      "tex": "{}^a",
+      "input": "<msup data-latex=\"{}^a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"a\">a</mi></msup>"
+    },
+    "empty_base_superscript_1": {
+      "tex": "{}^2",
+      "input": "<msup data-latex=\"{}^2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mn data-latex=\"2\">2</mn></msup>"
+    },
+    "empty_base_superscript_2": {
+      "tex": "{}^3",
+      "input": "<msup data-latex=\"{}^3\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mn data-latex=\"3\">3</mn></msup>"
+    },
+    "empty_base_superscript_3": {
+      "tex": "{}^4",
+      "input": "<msup data-latex=\"{}^4\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mn data-latex=\"4\">4</mn></msup>"
+    },
+    "empty_base_subscript_0": {
+      "tex": "{}_a",
+      "input": "<msub data-latex=\"{}_a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"a\">a</mi></msub>"
+    },
+    "empty_base_subscript_1": {
+      "tex": "{}_2",
+      "input": "<msub data-latex=\"{}_2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mn data-latex=\"2\">2</mn></msub>"
+    },
+    "empty_base_subsuperscript_0": {
+      "tex": "{}_b^a",
+      "input": "<msubsup data-latex=\"{}_b^a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"b\">b</mi><mi data-latex=\"a\">a</mi></msubsup>"
+    },
+    "empty_base_subsuperscript_1": {
+      "tex": "{}_b^2",
+      "input": "<msubsup data-latex=\"{}_b^2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"2\">2</mn></msubsup>"
+    },
+    "empty_base_subsuperscript_2": {
+      "tex": "{}_b^3",
+      "input": "<msubsup data-latex=\"{}_b^3\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"3\">3</mn></msubsup>"
+    },
+    "empty_base_subsuperscript_3": {
+      "tex": "{}_b^4",
+      "input": "<msubsup data-latex=\"{}_b^4\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"4\">4</mn></msubsup>"
+    },
+    "empty_superscript": {
+      "tex": "a^{}",
+      "input": "<msup data-latex=\"a^{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msup>"
+    },
+    "empty_subscript": {
+      "tex": "a_{}",
+      "input": "<msub data-latex=\"a_{}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{}\"></mrow></msub>"
+    },
+    "space_base_superscript_0": {
+      "tex": "{\\quad}^a",
+      "input": "<msup data-latex=\"{\\quad}^a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"a\">a</mi></msup>"
+    },
+    "space_base_superscript_1": {
+      "tex": "{\\quad}^2",
+      "input": "<msup data-latex=\"{\\quad}^2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mn data-latex=\"2\">2</mn></msup>"
+    },
+    "space_base_superscript_2": {
+      "tex": "{\\quad}^3",
+      "input": "<msup data-latex=\"{\\quad}^3\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mn data-latex=\"3\">3</mn></msup>"
+    },
+    "space_base_superscript_3": {
+      "tex": "{\\quad}^4",
+      "input": "<msup data-latex=\"{\\quad}^4\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mn data-latex=\"4\">4</mn></msup>"
+    },
+    "space_base_subscript_0": {
+      "tex": "{\\quad}_a",
+      "input": "<msub data-latex=\"{\\quad}_a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"a\">a</mi></msub>"
+    },
+    "space_base_subscript_1": {
+      "tex": "{\\quad}_2",
+      "input": "<msub data-latex=\"{\\quad}_2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mn data-latex=\"2\">2</mn></msub>"
+    },
+    "space_base_subsuperscript_0": {
+      "tex": "{\\quad}_b^a",
+      "input": "<msubsup data-latex=\"{\\quad}_b^a\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"b\">b</mi><mi data-latex=\"a\">a</mi></msubsup>"
+    },
+    "space_base_subsuperscript_1": {
+      "tex": "{\\quad}_b^2",
+      "input": "<msubsup data-latex=\"{\\quad}_b^2\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"2\">2</mn></msubsup>"
+    },
+    "space_base_subsuperscript_2": {
+      "tex": "{\\quad}_b^3",
+      "input": "<msubsup data-latex=\"{\\quad}_b^3\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"3\">3</mn></msubsup>"
+    },
+    "space_base_subsuperscript_3": {
+      "tex": "{\\quad}_b^4",
+      "input": "<msubsup data-latex=\"{\\quad}_b^4\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mspace width=\"1em\" data-latex=\"\\quad\"></mspace></mrow><mi data-latex=\"b\">b</mi><mn data-latex=\"4\">4</mn></msubsup>"
+    },
+    "space_superscript": {
+      "tex": "a^{\\quad}",
+      "input": "<msup data-latex=\"a^{\\quad}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mstyle scriptlevel=\"0\" data-latex=\"\\quad\"><mspace width=\"1em\"></mspace></mstyle></mrow></msup>"
+    },
+    "space_subscript": {
+      "tex": "a_{\\quad}",
+      "input": "<msub data-latex=\"a_{\\quad}\"><mi data-latex=\"a\">a</mi><mrow data-mjx-texclass=\"ORD\" data-latex=\"{\\quad}\"><mstyle scriptlevel=\"0\" data-latex=\"\\quad\"><mspace width=\"1em\"></mspace></mstyle></mrow></msub>"
+    },
+    "empty_over_0": {
+      "input": "<mover><mphantom><mn>5</mn></mphantom><mn>1</mn></mover>"
+    },
+    "empty_over_1": {
+      "input": "<mover><mn>1</mn><mphantom><mn>5</mn></mphantom></mover>"
+    },
+    "empty_under_0": {
+      "input": "<munder><mphantom><mn>5</mn></mphantom><mn>1</mn></munder>"
+    },
+    "empty_under_1": {
+      "input": "<munder><mn>1</mn><mphantom><mn>5</mn></mphantom></munder>"
+    },
+    "empty_underover_0": {
+      "input": "<munderover><mphantom><mn>5</mn></mphantom><mn>1</mn><mn>2</mn></munderover>"
+    },
+    "empty_underover_1": {
+      "input": "<munderover><mn>1</mn><mphantom><mn>5</mn></mphantom><mn>2</mn></munderover>"
+    },
+    "empty_underover_2": {
+      "input": "<munderover><mn>1</mn><mn>2</mn><mphantom><mn>5</mn></mphantom></munderover>"
+    },
+    "mj_issue_3510": {
+      "input": "<mtable columnalign=\"right\"><mtr><mtd><mi mathvariant=\"normal\">$</mi><mo>&#x2062;</mo><mrow><mover><mphantom><mn>5</mn></mphantom><mn>1</mn></mover><mover><mn>5</mn><mn>2</mn></mover><mover><mn>5</mn><mn>1</mn></mover></mrow><mn>.00</mn></mtd></mtr></mtable>"
+    }
+  }
+}

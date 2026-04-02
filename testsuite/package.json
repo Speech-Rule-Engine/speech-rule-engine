@@ -1,0 +1,43 @@
+{
+  "name": "sre-tests",
+  "version": "1.0.0",
+  "description": "Speech Rule Engine tests with Jest",
+  "directories": {
+    "test": "tests"
+  },
+  "type": "module",
+  "scripts": {
+    "=============================================================================== tests": "",
+    "test:all": "pnpm test:files; pnpm test:output; pnpm test:analytics",
+    "test:files": "pnpm test --silent --testPathPatterns tests/json",
+    "test:actions": "pnpm test --silent --testPathPatterns tests/actions",
+    "test:output": "pnpm test --silent --testPathPatterns tests/output",
+    "test:analytics": "pnpm rimraf analysis; pnpm test --silent --testPathPatterns tests/analyse; pnpm test:allrules",
+    "test:allrules": "export SRE_JSON_PATH=../lib/mathmaps; echo \"import('./js/module_loader.js').then((m) => m.loadPromise('at')).then(m => m.default.outputAllRules())\" | node ",
+    "analyse:tries": "export SRE_JSON_PATH=../lib/mathmaps; echo \"import('./js/module_loader.js').then((m) => m.loadPromise('atrie')).then(m => m.default.output())\" | node ",
+    "local": "sed -i '0,/@jest\\/globals/{/@jest\\/globals/d;}' js/*/*.js",
+    "compile": "pnpm tsc",
+    "compile:local": "pnpm compile; pnpm local",
+    "prepare": "node tests.config.js",
+    "build": "pnpm clean; pnpm prepare && pnpm compile",
+    "clean": "pnpm rimraf dist js tests coverage",
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
+  },
+  "imports": {
+    "#js/*": "./sources/*",
+    "#mathjax/*": "@mathjax/src/mjs/*"
+  },
+  "dependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/jest": "^30.0.0",
+    "cross-env": "^10.1.0",
+    "firebase-admin": "^13.6.0",
+    "jest": "^30.2.0",
+    "@mathjax/src": "4.1.0",
+    "rimraf": "^6.1.2",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "xml-js": "^1.6.11"
+  }
+}

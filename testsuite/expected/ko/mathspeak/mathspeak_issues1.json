@@ -1,0 +1,273 @@
+{
+  "name": "KoreanMathspeakIssues1",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "Korean Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesKorean",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "절댓값시작 a 절댓값끝"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "절댓값시작 a 절댓값끝"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "절댓값 a 절댓값끝"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "절댓값시작 a 절댓값끝"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "절댓값시작 a 절댓값끝"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "절댓값 a 절댓값끝"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "마이너스 18 분의 5"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "마이너스 18 분의 5"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "마이너스 18 분의 5"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 도"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 도"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 도"
+    },
+    "MixedIdentifier_default": {
+      "expected": "대문자 S i 기본 대문자 O 2 더하기 6 기본 대문자 H 기본 대문자 F 오른쪽 화살표 기본 대문자 H 2 대문자 S i 기본 대문자 F 6 더하기 2 기본 대문자 H 2 기본 대문자 O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "대문자 S i 기본 대문자 O 2 더하기 6 기본 대문자 H 기본 대문자 F 오른쪽 화살표 기본 대문자 H 2 대문자 S i 기본 대문자 F 6 더하기 2 기본 대문자 H 2 기본 대문자 O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "대문자 S i 기본 대문자 O 2 더하기 6 기본 대문자 H 기본 대문자 F 오른쪽 화살표 기본 대문자 H 2 대문자 S i 기본 대문자 F 6 더하기 2 기본 대문자 H 2 기본 대문자 O"
+    },
+    "ParenSuper_default": {
+      "expected": "괄호 열고 a 괄호 닫고 제곱"
+    },
+    "ParenSuper_brief": {
+      "expected": "괄열 a 괄닫 제곱"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "괄열 a 괄닫 제곱"
+    },
+    "ParenConvoluted_default": {
+      "expected": "괄호 열고 빼기 x 제곱 슬래시 2 괄호 닫고"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "괄열 빼기 x 제곱 슬래시 2 괄닫"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "괄열 빼기 x 제곱 슬래시 2 괄닫"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h 위첨자 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 위첨자 4 빼기 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h 위 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 위 4 빼기 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h 위 4 빼기 2 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 작거나 같다 c 2 h 위 4 빼기 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h 위첨자 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 c 2 h 위첨자 4 빼기 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h 위 4 빼기 2 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 c 2 h 위 4 빼기 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h 위 4 빼기 2 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 같다 c 2 h 위 4 빼기 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h 아래첨자 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래첨자 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h 아래 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h 아래 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h 아래첨자 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 h 아래첨자 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h 아래 s 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 h 아래 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h 아래 s 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 같다 h 아래 s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h 아래첨자 s 위첨자 t 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래첨자 s 위첨자 t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h 아래 s 위 t 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래 s 위 t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h 아래 s 위 t 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 작거나 같다 h 아래 s 위 t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h 아래첨자 s 위첨자 t 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 h 아래첨자 s 위첨자 t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h 아래 s 위 t 기준 작거나 같다 분수시작 2 대문자 T 분의 1 분수끝 같다 h 아래 s 위 t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h 아래 s 위 t 기준 작거나 같다 분수 2 대문자 T 분의 1 분수끝 같다 h 아래 s 위 t"
+    },
+    "SquareWithText_default": {
+      "expected": "분수시작 area of square 분의 area of triangle 분수끝 은 분수시작 16 units 세제곱 분의 1 unit 제곱 분수끝"
+    },
+    "SquareWithText_brief": {
+      "expected": "분수시작 area of square 분의 area of triangle 분수끝 은 분수시작 16 units 세제곱 분의 1 unit 제곱 분수끝"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "분수 area of square 분의 area of triangle 분수끝 은 분수 16 units 세제곱 분의 1 unit 제곱 분수끝"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square 위첨자 1 기준 1 unit 위첨자 2 기준 16 units 위첨자 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square 위 1 기준 1 unit 위 2 기준 16 units 위 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square 위 1 기준 1 unit 위 2 기준 16 units 위 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle 위첨자 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle 위 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle 위 2"
+    },
+    "LabelledRow_default": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 1 괄호 닫고 꼬리표끝 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "LabelledRow_brief": {
+      "expected": "배열시작 첫번째 행  꼬리표 괄열 1 괄닫 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "배열 첫번째 행  꼬리표 괄열 1 괄닫 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "LabelledLine_default": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 1 괄호 닫고 꼬리표끝 a 배열끝"
+    },
+    "LabelledLine_brief": {
+      "expected": "배열시작 첫번째 행  꼬리표 괄열 1 괄닫 a 배열끝"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "배열 첫번째 행  꼬리표 괄열 1 괄닫 a 배열끝"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 1 괄호 닫고 꼬리표끝 빈 칸 배열끝"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "배열시작 첫번째 행  꼬리표 괄열 1 괄닫 빈 칸 배열끝"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "배열 첫번째 행  꼬리표 괄열 1 괄닫 빈 칸 배열끝"
+    },
+    "EmptyLine_default": {
+      "expected": "배열시작 첫번째 행  빈 칸 배열끝"
+    },
+    "EmptyLine_brief": {
+      "expected": "배열시작 첫번째 행  빈 칸 배열끝"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "배열 첫번째 행  빈 칸 배열끝"
+    },
+    "EmptyRow_default": {
+      "expected": "배열시작 첫번째 행 첫번째 열 a 두번째 열 b 두번째 행  빈 칸 배열끝"
+    },
+    "EmptyRow_brief": {
+      "expected": "배열시작 첫번째 행 첫번째 열 a 두번째 열 b 두번째 행  빈 칸 배열끝"
+    },
+    "EmptyRow_sbrief": {
+      "expected": "배열 첫번째 행 첫번째 열 a 두번째 열 b 두번째 행  빈 칸 배열끝"
+    },
+    "EmptyCell_default": {
+      "expected": "배열시작 첫번째 행  빈 칸 배열끝"
+    },
+    "EmptyCell_brief": {
+      "expected": "배열시작 첫번째 행  빈 칸 배열끝"
+    },
+    "EmptyCell_sbrief": {
+      "expected": "배열 첫번째 행  빈 칸 배열끝"
+    },
+    "TextLabelledLine_default": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 1 괄호 닫고 꼬리표끝 a 배열끝"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "배열시작 첫번째 행  꼬리표 괄열 1 괄닫 a 배열끝"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "배열 첫번째 행  꼬리표 1 a 배열끝"
+    },
+    "TextLabelledRow_default": {
+      "expected": "배열시작 첫번째 행  꼬리표시작 괄호 열고 1 괄호 닫고 꼬리표끝 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "TextLabelledRow_brief": {
+      "expected": "배열시작 첫번째 행  꼬리표 괄열 1 괄닫 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "TextLabelledRow_sbrief": {
+      "expected": "배열 첫번째 행  꼬리표 1 첫번째 열 a 두번째 열 b 배열끝"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a 윗줄"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a 윗줄"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a 윗줄"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a 밑줄"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a 밑줄"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a 밑줄"
+    },
+    "PrefixopSquare_default": {
+      "expected": "편미분 제곱 x"
+    },
+    "PrefixopSquare_brief": {
+      "expected": "편미분 제곱 x"
+    },
+    "PrefixopSquare_sbrief": {
+      "expected": "편미분 제곱 x"
+    },
+    "PrefixopCube_default": {
+      "expected": "편미분 세제곱 x"
+    },
+    "PrefixopCube_brief": {
+      "expected": "편미분 세제곱 x"
+    },
+    "PrefixopCube_sbrief": {
+      "expected": "편미분 세제곱 x"
+    },
+    "Vector_default": {
+      "expected": "3 행 1 열의 행렬시작 첫번째 행  a 두번째 행  b 세번째 행  c 행렬끝"
+    },
+    "Vector_brief": {
+      "expected": "3 행 1 열의 행렬시작 첫번째 행  a 두번째 행  b 세번째 행  c 행렬끝"
+    },
+    "Vector_sbrief": {
+      "expected": "3 행 1 열의 행렬 첫번째 행  a 두번째 행  b 세번째 행  c 행렬끝"
+    }
+  }
+}

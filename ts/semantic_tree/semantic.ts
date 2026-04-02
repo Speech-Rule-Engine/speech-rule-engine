@@ -19,6 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 import {
   SemanticFont,
   SemanticRole,
@@ -41,35 +42,41 @@ export type Role = SemanticRole;
  */
 export type Type = SemanticType;
 type Attr = Font | Role | Type;
-export { Attr };
+export type { Attr };
 
 /**
  * Creates the semantic tree for a given MathML node.
  *
  * @param mml The MathML node.
+ * @param options The options to use.
  * @returns Semantic tree for input node as XML node.
  */
-export function xmlTree(mml: Element): Element {
-  return getTree(mml).xml();
+export function xmlTree(mml: Element, options: Options): Element {
+  return getTree(mml, options).xml();
 }
 
 /**
  * Creates the semantic tree for a given MathML node.
  *
  * @param mml The MathML node.
+ * @param options The options to use.
  * @returns Semantic tree for input node.
  */
-export function getTree(mml: Element): SemanticTree {
-  return new SemanticTree(mml);
+export function getTree(mml: Element, options: Options): SemanticTree {
+  return new SemanticTree(mml, options);
 }
 
 /**
  * Creates the semantic tree for a MathML string.
  *
  * @param expr The string representing the MathML expression.
+ * @param options The options to use.
  * @returns Semantic tree for input string as XML node.
  */
-export function getTreeFromString(expr: string): SemanticTree {
+export function getTreeFromString(
+  expr: string,
+  options: Options
+): SemanticTree {
   const mml = DomUtil.parseInput(expr);
-  return getTree(mml);
+  return getTree(mml, options);
 }

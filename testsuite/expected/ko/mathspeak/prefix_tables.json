@@ -1,0 +1,188 @@
+{
+  "name": "KoreanPrefixTables",
+  "locale": "ko",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Korean Prefix Tables rule tests.",
+  "active": "PrefixKorean",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "조합 식"
+    },
+    "Binomials_1": {
+      "expected": "분할 식"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "조합 식"
+    },
+    "Binomials_1_extra": {
+      "expected": "분할 식"
+    },
+    "Vectors_0": {
+      "expected": "첫번째 행"
+    },
+    "Vectors_1": {
+      "expected": "두번째 행"
+    },
+    "Vectors_2": {
+      "expected": "세번째 행"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "첫번째 행"
+    },
+    "Matrices_depth_1": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Matrices_depth_2": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Matrices_depth_3": {
+      "expected": "두번째 행"
+    },
+    "Matrices_depth_4": {
+      "expected": "두번째 행, 첫번째 열"
+    },
+    "Matrices_depth_5": {
+      "expected": "두번째 행, 두번째 열"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "첫번째 행"
+    },
+    "Matrices_1": {
+      "expected": "첫번째 열"
+    },
+    "Matrices_2": {
+      "expected": "두번째 열"
+    },
+    "Matrices_3": {
+      "expected": "두번째 행"
+    },
+    "Matrices_4": {
+      "expected": "첫번째 열"
+    },
+    "Matrices_5": {
+      "expected": "두번째 열"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "첫번째 행"
+    },
+    "Table_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_3": {
+      "expected": "두번째 행"
+    },
+    "Table_4": {
+      "expected": "첫번째 행"
+    },
+    "Table_5": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "첫번째 열"
+    },
+    "Table_Cell_1a": {
+      "expected": "두번째 열"
+    },
+    "Table_Cell_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_3": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_4": {
+      "expected": "첫번째 열"
+    },
+    "Table_Cell_4a": {
+      "expected": "두번째 열"
+    },
+    "Table_Cell_5": {
+      "expected": "첫번째 열"
+    },
+    "Table_Cell_5a": {
+      "expected": "두번째 열"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "첫번째 행"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "두번째 행"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "첫번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "첫번째 행, 두번째 열"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "두번째 행, 첫번째 열"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "두번째 행, 두번째 열"
+    },
+    "Table_Label_0": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_1": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_2": {
+      "expected": "꼬리표"
+    },
+    "Table_Label_3": {
+      "expected": "꼬리표"
+    }
+  }
+}

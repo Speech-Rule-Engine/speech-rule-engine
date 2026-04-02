@@ -1,0 +1,130 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "NynorskClearspeakLogarithms",
+  "locale": "nn",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "Nynorsk Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakNynorsk",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Log001": {
+      "expected": "log x"
+    },
+    "Log002": {
+      "expected": "log basis 10 av, x"
+    },
+    "Log003": {
+      "expected": "log basis b av, a x, er lik, log basis b av, a, pluss, log basis b av, x"
+    },
+    "Log004": {
+      "expected": "log basis b av, S delt på T, er lik, log basis b av, S, minus, log basis b av, T"
+    },
+    "Log005": {
+      "expected": "log basis b av, venstreparentes, x i k-te potens, høgreparentes, er lik k, log basis b av, x"
+    },
+    "Log006": {
+      "expected": "10 heva til log basis 10 av, x, er lik x"
+    },
+    "Log007": {
+      "expected": "log basis 10 av, 10 i x-te potens, er lik x"
+    },
+    "Log008": {
+      "expected": "10 heva til log basis 10 av, 5, er lik 5"
+    },
+    "Log009": {
+      "expected": "log basis 10 av, 10 kubikk, er lik 3"
+    },
+    "Log010": {
+      "expected": "log basis a av, x, er lik, log basis b av, x, delt på, log basis b av, a"
+    },
+    "Log011": {
+      "expected": "log basis 10 av, 18, delt på, log basis 10 av, 3, er lik, log basis 3 av, 18"
+    },
+    "Log012": {
+      "expected": "log x delt på log a"
+    },
+    "Log013": {
+      "expected": "log av, venstreparentes, x pluss 1, høgreparentes"
+    },
+    "Log014": {
+      "expected": "log av, venstreparentes, x pluss 1, høgreparentes, kvadrat"
+    },
+    "Log015": {
+      "expected": "log x y"
+    },
+    "Log016": {
+      "expected": "brøk med tellar, log av, venstreparentes, x pluss 1, høgreparentes, og nemnar, log av, venstreparentes, x pluss 2, høgreparentes"
+    },
+    "Log017": {
+      "expected": "brøk med tellar, log basis 6 av, venstreparentes, x pluss 1, høgreparentes, og nemnar, log basis 6 av, venstreparentes, x pluss 2, høgreparentes"
+    },
+    "Log018": {
+      "expected": "brøk med tellar log 40 pluss log 60, og nemnar log 5"
+    },
+    "Log019": {
+      "expected": "brøk med tellar, log basis 3 av, 40, pluss, log basis 3 av, 60, og nemnar, log basis 3 av, 5"
+    },
+    "Log020": {
+      "expected": "log av, venstreparentes, 3 i fjerde potens, 12 i niande potens, høgreparentes, er lik 4 log 3, pluss 9 log 12"
+    },
+    "Log021": {
+      "expected": "log av, venstreparentes, x delt på y, høgreparentes"
+    },
+    "Log022": {
+      "expected": "log av, venstreparentes, brøk med tellar 3 i fjerde potens, og nemnar 8 i tiande potens, høgreparentes, er lik 4 log 3, minus 10 log 8"
+    },
+    "Log023": {
+      "expected": "10 heva til log x"
+    },
+    "NatLog001": {
+      "expected": "ln x"
+    },
+    "NatLog002": {
+      "expected": "ln x, minus ln av, venstreparentes, x minus 1, høgreparentes, er lik ln av, venstreparentes, brøk med tellar x, og nemnar x minus 1, høgreparentes"
+    },
+    "NatLog003": {
+      "expected": "ln av, venstreparentes, e i x-te potens, høgreparentes, er lik x"
+    },
+    "NatLog004": {
+      "expected": "e heva til ln x, er lik x"
+    },
+    "NatLog005": {
+      "expected": "ln av, venstreparentes, e i x-te potens, høgreparentes, er lik x"
+    },
+    "NatLog006": {
+      "expected": "e heva til ln 4, er lik 4"
+    },
+    "NatLog007": {
+      "expected": "ln 40, delt på ln 5, er lik, log basis 5 av, 40"
+    },
+    "NatLog008": {
+      "expected": "brøk med tellar ln 40, pluss ln 60, og nemnar ln 5"
+    },
+    "NatLog009": {
+      "expected": "ln x"
+    },
+    "NatLog010": {
+      "expected": "ln x, minus, ln av, venstreparentes, x minus 1, høgreparentes, er lik, ln av, venstreparentes, brøk med tellar x, og nemnar x minus 1, høgreparentes"
+    },
+    "NatLog011": {
+      "expected": "ln av, venstreparentes, e i x-te potens, høgreparentes, er lik x"
+    },
+    "NatLog012": {
+      "expected": "e heva til ln x, er lik x"
+    },
+    "NatLog013": {
+      "expected": "ln av, venstreparentes, e i x-te potens, høgreparentes, er lik x"
+    },
+    "NatLog014": {
+      "expected": "e heva til ln 4, er lik 4"
+    },
+    "NatLog015": {
+      "expected": "ln 40, delt på ln 5, er lik, log basis 5 av, 40"
+    },
+    "NatLog016": {
+      "expected": "brøk med tellar ln 40, pluss ln 60, og nemnar ln 5"
+    }
+  }
+}

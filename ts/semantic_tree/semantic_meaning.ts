@@ -179,6 +179,8 @@ enum Roles {
   LEFTRIGHT = 'leftright',
 
   ABOVEBELOW = 'abovebelow',
+  // Interval.
+  INTERVAL = 'interval',
   // Sets.
   SETEMPTY = 'set empty',
   SETEXT = 'set extended',
@@ -305,7 +307,12 @@ enum SecondaryEnum {
   ALLLETTERS = 'allLetters',
   D = 'd',
   BAR = 'bar',
-  TILDE = 'tilde'
+  TILDE = 'tilde',
+  CURLY = 'curly',
+  PAREN = 'paren',
+  BRACKET = 'bracket',
+  FLOOR = 'floor',
+  CEIL = 'ceil',
 }
 
 export type SemanticSecondary = Alphabet.Base | SecondaryEnum;

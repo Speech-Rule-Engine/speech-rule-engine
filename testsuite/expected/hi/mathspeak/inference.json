@@ -1,0 +1,59 @@
+{
+  "name": "HindiMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "hi",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "Hindi Mathspeak Inference rules.",
+  "active": "InferenceHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NoLabel_0": {
+      "expected": "अनुमान नियम निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "NoLabel_1": {
+      "expected": "अनुमान नियम निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "Premise_0": {
+      "expected": "अनुमान नियम निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "Premise_1": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "Axiom": {
+      "expected": "अभिगृहीत कैपिटल ए"
+    },
+    "EmptyAxiom": {
+      "expected": "रिक्त अभिगृहीत"
+    },
+    "RightLabel_0": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "RightLabel_1": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 2 पूर्वपक्ष"
+    },
+    "RightLabel_2": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 3 पूर्वपक्ष"
+    },
+    "LeftLabel_0": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 1 पूर्वपक्ष"
+    },
+    "LeftLabel_1": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 2 पूर्वपक्ष"
+    },
+    "LeftLabel_2": {
+      "expected": "अनुमान नियम सूचक पर्चा कैपिटल एन निष्कर्ष के साथ कैपिटल एक्स और 3 पूर्वपक्ष"
+    },
+    "Premises_0": {
+      "expected": "१ला premise  अभिगृहीत कैपिटल ए"
+    },
+    "Premises_1": {
+      "expected": "१ला premise  अभिगृहीत कैपिटल ए २रा premise  अभिगृहीत कैपिटल बी"
+    },
+    "Premises_2": {
+      "expected": "१ला premise  अभिगृहीत कैपिटल ए २रा premise  अभिगृहीत कैपिटल बी ३रा premise  अभिगृहीत कैपिटल सी"
+    }
+  }
+}

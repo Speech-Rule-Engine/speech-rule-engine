@@ -1,0 +1,58 @@
+{
+  "name": "EnglishMathspeakInference",
+  "domain": "mathspeak",
+  "locale": "en",
+  "modality": "speech",
+  "factory": "summarySpeech",
+  "base": "input/common/inference.json",
+  "information": "English Mathspeak Inference rules.",
+  "active": "InferenceEnglish",
+  "exclude": [],
+  "tests": {
+    "NoLabel_0": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "NoLabel_1": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "Premise_0": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "Premise_1": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "Axiom": {
+      "expected": "axiom upper A"
+    },
+    "EmptyAxiom": {
+      "expected": "empty axiom"
+    },
+    "RightLabel_0": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "RightLabel_1": {
+      "expected": "inference rule label upper N with conclusion upper X and 2 premises"
+    },
+    "RightLabel_2": {
+      "expected": "inference rule label upper N with conclusion upper X and 3 premises"
+    },
+    "LeftLabel_0": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "LeftLabel_1": {
+      "expected": "inference rule label upper N with conclusion upper X and 2 premises"
+    },
+    "LeftLabel_2": {
+      "expected": "inference rule label upper N with conclusion upper X and 3 premises"
+    },
+    "Premises_0": {
+      "expected": "1st premise  axiom upper A"
+    },
+    "Premises_1": {
+      "expected": "1st premise  axiom upper A 2nd premise  axiom upper B"
+    },
+    "Premises_2": {
+      "expected": "1st premise  axiom upper A 2nd premise  axiom upper B 3rd premise  axiom upper C"
+    }
+  }
+}

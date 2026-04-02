@@ -1,0 +1,20 @@
+{
+  "name": "ExtrasCharacter",
+  "domain": "default",
+  "locale": "nb",
+  "style": "default",
+  "active": "ExtrasSymbolsBokmål",
+  "type": "character",
+  "factory": "symbol",
+  "base": "input/common/characters.json",
+  "information": "Bokmål Extras Character tests.",
+  "compare": true,
+  "tests": {
+    "0394-clearspeak-TriangleSymbol_Delta": {
+      "key": "Δ",
+      "domain": "clearspeak",
+      "style": "TriangleSymbol_Delta",
+      "expected": "stor Delta"
+    }
+  }
+}

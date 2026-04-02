@@ -1,0 +1,78 @@
+{
+  "name": "ItalianMathspeakDirectSpeech",
+  "domain": "mathspeak",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/common/direct_speech.json",
+  "information": "Italian Mathspeak Direct speech attributes.",
+  "active": "DirectSpeechItalian",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "modificante sopra A maiuscola C maiuscola con line"
+    },
+    "AriaLabels_1": {
+      "expected": "derivative of x is equal to sigma left parenthesis y meno x right parenthesis"
+    },
+    "AltText_0": {
+      "expected": "A C under line"
+    },
+    "AltText_1": {
+      "expected": "modificante sopra A maiuscola C maiuscola con line"
+    },
+    "ExactSpeech_0": {
+      "expected": "A C under line"
+    },
+    "ExactSpeech_1": {
+      "expected": "modificante sopra A maiuscola C maiuscola con line"
+    },
+    "MglyphTokens_0": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_1": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_2": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_3": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_4": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_5": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_6": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_7": {
+      "expected": "your glyph"
+    },
+    "MglyphTokens_8": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_9": {
+      "expected": "your glyph"
+    },
+    "MglyphGeneral_0": {
+      "expected": "23braid più 132braid uguale a 13braid"
+    },
+    "MglyphGeneral_1": {
+      "expected": "N maiuscola M maiuscola pedice 1 sottoinsieme di mfin"
+    },
+    "Issue_635": {
+      "expected": "più 132braid uguale a 13braid"
+    },
+    "Issue_644_0": {
+      "expected": "35 mickeys per hour"
+    },
+    "Issue_644_1": {
+      "expected": "35 miglia orarie"
+    },
+    "Issue_644_2": {
+      "expected": "35 mickeys per hour"
+    }
+  }
+}

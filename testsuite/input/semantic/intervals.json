@@ -1,0 +1,395 @@
+{
+  "_comment_": "Tests for different types of intervals.",
+  "tests": {
+    "_comment_0": "Anglo style intervals.",
+    "Anglo_style_00": {
+      "tex": "(a,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_01": {
+      "tex": "[a,b]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_style_02": {
+      "tex": "(a,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_style_03": {
+      "tex": "[a,b)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_04": {
+      "tex": "(\\infty,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_05": {
+      "tex": "(-\\infty,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_06": {
+      "tex": "(\\infty,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_style_07": {
+      "tex": "(-\\infty,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_style_08": {
+      "tex": "(a,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_09": {
+      "tex": "[a,-\\infty)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_10": {
+      "tex": "(\\infty,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_11": {
+      "tex": "(\\infty,-\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_12": {
+      "tex": "(-\\infty,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_style_13": {
+      "tex": "(-\\infty,-\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_0": {
+      "tex": "(0,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_1": {
+      "tex": "[0,b]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_left_2": {
+      "tex": "(0,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_left_3": {
+      "tex": "[0,b)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_4": {
+      "tex": "(\\infty,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_5": {
+      "tex": "(-\\infty,b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_6": {
+      "tex": "(\\infty,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_left_7": {
+      "tex": "(-\\infty,b]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_left_8": {
+      "tex": "(0,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_left_9": {
+      "tex": "[0,-\\infty)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_0": {
+      "tex": "(a,0)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_1": {
+      "tex": "[a,0]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_right_2": {
+      "tex": "(a,0]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_right_3": {
+      "tex": "[a,0)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_4": {
+      "tex": "(\\infty,0)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_5": {
+      "tex": "(-\\infty,0)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_6": {
+      "tex": "(\\infty,0]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_right_7": {
+      "tex": "(-\\infty,0]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_right_8": {
+      "tex": "(a,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_right_9": {
+      "tex": "[a,-\\infty)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_0": {
+      "tex": "(-1,1)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_1": {
+      "tex": "[-1,1]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_both_2": {
+      "tex": "(-1,1]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_both_3": {
+      "tex": "[-1,1)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_4": {
+      "tex": "(\\infty,1)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_5": {
+      "tex": "(-\\infty,1)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_6": {
+      "tex": "(\\infty,1]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_both_7": {
+      "tex": "(-\\infty,1]",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "Anglo_Numbers_both_8": {
+      "tex": "(-1,\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "Anglo_Numbers_both_9": {
+      "tex": "[-1,-\\infty)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "_comment_1": "Continental style intervals.",
+    "European_style_00a": {
+      "tex": "]a,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mrow><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi></mrow><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_00": {
+      "tex": "]a,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_01": {
+      "tex": "[a,b]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_style_02": {
+      "tex": "]a,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_style_03": {
+      "tex": "[a,b[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_04": {
+      "tex": "]\\infty,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_05": {
+      "tex": "]-\\infty,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_06": {
+      "tex": "]\\infty,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_style_07": {
+      "tex": "]-\\infty,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_style_08": {
+      "tex": "]a,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_09": {
+      "tex": "[a,-\\infty[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_10": {
+      "tex": "]\\infty,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_11": {
+      "tex": "]\\infty,-\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_12": {
+      "tex": "]-\\infty,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_style_13": {
+      "tex": "]-\\infty,-\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_0": {
+      "tex": "]0,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_1": {
+      "tex": "[0,b]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_left_2": {
+      "tex": "]0,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_left_3": {
+      "tex": "[0,b[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_4": {
+      "tex": "]\\infty,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_5": {
+      "tex": "]-\\infty,b[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_6": {
+      "tex": "]\\infty,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_left_7": {
+      "tex": "]-\\infty,b]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_left_8": {
+      "tex": "]0,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_left_9": {
+      "tex": "[0,-\\infty[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_0": {
+      "tex": "]a,0[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_1": {
+      "tex": "[a,0]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_right_2": {
+      "tex": "]a,0]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_right_3": {
+      "tex": "[a,0[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_4": {
+      "tex": "]\\infty,0[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_5": {
+      "tex": "]-\\infty,0[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_6": {
+      "tex": "]\\infty,0]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_right_7": {
+      "tex": "]-\\infty,0]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"0\">0</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_right_8": {
+      "tex": "]a,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_right_9": {
+      "tex": "[a,-\\infty[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_0": {
+      "tex": "]-1,1[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_1": {
+      "tex": "[-1,1]",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_both_2": {
+      "tex": "]-1,1]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_both_3": {
+      "tex": "[-1,1[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_4": {
+      "tex": "]\\infty,1[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_5": {
+      "tex": "]-\\infty,1[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_6": {
+      "tex": "]\\infty,1]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_both_7": {
+      "tex": "]-\\infty,1]",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mn data-latex=\"1\">1</mn><mo data-latex=\"]\" stretchy=\"false\">]</mo>"
+    },
+    "European_Numbers_both_8": {
+      "tex": "]-1,\\infty[",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "European_Numbers_both_9": {
+      "tex": "[-1,-\\infty[",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"1\">1</mn><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "None_intervals_0": {
+      "tex": "(a,b,c)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\",\">,</mo><mi data-latex=\"c\">c</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "None_intervals_1": {
+      "tex": "]a,b,c)",
+      "input": "<mo data-latex=\"]\" stretchy=\"false\">]</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\",\">,</mo><mi data-latex=\"c\">c</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "None_intervals_2": {
+      "tex": "(a,b,c[",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\",\">,</mo><mi data-latex=\"c\">c</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "None_intervals_3": {
+      "tex": "(\\infty,b,c[",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\",\">,</mo><mi data-latex=\"c\">c</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "None_intervals_4": {
+      "tex": "(a,b,-\\infty[",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\",\">,</mo><mi data-latex=\"b\">b</mi><mo data-latex=\",\">,</mo><mo data-latex=\"-\">&#x2212;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\"[\" stretchy=\"false\">[</mo>"
+    },
+    "None_intervals_5": {
+      "tex": "(a;b)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\";\">;</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "None_intervals_6": {
+      "tex": "(a;\\infty)",
+      "input": "<mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"a\">a</mi><mo data-latex=\";\">;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    },
+    "None_intervals_7": {
+      "tex": "[a;b)",
+      "input": "<mo data-latex=\"[\" stretchy=\"false\">[</mo><mi data-latex=\"a\">a</mi><mo data-latex=\";\">;</mo><mi data-latex=\"b\">b</mi><mo data-latex=\")\" stretchy=\"false\">)</mo>"
+    }
+  }
+}

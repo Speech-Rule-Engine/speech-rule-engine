@@ -1,0 +1,56 @@
+{
+  "information": "Semantic walker with Node generator on Quadratic CommonHtml expression.",
+  "walker": "Semantic",
+  "generator": "Node",
+  "base": "input/base/walker_test.json",
+  "factory": "walker",
+  "renderer": "CommonHTML",
+  "expression": "Quadratic_CommonHtml",
+  "tests": {
+    "Step_0": {
+      "input": null,
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_1": {
+      "input": "X",
+      "expected": "equality"},
+    "Step_2": {
+      "input": "DOWN",
+      "expected": "x"},
+    "Step_3": {
+      "input": "RIGHT",
+      "expected": "equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_4": {
+      "input": "RIGHT",
+      "expected": "equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_5": {
+      "input": "SPACE",
+      "expected": "Level 1 collapsible"},
+    "Step_6": {
+      "input": "X",
+      "expected": "fraction"},
+    "Step_7": {
+      "input": "DOWN",
+      "expected": "Numerator negative b plus or minus StartRoot b squared minus 4 a c EndRoot"},
+    "Step_8": {
+      "input": "SPACE",
+      "expected": "Level 2 Numerator"},
+    "Step_9": {
+      "input": "UP",
+      "expected": "equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_10": {
+      "input": "LEFT",
+      "expected": "x"},
+    "Step_11": {
+      "input": "LEFT",
+      "expected": "x"},
+    "Step_12": {
+      "input": "HOME",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"},
+    "Step_13": {
+      "input": "DOWN",
+      "expected": "x"},
+    "Step_14": {
+      "input": "X",
+      "expected": "identifier"}
+  }
+}

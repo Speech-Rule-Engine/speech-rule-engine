@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api direct speech tests.",
+  "base": "input/common/direct_speech.json"
+}

@@ -25,19 +25,35 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
+import { SpeechStructure } from '../rule_engine/speech_structure.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import {
+  addPreference,
+  findPreference
+} from '../speech_rules/clearspeak_preference_string.js';
+// import { RebuildStree } from '../walker/rebuild_stree.js';
+
+type OptionsList = { [key: string]: string };
 
 /**
  * Compute speech string for the xml version of the semantic tree.
  *
  * @param xml The xml element.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns A list of auditory descriptions
  *     for the node.
  */
-export function computeSpeech(xml: Element): AuditoryDescription[] {
-  return SpeechRuleEngine.getInstance().evaluateNode(xml);
+export function computeSpeech(
+  xml: Element,
+  clear = false
+): AuditoryDescription[] {
+  const result = SpeechRuleEngine.getInstance().evaluateNode(xml, clear);
+  return result;
 }
 
 /**
@@ -56,10 +72,11 @@ function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
  * Computes speech markup for the xml version of the semantic tree.
  *
  * @param tree The semantic node as XML.
+ * @param clear If the speech structure is to be cleared in the engine.
  * @returns The speech string.
  */
-export function computeMarkup(tree: Element): string {
-  const descrs = computeSpeech(tree);
+export function computeMarkup(tree: Element, clear = false): string {
+  const descrs = computeSpeech(tree, clear);
   return AuralRendering.markup(descrs);
 }
 
@@ -134,18 +151,40 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
  * @returns The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
-  const descrs = computePrefix(semantic);
+  const node = computePrefixNode(semantic);
+  const descrs = computePrefix(node);
   return AuralRendering.markup(descrs);
 }
 
 /**
- * Adds a speech prefix if necessary.
+ * Computes prefix speech.
+ *
+ * @param node The xml element.
+ * @returns A list of auditory descriptions for the prefix.
+ */
+export function computePrefix(node: Element): AuditoryDescription[] {
+  return node
+    ? SpeechRuleEngine.getInstance().runInSetting(
+        {
+          modality: 'prefix',
+          strict: true,
+          speech: true
+        },
+        function () {
+          return SpeechRuleEngine.getInstance().evaluateNode(node);
+        }
+      )
+    : [];
+}
+
+/**
+ * Computes the exact XML node from a semantic node for which a prefix is to be
+ * computed.
  *
  * @param semantic The semantic tree node.
- * @returns A list of auditory descriptions
- *     for the prefix.
+ * @returns An XML node corresponding to the tree node.
  */
-function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
+function computePrefixNode(semantic: SemanticNode): Element {
   const tree = SemanticTree.fromRoot(semantic);
   const nodes = XpathUtil.evalXPath(
     './/*[@id="' + semantic.id + '"]',
@@ -159,21 +198,9 @@ function computePrefix(semantic: SemanticNode): AuditoryDescription[] {
     // therefore not create unique ids.
     node = nodeAtPosition(semantic, nodes) || node;
   }
-  return node
-    ? SpeechRuleEngine.getInstance().runInSetting(
-        {
-          modality: 'prefix',
-          domain: 'default',
-          style: 'default',
-          strict: true,
-          speech: true
-        },
-        function () {
-          return SpeechRuleEngine.getInstance().evaluateNode(node);
-        }
-      )
-    : [];
+  return node;
 }
+
 /**
  * Finds the nodes at the same position as the semantic node in a list of XML
  * nodes. We define position via the path to root.
@@ -265,6 +292,61 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
 }
 
 /**
+ * The attributes needed to be retained from an maction element.
+ */
+enum NeededAttributes {
+  ID = 'data-semantic-id',
+  PARENT = 'data-semantic-parent',
+  LEVEL = 'aria-level',
+  POS = 'aria-posinset',
+  ROLE = 'role'
+}
+
+/**
+ * Retrieves a mapping of needed maction attributes from the given element.
+ *
+ * @param stree The element.
+ * @returns The attributes to value mappings.
+ */
+function getNeededAttributes(stree: Element) {
+  const result: { [K in NeededAttributes]?: string } = {};
+  for (const [, attr] of Object.entries(NeededAttributes)) {
+    result[attr] = stree.getAttribute(attr);
+  }
+  return result;
+}
+
+/**
+ * Connects maction nodes as alternatives if they are collapsed in the actual
+ * node.
+ *
+ * @param mml The mathml element for the node.
+ * @param stree The XML for the semantic tree.
+ * @returns Mapping for semantic and aria attributes missing on mactions.
+ */
+export function connectMactionSelections(mml: Element, stree: Element) {
+  const mactions = DomUtil.querySelectorAll(mml, 'maction');
+  const results: { [key: string]: { [K in NeededAttributes]?: string } } = {};
+  for (let i = 0, maction; (maction = mactions[i]); i++) {
+    // Get the span with the maction id in node.
+    const selection = parseInt(maction.getAttribute('selection'));
+    const children = Array.from(maction.childNodes);
+    const semantic = children.filter((child) =>
+      (child as Element).hasAttribute(NeededAttributes.ID)
+    )[0] as Element;
+    const selected = children[selection - 1];
+    if (!semantic || semantic === selected) {
+      continue;
+    }
+    const mid = semantic.getAttribute(Attribute.ID);
+    const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    cst.setAttribute('alternative', mid);
+    results[maction.getAttribute('id')] = getNeededAttributes(semantic);
+  }
+  return results;
+}
+
+/**
  * Connects all maction nodes as alternatives.
  *
  * @param mml The mathml element.
@@ -284,11 +366,12 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * Computes a speech summary if it exists.
  *
  * @param node The XML node.
+ * @param options The options list.
  * @returns The summary speech string.
  */
 export function retrieveSummary(
   node: Element,
-  options: { [key: string]: string } = {}
+  options: OptionsList = {}
 ): string {
   const descrs = computeSummary(node, options);
   return AuralRendering.markup(descrs);
@@ -298,12 +381,13 @@ export function retrieveSummary(
  * Adds a speech summary if necessary.
  *
  * @param node The XML node.
+ * @param options The options list.
  * @returns A list of auditory descriptions
  *     for the summary.
  */
-function computeSummary(
+export function computeSummary(
   node: Element,
-  options: { [key: string]: string } = {}
+  options: OptionsList = {}
 ): AuditoryDescription[] {
   const preOption = options.locale ? { locale: options.locale } : {};
   return node
@@ -318,4 +402,185 @@ function computeSummary(
         }
       )
     : [];
+}
+
+/**
+ * Adds a speech summary if necessary.
+ *
+ * @param node The XML node.
+ * @returns A list of auditory descriptions
+ *     for the summary.
+ */
+export function computePostfix(node: Element): AuditoryDescription[] {
+  // TODO: Maybe add personality.
+  const postfix = [];
+  if (node.getAttribute('role') === SemanticRole.MGLYPH) {
+    postfix.push(new AuditoryDescription({ text: 'image', personality: {} }));
+  }
+  if (node.hasAttribute('href')) {
+    postfix.push(new AuditoryDescription({ text: 'link', personality: {} }));
+  }
+  // TODO: This is trickery. Make that cleaner.
+  SpeechRuleEngine.getInstance().speechStructure.addNode(
+    node,
+    postfix,
+    'postfix'
+  );
+  return postfix;
+}
+
+// Changes for the webworker
+
+/**
+ * Completes the JSON speech structure for speech related modalities.
+ *
+ * @param structure The speech structure.
+ */
+export function completeModalities(structure: SpeechStructure) {
+  structure.completeModality('speech', computeSpeech);
+  structure.completeModality('prefix', computePrefix);
+  structure.completeModality('postfix', computePostfix);
+  structure.completeModality('summary', computeSummary);
+}
+
+/**
+ * Compute the JSON speech structure for a node.
+ *
+ * @param sxml The semantic node.
+ * @returns The computes structure as JSON.
+ */
+export function computeSpeechStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  completeModalities(structure);
+  return structure.json(['none', 'ssml']);
+}
+
+/**
+ * Compute the JSON Braille structure for a node.
+ *
+ * @param sxml The semantic node.
+ * @returns The computes structure as JSON.
+ */
+export function computeBrailleStructure(sxml: Element) {
+  computeSpeech(sxml, true);
+  const structure = SpeechRuleEngine.getInstance().speechStructure;
+  structure.completeModality('braille', computeSpeech);
+  return structure.json(['none']);
+}
+
+/**
+ * Cycles to next speech rule domain.
+ *
+ * @param options The options list.
+ * @param styles The styles for the current domains available.
+ * @returns The updated options list.
+ */
+export function nextRules(
+  options: OptionsList,
+  styles: OptionsList = EngineConst.DOMAIN_TO_STYLES
+): OptionsList {
+  // Rule cycling only makes sense for speech modality.
+  if (options.modality !== 'speech') {
+    return options;
+  }
+  const prefs = ClearspeakPreferences.getLocalePreferences();
+  if (!prefs[options.locale]) {
+    return options;
+  }
+  options.domain = options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
+  options.style = styles[options.domain] ?? options.style;
+  return options;
+}
+
+/**
+ * Cycles to next style or preference of the speech rule set if possible.
+ *
+ * @param node The semantic node currently in focus.
+ * @param options The options list.
+ * @returns The new style name.
+ */
+export function nextStyle(node: SemanticNode, options: OptionsList) {
+  const {
+    modality: modality,
+    domain: domain,
+    style: style,
+    locale: locale
+  } = options;
+  // Rule cycling only makes sense for speech modality.
+  if (modality !== 'speech') {
+    return style;
+  }
+
+  if (domain === 'mathspeak') {
+    const styles = ['default', 'brief', 'sbrief'];
+    const index = styles.indexOf(style);
+    if (index === -1) {
+      return style;
+    }
+    return index >= styles.length - 1 ? styles[0] : styles[index + 1];
+  }
+  if (domain === 'clearspeak') {
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    const loc = prefs[locale];
+    if (!loc) {
+      return 'default';
+    }
+    // TODO: return the previous one?
+    const smart = ClearspeakPreferences.relevantPreferences(node);
+    const current = findPreference(style, smart);
+    const options = loc[smart].map(function (x) {
+      return x.split('_')[1];
+    });
+    const index = options.indexOf(current);
+    if (index === -1) {
+      return style;
+    }
+    const next = index >= options.length - 1 ? options[0] : options[index + 1];
+    const result = addPreference(style, smart, next);
+    return result;
+  }
+  return style;
+}
+
+/**
+ * Extracts the current styles for all available rule set domains from the rule
+ * engine options. This is given in `domain2style`. If that is empty computes
+ * defaults.
+ *
+ * @param options The input options list.
+ * @returns Options list mapping domains to styles.
+ */
+export function toStyles(options: OptionsList): OptionsList {
+  const { domain, style, domain2style } = options;
+  const styles: OptionsList = {};
+  if (!domain2style) {
+    Object.assign(styles, EngineConst.DOMAIN_TO_STYLES);
+    styles[domain] = style;
+    return styles;
+  }
+  const split = domain2style.split(',');
+  for (const pair of split) {
+    const [first, second] = pair.split(/:(.*)/);
+    styles[first] = second
+      ? second
+      : (EngineConst.DOMAIN_TO_STYLES[first] ?? 'default');
+  }
+  return styles;
+}
+
+/**
+ * Compute a string version of the options list mapping domains to styles. This
+ * is used in the JSON speech structure to support dynamic domain and style
+ * changes.
+ *
+ * @param styles Options list mapping domains to styles.
+ * @returns The corresponding structured string.
+ */
+export function fromStyles(styles: OptionsList): string {
+  const strs = [];
+  for (const [domain, style] of Object.entries(styles)) {
+    strs.push(`${domain}:${style}`);
+  }
+  return strs.join(',');
 }

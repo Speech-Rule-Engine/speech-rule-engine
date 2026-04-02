@@ -1,0 +1,7 @@
+{
+  "factory": "deepSpeech",
+  "base": "input/semantic/implicit.json",
+  "information": "Deep Speech tests for juxtaposition heuristic.",
+  "exclude": [],
+  "tests": "ALL"
+}

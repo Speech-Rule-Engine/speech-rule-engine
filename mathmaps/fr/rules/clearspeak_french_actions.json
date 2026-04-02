@@ -322,17 +322,22 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"au carré\""
+      "[n] children/*[1]; [t] \"au carré\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"au cube\""
+      "[n] children/*[1]; [t] \"au cube\" (span:children/*[2])"
     ],
     [
       "Action",
       "fences-points",
       "[t] \"le point avec coordonées\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "fences-auto-interval",
+      "[t] \"un intervalle de\"; [n] children/*[1]/children/*[1]; [t] \"à\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -502,7 +507,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -512,7 +517,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -522,7 +527,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -532,7 +537,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -607,7 +612,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"divisé par\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"divisé par\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -667,7 +672,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"la valeur absolue de\"; [n] children/*[1] (pause:short); [t] \"fin de valeur absolue\" (pause:short)"
+      "[p] (pause:short); [t] \"la valeur absolue de\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fin de valeur absolue\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -682,12 +687,12 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"métrique de\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"métrique de\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"métrique de\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fin de métrique\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"métrique de\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fin de métrique\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -907,7 +912,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]; [t] \"à\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]; [t] \"à\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -932,22 +937,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"sous\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"avec\"; [n] children/*[2]; [t] \"dessus\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"avec\"; [n] children/*[1]/children/*[2]; [t] \"dessous\"; [t] \"et\"; [n] children/*[2]; [t] \"dessus\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"à\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sous\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"sur\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"avec\"; [n] children/*[2]; [t] \"dessous\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"sus\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

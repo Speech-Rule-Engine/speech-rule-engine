@@ -1,0 +1,320 @@
+{
+  "name": "ItalianClearspeakUnits",
+  "locale": "it",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Italian Clearspeak Units tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakItalian",
+  "exclude": [
+    "UnitSquare_0_brief",
+    "UnitSquare_0_sbrief",
+    "UnitSquare_1_brief",
+    "UnitSquare_1_sbrief",
+    "UnitSquare_2_brief",
+    "UnitSquare_2_sbrief",
+    "UnitCube_0_brief",
+    "UnitCube_0_sbrief",
+    "UnitCube_1_brief",
+    "UnitCube_1_sbrief",
+    "UnitCube_2_brief",
+    "UnitCube_2_sbrief",
+    "UnitInverse_brief",
+    "UnitInverse_sbrief",
+    "UnitDoubleInverse_brief",
+    "UnitDoubleInverse_sbrief",
+    "UnitDivide_brief",
+    "UnitDivide_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "pollici quadrato"
+    },
+    "UnitSquare_1_default": {
+      "expected": "secondi quadrato"
+    },
+    "UnitSquare_2_default": {
+      "expected": "metri quadrato"
+    },
+    "UnitCube_0_default": {
+      "expected": "pollici cubico"
+    },
+    "UnitCube_1_default": {
+      "expected": "secondi cubico"
+    },
+    "UnitCube_2_default": {
+      "expected": "metri cubico"
+    },
+    "UnitInverse_default": {
+      "expected": "pollici alla meno 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "pollici alla meno 1 millimetri alla meno 1"
+    },
+    "UnitDivide_default": {
+      "expected": "pollici al millimetro"
+    },
+    "UnitsSingle_0": {
+      "expected": "chilometri"
+    },
+    "UnitsSingle_1": {
+      "expected": "ampere"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohm"
+    },
+    "UnitsSingle_3": {
+      "expected": "chiloohm"
+    },
+    "UnitsSingle_4": {
+      "expected": "gradi celsius"
+    },
+    "UnitsSimple_0": {
+      "expected": "minimo di minuti"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 chilometri"
+    },
+    "UnitsSimple_2": {
+      "expected": "chilometri più secondi"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "chilometri quadrato"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "metri cubico"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "chilometri alla quarta potenza"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "metri alla meno 1"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "secondi metri alla meno 1"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "secondi al metro alla meno 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "secondi al metro alla meno 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 metri alla meno 1"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "chilometri al ora"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "newton chilometri al ora"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "m fratto chilometri"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 chilometri ore"
+    },
+    "UnitsExpressions_0": {
+      "expected": "secondi 3 m chilometri ore"
+    },
+    "UnitsExpressions_1": {
+      "expected": "chilometri secondi quadrato 3 m chilometri ore"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m chilometri ore frazione con numeratore N e denominatore secondi quadrato"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m chilometri ore newton al secondo quadrato"
+    },
+    "UnitPlural_1": {
+      "expected": "4 millimetri"
+    },
+    "UnitPlural_2": {
+      "expected": "1 millimetro"
+    },
+    "UnitPlural_3": {
+      "expected": "4 millimetri"
+    },
+    "UnitPlural_4": {
+      "expected": "1 millimetro"
+    },
+    "UnitCombine_0": {
+      "expected": "metri secondi"
+    },
+    "UnitCombine_1": {
+      "expected": "m secondi"
+    },
+    "UnitCombine_2": {
+      "expected": "metri s"
+    },
+    "UnitCombine_3": {
+      "expected": "metri secondi"
+    },
+    "UnitCombine_4": {
+      "expected": "m secondi"
+    },
+    "UnitCombine_5": {
+      "expected": "metri s"
+    },
+    "UnitCombine_6": {
+      "expected": "metri secondi litri"
+    },
+    "issue_364_1": {
+      "expected": "63360 pollici uguale a 63360 pollici uguale a 63360 pollici uguale a 63360 inches uguale a 5280 piedi uguale a 5280 piedi uguale a 5280 piedi uguale a 5280 feet uguale a 1760 iarde uguale a 1760 iarde uguale a 1760 yards uguale a 1 miglio uguale a 1 miglio uguale a 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 links uguale a 8000 links uguale a 8000 links uguale a 320 pertiche uguale a 320 pertiche uguale a 320 rods uguale a 80 catene uguale a 80 catene uguale a 80 chains uguale a 8 furlong uguale a 8 furlong uguale a 8 furlongs uguale a 1 miglio uguale a 1 miglio uguale a 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 piedi quadrati uguale a 43560 piedi quadrati uguale a 43560 piedi quadrato uguale a 43560 piedi quadrato uguale a 43560 square feet uguale a 4840 iarde quadrate uguale a 4840 iarde quadrate uguale a 4840 iarde quadrato uguale a 4840 square yards uguale a 160 pertiche quadrati uguale a 160 pertiche quadrati uguale a 160 pertiche quadrato uguale a 160 square rods uguale a 1 acro uguale a 1 acro uguale a 1 acre uguale a 1 fratto 640 miglia quadrate uguale a 1 fratto 640 miglia quadrate uguale a 1 fratto 640 miglia quadrato uguale a 1 fratto 640 square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 pollici cubici uguale a 46656 pollici cubici uguale a 46656 pollici cubico uguale a 46656 pollici cubo uguale a 46656 cubic inches uguale a 27 piedi cubici uguale a 27 piedi cubici uguale a 27 piedi cubico uguale a 27 piedi cubo uguale a 27 cubic feet uguale a 1 iarda cubica uguale a 1 iarda cubica uguale a 1 iarda cubico uguale a 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 dramme liquide uguale a 1024 dramme liquide uguale a 1024 fluid drams uguale a 768 cucchiai da te uguale a 768 cucchiai da te uguale a 768 teaspoons uguale a 256 cucchiai da tavola uguale a 256 cucchiai da tavola uguale a 256 tablespoons uguale a 128 once liquide uguale a 128 once liquide uguale a 128 fluid ounces uguale a 16 tazze uguale a 16 tazze uguale a 16 cups uguale a 8 pinte uguale a 8 pinte uguale a 8 pints uguale a 4 quarti uguale a 4 quarti uguale a 4 quarts uguale a 1 gallone uguale a 1 gallone uguale a 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 dramme uguale a 256 dramme uguale a 256 drams uguale a 16 once uguale a 16 once uguale a 16 ounces uguale a 1 # uguale a 1 libbra uguale a 1 libbra uguale a 1 pounds uguale a 100 hundredweight uguale a 100 hundredweight uguale a 100 hundredweights uguale a 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 pollici uguale a 63360 pollici uguale a 63360 pollici uguale a 63360 inches uguale a 5280 piedi uguale a 5280 piedi uguale a 5280 piedi uguale a 5280 feet uguale a 1760 iarde uguale a 1760 iarde uguale a 1760 yards uguale a 1 miglio uguale a 1 miglio uguale a 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule uguale a 1 chilogrammo puntino nel mezzo metri quadrato puntino nel mezzo secondi alla meno 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule uguale a 1 chilogrammo metri quadrato secondi alla meno 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule uguale a 1 chilogrammo metri quadrato secondi alla meno 2"
+    },
+    "unit_cube": {
+      "expected": "pollici cubico"
+    },
+    "UnitDiv_0": {
+      "expected": "chilometri chilogrammi secondi quadrato al joule"
+    },
+    "UnitDiv_1": {
+      "expected": "3 chilometri 1 chilogrammo secondi quadrato fratto joule"
+    },
+    "UnitDiv_2": {
+      "expected": "1 chilometro chilogrammi secondi quadrato fratto joule"
+    },
+    "UnitDiv_3": {
+      "expected": "1 chilometro chilogrammi secondi quadrato fratto 5 joule"
+    },
+    "UnitKm": {
+      "expected": "chilometri"
+    },
+    "UnitLong_1": {
+      "expected": "3 chilometri chilogrammi secondi quadrato joule"
+    },
+    "UnitLong_2": {
+      "expected": "3 chilometri chilogrammi secondi quadrato joule"
+    },
+    "UnitLong_3": {
+      "expected": "3 chilometri 4 chilogrammi secondi quadrato joule"
+    },
+    "UnitLong_4": {
+      "expected": "3 chilometri 1 chilogrammo secondi quadrato joule"
+    },
+    "UnitMultiple": {
+      "expected": "1 chilometro secondi più 2 chilometri secondi più 0 chilometri secondi più a chilometri secondi più"
+    },
+    "UnitMultitude": {
+      "expected": "1 chilometro più 2 chilometri più 0 chilometri più a chilometri"
+    },
+    "UnitNumb_0": {
+      "expected": "1 e due terzi chilogrammi"
+    },
+    "UnitNumb_1": {
+      "expected": "1 e due terzi chilogrammi chilometri"
+    },
+    "UnitNumb_2": {
+      "expected": "1 chilometro 2 chilogrammi chilometri"
+    },
+    "UnitTriple": {
+      "expected": "1 chilometro chilogrammi secondi più 2 chilometri chilogrammi secondi più 0 chilometri chilogrammi secondi più a chilometri chilogrammi secondi più"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dollaro"
+    },
+    "CurrencySingular_0_Currency_Position": {
+      "expected": "1 dollari"
+    },
+    "CurrencySingular_0_Currency_Prefix": {
+      "expected": "dollari 1"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "1 dollari"
+    },
+    "CurrencySingular_1_Currency_Position": {
+      "expected": "dollari 1"
+    },
+    "CurrencySingular_1_Currency_Prefix": {
+      "expected": "dollari 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dollari"
+    },
+    "CurrencySingle_0_Currency_Position": {
+      "expected": "dollari"
+    },
+    "CurrencySingle_0_Currency_Prefix": {
+      "expected": "dollari"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dollari"
+    },
+    "CurrencySingle_1_Currency_Position": {
+      "expected": "dollari"
+    },
+    "CurrencySingle_1_Currency_Prefix": {
+      "expected": "dollari"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dollari"
+    },
+    "CurrencyPlural_0_Currency_Position": {
+      "expected": "2 dollari"
+    },
+    "CurrencyPlural_0_Currency_Prefix": {
+      "expected": "dollari 2"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "2 dollari"
+    },
+    "CurrencyPlural_1_Currency_Position": {
+      "expected": "dollari 2"
+    },
+    "CurrencyPlural_1_Currency_Prefix": {
+      "expected": "dollari 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dollaro più 2 dollari più 0 dollari più a dollari"
+    },
+    "CurrencyMultitude_0_Currency_Position": {
+      "expected": "1 dollari più 2 dollari più 0 dollari più a dollari"
+    },
+    "CurrencyMultitude_0_Currency_Prefix": {
+      "expected": "dollari 1 più dollari 2 più dollari 0 più dollari a"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dollaro più 2 dollari più 0 dollari più a dollari"
+    },
+    "CurrencyMultitude_1_Currency_Position": {
+      "expected": "1 dollari più dollari 2 più 0 dollari più dollari a"
+    },
+    "CurrencyMultitude_1_Currency_Prefix": {
+      "expected": "dollari 1 più dollari 2 più dollari 0 più dollari a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euro più 2 euro più 0 euro più a euro"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 sterlina più 2 sterline più 0 sterline più a sterline"
+    }
+  }
+}

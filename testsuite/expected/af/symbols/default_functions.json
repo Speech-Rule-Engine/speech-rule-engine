@@ -1,0 +1,251 @@
+{
+  "name": "AfrikaansDefaultFunction",
+  "locale": "af",
+  "domain": "default",
+  "style": "default",
+  "active": "DefaultSymbolsAfrikaans",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Afrikaans Default Function tests.",
+  "compare": true,
+  "tests": {
+    "deg": {
+      "expected": "graad"
+    },
+    "Deg": {
+      "expected": "graad"
+    },
+    "det": {
+      "expected": "det"
+    },
+    "Det": {
+      "expected": "det"
+    },
+    "dim": {
+      "expected": "dimensie"
+    },
+    "Dim": {
+      "expected": "dimensie"
+    },
+    "hom": {
+      "expected": "hom"
+    },
+    "Hom": {
+      "expected": "hom"
+    },
+    "HOM": {
+      "expected": "hom"
+    },
+    "ker": {
+      "expected": "kern"
+    },
+    "Ker": {
+      "expected": "kern"
+    },
+    "Tr": {
+      "expected": "spoor"
+    },
+    "tr": {
+      "expected": "spoor"
+    },
+    "log": {
+      "expected": "logaritme"
+    },
+    "ln": {
+      "expected": "ln"
+    },
+    "lg": {
+      "expected": "logaritme met grondtal 10"
+    },
+    "exp": {
+      "expected": "exp"
+    },
+    "expt": {
+      "expected": "exp"
+    },
+    "gcd": {
+      "expected": "gcd"
+    },
+    "GCD": {
+      "expected": "gcd"
+    },
+    "lcm": {
+      "expected": "lcm"
+    },
+    "LCM": {
+      "expected": "lcm"
+    },
+    "arg": {
+      "expected": "arg"
+    },
+    "Arg": {
+      "expected": "arg"
+    },
+    "im": {
+      "expected": "im"
+    },
+    "Im": {
+      "expected": "im"
+    },
+    "re": {
+      "expected": "re"
+    },
+    "Re": {
+      "expected": "re"
+    },
+    "inf": {
+      "expected": "inf"
+    },
+    "Inf": {
+      "expected": "inf"
+    },
+    "lim": {
+      "expected": "limit"
+    },
+    "lim inf": {
+      "expected": "liminf"
+    },
+    "liminf": {
+      "expected": "liminf"
+    },
+    "lim sup": {
+      "expected": "limsup"
+    },
+    "limsup": {
+      "expected": "limsup"
+    },
+    "max": {
+      "expected": "max"
+    },
+    "Max": {
+      "expected": "max"
+    },
+    "min": {
+      "expected": "min"
+    },
+    "Min": {
+      "expected": "min"
+    },
+    "sup": {
+      "expected": "sup"
+    },
+    "Sup": {
+      "expected": "sup"
+    },
+    "injlim": {
+      "expected": "direkte limiet"
+    },
+    "inj lim": {
+      "expected": "direkte limiet"
+    },
+    "projlim": {
+      "expected": "inverse limiet"
+    },
+    "proj lim": {
+      "expected": "inverse limiet"
+    },
+    "mod": {
+      "expected": "mod"
+    },
+    "Pr": {
+      "expected": "waarskynlikheid"
+    },
+    "cosh": {
+      "expected": "hiperboliese kosinus"
+    },
+    "coth": {
+      "expected": "hiperboliese kotangens"
+    },
+    "csch": {
+      "expected": "hiperboliese kosekans"
+    },
+    "sech": {
+      "expected": "hiperboliese sekans"
+    },
+    "sinh": {
+      "expected": "hiperboliese sinus"
+    },
+    "tanh": {
+      "expected": "hiperboliese tangens"
+    },
+    "arcosh": {
+      "expected": "booh hiperboliese kosinus"
+    },
+    "arccosh": {
+      "expected": "booh hiperboliese kosinus"
+    },
+    "arcoth": {
+      "expected": "boog hiperboliese kotangens"
+    },
+    "arccoth": {
+      "expected": "boog hiperboliese kotangens"
+    },
+    "arcsch": {
+      "expected": "boog hiperboliese kosekans"
+    },
+    "arccsch": {
+      "expected": "boog hiperboliese kosekans"
+    },
+    "arsech": {
+      "expected": "boog hiperboliese sekans"
+    },
+    "arcsech": {
+      "expected": "boog hiperboliese sekans"
+    },
+    "arsinh": {
+      "expected": "boog hiperboliese sinus"
+    },
+    "arcsinh": {
+      "expected": "boog hiperboliese sinus"
+    },
+    "artanh": {
+      "expected": "boog hiperboliese tangens"
+    },
+    "arctanh": {
+      "expected": "boog hiperboliese tangens"
+    },
+    "cos": {
+      "expected": "kosinus"
+    },
+    "cosine": {
+      "expected": "kosinus"
+    },
+    "cot": {
+      "expected": "kotangens"
+    },
+    "csc": {
+      "expected": "kosekans"
+    },
+    "sec": {
+      "expected": "sekans"
+    },
+    "sin": {
+      "expected": "sinus"
+    },
+    "sine": {
+      "expected": "sinus"
+    },
+    "tan": {
+      "expected": "tangens"
+    },
+    "arccos": {
+      "expected": "boog kosinus"
+    },
+    "arccot": {
+      "expected": "boog kotangens"
+    },
+    "arccsc": {
+      "expected": "boog kosekans"
+    },
+    "arcsec": {
+      "expected": "boog sekans"
+    },
+    "arcsin": {
+      "expected": "boog sinus"
+    },
+    "arctan": {
+      "expected": "boog tangens"
+    }
+  }
+}

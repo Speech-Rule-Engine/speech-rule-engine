@@ -19,6 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Options } from '../common/options.js';
 import {
   SemanticFont,
   SemanticRole,
@@ -30,7 +31,7 @@ import { SemanticAbstractParser } from './semantic_parser.js';
 import * as SemanticPred from './semantic_pred.js';
 import { SemanticProcessor } from './semantic_processor.js';
 import * as SemanticUtil from './semantic_util.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 import { SemanticHeuristics } from './semantic_heuristic_factory.js';
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
@@ -62,9 +63,13 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * The semantic parser for MathML elements.
+   *
+   * @param options An options object
    */
-  constructor() {
+  constructor(public options: Options) {
     super('MathML');
+    // TODO: process options, in particular for heuristics
+    SemanticHeuristics.options = options;
     this.parseMap_ = new Map([
       [MMLTAGS.SEMANTICS, this.semantics_.bind(this)],
       [MMLTAGS.MATH, this.rows_.bind(this)],
@@ -96,7 +101,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       [MMLTAGS.MMULTISCRIPTS, this.multiscripts_.bind(this)],
       [MMLTAGS.ANNOTATION, this.empty_.bind(this)],
       [MMLTAGS.NONE, this.empty_.bind(this)],
-      [MMLTAGS.MACTION, this.action_.bind(this)]
+      [MMLTAGS.MACTION, this.action_.bind(this)],
+      [MMLTAGS.MPHANTOM, this.phantom_.bind(this)],
     ]);
     const meaning = {
       type: SemanticType.IDENTIFIER,
@@ -132,6 +138,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     const tag = DomUtil.tagName(mml) as MMLTAGS;
     const func = this.parseMap_.get(tag);
     const newNode = (func ? func : this.dummy_.bind(this))(mml, children);
+    if (newNode.noupdate) {
+      return newNode;
+    }
     SemanticUtil.addAttributes(newNode, mml);
     if (
       [
@@ -374,6 +383,26 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   }
 
   /**
+   * Parses an phantom element.
+   *
+   * @param node A MathML node.
+   * @param children The children of the node.
+   * @returns The newly created semantic node.
+   */
+  private phantom_(node: Element, children: Element[]): SemanticNode {
+    // TODO: this could be more refined.
+    let newNode: SemanticNode;
+    if (children.length) {
+      newNode = this.getFactory().makeUnprocessed(node);
+      newNode.type = SemanticType.TEXT;
+      newNode.role = SemanticRole.SPACE;
+    } else {
+      newNode = this.empty_(node, children);
+    }
+    return newNode;
+  }
+
+  /**
    * Parse a space element. If sufficiently wide, create an empty text element.
    * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
    *
@@ -472,7 +501,12 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private fenced_(node: Element, children: Element[]): SemanticNode {
-    const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
+    const semNodes = this.parseList(children);
+    // Annotate all empty elements so they are not purged!
+    semNodes.forEach((node) => {
+      if (SemanticPred.isType(node, SemanticType.EMPTY)) {
+        node.addAnnotation('empty', 'MFENCED')
+      }});
     const sepValue = SemanticMathml.getAttribute_(node, 'separators', ',');
     const open = SemanticMathml.getAttribute_(node, 'open', '(');
     const close = SemanticMathml.getAttribute_(node, 'close', ')');
@@ -482,6 +516,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
       sepValue,
       semNodes
     );
+    newNode.mathmlTree = node;
+    newNode.mathml = [node];
     const nodes = SemanticProcessor.getInstance().tablesInRow([newNode]);
     return nodes[0];
   }
@@ -568,12 +604,15 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses an empty element.
    *
-   * @param _node A MathML node.
+   * @param node A MathML node.
    * @param _children The children of the node.
    * @returns The newly created semantic node.
    */
-  private empty_(_node: Element, _children: Element[]): SemanticNode {
-    return this.getFactory().makeEmptyNode();
+  private empty_(node: Element, _children: Element[]): SemanticNode {
+    const newNode = this.getFactory().makeEmptyNode();
+    newNode.mathml = [node];
+    newNode.mathmlTree = node;
+    return newNode;
   }
 
   /**

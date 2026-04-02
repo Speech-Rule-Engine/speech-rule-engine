@@ -33,6 +33,7 @@ import { StaticTrieNode } from './abstract_trie_node.js';
 import { TrieNode, TrieNodeKind } from './trie_node.js';
 import { getNode } from './trie_node_factory.js';
 
+
 export class Trie {
   /**
    *  The root of the trie.

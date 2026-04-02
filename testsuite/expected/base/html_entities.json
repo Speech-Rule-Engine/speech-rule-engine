@@ -1,0 +1,37 @@
+{
+  "information": "HTML and XML Entities tests.",
+  "factory": "html",
+  "_comment0_": "XML Entities.",
+  "tests": {
+    "XmlEntities_0": {
+      "input": "<a>&lt;</a>",
+      "expected": "<a>&lt;</a>"
+    },
+    "XmlEntities_1": {
+      "input": "<a>&amp;</a>",
+      "expected": "<a>&amp;</a>"
+    },
+    "_comment1_": "HTML4 Entities.",
+    "Html4Entities_0": {
+      "input": "<a>&Eacute;</a>",
+      "expected": "<a xmlns=\"http://www.w3.org/1999/xhtml\">É</a>"
+    },
+    "Html4Entities_1": {
+      "input": "<a>&Icirc;</a>",
+      "expected": "<a xmlns=\"http://www.w3.org/1999/xhtml\">Î</a>"
+    },
+    "_comment2_": "HTML5 Entities.",
+    "Html5Entities_0": {
+      "input": "<a>&ncup;</a>",
+      "expected": "<a xmlns=\"http://www.w3.org/1999/xhtml\">⩂</a>"
+    },
+    "Html5Entities_1": {
+      "input": "<a>&varsubsetneq;</a>",
+      "expected": "<a xmlns=\"http://www.w3.org/1999/xhtml\">⊊︀</a>"
+    },
+    "Html5Entities_2": {
+      "input": "<a>&Vfr;</a>",
+      "expected": "<a xmlns=\"http://www.w3.org/1999/xhtml\">𝔙</a>"
+    }
+  }
+}

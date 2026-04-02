@@ -22,13 +22,13 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '4.1.2';
+  public static readonly VERSION: string = '5.0.0-beta.7';
 
   /**
    * Locale mapping to language names.
    */
   public static readonly LOCALES: Map<string, string> = new Map([
-    ['af', 'Africaans'],
+    ['af', 'Afrikaans'],
     ['ca', 'Catalan'],
     ['da', 'Danish'],
     ['de', 'German'],
@@ -69,7 +69,7 @@ export class Variables {
    * MathJax version. This indicates the lowest MathJax version this version of
    * SRE is compatible with.
    */
-  public static readonly mathjaxVersion: string = '4.0.0-beta.5';
+  public static readonly mathjaxVersion: string = '4.0.0';
 
   /**
    * The URL for SRE resources.
@@ -78,10 +78,4 @@ export class Variables {
     'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
     Variables.VERSION +
     '/lib/mathmaps';
-
-  /**
-   * Path to Xpath library file.
-   */
-  public static readonly WGXpath: string =
-    'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 }

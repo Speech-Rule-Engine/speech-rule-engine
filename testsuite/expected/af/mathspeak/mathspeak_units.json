@@ -1,0 +1,324 @@
+{
+  "name": "AfrikaansMathspeakUnits",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/common/units_speech.json",
+  "information": "Afrikaans Mathspeak Units tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakAfrikaans",
+  "exclude": [
+    "CurrencySingular_0_Currency_Position",
+    "CurrencySingular_0_Currency_Prefix",
+    "CurrencySingular_1_Currency_Position",
+    "CurrencySingular_1_Currency_Prefix",
+    "CurrencySingle_0_Currency_Position",
+    "CurrencySingle_0_Currency_Prefix",
+    "CurrencySingle_1_Currency_Position",
+    "CurrencySingle_1_Currency_Prefix",
+    "CurrencyPlural_0_Currency_Position",
+    "CurrencyPlural_0_Currency_Prefix",
+    "CurrencyPlural_1_Currency_Position",
+    "CurrencyPlural_1_Currency_Prefix",
+    "CurrencyMultitude_0_Currency_Position",
+    "CurrencyMultitude_0_Currency_Prefix",
+    "CurrencyMultitude_1_Currency_Position",
+    "CurrencyMultitude_1_Currency_Prefix"
+  ],
+  "compare": true,
+  "tests": {
+    "UnitSquare_0_default": {
+      "expected": "duim kwadraat"
+    },
+    "UnitSquare_0_brief": {
+      "expected": "duim kwadraat"
+    },
+    "UnitSquare_0_sbrief": {
+      "expected": "duim kwadraat"
+    },
+    "UnitSquare_1_default": {
+      "expected": "sekondes kwadraat"
+    },
+    "UnitSquare_1_brief": {
+      "expected": "sekondes kwadraat"
+    },
+    "UnitSquare_1_sbrief": {
+      "expected": "sekondes kwadraat"
+    },
+    "UnitSquare_2_default": {
+      "expected": "meter kwadraat"
+    },
+    "UnitSquare_2_brief": {
+      "expected": "meter kwadraat"
+    },
+    "UnitSquare_2_sbrief": {
+      "expected": "meter kwadraat"
+    },
+    "UnitCube_0_default": {
+      "expected": "duim kubbiek"
+    },
+    "UnitCube_0_brief": {
+      "expected": "duim kubbiek"
+    },
+    "UnitCube_0_sbrief": {
+      "expected": "duim kubbiek"
+    },
+    "UnitCube_1_default": {
+      "expected": "sekondes kubbiek"
+    },
+    "UnitCube_1_brief": {
+      "expected": "sekondes kubbiek"
+    },
+    "UnitCube_1_sbrief": {
+      "expected": "sekondes kubbiek"
+    },
+    "UnitCube_2_default": {
+      "expected": "meter kubbiek"
+    },
+    "UnitCube_2_brief": {
+      "expected": "meter kubbiek"
+    },
+    "UnitCube_2_sbrief": {
+      "expected": "meter kubbiek"
+    },
+    "UnitInverse_default": {
+      "expected": "duim Superskrif negatief 1"
+    },
+    "UnitInverse_brief": {
+      "expected": "duim Sup negatief 1"
+    },
+    "UnitInverse_sbrief": {
+      "expected": "duim Sup negatief 1"
+    },
+    "UnitDoubleInverse_default": {
+      "expected": "duim Superskrif negatief 1 Basislyn millimeter Superskrif negatief 1"
+    },
+    "UnitDoubleInverse_brief": {
+      "expected": "duim Sup negatief 1 Basis millimeter Sup negatief 1"
+    },
+    "UnitDoubleInverse_sbrief": {
+      "expected": "duim Sup negatief 1 Basis millimeter Sup negatief 1"
+    },
+    "UnitDivide_default": {
+      "expected": "BeginBreuk duim Oor millimeter EndBreuk"
+    },
+    "UnitDivide_brief": {
+      "expected": "BeginBreuk duim Oor millimeter EndBreuk"
+    },
+    "UnitDivide_sbrief": {
+      "expected": "Breuk duim Oor millimeter End breuk"
+    },
+    "UnitsSingle_0": {
+      "expected": "kilometer"
+    },
+    "UnitsSingle_1": {
+      "expected": "ampere"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohm"
+    },
+    "UnitsSingle_3": {
+      "expected": "kilohm"
+    },
+    "UnitsSingle_4": {
+      "expected": "Selsius"
+    },
+    "UnitsSimple_0": {
+      "expected": "min minute"
+    },
+    "UnitsSimple_1": {
+      "expected": "3 kilometer"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilometer plus sekondes"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "kilometer kwadraat"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "meter kubbiek"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilometer Superskrif 4"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "meter Superskrif negatief 1"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "sekondes meter Superskrif negatief 1"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "BeginBreuk sekondes Oor meter EndBreuk Superskrif negatief 1"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "BeginBreuk sekondes Oor meter EndBreuk Superskrif negatief 1"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "3 meter Superskrif negatief 1"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "BeginBreuk kilometer Oor ure EndBreuk"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newton BeginBreuk kilometer Oor ure EndBreuk"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "BeginBreuk m Oor kilometer EndBreuk"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "3 kilometer ure"
+    },
+    "UnitsExpressions_0": {
+      "expected": "sekondes 3 m kilometer ure"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilometer sekondes kwadraat 3 m kilometer ure"
+    },
+    "UnitsExpressions_2": {
+      "expected": "3 m kilometer ure BeginBreuk hoofletter N Oor sekondes kwadraat EndBreuk"
+    },
+    "UnitsExpressions_3": {
+      "expected": "3 m kilometer ure BeginBreuk Newton Oor sekondes kwadraat EndBreuk"
+    },
+    "UnitPlural_1": {
+      "expected": "4 millimeter"
+    },
+    "UnitPlural_2": {
+      "expected": "1 millimeter"
+    },
+    "UnitPlural_3": {
+      "expected": "4 millimeter"
+    },
+    "UnitPlural_4": {
+      "expected": "1 millimeter"
+    },
+    "UnitCombine_0": {
+      "expected": "meter sekondes"
+    },
+    "UnitCombine_1": {
+      "expected": "m sekondes"
+    },
+    "UnitCombine_2": {
+      "expected": "meter s"
+    },
+    "UnitCombine_3": {
+      "expected": "meter sekondes"
+    },
+    "UnitCombine_4": {
+      "expected": "m sekondes"
+    },
+    "UnitCombine_5": {
+      "expected": "meter s"
+    },
+    "UnitCombine_6": {
+      "expected": "meter sekondes lieters"
+    },
+    "issue_364_1": {
+      "expected": "63360 duim is gelyk aan 63360 duim is gelyk aan 63360 dubbelpriem is gelyk aan 63360 inches is gelyk aan 5280 voet is gelyk aan 5280 voet is gelyk aan 5280 priem is gelyk aan 5280 feet is gelyk aan 1760 jaart is gelyk aan 1760 jaart is gelyk aan 1760 yards is gelyk aan 1 myl is gelyk aan 1 myl is gelyk aan 1 mile"
+    },
+    "issue_364_2": {
+      "expected": "8000 links is gelyk aan 8000 links is gelyk aan 8000 links is gelyk aan 320 stawe is gelyk aan 320 stawe is gelyk aan 320 rods is gelyk aan 80 kettings is gelyk aan 80 kettings is gelyk aan 80 chains is gelyk aan 8 furlong is gelyk aan 8 furlong is gelyk aan 8 furlongs is gelyk aan 1 myl is gelyk aan 1 myl is gelyk aan 1 mile"
+    },
+    "issue_364_3": {
+      "expected": "43560 vierkant 'n voet is gelyk aan 43560 vierkant 'n voet is gelyk aan 43560 voet kwadraat is gelyk aan 43560 priem kwadraat is gelyk aan 43560 square feet is gelyk aan 4840 vierkant 'n jaart is gelyk aan 4840 vierkant 'n jaart is gelyk aan 4840 jaart kwadraat is gelyk aan 4840 square yards is gelyk aan 160 vierkant 'n staaf is gelyk aan 160 vierkant 'n staaf is gelyk aan 160 stawe kwadraat is gelyk aan 160 square rods is gelyk aan 1 akker is gelyk aan 1 akker is gelyk aan 1 acre is gelyk aan BeginBreuk 1 Oor 640 EndBreuk vierkant 'n myl is gelyk aan BeginBreuk 1 Oor 640 EndBreuk vierkant 'n myl is gelyk aan BeginBreuk 1 Oor 640 EndBreuk myl kwadraat is gelyk aan BeginBreuk 1 Oor 640 EndBreuk square miles"
+    },
+    "issue_364_4": {
+      "expected": "46656 kubieke duim is gelyk aan 46656 kubieke duim is gelyk aan 46656 duim kubbiek is gelyk aan 46656 dubbelpriem kubbiek is gelyk aan 46656 cubic inches is gelyk aan 27 kubieke voet is gelyk aan 27 kubieke voet is gelyk aan 27 voet kubbiek is gelyk aan 27 priem kubbiek is gelyk aan 27 cubic feet is gelyk aan 1 kubieke jaart is gelyk aan 1 kubieke jaart is gelyk aan 1 jaart kubbiek is gelyk aan 1 cubic yard"
+    },
+    "issue_364_5": {
+      "expected": "1024 vloeibare dragmes is gelyk aan 1024 vloeibare dragmes is gelyk aan 1024 fluid drams is gelyk aan 768 teelepels is gelyk aan 768 teelepels is gelyk aan 768 teaspoons is gelyk aan 256 eetlepels is gelyk aan 256 eetlepels is gelyk aan 256 tablespoons is gelyk aan 128 vloeibare onse is gelyk aan 128 vloeibare onse is gelyk aan 128 fluid ounces is gelyk aan 16 koppies is gelyk aan 16 koppies is gelyk aan 16 cups is gelyk aan 8 pinte is gelyk aan 8 pinte is gelyk aan 8 pints is gelyk aan 4 kwarte is gelyk aan 4 kwarte is gelyk aan 4 quarts is gelyk aan 1 galon is gelyk aan 1 galon is gelyk aan 1 gallon"
+    },
+    "issue_364_6": {
+      "expected": "256 dragmes is gelyk aan 256 dragmes is gelyk aan 256 drams is gelyk aan 16 onse is gelyk aan 16 onse is gelyk aan 16 ounces is gelyk aan 1 # is gelyk aan 1 pond is gelyk aan 1 pond is gelyk aan 1 pounds is gelyk aan 100 honderdgewigte is gelyk aan 100 honderdgewigte is gelyk aan 100 hundredweights is gelyk aan 2000 tons"
+    },
+    "issue_366": {
+      "expected": "63360 duim is gelyk aan 63360 duim is gelyk aan 63360 dubbelpriem is gelyk aan 63360 inches is gelyk aan 5280 voet is gelyk aan 5280 voet is gelyk aan 5280 priem is gelyk aan 5280 feet is gelyk aan 1760 jaart is gelyk aan 1760 jaart is gelyk aan 1760 yards is gelyk aan 1 myl is gelyk aan 1 myl is gelyk aan 1 mile"
+    },
+    "testSample_13_1_2_var0": {
+      "expected": "1 joule is gelyk aan 1 kilogram dot meter kwadraat dot sekondes Superskrif negatief 2"
+    },
+    "testSample_13_1_2_var1": {
+      "expected": "1 joule is gelyk aan 1 kilogram meter kwadraat sekondes Superskrif negatief 2"
+    },
+    "testSample_13_1_2_var2": {
+      "expected": "1 joule is gelyk aan 1 kilogram meter kwadraat sekondes Superskrif negatief 2"
+    },
+    "unit_cube": {
+      "expected": "duim kubbiek"
+    },
+    "UnitDiv_0": {
+      "expected": "BeginBreuk kilometer kilogram sekondes kwadraat Oor joule EndBreuk"
+    },
+    "UnitDiv_1": {
+      "expected": "BeginBreuk 3 kilometer 1 kilogram sekondes kwadraat Oor joule EndBreuk"
+    },
+    "UnitDiv_2": {
+      "expected": "BeginBreuk 1 kilometer kilogram sekondes kwadraat Oor joule EndBreuk"
+    },
+    "UnitDiv_3": {
+      "expected": "BeginBreuk 1 kilometer kilogram sekondes kwadraat Oor 5 joule EndBreuk"
+    },
+    "UnitKm": {
+      "expected": "kilometer"
+    },
+    "UnitLong_1": {
+      "expected": "3 kilometer kilogram sekondes kwadraat joule"
+    },
+    "UnitLong_2": {
+      "expected": "3 kilometer kilogram sekondes kwadraat joule"
+    },
+    "UnitLong_3": {
+      "expected": "3 kilometer 4 kilogram sekondes kwadraat joule"
+    },
+    "UnitLong_4": {
+      "expected": "3 kilometer 1 kilogram sekondes kwadraat joule"
+    },
+    "UnitMultiple": {
+      "expected": "1 kilometer sekondes plus 2 kilometer sekondes plus 0 kilometer sekondes plus a kilometer sekondes plus"
+    },
+    "UnitMultitude": {
+      "expected": "1 kilometer plus 2 kilometer plus 0 kilometer plus a kilometer"
+    },
+    "UnitNumb_0": {
+      "expected": "1 en twee derdes kilogram"
+    },
+    "UnitNumb_1": {
+      "expected": "1 en twee derdes kilogram kilometer"
+    },
+    "UnitNumb_2": {
+      "expected": "1 kilometer 2 kilogram kilometer"
+    },
+    "UnitTriple": {
+      "expected": "1 kilometer kilogram sekondes plus 2 kilometer kilogram sekondes plus 0 kilometer kilogram sekondes plus a kilometer kilogram sekondes plus"
+    },
+    "CurrencySingular_0_default": {
+      "expected": "1 dollers"
+    },
+    "CurrencySingular_1_default": {
+      "expected": "dollers 1"
+    },
+    "CurrencySingle_0_default": {
+      "expected": "dollers"
+    },
+    "CurrencySingle_1_default": {
+      "expected": "dollers"
+    },
+    "CurrencyPlural_0_default": {
+      "expected": "2 dollers"
+    },
+    "CurrencyPlural_1_default": {
+      "expected": "dollers 2"
+    },
+    "CurrencyMultitude_0_default": {
+      "expected": "1 dollers plus 2 dollers plus 0 dollers plus a dollers"
+    },
+    "CurrencyMultitude_1_default": {
+      "expected": "1 dollers plus dollers 2 plus 0 dollers plus dollers a"
+    },
+    "CurrencyMultitude_2_default": {
+      "expected": "1 euros plus 2 euros plus 0 euros plus a euros"
+    },
+    "CurrencyMultitude_3_default": {
+      "expected": "1 ponde plus 2 ponde plus 0 ponde plus a ponde"
+    }
+  }
+}

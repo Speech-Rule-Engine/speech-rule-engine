@@ -1,0 +1,138 @@
+{
+  "name": "GermanMathspeakCoverage",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_coverage.json",
+  "information": "German Mathspeak tests for achieving full coverage.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "active": "MathspeakIssuesGerman",
+  "exclude": [],
+  "tests": {
+    "BaselineNumberGreek_default": {
+      "expected": "alpha Grundlinie 2"
+    },
+    "BaselineNumberGreek_brief": {
+      "expected": "alpha Grund 2"
+    },
+    "BaselineNumberGreek_sbrief": {
+      "expected": "alpha Grund 2"
+    },
+    "BaselineNumberOther_default": {
+      "expected": "normales Alef-Symbol Grundlinie 2"
+    },
+    "BaselineNumberOther_brief": {
+      "expected": "normales Alef-Symbol Grund 2"
+    },
+    "BaselineNumberOther_sbrief": {
+      "expected": "normales Alef-Symbol Grund 2"
+    },
+    "BaselineNumberFontGreek_default": {
+      "expected": "alpha Grundlinie fettes 2"
+    },
+    "BaselineNumberFontGreek_brief": {
+      "expected": "alpha Grund fettes 2"
+    },
+    "BaselineNumberFontGreek_sbrief": {
+      "expected": "alpha Grund fettes 2"
+    },
+    "BaselineNumberFontOther_default": {
+      "expected": "normales Alef-Symbol Grundlinie fettes 2"
+    },
+    "BaselineNumberFontOther_brief": {
+      "expected": "normales Alef-Symbol Grund fettes 2"
+    },
+    "BaselineNumberFontOther_sbrief": {
+      "expected": "normales Alef-Symbol Grund fettes 2"
+    },
+    "OverbarGreek_default": {
+      "expected": "alpha Überstrich"
+    },
+    "OverbarOther_default": {
+      "expected": "normales Alef-Symbol Überstrich"
+    },
+    "UnderbarGreek_default": {
+      "expected": "alpha Unterstrich"
+    },
+    "UnderbarOther_default": {
+      "expected": "normales Alef-Symbol Unterstrich"
+    },
+    "OvertildeGreek_default": {
+      "expected": "alpha Tilde oben"
+    },
+    "OvertildeOther_default": {
+      "expected": "normales Alef-Symbol Tilde oben"
+    },
+    "UndertildeGreek_default": {
+      "expected": "alpha Tilde unten"
+    },
+    "UndertildeOther_default": {
+      "expected": "normales Alef-Symbol Tilde unten"
+    },
+    "SetEmpty_default": {
+      "expected": "leere Menge"
+    },
+    "SetEmpty_brief": {
+      "expected": "leere Menge"
+    },
+    "SetEmpty_sbrief": {
+      "expected": "leere Menge"
+    },
+    "SetSingleton_default": {
+      "expected": "Anfang Menge a Ende Menge"
+    },
+    "SetSingleton_brief": {
+      "expected": "Anfang Menge a Ende Menge"
+    },
+    "SetSingleton_sbrief": {
+      "expected": "Menge a Ende Menge"
+    },
+    "SetCollection_default": {
+      "expected": "Anfang Menge a Komma b Ende Menge"
+    },
+    "SetCollection_brief": {
+      "expected": "Anfang Menge a Komma b Ende Menge"
+    },
+    "SetCollection_sbrief": {
+      "expected": "Menge a Komma b Ende Menge"
+    },
+    "SetExtended_default": {
+      "expected": "Anfang Menge a Komma b Ende Menge"
+    },
+    "SetExtended_brief": {
+      "expected": "Anfang Menge a Komma b Ende Menge"
+    },
+    "SetExtended_sbrief": {
+      "expected": "Menge a Komma b Ende Menge"
+    },
+    "NumberSet": {
+      "expected": "großes C mit Doppelstrich"
+    },
+    "LimitLower0_default": {
+      "expected": "modifiziert unten Limes mit Unterstrich Unterschrift a ist gleich 5 Ende Unterschrift Unterschrift b ist gleich 3 Ende Unterschrift"
+    },
+    "LimitLower1_default": {
+      "expected": "Limes Unterschrift n Überschrift 2 Ende Überschrift Überschrift x Ende Überschrift"
+    },
+    "BlankLineEmpty0_default": {
+      "expected": "Anfang Anordnung 1. Zeile  a 2. Zeile  leer Ende Anordnung"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "c 1 h Index 4 minus 2 s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h Index 4 minus 2 s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "c 1 h Index 4 minus 2 s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h Index 4 minus 2 s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "c 1 h Index 4 minus 2 s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h Index 4 minus 2 s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "c 1 h Index 4 minus 2 s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h Index 4 minus 2 s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "c 1 h Index 4 minus 2 s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h Index 4 minus 2 s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "c 1 h Index 4 minus 2 s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h Index 4 minus 2 s"
+    }
+  }
+}

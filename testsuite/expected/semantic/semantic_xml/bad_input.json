@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml bad input tests.",
+  "base": "input/semantic/bad_input.json"
+}

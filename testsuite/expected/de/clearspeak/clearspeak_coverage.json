@@ -1,0 +1,284 @@
+{
+  "name": "GermanClearspeakCoverage",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "German Clearspeak Coverage tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f von, g von x"
+    },
+    "ApplSimple_1": {
+      "expected": "f von, g von x, ist gleich f von x, plus g von x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "Sinus x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 Zeilen, Zeile 1: a. Zeile 2: leer"
+    },
+    "Empty_Line_1": {
+      "expected": "2 Zeilen, Zeile 1: a. Zeile 2: leer"
+    },
+    "Empty_Line_2": {
+      "expected": "2 Zeilen, Zeile 1: a. Zeile 2: leer"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 Zeilen, Zeile 1: a; ist gleich; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 Zeilen, Zeile 1: a; ist gleich; b. Zeile 2: leer"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 Zeilen, Zeile 1: a; ist gleich; b. Zeile 2: leer"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 Zeilen, Zeile 1: a; ist gleich; b. Zeile 2: 1; leer; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_1_default": {
+      "expected": "1 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_2_default": {
+      "expected": "45 Grad, 1 Minute, 20 Sekunden"
+    },
+    "Angle_3_default": {
+      "expected": "45 Grad, 10 Minuten, 1 Sekunde"
+    },
+    "Angle_4_default": {
+      "expected": "1 Fuß, 20 Zoll"
+    },
+    "Angle_5_default": {
+      "expected": "10 Fuß, 1 Zoll"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 Grad, 1 Minute, 20 Sekunden"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 Grad, 10 Minuten, 1 Sekunde"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 Minute, 20 Sekunden"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 Minuten, 1 Sekunde"
+    },
+    "Angle_0_Length": {
+      "expected": "45 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_1_Length": {
+      "expected": "1 Grad, 10 Minuten, 20 Sekunden"
+    },
+    "Angle_2_Length": {
+      "expected": "45 Grad, 1 Minute, 20 Sekunden"
+    },
+    "Angle_3_Length": {
+      "expected": "45 Grad, 10 Minuten, 1 Sekunde"
+    },
+    "Angle_4_Length": {
+      "expected": "1 Fuß, 20 Zoll"
+    },
+    "Angle_5_Length": {
+      "expected": "10 Fuß, 1 Zoll"
+    },
+    "Enclose_0": {
+      "expected": "12"
+    },
+    "Enclose_1": {
+      "expected": "12"
+    },
+    "Enclose_2": {
+      "expected": "2 mit 12 unten"
+    },
+    "Enclose_3": {
+      "expected": "12 mit 2 unten"
+    },
+    "Enclose_4": {
+      "expected": "12 mit 2 oben"
+    },
+    "Enclose_5": {
+      "expected": "2 mit 12 oben"
+    },
+    "Enclose_6": {
+      "expected": "12"
+    },
+    "Enclose_7": {
+      "expected": "12"
+    },
+    "Enclose_8": {
+      "expected": "2 mit 12 unten"
+    },
+    "Enclose_9": {
+      "expected": "12 mit 2 unten"
+    },
+    "Enclose_10": {
+      "expected": "12 mit 2 oben"
+    },
+    "Enclose_11": {
+      "expected": "2 mit 12 oben"
+    },
+    "EncloseSpecial_0": {
+      "expected": "großes A"
+    },
+    "EncloseSpecial_1": {
+      "expected": "großes A"
+    },
+    "EncloseSpecial_2": {
+      "expected": "großes A"
+    },
+    "EncloseSpecial_3": {
+      "expected": "großes A"
+    },
+    "NestedRoots_0": {
+      "expected": "Quadratwurzel aus, Kubikwurzel aus a, plus b"
+    },
+    "NestedRoots_1": {
+      "expected": "Quadratwurzel aus, die vierte Wurzel aus a, plus b"
+    },
+    "NestedRoots_2": {
+      "expected": "Quadratwurzel aus, Quadratwurzel aus a, plus b"
+    },
+    "NestedRoots_3": {
+      "expected": "positive Quadratwurzel aus, positive Quadratwurzel aus a, plus b"
+    },
+    "NestedRoots_4": {
+      "expected": "positive Quadratwurzel aus, positive Quadratwurzel aus a, plus b, Wurzel Ende"
+    },
+    "NestedRoots_5": {
+      "expected": "positive Quadratwurzel aus, negative Quadratwurzel aus a, Wurzel Ende, plus b, Wurzel Ende"
+    },
+    "Tensor_0": {
+      "expected": "linker unterer Index a linker oberer Index b x rechter unterer Index c rechter oberer Index d"
+    },
+    "Tensor_1": {
+      "expected": "linker unterer Index a b linker oberer Index g h x rechter unterer Index c d rechter oberer Index e f"
+    },
+    "Tensor_2": {
+      "expected": "linker unterer Index a linker oberer Index b x; rechter oberer Index d"
+    },
+    "Tensor_3": {
+      "expected": "linker unterer Index a linker oberer Index b x rechter unterer Index c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; linker oberer Index b x rechter unterer Index c rechter oberer Index d"
+    },
+    "Tensor_5": {
+      "expected": "linker unterer Index a; x rechter unterer Index c rechter oberer Index d"
+    },
+    "Set_0": {
+      "expected": "die Menge aller x nicht in A mit B"
+    },
+    "Set_1": {
+      "expected": "die Menge aller x gehört nicht zu A mit B"
+    },
+    "Set_2": {
+      "expected": "die Menge aller x kein Element von A mit B"
+    },
+    "Set_3": {
+      "expected": "die Menge aller x nicht in A mit B"
+    },
+    "Set_4": {
+      "expected": "die Menge B"
+    },
+    "Set_5": {
+      "expected": "die leere Menge"
+    },
+    "NamedSet_0": {
+      "expected": "die positiven rationalen Zahlen"
+    },
+    "NamedSet_1": {
+      "expected": "die positiven rationalen Zahlen"
+    },
+    "NamedSet_2": {
+      "expected": "die negativen rationalen Zahlen"
+    },
+    "NamedSet_3": {
+      "expected": "die negativen rationalen Zahlen"
+    },
+    "NamedSet_4": {
+      "expected": "q-zwei"
+    },
+    "NamedSet_5": {
+      "expected": "q-zwei"
+    },
+    "NamedSet_6": {
+      "expected": "n-zwei"
+    },
+    "NamedSet_7": {
+      "expected": "n-zwei"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 Fälle, Fall 1: f von x, ist gleich minus x, if x kleiner als 0. Fall 2: f von x, ist gleich x, if x größer oder gleich 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 Bedingungen, Bedingung 1: f von x, ist gleich minus x; if x kleiner als 0. Bedingung 2: f von x, ist gleich x, if x größer oder gleich 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 geteilt durch 20"
+    },
+    "UnitFraction": {
+      "expected": "2 Kilometer geteilt durch b"
+    },
+    "Decimal": {
+      "expected": "Dezimalbruch 1 Komma 4 mit Periode 3"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 so dass 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Determinante"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 hoch 2 Quadrat"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 hoch i Quadrat"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 hoch zwei drittel Quadrat"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 hoch 2 Kubik"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 hoch i Kubik"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 hoch zwei drittel Kubik"
+    },
+    "MultiRel": {
+      "expected": "a kleiner oder gleich b ist gleich c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 hoch Sinus von, Klammer auf, 2 plus x, Klammer zu"
+    },
+    "CompositeFunctionFences": {
+      "expected": "Klammer auf, f plus g, Klammer zu, von, Klammer auf, 2 plus x, Klammer zu"
+    },
+    "LimUpper": {
+      "expected": "Summe unter I"
+    },
+    "Overscript": {
+      "expected": "A mit B oben"
+    },
+    "DetFemale": {
+      "expected": "Determinante A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x hoch A"
+    }
+  }
+}

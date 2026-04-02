@@ -1,0 +1,89 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakCapitalLetters",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "Korean Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "_comment3_": " var speech = 'the fraction with numerator sine A, and denominator a,",
+      "_comment4_": " equals, the fraction with numerator sine B, and denominator b';",
+      "expected": "a 분의 싸인 A, 는, b 분의 싸인 B"
+    },
+    "Cap002": {
+      "expected": "c 제곱 은 a 제곱 더하기 b 제곱 빼기 2 a b 코싸인 C"
+    },
+    "Cap003": {
+      "expected": "탄젠트 A 는, b 분의 a"
+    },
+    "Cap004": {
+      "expected": "A B"
+    },
+    "Cap005": {
+      "expected": "a A"
+    },
+    "Cap006": {
+      "expected": "b A"
+    },
+    "Cap007": {
+      "expected": "B a"
+    },
+    "Cap008": {
+      "expected": "각 A B C"
+    },
+    "Cap009": {
+      "expected": "각 A B C 의 크기"
+    },
+    "Cap010": {
+      "expected": "각 A 의 크기"
+    },
+    "_comment5_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "_comment6_": " var speech = 'the fraction with numerator sine cap A, and denominator a,",
+      "_comment7_": " equals, the fraction with numerator sine cap B, and denominator b';",
+      "expected": "a 분의 싸인 대문자 A, 는, b 분의 싸인 대문자 B"
+    },
+    "Cap012": {
+      "expected": "c 제곱 은 a 제곱 더하기 b 제곱 빼기 2 a b 코싸인 대문자 C"
+    },
+    "Cap013": {
+      "expected": "탄젠트 대문자 A 는, b 분의 a"
+    },
+    "Cap014": {
+      "expected": "대문자 A, 대문자 B"
+    },
+    "Cap015": {
+      "expected": "a, 대문자 A"
+    },
+    "Cap016": {
+      "expected": "b, 대문자 A"
+    },
+    "Cap017": {
+      "expected": "대문자 B, a"
+    },
+    "Cap018": {
+      "expected": "각 대문자 A, 대문자 B, 대문자 C"
+    },
+    "Cap019": {
+      "expected": "각 대문자 A, 대문자 B, 대문자 C 의 크기"
+    },
+    "Cap020": {
+      "expected": "각 대문자 A 의 크기"
+    },
+    "Cap020a": {
+      "expected": "각 대문자 A"
+    },
+    "_comment8_": " /**",
+    "_comment9_": "  * Testing ClearspeakKoreanClearspeakCapitalLetters Example Cap020 (extra)",
+    "_comment10_": "  */",
+    "_comment12_": "   var preference = 'Caps_SayCaps';",
+    "_comment13_": "   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';",
+    "_comment14_": "   var speech = 'angle cap A';",
+    "_comment16_": " };"
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakParentheses",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_parentheses.json",
+  "information": "Afrikaans Clearspeak Parentheses rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "expected": "25"
+    },
+    "Paren002": {
+      "expected": "2 x"
+    },
+    "Paren003": {
+      "expected": "2 plus negatiewe 2"
+    },
+    "Paren004": {
+      "expected": "2 minus negatiewe 2"
+    },
+    "Paren004a": {
+      "expected": "2 minus negatiewe 2"
+    },
+    "Paren005": {
+      "expected": "2 minus, links hakkie, negatiewe 2, regs hakkie, tot die mag drie"
+    },
+    "Paren006": {
+      "expected": "links hakkie, 2 x, regs hakkie, kwadraat"
+    },
+    "Paren007": {
+      "expected": "links hakkie, 2 x, regs hakkie, verhef tot die y plus 1 mag"
+    },
+    "Paren008": {
+      "expected": "negatiewe 2 x"
+    },
+    "Paren009": {
+      "expected": "links hakkie, negatiewe 2 x, regs hakkie, kwadraat"
+    },
+    "Paren010": {
+      "expected": "negatiewe, links hakkie, 2 x, regs hakkie, kwadraat"
+    },
+    "Paren011": {
+      "expected": "een helfte"
+    },
+    "Paren012": {
+      "expected": "drie kwarte x"
+    },
+    "Paren013": {
+      "expected": "links hakkie, 11 oor 22, regs hakkie"
+    },
+    "Paren014": {
+      "expected": "een helfte tot die vierde mag"
+    },
+    "Paren015": {
+      "expected": "links hakkie, 11 oor 15, regs hakkie, kwadraat"
+    },
+    "Paren016": {
+      "expected": "links hakkie, 25, regs hakkie"
+    },
+    "Paren017": {
+      "expected": "links hakkie, 2 x, regs hakkie"
+    },
+    "Paren018": {
+      "expected": "2 plus, links hakkie, negatiewe 2, regs hakkie"
+    },
+    "Paren019": {
+      "expected": "2 minus, links hakkie, negatiewe 2, regs hakkie"
+    },
+    "Paren020": {
+      "expected": "2 minus, links hakkie, negatiewe 2, regs hakkie, tot die mag drie"
+    },
+    "Paren021": {
+      "expected": "links hakkie, 2 x, regs hakkie, kwadraat"
+    },
+    "Paren022": {
+      "expected": "links hakkie, 2 x, regs hakkie, verhef tot die y plus 1 mag"
+    },
+    "Paren023": {
+      "expected": "links hakkie, negatiewe 2 x, regs hakkie"
+    },
+    "Paren024": {
+      "expected": "links hakkie, negatiewe 2 x, regs hakkie, kwadraat"
+    },
+    "Paren025": {
+      "expected": "negatiewe, links hakkie, 2 x, regs hakkie, kwadraat"
+    },
+    "Paren026": {
+      "expected": "links hakkie, een helfte, regs hakkie"
+    },
+    "Paren027": {
+      "expected": "links hakkie, drie kwarte x, regs hakkie"
+    },
+    "Paren028": {
+      "expected": "links hakkie, 11 oor 22, regs hakkie"
+    },
+    "Paren029": {
+      "expected": "links hakkie, een helfte, regs hakkie, tot die vierde mag"
+    },
+    "Paren030": {
+      "expected": "links hakkie, 11 oor 15, regs hakkie, kwadraat"
+    },
+    "Paren031": {
+      "expected": "die punt met koördinate 1 komma 2"
+    },
+    "Paren032": {
+      "expected": "die punt met koördinate x komma y"
+    },
+    "Paren033": {
+      "expected": "die punt met koördinate 1 komma 2 komma 3"
+    },
+    "Paren034": {
+      "expected": "die punt met koördinate x komma y komma z"
+    },
+    "Paren035": {
+      "expected": "die punt met koördinate 1 komma 2 komma 386"
+    },
+    "Paren036": {
+      "expected": "die interval van a tot b, nie insluitend a of b"
+    },
+    "Paren037": {
+      "expected": "die interval van 0 tot 1, nie insluitend 0 of 1"
+    },
+    "Paren038": {
+      "expected": "die interval van a tot b, insluitend a, maar nie insluitend b"
+    },
+    "Paren039": {
+      "expected": "die interval van 0 tot 1, insluitend 0, maar nie insluitend 1"
+    },
+    "Paren040": {
+      "expected": "die interval van a tot b, nie insluitend a, maar insluitend b"
+    },
+    "Paren041": {
+      "expected": "die interval van 0 tot 1, nie insluitend 0, maar insluitend 1"
+    },
+    "Paren042": {
+      "expected": "die interval van a tot b, insluitend a en b"
+    },
+    "Paren043": {
+      "expected": "die interval van 0 tot 1, insluitend 0 en 1"
+    },
+    "Paren044": {
+      "expected": "die interval van negatiewe oneindigheid tot b, nie insluitend b"
+    },
+    "Paren045": {
+      "expected": "die interval van negatiewe oneindigheid tot 1, nie insluitend 1"
+    },
+    "Paren046": {
+      "expected": "die interval van negatiewe oneindigheid tot b, insluitend b"
+    },
+    "Paren047": {
+      "expected": "die interval van negatiewe oneindigheid tot 1, insluitend 1"
+    },
+    "Paren048": {
+      "expected": "die interval van a tot oneindigheid, nie insluitend a"
+    },
+    "Paren049": {
+      "expected": "die interval van 1 tot oneindigheid, nie insluitend 1"
+    },
+    "Paren050": {
+      "expected": "die interval van a tot oneindigheid, insluitend a"
+    },
+    "Paren051": {
+      "expected": "die interval van 1 tot oneindigheid, insluitend 1"
+    },
+    "Paren052": {
+      "expected": "die interval van negatiewe oneindigheid tot oneindigheid"
+    },
+    "Paren053": {
+      "expected": "die interval van negatiewe oneindigheid tot positief oneindigheid"
+    },
+    "Nest001": {
+      "expected": "f van, g van x"
+    },
+    "Nest002": {
+      "expected": "f van, links hakkie, g van, links hakkie, x plus 1, regs hakkie, regs hakkie"
+    },
+    "Nest003": {
+      "expected": "6 minus, links blokhakkie, 2 minus, links hakkie, 3 plus 5, regs hakkie, regs blokhakkie"
+    },
+    "Nest004": {
+      "expected": "6 minus, links hakkie, 2 minus, tweede links hakkie, 3 plus 5, tweede regs hakkie, regs hakkie"
+    },
+    "Nest005": {
+      "expected": "4 maal, links blokhakkie, x plus 3 maal, links hakkie, 2 x, plus 1, regs hakkie, regs blokhakkie"
+    },
+    "Nest006": {
+      "expected": "4 maal, links hakkie, x plus 3 maal, tweede links hakkie, 2 x, plus 1, tweede regs hakkie, regs hakkie"
+    },
+    "Nest007": {
+      "expected": "1 plus, links hakkie, 2 plus, tweede links hakkie, 3 plus 7, tweede regs hakkie, minus, tweede links hakkie, 2 plus 8, tweede regs hakkie, regs hakkie"
+    },
+    "Nest008": {
+      "expected": "1 plus, links hakkie, 2 plus, tweede links hakkie, 3 minus, derde links hakkie, 4 minus 5, derde regs hakkie, tweede regs hakkie, regs hakkie"
+    },
+    "Nest009": {
+      "expected": "links hakkie, tweede links hakkie, 2 plus, derde links hakkie, 3 plus 4, derde regs hakkie, plus 5, tweede regs hakkie, plus 6 plus, tweede links hakkie, derde links hakkie, 7 plus, vierde links hakkie, 8 plus 1, vierde regs hakkie, derde regs hakkie, plus 2, tweede regs hakkie, regs hakkie"
+    },
+    "SilParen001": {
+      "expected": "25"
+    },
+    "SilParen002": {
+      "expected": "2 x"
+    },
+    "SilParen003": {
+      "expected": "2 plus, negatiewe 2"
+    },
+    "SilParen004": {
+      "expected": "2 minus, negatiewe 2"
+    },
+    "SilParen005": {
+      "expected": "2 minus, negatiewe 2, tot die mag drie"
+    },
+    "SilParen006": {
+      "expected": "2 x, kwadraat"
+    },
+    "SilParen007": {
+      "expected": "2 x, verhef tot die y plus 1 mag"
+    },
+    "SilParen008": {
+      "expected": "negatiewe 2 x"
+    },
+    "SilParen009": {
+      "expected": "negatiewe 2 x, kwadraat"
+    },
+    "SilParen010": {
+      "expected": "negatiewe, 2 x, kwadraat"
+    },
+    "SilParen011": {
+      "expected": "een helfte"
+    },
+    "SilParen012": {
+      "expected": "drie kwarte x"
+    },
+    "SilParen013": {
+      "expected": "11 oor 22"
+    },
+    "SilParen014": {
+      "expected": "een helfte, tot die vierde mag"
+    },
+    "SilParen015": {
+      "expected": "11 oor 15, kwadraat"
+    }
+  }
+}

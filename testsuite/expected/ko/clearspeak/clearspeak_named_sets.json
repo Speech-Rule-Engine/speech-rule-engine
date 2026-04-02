@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakNamedSets",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Korean Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
+    "_comment2_": " Named Sets (Number Systems)",
+    "NumSys001": {
+      "expected": "실수 집합"
+    },
+    "NumSys001a": {
+      "expected": "실수 집합"
+    },
+    "NumSys002": {
+      "expected": "복소수 집합"
+    },
+    "NumSys002a": {
+      "expected": "복소수 집합"
+    },
+    "NumSys003": {
+      "expected": "정수 집합"
+    },
+    "NumSys003a": {
+      "expected": "정수 집합"
+    },
+    "NumSys004": {
+      "expected": "유리수 집합"
+    },
+    "NumSys004a": {
+      "expected": "유리수 집합"
+    },
+    "NumSys005": {
+      "expected": "자연수 집합"
+    },
+    "NumSys005a": {
+      "expected": "자연수 집합"
+    },
+    "NumSys005_1": {
+      "expected": "영을 포함한 자연수 집합"
+    },
+    "NumSys005_1a": {
+      "expected": "영을 포함한 자연수 집합"
+    },
+    "NumSys006": {
+      "expected": "양의 정수 집합"
+    },
+    "NumSys006a": {
+      "expected": "양의 정수 집합"
+    },
+    "NumSys006_1": {
+      "expected": "음의 정수 집합"
+    },
+    "NumSys006_1a": {
+      "expected": "음의 정수 집합"
+    },
+    "NumSys007": {
+      "expected": "이 차원 실수 집합"
+    },
+    "NumSys007a": {
+      "expected": "이 차원 실수 집합"
+    },
+    "NumSys008": {
+      "expected": "삼 차원 정수 집합"
+    },
+    "NumSys008a": {
+      "expected": "삼 차원 정수 집합"
+    },
+    "NumSys009": {
+      "expected": "n 차원 복소수 집합"
+    },
+    "NumSys009a": {
+      "expected": "n 차원 복소수 집합"
+    },
+    "NumSys010": {
+      "expected": "무한대 차원 실수 집합"
+    },
+    "NumSys010a": {
+      "expected": "무한대 차원 실수 집합"
+    }
+  }
+}

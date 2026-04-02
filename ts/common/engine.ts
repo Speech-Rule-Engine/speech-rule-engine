@@ -22,9 +22,12 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as Dcstr from '../rule_engine/dynamic_cstr.js';
 import * as EngineConst from './engine_const.js';
+import * as FileUtil from './file_util.js';
+import { SystemExternal } from './system_external.js';
 
 import { Debugger } from './debugger.js';
 import { Variables } from './variables.js';
+import { Options } from './options.js';
 
 declare const SREfeature: { [key: string]: any };
 
@@ -54,40 +57,12 @@ export class SREError extends Error {
  *
  */
 export class Engine {
-  /**
-   * Binary feature vector.
-   */
-  public static BINARY_FEATURES: string[] = [
-    'automark',
-    'mark',
-    'character',
-    'cleanpause',
-    'strict',
-    'structure',
-    'aria',
-    'pprint',
-    'cayleyshort',
-    'linebreaks'
-  ];
+  public options: Options = new Options();
 
   /**
-   * String feature vector.
+   * True if configuration block has been applied in HTTP mode.
    */
-  public static STRING_FEATURES: string[] = [
-    'markup',
-    'style',
-    'domain',
-    'speech',
-    'walker',
-    'defaultLocale',
-    'locale',
-    'delay',
-    'modality',
-    'rate',
-    'rules',
-    'subiso',
-    'prune'
-  ];
+  public config = false;
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -119,29 +94,14 @@ export class Engine {
   public init = true;
 
   /**
-   * Delay flag, to avoid auto setup of engine.
-   */
-  public delay = false;
-
-  /**
    * Maps domains to comparators.
    */
   public comparators: { [key: string]: () => Dcstr.Comparator } = {};
 
   /**
-   * Current domain.
-   */
-  public domain = 'mathspeak';
-
-  /**
-   * Current style.
-   */
-  public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
-
-  /**
    * The default locale.
    */
-  public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  private _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
 
   /**
    * Sets the default locale for SRE.
@@ -156,104 +116,6 @@ export class Engine {
   public get defaultLocale() {
     return this._defaultLocale;
   }
-
-  /**
-   * Current locale.
-   */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
-
-  /**
-   * Current subiso for the locale.
-   */
-  public subiso = '';
-
-  /**
-   * Current modality.
-   */
-  public modality = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY];
-
-  /**
-   * The level to which speech attributes are added to enriched elements
-   * (none, shallow, deep).
-   */
-  public speech: EngineConst.Speech = EngineConst.Speech.NONE;
-
-  /**
-   * Caching during speech generation.
-   */
-  public markup: EngineConst.Markup = EngineConst.Markup.NONE;
-
-  // Markup options
-  public mark = true;
-  /**
-   * Automatic marking of elements for spans.
-   */
-  public automark = false;
-  public character = true;
-  public cleanpause = true;
-
-  /**
-   * Nemeth layout options
-   */
-  public cayleyshort = true;
-  public linebreaks = false;
-
-  /**
-   * Percentage of default rate used by external TTS. This can be used to scale
-   * pauses.
-   */
-  public rate = '100';
-
-  /**
-   * Current walker mode.
-   */
-  public walker = 'Table';
-
-  /**
-   * Indicates if skeleton structure attributes are added to enriched elements
-   */
-  public structure = false;
-  public aria = false;
-
-  /**
-   * List of rule sets given as the constructor functions.
-   */
-  public ruleSets: string[] = [];
-
-  /**
-   * Strict interpretations of rules and constraints.
-   */
-  public strict = false;
-
-  /**
-   * Current browser is MS Internet Explorer but not Edge.
-   */
-  public isIE = false;
-
-  /**
-   * Current browser is MS Edge.
-   */
-  public isEdge = false;
-
-  /**
-   * Pretty Print mode.
-   */
-  public pprint = false;
-
-  /**
-   * True if configuration block has been applied in HTTP mode.
-   */
-  public config = false;
-
-  /**
-   * Rules file to load.
-   */
-  public rules = '';
-
-  /**
-   * EngineConstraints to prune given dot separated.
-   */
-  public prune = '';
 
   /**
    * @returns The Engine object.
@@ -295,7 +157,7 @@ export class Engine {
    * @returns The current base rate.
    */
   public getRate(): number {
-    const numeric = parseInt(this.rate, 10);
+    const numeric = parseInt(this.options.rate, 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
@@ -318,22 +180,24 @@ export class Engine {
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
           const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
-          (this as any)[feature] = value;
+          (this.options as any)[feature] = value;
         }
       }
     }
-    EngineConst.DOMAIN_TO_STYLES[this.domain] = this.style;
-    const dynamic = [this.locale, this.modality, this.domain, this.style].join(
-      '.'
-    );
+    const dynamic = [
+      this.options.locale,
+      this.options.modality,
+      this.options.domain,
+      this.options.style
+    ].join('.');
     const fallback = Dcstr.DynamicProperties.createProp(
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
     );
-    const comparator = this.comparators[this.domain];
-    const parser = this.parsers[this.domain];
+    const comparator = this.comparators[this.options.domain];
+    const parser = this.parsers[this.options.domain];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
@@ -346,7 +210,7 @@ export class Engine {
    * Private constructor.
    */
   private constructor() {
-    this.locale = this.defaultLocale;
+    this.options.locale = this.defaultLocale;
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser = new Dcstr.DynamicCstrParser(
       Dcstr.DynamicCstr.DEFAULT_ORDER
@@ -361,7 +225,11 @@ export class Engine {
    * @param feature An object describing some setup features.
    */
   public configurate(feature: { [key: string]: boolean | string }) {
-    if (this.mode === EngineConst.Mode.HTTP && !this.config) {
+    if (
+      this.mode === EngineConst.Mode.HTTP &&
+      !SystemExternal.webworker &&
+      !this.config
+    ) {
       configBlocks(feature);
       this.config = true;
     }
@@ -377,6 +245,41 @@ export class Engine {
     if (fn) {
       this.customLoader = fn;
     }
+  }
+
+  /**
+   * Method to setup the basic engine parameters and options.
+   *
+   * @param feature An object describing some setup features.
+   */
+  public setup(feature: { [key: string]: boolean | string }) {
+    // Setting mode first!
+    if (typeof feature['mode'] !== 'undefined') {
+      this.mode = feature['mode'] as EngineConst.Mode;
+    }
+    this.configurate(feature);
+    this.options.set(feature);
+    if (feature.json) {
+      SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
+    }
+    this.setCustomLoader(feature.custom);
+  }
+
+  /**
+   * Query the engine setup.
+   *
+   * @returns Overview of engine setup as a JSON dictionary.
+   */
+  public json(): { [key: string]: boolean | string } {
+    return Object.assign({ mode: this.mode }, this.options.json());
+  }
+
+  /**
+   * Reset the engine options. This excludes computed elements like mode,
+   * comparators etc.
+   */
+  public reset() {
+    this.options = new Options();
   }
 }
 // Backwards compatibility for 4.X
@@ -438,7 +341,7 @@ export class EnginePromise {
    * @returns The promise for a locale.
    */
   public static get(
-    locale: string = Engine.getInstance().locale
+    locale: string = Engine.getInstance().options.locale
   ): Promise<string> {
     return EnginePromise.promises[locale] || Promise.resolve('');
   }

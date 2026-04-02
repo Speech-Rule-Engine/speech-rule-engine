@@ -76,8 +76,8 @@ export function generateBase() {
  * @param locale The current locale.
  */
 export function generate(locale: string) {
-  const oldLocale = Engine.getInstance().locale;
-  Engine.getInstance().locale = locale;
+  const oldLocale = Engine.getInstance().options.locale;
+  Engine.getInstance().options.locale = locale;
   L10n.setLocale();
   MathCompoundStore.changeLocale({ locale: locale } as UnicodeJson);
   makeDomains();
@@ -90,7 +90,7 @@ export function generate(locale: string) {
       alphabetRules(letters, alphabet, int.font, !!int.capital);
     }
   }
-  Engine.getInstance().locale = oldLocale;
+  Engine.getInstance().options.locale = oldLocale;
   L10n.setLocale();
 }
 

@@ -113,6 +113,61 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition; [t] \"Column\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"Label\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cases-case",
+      "[t] \"Case\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-line",
+      "[t] \"Line\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-case",
+      "[t] \"Case\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-equation",
+      "[t] \"Equation\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-step",
+      "[t] \"Step\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-row",
+      "[t] \"Row\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-constraint",
+      "[t] \"Constraint\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple-short",
+      "[t] \"Column\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-short",
+      "[n] ../..; [t] \"Column\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[t] \"Row\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ]
   ]
 }

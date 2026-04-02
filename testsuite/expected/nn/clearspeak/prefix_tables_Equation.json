@@ -1,0 +1,193 @@
+{
+  "name": "NynorskClearspeakPrefixTablesEquation",
+  "locale": "nn",
+  "factory": "prefix",
+  "domain": "clearspeak",
+  "style": "MultiLineLabel_Equation",
+  "base": "input/common/prefix_tables.json",
+  "information": "Nynorsk Prefix Tables Clearspeak Equation tests.",
+  "active": "PrefixNynorsk",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "ligning 1"
+    },
+    "Binomials_1": {
+      "expected": "ligning 2"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "Utvalg"
+    },
+    "Binomials_1_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "Stikkprøvestorleik"
+    },
+    "Vectors_0": {
+      "expected": "rad 1"
+    },
+    "Vectors_1": {
+      "expected": "rad 2"
+    },
+    "Vectors_2": {
+      "expected": "rad 3"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "rad 1"
+    },
+    "Matrices_depth_1": {
+      "expected": "rad 1, Kolonne 1"
+    },
+    "Matrices_depth_2": {
+      "expected": "rad 1, Kolonne 2"
+    },
+    "Matrices_depth_3": {
+      "expected": "rad 2"
+    },
+    "Matrices_depth_4": {
+      "expected": "rad 2, Kolonne 1"
+    },
+    "Matrices_depth_5": {
+      "expected": "rad 2, Kolonne 2"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "rad 1"
+    },
+    "Matrices_1": {
+      "expected": "Kolonne 1"
+    },
+    "Matrices_2": {
+      "expected": "Kolonne 2"
+    },
+    "Matrices_3": {
+      "expected": "rad 2"
+    },
+    "Matrices_4": {
+      "expected": "Kolonne 1"
+    },
+    "Matrices_5": {
+      "expected": "Kolonne 2"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "ligning 1"
+    },
+    "Table_2": {
+      "expected": "ligning 1"
+    },
+    "Table_3": {
+      "expected": "ligning 2"
+    },
+    "Table_4": {
+      "expected": "ligning 1"
+    },
+    "Table_5": {
+      "expected": "ligning 2"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "Kolonne 1"
+    },
+    "Table_Cell_1a": {
+      "expected": "Kolonne 2"
+    },
+    "Table_Cell_2": {
+      "expected": "ligning 1"
+    },
+    "Table_Cell_3": {
+      "expected": "ligning 2"
+    },
+    "Table_Cell_4": {
+      "expected": "Kolonne 1"
+    },
+    "Table_Cell_4a": {
+      "expected": "Kolonne 2"
+    },
+    "Table_Cell_5": {
+      "expected": "Kolonne 1"
+    },
+    "Table_Cell_5a": {
+      "expected": "Kolonne 2"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "ligning 1, Kolonne 1"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "ligning 1, Kolonne 2"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "ligning 1"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "ligning 2"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "ligning 1, Kolonne 1"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "ligning 1, Kolonne 2"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "ligning 2, Kolonne 1"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "ligning 2, Kolonne 2"
+    },
+    "Table_Label_0": {
+      "expected": "Etikett"
+    },
+    "Table_Label_1": {
+      "expected": "Etikett"
+    },
+    "Table_Label_2": {
+      "expected": "Etikett"
+    },
+    "Table_Label_3": {
+      "expected": "Etikett"
+    }
+  },
+  "compare": true
+}

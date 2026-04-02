@@ -1,0 +1,644 @@
+{
+  "locale": "de",
+  "factory": "number",
+  "base": "input/common/numbers.json",
+  "information": "German Ordinal word tests.",
+  "kind": "wordOrdinal",
+  "active": "NumbersGerman",
+  "compare": true,
+  "tests": {
+    "Number_0": {
+      "expected": "nullte"
+    },
+    "Number_1": {
+      "expected": "erste"
+    },
+    "Number_2": {
+      "expected": "zweite"
+    },
+    "Number_3": {
+      "expected": "dritte"
+    },
+    "Number_4": {
+      "expected": "vierte"
+    },
+    "Number_5": {
+      "expected": "fünfte"
+    },
+    "Number_6": {
+      "expected": "sechste"
+    },
+    "Number_7": {
+      "expected": "siebte"
+    },
+    "Number_8": {
+      "expected": "achte"
+    },
+    "Number_9": {
+      "expected": "neunte"
+    },
+    "Number_10": {
+      "expected": "zehnte"
+    },
+    "Number_11": {
+      "expected": "elfte"
+    },
+    "Number_12": {
+      "expected": "zwölfte"
+    },
+    "Number_13": {
+      "expected": "dreizehnte"
+    },
+    "Number_14": {
+      "expected": "vierzehnte"
+    },
+    "Number_15": {
+      "expected": "fünfzehnte"
+    },
+    "Number_16": {
+      "expected": "sechzehnte"
+    },
+    "Number_17": {
+      "expected": "siebzehnte"
+    },
+    "Number_18": {
+      "expected": "achtzehnte"
+    },
+    "Number_19": {
+      "expected": "neunzehnste"
+    },
+    "Number_20": {
+      "expected": "zwanzigste"
+    },
+    "Number_21": {
+      "expected": "einundzwanzigste"
+    },
+    "Number_22": {
+      "expected": "zweiundzwanzigste"
+    },
+    "Number_23": {
+      "expected": "dreiundzwanzigste"
+    },
+    "Number_24": {
+      "expected": "vierundzwanzigste"
+    },
+    "Number_25": {
+      "expected": "fünfundzwanzigste"
+    },
+    "Number_26": {
+      "expected": "sechsundzwanzigste"
+    },
+    "Number_27": {
+      "expected": "siebenundzwanzigste"
+    },
+    "Number_28": {
+      "expected": "achtundzwanzigste"
+    },
+    "Number_29": {
+      "expected": "neunundzwanzigste"
+    },
+    "Number_30": {
+      "expected": "dreißigste"
+    },
+    "Number_31": {
+      "expected": "einunddreißigste"
+    },
+    "Number_32": {
+      "expected": "zweiunddreißigste"
+    },
+    "Number_33": {
+      "expected": "dreiunddreißigste"
+    },
+    "Number_34": {
+      "expected": "vierunddreißigste"
+    },
+    "Number_35": {
+      "expected": "fünfunddreißigste"
+    },
+    "Number_36": {
+      "expected": "sechsunddreißigste"
+    },
+    "Number_37": {
+      "expected": "siebenunddreißigste"
+    },
+    "Number_38": {
+      "expected": "achtunddreißigste"
+    },
+    "Number_39": {
+      "expected": "neununddreißigste"
+    },
+    "Number_40": {
+      "expected": "vierzigste"
+    },
+    "Number_41": {
+      "expected": "einundvierzigste"
+    },
+    "Number_42": {
+      "expected": "zweiundvierzigste"
+    },
+    "Number_43": {
+      "expected": "dreiundvierzigste"
+    },
+    "Number_44": {
+      "expected": "vierundvierzigste"
+    },
+    "Number_45": {
+      "expected": "fünfundvierzigste"
+    },
+    "Number_46": {
+      "expected": "sechsundvierzigste"
+    },
+    "Number_47": {
+      "expected": "siebenundvierzigste"
+    },
+    "Number_48": {
+      "expected": "achtundvierzigste"
+    },
+    "Number_49": {
+      "expected": "neunundvierzigste"
+    },
+    "Number_50": {
+      "expected": "fünfzigste"
+    },
+    "Number_51": {
+      "expected": "einundfünfzigste"
+    },
+    "Number_52": {
+      "expected": "zweiundfünfzigste"
+    },
+    "Number_53": {
+      "expected": "dreiundfünfzigste"
+    },
+    "Number_54": {
+      "expected": "vierundfünfzigste"
+    },
+    "Number_55": {
+      "expected": "fünfundfünfzigste"
+    },
+    "Number_56": {
+      "expected": "sechsundfünfzigste"
+    },
+    "Number_57": {
+      "expected": "siebenundfünfzigste"
+    },
+    "Number_58": {
+      "expected": "achtundfünfzigste"
+    },
+    "Number_59": {
+      "expected": "neunundfünfzigste"
+    },
+    "Number_60": {
+      "expected": "sechzigste"
+    },
+    "Number_61": {
+      "expected": "einundsechzigste"
+    },
+    "Number_62": {
+      "expected": "zweiundsechzigste"
+    },
+    "Number_63": {
+      "expected": "dreiundsechzigste"
+    },
+    "Number_64": {
+      "expected": "vierundsechzigste"
+    },
+    "Number_65": {
+      "expected": "fünfundsechzigste"
+    },
+    "Number_66": {
+      "expected": "sechsundsechzigste"
+    },
+    "Number_67": {
+      "expected": "siebenundsechzigste"
+    },
+    "Number_68": {
+      "expected": "achtundsechzigste"
+    },
+    "Number_69": {
+      "expected": "neunundsechzigste"
+    },
+    "Number_70": {
+      "expected": "siebzigste"
+    },
+    "Number_71": {
+      "expected": "einundsiebzigste"
+    },
+    "Number_72": {
+      "expected": "zweiundsiebzigste"
+    },
+    "Number_73": {
+      "expected": "dreiundsiebzigste"
+    },
+    "Number_74": {
+      "expected": "vierundsiebzigste"
+    },
+    "Number_75": {
+      "expected": "fünfundsiebzigste"
+    },
+    "Number_76": {
+      "expected": "sechsundsiebzigste"
+    },
+    "Number_77": {
+      "expected": "siebenundsiebzigste"
+    },
+    "Number_78": {
+      "expected": "achtundsiebzigste"
+    },
+    "Number_79": {
+      "expected": "neunundsiebzigste"
+    },
+    "Number_80": {
+      "expected": "achtzigste"
+    },
+    "Number_81": {
+      "expected": "einundachtzigste"
+    },
+    "Number_82": {
+      "expected": "zweiundachtzigste"
+    },
+    "Number_83": {
+      "expected": "dreiundachtzigste"
+    },
+    "Number_84": {
+      "expected": "vierundachtzigste"
+    },
+    "Number_85": {
+      "expected": "fünfundachtzigste"
+    },
+    "Number_86": {
+      "expected": "sechsundachtzigste"
+    },
+    "Number_87": {
+      "expected": "siebenundachtzigste"
+    },
+    "Number_88": {
+      "expected": "achtundachtzigste"
+    },
+    "Number_89": {
+      "expected": "neunundachtzigste"
+    },
+    "Number_90": {
+      "expected": "neunzigste"
+    },
+    "Number_91": {
+      "expected": "einundneunzigste"
+    },
+    "Number_92": {
+      "expected": "zweiundneunzigste"
+    },
+    "Number_93": {
+      "expected": "dreiundneunzigste"
+    },
+    "Number_94": {
+      "expected": "vierundneunzigste"
+    },
+    "Number_95": {
+      "expected": "fünfundneunzigste"
+    },
+    "Number_96": {
+      "expected": "sechsundneunzigste"
+    },
+    "Number_97": {
+      "expected": "siebenundneunzigste"
+    },
+    "Number_98": {
+      "expected": "achtundneunzigste"
+    },
+    "Number_99": {
+      "expected": "neunundneunzigste"
+    },
+    "Number_100": {
+      "expected": "einhundertste"
+    },
+    "Number_101": {
+      "expected": "einhunderteinsste"
+    },
+    "Number_102": {
+      "expected": "einhundertzweiste"
+    },
+    "Number_103": {
+      "expected": "einhundertdreiste"
+    },
+    "Number_104": {
+      "expected": "einhundertvierste"
+    },
+    "Number_105": {
+      "expected": "einhundertfünfste"
+    },
+    "Number_106": {
+      "expected": "einhundertsechsste"
+    },
+    "Number_107": {
+      "expected": "einhundertsiebenste"
+    },
+    "Number_108": {
+      "expected": "einhundertachtste"
+    },
+    "Number_109": {
+      "expected": "einhundertneunste"
+    },
+    "Number_110": {
+      "expected": "einhundertzehnste"
+    },
+    "Number_200": {
+      "expected": "zweihundertste"
+    },
+    "Number_201": {
+      "expected": "zweihunderteinsste"
+    },
+    "Number_300": {
+      "expected": "dreihundertste"
+    },
+    "Number_301": {
+      "expected": "dreihunderteinsste"
+    },
+    "Number_400": {
+      "expected": "vierhundertste"
+    },
+    "Number_401": {
+      "expected": "vierhunderteinsste"
+    },
+    "Number_500": {
+      "expected": "fünfhundertste"
+    },
+    "Number_501": {
+      "expected": "fünfhunderteinsste"
+    },
+    "Number_600": {
+      "expected": "sechshundertste"
+    },
+    "Number_601": {
+      "expected": "sechshunderteinsste"
+    },
+    "Number_700": {
+      "expected": "siebenhundertste"
+    },
+    "Number_701": {
+      "expected": "siebenhunderteinsste"
+    },
+    "Number_800": {
+      "expected": "achthundertste"
+    },
+    "Number_801": {
+      "expected": "achthunderteinsste"
+    },
+    "Number_900": {
+      "expected": "neunhundertste"
+    },
+    "Number_901": {
+      "expected": "neunhunderteinsste"
+    },
+    "Number_1000": {
+      "expected": "eintausendste"
+    },
+    "Number_1001": {
+      "expected": "eintausendeinsste"
+    },
+    "Number_2000": {
+      "expected": "zweitausendste"
+    },
+    "Number_2001": {
+      "expected": "zweitausendeinsste"
+    },
+    "Number_3000": {
+      "expected": "dreitausendste"
+    },
+    "Number_3001": {
+      "expected": "dreitausendeinsste"
+    },
+    "Number_4000": {
+      "expected": "viertausendste"
+    },
+    "Number_4001": {
+      "expected": "viertausendeinsste"
+    },
+    "Number_5000": {
+      "expected": "fünftausendste"
+    },
+    "Number_5001": {
+      "expected": "fünftausendeinsste"
+    },
+    "Number_6000": {
+      "expected": "sechstausendste"
+    },
+    "Number_6001": {
+      "expected": "sechstausendeinsste"
+    },
+    "Number_7000": {
+      "expected": "siebentausendste"
+    },
+    "Number_7001": {
+      "expected": "siebentausendeinsste"
+    },
+    "Number_8000": {
+      "expected": "achttausendste"
+    },
+    "Number_8001": {
+      "expected": "achttausendeinsste"
+    },
+    "Number_9000": {
+      "expected": "neuntausendste"
+    },
+    "Number_9001": {
+      "expected": "neuntausendeinsste"
+    },
+    "Number_10000": {
+      "expected": "zehntausendste"
+    },
+    "Number_10001": {
+      "expected": "zehntausendeinsste"
+    },
+    "Number_20000": {
+      "expected": "zwanzigtausendste"
+    },
+    "Number_20001": {
+      "expected": "zwanzigtausendeinsste"
+    },
+    "Number_30000": {
+      "expected": "dreißigtausendste"
+    },
+    "Number_30001": {
+      "expected": "dreißigtausendeinsste"
+    },
+    "Number_40000": {
+      "expected": "vierzigtausendste"
+    },
+    "Number_40001": {
+      "expected": "vierzigtausendeinsste"
+    },
+    "Number_50000": {
+      "expected": "fünfzigtausendste"
+    },
+    "Number_50001": {
+      "expected": "fünfzigtausendeinsste"
+    },
+    "Number_60000": {
+      "expected": "sechzigtausendste"
+    },
+    "Number_60001": {
+      "expected": "sechzigtausendeinsste"
+    },
+    "Number_70000": {
+      "expected": "siebzigtausendste"
+    },
+    "Number_70001": {
+      "expected": "siebzigtausendeinsste"
+    },
+    "Number_80000": {
+      "expected": "achtzigtausendste"
+    },
+    "Number_80001": {
+      "expected": "achtzigtausendeinsste"
+    },
+    "Number_90000": {
+      "expected": "neunzigtausendste"
+    },
+    "Number_90001": {
+      "expected": "neunzigtausendeinsste"
+    },
+    "Number_100000": {
+      "expected": "einhunderttausendste"
+    },
+    "Number_1000000": {
+      "expected": "einemillionste"
+    },
+    "Number_10000000": {
+      "expected": "zehnmillionenste"
+    },
+    "Number_100000000": {
+      "expected": "einhundertmillionenste"
+    },
+    "Number_1000000000": {
+      "expected": "einemilliardeste"
+    },
+    "Number_10000000000": {
+      "expected": "zehnmilliardenste"
+    },
+    "Number_100000000000": {
+      "expected": "einhundertmilliardenste"
+    },
+    "Number_1000000000000": {
+      "expected": "einebillionste"
+    },
+    "Number_10000000000000": {
+      "expected": "zehnbillionenste"
+    },
+    "Number_100000000000000": {
+      "expected": "einhundertbillionenste"
+    },
+    "Number_1000000000000000": {
+      "expected": "einebilliardeste"
+    },
+    "Number_10000000000000000": {
+      "expected": "zehnbilliardenste"
+    },
+    "Number_100001": {
+      "expected": "einhunderttausendeinsste"
+    },
+    "Number_200000": {
+      "expected": "zweihunderttausendste"
+    },
+    "Number_200001": {
+      "expected": "zweihunderttausendeinsste"
+    },
+    "Number_1000001": {
+      "expected": "einemillioneinsste"
+    },
+    "Number_2000000": {
+      "expected": "zweimillionenste"
+    },
+    "Number_2000001": {
+      "expected": "zweimillioneneinsste"
+    },
+    "Number_10000001": {
+      "expected": "zehnmillioneneinsste"
+    },
+    "Number_20000000": {
+      "expected": "zwanzigmillionenste"
+    },
+    "Number_20000001": {
+      "expected": "zwanzigmillioneneinsste"
+    },
+    "Number_100000001": {
+      "expected": "einhundertmillioneneinsste"
+    },
+    "Number_200000000": {
+      "expected": "zweihundertmillionenste"
+    },
+    "Number_200000001": {
+      "expected": "zweihundertmillioneneinsste"
+    },
+    "Number_1000000001": {
+      "expected": "einemilliardeeinsste"
+    },
+    "Number_2000000000": {
+      "expected": "zweimilliardenste"
+    },
+    "Number_2000000001": {
+      "expected": "zweimilliardeneinsste"
+    },
+    "Number_10000000001": {
+      "expected": "zehnmilliardeneinsste"
+    },
+    "Number_20000000000": {
+      "expected": "zwanzigmilliardenste"
+    },
+    "Number_20000000001": {
+      "expected": "zwanzigmilliardeneinsste"
+    },
+    "Number_100000000001": {
+      "expected": "einhundertmilliardeneinsste"
+    },
+    "Number_200000000000": {
+      "expected": "zweihundertmilliardenste"
+    },
+    "Number_200000000001": {
+      "expected": "zweihundertmilliardeneinsste"
+    },
+    "Number_1000000000001": {
+      "expected": "einebillioneinsste"
+    },
+    "Number_2000000000000": {
+      "expected": "zweibillionenste"
+    },
+    "Number_2000000000001": {
+      "expected": "zweibillioneneinsste"
+    },
+    "Number_10000000000001": {
+      "expected": "zehnbillioneneinsste"
+    },
+    "Number_20000000000000": {
+      "expected": "zwanzigbillionenste"
+    },
+    "Number_20000000000001": {
+      "expected": "zwanzigbillioneneinsste"
+    },
+    "Number_100000000000001": {
+      "expected": "einhundertbillioneneinsste"
+    },
+    "Number_200000000000000": {
+      "expected": "zweihundertbillionenste"
+    },
+    "Number_200000000000001": {
+      "expected": "zweihundertbillioneneinsste"
+    },
+    "Number_1000000000000001": {
+      "expected": "einebilliardeeinsste"
+    },
+    "Number_2000000000000000": {
+      "expected": "zweibilliardenste"
+    },
+    "Number_2000000000000001": {
+      "expected": "zweibilliardeneinsste"
+    },
+    "Number_10000000000000001": {
+      "expected": "zehnbilliardenste"
+    },
+    "Number_20000000000000000": {
+      "expected": "zwanzigbilliardenste"
+    },
+    "Number_20000000000000001": {
+      "expected": "zwanzigbilliardenste"
+    }
+  }
+}

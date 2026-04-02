@@ -1,0 +1,74 @@
+{
+    "_comment0_": " Tests from the issues discovered in ClearspeakKorean rules.",
+    "name": "KoreanClearspeakIssues",
+    "locale": "ko",
+    "factory": "clearspeak",
+    "base": "input/clearspeak/clearspeak_issues.json",
+    "information": "Korean Clearspeak Issues tests.",
+    "active": "ClearspeakIssuesKorean",
+    "exclude": [],
+    "tests": {
+      "_comment1_": " Issues",
+      "Issue230_1": {
+        "expected": "5 와, 224 분의 3"
+      },
+      "Issue230_2": {
+        "expected": "5 와 4 분의 3"
+      },
+      "IssueNumbers_1": {
+        "expected": "수 t 2 e 4"
+      },
+      "IssueNumbers_2": {
+        "expected": "수 번호 기호 F F 0 0 0 0"
+      },
+      "IssueNumbers_3": {
+        "expected": "수 번호 기호 F F F F"
+      },
+      "Issue320_1": {
+        "expected": "편미분"
+      },
+      "Issue320_2": {
+        "expected": "x 팩토리얼"
+      },
+      "Issue320_3": {
+        "expected": "빼기 빼기 x"
+      },
+      "Issue320_4": {
+        "expected": "더하기 더하기 x"
+      },
+      "Issue320_5": {
+        "expected": "싸인 싸인 x"
+      },
+      "Issue320_6": {
+        "expected": "편미분 편미분 x"
+      },
+      "Issue320_7": { 
+        "expected": "괄호 열고, 분모가 편미분 x 제곱, 이고 분자가 편미분 제곱, 인 분수 더하기, 분모가 편미분 y 제곱, 이고 분자가 편미분 제곱, 인 분수, 괄호 닫고, 곱하기, 절댓값 파이 곱하기, 괄호 열고, x 더하기 기본 i, y, 괄호 닫고, 제곱 은 0"
+      },
+      "Issue301_1": {
+        "expected": "4 밀리미터"
+      },
+      "Issue301_2": {
+        "expected": "1 밀리미터"
+      },
+      "Issue301_3": {
+        "expected": "4 밀리미터"
+      },
+      "Issue301_4": {
+        "expected": "1 밀리미터"
+      },
+      "Issue_442_0": {
+        "expected": "9 나누기 3 은 9 곱하기 3 과 같지 않다"
+      },
+      "Issue_442_1": {
+        "expected": "9 나누기 3"
+      },
+      "Issue_442_2": {
+        "expected": "9 나누기 3 은 9 곱하기 3 과 같지 않다"
+      },
+      "Issue_442_3": {
+        "expected": "9 나누기 3"
+      }
+    }
+  }
+  

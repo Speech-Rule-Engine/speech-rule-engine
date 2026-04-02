@@ -77,7 +77,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"delt på\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"delt på\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,22 +87,22 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"StartAbsoluttVerdi\"; [n] children/*[1]; [t] \"StoppAbsoluttVerdi\""
+      "[t] \"StartAbsoluttVerdi\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppAbsoluttVerdi\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"AbsoluttVerdi\"; [n] children/*[1]; [t] \"StoppAbsoluttVerdi\""
+      "[t] \"AbsoluttVerdi\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppAbsoluttVerdi\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"StartMetrisk\"; [n] children/*[1]; [t] \"StoppMetrisk\""
+      "[t] \"StartMetrisk\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppMetrisk\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"Metrisk\"; [n] children/*[1]; [t] \"StoppMetrisk\""
+      "[t] \"Metrisk\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppMetrisk\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -112,12 +112,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"StartSett\"; [n] children/*[1]; [t] \"StoppSett\""
+      "[t] \"StartSett\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppSett\" (span:content/*[2])"
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"Sett\"; [n] children/*[1]; [t] \"StoppSett\""
+      "[t] \"Sett\" (span:content/*[1]); [n] children/*[1]; [t] \"StoppSett\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -167,12 +167,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"i andre potens\""
+      "[n] children/*[1]; [t] \"i andre potens\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"i tredje potens\""
+      "[n] children/*[1]; [t] \"i tredje potens\" (span:children/*[2])"
     ],
     [
       "Action",
@@ -232,32 +232,32 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"overstrek\""
+      "[n] children/*[1]; [t] \"overstrek\" (span:children/*[2])"
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"understrek\""
+      "[n] children/*[1]; [t] \"understrek\" (span:children/*[2])"
     ],
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"overtilde\""
+      "[n] children/*[1]; [t] \"overtilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"undertilde\""
+      "[n] children/*[1]; [t] \"undertilde\" (span:children/*[2])"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\" (span:content/*[2])"
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\""
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -292,22 +292,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\""
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\""
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\" (span:content/*[1]); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\" (span:content/*[2])"
     ],
     [
       "Action",
@@ -322,12 +322,12 @@
     [
       "Action",
       "binomial",
-      "[t] \"StartBinomialEllerMatrise\"; [n] children/*[1]/children/*[1]; [t] \"Velg\"; [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\""
+      "[t] \"StartBinomialEllerMatrise\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Velg\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\" (span:content/*[2])"
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"BinomialEllerMatrise\"; [n] children/*[1]/children/*[1]; [t] \"Velg\"; [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\""
+      "[t] \"BinomialEllerMatrise\" (span:content/*[1]); [n] children/*[1]/children/*[1]; [t] \"Velg\" (span:children/*[2]/children/*[1]); [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\" (span:content/*[2])"
     ],
     [
       "Action",

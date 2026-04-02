@@ -1,0 +1,189 @@
+{
+  "name": "DanishPrefixTables",
+  "locale": "da",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Danish Prefix Tables rule tests.",
+  "active": "PrefixDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Binomials_0": {
+      "expected": "Puljemændge"
+    },
+    "Binomials_1": {
+      "expected": "Valgmængde"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "Puljemændge"
+    },
+    "Binomials_1_extra": {
+      "expected": "Valgmængde"
+    },
+    "Vectors_0": {
+      "expected": "1. Række"
+    },
+    "Vectors_1": {
+      "expected": "2. Række"
+    },
+    "Vectors_2": {
+      "expected": "3. Række"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "1. Række"
+    },
+    "Matrices_depth_1": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Matrices_depth_2": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Matrices_depth_3": {
+      "expected": "2. Række"
+    },
+    "Matrices_depth_4": {
+      "expected": "2. Række, 1. Kolonne"
+    },
+    "Matrices_depth_5": {
+      "expected": "2. Række, 2. Kolonne"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Række"
+    },
+    "Matrices_1": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_2": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_3": {
+      "expected": "2. Række"
+    },
+    "Matrices_4": {
+      "expected": "1. Kolonne"
+    },
+    "Matrices_5": {
+      "expected": "2. Kolonne"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "1. Række"
+    },
+    "Table_2": {
+      "expected": "1. Række"
+    },
+    "Table_3": {
+      "expected": "2. Række"
+    },
+    "Table_4": {
+      "expected": "1. Række"
+    },
+    "Table_5": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_1a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_2": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_3": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_4": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_4a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_5": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Cell_5a": {
+      "expected": "2. Kolonne"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "1. Række"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "2. Række"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "1. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "1. Række, 2. Kolonne"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "2. Række, 1. Kolonne"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "2. Række, 2. Kolonne"
+    },
+    "Table_Label_0": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_1": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_2": {
+      "expected": "1. Kolonne"
+    },
+    "Table_Label_3": {
+      "expected": "1. Kolonne"
+    }
+  }
+}

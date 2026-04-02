@@ -113,6 +113,61 @@
       "Action",
       "cell-simple",
       "[t] CSFordinalPosition; [t] \"Kolumn\" (pause:200)"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"Etikett\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cases-case",
+      "[t] \"fall\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-line",
+      "[t] \"rad\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-case",
+      "[t] \"fall\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-equation",
+      "[t] \"Ekvation\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-step",
+      "[t] \"steg\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-row",
+      "[t] \"rad\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "row-constraint",
+      "[t] \"begränsning\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple-short",
+      "[t] \"Kolumn\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-short",
+      "[n] ../..; [t] \"Kolumn\"; [t] count(preceding-sibling::*)+1 (pause:200)"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[t] \"rad\"; [t] count(preceding-sibling::*)+1 (pause:200)"
     ]
   ]
 }

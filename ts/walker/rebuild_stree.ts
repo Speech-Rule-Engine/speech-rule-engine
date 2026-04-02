@@ -20,6 +20,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import { SREError } from '../common/engine.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
@@ -29,7 +30,6 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory.js';
-// import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from './walker_util.js';
@@ -116,6 +116,9 @@ export class RebuildStree {
   constructor(public mathml: Element) {
     this.mmlRoot = WalkerUtil.getSemanticRoot(mathml);
     this.streeRoot = this.assembleTree(this.mmlRoot);
+    if (isNaN(this.streeRoot.id)) {
+      throw new SREError(`Failed to rebuild semantic tree for\n ${mathml}`);
+    }
     this.stree = SemanticTree.fromNode(this.streeRoot, this.mathml);
     this.xml = this.stree.xml();
     // SemanticProcessor.getInstance().setNodeFactory(this.factory);
@@ -143,7 +146,7 @@ export class RebuildStree {
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
     );
     if (content.length === 0 && children.length === 0) {
-      RebuildStree.textContent(snode, node);
+      RebuildStree.textContent(snode, node, this.isEmpty(snode, node));
       return snode;
     }
     if (content.length > 0) {
@@ -221,6 +224,7 @@ export class RebuildStree {
     punctuated.embellished = snode.embellished;
     punctuated.fencePointer = snode.fencePointer;
     punctuated.role = role;
+    punctuated.addAnnotation('general', 'script');
     const cont = collapsed.splice(1, 1)[0].slice(1);
     punctuated.contentNodes = cont.map(this.makePunctuation.bind(this));
     this.collapsedChildren_(collapsed);
@@ -374,5 +378,18 @@ export class RebuildStree {
     const sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;
+  }
+
+  private isEmpty(snode: SemanticNode, node?: Element): boolean {
+    if (snode.type === SemanticType.EMPTY) {
+      return true;
+    }
+    if (snode.type !== SemanticType.TEXT && snode.role !== SemanticRole.SPACE) {
+      return false;
+    }
+    if (node.tagName.toUpperCase() === 'MPHANTOM') {
+      return true;
+    }
+    return false;
   }
 }

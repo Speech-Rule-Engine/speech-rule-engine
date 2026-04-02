@@ -1,0 +1,902 @@
+{
+  "name": "NemethDefaultCharactersMathGeometry",
+  "locale": "nemeth",
+  "domain": "default",
+  "modality": "braille",
+  "style": "default",
+  "compare": true,
+  "active": "DefaultSymbolsNemeth",
+  "type": "character",
+  "factory": "symbol",
+  "information": "Nemeth Default Characters math_geometry tests.",
+  "tests": {
+    "─": {
+      "expected": "⠱"
+    },
+    "━": {
+      "expected": ""
+    },
+    "│": {
+      "expected": "⠳"
+    },
+    "┃": {
+      "expected": "⠳"
+    },
+    "┄": {
+      "expected": "⠒⠀⠒"
+    },
+    "┅": {
+      "expected": ""
+    },
+    "┆": {
+      "expected": ""
+    },
+    "┇": {
+      "expected": ""
+    },
+    "┈": {
+      "expected": ""
+    },
+    "┉": {
+      "expected": ""
+    },
+    "┊": {
+      "expected": ""
+    },
+    "┋": {
+      "expected": ""
+    },
+    "┌": {
+      "expected": "⠈⠘⠷"
+    },
+    "┍": {
+      "expected": "⠈⠘⠷"
+    },
+    "┎": {
+      "expected": "⠈⠘⠷"
+    },
+    "┏": {
+      "expected": "⠸⠈⠘⠷"
+    },
+    "┐": {
+      "expected": "⠈⠘⠾"
+    },
+    "┑": {
+      "expected": "⠈⠘⠾"
+    },
+    "┒": {
+      "expected": "⠈⠘⠾"
+    },
+    "┓": {
+      "expected": "⠸⠈⠘⠾"
+    },
+    "└": {
+      "expected": "⠈⠳"
+    },
+    "┕": {
+      "expected": "⠈⠳"
+    },
+    "┖": {
+      "expected": "⠈⠳"
+    },
+    "┗": {
+      "expected": "⠸⠈⠳"
+    },
+    "┘": {
+      "expected": "⠈⠳"
+    },
+    "┙": {
+      "expected": "⠈⠳"
+    },
+    "┚": {
+      "expected": "⠈⠳"
+    },
+    "┛": {
+      "expected": "⠸⠈⠳"
+    },
+    "├": {
+      "expected": ""
+    },
+    "┝": {
+      "expected": ""
+    },
+    "┞": {
+      "expected": ""
+    },
+    "┟": {
+      "expected": ""
+    },
+    "┠": {
+      "expected": ""
+    },
+    "┡": {
+      "expected": ""
+    },
+    "┢": {
+      "expected": ""
+    },
+    "┣": {
+      "expected": ""
+    },
+    "┤": {
+      "expected": ""
+    },
+    "┥": {
+      "expected": ""
+    },
+    "┦": {
+      "expected": ""
+    },
+    "┧": {
+      "expected": ""
+    },
+    "┨": {
+      "expected": ""
+    },
+    "┩": {
+      "expected": ""
+    },
+    "┪": {
+      "expected": ""
+    },
+    "┫": {
+      "expected": ""
+    },
+    "┬": {
+      "expected": ""
+    },
+    "┭": {
+      "expected": ""
+    },
+    "┮": {
+      "expected": ""
+    },
+    "┯": {
+      "expected": ""
+    },
+    "┰": {
+      "expected": ""
+    },
+    "┱": {
+      "expected": ""
+    },
+    "┲": {
+      "expected": ""
+    },
+    "┳": {
+      "expected": ""
+    },
+    "┴": {
+      "expected": ""
+    },
+    "┵": {
+      "expected": ""
+    },
+    "┶": {
+      "expected": ""
+    },
+    "┷": {
+      "expected": ""
+    },
+    "┸": {
+      "expected": ""
+    },
+    "┹": {
+      "expected": ""
+    },
+    "┺": {
+      "expected": ""
+    },
+    "┻": {
+      "expected": ""
+    },
+    "┼": {
+      "expected": ""
+    },
+    "┽": {
+      "expected": ""
+    },
+    "┾": {
+      "expected": ""
+    },
+    "┿": {
+      "expected": ""
+    },
+    "╀": {
+      "expected": ""
+    },
+    "╁": {
+      "expected": ""
+    },
+    "╂": {
+      "expected": ""
+    },
+    "╃": {
+      "expected": ""
+    },
+    "╄": {
+      "expected": ""
+    },
+    "╅": {
+      "expected": ""
+    },
+    "╆": {
+      "expected": ""
+    },
+    "╇": {
+      "expected": ""
+    },
+    "╈": {
+      "expected": ""
+    },
+    "╉": {
+      "expected": ""
+    },
+    "╊": {
+      "expected": ""
+    },
+    "╋": {
+      "expected": ""
+    },
+    "╌": {
+      "expected": ""
+    },
+    "╍": {
+      "expected": ""
+    },
+    "╎": {
+      "expected": ""
+    },
+    "╏": {
+      "expected": ""
+    },
+    "═": {
+      "expected": ""
+    },
+    "║": {
+      "expected": ""
+    },
+    "╒": {
+      "expected": ""
+    },
+    "╓": {
+      "expected": ""
+    },
+    "╔": {
+      "expected": ""
+    },
+    "╕": {
+      "expected": ""
+    },
+    "╖": {
+      "expected": ""
+    },
+    "╗": {
+      "expected": ""
+    },
+    "╘": {
+      "expected": ""
+    },
+    "╙": {
+      "expected": ""
+    },
+    "╚": {
+      "expected": ""
+    },
+    "╛": {
+      "expected": ""
+    },
+    "╜": {
+      "expected": ""
+    },
+    "╝": {
+      "expected": ""
+    },
+    "╞": {
+      "expected": ""
+    },
+    "╟": {
+      "expected": ""
+    },
+    "╠": {
+      "expected": ""
+    },
+    "╡": {
+      "expected": ""
+    },
+    "╢": {
+      "expected": ""
+    },
+    "╣": {
+      "expected": ""
+    },
+    "╤": {
+      "expected": ""
+    },
+    "╥": {
+      "expected": ""
+    },
+    "╦": {
+      "expected": ""
+    },
+    "╧": {
+      "expected": ""
+    },
+    "╨": {
+      "expected": ""
+    },
+    "╩": {
+      "expected": ""
+    },
+    "╪": {
+      "expected": ""
+    },
+    "╫": {
+      "expected": ""
+    },
+    "╬": {
+      "expected": ""
+    },
+    "╭": {
+      "expected": ""
+    },
+    "╮": {
+      "expected": ""
+    },
+    "╯": {
+      "expected": ""
+    },
+    "╰": {
+      "expected": ""
+    },
+    "╱": {
+      "expected": ""
+    },
+    "╲": {
+      "expected": ""
+    },
+    "╳": {
+      "expected": ""
+    },
+    "╴": {
+      "expected": ""
+    },
+    "╵": {
+      "expected": ""
+    },
+    "╶": {
+      "expected": ""
+    },
+    "╷": {
+      "expected": ""
+    },
+    "╸": {
+      "expected": ""
+    },
+    "╹": {
+      "expected": ""
+    },
+    "╺": {
+      "expected": ""
+    },
+    "╻": {
+      "expected": ""
+    },
+    "╼": {
+      "expected": ""
+    },
+    "╽": {
+      "expected": ""
+    },
+    "╾": {
+      "expected": ""
+    },
+    "╿": {
+      "expected": ""
+    },
+    "▀": {
+      "expected": ""
+    },
+    "▁": {
+      "expected": ""
+    },
+    "▂": {
+      "expected": ""
+    },
+    "▃": {
+      "expected": ""
+    },
+    "▄": {
+      "expected": ""
+    },
+    "▅": {
+      "expected": ""
+    },
+    "▆": {
+      "expected": ""
+    },
+    "▇": {
+      "expected": ""
+    },
+    "█": {
+      "expected": ""
+    },
+    "▉": {
+      "expected": ""
+    },
+    "▊": {
+      "expected": ""
+    },
+    "▋": {
+      "expected": ""
+    },
+    "▌": {
+      "expected": ""
+    },
+    "▍": {
+      "expected": ""
+    },
+    "▎": {
+      "expected": ""
+    },
+    "▏": {
+      "expected": ""
+    },
+    "▐": {
+      "expected": ""
+    },
+    "░": {
+      "expected": ""
+    },
+    "▒": {
+      "expected": ""
+    },
+    "▓": {
+      "expected": ""
+    },
+    "▔": {
+      "expected": ""
+    },
+    "▕": {
+      "expected": ""
+    },
+    "▖": {
+      "expected": ""
+    },
+    "▗": {
+      "expected": ""
+    },
+    "▘": {
+      "expected": ""
+    },
+    "▙": {
+      "expected": ""
+    },
+    "▚": {
+      "expected": ""
+    },
+    "▛": {
+      "expected": ""
+    },
+    "▜": {
+      "expected": ""
+    },
+    "▝": {
+      "expected": ""
+    },
+    "▞": {
+      "expected": ""
+    },
+    "▟": {
+      "expected": ""
+    },
+    "■": {
+      "expected": "⠫⠸⠲"
+    },
+    "□": {
+      "expected": "⠫⠲"
+    },
+    "▢": {
+      "expected": ""
+    },
+    "▣": {
+      "expected": ""
+    },
+    "▤": {
+      "expected": ""
+    },
+    "▥": {
+      "expected": ""
+    },
+    "▦": {
+      "expected": ""
+    },
+    "▧": {
+      "expected": ""
+    },
+    "▨": {
+      "expected": ""
+    },
+    "▩": {
+      "expected": ""
+    },
+    "▪": {
+      "expected": "⠫⠸⠲"
+    },
+    "▫": {
+      "expected": "⠫⠲"
+    },
+    "▬": {
+      "expected": "⠫⠸⠗"
+    },
+    "▭": {
+      "expected": "⠫⠗"
+    },
+    "▮": {
+      "expected": ""
+    },
+    "▯": {
+      "expected": ""
+    },
+    "▰": {
+      "expected": "⠫⠸⠛"
+    },
+    "▱": {
+      "expected": "⠫⠛"
+    },
+    "▲": {
+      "expected": "⠫⠸⠞"
+    },
+    "△": {
+      "expected": "⠫⠞"
+    },
+    "▴": {
+      "expected": ""
+    },
+    "▵": {
+      "expected": ""
+    },
+    "▶": {
+      "expected": ""
+    },
+    "▷": {
+      "expected": ""
+    },
+    "▸": {
+      "expected": ""
+    },
+    "▹": {
+      "expected": ""
+    },
+    "►": {
+      "expected": ""
+    },
+    "▻": {
+      "expected": ""
+    },
+    "▼": {
+      "expected": "⠸⠨⠫"
+    },
+    "▽": {
+      "expected": "⠨⠫"
+    },
+    "▾": {
+      "expected": ""
+    },
+    "▿": {
+      "expected": ""
+    },
+    "◀": {
+      "expected": ""
+    },
+    "◁": {
+      "expected": ""
+    },
+    "◂": {
+      "expected": ""
+    },
+    "◃": {
+      "expected": ""
+    },
+    "◄": {
+      "expected": ""
+    },
+    "◅": {
+      "expected": ""
+    },
+    "◆": {
+      "expected": "⠫⠸⠙"
+    },
+    "◇": {
+      "expected": "⠫⠙"
+    },
+    "◈": {
+      "expected": "⠫⠸⠙"
+    },
+    "◉": {
+      "expected": "⠫⠸⠉"
+    },
+    "◊": {
+      "expected": "⠫⠙"
+    },
+    "○": {
+      "expected": "⠫⠉"
+    },
+    "◌": {
+      "expected": ""
+    },
+    "◍": {
+      "expected": ""
+    },
+    "◎": {
+      "expected": ""
+    },
+    "●": {
+      "expected": "⠫⠸⠉"
+    },
+    "◐": {
+      "expected": ""
+    },
+    "◑": {
+      "expected": ""
+    },
+    "◒": {
+      "expected": ""
+    },
+    "◓": {
+      "expected": ""
+    },
+    "◔": {
+      "expected": ""
+    },
+    "◕": {
+      "expected": ""
+    },
+    "◖": {
+      "expected": ""
+    },
+    "◗": {
+      "expected": ""
+    },
+    "◘": {
+      "expected": ""
+    },
+    "◙": {
+      "expected": ""
+    },
+    "◚": {
+      "expected": ""
+    },
+    "◛": {
+      "expected": ""
+    },
+    "◜": {
+      "expected": ""
+    },
+    "◝": {
+      "expected": ""
+    },
+    "◞": {
+      "expected": ""
+    },
+    "◟": {
+      "expected": ""
+    },
+    "◠": {
+      "expected": ""
+    },
+    "◡": {
+      "expected": ""
+    },
+    "◢": {
+      "expected": ""
+    },
+    "◣": {
+      "expected": ""
+    },
+    "◤": {
+      "expected": ""
+    },
+    "◥": {
+      "expected": ""
+    },
+    "◦": {
+      "expected": ""
+    },
+    "◧": {
+      "expected": ""
+    },
+    "◨": {
+      "expected": ""
+    },
+    "◩": {
+      "expected": ""
+    },
+    "◪": {
+      "expected": ""
+    },
+    "◫": {
+      "expected": ""
+    },
+    "◬": {
+      "expected": ""
+    },
+    "◭": {
+      "expected": ""
+    },
+    "◮": {
+      "expected": ""
+    },
+    "◯": {
+      "expected": ""
+    },
+    "◰": {
+      "expected": ""
+    },
+    "◱": {
+      "expected": ""
+    },
+    "◲": {
+      "expected": ""
+    },
+    "◳": {
+      "expected": ""
+    },
+    "◴": {
+      "expected": ""
+    },
+    "◵": {
+      "expected": ""
+    },
+    "◶": {
+      "expected": ""
+    },
+    "◷": {
+      "expected": ""
+    },
+    "◸": {
+      "expected": ""
+    },
+    "◹": {
+      "expected": ""
+    },
+    "◺": {
+      "expected": ""
+    },
+    "◻": {
+      "expected": "⠫⠲"
+    },
+    "◼": {
+      "expected": "⠫⠸⠲"
+    },
+    "◽": {
+      "expected": "⠫⠲"
+    },
+    "◾": {
+      "expected": "⠫⠸⠲"
+    },
+    "◿": {
+      "expected": ""
+    },
+    "⬒": {
+      "expected": ""
+    },
+    "⬓": {
+      "expected": ""
+    },
+    "⬔": {
+      "expected": ""
+    },
+    "⬕": {
+      "expected": ""
+    },
+    "⬖": {
+      "expected": ""
+    },
+    "⬗": {
+      "expected": ""
+    },
+    "⬘": {
+      "expected": ""
+    },
+    "⬙": {
+      "expected": ""
+    },
+    "⬚": {
+      "expected": ""
+    },
+    "⬛": {
+      "expected": ""
+    },
+    "⬜": {
+      "expected": ""
+    },
+    "⬝": {
+      "expected": ""
+    },
+    "⬞": {
+      "expected": ""
+    },
+    "⬟": {
+      "expected": "⠫⠸⠢"
+    },
+    "⬠": {
+      "expected": "⠫⠢"
+    },
+    "⬡": {
+      "expected": "⠫⠖"
+    },
+    "⬢": {
+      "expected": "⠫⠸⠖"
+    },
+    "⬣": {
+      "expected": "⠫⠸⠖"
+    },
+    "⬤": {
+      "expected": "⠫⠸⠉"
+    },
+    "⬥": {
+      "expected": "⠫⠸⠙"
+    },
+    "⬦": {
+      "expected": "⠫⠙"
+    },
+    "⬧": {
+      "expected": "⠫⠸⠙"
+    },
+    "⬨": {
+      "expected": "⠫⠙"
+    },
+    "⬩": {
+      "expected": "⠫⠸⠙"
+    },
+    "⬪": {
+      "expected": "⠫⠸⠙"
+    },
+    "⬫": {
+      "expected": "⠫⠙"
+    },
+    "⬬": {
+      "expected": ""
+    },
+    "⬭": {
+      "expected": ""
+    },
+    "⬮": {
+      "expected": ""
+    },
+    "⬯": {
+      "expected": ""
+    },
+    "⭐": {
+      "expected": ""
+    },
+    "⭑": {
+      "expected": ""
+    },
+    "⭒": {
+      "expected": ""
+    },
+    "⭓": {
+      "expected": ""
+    },
+    "⭔": {
+      "expected": ""
+    },
+    "⭕": {
+      "expected": ""
+    },
+    "⭖": {
+      "expected": ""
+    },
+    "⭗": {
+      "expected": ""
+    },
+    "⭘": {
+      "expected": ""
+    },
+    "⭙": {
+      "expected": ""
+    }
+  }
+}

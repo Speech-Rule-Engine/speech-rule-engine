@@ -1,0 +1,6 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Rebuild enriched Test cases that are relevant both for semantic interpretation and speech generation. Mainly from MathJax issues.",
+  "base": "input/semantic/speech_issues.json"
+}

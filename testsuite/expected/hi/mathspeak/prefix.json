@@ -1,0 +1,156 @@
+{
+  "name": "HindiPrefix",
+  "locale": "hi",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Hindi Prefix rule tests.",
+  "active": "PrefixHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Sub_0": {
+      "expected": "आधार"
+    },
+    "Sub_1": {
+      "expected": "पादांक"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "आधार"
+    },
+    "Super_1": {
+      "expected": "घातांक"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "आधार"
+    },
+    "Over_1": {
+      "expected": "उर्ध्वान्क"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "आधार"
+    },
+    "Under_1": {
+      "expected": "निम्नांक"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "अंश"
+    },
+    "Fractions_1": {
+      "expected": "हर"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "करणीगत राशि"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "करणीगत राशि"
+    },
+    "Root_1": {
+      "expected": "मूलांक"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "आधार"
+    },
+    "SimpleTensors_1": {
+      "expected": "वाम पादांक"
+    },
+    "SimpleTensors_2": {
+      "expected": "वाम उर्ध्वान्क"
+    },
+    "SimpleTensors_3": {
+      "expected": "दक्षिण पादांक"
+    },
+    "SimpleTensors_4": {
+      "expected": "दक्षिण उर्ध्वान्क"
+    },
+    "ComplexTensors_0": {
+      "expected": "आधार"
+    },
+    "ComplexTensors_1": {
+      "expected": "१ला वाम पादांक"
+    },
+    "ComplexTensors_2": {
+      "expected": "२रा वाम पादांक"
+    },
+    "ComplexTensors_3": {
+      "expected": "१ला वाम उर्ध्वान्क"
+    },
+    "ComplexTensors_4": {
+      "expected": "२रा वाम उर्ध्वान्क"
+    },
+    "ComplexTensors_5": {
+      "expected": "१ला दक्षिण पादांक"
+    },
+    "ComplexTensors_6": {
+      "expected": "२रा दक्षिण पादांक"
+    },
+    "ComplexTensors_7": {
+      "expected": "१ला दक्षिण उर्ध्वान्क"
+    },
+    "ComplexTensors_8": {
+      "expected": "२रा दक्षिण उर्ध्वान्क"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "LimBoth_0": {
+      "expected": "आधार"
+    },
+    "LimBoth_1": {
+      "expected": "उर्ध्वान्क"
+    },
+    "LimBoth_2": {
+      "expected": "निम्नांक"
+    },
+    "LimBoth_3": {
+      "expected": "आधार"
+    },
+    "LimBoth_4": {
+      "expected": "आधार"
+    },
+    "LimUpper_0": {
+      "expected": "उर्ध्वान्क"
+    },
+    "LimUpper_1": {
+      "expected": "उर्ध्वान्क"
+    },
+    "LimUpper_2": {
+      "expected": "आधार"
+    },
+    "LimUpper_3": {
+      "expected": "आधार"
+    },
+    "LimLower_0": {
+      "expected": "निम्नांक"
+    },
+    "LimLower_1": {
+      "expected": "निम्नांक"
+    },
+    "LimLower_2": {
+      "expected": "आधार"
+    },
+    "LimLower_3": {
+      "expected": "आधार"
+    }
+  }
+}

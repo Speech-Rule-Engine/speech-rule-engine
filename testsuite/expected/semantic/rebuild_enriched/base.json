@@ -1,0 +1,7 @@
+{
+  "factory": "rebuildEnriched",
+  "base": "input/semantic/base.json",
+  "information": "Compare stree from input and enriched tests.",
+  "tests": "ALL",
+  "exclude": ["Wrappers_1"]
+}

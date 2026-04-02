@@ -24,13 +24,7 @@ import * as DomUtil from '../common/dom_util.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Grammar, correctFont } from '../rule_engine/grammar.js';
 import { Engine } from '../common/engine.js';
-import { register, activate } from '../semantic_tree/semantic_annotations.js';
-import { SemanticVisitor } from '../semantic_tree/semantic_annotator.js';
-import {
-  SemanticRole,
-  SemanticType
-} from '../semantic_tree/semantic_meaning.js';
-import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticRole } from '../semantic_tree/semantic_meaning.js';
 
 import { LOCALE } from '../l10n/locale.js';
 import * as MathspeakUtil from './mathspeak_util.js';
@@ -197,129 +191,6 @@ function enlargeFence(text: string): string {
 }
 
 Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
-
-const NUMBER_PROPAGATORS: SemanticType[] = [
-  SemanticType.MULTIREL,
-  SemanticType.RELSEQ,
-  SemanticType.APPL,
-  SemanticType.ROW,
-  SemanticType.LINE
-];
-
-const NUMBER_INHIBITORS: SemanticType[] = [
-  SemanticType.SUBSCRIPT,
-  SemanticType.SUPERSCRIPT,
-  SemanticType.OVERSCORE,
-  SemanticType.UNDERSCORE
-];
-
-/**
- * Checks if a Nemeth number indicator has to be propagated beyond the node's
- * parent.
- *
- * @param node The node which can get a number indicator.
- * @param info True if we are in an enclosed list.
- * @returns True if parent is a relation, punctuation or application or
- *     a negative sign.
- */
-function checkParent(
-  node: SemanticNode,
-  info: { [key: string]: boolean }
-): boolean {
-  const parent = node.parent;
-  if (!parent) {
-    return false;
-  }
-  const type = parent.type;
-  if (
-    NUMBER_PROPAGATORS.indexOf(type) !== -1 ||
-    (type === SemanticType.PREFIXOP &&
-      parent.role === SemanticRole.NEGATIVE &&
-      !info.script &&
-      !info.enclosed) ||
-    (type === SemanticType.PREFIXOP &&
-      // TODO: This needs to be rewritten once there is a better treatment
-      // of prefixop.
-      parent.role === SemanticRole.GEOMETRY)
-  ) {
-    return true;
-  }
-  if (type === SemanticType.PUNCTUATED) {
-    if (!info.enclosed || parent.role === SemanticRole.TEXT) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Propagates annotation for the Nemeth number indicator.
- *
- * @param node The semantic node.
- * @param info The info structure on the type of number.
- * @returns Info pair consisting of a string and the updated
- *     information object.
- */
-function propagateNumber(
-  node: SemanticNode,
-  info: { [key: string]: any }
-): any[] {
-  // TODO: Font indicator followed by number.
-  // TODO: Check for enclosed list
-  if (!node.childNodes.length) {
-    if (checkParent(node, info)) {
-      info.number = true;
-      info.script = false;
-      info.enclosed = false;
-    }
-    return [
-      info['number'] ? 'number' : '',
-      { number: false, enclosed: info.enclosed, script: info.script }
-    ];
-  }
-  if (NUMBER_INHIBITORS.indexOf(node.type) !== -1) {
-    info.script = true;
-  }
-  if (node.type === SemanticType.FENCED) {
-    info.number = false;
-    info.enclosed = true;
-    return ['', info];
-  }
-  if (
-    node.type === SemanticType.PREFIXOP &&
-    node.role !== SemanticRole.GEOMETRY &&
-    node.role !== SemanticRole.NEGATIVE
-  ) {
-    info.number = false;
-    return ['', info];
-  }
-  if (checkParent(node, info)) {
-    info.number = true;
-    info.enclosed = false;
-  }
-  return ['', info];
-}
-
-register(
-  new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
-);
-
-/**
- * Annotator that adds a tree depth annotation for each node.
- *
- * @param node The node to annotate.
- * @returns Array with the current depth in the tree.
- */
-function annotateDepth(node: SemanticNode): any[] {
-  if (!node.parent) {
-    return [1];
-  }
-  const depth = parseInt(node.parent.annotation['depth'][0]);
-  return [depth + 1];
-}
-
-register(new SemanticVisitor('depth', 'depth', annotateDepth));
-activate('depth', 'depth');
 
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if

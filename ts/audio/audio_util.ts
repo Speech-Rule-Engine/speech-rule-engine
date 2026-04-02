@@ -157,6 +157,7 @@ let LastOpen_: EngineConst.personalityProps[][] = [];
  * @returns Markup list.
  */
 export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
+  descrs = descrs.map((x) => x.clone());
   PersonalityRanges_ = {};
   LastOpen_ = [];
   let result: Markup[] = [];
@@ -181,7 +182,9 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   }
   result = result.concat(finaliseMarkup_());
   result = simplifyMarkup_(result);
-  result = Engine.getInstance().cleanpause ? cleanPause(result) : result;
+  result = Engine.getInstance().options.cleanpause
+    ? cleanPause(result)
+    : result;
   return result;
 }
 

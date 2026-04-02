@@ -1,0 +1,284 @@
+{
+  "name": "ItalianClearspeakCoverage",
+  "locale": "it",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage.json",
+  "information": "Italian Clearspeak Coverage tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "ApplSimple_0": {
+      "expected": "f di, g di x"
+    },
+    "ApplSimple_1": {
+      "expected": "f di, g di x, uguale a f di x, più g di x"
+    },
+    "BinaryOperationPause_0": {
+      "expected": "seno di x y"
+    },
+    "Empty_Line_0": {
+      "expected": "2 linee, Riga 1: a. Riga 2: vuota"
+    },
+    "Empty_Line_1": {
+      "expected": "2 linee, Riga 1: a. Riga 2: vuota"
+    },
+    "Empty_Line_2": {
+      "expected": "2 linee, Riga 1: a. Riga 2: vuota"
+    },
+    "Empty_Cell_0": {
+      "expected": "2 linee, Riga 1: a; uguale a; b"
+    },
+    "Empty_Cell_1": {
+      "expected": "2 linee, Riga 1: a; uguale a; b. Riga 2: vuoto"
+    },
+    "Empty_Cell_2": {
+      "expected": "2 linee, Riga 1: a; uguale a; b. Riga 2: vuota"
+    },
+    "Empty_Cell_3": {
+      "expected": "2 linee, Riga 1: a; uguale a; b. Riga 2: 1; vuoto; 2"
+    },
+    "Angle_0_default": {
+      "expected": "45 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_1_default": {
+      "expected": "1 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_2_default": {
+      "expected": "45 grado, 1 minuto, 20 secondi"
+    },
+    "Angle_3_default": {
+      "expected": "45 grado, 10 minuti, 1 secondo"
+    },
+    "Angle_4_default": {
+      "expected": "1 piede, 20 pollici"
+    },
+    "Angle_5_default": {
+      "expected": "10 piedi, 1 pollice"
+    },
+    "Angle_0_Angle": {
+      "expected": "45 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_1_Angle": {
+      "expected": "1 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_2_Angle": {
+      "expected": "45 grado, 1 minuto, 20 secondi"
+    },
+    "Angle_3_Angle": {
+      "expected": "45 grado, 10 minuti, 1 secondo"
+    },
+    "Angle_4_Angle": {
+      "expected": "1 minuto, 20 secondi"
+    },
+    "Angle_5_Angle": {
+      "expected": "10 minuti, 1 secondo"
+    },
+    "Angle_0_Length": {
+      "expected": "45 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_1_Length": {
+      "expected": "1 grado, 10 minuti, 20 secondi"
+    },
+    "Angle_2_Length": {
+      "expected": "45 grado, 1 minuto, 20 secondi"
+    },
+    "Angle_3_Length": {
+      "expected": "45 grado, 10 minuti, 1 secondo"
+    },
+    "Angle_4_Length": {
+      "expected": "1 piede, 20 pollici"
+    },
+    "Angle_5_Length": {
+      "expected": "10 piedi, 1 pollice"
+    },
+    "Enclose_0": {
+      "expected": "12"
+    },
+    "Enclose_1": {
+      "expected": "12"
+    },
+    "Enclose_2": {
+      "expected": "2 con 12 sotto"
+    },
+    "Enclose_3": {
+      "expected": "12 con 2 sotto"
+    },
+    "Enclose_4": {
+      "expected": "12 con 2 sopra"
+    },
+    "Enclose_5": {
+      "expected": "2 con 12 sopra"
+    },
+    "Enclose_6": {
+      "expected": "12"
+    },
+    "Enclose_7": {
+      "expected": "12"
+    },
+    "Enclose_8": {
+      "expected": "2 con 12 sotto"
+    },
+    "Enclose_9": {
+      "expected": "12 con 2 sotto"
+    },
+    "Enclose_10": {
+      "expected": "12 con 2 sopra"
+    },
+    "Enclose_11": {
+      "expected": "2 con 12 sopra"
+    },
+    "EncloseSpecial_0": {
+      "expected": "A maiuscola"
+    },
+    "EncloseSpecial_1": {
+      "expected": "A maiuscola"
+    },
+    "EncloseSpecial_2": {
+      "expected": "A maiuscola"
+    },
+    "EncloseSpecial_3": {
+      "expected": "A maiuscola"
+    },
+    "NestedRoots_0": {
+      "expected": "radice quadrata di, radice cubica di a, più b"
+    },
+    "NestedRoots_1": {
+      "expected": "radice quadrata di, radice quarta di a, più b"
+    },
+    "NestedRoots_2": {
+      "expected": "radice quadrata di, radice quadrata di a, più b"
+    },
+    "NestedRoots_3": {
+      "expected": "più radice quadrata di, più radice quadrata di a, più b"
+    },
+    "NestedRoots_4": {
+      "expected": "più radice quadrata di, più radice quadrata di a, più b, fine radice"
+    },
+    "NestedRoots_5": {
+      "expected": "più radice quadrata di, meno radice quadrata di a, fine radice, più b, fine radice"
+    },
+    "Tensor_0": {
+      "expected": "sub sotto a sub sinistro b x sub destro c sub sopra d"
+    },
+    "Tensor_1": {
+      "expected": "sub sotto a b sub sinistro g h x sub destro c d sub sopra e f"
+    },
+    "Tensor_2": {
+      "expected": "sub sotto a sub sinistro b x; sub sopra d"
+    },
+    "Tensor_3": {
+      "expected": "sub sotto a sub sinistro b x sub destro c; r"
+    },
+    "Tensor_4": {
+      "expected": "l; sub sinistro b x sub destro c sub sopra d"
+    },
+    "Tensor_5": {
+      "expected": "sub sotto a; x sub destro c sub sopra d"
+    },
+    "Set_0": {
+      "expected": "l'insieme di tutti x non in A tale che B"
+    },
+    "Set_1": {
+      "expected": "l'insieme di tutti x non appartenente a A tale che B"
+    },
+    "Set_2": {
+      "expected": "l'insieme di tutti x non elemento di A tale che B"
+    },
+    "Set_3": {
+      "expected": "l'insieme di tutti x non membro di A tale che B"
+    },
+    "Set_4": {
+      "expected": "l'insieme B"
+    },
+    "Set_5": {
+      "expected": "l'insieme vuoto"
+    },
+    "NamedSet_0": {
+      "expected": "i numeri razionali positivi"
+    },
+    "NamedSet_1": {
+      "expected": "i numeri razionali positivi"
+    },
+    "NamedSet_2": {
+      "expected": "i numeri razionali negativi"
+    },
+    "NamedSet_3": {
+      "expected": "i numeri razionali negativi"
+    },
+    "NamedSet_4": {
+      "expected": "q-due"
+    },
+    "NamedSet_5": {
+      "expected": "q-due"
+    },
+    "NamedSet_6": {
+      "expected": "n-due"
+    },
+    "NamedSet_7": {
+      "expected": "n-due"
+    },
+    "Unknown": {
+      "expected": "a"
+    },
+    "MultiLines_0": {
+      "expected": "2 caso, Caso 1: f di x, uguale a meno x, if x minore di 0. Caso 2: f di x, uguale a x, if x maggiore o uguale a 0"
+    },
+    "MultiLines_1": {
+      "expected": "2 vincoli, Vincoli 1: f di x, uguale a meno x; if x minore di 0. Vincoli 2: f di x, uguale a x, if x maggiore o uguale a 0"
+    },
+    "VulgarFraction": {
+      "expected": "10 fratto 20"
+    },
+    "UnitFraction": {
+      "expected": "2 chilometri fratto b"
+    },
+    "Decimal": {
+      "expected": "decimale periodico 1 punto 4 seguito da 3 periodico"
+    },
+    "VertLine_SuchThat": {
+      "expected": "3 tale che 6"
+    },
+    "VectorEndDeterminant": {
+      "expected": "determinante della matrice 2 per 2. Riga 1: 2, 1 Riga 2: 7, 5. fine determinante"
+    },
+    "SimpleExponentSquared_0": {
+      "expected": "3 elevato alla 2 quadrato"
+    },
+    "SimpleExponentSquared_1": {
+      "expected": "3 elevato alla i quadrato"
+    },
+    "SimpleExponentSquared_2": {
+      "expected": "3 elevato alla due terzi quadrato"
+    },
+    "SimpleExponentCubed_0": {
+      "expected": "3 elevato alla 2 cubo"
+    },
+    "SimpleExponentCubed_1": {
+      "expected": "3 elevato alla i cubo"
+    },
+    "SimpleExponentCubed_2": {
+      "expected": "3 elevato alla due terzi cubo"
+    },
+    "MultiRel": {
+      "expected": "a minore o uguale a b uguale a c"
+    },
+    "PrefixFunctionAsExponent": {
+      "expected": "3 elevato alla seno di, parentesi tonda aperta, 2 più x, parentesi tonda chiusa"
+    },
+    "CompositeFunctionFences": {
+      "expected": "parentesi tonda aperta, f più g, parentesi tonda chiusa, di, parentesi tonda aperta, 2 più x, parentesi tonda chiusa"
+    },
+    "LimUpper": {
+      "expected": "sommatoria sotto I"
+    },
+    "Overscript": {
+      "expected": "A con B sopra"
+    },
+    "DetFemale": {
+      "expected": "determinante della A"
+    },
+    "ExponentLatinCap": {
+      "expected": "x alla A"
+    }
+  }
+}

@@ -352,17 +352,22 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"Quadrat\""
+      "[n] children/*[1]; [t] \"Quadrat\" (span:children/*[2])"
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"Kubik\""
+      "[n] children/*[1]; [t] \"Kubik\" (span:children/*[2])"
     ],
     [
       "Action",
       "fences-points",
       "[t] \"der Punkt mit Koordinaten\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "fences-auto-interval",
+      "[t] \"das Interval von\"; [n] children/*[1]/children/*[1]; [t] \"bis\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -532,7 +537,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -542,7 +547,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -552,7 +557,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -562,7 +567,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -642,7 +647,7 @@
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"geteilt durch\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"geteilt durch\" (span:content/*[1]); [n] children/*[2]"
     ],
     [
       "Action",
@@ -702,7 +707,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause:short); [t] \"Ende Betrag\" (pause:short)"
+      "[p] (pause:short); [t] \"der Betrag von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Betrag\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -717,12 +722,12 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"die Metrik von\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"die Metrik von\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"die Metrik von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Metrik\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"die Metrik von\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"Ende Metrik\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -942,7 +947,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2]; [t] \"bis\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"von\"; [n] children/*[2]; [t] \"bis\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -967,22 +972,27 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"unter\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"mit\"; [n] children/*[2]; [t] \"oben\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"mit\"; [n] children/*[1]/children/*[2]; [t] \"unten\"; [t] \"und\"; [n] children/*[2]; [t] \"oben\""
     ],
     [
       "Action",
       "overscript-limits",
-      "[n] children/*[1]; [t] \"bis\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"unter\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"mit\"; [n] children/*[2]; [t] \"unten\""
     ],
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1118,6 +1128,41 @@
       "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"pro\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"Schlussregel\"; [m] content/*; [t] \"mit Folgerung\"; [n] children/*[1]; [t] \"aus\"; [t] count(children/*[2]/children/*); [t] \"Prämissen\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"Schlussregel\"; [m] content/*; [t] \"mit Folgerung\"; [n] children/*[1]; [t] \"aus\"; [t] count(children/*[2]/children/*); [t] \"Prämisse\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"Prämisse \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"Regel\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"Axiom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"leeres Axiom\""
     ]
   ]
 }

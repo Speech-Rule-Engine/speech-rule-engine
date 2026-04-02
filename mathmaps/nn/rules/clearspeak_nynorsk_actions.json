@@ -391,6 +391,11 @@
     ],
     [
       "Action",
+      "fences-auto-interval",
+      "[t] \"intervallet frå\"; [n] children/*[1]/children/*[1]; [t] \"til\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"intervallet frå\"; [n] children/*[1]/children/*[1]; [t] \"til\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
@@ -557,7 +562,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"kvadratrota av\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"kvadratrota av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -567,7 +572,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"den negative kvadratrota av\"; [n] children/*[1]/children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"den negative kvadratrota av\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -577,7 +582,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -587,7 +592,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
@@ -672,82 +677,82 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"dei naturlege tala\" (span:.)"
+      "[t] \"dei naturlege tala\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"heiltala\" (span:.)"
+      "[t] \"heiltala\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"dei rasjonale tala\" (span:.)"
+      "[t] \"dei rasjonale tala\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"dei reelle tala\" (span:.)"
+      "[t] \"dei reelle tala\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"dei komplekse tala\" (span:.)"
+      "[t] \"dei komplekse tala\""
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"dei naturlege tala med null\" (span:.)"
+      "[t] \"dei naturlege tala med null\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"dei positive heiltala\" (span:.)"
+      "[t] \"dei positive heiltala\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"dei negative heltala\" (span:.)"
+      "[t] \"dei negative heltala\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"de positive rasjonale tala\" (span:.)"
+      "[t] \"de positive rasjonale tala\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"de negative rasjonale tala\" (span:.)"
+      "[t] \"de negative rasjonale tala\""
     ],
     [
       "Action",
       "fences-neutral",
-      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"den absolutte verdien av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt absolutt verdi\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"den absolutte verdien av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt absolutt verdi\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
       "fences-neutral-cardinality",
-      "[p] (pause:short); [t] \"kardinaliteten til\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"kardinaliteten til\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"determinanten til\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"determinanten til\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"berekninga av\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"berekninga av\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"berekninga av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt berekning\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"berekninga av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt berekning\" (span:content/*[2], pause:short)"
     ],
     [
       "Action",
@@ -967,7 +972,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"frå\"; [n] children/*[2]; [t] \"til\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"frå\"; [n] children/*[2]; [t] \"til\"; [n] children/*[3] (pause:short)"
     ],
     [
       "Action",
@@ -992,7 +997,12 @@
     [
       "Action",
       "overscript",
-      "[n] children/*[1]; [t] \"under\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"med\"; [n] children/*[2]; [t] \"over\""
+    ],
+    [
+      "Action",
+      "overunderscript",
+      "[n] children/*[1]/children/*[1]; [t] \"med\"; [n] children/*[1]/children/*[2]; [t] \"under\"; [t] \"og\"; [n] children/*[2]; [t] \"over\""
     ],
     [
       "Action",
@@ -1002,7 +1012,7 @@
     [
       "Action",
       "underscript",
-      "[n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [t] \"med\"; [n] children/*[2]; [t] \"under\""
     ],
     [
       "Action",
@@ -1203,6 +1213,41 @@
       "Action",
       "cancel-under-end",
       "[n] children/*[2]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[1]; [t] \"slutt utkryssa\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premissar\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premiss\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premiss \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"etikett\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"aksiom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"tomt aksiom\""
     ]
   ]
 }

@@ -23,7 +23,7 @@
 
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
-import { Engine } from '../common/engine.js';
+import { Options } from '../common/options.js';
 import { NamedSymbol } from '../semantic_tree/semantic_attr.js';
 import {
   SemanticRole,
@@ -45,13 +45,15 @@ import { getCase } from './enrich_case.js';
 const SETTINGS: {
   collapsed: boolean;
   implicit: boolean;
-  wiki: boolean;
 } = {
   collapsed: true,
-  implicit: true,
-  wiki: true
+  implicit: true
 };
 
+/**
+ * Map to prevent overwriting of semantic ids during enrichment if a node (e.g.,
+ * a content node) is visited multiple times.
+ */
 const IDS = new Map();
 
 /**
@@ -62,24 +64,31 @@ const IDS = new Map();
  *
  * @param mml The MathML element.
  * @param semantic The semantic tree.
+ * @param options An options object.
  * @returns The modified MathML element.
  */
-export function enrich(mml: Element, semantic: SemanticTree): Element {
-  // The first line is only to preserve output. This should eventually be
-  // deleted.
+export function enrich(
+  mml: Element,
+  semantic: SemanticTree,
+  options: Options
+): Element {
+  Debugger.getInstance().generate(() => [
+    'Original MathML',
+    formattedOutput(mml)
+  ]);
   IDS.clear();
-  const oldMml = DomUtil.cloneNode(mml);
   walkTree(semantic.root);
-  if (Engine.getInstance().structure) {
+  if (options.structure) {
     mml.setAttribute(
       EnrichAttr.Attribute.STRUCTURE,
-      SemanticSkeleton.fromStructure(mml, semantic).toString()
+      SemanticSkeleton.fromStructure(mml, semantic, options).toString()
     );
   }
-  Debugger.getInstance().generateOutput(() => [
-    formattedOutput(oldMml, 'Original MathML', SETTINGS.wiki),
-    formattedOutput(semantic, 'Semantic Tree', SETTINGS.wiki),
-    formattedOutput(mml, 'Semantically enriched MathML', SETTINGS.wiki)
+  Debugger.getInstance().generate(() => [
+    'Semantic Tree\n',
+    formattedOutput(semantic),
+    'Semantically enriched MathML\n',
+    formattedOutput(mml)
   ]);
   return mml;
 }
@@ -94,12 +103,18 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * @returns The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
-  Debugger.getInstance().output('WALKING START: ' + semantic.toString());
+  Debugger.getInstance().generate(() => [
+    'WALKING START: ',
+    semantic.toString()
+  ]);
   const specialCase = getCase(semantic);
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
-    Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+    Debugger.getInstance().generate(() => [
+      'WALKING END: ',
+      semantic.toString()
+    ]);
     return ascendNewNode(newNode);
   }
   if (semantic.mathml.length === 1) {
@@ -108,7 +123,10 @@ export function walkTree(semantic: SemanticNode): Element {
       Debugger.getInstance().output('Walktree Case 0.1');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
-      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+      Debugger.getInstance().generate(() => [
+        'WALKING END: ',
+        semantic.toString()
+      ]);
       return ascendNewNode(newNode);
     }
     const fchild = semantic.childNodes[0];
@@ -120,7 +138,10 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
       newNode.appendChild(walkTree(fchild));
-      Debugger.getInstance().output('WALKING END: ' + semantic.toString());
+      Debugger.getInstance().generate(() => [
+        'WALKING END: ',
+        semantic.toString()
+      ]);
       return ascendNewNode(newNode);
     }
     // Children should not all be empty.
@@ -145,7 +166,9 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
+    newNode = rewriteMfenced(newNode);
     const attached = attachedElement(childrenList);
+    // We need to possibly ascend nodes with ignored empty elements.
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
@@ -155,14 +178,13 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = getInnerNode(newNode);
     }
   }
-  newNode = rewriteMfenced(newNode);
   mergeChildren(newNode, childrenList, semantic);
   if (!IDS.has(semantic.id)) {
     IDS.set(semantic.id, true);
     EnrichAttr.setAttributes(newNode, semantic);
   }
-  Debugger.getInstance().output('WALKING END: ' + semantic.toString());
-  return ascendNewNode(newNode);
+  Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
+  return ascendNewNode(newNode, semantic);
 }
 
 /**
@@ -457,16 +479,16 @@ function mergeChildren(
       const nextChild = newChildren[1] as Element;
       if (nextChild && nextChild.parentNode) {
         // newChild is indeed new but the next child has a parent, which must be
-        // different that the one of node. newChild should be inserted before
+        // different than the one of node. newChild should be inserted before
         // the next, which can then be skipped. Since the parentNode is
         // different than node we replace it.
         node = parentNode(nextChild);
-        node.insertBefore(newChild, nextChild);
+        insertBefore(node, newChild, nextChild);
         newChildren.shift();
         newChildren.shift();
         continue;
       }
-      node.insertBefore(newChild, null);
+      insertBefore(node, newChild, null);
       newChildren.shift();
       continue;
     }
@@ -477,7 +499,8 @@ function mergeChildren(
 }
 
 /**
- * Inserts a new child into the mml tree at the right position.
+ * Inserts a new child into the mml tree at the right position. If the old child
+ * is the first element of its parent, we skip that latter to go one further up.
  *
  * @param node The parent node.
  * @param oldChild The reference where newChild is inserted.
@@ -488,7 +511,7 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let next = parentNode(parent);
   while (
     next &&
-    next.firstChild === parent &&
+    isFirstChild(next, parent) &&
     !parent.hasAttribute('AuxiliaryImplicit') &&
     next !== node
   ) {
@@ -496,9 +519,42 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
     next = parentNode(parent);
   }
   if (next) {
-    next.insertBefore(newChild, parent);
+    insertBefore(next, newChild, parent);
     parent.removeAttribute('AuxiliaryImplicit');
   }
+}
+
+/**
+ * Inserts a new child before an existing child of the given node. If the given
+ * node is an maction element this level is skipped.
+ *
+ * @param node The parent node.
+ * @param newChild The new child to be inserted.
+ * @param oldChild The reference before which newChild is inserted.
+ */
+function insertBefore(node: Element, newChild: Element, oldChild: Element) {
+  if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
+    node.insertBefore(newChild, oldChild);
+    return;
+  }
+  insertBefore(parentNode(node), newChild, node);
+}
+
+/**
+ * Checks if child is the first child of node. In case the node is an maction
+ * node, we compare the child to the currently selected node.
+ *
+ * @param node The parent node.
+ * @param child The potential child.
+ * @returns True if the child is the first child of node or the selected maction
+ *     node.
+ */
+function isFirstChild(node: Element, child: Element) {
+  if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
+    return node.firstChild === child;
+  }
+  const selection = parseInt(node.getAttribute('selection')) || 1;
+  return node.childNodes[selection - 1] === child;
 }
 
 /**
@@ -680,10 +736,19 @@ function validLca(left: Element, right: Element): boolean {
  * and that only has one child.
  *
  * @param newNode The node currently under consideration.
+ * @param semantic Optionally the original semantic element. If this is given
+ *     and has an annotation for empty, the parent node corresponding to the
+ *     given tag is skipped. This is important for elements like `a_{}b_{}`,
+ *     where empty subscripts are omitted, but newly added implicit times
+ *     elements need to be added between the msubs and not before the `b`.
  * @returns The parent node.
  */
-export function ascendNewNode(newNode: Element): Element {
-  while (!SemanticUtil.hasMathTag(newNode) && unitChild(newNode)) {
+export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
+  let empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
+    && semantic.getAnnotation('empty');
+  while (!SemanticUtil.hasMathTag(newNode) &&
+    (unitChild(newNode) ||
+      (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
     newNode = parentNode(newNode);
   }
   return newNode;
@@ -868,6 +933,9 @@ export function setOperatorAttribute(
  *     itself.
  */
 export function getInnerNode(node: Element): Element {
+  if (SemanticUtil.hasIgnoreTag(node)) {
+    return node;
+  }
   const children = DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;
@@ -903,19 +971,12 @@ export function getInnerNode(node: Element): Element {
  * REMARK: Helper function.
  *
  * @param element The original MathML expression.
- * @param name The name of the expression to be printed in the wiki.
- * @param wiki Flag to specify wiki output.
  * @returns Formatted output string.
  */
-function formattedOutput(
-  element: Element | SemanticTree,
-  name: string,
-  wiki = false
-) {
-  const output = EnrichAttr.removeAttributePrefix(
+function formattedOutput(element: Element | SemanticTree) {
+  return EnrichAttr.removeAttributePrefix(
     DomUtil.formatXml(element.toString())
   );
-  return wiki ? name + ':\n```html\n' + output + '\n```\n' : output;
 }
 
 /**

@@ -42,6 +42,19 @@
       "self::empty"
     ],
     [
+      "Precondition",
+      "empty",
+      "default",
+      "self::empty",
+      "contains(@grammar, \"empty\")"
+    ],
+    [
+      "Alias",
+      "empty",
+      "self::text[@role=\"space\"]",
+      "priority=Infinity"
+    ],
+    [
       "Rule",
       "omit-font",
       "default",
@@ -154,7 +167,8 @@
       "self::identifier[@font=\"normal\"]",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "@role!=\"infty\""
     ],
     [
       "Precondition",
@@ -1137,6 +1151,7 @@
       "default",
       "self::fenced",
       "@role=\"leftright\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or contains(@annotation, \"fences:curly\")",
       "contains(children/*[1]/@annotation, \"clearspeak:simple\")",
       "name(../..)!=\"superscript\" and name(../..)!=\"subscript\""
     ],
@@ -1147,6 +1162,7 @@
       "self::fenced",
       "@role=\"leftright\"",
       "name(../..)=\"superscript\"",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "children/*[1][@role=\"integer\"] or children/*[1][@role=\"float\"] or (children/*[1][@role=\"vulgar\"] and contains(children/*[1]/@annotation, \"clearspeak:simple\")) or children/*[1][@role=\"latinletter\"] or children/*[1][@role=\"greekletter\"] or children/*[1][@role=\"otherletter\"]"
     ],
     [
@@ -1158,6 +1174,7 @@
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\") or name(children/*[1]/children/*[2]/children/*[1])=\"subscript\" or name(children/*[1]/children/*[2]/children/*[1])=\"superscript\" or children/*[1]/children/*[2]/children/*[1][@role=\"vulgar\"] "
     ],
     [
@@ -1169,6 +1186,7 @@
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "name(children/*[1]/children/*[1])=\"identifier\" or name(children/*[1]/children/*[1])=\"function\"",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\")",
       "name(children/*[1]/children/*[2]/children/*[1])=\"identifier\" or name(children/*[1]/children/*[2]/children/*[1])=\"number\""
@@ -1186,7 +1204,7 @@
       "self::fenced"
     ],
     [
-      "Specialized",
+      "Alias",
       "fences-open-close",
       "default",
       "self::fenced",
@@ -1210,6 +1228,7 @@
       "@role=\"leftright\"",
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
       "parent::*/parent::*[@role=\"simple function\" or @role=\"prefix function\"]",
+      "contains(@annotation, \"fences:paren\") or contains(@annotation, \"fences:bracket\") or  contains(@annotation, \"fences:curly\")",
       "children/*[1][@role=\"simple function\" or @role=\"prefix function\"]",
       "contains(children/*[1]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\") or name(children/*[1]/children/*[2]/children/*[1])=\"subscript\" or name(children/*[1]/children/*[2]/children/*[1])=\"superscript\" or children/*[1]/children/*[2]/children/*[1][@role=\"vulgar\"] "
     ],
@@ -1264,6 +1283,14 @@
     ],
     [
       "Precondition",
+      "fences-auto-interval",
+      "default",
+      "self::fenced[@role=\"interval\"]",
+      "not(contains(@grammar, \"interval\"))",
+      "name(parent::*/parent::*)!=\"appl\""
+    ],
+    [
+      "Precondition",
       "fences-interval",
       "Paren_Interval",
       "self::fenced",
@@ -1271,12 +1298,13 @@
       "name(children/*[1])=\"punctuated\"",
       "children/*[1][@role=\"sequence\"]",
       "count(./children/*[1]/content/*)=1",
-      "children/*[1]/content/*[1][@role=\"comma\"]"
+      "children/*[1]/content/*[1][@role=\"comma\"]",
+      "name(parent::*/parent::*)!=\"appl\""
     ],
     [
       "Precondition",
       "interval-open",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1285,7 +1313,7 @@
     [
       "Precondition",
       "interval-closed-open",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1294,7 +1322,7 @@
     [
       "Precondition",
       "interval-open-closed",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1303,7 +1331,7 @@
     [
       "Precondition",
       "interval-closed",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1312,53 +1340,134 @@
     [
       "Precondition",
       "interval-open-inf-r",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
       "content/*[2]/text()=\")\"",
-      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")"
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])"
     ],
     [
       "Precondition",
       "interval-open-inf-l",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
       "content/*[2]/text()=\")\"",
-      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
     ],
     [
       "Precondition",
       "interval-open-inf-lr",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
       "content/*[2]/text()=\")\"",
-      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")",
-      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])",
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
     ],
     [
       "Precondition",
       "interval-closed-open-inf",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
       "content/*[2]/text()=\")\"",
-      "children/*[1]/children/*[3]/text()=\"∞\" or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1]/text()=\"∞\")"
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])"
     ],
     [
       "Precondition",
       "interval-open-closed-inf",
-      "Paren_Interval",
+      "default",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
       "content/*[2]/text()=\"]\"",
-      "children/*[1]/children/*[1]/text()=\"∞\" or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1]/text()=\"∞\")"
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
+    ],
+    [
+      "Precondition",
+      "unit-reciprocal-multi",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=1]",
+      "preceding-sibling::*[@role=\"unit\"]"
+    ],
+    [
+      "Alias",
+      "interval-open",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\""
+    ],
+    [
+      "Alias",
+      "interval-closed-open",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"[\"",
+      "content/*[2]/text()=\"[\""
+    ],
+    [
+      "Alias",
+      "interval-open-closed",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"]\""
+    ],
+    [
+      "Alias",
+      "interval-open-inf-r",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])"
+    ],
+    [
+      "Alias",
+      "interval-open-inf-l",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
+    ],
+    [
+      "Alias",
+      "interval-open-inf-lr",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])",
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
+    ],
+    [
+      "Alias",
+      "interval-closed-open-inf",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"[\"",
+      "content/*[2]/text()=\"[\"",
+      "children/*[1]/children/*[3][@role=\"infty\"] or (name(children/*[1]/children/*[3])=\"prefixop\" and children/*[1]/children/*[3]/children/*[1][@role=\"infty\"])"
+    ],
+    [
+      "Alias",
+      "interval-open-closed-inf",
+      "self::fenced",
+      "contains(@grammar, \"interval\")",
+      "content/*[1]/text()=\"]\"",
+      "content/*[2]/text()=\"]\"",
+      "children/*[1]/children/*[1][@role=\"infty\"] or (name(children/*[1]/children/*[1])=\"prefixop\" and children/*[1]/children/*[1]/children/*[1][@role=\"infty\"])"
     ],
     [
       "Precondition",
@@ -2050,6 +2159,20 @@
     ],
     [
       "Precondition",
+      "ceiling",
+      "default",
+      "self::fenced",
+      "contains(@annotation, \"fences:ceil\")"
+    ],
+    [
+      "Precondition",
+      "floor",
+      "default",
+      "self::fenced",
+      "contains(@annotation, \"fences:floor\")"
+    ],
+    [
+      "Precondition",
       "matrix",
       "default",
       "self::matrix"
@@ -2400,6 +2523,40 @@
     ],
     [
       "Precondition",
+      "line-label",
+      "default",
+      "self::line",
+      "content",
+      "not(contains(@grammar, \"labelledLine\"))"
+    ],
+    [
+      "Alias",
+      "line-label",
+      "self::row",
+      "content",
+      "not(contains(@grammar, \"labelledLine\"))"
+    ],
+    [
+      "Specialized",
+      "line-label",
+      "default",
+      "MultiLinePausesBetweenColumns_Short"
+    ],
+    [
+      "Specialized",
+      "line-label",
+      "default",
+      "MultiLinePausesBetweenColumns_Long"
+    ],
+    [
+      "Precondition",
+      "cell-label",
+      "default",
+      "self::cell",
+      "@role=\"label\""
+    ],
+    [
+      "Precondition",
       "blank-cell",
       "default",
       "self::cell",
@@ -2625,10 +2782,20 @@
     ],
     [
       "Precondition",
+      "overunderscript",
+      "default",
+      "self::overscore",
+      "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role!=\"underaccent\"]"
+    ],
+    [
+      "Precondition",
       "overscript-limits",
       "default",
       "self::overscore",
       "children/*[2][@role!=\"overaccent\"]",
+      "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\"",
       "name(children/*[1])=\"underscore\"",
       "children/*[1]/children/*[2][@role!=\"underaccent\"]"
     ],
@@ -2643,7 +2810,7 @@
       "underscript-limits",
       "default",
       "self::underscore",
-      "@role=\"underover\"",
+      "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\"",
       "children/*[2][@role!=\"underaccent\"]"
     ],
     [
@@ -2890,11 +3057,30 @@
       "self::identifier[@role=\"unit\"]"
     ],
     [
+      "Alias",
+      "unit-singular",
+      "self::identifier[@font=\"normal\"]",
+      "not(contains(@role,\"function\"))",
+      "CQFisUnit",
+      "contains(@grammar, \"singular\")",
+      "priority=500"
+    ],
+    [
       "Precondition",
       "unit-plural",
       "default",
       "self::identifier[@role=\"unit\"]",
       "not(contains(@grammar, \"singular\"))"
+    ],
+    [
+      "Alias",
+      "unit-plural",
+      "self::identifier[@font=\"normal\"]",
+      "not(contains(@role,\"function\"))",
+      "CQFisUnit",
+      "not(parent::stree)",
+      "not(contains(@grammar, \"singular\"))",
+      "priority=500"
     ],
     [
       "Precondition",
@@ -2945,6 +3131,14 @@
       "unit-combine-singular",
       "default",
       "self::infixop[@role=\"unit\"]",
+      "name(children/*[1])=\"number\"",
+      "children/*[1][text()=1]"
+    ],
+    [
+      "Alias",
+      "unit-combine-singular",
+      "self::infixop[@role=\"implicit\"]",
+      "children/*[2][@font=\"normal\"]",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],
@@ -3094,6 +3288,107 @@
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Precondition",
+      "multi-inference",
+      "default",
+      "self::inference"
+    ],
+    [
+      "Precondition",
+      "inference",
+      "default",
+      "self::inference",
+      "count(children/*[2]/children/*)<2"
+    ],
+    [
+      "Precondition",
+      "premise",
+      "default",
+      "self::premises"
+    ],
+    [
+      "Precondition",
+      "conclusion",
+      "default",
+      "self::conclusion"
+    ],
+    [
+      "Precondition",
+      "label",
+      "default",
+      "self::rulelabel"
+    ],
+    [
+      "Precondition",
+      "axiom",
+      "default",
+      "self::inference[@role=\"axiom\"]"
+    ],
+    [
+      "Specialized",
+      "axiom",
+      "default",
+      "Inference_Long"
+    ],
+    [
+      "Precondition",
+      "empty-axiom",
+      "default",
+      "self::inference[@role=\"axiom\"]",
+      "name(children/*[1])=\"empty\""
+    ],
+    [
+      "Specialized",
+      "empty-axiom",
+      "default",
+      "Inference_Long"
+    ],
+    [
+      "Precondition",
+      "multi-inference-long",
+      "Inference_Long",
+      "self::inference"
+    ],
+    [
+      "Precondition",
+      "inference-long",
+      "Inference_Long",
+      "self::inference",
+      "count(children/*[2]/children/*)<2"
+    ],
+    [
+      "Precondition",
+      "inference-short",
+      "Inference_Long",
+      "self::inference",
+      "contains(@grammar, \"shortPrem\")"
+    ],
+    [
+      "Precondition",
+      "empty-base-superscript",
+      "default",
+      "self::superscript",
+      "name(children/*[1])=\"empty\"",
+      "priority=Infinity"
+    ],
+    [
+      "Precondition",
+      "empty-base-subsuper",
+      "default",
+      "self::superscript",
+      "name(children/*[1])=\"subscript\"",
+      "name(children/*[1]/children/*[1])=\"empty\"",
+      "priority=Infinity"
+    ],
+    [
+      "Precondition",
+      "empty-base-subscript",
+      "default",
+      "self::subscript",
+      "name(children/*[1])=\"empty\"",
+      "priority=Infinity"
     ]
   ],
   "annotators": [

@@ -1,0 +1,1136 @@
+{
+  "name": "KoreanMathspeak",
+  "locale": "ko",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_test.json",
+  "information": "Korean Mathspeak tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakKorean",
+  "exclude": [],
+  "tests": {
+    "Sample_1_1_1_default": {
+      "expected": "파이 거의 같다 3.14159"
+    },
+    "Sample_1_1_1_brief": {
+      "expected": "파이 거의 같다 3.14159"
+    },
+    "Sample_1_1_1_sbrief": {
+      "expected": "파이 거의 같다 3.14159"
+    },
+    "Sample_1_1_2_default": {
+      "expected": "102 더하기 2,214 더하기 15 는 2,331"
+    },
+    "Sample_1_1_2_brief": {
+      "expected": "102 더하기 2,214 더하기 15 는 2,331"
+    },
+    "Sample_1_1_2_sbrief": {
+      "expected": "102 더하기 2,214 더하기 15 는 2,331"
+    },
+    "Sample_1_1_3_default": {
+      "expected": "59 곱하기 0 은 0"
+    },
+    "Sample_1_1_3_brief": {
+      "expected": "59 곱하기 0 은 0"
+    },
+    "Sample_1_1_3_sbrief": {
+      "expected": "59 곱하기 0 은 0"
+    },
+    "Sample_1_2_1_default": {
+      "expected": "3 빼기 마이너스 2"
+    },
+    "Sample_1_2_1_brief": {
+      "expected": "3 빼기 마이너스 2"
+    },
+    "Sample_1_2_1_sbrief": {
+      "expected": "3 빼기 마이너스 2"
+    },
+    "Sample_1_2_2_default": {
+      "expected": "마이너스 y"
+    },
+    "Sample_1_2_2_brief": {
+      "expected": "마이너스 y"
+    },
+    "Sample_1_2_2_sbrief": {
+      "expected": "마이너스 y"
+    },
+    "Sample_1_2_3_default": {
+      "expected": "마이너스 32"
+    },
+    "Sample_1_2_3_brief": {
+      "expected": "마이너스 32"
+    },
+    "Sample_1_2_3_sbrief": {
+      "expected": "마이너스 32"
+    },
+    "Sample_1_4_1_default": {
+      "expected": "수 t 2 e 4"
+    },
+    "Sample_1_4_1_brief": {
+      "expected": "수 t 2 e 4"
+    },
+    "Sample_1_4_1_sbrief": {
+      "expected": "수 t 2 e 4"
+    },
+    "Sample_1_4_2_default": {
+      "expected": "수 번호 기호 F F 0 0 0 0"
+    },
+    "Sample_1_4_2_brief": {
+      "expected": "수 숫자 기호 F F 0 0 0 0"
+    },
+    "Sample_1_4_2_sbrief": {
+      "expected": "수 숫자 기호 F F 0 0 0 0"
+    },
+    "Sample_1_4_3_default": {
+      "expected": "수 0 x 1 5 F F 더하기 수 0 x 2 B 0 1 은 수 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_brief": {
+      "expected": "수 0 x 1 5 F F 더하기 수 0 x 2 B 0 1 은 수 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_sbrief": {
+      "expected": "수 0 x 1 5 F F 더하기 수 0 x 2 B 0 1 은 수 0 x 4 1 0 0"
+    },
+    "Sample_1_5_1_default": {
+      "expected": "대문자 I 콤마 대문자묶음 I I 콤마 대문자묶음 I I I 콤마 대문자묶음 I V 콤마 대문자 V 마침표"
+    },
+    "Sample_1_5_1_brief": {
+      "expected": "대문자 I 콤마 대문자묶음 I I 콤마 대문자묶음 I I I 콤마 대문자묶음 I V 콤마 대문자 V 마침표"
+    },
+    "Sample_1_5_1_sbrief": {
+      "expected": "대문자 I 콤마 대문자묶음 I I 콤마 대문자묶음 I I I 콤마 대문자묶음 I V 콤마 대문자 V 마침표"
+    },
+    "_comment0_": " not yet possible, as we do not yet handle mstack.",
+    "Sample_1_6_1_default": {
+      "expected": "분수시작 7 분의 22 분수끝 은 3 점 ModifyingAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_1_6_1_brief": {
+      "expected": "분수시작 7 분의 22 분수끝 은 3 점 ModAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_1_6_1_sbrief": {
+      "expected": "분수 7 분의 22 분수끝 은 3 점 ModAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_2_1_1_default": {
+      "expected": "d 는 루트시작 괄호 열고 대문자 X 빼기 x 괄호 닫고 제곱 빼기 괄호 열고 대문자 Y 빼기 y 괄호 닫고 제곱 루트끝"
+    },
+    "Sample_2_1_1_brief": {
+      "expected": "d 는 루트시작 괄열 대문자 X 빼기 x 괄닫 제곱 빼기 괄열 대문자 Y 빼기 y 괄닫 제곱 루트끝"
+    },
+    "Sample_2_1_1_sbrief": {
+      "expected": "d 는 루트 괄열 대문자 X 빼기 x 괄닫 제곱 빼기 괄열 대문자 Y 빼기 y 괄닫 제곱 루트끝"
+    },
+    "Sample_2_3_1_default": {
+      "expected": "If 대문자 A 오른쪽 화살표 대문자 B and 대문자 B 오른쪽 화살표 대문자 C then 대문자 A 오른쪽 화살표 대문자 C 마침표"
+    },
+    "Sample_2_3_1_brief": {
+      "expected": "If 대문자 A 오른쪽 화살표 대문자 B and 대문자 B 오른쪽 화살표 대문자 C then 대문자 A 오른쪽 화살표 대문자 C 마침표"
+    },
+    "Sample_2_3_1_sbrief": {
+      "expected": "If 대문자 A 오른쪽 화살표 대문자 B and 대문자 B 오른쪽 화살표 대문자 C then 대문자 A 오른쪽 화살표 대문자 C 마침표"
+    },
+    "Sample_2_6_1_default": {
+      "expected": "진한 대괄호 열고 x 진한 대괄호 닫고"
+    },
+    "Sample_2_6_1_brief": {
+      "expected": "진한 대괄열 x 진한 대괄닫"
+    },
+    "Sample_2_6_1_sbrief": {
+      "expected": "진한 대괄열 x 진한 대괄닫"
+    },
+    "Sample_2_6_2_default": {
+      "expected": "경로적분 대문자 E 닷 d 진한 l 은 빼기 분수시작 d t 분의 d 대문자 파이 대문자 B 분수끝"
+    },
+    "Sample_2_6_2_brief": {
+      "expected": "경로적분 대문자 E 닷 d 진한 l 은 빼기 분수시작 d t 분의 d 대문자 파이 대문자 B 분수끝"
+    },
+    "Sample_2_6_2_sbrief": {
+      "expected": "경로적분 대문자 E 닷 d 진한 l 은 빼기 분수 d t 분의 d 대문자 파이 대문자 B 분수끝"
+    },
+    "NegativeVsMinus_0": {
+      "expected": "빼기 분수시작 b 분의 1 분수끝"
+    },
+    "NegativeVsMinus_1": {
+      "expected": "빼기 분수시작 b 분의 a 분수끝"
+    },
+    "NegativeVsMinus_2": {
+      "expected": "마이너스 3 과 2 분의 1"
+    },
+    "Sample_4_2_1_default": {
+      "expected": "Uppercase 괄호 열고 집합시작 알파 콤마 베타 콤마 감마 콤마 델타 콤마 엡실론 콤마 파이 집합끝 괄호 닫고 는 집합시작 대문자 알파 콤마 대문자 베타 콤마 대문자 감마 콤마 대문자 델타 콤마 대문자 엡실론 콤마 대문자 파이 집합끝"
+    },
+    "Sample_4_2_1_brief": {
+      "expected": "Uppercase 괄열 집합시작 알파 콤마 베타 콤마 감마 콤마 델타 콤마 엡실론 콤마 파이 집합끝 괄닫 은 집합시작 대문자 알파 콤마 대문자 베타 콤마 대문자 감마 콤마 대문자 델타 콤마 대문자 엡실론 콤마 대문자 파이 집합끝"
+    },
+    "Sample_4_2_1_sbrief": {
+      "expected": "Uppercase 괄열 집합 알파 콤마 베타 콤마 감마 콤마 델타 콤마 엡실론 콤마 파이 집합끝 괄닫 은 집합 대문자 알파 콤마 대문자 베타 콤마 대문자 감마 콤마 대문자 델타 콤마 대문자 엡실론 콤마 대문자 파이 집합끝"
+    },
+    "Sample_5_1_1_default": {
+      "expected": "y 빼기 1"
+    },
+    "Sample_5_1_1_brief": {
+      "expected": "y 빼기 1"
+    },
+    "Sample_5_1_1_sbrief": {
+      "expected": "y 빼기 1"
+    },
+    "Sample_5_1_2_default": {
+      "expected": "괄호 열고 1 하이픈 to 하이픈 1 괄호 닫고"
+    },
+    "Sample_5_1_2_brief": {
+      "expected": "괄열 1 하이픈 to 하이픈 1 괄닫"
+    },
+    "Sample_5_1_2_sbrief": {
+      "expected": "괄열 1 하이픈 to 하이픈 1 괄닫"
+    },
+    "Sample_5_1_3_default": {
+      "expected": "마이너스 1"
+    },
+    "Sample_5_1_3_brief": {
+      "expected": "마이너스 1"
+    },
+    "Sample_5_1_3_sbrief": {
+      "expected": "마이너스 1"
+    },
+    "Sample_6_1_1_default": {
+      "expected": "The Fibonacci numbers are 콜론 집합시작 0 콤마 1 콤마 1 콤마 2 콤마 3 콤마 5 콤마 8 콤마 줄임표 집합끝"
+    },
+    "Sample_6_1_1_brief": {
+      "expected": "The Fibonacci numbers are 콜론 집합시작 0 콤마 1 콤마 1 콤마 2 콤마 3 콤마 5 콤마 8 콤마 줄임표 집합끝"
+    },
+    "Sample_6_1_1_sbrief": {
+      "expected": "The Fibonacci numbers are 콜론 집합 0 콤마 1 콤마 1 콤마 2 콤마 3 콤마 5 콤마 8 콤마 줄임표 집합끝"
+    },
+    "Sample_6_2_1_default": {
+      "expected": "절댓값시작 4 빼기 7 절댓값끝 은 3"
+    },
+    "Sample_6_2_1_brief": {
+      "expected": "절댓값시작 4 빼기 7 절댓값끝 은 3"
+    },
+    "Sample_6_2_1_sbrief": {
+      "expected": "절댓값 4 빼기 7 절댓값끝 은 3"
+    },
+    "_comment1_": " This equation does not make sense! We could do it purely syntactically!",
+    "Sample_6_2_2_old_default": {
+      "expected": "절댓값시작 a 절댓값시작 플러스마이너스 b 절댓값끝 빼기 15 절댓값끝 같지 않다 절댓값시작 a 절댓값끝 플러스마이너스 b 절댓값시작 빼기 15 절댓값끝"
+    },
+    "Sample_6_2_2_old_brief": {
+      "expected": "절댓값시작 a 절댓값시작 플러스마이너스 b 절댓값끝 빼기 15 절댓값끝 같지 않다 절댓값시작 a 절댓값끝 플러스마이너스 b 절댓값시작 빼기 15 절댓값끝"
+    },
+    "Sample_6_2_2_old_sbrief": {
+      "expected": "절댓값 a 절댓값 플러스마이너스 b 절댓값끝 빼기 15 절댓값끝 같지 않다 절댓값 a 절댓값끝 플러스마이너스 b 절댓값 빼기 15 절댓값끝"
+    },
+    "Sample_6_2_2_default": {
+      "expected": "절댓값시작 a 플러스마이너스 절댓값시작 b 빼기 c 절댓값끝 절댓값끝 같지 않다 절댓값시작 a 절댓값끝 플러스마이너스 절댓값시작 b 빼기 c 절댓값끝"
+    },
+    "Sample_6_2_2_brief": {
+      "expected": "절댓값시작 a 플러스마이너스 절댓값시작 b 빼기 c 절댓값끝 절댓값끝 같지 않다 절댓값시작 a 절댓값끝 플러스마이너스 절댓값시작 b 빼기 c 절댓값끝"
+    },
+    "Sample_6_2_2_sbrief": {
+      "expected": "절댓값 a 플러스마이너스 절댓값 b 빼기 c 절댓값끝 절댓값끝 같지 않다 절댓값 a 절댓값끝 플러스마이너스 절댓값 b 빼기 c 절댓값끝"
+    },
+    "Sample_7_1_1_default": {
+      "expected": "분수시작 x 분의 1 분수끝"
+    },
+    "Sample_7_1_1_brief": {
+      "expected": "분수시작 x 분의 1 분수끝"
+    },
+    "Sample_7_1_1_sbrief": {
+      "expected": "분수 x 분의 1 분수끝"
+    },
+    "Sample_7_1_2_default": {
+      "expected": "a 빼기 분수시작 d 빼기 e 분의 b 더하기 c 분수끝 곱하기 f"
+    },
+    "Sample_7_1_2_brief": {
+      "expected": "a 빼기 분수시작 d 빼기 e 분의 b 더하기 c 분수끝 곱하기 f"
+    },
+    "Sample_7_1_2_sbrief": {
+      "expected": "a 빼기 분수 d 빼기 e 분의 b 더하기 c 분수끝 곱하기 f"
+    },
+    "Sample_7_2_1_default": {
+      "expected": "분수시작시작 z 분의분의 분수시작 y 분의 x 분수끝 분수끝끝 같지 않다 분수시작시작 분수시작 z 분의 y 분수끝 분의분의 x 분수끝끝"
+    },
+    "Sample_7_2_1_brief": {
+      "expected": "분수시작시작 z 분의분의 분수시작 y 분의 x 분수끝 분수끝끝 같지 않다 분수시작시작 분수시작 z 분의 y 분수끝 분의분의 x 분수끝끝"
+    },
+    "Sample_7_2_1_sbrief": {
+      "expected": "중첩분수 z 중첩분의 분수 y 분의 x 분수끝 중첩분수끝 같지 않다 중첩분수 분수 z 분의 y 분수끝 중첩분의 x 중첩분수끝"
+    },
+    "Sample_7_3_1_default": {
+      "expected": "분수시작시작시작 1 더하기 괄호 열고 분수시작 1 빼기 x 분의 2 x 분수끝 괄호 닫고 제곱 분의분의분의 분수시작시작 괄호 열고 1 빼기 x 괄호 닫고 제곱 분의분의 괄호 열고 1 빼기 x 괄호 닫고 분수시작 d x 분의 d 분수끝 괄호 열고 2 x 괄호 닫고 빼기 2 x 분수시작 d x 분의 d 분수끝 괄호 열고 1 빼기 x 괄호 닫고 분수끝끝 분수끝끝끝"
+    },
+    "Sample_7_3_1_brief": {
+      "expected": "분수시작시작시작 1 더하기 괄열 분수시작 1 빼기 x 분의 2 x 분수끝 괄닫 제곱 분의분의분의 분수시작시작 괄열 1 빼기 x 괄닫 제곱 분의분의 괄열 1 빼기 x 괄닫 분수시작 d x 분의 d 분수끝 괄열 2 x 괄닫 빼기 2 x 분수시작 d x 분의 d 분수끝 괄열 1 빼기 x 괄닫 분수끝끝 분수끝끝끝"
+    },
+    "Sample_7_3_1_sbrief": {
+      "expected": "이중첩분수 1 더하기 괄열 분수 1 빼기 x 분의 2 x 분수끝 괄닫 제곱 이중첩분의 중첩분수 괄열 1 빼기 x 괄닫 제곱 중첩분의 괄열 1 빼기 x 괄닫 분수 d x 분의 d 분수끝 괄열 2 x 괄닫 빼기 2 x 분수 d x 분의 d 분수끝 괄열 1 빼기 x 괄닫 중첩분수끝 이중첩분수끝"
+    },
+    "Sample_7_3_2_default": {
+      "expected": "a 0 더하기 분수시작시작시작시작 a 1 더하기 분수시작시작시작 a 2 더하기 분수시작시작 줄임표 더하기 분수시작 a 아래첨자 n 기준 분의 1 분수끝 분의분의 1 분수끝끝 분의분의분의 1 분수끝끝끝 분의분의분의분의 1 분수끝끝끝끝"
+    },
+    "Sample_7_3_2_brief": {
+      "expected": "a 0 더하기 분수시작시작시작시작 a 1 더하기 분수시작시작시작 a 2 더하기 분수시작시작 줄임표 더하기 분수시작 a 아래 n 기준 분의 1 분수끝 분의분의 1 분수끝끝 분의분의분의 1 분수끝끝끝 분의분의분의분의 1 분수끝끝끝끝"
+    },
+    "Sample_7_3_2_sbrief": {
+      "expected": "a 0 더하기 3중첩분수 a 1 더하기 이중첩분수 a 2 더하기 중첩분수 줄임표 더하기 분수 a 아래 n 기준 분의 1 분수끝 중첩분의 1 중첩분수끝 이중첩분의 1 이중첩분수끝 3중첩분의 1 3중첩분수끝"
+    },
+    "Sample_7_4_1_default": {
+      "expected": "2 분의 1 더하기 2 분의 2 더하기 2 분의 3 더하기 2 분의 4 더하기 줄임표 는 시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 분수시작 2 분의 n 분수끝"
+    },
+    "Sample_7_4_1_brief": {
+      "expected": "2 분의 1 더하기 2 분의 2 더하기 2 분의 3 더하기 2 분의 4 더하기 줄임표 는 시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 분수시작 2 분의 n 분수끝"
+    },
+    "Sample_7_4_1_sbrief": {
+      "expected": "2 분의 1 더하기 2 분의 2 더하기 2 분의 3 더하기 2 분의 4 더하기 줄임표 는 시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 분수 2 분의 n 분수끝"
+    },
+    "Sample_7_4_2_default": {
+      "expected": "분수시작 5 분의 20 분수끝 곱하기 분수시작 100 분의 1 분수끝 은 25 분의 1"
+    },
+    "Sample_7_4_2_brief": {
+      "expected": "분수시작 5 분의 20 분수끝 곱하기 분수시작 100 분의 1 분수끝 은 25 분의 1"
+    },
+    "Sample_7_4_2_sbrief": {
+      "expected": "분수 5 분의 20 분수끝 곱하기 분수 100 분의 1 분수끝 은 25 분의 1"
+    },
+    "Sample_7_4_3_default": {
+      "expected": "분수시작 8 분의 5 분의 3 분수끝 은 5 분의 3 곱하기 8 분의 1"
+    },
+    "Sample_7_4_3_brief": {
+      "expected": "분수시작 8 분의 5 분의 3 분수끝 은 5 분의 3 곱하기 8 분의 1"
+    },
+    "Sample_7_4_3_sbrief": {
+      "expected": "분수 8 분의 5 분의 3 분수끝 은 5 분의 3 곱하기 8 분의 1"
+    },
+    "Sample_7_5_1_default": {
+      "expected": "3 과 8 분의 5 는 분수시작 8 분의 29 분수끝"
+    },
+    "Sample_7_5_1_brief": {
+      "expected": "3 과 8 분의 5 는 분수시작 8 분의 29 분수끝"
+    },
+    "Sample_7_5_1_sbrief": {
+      "expected": "3 과 8 분의 5 는 분수 8 분의 29 분수끝"
+    },
+    "Sample_7_6_1_default": {
+      "expected": "a 0 더하기 연속분수 a 1 더하기 분수시작 a 2 더하기 분수시작 a 3 더하기 줄임표 분의 b 3 분의 b 2 분의 b 1 은 a 0 더하기 분수시작 a 1 분의 b 1 분수끝 더하기 분수시작 a 2 분의 b 2 분수끝 더하기 줄임표"
+    },
+    "Sample_7_6_1_brief": {
+      "expected": "a 0 더하기 연분수 a 1 더하기 분수시작 a 2 더하기 분수시작 a 3 더하기 줄임표 분의 b 3 분의 b 2 분의 b 1 은 a 0 더하기 분수시작 a 1 분의 b 1 분수끝 더하기 분수시작 a 2 분의 b 2 분수끝 더하기 줄임표"
+    },
+    "Sample_7_6_1_sbrief": {
+      "expected": "a 0 더하기 연분수 a 1 더하기 분수 a 2 더하기 분수 a 3 더하기 줄임표 분의 b 3 분의 b 2 분의 b 1 은 a 0 더하기 분수 a 1 분의 b 1 분수끝 더하기 분수 a 2 분의 b 2 분수끝 더하기 줄임표"
+    },
+    "Sample_8_1_1_default": {
+      "expected": "x 세제곱 더하기 6 x 제곱 빼기 x 는 30"
+    },
+    "Sample_8_1_1_brief": {
+      "expected": "x 세제곱 더하기 6 x 제곱 빼기 x 는 30"
+    },
+    "Sample_8_1_1_sbrief": {
+      "expected": "x 세제곱 더하기 6 x 제곱 빼기 x 는 30"
+    },
+    "Sample_8_1_2_default": {
+      "expected": "분수시작 d x 제곱 분의 d 제곱 y 분수끝 더하기 괄호 열고 a x 제곱 더하기 b x 더하기 c 괄호 닫고 y 는 0"
+    },
+    "Sample_8_1_2_brief": {
+      "expected": "분수시작 d x 제곱 분의 d 제곱 y 분수끝 더하기 괄열 a x 제곱 더하기 b x 더하기 c 괄닫 y 는 0"
+    },
+    "Sample_8_1_2_sbrief": {
+      "expected": "분수 d x 제곱 분의 d 제곱 y 분수끝 더하기 괄열 a x 제곱 더하기 b x 더하기 c 괄닫 y 는 0"
+    },
+    "Sample_8_2_1_default": {
+      "expected": "x 위첨자 2 분의 1"
+    },
+    "Sample_8_2_1_brief": {
+      "expected": "x 위 2 분의 1"
+    },
+    "Sample_8_2_1_sbrief": {
+      "expected": "x 위 2 분의 1"
+    },
+    "Sample_8_2_2_default": {
+      "expected": "x 아래첨자 n"
+    },
+    "Sample_8_2_2_brief": {
+      "expected": "x 아래 n"
+    },
+    "Sample_8_2_2_sbrief": {
+      "expected": "x 아래 n"
+    },
+    "Sample_8_2_3_default": {
+      "expected": "x 위첨자 a"
+    },
+    "Sample_8_2_3_brief": {
+      "expected": "x 위 a"
+    },
+    "Sample_8_2_3_sbrief": {
+      "expected": "x 위 a"
+    },
+    "Sample_8_3_1_default": {
+      "expected": "x 위첨자 m 더하기 n"
+    },
+    "Sample_8_3_1_brief": {
+      "expected": "x 위 m 더하기 n"
+    },
+    "Sample_8_3_1_sbrief": {
+      "expected": "x 위 m 더하기 n"
+    },
+    "Sample_8_3_2_default": {
+      "expected": "대문자 T 아래첨자 n 빼기 1 기준 더하기 5 는 0"
+    },
+    "Sample_8_3_2_brief": {
+      "expected": "대문자 T 아래 n 빼기 1 기준 더하기 5 는 0"
+    },
+    "Sample_8_3_2_sbrief": {
+      "expected": "대문자 T 아래 n 빼기 1 기준 더하기 5 는 0"
+    },
+    "Sample_8_3_3_default": {
+      "expected": "x 위첨자 m 더하기 n 기준 은 x 위첨자 m 기준 x 위첨자 n"
+    },
+    "Sample_8_3_3_brief": {
+      "expected": "x 위 m 더하기 n 기준 은 x 위 m 기준 x 위 n"
+    },
+    "Sample_8_3_3_sbrief": {
+      "expected": "x 위 m 더하기 n 기준 은 x 위 m 기준 x 위 n"
+    },
+    "Sample_8_4_1_default": {
+      "expected": "x 위첨자 a 위 아래첨자 n 위첨자 더하기 a 위 아래첨자 n 빼기 1"
+    },
+    "Sample_8_4_1_brief": {
+      "expected": "x 위 a 위 아래 n 위 더하기 a 위 아래 n 빼기 1"
+    },
+    "Sample_8_4_1_sbrief": {
+      "expected": "x 위 a 위 아래 n 위 더하기 a 위 아래 n 빼기 1"
+    },
+    "Sample_8_4_2_default": {
+      "expected": "x 위첨자 a 위 아래첨자 b"
+    },
+    "Sample_8_4_2_brief": {
+      "expected": "x 위 a 위 아래 b"
+    },
+    "Sample_8_4_2_sbrief": {
+      "expected": "x 위 a 위 아래 b"
+    },
+    "Sample_8_4_3_default": {
+      "expected": "x 아래첨자 a 아래 위첨자 b"
+    },
+    "Sample_8_4_3_brief": {
+      "expected": "x 아래 a 아래 위 b"
+    },
+    "Sample_8_4_3_sbrief": {
+      "expected": "x 아래 a 아래 위 b"
+    },
+    "Sample_8_4_4_default": {
+      "expected": "y 위첨자 a 위 위첨자 b 위 위 아래첨자 c 기준 같지 않다 y 위첨자 a 위 위첨자 b 위첨자 c"
+    },
+    "Sample_8_4_4_brief": {
+      "expected": "y 위 a 위 위 b 위 위 아래 c 기준 같지 않다 y 위 a 위 위 b 위 c"
+    },
+    "Sample_8_4_4_sbrief": {
+      "expected": "y 위 a 위 위 b 위 위 아래 c 기준 같지 않다 y 위 a 위 위 b 위 c"
+    },
+    "Sample_8_4_5_default": {
+      "expected": "y 위첨자 a 위 위 아래첨자 c 위 위첨자 b"
+    },
+    "Sample_8_4_5_brief": {
+      "expected": "y 위 a 위 위 아래 c 위 위 b"
+    },
+    "Sample_8_4_5_sbrief": {
+      "expected": "y 위 a 위 위 아래 c 위 위 b"
+    },
+    "Sample_8_4_5Short_default": {
+      "expected": "y 위첨자 a 위 위 아래첨자 c"
+    },
+    "Sample_8_4_5Short_brief": {
+      "expected": "y 위 a 위 위 아래 c"
+    },
+    "Sample_8_4_5Short_sbrief": {
+      "expected": "y 위 a 위 위 아래 c"
+    },
+    "Sample_8_4_5Inv_default": {
+      "expected": "y 아래첨자 a 아래 아래 위첨자 c"
+    },
+    "Sample_8_4_5Inv_brief": {
+      "expected": "y 아래 a 아래 아래 위 c"
+    },
+    "Sample_8_4_5Inv_sbrief": {
+      "expected": "y 아래 a 아래 아래 위 c"
+    },
+    "Sample_8_4_5InvShort_default": {
+      "expected": "y 아래첨자 a 아래 아래 위첨자 c 아래 아래첨자 b"
+    },
+    "Sample_8_4_5InvShort_brief": {
+      "expected": "y 아래 a 아래 아래 위 c 아래 아래 b"
+    },
+    "Sample_8_4_5InvShort_sbrief": {
+      "expected": "y 아래 a 아래 아래 위 c 아래 아래 b"
+    },
+    "Sample_8_4_6_default": {
+      "expected": "x 위첨자 a 위 위첨자 b"
+    },
+    "Sample_8_4_6_brief": {
+      "expected": "x 위 a 위 위 b"
+    },
+    "Sample_8_4_6_sbrief": {
+      "expected": "x 위 a 위 위 b"
+    },
+    "Sample_8_4_7_default": {
+      "expected": "x 아래첨자 a 아래 아래첨자 b"
+    },
+    "Sample_8_4_7_brief": {
+      "expected": "x 아래 a 아래 아래 b"
+    },
+    "Sample_8_4_7_sbrief": {
+      "expected": "x 아래 a 아래 아래 b"
+    },
+    "Sample_8_4_8_default": {
+      "expected": "대문자 T 위첨자 괄호 열고 x 위 위첨자 a 위첨자 더하기 y 위 위첨자 b 위첨자 괄호 닫고"
+    },
+    "Sample_8_4_8_brief": {
+      "expected": "대문자 T 위 괄열 x 위 위 a 위 더하기 y 위 위 b 위 괄닫"
+    },
+    "Sample_8_4_8_sbrief": {
+      "expected": "대문자 T 위 괄열 x 위 위 a 위 더하기 y 위 위 b 위 괄닫"
+    },
+    "Sample_8_5_1_default": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_brief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_sbrief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_2_default": {
+      "expected": "x 아래첨자 마이너스 1"
+    },
+    "Sample_8_5_2_brief": {
+      "expected": "x 아래 마이너스 1"
+    },
+    "Sample_8_5_2_sbrief": {
+      "expected": "x 아래 마이너스 1"
+    },
+    "Sample_8_5_3_default": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_brief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_sbrief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_4_default": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_4_brief": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_4_sbrief": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_5_default": {
+      "expected": "4 대문자 F e 더하기 3 대문자 O 2 오른쪽 화살표 2 대문자 F e 2 대문자 O 3"
+    },
+    "Sample_8_5_5_brief": {
+      "expected": "4 대문자 F e 더하기 3 대문자 O 2 오른쪽 화살표 2 대문자 F e 2 대문자 O 3"
+    },
+    "Sample_8_5_5_sbrief": {
+      "expected": "4 대문자 F e 더하기 3 대문자 O 2 오른쪽 화살표 2 대문자 F e 2 대문자 O 3"
+    },
+    "Sample_8_5_6_default": {
+      "expected": "a 아래첨자 2 콤마 3"
+    },
+    "Sample_8_5_6_brief": {
+      "expected": "a 아래 2 콤마 3"
+    },
+    "Sample_8_5_6_sbrief": {
+      "expected": "a 아래 2 콤마 3"
+    },
+    "Sample_8_5_7_default": {
+      "expected": "대문자 T 아래첨자 n 1 더하기 n 0"
+    },
+    "Sample_8_5_7_brief": {
+      "expected": "대문자 T 아래 n 1 더하기 n 0"
+    },
+    "Sample_8_5_7_sbrief": {
+      "expected": "대문자 T 아래 n 1 더하기 n 0"
+    },
+    "Sample_8_5_8_default": {
+      "expected": "로그 아래첨자 2 기준 괄호 열고 x 괄호 닫고 는 분수시작 로그 아래첨자 10 기준 괄호 열고 2 괄호 닫고 분의 로그 아래첨자 10 기준 괄호 열고 x 괄호 닫고 분수끝"
+    },
+    "Sample_8_5_8_brief": {
+      "expected": "로그 아래 2 기준 괄열 x 괄닫 은 분수시작 로그 아래 10 기준 괄열 2 괄닫 분의 로그 아래 10 기준 괄열 x 괄닫 분수끝"
+    },
+    "Sample_8_5_8_sbrief": {
+      "expected": "로그 아래 2 기준 괄열 x 괄닫 은 분수 로그 아래 10 기준 괄열 2 괄닫 분의 로그 아래 10 기준 괄열 x 괄닫 분수끝"
+    },
+    "Sample_8_5_9_default": {
+      "expected": "대문자 파이 5"
+    },
+    "Sample_8_5_9_brief": {
+      "expected": "대문자 파이 5"
+    },
+    "Sample_8_5_9_sbrief": {
+      "expected": "대문자 파이 5"
+    },
+    "Sample_8_5_10_default": {
+      "expected": "자연로그 x 는 인테그럴 아래첨자 1 위첨자 x 기준 분수시작 t 분의 d t 분수끝"
+    },
+    "Sample_8_5_10_brief": {
+      "expected": "자연로그 x 는 인테그럴 아래 1 위 x 기준 분수시작 t 분의 d t 분수끝"
+    },
+    "Sample_8_5_10_sbrief": {
+      "expected": "자연로그 x 는 인테그럴 아래 1 위 x 기준 분수 t 분의 d t 분수끝"
+    },
+    "Sample_8_6_1_default": {
+      "expected": "달러 n 기준 2 는 2 별표 달러 n 더하기 1 세미콜론"
+    },
+    "Sample_8_6_1_brief": {
+      "expected": "달러 n 기준 2 는 2 별표 달러 n 더하기 1 세미콜론"
+    },
+    "Sample_8_6_1_sbrief": {
+      "expected": "달러 n 기준 2 는 2 별표 달러 n 더하기 1 세미콜론"
+    },
+    "Sample_8_8_1_naive_default": {
+      "expected": "아래첨자 c d 위첨자 a b 기준 x 아래첨자 e f 위첨자 g h"
+    },
+    "Sample_8_8_1_naive_brief": {
+      "expected": "아래 c d 위 a b 기준 x 아래 e f 위 g h"
+    },
+    "Sample_8_8_1_naive_sbrief": {
+      "expected": "아래 c d 위 a b 기준 x 아래 e f 위 g h"
+    },
+    "Sample_8_8_1_default": {
+      "expected": "아래첨자 c d 위첨자 a b 기준 x 아래첨자 e f 위첨자 g h"
+    },
+    "Sample_8_8_1_brief": {
+      "expected": "아래 c d 위 a b 기준 x 아래 e f 위 g h"
+    },
+    "Sample_8_8_1_sbrief": {
+      "expected": "아래 c d 위 a b 기준 x 아래 e f 위 g h"
+    },
+    "SampleSimpleSquare_default": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleSquare_brief": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleSquare_sbrief": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleSquare_2_default": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleSquare_2_brief": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleSquare_2_sbrief": {
+      "expected": "대문자 T 0 제곱"
+    },
+    "SampleSimpleCube_default": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "SampleSimpleCube_brief": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "SampleSimpleCube_sbrief": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "SampleSimpleCube_2_default": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "SampleSimpleCube_2_brief": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "SampleSimpleCube_2_sbrief": {
+      "expected": "대문자 T 0 세제곱"
+    },
+    "Sample_8_8_2_default": {
+      "expected": "대문자 T 아래첨자 n 빼기 1 위첨자 2"
+    },
+    "Sample_8_8_2_brief": {
+      "expected": "대문자 T 아래 n 빼기 1 위 2"
+    },
+    "Sample_8_8_2_sbrief": {
+      "expected": "대문자 T 아래 n 빼기 1 위 2"
+    },
+    "Sample_8_9_1_default": {
+      "expected": "x 프라임"
+    },
+    "Sample_8_9_1_brief": {
+      "expected": "x 프라임"
+    },
+    "Sample_8_9_1_sbrief": {
+      "expected": "x 프라임"
+    },
+    "Sample_8_9_2_default": {
+      "expected": "f 트리플 프라임 괄호 열고 y 괄호 닫고 는 분수시작 d y 분의 d f 더블 프라임 괄호 열고 y 괄호 닫고 분수끝"
+    },
+    "Sample_8_9_2_brief": {
+      "expected": "f 트리플 프라임 괄열 y 괄닫 은 분수시작 d y 분의 d f 더블 프라임 괄열 y 괄닫 분수끝"
+    },
+    "Sample_8_9_2_sbrief": {
+      "expected": "f 트리플 프라임 괄열 y 괄닫 은 분수 d y 분의 d f 더블 프라임 괄열 y 괄닫 분수끝"
+    },
+    "Sample_8_10_1_default": {
+      "expected": "로 프라임 은 로 프라임 아래첨자 더하기 기준 더하기 로 프라임 아래첨자 빼기"
+    },
+    "Sample_8_10_1_brief": {
+      "expected": "로 프라임 은 로 프라임 아래 더하기 기준 더하기 로 프라임 아래 빼기"
+    },
+    "Sample_8_10_1_sbrief": {
+      "expected": "로 프라임 은 로 프라임 아래 더하기 기준 더하기 로 프라임 아래 빼기"
+    },
+    "Sample_8_10_2_default": {
+      "expected": "x 프라임 10"
+    },
+    "Sample_8_10_2_brief": {
+      "expected": "x 프라임 10"
+    },
+    "Sample_8_10_2_sbrief": {
+      "expected": "x 프라임 10"
+    },
+    "Sample_8_10_3_default": {
+      "expected": "대문자 T 프라임 아래첨자 n"
+    },
+    "Sample_8_10_3_brief": {
+      "expected": "대문자 T 프라임 아래 n"
+    },
+    "Sample_8_10_3_sbrief": {
+      "expected": "대문자 T 프라임 아래 n"
+    },
+    "Sample_8_11_1_default": {
+      "expected": "2 행 3 열의 행렬시작 첫번째 행 첫번째 열 x 위첨자 n 두번째 열 y 위첨자 n 세번째 열 z 위첨자 n 두번째 행 첫번째 열 x 위첨자 n 더하기 1 두번째 열 y 위첨자 n 더하기 1 세번째 열 z 위첨자 n 더하기 1 행렬끝"
+    },
+    "Sample_8_11_1_brief": {
+      "expected": "2 행 3 열의 행렬시작 첫번째 행 첫번째 열 x 위 n 두번째 열 y 위 n 세번째 열 z 위 n 두번째 행 첫번째 열 x 위 n 더하기 1 두번째 열 y 위 n 더하기 1 세번째 열 z 위 n 더하기 1 행렬끝"
+    },
+    "Sample_8_11_1_sbrief": {
+      "expected": "2 행 3 열의 행렬 첫번째 행 첫번째 열 x 위 n 두번째 열 y 위 n 세번째 열 z 위 n 두번째 행 첫번째 열 x 위 n 더하기 1 두번째 열 y 위 n 더하기 1 세번째 열 z 위 n 더하기 1 행렬끝"
+    },
+    "Sample_8_12_1_default": {
+      "expected": "x 아래첨자 a 기준 위첨자 b"
+    },
+    "Sample_8_12_1_brief": {
+      "expected": "x 아래 a 기준 위 b"
+    },
+    "Sample_8_12_1_sbrief": {
+      "expected": "x 아래 a 기준 위 b"
+    },
+    "Sample_8_12_2_default": {
+      "expected": "x 위첨자 b 기준 아래첨자 a"
+    },
+    "Sample_8_12_2_brief": {
+      "expected": "x 위 b 기준 아래 a"
+    },
+    "Sample_8_12_2_sbrief": {
+      "expected": "x 위 b 기준 아래 a"
+    },
+    "Sample_8_13_1_default": {
+      "expected": "로그 네제곱 위첨자 b 기준 x"
+    },
+    "Sample_8_13_1_brief": {
+      "expected": "로그 네제곱 위 b 기준 x"
+    },
+    "Sample_8_13_1_sbrief": {
+      "expected": "로그 네제곱 위 b 기준 x"
+    },
+    "Sample_8_13_2_default": {
+      "expected": "대문자 T 아래첨자 n 아래첨자 a 기준 y"
+    },
+    "Sample_8_13_2_brief": {
+      "expected": "대문자 T 아래 n 아래 a 기준 y"
+    },
+    "Sample_8_13_2_sbrief": {
+      "expected": "대문자 T 아래 n 아래 a 기준 y"
+    },
+    "Sample_9_1_1_default": {
+      "expected": "루트시작 2 루트끝"
+    },
+    "Sample_9_1_1_brief": {
+      "expected": "루트시작 2 루트끝"
+    },
+    "Sample_9_1_1_sbrief": {
+      "expected": "루트 2 루트끝"
+    },
+    "Sample_9_1_2_default": {
+      "expected": "루트시작 m 더하기 n 루트끝"
+    },
+    "Sample_9_1_2_brief": {
+      "expected": "루트시작 m 더하기 n 루트끝"
+    },
+    "Sample_9_1_2_sbrief": {
+      "expected": "루트 m 더하기 n 루트끝"
+    },
+    "Sample_9_2_1_default": {
+      "expected": "m 더하기 n 제곱근 루트시작 x 더하기 y 루트끝"
+    },
+    "Sample_9_2_1_brief": {
+      "expected": "m 더하기 n 제곱근 루트시작 x 더하기 y 루트끝"
+    },
+    "Sample_9_2_1_sbrief": {
+      "expected": "m 더하기 n 제곱근 루트 x 더하기 y 루트끝"
+    },
+    "Sample_9_2_2_default": {
+      "expected": "n 제곱근 루트시작 x 위첨자 m 기준 루트끝 같다 괄호 열고 n 제곱근 루트시작 x 루트끝 괄호 닫고 위첨자 m 기준 같다 x 위첨자 분수시작 n 분의 m 분수끝 기준 콤마 x 크다 0"
+    },
+    "Sample_9_2_2_brief": {
+      "expected": "n 제곱근 루트시작 x 위 m 기준 루트끝 같다 괄열 n 제곱근 루트시작 x 루트끝 괄닫 위 m 기준 같다 x 위 분수시작 n 분의 m 분수끝 기준 콤마 x 크다 0"
+    },
+    "Sample_9_2_2_sbrief": {
+      "expected": "n 제곱근 루트 x 위 m 기준 루트끝 같다 괄열 n 제곱근 루트 x 루트끝 괄닫 위 m 기준 같다 x 위 분수 n 분의 m 분수끝 기준 콤마 x 크다 0"
+    },
+    "Sample_9_2_3_default": {
+      "expected": "세제곱근 루트시작 x 루트끝 은 x 위첨자 3 분의 1"
+    },
+    "Sample_9_2_3_brief": {
+      "expected": "세제곱근 루트시작 x 루트끝 은 x 위 3 분의 1"
+    },
+    "Sample_9_2_3_sbrief": {
+      "expected": "세제곱근 루트 x 루트끝 은 x 위 3 분의 1"
+    },
+    "Sample_9_3_1_default": {
+      "expected": "중첩루트시작 루트시작 x 더하기 1 루트끝 더하기 루트시작 y 더하기 1 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_1_brief": {
+      "expected": "중첩루트시작 루트시작 x 더하기 1 루트끝 더하기 루트시작 y 더하기 1 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_1_sbrief": {
+      "expected": "중첩루트 루트 x 더하기 1 루트끝 더하기 루트 y 더하기 1 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_2_default": {
+      "expected": "n 제곱근 중첩루트시작 m 제곱근 루트시작 x 루트끝 중첩루트끝 은 m 제곱근 중첩루트시작 n 제곱근 루트시작 x 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_2_brief": {
+      "expected": "n 제곱근 중첩루트시작 m 제곱근 루트시작 x 루트끝 중첩루트끝 은 m 제곱근 중첩루트시작 n 제곱근 루트시작 x 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_2_sbrief": {
+      "expected": "n 제곱근 중첩루트 m 제곱근 루트 x 루트끝 중첩루트끝 은 m 제곱근 중첩루트 n 제곱근 루트 x 루트끝 중첩루트끝"
+    },
+    "Sample_9_3_3_default": {
+      "expected": "x 위첨자 e 빼기 2 기준 은 3중첩루트시작 x 세제곱근 이중첩루트시작 x 네제곱근 중첩루트시작 x 5 제곱근 루트시작 x 줄임표 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 콤마 x 다음의 원소이다 칠판볼드체 대문자 R"
+    },
+    "Sample_9_3_3_brief": {
+      "expected": "x 위 e 빼기 2 기준 은 3중첩루트시작 x 세제곱근 이중첩루트시작 x 네제곱근 중첩루트시작 x 5 제곱근 루트시작 x 줄임표 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 콤마 x 다음의 원소이다 칠판볼드체 대문자 R"
+    },
+    "Sample_9_3_3_sbrief": {
+      "expected": "x 위 e 빼기 2 기준 은 3중첩루트 x 세제곱근 이중첩루트 x 네제곱근 중첩루트 x 5 제곱근 루트 x 줄임표 루트끝 중첩루트끝 이중첩루트끝 3중첩루트끝 콤마 x 다음의 원소이다 칠판볼드체 대문자 R"
+    },
+    "Sample_9_3_4_default": {
+      "expected": "분수시작 파이 분의 2 분수끝 은 분수시작 2 분의 루트시작 2 루트끝 분수끝 분수시작 2 분의 중첩루트시작 2 더하기 루트시작 2 루트끝 중첩루트끝 분수끝 분수시작 2 분의 이중첩루트시작 2 더하기 중첩루트시작 2 더하기 루트시작 2 루트끝 중첩루트끝 이중첩루트끝 분수끝 줄임표"
+    },
+    "Sample_9_3_4_brief": {
+      "expected": "분수시작 파이 분의 2 분수끝 은 분수시작 2 분의 루트시작 2 루트끝 분수끝 분수시작 2 분의 중첩루트시작 2 더하기 루트시작 2 루트끝 중첩루트끝 분수끝 분수시작 2 분의 이중첩루트시작 2 더하기 중첩루트시작 2 더하기 루트시작 2 루트끝 중첩루트끝 이중첩루트끝 분수끝 줄임표"
+    },
+    "Sample_9_3_4_sbrief": {
+      "expected": "분수 파이 분의 2 분수끝 은 분수 2 분의 루트 2 루트끝 분수끝 분수 2 분의 중첩루트 2 더하기 루트 2 루트끝 중첩루트끝 분수끝 분수 2 분의 이중첩루트 2 더하기 중첩루트 2 더하기 루트 2 루트끝 중첩루트끝 이중첩루트끝 분수끝 줄임표"
+    },
+    "Sample_10_1_1_default": {
+      "expected": "분수시작 2 소거시작 y 소거끝 분의 5 x 소거시작 y 소거끝 분수끝 은 2 분의 5 x"
+    },
+    "Sample_10_1_1_brief": {
+      "expected": "분수시작 2 소거시작 y 소거끝 분의 5 x 소거시작 y 소거끝 분수끝 은 2 분의 5 x"
+    },
+    "Sample_10_1_1_sbrief": {
+      "expected": "분수 2 소거시작 y 소거끝 분의 5 x 소거시작 y 소거끝 분수끝 은 2 분의 5 x"
+    },
+    "Sample_10_2_1_default": {
+      "expected": "분수시작 18 분의 12 분수끝 같다 분수시작 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_10_2_1_brief": {
+      "expected": "분수시작 18 분의 12 분수끝 같다 분수시작 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_10_2_1_sbrief": {
+      "expected": "분수 18 분의 12 분수끝 같다 분수 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_10_2_2_default": {
+      "expected": "분수시작 18 분의 12 분수끝 같다 분수시작 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_10_2_2_brief": {
+      "expected": "분수시작 18 분의 12 분수끝 같다 분수시작 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_10_2_2_sbrief": {
+      "expected": "분수 18 분의 12 분수끝 같다 분수 소거 18 을 3 으로 소거끝 분의 소거 12 를 2 로 소거끝 분수끝 같다 3 분의 2"
+    },
+    "Sample_11_1_1_default": {
+      "expected": "x 위에 있는 분음부호표"
+    },
+    "Sample_11_1_1_brief": {
+      "expected": "x 위에 분음부호표"
+    },
+    "Sample_11_1_1_sbrief": {
+      "expected": "x 위에 분음부호표"
+    },
+    "Sample_11_1_2_default": {
+      "expected": "x 더하기 y 위에 있는 오른쪽 화살표"
+    },
+    "Sample_11_1_2_brief": {
+      "expected": "x 더하기 y 위에 오른쪽 화살표"
+    },
+    "Sample_11_1_2_sbrief": {
+      "expected": "x 더하기 y 위에 오른쪽 화살표"
+    },
+    "Sample_11_1_3_default": {
+      "expected": "x 위에 있는 삽입기호"
+    },
+    "Sample_11_1_3_brief": {
+      "expected": "x 위에 삽입기호"
+    },
+    "Sample_11_1_3_sbrief": {
+      "expected": "x 위에 삽입기호"
+    },
+    "Sample_11_2_1_default": {
+      "expected": "x 아래에 있는 점"
+    },
+    "Sample_11_2_1_brief": {
+      "expected": "x 아래에 점"
+    },
+    "Sample_11_2_1_sbrief": {
+      "expected": "x 아래에 점"
+    },
+    "Sample_11_3_1_default": {
+      "expected": "x 윗물결"
+    },
+    "Sample_11_3_1_brief": {
+      "expected": "x 윗물결"
+    },
+    "Sample_11_3_1_sbrief": {
+      "expected": "x 윗물결"
+    },
+    "Sample_11_3_2_default": {
+      "expected": "x 윗줄"
+    },
+    "Sample_11_3_2_brief": {
+      "expected": "x 윗줄"
+    },
+    "Sample_11_3_2_sbrief": {
+      "expected": "x 윗줄"
+    },
+    "Sample_11_3_3_default": {
+      "expected": "y 밑물결"
+    },
+    "Sample_11_3_3_brief": {
+      "expected": "y 밑물결"
+    },
+    "Sample_11_3_3_sbrief": {
+      "expected": "y 밑물결"
+    },
+    "Sample_11_4_1_default": {
+      "expected": "x 윗줄 윗줄"
+    },
+    "Sample_11_4_1_brief": {
+      "expected": "x 윗줄 윗줄"
+    },
+    "Sample_11_4_1_sbrief": {
+      "expected": "x 윗줄 윗줄"
+    },
+    "Sample_11_4_2_default": {
+      "expected": "y 윗줄 윗줄 밑줄 밑줄"
+    },
+    "Sample_11_4_2_brief": {
+      "expected": "y 윗줄 윗줄 밑줄 밑줄"
+    },
+    "Sample_11_4_2_sbrief": {
+      "expected": "y 윗줄 윗줄 밑줄 밑줄"
+    },
+    "Sample_11_6_1_default": {
+      "expected": "a 더하기 b 아래에 있는 바 아래에 있는 별표"
+    },
+    "Sample_11_6_1_brief": {
+      "expected": "a 더하기 b 아래에 바 아래에 별표"
+    },
+    "Sample_11_6_1_sbrief": {
+      "expected": "a 더하기 b 아래에 바 아래에 별표"
+    },
+    "_comment8_": " This one is odd. This rule example seems to contradict Rule 11.2, where we",
+    "_comment9_": " ModifyAbove/Below with dot.  Here the dot is used as",
+    "_comment10_": " Over/Subscript. However, we express 닷 as a multi modifier.",
+    "Sample_11_6_2_default": {
+      "expected": "ModifyingAbove ModifyingBelow a 더하기 b With 왼쪽 화살표 With 오른쪽 화살표 하단첨자 닷 상단첨자 닷 첨자끝"
+    },
+    "Sample_11_6_2_brief": {
+      "expected": "ModAbove ModBelow a 더하기 b With 왼쪽 화살표 With 오른쪽 화살표 하단첨자 닷 상단첨자 닷 첨자끝"
+    },
+    "Sample_11_6_2_sbrief": {
+      "expected": "ModAbove ModBelow a 더하기 b With 좌 화살표 With 우 화살표 하단첨자 닷 상단첨자 닷 첨자끝"
+    },
+    "Sample_11_6_3_default": {
+      "expected": "x 더하기 y 위에 있는 작은 물결표 위에 있는 바"
+    },
+    "Sample_11_6_3_brief": {
+      "expected": "x 더하기 y 위에 작은 물결표 위에 바"
+    },
+    "Sample_11_6_3_sbrief": {
+      "expected": "x 더하기 y 위에 작은 물결표 위에 바"
+    },
+    "Sample_11_7_1_default": {
+      "expected": "시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 a 아래첨자 n"
+    },
+    "Sample_11_7_1_brief": {
+      "expected": "시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 a 아래 n"
+    },
+    "Sample_11_7_1_sbrief": {
+      "expected": "시그마 합 하단첨자 n 은 1 상단첨자 무한대 첨자끝 a 아래 n"
+    },
+    "Sample_11_8_1_default": {
+      "expected": "x 더하기 y 아래에 있는 바 하단첨자 a 는 5 상단하단첨자 b 는 3 첨자끝"
+    },
+    "Sample_11_8_1_brief": {
+      "expected": "x 더하기 y 아래에 바 하단첨자 a 는 5 상단하단첨자 b 는 3 첨자끝"
+    },
+    "Sample_11_8_1_sbrief": {
+      "expected": "x 더하기 y 아래에 바 하단첨자 a 는 5 상단하단첨자 b 는 3 첨자끝"
+    },
+    "Sample_11_8_2_default": {
+      "expected": "x 더하기 y 위에 있는 바 상단첨자 n 은 1 하단상단첨자 m 은 2 첨자끝"
+    },
+    "Sample_11_8_2_brief": {
+      "expected": "x 더하기 y 위에 바 상단첨자 n 은 1 하단상단첨자 m 은 2 첨자끝"
+    },
+    "Sample_11_8_2_sbrief": {
+      "expected": "x 더하기 y 위에 바 상단첨자 n 은 1 하단상단첨자 m 은 2 첨자끝"
+    },
+    "_comment11_": " This rule is currently not possible. It needs an enhanced processing in the",
+    "_comment12_": " semantic tree maybe together with a simultaneous treatment of mstacks.",
+    "Sample_11_9_1_default": {
+      "expected": "12 분의 7 은 .58 ModifyingEachAbove 3 3 3 With 닷"
+    },
+    "Sample_11_9_1_brief": {
+      "expected": "12 분의 7 은 .58 ModEachAbove 3 3 3 With 닷"
+    },
+    "Sample_11_9_1_sbrief": {
+      "expected": "12 분의 7 은 .58 ModEachAbove 3 3 3 With 닷"
+    },
+    "Sample_12_1_1_default": {
+      "expected": "로그 아래첨자 b 기준 x"
+    },
+    "Sample_12_1_1_brief": {
+      "expected": "로그 아래 b 기준 x"
+    },
+    "Sample_12_1_1_sbrief": {
+      "expected": "로그 아래 b 기준 x"
+    },
+    "Sample_12_1_2_default": {
+      "expected": "코싸인 y"
+    },
+    "Sample_12_1_2_brief": {
+      "expected": "코싸인 y"
+    },
+    "Sample_12_1_2_sbrief": {
+      "expected": "코싸인 y"
+    },
+    "Sample_12_1_3_default": {
+      "expected": "싸인 x"
+    },
+    "Sample_12_1_3_brief": {
+      "expected": "싸인 x"
+    },
+    "Sample_12_1_3_sbrief": {
+      "expected": "싸인 x"
+    },
+    "Sample_13_1_1_default": {
+      "expected": "분수시작 소거시작 시간 소거끝 분의 60 소거시작 마일 소거끝 분수끝 곱하기 분수시작 1 소거시작 마일 소거끝 분의 5,280 피트 분수끝 곱하기 분수시작 60 분 분의 1 소거시작 시간 소거끝 분수끝 은 분수시작 분 분의 5,280 피트 분수끝"
+    },
+    "Sample_13_1_1_brief": {
+      "expected": "분수시작 소거시작 시간 소거끝 분의 60 소거시작 마일 소거끝 분수끝 곱하기 분수시작 1 소거시작 마일 소거끝 분의 5,280 피트 분수끝 곱하기 분수시작 60 분 분의 1 소거시작 시간 소거끝 분수끝 은 분수시작 분 분의 5,280 피트 분수끝"
+    },
+    "Sample_13_1_1_sbrief": {
+      "expected": "분수 소거시작 시간 소거끝 분의 60 소거시작 마일 소거끝 분수끝 곱하기 분수 1 소거시작 마일 소거끝 분의 5,280 피트 분수끝 곱하기 분수 60 분 분의 1 소거시작 시간 소거끝 분수끝 은 분수 분 분의 5,280 피트 분수끝"
+    },
+    "_comment13_": " That should be negative 2!",
+    "Sample_13_1_2_default": {
+      "expected": "1 줄 은 1 킬로그램 닷 미터 제곱 닷 초 위첨자 마이너스 2"
+    },
+    "Sample_13_1_2_brief": {
+      "expected": "1 줄 은 1 킬로그램 닷 미터 제곱 닷 초 위 마이너스 2"
+    },
+    "Sample_13_1_2_sbrief": {
+      "expected": "1 줄 은 1 킬로그램 닷 미터 제곱 닷 초 위 마이너스 2"
+    },
+    "Sample_13_1_3_default": {
+      "expected": "m 미터 같다 100 m 센티미터 같다 분수시작 1,000 분의 m 분수끝 킬로미터"
+    },
+    "Sample_13_1_3_brief": {
+      "expected": "m 미터 같다 100 m 센티미터 같다 분수시작 1,000 분의 m 분수끝 킬로미터"
+    },
+    "Sample_13_1_3_sbrief": {
+      "expected": "m 미터 같다 100 m 센티미터 같다 분수 1,000 분의 m 분수끝 킬로미터"
+    },
+    "Sample_13_1_4_default": {
+      "expected": "1 마일 거의 같다 1.6 킬로미터"
+    },
+    "Sample_13_1_4_brief": {
+      "expected": "1 마일 거의 같다 1.6 킬로미터"
+    },
+    "Sample_13_1_4_sbrief": {
+      "expected": "1 마일 거의 같다 1.6 킬로미터"
+    },
+    "Sample_13_1_5_default": {
+      "expected": "1 인치 는 2.54 센티미터"
+    },
+    "Sample_13_1_5_brief": {
+      "expected": "1 인치 는 2.54 센티미터"
+    },
+    "Sample_13_1_5_sbrief": {
+      "expected": "1 인치 는 2.54 센티미터"
+    },
+    "Sample_14_1_1_default": {
+      "expected": "배열시작 첫번째 행 첫번째 열 대문자 H 2 두번째 열 더하기 세번째 열 대문자 F 2 네번째 열 오른쪽 화살표 다섯번째 열 2 대문자 H 대문자 F 두번째 행 첫번째 열 hydrogen 두번째 열 빈 칸 세번째 열 fluorine 네번째 열 빈 칸 다섯번째 열 hydrogen fluoride 배열끝"
+    },
+    "Sample_14_1_1_brief": {
+      "expected": "배열시작 첫번째 행 첫번째 열 대문자 H 2 두번째 열 더하기 세번째 열 대문자 F 2 네번째 열 오른쪽 화살표 다섯번째 열 2 대문자 H 대문자 F 두번째 행 첫번째 열 hydrogen 두번째 열 빈 칸 세번째 열 fluorine 네번째 열 빈 칸 다섯번째 열 hydrogen fluoride 배열끝"
+    },
+    "Sample_14_1_1_sbrief": {
+      "expected": "배열 첫번째 행 첫번째 열 대문자 H 2 두번째 열 더하기 세번째 열 대문자 F 2 네번째 열 오른쪽 화살표 다섯번째 열 2 대문자 H 대문자 F 두번째 행 첫번째 열 hydrogen 두번째 열 빈 칸 세번째 열 fluorine 네번째 열 빈 칸 다섯번째 열 hydrogen fluoride 배열끝"
+    },
+    "Sample_14_3_1_default": {
+      "expected": "x 는 배열시작 확장된 중괄호 열고 첫번째 행 첫번째 열 y 작다 0 두번째 열 0 두번째 행 첫번째 열 y 크거나 같다 0 두번째 열 2 y 배열끝"
+    },
+    "Sample_14_3_1_brief": {
+      "expected": "x 는 배열시작 확장된 중괄호 열고 첫번째 행 첫번째 열 y 작다 0 두번째 열 0 두번째 행 첫번째 열 y 크거나 같다 0 두번째 열 2 y 배열끝"
+    },
+    "Sample_14_3_1_sbrief": {
+      "expected": "x 는 배열 큰 중괄열 첫번째 행 첫번째 열 y 작다 0 두번째 열 0 두번째 행 첫번째 열 y 크거나 같다 0 두번째 열 2 y 배열끝"
+    },
+    "Sample_15_1_1_default": {
+      "expected": "3 행 3 열의 행렬시작 첫번째 행 첫번째 열 x 더하기 a 두번째 열 x 더하기 b 세번째 열 x 더하기 c 두번째 행 첫번째 열 y 더하기 a 두번째 열 y 더하기 b 세번째 열 y 더하기 c 세번째 행 첫번째 열 z 더하기 a 두번째 열 z 더하기 b 세번째 열 z 더하기 c 행렬끝"
+    },
+    "Sample_15_1_1_brief": {
+      "expected": "3 행 3 열의 행렬시작 첫번째 행 첫번째 열 x 더하기 a 두번째 열 x 더하기 b 세번째 열 x 더하기 c 두번째 행 첫번째 열 y 더하기 a 두번째 열 y 더하기 b 세번째 열 y 더하기 c 세번째 행 첫번째 열 z 더하기 a 두번째 열 z 더하기 b 세번째 열 z 더하기 c 행렬끝"
+    },
+    "Sample_15_1_1_sbrief": {
+      "expected": "3 행 3 열의 행렬 첫번째 행 첫번째 열 x 더하기 a 두번째 열 x 더하기 b 세번째 열 x 더하기 c 두번째 행 첫번째 열 y 더하기 a 두번째 열 y 더하기 b 세번째 열 y 더하기 c 세번째 행 첫번째 열 z 더하기 a 두번째 열 z 더하기 b 세번째 열 z 더하기 c 행렬끝"
+    },
+    "Sample_15_2_1_default": {
+      "expected": "2 행 2 열의 행렬식시작 첫번째 행 첫번째 열 a 더하기 1 두번째 열 b 두번째 행 첫번째 열 c 두번째 열 d 행렬식끝 은 괄호 열고 a 더하기 1 괄호 닫고 d 빼기 b c"
+    },
+    "Sample_15_2_1_brief": {
+      "expected": "2 행 2 열의 행렬식시작 첫번째 행 첫번째 열 a 더하기 1 두번째 열 b 두번째 행 첫번째 열 c 두번째 열 d 행렬식끝 은 괄열 a 더하기 1 괄닫 d 빼기 b c"
+    },
+    "Sample_15_2_1_sbrief": {
+      "expected": "2 행 2 열의 행렬식 첫번째 행 첫번째 열 a 더하기 1 두번째 열 b 두번째 행 첫번째 열 c 두번째 열 d 행렬식끝 은 괄열 a 더하기 1 괄닫 d 빼기 b c"
+    },
+    "Sample_15_4_1_default": {
+      "expected": "2 행 2 열의 행렬식시작 첫번째 행 첫번째 열 a 두번째 열 b 두번째 행 첫번째 열 c 두번째 열 d 행렬식끝 은 a d 빼기 b c"
+    },
+    "Sample_15_4_1_brief": {
+      "expected": "2 행 2 열의 행렬식시작 첫번째 행 첫번째 열 a 두번째 열 b 두번째 행 첫번째 열 c 두번째 열 d 행렬식끝 은 a d 빼기 b c"
+    },
+    "Sample_15_4_1_sbrief": {
+      "expected": "2 행 2 열의 행렬식 첫번째 행 a b 두번째 행 c d 행렬식끝 은 a d 빼기 b c"
+    },
+    "Sample_15_6_1_default": {
+      "expected": "이항계수시작 조합 x 씨 y 이항계수끝"
+    },
+    "Sample_15_6_1_brief": {
+      "expected": "이항계수시작 조합 x 씨 y 이항계수끝"
+    },
+    "Sample_15_6_1_sbrief": {
+      "expected": "이항계수 x 씨 y 이항계수끝"
+    },
+    "BaselineNumberFont_default": {
+      "expected": "n 기준 bold 2"
+    },
+    "BaselineNumberFont_brief": {
+      "expected": "n 기준 bold 2"
+    },
+    "BaselineNumberFont_sbrief": {
+      "expected": "n 기준 bold 2"
+    }
+  }
+}

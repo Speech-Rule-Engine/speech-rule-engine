@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "KoreanClearspeakAbsoluteValue",
+  "locale": "ko",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "Korean Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakKorean",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Absolute Value",
+    "Abs01": {
+      "expected": "절댓값 x"
+    },
+    "Abs02": {
+      "expected": "절댓값 x 더하기 1"
+    },
+    "Abs03": {
+      "expected": "절댓값 x, 더하기 1"
+    },
+    "Abs04": {
+      "expected": "절댓값 x, 더하기, 절댓값 y, 는, 절댓값 z, 보다 크거나 같다"
+    },
+    "AbsEnd01": {
+      "expected": "절댓값시작 x, 절댓값끝"
+    },
+    "AbsEnd02": {
+      "expected": "절댓값시작 x 더하기 1, 절댓값끝"
+    },
+    "AbsEnd03": {
+      "expected": "절댓값시작 x, 절댓값끝, 더하기 1"
+    },
+    "AbsEnd04": {
+      "expected": "절댓값시작 x, 절댓값끝, 더하기, 절댓값시작 y, 절댓값끝, 은, 절댓값시작 z, 절댓값끝, 보다 크거나 같다"
+    },
+    "Card01": {
+      "expected": "S 의 기수"
+    },
+    "Determinant01": {
+      "expected": "행렬식 M"
+    },
+    "_comment2_": " Absolute Value (Determinants)",
+    "AbsDet01": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2, 1  2행: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "행렬식 3 행 3 열의 행렬.  1행: 2, 4, 1  2행: 3, 5, 2  3행: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "행렬식 4 행 4 열의 행렬.  1행:  1열, 0;  2열, 3;  3열, 4;  4열, 3.  2행:  1열, 2;  2열, 1;  3열, 0;  4열, 9.  3행:  1열, 3;  2열, 0;  3열, 2;  4열, 1.  4행:  1열, 6;  2열, 2;  3열, 9;  4열, 0"
+    },
+    "AbsDet04": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행:  1열, 2;  2열, 1.  2행:  1열, 7;  2열, 5 더하기 x"
+    },
+    "AbsDet05": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 x, 1  2행: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 x, y  2행: 2 분의 1, 3 분의 2"
+    },
+    "AbsDet07": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 분의 1, 3 분의 2  2행: 4 분의 3, 5 분의 1"
+    },
+    "AbsDet08": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2, 1  2행: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "행렬식 3 행 3 열의 행렬.  1행: 2, 4, 1  2행: 3, 5, 2  3행: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "행렬식 4 행 4 열의 행렬.  1행:  1열, 0;  2열, 3;  3열, 4;  4열, 3.  2행:  1열, 2;  2열, 1;  3열, 0;  4열, 9.  3행:  1열, 3;  2열, 0;  3열, 2;  4열, 1.  4행:  1열, 6;  2열, 2;  3열, 9;  4열, 0"
+    },
+    "AbsDet11": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행:  1열, 2;  2열, 1.  2행:  1열, 7;  2열, 5 더하기 x"
+    },
+    "AbsDet12": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 x, 1  2행: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 x, y  2행: 2 분의 1, 3 분의 2"
+    },
+    "AbsDet14": {
+      "expected": "행렬식 2 행 2 열의 행렬.  1행: 2 분의 1, 3 분의 2  2행: 4 분의 3, 5 분의 1"
+    }
+  }
+}

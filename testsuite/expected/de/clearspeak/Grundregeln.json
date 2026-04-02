@@ -1,0 +1,61 @@
+{
+  "factory": "clearspeak",
+  "locale": "de",
+  "active": "ClearspeakGerman",
+  "name": "GermanClearspeakGrundregeln",
+  "information": "LaTeX Manual LaTeX Grundregeln",
+  "base": "input/euro/Grundregeln.json",
+  "actual": true,
+  "tests": {
+    "_comment0_": "Textzeichen der Tastatur verwenden, solange dies eben geht!",
+    "Textzeichen_0": {
+      "expected": "2 plus x ist gleich 5"
+    },
+    "Textzeichen_1": {
+      "expected": "Betrag von x minus 1 Betragende ist gleich Betrag von 1 minus x Betragende"
+    },
+    "Textzeichen_2": {
+      "expected": "n Fakultät ist gleich n mal runde Klammer auf n minus 1 runde Klammer zu Fakultät"
+    },
+    "_comment1_": "Abweichungen von der Grundlinie",
+    "Abweichungen_0": {
+      "expected": "x zum Quadrat"
+    },
+    "Abweichungen_1": {
+      "expected": "x hoch Zehn"
+    },
+    "Abweichungen_2": {
+      "expected": "a Index 1 Indexende plus a Index n Indexende"
+    },
+    "Abweichungen_3": {
+      "expected": "x hoch n plus m Exponentende"
+    },
+    "Abweichungen_4": {
+      "expected": "a Index n minus 1 Indexende"
+    },
+    "Abweichungen_5": {
+      "expected": "a Index 12"
+    },
+    "_comment2_": "Mathematische Symbole, die es auf der Tastatur nicht gibt",
+    "Mathematische_0": {
+      "expected": "n geht gegen Unendlich"
+    },
+    "Mathematische_1": {
+      "expected": "x ist nicht Element von Mengenklammer auf 3 Semikolon 4 Mengenklammer zu"
+    },
+    "_comment3_": "Konstrukte, die in sich bereits flächig angeordnet sind",
+    "Konstrukte,_0": {
+      "expected": "Bruchanfang a plus b durch a minus b Bruchende"
+    },
+    "Konstrukte,_1": {
+      "expected": "Quadratwurzel aus a plus b Wurzelende"
+    },
+    "Konstrukte,_2": {
+      "expected": "Summe von n gleich 1 bis Unendlich über Bruchanfang 1 durch 2 hoch n Bruchende ist gleich 1"
+    },
+    "_comment4_": "Anpassungen an persönliche Bedürfnisse",
+    "Anpassungen_0": {
+      "expected": "langer Querstrich über (Komplement von) der Vereinigung von A und B"
+    }
+  }
+}

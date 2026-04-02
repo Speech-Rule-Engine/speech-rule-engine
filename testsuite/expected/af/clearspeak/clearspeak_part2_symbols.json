@@ -1,0 +1,223 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakPart2Symbols",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "Afrikaans Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "expected": "6 maal 8"
+    },
+    "X002": {
+      "expected": "m maal n"
+    },
+    "X003": {
+      "expected": "3 maal 3"
+    },
+    "X004": {
+      "expected": "6 maal 8"
+    },
+    "X005": {
+      "expected": "m maal n"
+    },
+    "X006": {
+      "expected": "3 maal 3"
+    },
+    "X007": {
+      "expected": "u maal v"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "expected": "6 punt 8"
+    },
+    "Dot002": {
+      "expected": "m punt n"
+    },
+    "Dot003": {
+      "expected": "3 punt 3"
+    },
+    "Dot004": {
+      "expected": "6 punt 8"
+    },
+    "Dot005": {
+      "expected": "m punt n"
+    },
+    "Dot006": {
+      "expected": "3 punt 3"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "expected": "driehoek A B C"
+    },
+    "Triangle002": {
+      "expected": "driehoek D E F"
+    },
+    "Triangle003": {
+      "expected": "groot delta x"
+    },
+    "Triangle004": {
+      "expected": "f van, links hakkie, x plus groot delta x, regs hakkie"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "expected": "1 komma 2 komma 3 komma ellipsis"
+    },
+    "Ellipses002": {
+      "expected": "1 komma 2 komma 3 komma ellipsis komma 20"
+    },
+    "Ellipses003": {
+      "expected": "ellipsis komma, negatiewe 2, komma, negatiewe 1, komma 0 komma 1 komma 2 komma ellipsis"
+    },
+    "Ellipses004": {
+      "expected": "1 komma 2 komma 3 komma en so voorts"
+    },
+    "Ellipses005": {
+      "expected": "1 komma 2 komma 3 komma en so voorts tot by komma 20"
+    },
+    "Ellipses006": {
+      "expected": "ellipsis komma, negatiewe 2, komma, negatiewe 1, komma 0 komma 1 komma 2 komma ellipsis"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "expected": "3 gedeel deur 6"
+    },
+    "VertLine002": {
+      "expected": "die versameling van alle x sodat x groter as 0"
+    },
+    "VertLine003": {
+      "expected": "die versameling van alle x sodat, die absolute waarde van x, groter as 2"
+    },
+    "VertLine004": {
+      "expected": "f van x, geëvalueer by x is gelyk aan 5"
+    },
+    "VertLine005": {
+      "expected": "x kwadraat plus 2 x, geëvalueer by x is gelyk aan 2"
+    },
+    "VertLine006": {
+      "expected": "x kwadraat plus x, geëvalueer by 1, minus dieselfde uitdrukking geëvalueer by 0"
+    },
+    "VertLine007": {
+      "expected": "die versameling van alle x sodat x groter as 0"
+    },
+    "VertLine008": {
+      "expected": "3 gedeel deur 6"
+    },
+    "VertLine009": {
+      "expected": "P van, links hakkie, A gegee B, regs hakkie"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "expected": "If x is 'n element van die heelgetalle then 2 x, is an even number punt"
+    },
+    "MembSym002": {
+      "expected": "die versameling van alle x in die heelgetalle sodat x groter as 5"
+    },
+    "MembSym003": {
+      "expected": "3 plus 2 i, is nie 'n element van die riële getalle"
+    },
+    "MembSym004": {
+      "expected": "If x is 'n element van die heelgetalle then 2 x, is an even number punt"
+    },
+    "MembSym005": {
+      "expected": "die versameling van alle x element van die heelgetalle sodat x groter as 5"
+    },
+    "MembSym006": {
+      "expected": "3 plus 2 i, is nie 'n element van die riële getalle"
+    },
+    "MembSym007": {
+      "expected": "If x is 'n element van die heelgetalle then 2 x, is an even number punt"
+    },
+    "MembSym008": {
+      "expected": "die versameling van alle x element van die heelgetalle sodat x groter as 5"
+    },
+    "MembSym009": {
+      "expected": "3 plus 2 i, is nie 'n element van die riële getalle"
+    },
+    "MembSym010": {
+      "expected": "If x behoord aan die heelgetalle then 2 x, is an even number punt"
+    },
+    "MembSym011": {
+      "expected": "die versameling van alle x behoord aan die heelgetalle sodat x groter as 5"
+    },
+    "MembSym012": {
+      "expected": "3 plus 2 i, behoord nie aan die riële getalle"
+    },
+    "MembSym013": {
+      "expected": "If x behoord aan die heelgetalle then 2 x, is an even number punt"
+    },
+    "MembSym014": {
+      "expected": "die versameling van alle x behoord aan die heelgetalle sodat x groter as 5"
+    },
+    "MembSym015": {
+      "expected": "3 plus 2 i, behoord nie aan die riële getalle"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "expected": "die versameling van x behoord aan die heelgetalle sodat 2 kleiner as x kleiner as 7"
+    },
+    "SetMemb002": {
+      "expected": "die versameling van x element van die heelgetalle sodat x groter as 5"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "expected": "die som vanaf n is gelyk aan 1 tot 10, van n"
+    },
+    "Sum002": {
+      "expected": "die som vanaf n is gelyk aan 1 tot oneindigheid, van n"
+    },
+    "Sum003": {
+      "expected": "die som oor i is 'n element van die positiewe heelgetalle, van i"
+    },
+    "Sum004": {
+      "expected": "die som oor S, van i"
+    },
+    "Sum005": {
+      "expected": "die som van, a onderskrif i"
+    },
+    "Sum006": {
+      "expected": "die produk vanaf i is gelyk aan 1 tot 10, van i"
+    },
+    "Sum007": {
+      "expected": "die produk oor i is 'n element van die positiewe heelgetalle, van, die breuk met teller i, en noemer i plus 1"
+    },
+    "Sum008": {
+      "expected": "die produk oor die positiewe heelgetalle, van, die breuk met teller i, en noemer i plus 1"
+    },
+    "Sum009": {
+      "expected": "die produk van, a onderskrif i"
+    },
+    "Sum010": {
+      "expected": "die interseksie vanaf i is gelyk aan 1 tot 10, van, S onderskrif i"
+    },
+    "Sum011": {
+      "expected": "die eenheid vanaf i is gelyk aan 1 tot 10, van, S onderskrif i"
+    },
+    "Sum012": {
+      "expected": "die interseksie van, S onderskrif i"
+    },
+    "Sum013": {
+      "expected": "die eenheid van, S onderskrif i"
+    },
+    "Sum014": {
+      "expected": "die interseksie oor C, van, S onderskrif i"
+    },
+    "Sum015": {
+      "expected": "die eenheid oor C, van, S onderskrif i"
+    },
+    "Sum016": {
+      "expected": "die integraal van f van x, d x"
+    },
+    "Sum017": {
+      "expected": "die integraal vanaf 0 tot 1, van f van x, d x"
+    },
+    "Sum018": {
+      "expected": "die integraal oor die riële getalle, van f van x, d x"
+    }
+  }
+}

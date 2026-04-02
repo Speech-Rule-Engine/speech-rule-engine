@@ -1,0 +1,78 @@
+{
+  "name": "EnglishClearspeak",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/common/hidden.json",
+  "information": "English Clearspeak hidden elements tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "SimplePhantom_0": {
+      "expected": "empty over c"
+    },
+    "SimplePhantom_1": {
+      "expected": "a over empty"
+    },
+    "SimplePhantom_2": {
+      "expected": "empty to the c-th power"
+    },
+    "SimplePhantom_3": {
+      "expected": "a"
+    },
+    "HiddenIgnoreElements_0": {
+      "expected": "a over b"
+    },
+    "HiddenIgnoreElements_1": {
+      "expected": "a d over b"
+    },
+    "HiddenIgnoreElements_2": {
+      "expected": "a over b"
+    },
+    "HiddenEmptyTokens_0": {
+      "expected": "vertical bar sub t"
+    },
+    "HiddenEmptyTokens_1": {
+      "expected": "vertical bar sub t"
+    },
+    "HiddenEmptyTokens_2": {
+      "expected": "vertical bar sub t"
+    },
+    "PseudoUnitChildren_0": {
+      "expected": "a"
+    },
+    "PseudoUnitChildren_1": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_2": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_3": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_4": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_5": {
+      "expected": "i"
+    },
+    "PseudoUnitChildren_6": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_0": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_1": {
+      "expected": "i plus j"
+    },
+    "InterspersedIgnore_2": {
+      "expected": "i plus j"
+    },
+    "InterspersedIgnore_3": {
+      "expected": "i j"
+    },
+    "InterspersedIgnore_4": {
+      "expected": "i plus j"
+    }
+  }
+}

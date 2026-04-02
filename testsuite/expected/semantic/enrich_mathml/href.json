@@ -1,0 +1,29 @@
+{
+  "factory": "enrichMathml",
+  "active": "EnrichExamples",
+  "information": "Enrich mathml href tests.",
+  "base": "input/semantic/href.json",
+  "tests": {
+    "href_0": {
+      "expected": "<math><mi href=\"a\" type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" attributes=\"href:a\" postfix=\"link\">a</mi></math>"
+    },
+    "href_1": {
+      "expected": "<math><mrow href=\"c\" type=\"infixop\" role=\"addition\" id=\"3\" children=\"0,2\" content=\"1\" attributes=\"href:c\" postfix=\"link\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">a</mi><mo type=\"operator\" role=\"addition\" id=\"1\" parent=\"3\" operator=\"infixop,+\">+</mo><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\">b</mi></mrow></math>"
+    },
+    "href_2": {
+      "expected": "<math type=\"infixop\" role=\"addition\" id=\"3\" children=\"0,2\" content=\"1\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">a</mi><mo href=\"c\" type=\"operator\" role=\"addition\" id=\"1\" parent=\"3\" attributes=\"href:c\" postfix=\"link\" operator=\"infixop,+\">+</mo><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\">b</mi></math>"
+    },
+    "href_3": {
+      "expected": "<math type=\"infixop\" role=\"addition\" id=\"3\" children=\"0,2\" content=\"1\"><mi href=\"a\" type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" attributes=\"href:a\" postfix=\"link\">a</mi><mo type=\"operator\" role=\"addition\" id=\"1\" parent=\"3\" operator=\"infixop,+\">+</mo><mi href=\"b\" type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\" attributes=\"href:b\" postfix=\"link\">b</mi></math>"
+    },
+    "href_4": {
+      "expected": "<math><mrow href=\"c\" type=\"infixop\" role=\"addition\" id=\"3\" children=\"0,2\" content=\"1\" attributes=\"href:c\" postfix=\"link\"><mi href=\"a\" type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\" attributes=\"href:a\" postfix=\"link\">a</mi><mo type=\"operator\" role=\"addition\" id=\"1\" parent=\"3\" operator=\"infixop,+\">+</mo><mi href=\"b\" type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\" attributes=\"href:b\" postfix=\"link\">b</mi></mrow></math>"
+    },
+    "href_5": {
+      "expected": "<math href=\"a\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" attributes=\"href:a\" postfix=\"link\">a</mi></math>"
+    },
+    "href_6": {
+      "expected": "<math href=\"c\"><mrow type=\"infixop\" role=\"addition\" id=\"3\" children=\"0,2\" content=\"1\" attributes=\"href:c\" postfix=\"link\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">a</mi><mo type=\"operator\" role=\"addition\" id=\"1\" parent=\"3\" operator=\"infixop,+\">+</mo><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\">b</mi></mrow></math>"
+    }
+  }
+}

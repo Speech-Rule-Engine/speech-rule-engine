@@ -251,7 +251,7 @@ export function addAttributes(to: SemanticNode, from: Element) {
   // TODO:
   // Propagate external attributes from singleton mrow-like elements.
   // Cleaner dealing with no breaking attributes.
-  if (from.hasAttributes()) {
+  if (from.attributes?.length) {
     const attrs = from.attributes;
     for (let i = attrs.length - 1; i >= 0; i--) {
       const key = attrs[i].name;
@@ -263,15 +263,18 @@ export function addAttributes(to: SemanticNode, from: Element) {
         to.attributes['ext-speech'] = attrs[i].value;
         to.nobreaking = true;
       }
-      if (key.match(/texclass$/)) {
-        to.attributes['texclass'] = attrs[i].value;
-      }
-      if (key.toLowerCase() === 'data-latex') {
-        to.attributes['latex'] = attrs[i].value;
-      }
       if (key === 'href') {
         to.attributes['href'] = attrs[i].value;
         to.nobreaking = true;
+      }
+      if (key.toLowerCase() === 'data-latex' || key.toLowerCase() === 'latex') {
+        to.attributes['latex'] = attrs[i].value;
+      }
+      if (key.match(/texclass$/)) {
+        to.attributes['texclass'] = attrs[i].value;
+      }
+      if (key === 'color' || key === 'mathcolor') {
+        to.attributes['color'] = attrs[i].value;
       }
     }
   }

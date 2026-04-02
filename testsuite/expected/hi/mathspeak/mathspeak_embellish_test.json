@@ -1,0 +1,517 @@
+{
+  "name": "HindiMathspeakEmbellish",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "Hindi Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "hi",
+  "active": "EmbellishedSymbolsHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "ए धन चिह्न पादांक 2 आधार रेखा बी"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "ए धन चिह्न अधो 2 आधार बी"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "ए धन चिह्न अधो 2 आधार बी"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "ए धन चिह्न उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "ए धन चिह्न उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "ए धन चिह्न उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "ए धन चिह्न उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "ए धन चिह्न उर्ध्व 3 आधार बी"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "ए धन चिह्न उर्ध्व 3 आधार बी"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "ए धन चिह्न उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "ए धन चिह्न उर्ध्व एन आधार बी"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "ए धन चिह्न उर्ध्व एन आधार बी"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "ए धन चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "ए धन चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "ए धन चिह्न पादांक एम उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "ए धन चिह्न पादांक एम उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "ए धन चिह्न प्राईम चिह्न पादांक एम आधार रेखा बी"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellOpSubSuper_4_default": {
+      "expected": "ए धन चिह्न प्राईम चिह्न पादांक एम आधार रेखा बी धन चिह्न प्राईम चिह्न पादांक एम आधार रेखा सी"
+    },
+    "EmbellOpSubSuper_4_brief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न अधो एम आधार बी धन चिह्न प्राईम चिह्न अधो एम आधार सी"
+    },
+    "EmbellOpSubSuper_4_sbrief": {
+      "expected": "ए धन चिह्न प्राईम चिह्न अधो एम आधार बी धन चिह्न प्राईम चिह्न अधो एम आधार सी"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "ए धन चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "ए धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "ए उर्ध्वान्क 3 आधार रेखा धन चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "ए उर्ध्व 3 आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "ए उर्ध्व 3 आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "ए पादांक 3 आधार रेखा धन चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "ए अधो 3 आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "ए अधो 3 आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "ए पादांक 3 उर्ध्वान्क एन आधार रेखा धन चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार धन चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "ए बराबर का चिह्न पादांक 2 आधार रेखा बी"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "ए बराबर का चिह्न अधो 2 आधार बी"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो 2 आधार बी"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "ए बराबर का चिह्न उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "ए बराबर का चिह्न उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व 3 आधार बी"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व 3 आधार बी"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "ए बराबर का चिह्न उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व एन आधार बी"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "ए बराबर का चिह्न उर्ध्व एन आधार बी"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न बी"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "ए बराबर का चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "ए बराबर का चिह्न पादांक एम उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "ए बराबर का चिह्न पादांक एम उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न पादांक एम आधार रेखा बी"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "ए बराबर का चिह्न प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "ए बराबर का चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "ए उर्ध्वान्क 3 आधार रेखा बराबर का चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "ए उर्ध्व 3 आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "ए उर्ध्व 3 आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "ए पादांक 3 आधार रेखा बराबर का चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "ए अधो 3 आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "ए अधो 3 आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "ए पादांक 3 उर्ध्वान्क एन आधार रेखा बराबर का चिह्न पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार बराबर का चिह्न अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "ए बराबर का चिह्न पादांक 2 आधार रेखा बी बराबर का चिह्न सी"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "ए बराबर का चिह्न अधो 2 आधार बी बराबर का चिह्न सी"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "ए बराबर का चिह्न अधो 2 आधार बी बराबर का चिह्न सी"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "ए विसर्ग पादांक 2 आधार रेखा बी"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "ए विसर्ग अधो 2 आधार बी"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "ए विसर्ग अधो 2 आधार बी"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "ए विसर्ग उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "ए विसर्ग उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "ए विसर्ग उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "ए विसर्ग उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "ए विसर्ग उर्ध्व 3 आधार बी"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "ए विसर्ग उर्ध्व 3 आधार बी"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "ए विसर्ग उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "ए विसर्ग उर्ध्व एन आधार बी"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "ए विसर्ग उर्ध्व एन आधार बी"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "ए विसर्ग प्राईम चिह्न बी"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "ए विसर्ग प्राईम चिह्न बी"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "ए विसर्ग प्राईम चिह्न बी"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "ए विसर्ग पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "ए विसर्ग पादांक एम उर्ध्वान्क 3 आधार रेखा बी"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 3 आधार बी"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "ए विसर्ग पादांक एम उर्ध्वान्क एन आधार रेखा बी"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व एन आधार बी"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "ए विसर्ग प्राईम चिह्न पादांक एम आधार रेखा बी"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "ए विसर्ग प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "ए विसर्ग प्राईम चिह्न अधो एम आधार बी"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "ए विसर्ग पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "ए विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "ए उर्ध्वान्क 3 आधार रेखा विसर्ग पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "ए उर्ध्व 3 आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "ए उर्ध्व 3 आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "ए पादांक 3 आधार रेखा विसर्ग पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "ए अधो 3 आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "ए अधो 3 आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "ए पादांक 3 उर्ध्वान्क एन आधार रेखा विसर्ग पादांक एम उर्ध्वान्क 2 आधार रेखा बी"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "ए अधो 3 उर्ध्व एन आधार विसर्ग अधो एम उर्ध्व 2 आधार बी"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "ए विसर्ग पादांक 2 आधार रेखा बी विसर्ग सी"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "ए विसर्ग अधो 2 आधार बी विसर्ग सी"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "ए विसर्ग अधो 2 आधार बी विसर्ग सी"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "ए"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "ए"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "ए"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_0_default": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "ए something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "ए something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "ए something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "ए"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "ए धन चिह्न बी"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "ए धन चिह्न बी"
+    }
+  }
+}

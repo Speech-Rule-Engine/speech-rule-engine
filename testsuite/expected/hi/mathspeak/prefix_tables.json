@@ -1,0 +1,189 @@
+{
+  "name": "HindiPrefixTables",
+  "locale": "hi",
+  "factory": "prefix",
+  "base": "input/common/prefix_tables.json",
+  "information": "Hindi Prefix Tables rule tests.",
+  "active": "PrefixHindi",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "Binomials_0": {
+      "expected": "विकल्प तादात"
+    },
+    "Binomials_1": {
+      "expected": "चयन तादात"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "expected": "विकल्प तादात"
+    },
+    "Binomials_1_extra": {
+      "expected": "चयन तादात"
+    },
+    "Vectors_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Vectors_1": {
+      "expected": "२री पंक्ति"
+    },
+    "Vectors_2": {
+      "expected": "३री पंक्ति"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Matrices_depth_1": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Matrices_depth_2": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Matrices_depth_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Matrices_depth_4": {
+      "expected": "२री पंक्ति, १ला स्तंभ"
+    },
+    "Matrices_depth_5": {
+      "expected": "२री पंक्ति, २रा स्तंभ"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "१ली पंक्ति"
+    },
+    "Matrices_1": {
+      "expected": "१ला स्तंभ"
+    },
+    "Matrices_2": {
+      "expected": "२रा स्तंभ"
+    },
+    "Matrices_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Matrices_4": {
+      "expected": "१ला स्तंभ"
+    },
+    "Matrices_5": {
+      "expected": "२रा स्तंभ"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_4": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_5": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "१ला स्तंभ"
+    },
+    "Table_Cell_1a": {
+      "expected": "२रा स्तंभ"
+    },
+    "Table_Cell_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_4": {
+      "expected": "१ला स्तंभ"
+    },
+    "Table_Cell_4a": {
+      "expected": "२रा स्तंभ"
+    },
+    "Table_Cell_5": {
+      "expected": "१ला स्तंभ"
+    },
+    "Table_Cell_5a": {
+      "expected": "२रा स्तंभ"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "१ली पंक्ति"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "२री पंक्ति"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "१ली पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "१ली पंक्ति, २रा स्तंभ"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "२री पंक्ति, १ला स्तंभ"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "२री पंक्ति, २रा स्तंभ"
+    },
+    "Table_Label_0": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_1": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_2": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_3": {
+      "expected": "सूचक पर्चा"
+    }
+  }
+}

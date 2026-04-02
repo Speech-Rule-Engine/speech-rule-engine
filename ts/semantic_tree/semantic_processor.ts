@@ -35,7 +35,7 @@ import { SemanticNode } from './semantic_node.js';
 import { SemanticNodeFactory } from './semantic_node_factory.js';
 import * as SemanticPred from './semantic_pred.js';
 import * as SemanticUtil from './semantic_util.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS } from './semantic_util.js';
 
 interface BoundsType {
   type: SemanticType;
@@ -159,9 +159,7 @@ export class SemanticProcessor {
         SemanticProcessor.rewriteFencedLine_(table)
       );
     }
-    SemanticProcessor.binomialForm_(table);
-    SemanticProcessor.classifyMultiline(table);
-    return table;
+    return SemanticProcessor.classifyMultiline(table);
   }
 
   /**
@@ -186,8 +184,21 @@ export class SemanticProcessor {
    * might be.
    *
    * @param multiline A multiline expression.
+   * @returns The classified node. This can be changed for single lines.
    */
   public static classifyMultiline(multiline: SemanticNode) {
+    SemanticProcessor.binomialForm_(multiline);
+    SemanticProcessor.classifyMultiline_(multiline);
+    return multiline;
+  }
+
+  /**
+   * Semantically classifies a multiline table in terms of equation system it
+   * might be.
+   *
+   * @param multiline A multiline expression.
+   */
+  public static classifyMultiline_(multiline: SemanticNode) {
     let index = 0;
     const length = multiline.childNodes.length;
     let line;
@@ -396,7 +407,7 @@ export class SemanticProcessor {
         continue;
       }
       const spacer = SemanticProcessor.getSpacer_(sibling);
-      if (spacer) {
+      if (spacer && spacer !== mt2) {
         op.mathml.push(spacer);
         op.mathmlTree = spacer;
         op.role = SemanticRole.SPACE;
@@ -928,6 +939,8 @@ export class SemanticProcessor {
    * Rewrites a fenced node by pulling some embellishments from fences to the
    * outside.
    *
+   * Also annotates the node to distinguish particular fences.
+   *
    * @param fenced The fenced node.
    * @returns The rewritten node.
    */
@@ -940,6 +953,8 @@ export class SemanticProcessor {
     fenced.contentNodes[1] = rewritten.fence;
     fenced.contentNodes[0].parent = fenced;
     fenced.contentNodes[1].parent = fenced;
+    // Annotation is done here to ensure we catch all fenced expressions.
+    annotateFencedNode(fenced);
     rewritten.node.parent = null;
     return rewritten.node;
   }
@@ -1173,7 +1188,7 @@ export class SemanticProcessor {
     font: SemanticFont,
     unit: string
   ): SemanticNode {
-    if (unit === 'MathML-Unit') {
+    if (unit === 'MathML-Unit' && !SemanticPred.unitException(leaf)) {
       leaf.type = SemanticType.IDENTIFIER;
       leaf.role = SemanticRole.UNIT;
     } else if (
@@ -1210,6 +1225,7 @@ export class SemanticProcessor {
   public implicitNode(nodes: SemanticNode[]): SemanticNode {
     nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
     nodes = SemanticProcessor.getInstance().combineUnits_(nodes);
+    nodes = SemanticProcessor.getInstance().combineScripts_(nodes);
     if (nodes.length === 1) {
       return nodes[0];
     }
@@ -1246,7 +1262,21 @@ export class SemanticProcessor {
       leaf.role = SemanticRole.TEXT;
       return leaf;
     }
-    leaf.role = SemanticRole.UNKNOWN;
+    const content = [...leaf.textContent];
+    if (content.length !== 1) {
+      leaf.role = SemanticRole.UNKNOWN;
+      return leaf;
+    }
+    // Reclassifying length 1 text elements that are not identifiers
+    const meaning = SemanticMap.Meaning.get(content[0]);
+    if (meaning.type === SemanticType.UNKNOWN ||
+      meaning.type === SemanticType.IDENTIFIER) {
+      return leaf;
+    }
+    leaf.type = meaning.type;
+    leaf.role = meaning.role;
+    leaf.font = meaning.font;
+    leaf.addAnnotation('general', 'text');
     return leaf;
   }
 
@@ -1263,7 +1293,8 @@ export class SemanticProcessor {
    */
   public row(nodes: SemanticNode[]): SemanticNode {
     nodes = nodes.filter(function (x) {
-      return !SemanticPred.isType(x, SemanticType.EMPTY);
+      return !SemanticPred.isType(x, SemanticType.EMPTY) ||
+        x.hasAnnotation('empty', 'MFENCED');
     });
     if (nodes.length === 0) {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
@@ -1291,18 +1322,28 @@ export class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     let center = children[0];
-    let type = SemanticType.UNKNOWN;
+    // Initial breaking point for cleanup.
+    let {length: breaking} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    children = children.slice(0, breaking + 1);
+    [mmlTag, children] =
+      SemanticProcessor.getInstance().cleanLimitNode(mmlTag, children, breaking);
+
+    // Return if there are not real children.
     if (!children[1]) {
       return center;
     }
 
-    let result: BoundsType;
+    let {type: type, length: length} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+
+    // Special case if the superscript is a degree
+    if (length === 1 && children[1].role === SemanticRole.DEGREE) {
+      return SemanticProcessor.getInstance().row(
+        [children[0], children[1]]
+      );
+    }
+
     SemanticHeuristics.run('op_with_limits', children);
     if (SemanticPred.isLimitBase(center)) {
-      result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
-      const length = result.length;
-      type = result.type;
-      children = children.slice(0, result.length + 1);
       // Heuristic to deal with accents around limit functions/operators.
       if (
         (length === 1 && SemanticPred.isAccent(children[1])) ||
@@ -1310,7 +1351,7 @@ export class SemanticProcessor {
           SemanticPred.isAccent(children[1]) &&
           SemanticPred.isAccent(children[2]))
       ) {
-        result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+        let result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
         return SemanticProcessor.getInstance().accentNode_(
           center,
           children,
@@ -1371,7 +1412,7 @@ export class SemanticProcessor {
       );
     }
     // We either have an indexed, stacked or accented expression.
-    result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+    const result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
     return SemanticProcessor.getInstance().accentNode_(
       center,
       children,
@@ -1379,6 +1420,49 @@ export class SemanticProcessor {
       result.length,
       result.accent
     );
+  }
+
+  /**
+   * Creates a limit node from a sub/superscript or over/under node if the
+   * central element is a big operator. Otherwise it creates the standard
+   * elements.
+   *
+   * @param mmlTag The tag name of the original node.
+   * @param children The children of the
+   *     original node.
+   * @returns The newly created limit node.
+   */
+  private cleanLimitNode(
+    mmlTag: string,
+    children: SemanticNode[],
+    length: number
+  ): [string, SemanticNode[]] {
+    const isNoSpace = (x: SemanticNode) => !x || SemanticPred.isType(x, SemanticType.EMPTY);
+    const isSpace = (x: SemanticNode) => x &&
+      (SemanticPred.isType(x, SemanticType.TEXT) && SemanticPred.isRole(x, SemanticRole.SPACE));
+    const isEmpty = (x: SemanticNode) => isNoSpace(x) || isSpace(x);
+    if (length === 1) {
+      if (isEmpty(children[1])) {
+        children[0].noupdate = true;
+        return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
+      }
+      return [mmlTag, children];
+    }
+    const child1 = children[1];
+    const child2 = children[2];
+    if (isEmpty(child1) && isEmpty(child2)) {
+      children[0].noupdate = true;
+      return [mmlTag, [annotateEmpty([mmlTag], children[0])]];
+    }
+    if (isEmpty(child1)) {
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER,
+              [annotateEmpty([mmlTag], children[0]), child2]];
+    }
+    if (isEmpty(child2)) {
+      return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER,
+              [annotateEmpty([mmlTag], children[0]), child1]];
+    }
+    return [mmlTag, children];
   }
 
   // Improve table recognition, multiline alignments for pausing.
@@ -1413,6 +1497,9 @@ export class SemanticProcessor {
         SemanticProcessor.tableToCases_(table, prevNodes.pop() as SemanticNode);
       }
       result = result.concat(prevNodes);
+      if (result.length || partition.comp[0].length) {
+        table = SemanticProcessor.rewriteTrivialTable(table);
+      }
       result.push(table);
     }
     return result.concat(partition.comp.shift());
@@ -1505,9 +1592,7 @@ export class SemanticProcessor {
         [child0, child1],
         []
       );
-      SemanticProcessor.binomialForm_(node);
-      SemanticProcessor.classifyMultiline(node);
-      return node;
+      return SemanticProcessor.classifyMultiline(node);
     } else {
       node = SemanticProcessor.getInstance().fractionNode_(denom, enume);
       if (bevelled) {
@@ -1860,6 +1945,35 @@ export class SemanticProcessor {
   }
 
   /**
+   * Rewrite a trivial table into the element that constitutes the inner line.
+   *
+   * @param table The table.
+   * @returns If table is trivial, the stripped inner element. O/w the original
+   *     table.
+   */
+  public static rewriteTrivialTable(table: SemanticNode): SemanticNode {
+    return isTrivialTable(table) ?
+      SemanticProcessor.getInstance().unwrapTrivialTable(table) : table;
+  }
+
+  /**
+   * Rewrite a trivial table into the element that constitutes the inner line.
+   *
+   * @param multiline The multiline table.
+   * @returns The stripped inner element.
+   */
+  private unwrapTrivialTable(multiline: SemanticNode) {
+    if (!multiline.childNodes[0].childNodes.length) {
+      // TODO: this is currently not used.
+      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
+    }
+    const newNode = multiline.childNodes[0].childNodes[0];
+    newNode.parent = null;
+    annotateEmpty([MMLTAGS.MTD, MMLTAGS.MTR, MMLTAGS.MTABLE], newNode);
+    return newNode;
+  }
+
+  /**
    * Private constructor for singleton class.
    */
   private constructor() {
@@ -1905,13 +2019,14 @@ export class SemanticProcessor {
     children: SemanticNode[],
     opNode: SemanticNode
   ): SemanticNode {
-    const node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+    let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.INFIXOP,
       children,
       [opNode],
       SemanticUtil.getEmbellishedInner(opNode).textContent
     );
     node.role = opNode.role;
+    node = SemanticHeuristics.run('propagateInterval', node) as SemanticNode;
     return SemanticHeuristics.run(
       'propagateSimpleFunction',
       node
@@ -2090,6 +2205,62 @@ export class SemanticProcessor {
   }
 
   /**
+   * Combines oddly expressed scripts. I.e.
+   *  *  an empty superscript with an identifier/number or subscript.
+   *  *  an empty subscript with an identifier/number
+   *
+   * @param nodes The list of nodes.
+   * @returns The new list of nodes.
+   */
+  private combineScripts_(nodes: SemanticNode[]): SemanticNode[] {
+    const partition = SemanticUtil.partitionNodes(nodes, (x) => {
+      return (SemanticPred.isType(x, SemanticType.SUPERSCRIPT)
+        && SemanticPred.isType(x.childNodes[0], SemanticType.EMPTY)) ||
+        (SemanticPred.isType(x, SemanticType.SUBSCRIPT)
+          && SemanticPred.isType(x.childNodes[0], SemanticType.EMPTY))
+    });
+    if (!partition.rel.length) {
+      return nodes;
+    }
+    let result: SemanticNode[] = [];
+    do {
+      const comp = partition.comp.shift();
+      const rel = partition.rel.shift();
+      if (!comp.length) {
+        result.push(rel);
+        continue;
+      }
+      const last = comp.pop();
+      if (SemanticPred.isType(last, SemanticType.NUMBER) ||
+        SemanticPred.isType(last, SemanticType.IDENTIFIER)) {
+        rel.childNodes[0] = last;
+        last.parent = rel;
+        rel.role = last.type.toLowerCase() as SemanticRole;
+        rel.addAnnotation('collapsed', last.type.toLowerCase());
+        result = result.concat(comp);
+        result.push(rel);
+        continue;
+      }
+      if (SemanticPred.isType(last, SemanticType.SUBSCRIPT) &&
+        SemanticPred.isType(rel, SemanticType.SUPERSCRIPT)) {
+        rel.childNodes[0] = last;
+        last.parent = rel;
+        rel.role = last.type.toLowerCase() as SemanticRole;
+        rel.addAnnotation('collapsed', last.type.toLowerCase());
+        last.role = SemanticRole.SUBSUP;
+        result = result.concat(comp);
+        result.push(rel);
+        continue;
+      }
+      result = result.concat(comp);
+      result.push(last);
+      result.push(rel);
+    } while (partition.rel.length);
+    result = result.concat(partition.comp.pop());
+    return result;
+  }
+
+  /**
    * Combines adjacent units in
    *
    * @param nodes The list of nodes.
@@ -2201,9 +2372,11 @@ export class SemanticProcessor {
       }
       return nodes;
     }
-    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) =>
-      SemanticPred.isType(x, SemanticType.TEXT)
-    );
+    const { rel: rel, comp: comp } = SemanticUtil.partitionNodes(nodes, (x) => {
+      return (
+        SemanticPred.isType(x, SemanticType.TEXT) && !x.annotation['factor']
+      );
+    });
     if (rel.length === 0) {
       return nodes;
     }
@@ -2226,18 +2399,17 @@ export class SemanticProcessor {
       }
       if (text.length) {
         // Combine multiple text elements into one.
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
         text.push(currentRel);
-        const dummy = SemanticProcessor.getInstance().dummyNode_(text);
-        // TODO: See if it already has a majority vote role.
-        // dummy.role = SemanticRole.ANNOTATION;
-        result.push(dummy);
-        prevComp = nextComp;
-        continue;
+        currentRel = SemanticProcessor.getInstance().dummyNode_(text);
       }
       if (currentRel.role !== SemanticRole.UNKNOWN) {
+        // Here we ensure that text elements after or before operators/relations
+        // are not separated.
+        const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+        if (combine) {
+          prevComp = combine;
+          continue;
+        }
         if (prevComp.length) {
           result.push(SemanticProcessor.getInstance().row(prevComp));
         }
@@ -2246,17 +2418,6 @@ export class SemanticProcessor {
         continue;
       }
       const meaning = SemanticMap.Meaning.get(currentRel.textContent);
-      // Punctuation is considered to be regular text.
-      if (meaning.type === SemanticType.PUNCTUATION) {
-        currentRel.role = meaning.role;
-        currentRel.font = meaning.font;
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
-        result.push(currentRel);
-        prevComp = nextComp;
-        continue;
-      }
       if (meaning.type !== SemanticType.UNKNOWN) {
         currentRel.type = meaning.type;
         currentRel.role = meaning.role;
@@ -2292,17 +2453,6 @@ export class SemanticProcessor {
           n.role = SemanticRole.UNKNOWN;
         }
       );
-      if (
-        currentRel.type === SemanticType.TEXT &&
-        currentRel.role !== SemanticRole.UNKNOWN
-      ) {
-        if (prevComp.length) {
-          result.push(SemanticProcessor.getInstance().row(prevComp));
-        }
-        result.push(currentRel);
-        prevComp = nextComp;
-        continue;
-      }
       if (currentRel.role === SemanticRole.UNKNOWN) {
         if (rel.length || nextComp.length) {
           if (nextComp.length && nextComp[0].type === SemanticType.FENCED) {
@@ -2316,8 +2466,23 @@ export class SemanticProcessor {
           currentRel.role = SemanticRole.UNIT;
         }
       }
-      prevComp.push(currentRel);
-      prevComp = prevComp.concat(nextComp);
+      if (currentRel.type !== SemanticType.TEXT) {
+        prevComp.push(currentRel);
+        prevComp = prevComp.concat(nextComp);
+        continue;
+      }
+      // Here we ensure that text elements after or before operators/relations
+      // are not separated.
+      const combine = ensureOperatorRelations(prevComp, currentRel, nextComp);
+      if (combine) {
+        prevComp = combine;
+        continue;
+      }
+      if (prevComp.length) {
+        result.push(SemanticProcessor.getInstance().row(prevComp));
+      }
+      result.push(currentRel);
+      prevComp = nextComp;
     }
     if (prevComp.length > 0) {
       result.push(SemanticProcessor.getInstance().row(prevComp));
@@ -3101,8 +3266,7 @@ export class SemanticProcessor {
    *
    * @param ofence Opening fence.
    * @param cfence Closing fence.
-   * @param content The content
-   *     between the fences.
+   * @param content The content between the fences.
    * @returns The new node.
    */
   private horizontalFencedNode_(
@@ -3111,6 +3275,15 @@ export class SemanticProcessor {
     content: SemanticNode[]
   ): SemanticNode {
     const childNode = SemanticProcessor.getInstance().row(content);
+    // Special case that we have ignored an empty input node.
+    // This is from MJ Issue #3028
+    if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
+      !childNode.mathmlTree && ofence.mathmlTree &&
+      ofence.mathmlTree.nextSibling !== cfence.mathmlTree
+       ) {
+      childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
+      childNode.mathml = [ofence.mathmlTree.nextSibling as Element];
+    }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
       [childNode],
@@ -3137,6 +3310,10 @@ export class SemanticProcessor {
    * @param node A fenced semantic node.
    */
   private classifyHorizontalFence_(node: SemanticNode) {
+    SemanticHeuristics.run('interval_heuristic', node);
+    if (node.role === SemanticRole.INTERVAL) {
+      return;
+    }
     node.role = SemanticRole.LEFTRIGHT;
     const children = node.childNodes;
     if (!SemanticPred.isSetNode(node) || children.length > 1) {
@@ -3831,12 +4008,13 @@ export class SemanticProcessor {
 
   /**
    * Creates a functional node, i.e., integral, bigop, simple function. If the
-   * operator is given, it takes care that th eoperator is contained as a
+   * operator is given, it takes care that the operator is contained as a
    * content node, and that the original parent pointer of the operator node is
    * retained.
    *
    * Example: Function application sin^2(x). The pointer from sin should remain
-   * to the superscript node, although sin is given as a content node.
+   * to point at the superscript node, although sin is given as a content node,
+   * which would normally point at the appl node.
    *
    * @param type The type of the node.
    * @param children The children of the
@@ -3933,6 +4111,7 @@ export class SemanticProcessor {
         break;
       default:
         newNode = SemanticProcessor.getInstance().dummyNode_(nodes);
+        newNode.addAnnotation('general', 'script');
     }
     newNode.role = role;
     return newNode;
@@ -3976,4 +4155,83 @@ export class SemanticProcessor {
     }
     return null;
   }
+}
+
+/**
+ * Ensures that text elements between operators and relations are treated more
+ * as identifiers than textual interspersion.
+ *
+ * @param before Set of nodes before the text element.
+ * @param text The text element.
+ * @param after Set of nodes following the text element.
+ *
+ * @returns The combined list of nodes, if before ends or after starts with an
+ *   operator or a relation. Otherwise null.
+ */
+function ensureOperatorRelations(
+  before: SemanticNode[],
+  text: SemanticNode,
+  after: SemanticNode[]
+): SemanticNode[] {
+  const last = before[before.length - 1];
+  if (
+    last &&
+    (last.type === SemanticType.RELATION || last.type === SemanticType.OPERATOR)
+  ) {
+    text.addAnnotation('factor', last.type);
+    return [...before, text, ...after];
+  }
+  const first = after[0];
+  if (
+    first &&
+    (first.type === SemanticType.RELATION ||
+      first.type === SemanticType.OPERATOR)
+  ) {
+    text.addAnnotation('factor', first.type);
+    return [...before, text, ...after];
+  }
+  return null;
+}
+
+/**
+ * Annotate the fences if both fences have the same secondary meaning.
+ *
+ * @param node The fenced node to annotate.
+ */
+function annotateFencedNode(node: SemanticNode) {
+  const meaning1 = SemanticMap.FencesSecondary.get(node.contentNodes[0].textContent);
+  const meaning2 = SemanticMap.FencesSecondary.get(node.contentNodes[1].textContent);
+  if (meaning1 === meaning2) {
+    node.addAnnotation('fences', meaning1);
+  }
+}
+
+/**
+ * Check if a table is a trivial table. That is, it is multiline element with
+ * only a single line and no label.
+ *
+ * @param multiline The multiline table.
+ * @returns True if it is a trivial table.
+ */
+function isTrivialTable(multiline: SemanticNode) {
+  return SemanticPred.isType(multiline, SemanticType.MULTILINE) &&
+    multiline.childNodes.length === 1 &&
+    // TODO: This currently leaves incomplete/empty tables untouched!
+    // We could replace that with empty.
+    multiline.childNodes[0].childNodes.length &&
+    !SemanticPred.lineIsLabelled(multiline.childNodes[0])
+};
+
+/**
+ * Add an annotation for an omitted empty element remembering the original
+ * tag. This is important for enrichment, where that particular tag needs to be
+ * "jumped over" during ascend when adding new nodes, like implicit multiplication.
+ *
+ * @param tag The tag.
+ * @param node The node that's annotated.
+ * @returns The node for pipelining.
+ */
+function annotateEmpty(tags: string[], node: SemanticNode) {
+  tags.forEach((tag) => node.addAnnotation('empty', tag));
+  return node;
 }

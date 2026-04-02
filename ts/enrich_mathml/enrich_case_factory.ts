@@ -20,6 +20,7 @@
 
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { CaseBinomial } from './case_binomial.js';
+import { CaseCollapsedScript } from './case_collapsed_script.js';
 import { CaseDoubleScript } from './case_double_script.js';
 import { CaseEmbellished } from './case_embellished.js';
 import { CaseEmpheq } from './case_empheq.js';
@@ -44,6 +45,10 @@ factory.push(
     {
       test: CaseEmbellished.test,
       constr: (node: SemanticNode) => new CaseEmbellished(node)
+    },
+    {
+      test: CaseCollapsedScript.test,
+      constr: (node: SemanticNode) => new CaseCollapsedScript(node)
     },
     {
       test: CaseDoubleScript.test,

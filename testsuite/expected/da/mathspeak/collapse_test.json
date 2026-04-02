@@ -1,0 +1,418 @@
+{
+  "name": "DanishMathspeakCollapse",
+  "locale": "da",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Danish Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "active": "CollapseDanish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "sammenfoldet sum med 2 addender"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedBigop_default": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "sammenfoldet binomial"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "sammenfoldet binomial"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "sammenfoldet binomial"
+    },
+    "CollapsedCases_default": {
+      "expected": "sammenfoldet akkolade med 2 udtryk"
+    },
+    "CollapsedCases_brief": {
+      "expected": "sammenfoldet akkolade"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "sammenfoldet akkolade"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "sammenfoldet kædebrøk"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "sammenfoldet kædebrøk"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "sammenfoldet kædebrøk"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "sammenfoldet 2 dimensional determinant"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "sammenfoldet determinant"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "sammenfoldet determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "sammenfoldet brøk"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "sammenfoldet brøk"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "sammenfoldet brøk"
+    },
+    "CollapsedFunction_default": {
+      "expected": "sammenfoldet funktionsudtryk"
+    },
+    "CollapsedFunction_brief": {
+      "expected": "sammenfoldet funktion"
+    },
+    "CollapsedFunction_sbrief": {
+      "expected": "sammenfoldet funktion"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "sammenfoldet stor identifikator"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "sammenfoldet stor identifikator"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "sammenfoldet stor identifikator"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "sammenfoldet division med 2 elementer"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "sammenfoldet division"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "sammenfoldet division"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "sammenfoldet integral"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "sammenfoldet integral"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "sammenfoldet integral"
+    },
+    "CollapsedLim_default": {
+      "expected": "sammenfoldet grænseværdifunktion"
+    },
+    "CollapsedLim_brief": {
+      "expected": "sammenfoldet lim"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "sammenfoldet lim"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "sammenfoldet 3 gange 2 matrix"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "sammenfoldet matrix"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "sammenfoldet matrix"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "sammenfoldet stort blandet tal"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "sammenfoldet stort blandet tal"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "sammenfoldet stort blandet tal"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "sammenfoldet produkt med 2 faktorer"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "sammenfoldet sammenligningssekvens med 3 elementer"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "sammenfoldet sammenligningssekvens"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "sammenfoldet sammenligningssekvens"
+    },
+    "CollapsedNumber_default": {
+      "expected": "sammenfoldet stort tal"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "sammenfoldet stort tal"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "sammenfoldet stort tal"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "sammenfoldet komma separeret liste med længde 3"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "sammenfoldet komma separeret liste"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "sammenfoldet komma separeret liste"
+    },
+    "CollapsedRelation_default": {
+      "expected": "sammenfoldet lighed"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "sammenfoldet lighed"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "sammenfoldet lighed"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "sammenfoldet lighed sekvens men 3 elementer"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "sammenfoldet lighed sekvens"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "sammenfoldet lighed sekvens"
+    },
+    "CollapsedRoot_default": {
+      "expected": "sammenfoldet rod med rodeksponent 3"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "sammenfoldet rod"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "sammenfoldet rod"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "sammenfoldet indlejret rod med rodeksponent 3"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "sammenfoldet indlejret rod"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "sammenfoldet indlejret rod"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "sammenfoldet 2 dimensional rækkevektor"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "sammenfoldet rækkevektor"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "sammenfoldet rækkevektor"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "sammenfoldet kvadratrod"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "sammenfoldet kvadratrod"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "sammenfoldet kvadratrod"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "sammenfoldet indlejret kvadratrod"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "sammenfoldet indlejret kvadratrod"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "sammenfoldet indlejret kvadratrod"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "sammenfoldet 2 dimensional kvadratisk matrix"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "sammenfoldet kvadratisk matrix"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "sammenfoldet kvadratisk matrix"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "sammenfoldet sænket"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "sammenfoldet sænket"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "sammenfoldet sænket"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "sammenfoldet potens med sænket"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "sammenfoldet potens med sænket"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "sammenfoldet potens med sænket"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "sammenfoldet potens"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "sammenfoldet potens"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "sammenfoldet potens"
+    },
+    "CollapsedTable_default": {
+      "expected": "sammenfoldet tabel med 2 rækker og 2 kolonner"
+    },
+    "CollapsedTable_brief": {
+      "expected": "sammenfoldet tabel med 2 rækker og 2 kolonner"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "sammenfoldet tabel med 2 rækker og 2 kolonner"
+    },
+    "CollapsedText_default": {
+      "expected": "sammenfoldet tekst"
+    },
+    "CollapsedText_brief": {
+      "expected": "sammenfoldet tekst"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "sammenfoldet tekst"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "sammenfoldet sum med variabelt antal addender"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "sammenfoldet sum"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "sammenfoldet akkolade med variabelt antal udtryk"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "sammenfoldet akkolade"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "sammenfoldet akkolade"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "sammenfoldet n dimensional determinant"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "sammenfoldet determinant"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "sammenfoldet determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "sammenfoldet n gange m dimensional matrix"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "sammenfoldet kvadratisk matrix"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "sammenfoldet kvadratisk matrix"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "sammenfoldet produkt med variabelt antal faktorer"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "sammenfoldet sammenligningssekvens med variabelt antal elementer"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "sammenfoldet sammenligningssekvens"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "sammenfoldet sammenligningssekvens"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "sammenfoldet komma separeret liste med variabel længde"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "sammenfoldet komma separeret liste"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "sammenfoldet komma separeret liste"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "sammenfoldet lighed sekvens med variabelt antal elementer"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "sammenfoldet lighed sekvens"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "sammenfoldet lighed sekvens"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "sammenfoldet n dimensional vektor"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "sammenfoldet vektor"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "sammenfoldet vektor"
+    },
+    "CollapsedVector_default": {
+      "expected": "sammenfoldet 3 dimensional vektor"
+    },
+    "CollapsedVector_brief": {
+      "expected": "sammenfoldet vektor"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "sammenfoldet vektor"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "sammenfoldet subtraktion med variabelt antal elementer"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "sammenfoldet subtraktion"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "sammenfoldet subtraktion"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "sammenfoldet produkt med 3 faktorer"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "sammenfoldet produkt"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "sammenfoldet produkt med variabelt antal faktorer"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "sammenfoldet pil sekvens med variabelt antal elementer"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "sammenfoldet pil"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "sammenfoldet n dimensional rækkevektor"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "sammenfoldet rod med rodeksponent 3 slut rodeksponent a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "sammenfoldet indlejret rod med rodeksponent 3 slut rodeksponent a"
+    }
+  }
+}

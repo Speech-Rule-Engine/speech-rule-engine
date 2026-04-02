@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml implicit tests.",
+  "base": "input/semantic/implicit.json"
+}

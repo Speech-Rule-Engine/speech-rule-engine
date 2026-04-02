@@ -1,0 +1,260 @@
+{
+  "_comment_": "Limit expressions.",
+  "tests": {
+    "Sum_0": {
+      "tex": "\\underline{\\sum}",
+      "input": "<munder><mo>&#x2211;</mo><mo>_</mo></munder>"
+    },
+    "Sum_1": {
+      "tex": "\\widetilde{\\sum}",
+      "input": "<mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow>"
+    },
+    "Sum_2": {
+      "tex": "\\widetilde{\\sum}\\limits^2",
+      "input": "<mover><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mn>2</mn></mover>"
+    },
+    "Sum_3": {
+      "tex": "\\widetilde{\\sum}\\limits_n",
+      "input": "<munder><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi></munder>"
+    },
+    "Sum_4": {
+      "tex": "\\widetilde{\\sum}\\limits^2_n",
+      "input": "<munderover><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover>"
+    },
+    "Sum_5": {
+      "tex": "\\widetilde{\\sum}\\limits^{-\\infty}_\\infty",
+      "input": "<munderover><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi mathvariant=\"normal\">&#x221E;</mi><mrow><mo>&#x2212;</mo><mi mathvariant=\"normal\">&#x221E;</mi></mrow></munderover>"
+    },
+    "Sum_6": {
+      "tex": "\\widetilde{\\sum}^2",
+      "input": "<msup><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mn>2</mn></msup>"
+    },
+    "Sum_7": {
+      "tex": "\\widetilde{\\sum}_n",
+      "input": "<msub><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi></msub>"
+    },
+    "Sum_8": {
+      "tex": "\\widetilde{\\sum}^2_n",
+      "input": "<msubsup><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></msubsup>"
+    },
+    "Sum_9": {
+      "tex": "\\widetilde{\\underline{\\sum}\\limits^2_n}",
+      "input": "<mrow><mover><munder><munderover><mo>&#x2211;</mo><mo>_</mo><mn>2</mn></munderover><mi>n</mi></munder><mo>~</mo></mover></mrow>"
+    },
+    "Sum_10": {
+      "tex": "\\widetilde{\\underline{\\sum\\limits^2_n}}",
+      "input": "<mrow><mover><munder><mrow><mo></mo><munderover><mo>&#x2211;</mo><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mo>~</mo></mover></mrow>"
+    },
+    "Sum_11": {
+      "tex": "\\underline{\\widetilde{\\sum\\limits^2_n}}",
+      "input": "<munder><mrow><mover><munderover><mo>&#x2211;</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder>"
+    },
+    "Sum_12": {
+      "tex": "\\underline{\\widetilde{\\sum}\\limits^2_n}",
+      "input": "<munder><mrow><mo></mo><munderover><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder>"
+    },
+    "Sum_13": {
+      "tex": "\\underline{\\widetilde{\\sum}\\limits^2_n}^5_m",
+      "input": "<msubsup><munder><mrow><mo></mo><munderover><mrow><mover><mo>&#x2211;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Sum_14": {
+      "tex": "\\underline{\\widetilde{\\sum\\limits^2_n}}^5_m",
+      "input": "<msubsup><munder><mrow><mover><munderover><mo>&#x2211;</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Integral_0": {
+      "tex": "\\underline{\\int}",
+      "input": "<munder><mo>&#x222B;</mo><mo>_</mo></munder>"
+    },
+    "Integral_1": {
+      "tex": "\\widetilde{\\int}",
+      "input": "<mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow>"
+    },
+    "Integral_2": {
+      "tex": "\\widetilde{\\int}\\limits^2",
+      "input": "<mover><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mn>2</mn></mover>"
+    },
+    "Integral_3": {
+      "tex": "\\widetilde{\\int}\\limits_n",
+      "input": "<munder><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi></munder>"
+    },
+    "Integral_4": {
+      "tex": "\\widetilde{\\int}\\limits^2_n",
+      "input": "<munderover><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover>"
+    },
+    "Integral_5": {
+      "tex": "\\widetilde{\\int}\\limits^{-\\infty}_\\infty",
+      "input": "<munderover><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi mathvariant=\"normal\">&#x221E;</mi><mrow><mo>&#x2212;</mo><mi mathvariant=\"normal\">&#x221E;</mi></mrow></munderover>"
+    },
+    "Integral_6": {
+      "tex": "\\widetilde{\\int}^2",
+      "input": "<msup><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mn>2</mn></msup>"
+    },
+    "Integral_7": {
+      "tex": "\\widetilde{\\int}_n",
+      "input": "<msub><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi></msub>"
+    },
+    "Integral_8": {
+      "tex": "\\widetilde{\\int}^2_n",
+      "input": "<msubsup><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></msubsup>"
+    },
+    "Integral_9": {
+      "tex": "\\widetilde{\\underline{\\int}\\limits^2_n}",
+      "input": "<mrow><mover><munder><munderover><mo>&#x222B;</mo><mo>_</mo><mn>2</mn></munderover><mi>n</mi></munder><mo>~</mo></mover></mrow>"
+    },
+    "Integral_10": {
+      "tex": "\\widetilde{\\underline{\\int\\limits^2_n}}",
+      "input": "<mrow><mover><munder><mrow><mo></mo><munderover><mo>&#x222B;</mo><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mo>~</mo></mover></mrow>"
+    },
+    "Integral_11": {
+      "tex": "\\underline{\\widetilde{\\int\\limits^2_n}}",
+      "input": "<munder><mrow><mover><munderover><mo>&#x222B;</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder>"
+    },
+    "Integral_12": {
+      "tex": "\\underline{\\widetilde{\\int}\\limits^2_n}",
+      "input": "<munder><mrow><mo></mo><munderover><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder>"
+    },
+    "Integral_13": {
+      "tex": "\\underline{\\widetilde{\\int}\\limits^2_n}^5_m",
+      "input": "<msubsup><munder><mrow><mo></mo><munderover><mrow><mover><mo>&#x222B;</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Integral_14": {
+      "tex": "\\underline{\\widetilde{\\int\\limits^2_n}}^5_m",
+      "input": "<msubsup><munder><mrow><mover><munderover><mo>&#x222B;</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Limit_0": {
+      "tex": "\\underline{\\lim}",
+      "input": "<munder><mo>lim</mo><mo>_</mo></munder>"
+    },
+    "Limit_1": {
+      "tex": "\\widetilde{\\lim}",
+      "input": "<mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow>"
+    },
+    "Limit_2": {
+      "tex": "\\widetilde{\\lim}\\limits^2",
+      "input": "<mover><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mn>2</mn></mover>"
+    },
+    "Limit_3": {
+      "tex": "\\widetilde{\\lim}\\limits_n",
+      "input": "<munder><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi></munder>"
+    },
+    "Limit_4": {
+      "tex": "\\widetilde{\\lim}\\limits^2_n",
+      "input": "<munderover><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover>"
+    },
+    "Limit_5": {
+      "tex": "\\widetilde{\\lim}\\limits^{-\\infty}_\\infty",
+      "input": "<munderover><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi mathvariant=\"normal\">&#x221E;</mi><mrow><mo>&#x2212;</mo><mi mathvariant=\"normal\">&#x221E;</mi></mrow></munderover>"
+    },
+    "Limit_6": {
+      "tex": "\\widetilde{\\lim}^2",
+      "input": "<msup><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mn>2</mn></msup>"
+    },
+    "Limit_7": {
+      "tex": "\\widetilde{\\lim}_n",
+      "input": "<msub><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi></msub>"
+    },
+    "Limit_8": {
+      "tex": "\\widetilde{\\lim}^2_n",
+      "input": "<msubsup><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></msubsup>"
+    },
+    "Limit_9": {
+      "tex": "\\widetilde{\\underline{\\lim}\\limits^2_n}",
+      "input": "<mrow><mover><munder><munderover><mo>lim</mo><mo>_</mo><mn>2</mn></munderover><mi>n</mi></munder><mo>~</mo></mover></mrow>"
+    },
+    "Limit_10": {
+      "tex": "\\widetilde{\\underline{\\lim\\limits^2_n}}",
+      "input": "<mrow><mover><munder><mrow><mo></mo><munderover><mo>lim</mo><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mo>~</mo></mover></mrow>"
+    },
+    "Limit_11": {
+      "tex": "\\underline{\\widetilde{\\lim\\limits^2_n}}",
+      "input": "<munder><mrow><mover><munderover><mo>lim</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder>"
+    },
+    "Limit_12": {
+      "tex": "\\underline{\\widetilde{\\lim}\\limits^2_n}",
+      "input": "<munder><mrow><mo></mo><munderover><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder>"
+    },
+    "Limit_13": {
+      "tex": "\\underline{\\widetilde{\\lim}\\limits^2_n}^5_m",
+      "input": "<msubsup><munder><mrow><mo></mo><munderover><mrow><mover><mo>lim</mo><mo>~</mo></mover></mrow><mi>n</mi><mn>2</mn></munderover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Limit_14": {
+      "tex": "\\underline{\\widetilde{\\lim\\limits^2_n}}^5_m",
+      "input": "<msubsup><munder><mrow><mover><munderover><mo>lim</mo><mi>n</mi><mn>2</mn></munderover><mo>~</mo></mover></mrow><mo>_</mo></munder><mi>m</mi><mn>5</mn></msubsup>"
+    },
+    "Additional_0": {
+      "input": "<mover><munder><munderover><mo>∑</mo><mo>_</mo><mi>n</mi></munderover><mn>2</mn></munder><mo>~</mo></mover>"
+    },
+    "Additional_1": {
+      "input": "<munder><mover><munderover><mo>∑</mo><mi>n</mi><mo>_</mo></munderover><mn>2</mn></mover><mo>~</mo></munder>"
+    },
+    "Additional_2": {
+      "input": "<msup><msub><msubsup><mo>∑</mo><mo>_</mo><mi>n</mi></msubsup><mn>2</mn></msub><mo>~</mo></msup>"
+    },
+    "Additional_3": {
+      "input": "<msub><msup><msubsup><mo>∑</mo><mi>n</mi><mo>_</mo></msubsup><mn>2</mn></msup><mo>~</mo></msub>"
+    },
+    "Additional_4": {
+      "input": "<msubsup><mo>∑</mo><mi>n</mi><mo>_</mo></msubsup>"
+    },
+    "Additional_5": {
+      "input": "<msubsup><mo>∑</mo><mo>_</mo><mi>n</mi></msubsup>"
+    },
+    "Additional_6": {
+      "input": "<munderover><mo>∑</mo><mi>n</mi><mo>_</mo></munderover>"
+    },
+    "Additional_7": {
+      "input": "<munderover><mo>∑</mo><mo>_</mo><mi>n</mi></munderover>"
+    },
+    "Additional_8": {
+      "tex": "\\overline{\\sum}\\limits_2^n",
+      "input": "<mover><munderover><mo>&#x2211;</mo><mn>2</mn><mo>&#xAF;</mo></munderover><mi>n</mi></mover>"
+    },
+    "Additional_9": {
+      "tex": "\\underline{\\sum}\\limits^2_n",
+      "input": "<mover><munderover><mo>&#x2211;</mo><mo>_</mo><mn>2</mn></munderover><mi>n</mi></mover>"
+    },
+    "Additional_10": {
+      "tex": "A^0",
+      "input": "<msup><mi>A</mi><mn>0</mn></msup>"
+    },
+    "Additional_11": {
+      "tex": "A^0_n",
+      "input": "<msubsup><mi>A</mi><mi>n</mi><mn>0</mn></msubsup>"
+    },
+    "Additional_12": {
+      "input": "<munderover><mo>&#x2211;</mo><mn>2</mn></munderover>"
+    },
+    "Additional_13": {
+      "input": "<msubsup><mo>&#x2211;</mo><mn>2</mn></msubsup>"
+    },
+    "Additional_14": {
+      "input": "<munder><mo>&#x2211;</mo></munder>"
+    },
+    "Additional_15": {
+      "input": "<mover><mo>&#x2211;</mo></mover>"
+    },
+    "Additional_16": {
+      "input": "<msub><mo>&#x2211;</mo></msub>"
+    },
+    "Additional_17": {
+      "input": "<msup><mo>&#x2211;</mo></msup>"
+    },
+    "Additional_18": {
+      "input": "<munderover><mo>&#x2211;</mo><mo>_</mo><mo>~</mo></munderover>"
+    },
+    "_comment_19": "Missing for the overAccent && !underAccent case in accentNode_.",
+    "Overaccent_0": {
+      "input": "<munderover><mi>X</mi><mo>x</mo><mo>_</mo></munderover>"
+    },
+    "_comment_20": "Empty elements to be ignored.",
+    "Empty_0": {
+      "input": "<munderover><mi>X</mi><mo></mo><mo>_</mo></munderover>"
+    },
+    "Empty_1": {
+      "input": "<munderover><mi>X</mi><mo>^</mo><mo></mo></munderover>"
+    },
+    "Empty_2": {
+      "input": "<munderover><mi>X</mi><mo></mo><mo></mo></munderover>"
+    }
+  }
+}

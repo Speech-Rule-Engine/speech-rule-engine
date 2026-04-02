@@ -1,0 +1,6 @@
+{
+  "factory": "rebuild",
+  "tests": "ALL",
+  "information": "Rebuild Stree Tests for semantically annotated spacing elements",
+  "base": "input/semantic/spaces.json"
+}

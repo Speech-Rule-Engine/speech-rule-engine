@@ -1,0 +1,159 @@
+{
+  "name": "SwedishClearspeakCoverageElements",
+  "locale": "sv",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_coverage_elements.json",
+  "information": "Swedish Clearspeak Coverage for Elements symbol tests.",
+  "active": "ClearspeakSwedish",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "In_set_0": {
+      "expected": "hela mängden z i A med z"
+    },
+    "In_set_1": {
+      "expected": "hela mängden z i A med z"
+    },
+    "In_set_2": {
+      "expected": "hela mängden z inte i A med z"
+    },
+    "In_set_3": {
+      "expected": "hela mängden A innehåller som element z med z"
+    },
+    "In_set_4": {
+      "expected": "hela mängden A innehåller som element z med z"
+    },
+    "In_set_5": {
+      "expected": "hela mängden A innehåller inte som element z med z"
+    },
+    "Free_standing_0": {
+      "expected": "z är medlem av A"
+    },
+    "Free_standing_1": {
+      "expected": "z är medlem av A"
+    },
+    "Free_standing_2": {
+      "expected": "z är inte medlem av A"
+    },
+    "Free_standing_3": {
+      "expected": "A innehåller som element z"
+    },
+    "Free_standing_4": {
+      "expected": "A innehåller som element z"
+    },
+    "Free_standing_5": {
+      "expected": "A innehåller inte som element z"
+    },
+    "Under_bigop_0": {
+      "expected": "summa över z är medlem av A"
+    },
+    "Under_bigop_1": {
+      "expected": "summa över z är medlem av A"
+    },
+    "Under_bigop_2": {
+      "expected": "summa över z är inte medlem av A"
+    },
+    "Under_bigop_3": {
+      "expected": "summa över A innehåller som element z"
+    },
+    "Under_bigop_4": {
+      "expected": "summa över A innehåller som element z"
+    },
+    "Under_bigop_5": {
+      "expected": "summa över A innehåller inte som element z"
+    },
+    "Preferences_in_0": {
+      "expected": "z är medlem av A"
+    },
+    "Preferences_in_1": {
+      "expected": "hela mängden z i A med z"
+    },
+    "Preferences_in_2": {
+      "expected": "summa över z är medlem av A"
+    },
+    "Preferences_in_3": {
+      "expected": "z är medlem av A"
+    },
+    "Preferences_in_4": {
+      "expected": "hela mängden z medlem av A med z"
+    },
+    "Preferences_in_5": {
+      "expected": "summa över z är medlem av A"
+    },
+    "Preferences_in_6": {
+      "expected": "z är ett element av A"
+    },
+    "Preferences_in_7": {
+      "expected": "hela mängden z element av A med z"
+    },
+    "Preferences_in_8": {
+      "expected": "summa över z är ett element av A"
+    },
+    "Preferences_in_9": {
+      "expected": "z är i A"
+    },
+    "Preferences_in_10": {
+      "expected": "hela mängden z i A med z"
+    },
+    "Preferences_in_11": {
+      "expected": "summa över z är i A"
+    },
+    "Preferences_in_12": {
+      "expected": "z tillhör A"
+    },
+    "Preferences_in_13": {
+      "expected": "hela mängden z tillhörande A med z"
+    },
+    "Preferences_in_14": {
+      "expected": "summa över z tillhör A"
+    },
+    "Preferences_not_in_0": {
+      "expected": "z är inte medlem av A"
+    },
+    "Preferences_not_in_1": {
+      "expected": "hela mängden z inte i A med z"
+    },
+    "Preferences_not_in_2": {
+      "expected": "summa över z är inte medlem av A"
+    },
+    "Preferences_not_in_3": {
+      "expected": "z är inte medlem av A"
+    },
+    "Preferences_not_in_4": {
+      "expected": "hela mängden z inte medlem av A med z"
+    },
+    "Preferences_not_in_5": {
+      "expected": "summa över z är inte medlem av A"
+    },
+    "Preferences_not_in_6": {
+      "expected": "z är inte ett element av A"
+    },
+    "Preferences_not_in_7": {
+      "expected": "hela mängden z inte ett element av A med z"
+    },
+    "Preferences_not_in_8": {
+      "expected": "summa över z är inte ett element av A"
+    },
+    "Preferences_not_in_9": {
+      "expected": "z är inte i A"
+    },
+    "Preferences_not_in_10": {
+      "expected": "hela mängden z inte i A med z"
+    },
+    "Preferences_not_in_11": {
+      "expected": "summa över z är inte i A"
+    },
+    "Preferences_not_in_12": {
+      "expected": "z tillhör inte A"
+    },
+    "Preferences_not_in_13": {
+      "expected": "hela mängden z inte tillhörande A med z"
+    },
+    "Preferences_not_in_14": {
+      "expected": "summa över z tillhör inte A"
+    },
+    "Complex": {
+      "expected": "hela mängden a tillhörande, stort A med, bråket med täljare 1, och nämnare a, slut bråk"
+    }
+  }
+}

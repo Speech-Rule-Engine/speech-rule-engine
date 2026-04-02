@@ -1,0 +1,98 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "AfrikaansClearspeakIssues",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "Afrikaans Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5 en, 3 oor 224"
+    },
+    "Issue230_2": {
+      "expected": "5 en drie kwarte"
+    },
+    "IssueNumbers_1": {
+      "expected": "getal t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "getal huts F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "getal huts F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partiële afgeleide"
+    },
+    "Issue320_2": {
+      "expected": "x faktoriaal"
+    },
+    "Issue320_3": {
+      "expected": "minus minus x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_6": {
+      "expected": "partiële afgeleide partiële afgeleide x"
+    },
+    "Issue320_7": {
+      "expected": "links hakkie, die breuk met teller partiële afgeleide kwadraat, en noemer partiële afgeleide x kwadraat, plus, die breuk met teller partiële afgeleide kwadraat, en noemer partiële afgeleide y kwadraat, regs hakkie, maal, die absolute waarde van phi maal, links hakkie, x plus normaal i, y, regs hakkie, kwadraat is gelyk aan 0"
+    },
+    "Issue301_1": {
+      "expected": "4 millimeter"
+    },
+    "Issue301_2": {
+      "expected": "1 millimeter"
+    },
+    "Issue301_3": {
+      "expected": "4 millimeter"
+    },
+    "Issue301_4": {
+      "expected": "1 millimeter"
+    },
+    "Issue_442_0": {
+      "expected": "9 gedeel deur 3 is nie gelyk aan 9 maal 3"
+    },
+    "Issue_442_1": {
+      "expected": "9 gedeel deur 3"
+    },
+    "Issue_442_2": {
+      "expected": "9 gedeel deur 3 is nie gelyk aan 9 maal 3"
+    },
+    "Issue_442_3": {
+      "expected": "9 gedeel deur 3"
+    },
+    "Integral_Issue_0": {
+      "expected": "die integraal van f van x, d x"
+    },
+    "Integral_Issue_1": {
+      "expected": "die integraal van f van x, d x"
+    },
+    "Integral_Issue_2": {
+      "expected": "die integraal van f van x, d x, is gelyk aan 8"
+    },
+    "Issue_689_0": {
+      "expected": "2 lyne, Lyn 1:, 2 lyne, Lyn 1: 100. Lyn 2: 200. Lyn 2:, 2 lyne, Lyn 1: 300. Lyn 2: 400"
+    },
+    "Issue_689_1": {
+      "expected": "2 lyne, Lyn 1: a; b. Lyn 2:, 2 lyne, Lyn 1:, c onderskrif 1; c onderskrif 2. Lyn 2:, c onderskrif 3; c onderskrif 4. d"
+    },
+    "Issue_689_2": {
+      "expected": "2 gevalle, Geval 1:, 2 gevalle, Geval 1: b. Geval 2: c. Geval 2: d"
+    },
+    "Issue_689_3": {
+      "expected": "die 2 by 2 matriks. Ry 1: Kolom 1, a; Kolom 2, b. Ry 2: Kolom 1, die 2 by 2 matriks. Ry 1: c onderskrif 1, c onderskrif 2 Ry 2: c onderskrif 3, c onderskrif 4. end matriks; Kolom 2, d. end matriks"
+    },
+    "Issue_689_4": {
+      "expected": "die 2 by 2 matriks. Ry 1: Kolom 1, a; Kolom 2, b. Ry 2: Kolom 1, die 2 by 2 matriks. Ry 1: Kolom 1,, c onderskrif 1; Kolom 2,, c onderskrif 2. Ry 2: Kolom 1,, c onderskrif 3, plus a plus b; Kolom 2,, c onderskrif 4. end matriks; Kolom 2, d. end matriks"
+    }
+  }
+}

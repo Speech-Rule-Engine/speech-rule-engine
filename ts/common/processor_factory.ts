@@ -35,6 +35,8 @@ import { KeyCode } from './event_util.js';
 import { Processor, KeyProcessor } from './processor.js';
 import * as XpathUtil from './xpath_util.js';
 
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton.js';
+
 const PROCESSORS = new Map();
 
 /**
@@ -74,8 +76,11 @@ export function process<T>(name: string, expr: string): T {
   const processor = get(name);
   try {
     return processor.processor(expr) as T;
-  } catch (_e) {
-    throw new SREError('Processing error for expression ' + expr);
+  } catch (error) {
+    if (error instanceof SREError) {
+      throw error;
+    }
+    throw new SREError(`Processing error for expression\n ${expr}`);
   }
 }
 
@@ -89,7 +94,7 @@ export function process<T>(name: string, expr: string): T {
  */
 function print<T>(name: string, data: T): string {
   const processor = get(name);
-  return Engine.getInstance().pprint
+  return Engine.getInstance().options.pprint
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -105,12 +110,14 @@ export function output(name: string, expr: string): string {
   const processor = get(name);
   try {
     const data = processor.processor(expr);
-    return Engine.getInstance().pprint
+    return Engine.getInstance().options.pprint
       ? processor.pprint(data)
       : processor.print(data);
-  } catch (_e) {
-    console.log(_e);
-    throw new SREError('Processing error for expression ' + expr);
+  } catch (error) {
+    if (error instanceof SREError) {
+      throw error;
+    }
+    throw new SREError(`Processing error for expression\n ${expr}`);
   }
 }
 
@@ -125,7 +132,7 @@ export function keypress(name: string, expr: KeyCode | string): string {
   const processor = get(name);
   const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
   const data = processor.processor(key as string);
-  return Engine.getInstance().pprint
+  return Engine.getInstance().options.pprint
     ? processor.pprint(data)
     : processor.print(data);
 }
@@ -135,17 +142,17 @@ set(
   new Processor<Element>('semantic', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      return Semantic.xmlTree(mml) as Element;
+      return Semantic.xmlTree(mml, Engine.getInstance().options) as Element;
     },
     postprocessor: function (xml, _expr) {
-      const setting = Engine.getInstance().speech;
+      const setting = Engine.getInstance().options.speech;
       if (setting === EngineConst.Speech.NONE) {
         return xml;
       }
       // This avoids temporary attributes (e.g., for grammar) to bleed into
       // the tree.
       const clone = DomUtil.cloneNode(xml);
-      let speech = SpeechGeneratorUtil.computeMarkup(clone);
+      let speech = SpeechGeneratorUtil.computeMarkup(clone, true);
       if (setting === EngineConst.Speech.SHALLOW) {
         xml.setAttribute('speech', AuralRendering.finalize(speech));
         return xml;
@@ -173,8 +180,8 @@ set(
   new Processor('speech', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return AuralRendering.finalize(AuralRendering.markup(descrs));
     },
     pprint: function (speech) {
@@ -190,16 +197,16 @@ set(
   new Processor('json', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const stree = Semantic.getTree(mml);
+      const stree = Semantic.getTree(mml, Engine.getInstance().options);
       return stree.toJson();
     },
     postprocessor: function (json: any, expr) {
-      const setting = Engine.getInstance().speech;
+      const setting = Engine.getInstance().options.speech;
       if (setting === EngineConst.Speech.NONE) {
         return json;
       }
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
       const speech = SpeechGeneratorUtil.computeMarkup(xml);
       if (setting === EngineConst.Speech.SHALLOW) {
         json.stree.speech = AuralRendering.finalize(speech);
@@ -228,13 +235,55 @@ set(
   })
 );
 
+//  json: Json version of the semantic tree for visualization
+set(
+  new Processor('vis', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      const stree = Semantic.getTree(mml, Engine.getInstance().options);
+      const json = stree.toJson();
+      json.stree = rewriteJson(json.stree);
+      return json;
+    },
+    print: function (json) {
+      return JSON.stringify(json);
+    },
+    pprint: function (json) {
+      return JSON.stringify(json, null, 2);
+    }
+  })
+);
+
+type JSON = any;
+
+function rewriteJson(node: JSON): JSON {
+  if (!node.children) {
+    return node;
+  }
+  if (node.children) {
+    node.children.forEach((node: JSON) => node.child = true);
+  }
+  if (node.content) {
+    node.content.forEach((node: JSON) => node.cont = true);
+  }
+  node.children = SemanticSkeleton.combineContentChildren<JSON>(
+      node.type,
+      node.role,
+      node.content || [],
+      node.children || []
+    );
+  // delete node.content;
+  node.children.forEach((node: JSON) => rewriteJson(node));
+  return node;
+}
+
 //  description: List of auditory descriptions.
 set(
   new Processor('description', {
     processor: function (expr) {
       const mml = DomUtil.parseInput(expr);
-      const xml = Semantic.xmlTree(mml);
-      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      const xml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml, true);
       return descrs;
     },
     print: function (descrs) {
@@ -250,12 +299,12 @@ set(
 set(
   new Processor<Element>('enriched', {
     processor: function (expr) {
-      return Enrich.semanticMathmlSync(expr);
+      return Enrich.semanticMathmlSync(expr, Engine.getInstance().options);
     },
     postprocessor: function (enr, _expr) {
       const root = WalkerUtil.getSemanticRoot(enr);
       let generator;
-      switch (Engine.getInstance().speech) {
+      switch (Engine.getInstance().options.speech) {
         case EngineConst.Speech.NONE:
           break;
         case EngineConst.Speech.SHALLOW:
@@ -296,10 +345,10 @@ set(
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
-        modality: Engine.getInstance().modality,
-        locale: Engine.getInstance().locale,
-        domain: Engine.getInstance().domain,
-        style: Engine.getInstance().style
+        modality: Engine.getInstance().options.modality,
+        locale: Engine.getInstance().options.locale,
+        domain: Engine.getInstance().options.domain,
+        style: Engine.getInstance().options.style
       });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },
@@ -309,7 +358,7 @@ set(
       const node = process('enriched', expr) as Element;
       const eml = print('enriched', node);
       Processor.LocalState.walker = WalkerFactory.walker(
-        Engine.getInstance().walker,
+        Engine.getInstance().options.walker,
         node,
         generator,
         Processor.LocalState.highlighter,
@@ -380,8 +429,8 @@ set(
   new Processor('latex', {
     processor: function (ltx: string) {
       if (
-        Engine.getInstance().modality !== 'braille' ||
-        Engine.getInstance().locale !== 'euro'
+        Engine.getInstance().options.modality !== 'braille' ||
+        Engine.getInstance().options.locale !== 'euro'
       ) {
         console.info(
           'LaTeX input currently only works for Euro Braille output.' +
@@ -393,3 +442,117 @@ set(
     }
   })
 );
+
+set(
+  new Processor<RebuildStree>('rebuildStree', {
+    processor: function (expr) {
+      return new RebuildStree(DomUtil.parseInput(expr));
+    }
+  })
+);
+
+// The new speech structure for the webworker integration.
+set(
+  new Processor('speechStructure', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      let sxml;
+      try {
+        const rebuilt = new RebuildStree(mml);
+        sxml = rebuilt.stree.xml();
+      } catch (_e) {
+        sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      }
+      SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+      return SpeechGeneratorUtil.computeSpeechStructure(sxml);
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
+
+export type OptionsList = { [key: string]: string };
+type SpeechList = { [id: string]: { [mod: string]: string } };
+
+export type WorkerStructure = {
+  speech?: SpeechList;
+  braille?: SpeechList;
+  mactions?: SpeechList;
+  options?: OptionsList;
+  translations?: OptionsList;
+  label?: string;
+  postfix?: string;
+  braillelabel?: string;
+  ssml?: string;
+};
+
+// The new speech structure for the webworker integration.
+// TODO: Cleanup and remove duplication with system.ts
+set(
+  new Processor('workerSpeechStructure', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      let sxml;
+      try {
+        const rebuilt = new RebuildStree(mml);
+        sxml = rebuilt.stree.xml();
+      } catch (_e) {
+        sxml = Semantic.xmlTree(mml, Engine.getInstance().options);
+      }
+      Engine.getInstance().options.automark = true;
+      const json: WorkerStructure = {};
+      assembleSpeechStructure(json, mml, sxml);
+      return json;
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
+
+/**
+ * Assembles the final JSON speech structure for use in worker.
+ *
+ * @param json The initial speech structure.
+ * @param mml The MathML element.
+ * @param sxml The Semantic Tree as XML.
+ * @param options The list of options.
+ */
+export function assembleSpeechStructure(
+  json: WorkerStructure,
+  mml: Element,
+  sxml: Element,
+  options: OptionsList = {}
+) {
+  json.options = options;
+  json.mactions = SpeechGeneratorUtil.connectMactionSelections(mml, sxml);
+  if ((options as any).enableSpeech === false) {
+    return;
+  }
+  json.speech = SpeechGeneratorUtil.computeSpeechStructure(sxml);
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  // Here we have to add the postfix correctly and then ensure that it is also
+  // added to the label and ssml output.
+  const links = DomUtil.querySelectorAllByAttr(sxml, 'href').length;
+  if (links) {
+    const text = `${links} ${links === 1 ? 'link' : 'links'}`;
+    json.speech[root]['postfix-none'] = json.speech[root]['postfix-none'] ?
+      json.speech[root]['postfix-none'] + `, ${text}` : text;
+    json.speech[root]['postfix-ssml'] = json.speech[root]['postfix-ssml'] ?
+      json.speech[root]['postfix-ssml'] + ` <break time="250ms"/> ${text}` : text;
+  }
+  json.label = json.speech[root]['speech-none'] +
+    (json.speech[root]['postfix-none'] ?
+      `, ${json.speech[root]['postfix-none']}` :  '');
+  json.ssml = json.speech[root]['speech-ssml'] +
+    (json.speech[root]['postfix-ssml'] ?
+      ` <prosody pitch="+30%" rate="+20%"> ${json.speech[root]['postfix-ssml']} </prosody>` :  '');
+  json.translations = Object.assign({}, LOCALE.MESSAGES.navigate);
+}

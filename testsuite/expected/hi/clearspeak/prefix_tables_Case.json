@@ -1,0 +1,193 @@
+{
+  "name": "HindiClearspeakPrefixTablesCase",
+  "locale": "hi",
+  "factory": "prefix",
+  "domain": "clearspeak",
+  "style": "MultiLineLabel_Case",
+  "base": "input/common/prefix_tables.json",
+  "information": "Hindi Prefix Tables Clearspeak Case tests.",
+  "active": "PrefixHindi",
+  "exclude": [],
+  "tests": {
+    "Binomials_0": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Binomials_1": {
+      "expected": "फलन उपशर्त 2"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Binomials_0_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "विकल्प तादात"
+    },
+    "Binomials_1_extra": {
+      "preference": "MultiLineLabel_Auto:Matrix_Combinatoric",
+      "expected": "चयन तादात"
+    },
+    "Vectors_0": {
+      "expected": "पंक्ति 1"
+    },
+    "Vectors_1": {
+      "expected": "पंक्ति 2"
+    },
+    "Vectors_2": {
+      "expected": "पंक्ति 3"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_depth_0": {
+      "expected": "पंक्ति 1"
+    },
+    "Matrices_depth_1": {
+      "expected": "पंक्ति 1, स्तंभ 1"
+    },
+    "Matrices_depth_2": {
+      "expected": "पंक्ति 1, स्तंभ 2"
+    },
+    "Matrices_depth_3": {
+      "expected": "पंक्ति 2"
+    },
+    "Matrices_depth_4": {
+      "expected": "पंक्ति 2, स्तंभ 1"
+    },
+    "Matrices_depth_5": {
+      "expected": "पंक्ति 2, स्तंभ 2"
+    },
+    "Matrices_depth_6": {
+      "expected": ""
+    },
+    "Matrices_depth_7": {
+      "expected": ""
+    },
+    "Matrices_depth_8": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "पंक्ति 1"
+    },
+    "Matrices_1": {
+      "expected": "स्तंभ 1"
+    },
+    "Matrices_2": {
+      "expected": "स्तंभ 2"
+    },
+    "Matrices_3": {
+      "expected": "पंक्ति 2"
+    },
+    "Matrices_4": {
+      "expected": "स्तंभ 1"
+    },
+    "Matrices_5": {
+      "expected": "स्तंभ 2"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    },
+    "Table_0": {
+      "expected": ""
+    },
+    "Table_1": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Table_2": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Table_3": {
+      "expected": "फलन उपशर्त 2"
+    },
+    "Table_4": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Table_5": {
+      "expected": "फलन उपशर्त 2"
+    },
+    "Table_Cell_0": {
+      "expected": ""
+    },
+    "Table_Cell_1": {
+      "expected": "स्तंभ 1"
+    },
+    "Table_Cell_1a": {
+      "expected": "स्तंभ 2"
+    },
+    "Table_Cell_2": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Table_Cell_3": {
+      "expected": "फलन उपशर्त 2"
+    },
+    "Table_Cell_4": {
+      "expected": "स्तंभ 1"
+    },
+    "Table_Cell_4a": {
+      "expected": "स्तंभ 2"
+    },
+    "Table_Cell_5": {
+      "expected": "स्तंभ 1"
+    },
+    "Table_Cell_5a": {
+      "expected": "स्तंभ 2"
+    },
+    "Table_Cell_Depth_0": {
+      "expected": ""
+    },
+    "Table_Cell_Depth_1": {
+      "expected": "फलन उपशर्त 1, स्तंभ 1"
+    },
+    "Table_Cell_Depth_1a": {
+      "expected": "फलन उपशर्त 1, स्तंभ 2"
+    },
+    "Table_Cell_Depth_2": {
+      "expected": "फलन उपशर्त 1"
+    },
+    "Table_Cell_Depth_3": {
+      "expected": "फलन उपशर्त 2"
+    },
+    "Table_Cell_Depth_4": {
+      "expected": "फलन उपशर्त 1, स्तंभ 1"
+    },
+    "Table_Cell_Depth_4a": {
+      "expected": "फलन उपशर्त 1, स्तंभ 2"
+    },
+    "Table_Cell_Depth_5": {
+      "expected": "फलन उपशर्त 2, स्तंभ 1"
+    },
+    "Table_Cell_Depth_5a": {
+      "expected": "फलन उपशर्त 2, स्तंभ 2"
+    },
+    "Table_Label_0": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_1": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_2": {
+      "expected": "सूचक पर्चा"
+    },
+    "Table_Label_3": {
+      "expected": "सूचक पर्चा"
+    }
+  },
+  "compare": true
+}

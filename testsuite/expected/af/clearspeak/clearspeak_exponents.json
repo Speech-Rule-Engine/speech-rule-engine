@@ -1,0 +1,565 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "AfrikaansClearspeakExponents",
+  "locale": "af",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "Afrikaans Clearspeak Exponents rule tests.",
+  "active": "ClearspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": " Exponents",
+    "Exp001": {
+      "expected": "3 kwadraat"
+    },
+    "Exp002a": {
+      "expected": "3 tot die mag drie"
+    },
+    "Exp003": {
+      "expected": "3 tot die vyfde mag"
+    },
+    "Exp004": {
+      "expected": "3 tot die eerste mag"
+    },
+    "Exp005": {
+      "expected": "b tot die eerste mag"
+    },
+    "Exp006": {
+      "expected": "3 verhef tot die 5,0 mag"
+    },
+    "Exp007": {
+      "expected": "3 tot die 0 mag"
+    },
+    "Exp008": {
+      "expected": "4 tot die 11. mag"
+    },
+    "Exp009": {
+      "expected": "3 tot die negatiewe 2 mag"
+    },
+    "Exp010a": {
+      "expected": "3 verhef tot die negatiewe 2,0 mag"
+    },
+    "Exp011": {
+      "expected": "4 tot die x-de mag"
+    },
+    "Exp012": {
+      "expected": "3 verhef tot die y plus 2 mag"
+    },
+    "Exp013": {
+      "expected": "links hakkie, 2 y, minus 3, regs hakkie, verhef tot die 3 z, plus 8 mag"
+    },
+    "Exp014": {
+      "expected": "p onderskrif 1, kwadraat"
+    },
+    "Exp015": {
+      "expected": "p onderskrif 1, tot die mag drie"
+    },
+    "Exp016": {
+      "expected": "p onderskrif 1, tot die vierde mag"
+    },
+    "Exp017": {
+      "expected": "p onderskrif 1, tot die tiende mag"
+    },
+    "Exp018": {
+      "expected": "p onderskrif 1, verhef tot die x plus 1 mag"
+    },
+    "Exp019": {
+      "expected": "p onderskrif, x onderskrif 1, kwadraat"
+    },
+    "Exp010b": {
+      "expected": "p onderskrif, x onderskrif 1, tot die mag drie"
+    },
+    "Exp011b": {
+      "expected": "p onderskrif, x onderskrif 1, tot die vierde mag"
+    },
+    "Exp012b": {
+      "expected": "p onderskrif, x onderskrif 1, tot die tiende mag"
+    },
+    "Exp013b": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die y plus 1 mag"
+    },
+    "Exp014b": {
+      "expected": "3 verhef tot die 2 kwadraat mag"
+    },
+    "Exp015b": {
+      "expected": "3 verhef tot die 2 x kwadraat mag"
+    },
+    "Exp016b": {
+      "expected": "5 verhef tot die 2 tot die mag drie mag"
+    },
+    "Exp017b": {
+      "expected": "5 verhef tot die 2 x tot die mag drie mag"
+    },
+    "Exp018b": {
+      "expected": "3 verhef tot die eksponent, 2 kwadraat plus 1, end eksponent"
+    },
+    "Exp019b": {
+      "expected": "3 verhef tot die 2 kwadraat mag, plus 1"
+    },
+    "Exp020": {
+      "expected": "2 verhef tot die eksponent, x kwadraat plus 3 x tot die mag drie, end eksponent"
+    },
+    "Exp021": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, end eksponent"
+    },
+    "Exp022": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, plus 2, end eksponent"
+    },
+    "Exp023": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, end eksponent, plus 2"
+    },
+    "Exp024": {
+      "expected": "2 verhef tot die eksponent, x tot die vierde mag, end eksponent"
+    },
+    "Exp025": {
+      "expected": "2 verhef tot die eksponent, 10 verhef tot die x plus 3 mag, end eksponent"
+    },
+    "Exp026": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, end eksponent"
+    },
+    "Exp027": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, plus 1, end eksponent"
+    },
+    "Exp028": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, end eksponent, plus 1"
+    },
+    "Exp029": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, kwadraat, end eksponent"
+    },
+    "Exp030": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die tiende mag, end eksponent"
+    },
+    "Exp031": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die y plus 2 mag, end eksponent"
+    },
+    "Exp032": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de mag, plus 2, end eksponent"
+    },
+    "Exp033": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de mag, end eksponent, plus 2"
+    },
+    "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
+    "_comment3_": "       (-x)(y).",
+    "Exp035": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte maal, links hakkie, die breuk met teller x minus my, en noemer sigma, regs hakkie, kwadraat, end eksponent"
+    },
+    "Exp036": {
+      "expected": "2 tot die n-de mag"
+    },
+    "Exp037": {
+      "expected": "2 tot die m-de mag"
+    },
+    "Exp038": {
+      "expected": "2 tot die i-de mag"
+    },
+    "Exp039": {
+      "expected": "2 tot die j-de mag"
+    },
+    "Exp040": {
+      "expected": "2 tot die a-de mag"
+    },
+    "Exp041": {
+      "expected": "3 tot die tweede"
+    },
+    "Exp042": {
+      "expected": "3 tot die derde"
+    },
+    "Exp043": {
+      "expected": "3 tot die nul"
+    },
+    "Exp044": {
+      "expected": "3 tot die eerste"
+    },
+    "Exp045": {
+      "expected": "3 tot die vyfde"
+    },
+    "Exp046": {
+      "expected": "4 verhef tot die 3,0 mag"
+    },
+    "Exp047": {
+      "expected": "4 tot die elfde"
+    },
+    "Exp048": {
+      "expected": "3 tot die negatiewe 2"
+    },
+    "Exp049": {
+      "expected": "3 verhef tot die negatiewe 2,0 mag"
+    },
+    "Exp050": {
+      "expected": "4 tot die x-de"
+    },
+    "Exp051": {
+      "expected": "3 verhef tot die y plus 2 mag"
+    },
+    "Exp052": {
+      "expected": "links hakkie, 2 y, minus 3, regs hakkie, verhef tot die 3 z, plus 8 mag"
+    },
+    "Exp053": {
+      "expected": "p onderskrif 1, tot die tweede"
+    },
+    "Exp054": {
+      "expected": "p onderskrif 1, tot die derde"
+    },
+    "Exp055": {
+      "expected": "p onderskrif 1, tot die vierde"
+    },
+    "Exp056": {
+      "expected": "p onderskrif 1, tot die tiende"
+    },
+    "Exp057": {
+      "expected": "p onderskrif 1, verhef tot die x plus 1 mag"
+    },
+    "Exp058": {
+      "expected": "p onderskrif, x onderskrif 1, tot die tweede"
+    },
+    "Exp059": {
+      "expected": "p onderskrif, x onderskrif 1, tot die derde"
+    },
+    "Exp060": {
+      "expected": "p onderskrif, x onderskrif 1, tot die vierde"
+    },
+    "Exp061": {
+      "expected": "p onderskrif, x onderskrif 1, tot die tiende"
+    },
+    "Exp062": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die y plus 1 mag"
+    },
+    "Exp063": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede, end eksponent"
+    },
+    "Exp064": {
+      "expected": "3 verhef tot die eksponent, 2 x tot die tweede, end eksponent"
+    },
+    "Exp065": {
+      "expected": "5 verhef tot die eksponent, 2 tot die derde, end eksponent"
+    },
+    "Exp066": {
+      "expected": "5 verhef tot die eksponent, 2 x tot die derde, end eksponent"
+    },
+    "Exp067": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede, plus 1, end eksponent"
+    },
+    "Exp068": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede, end eksponent, plus 1"
+    },
+    "Exp069": {
+      "expected": "2 verhef tot die eksponent, x tot die tweede, plus 3 x tot die derde, end eksponent"
+    },
+    "Exp070": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde, end eksponent"
+    },
+    "Exp071": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde, plus 2, end eksponent"
+    },
+    "Exp072": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde, end eksponent, plus 2"
+    },
+    "Exp073": {
+      "expected": "2 verhef tot die eksponent, x tot die vierde, end eksponent"
+    },
+    "Exp074": {
+      "expected": "2 verhef tot die eksponent, 10 verhef tot die x plus 3 mag, end eksponent"
+    },
+    "Exp075": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende, end eksponent"
+    },
+    "Exp076": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende, plus 1, end eksponent"
+    },
+    "Exp077": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende, end eksponent, plus 1"
+    },
+    "Exp078": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die tweede, end eksponent"
+    },
+    "Exp079": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die tiende, end eksponent"
+    },
+    "Exp080": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die y plus 2 mag, end eksponent"
+    },
+    "Exp081": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de, plus 2, end eksponent"
+    },
+    "Exp082": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de, end eksponent, plus 2"
+    },
+    "Exp083": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte x tot die tweede, end eksponent"
+    },
+    "Exp084": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte maal, links hakkie, die breuk met teller x minus my, en noemer sigma, regs hakkie, tot die tweede, end eksponent"
+    },
+    "Exp085": {
+      "expected": "3 tot die tweede mag"
+    },
+    "Exp086": {
+      "expected": "3 tot die derde mag"
+    },
+    "Exp087": {
+      "expected": "3 tot die nul mag"
+    },
+    "Exp088": {
+      "expected": "3 tot die eerste mag"
+    },
+    "Exp089": {
+      "expected": "3 tot die vyfde mag"
+    },
+    "Exp090": {
+      "expected": "3 verhef tot die 5,0 mag"
+    },
+    "Exp091": {
+      "expected": "4 tot die elfde mag"
+    },
+    "Exp092": {
+      "expected": "3 tot die negatiewe 2 mag"
+    },
+    "Exp093": {
+      "expected": "3 verhef tot die negatiewe 2,0 mag"
+    },
+    "Exp094": {
+      "expected": "4 tot die x-de mag"
+    },
+    "Exp095": {
+      "expected": "3 verhef tot die y plus 2 mag"
+    },
+    "Exp096": {
+      "expected": "links hakkie, 2 y, minus 3, regs hakkie, verhef tot die 3 z, plus 8 mag"
+    },
+    "Exp097": {
+      "expected": "p onderskrif 1, tot die tweede mag"
+    },
+    "Exp098": {
+      "expected": "p onderskrif 1, tot die derde mag"
+    },
+    "Exp099": {
+      "expected": "p onderskrif 1, tot die vierde mag"
+    },
+    "Exp100": {
+      "expected": "p onderskrif 1, tot die tiende mag"
+    },
+    "Exp101": {
+      "expected": "p onderskrif 1, verhef tot die x plus 1 mag"
+    },
+    "Exp102": {
+      "expected": "p onderskrif, x onderskrif 1, tot die tweede mag"
+    },
+    "Exp103": {
+      "expected": "p onderskrif, x onderskrif 1, tot die derde mag"
+    },
+    "Exp104": {
+      "expected": "p onderskrif, x onderskrif 1, tot die vierde mag"
+    },
+    "Exp105": {
+      "expected": "p onderskrif, x onderskrif 1, tot die tiende mag"
+    },
+    "Exp106": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die y plus 1 mag"
+    },
+    "Exp107": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede mag, end eksponent"
+    },
+    "Exp108": {
+      "expected": "3 verhef tot die eksponent, 2 x tot die tweede mag, end eksponent"
+    },
+    "Exp109": {
+      "expected": "5 verhef tot die eksponent, 2 tot die derde mag, end eksponent"
+    },
+    "Exp110": {
+      "expected": "5 verhef tot die eksponent, 2 x tot die derde mag, end eksponent"
+    },
+    "Exp111": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede mag, plus 1, end eksponent"
+    },
+    "Exp112": {
+      "expected": "3 verhef tot die eksponent, 2 tot die tweede mag, end eksponent, plus 1"
+    },
+    "Exp113": {
+      "expected": "2 verhef tot die eksponent, x tot die tweede mag, plus 3 x tot die derde mag, end eksponent"
+    },
+    "Exp114": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, end eksponent"
+    },
+    "Exp115": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, plus 2, end eksponent"
+    },
+    "Exp116": {
+      "expected": "3 verhef tot die eksponent, 3 tot die vierde mag, end eksponent, plus 2"
+    },
+    "Exp117": {
+      "expected": "2 verhef tot die eksponent, x tot die vierde mag, end eksponent"
+    },
+    "Exp118": {
+      "expected": "2 verhef tot die eksponent, 10 verhef tot die x plus 3 mag, end eksponent"
+    },
+    "Exp119": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, end eksponent"
+    },
+    "Exp120": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, plus 1, end eksponent"
+    },
+    "Exp121": {
+      "expected": "3 verhef tot die eksponent, 3 tot die tiende mag, end eksponent, plus 1"
+    },
+    "Exp122": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die tweede mag, end eksponent"
+    },
+    "Exp123": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die tiende mag, end eksponent"
+    },
+    "Exp124": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die y plus 2 mag, end eksponent"
+    },
+    "Exp125": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de mag, plus 2, end eksponent"
+    },
+    "Exp126": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, tot die y-de mag, end eksponent, plus 2"
+    },
+    "Exp127": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte x tot die tweede mag, end eksponent"
+    },
+    "Exp128": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte maal, links hakkie, die breuk met teller x minus my, en noemer sigma, regs hakkie, tot die tweede mag, end eksponent"
+    },
+    "Exp129": {
+      "expected": "3 verhef tot die mag 2"
+    },
+    "Exp130": {
+      "expected": "3 verhef tot die mag 3"
+    },
+    "Exp131": {
+      "expected": "3 verhef tot die mag 1"
+    },
+    "Exp132b": {
+      "expected": "3 verhef tot die mag 0"
+    },
+    "Exp133": {
+      "expected": "3 verhef tot die mag 5"
+    },
+    "Exp134": {
+      "expected": "3 verhef tot die mag 5,0"
+    },
+    "Exp135": {
+      "expected": "4 verhef tot die mag 11"
+    },
+    "Exp136": {
+      "expected": "3 verhef tot die mag negatiewe 2"
+    },
+    "Exp137": {
+      "expected": "3 verhef tot die mag negatiewe 2,0"
+    },
+    "Exp138": {
+      "expected": "4 verhef tot die mag x"
+    },
+    "Exp139": {
+      "expected": "3 verhef tot die mag y plus 2"
+    },
+    "Exp140": {
+      "expected": "links hakkie, 2 y, minus 3, regs hakkie, verhef tot die mag 3 z plus 8"
+    },
+    "Exp141": {
+      "expected": "p onderskrif 1, verhef tot die mag 2"
+    },
+    "Exp142": {
+      "expected": "p onderskrif 1, verhef tot die mag 3"
+    },
+    "Exp143": {
+      "expected": "p onderskrif 1, verhef tot die mag 4"
+    },
+    "Exp144": {
+      "expected": "p onderskrif 1, verhef tot die mag 10"
+    },
+    "Exp145": {
+      "expected": "p onderskrif 1, verhef tot die mag x plus 1"
+    },
+    "Exp146": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die mag 2"
+    },
+    "Exp147": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die mag 3"
+    },
+    "Exp148": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die mag 4"
+    },
+    "Exp149": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die mag 10"
+    },
+    "Exp150": {
+      "expected": "p onderskrif, x onderskrif 1, verhef tot die mag y plus 1"
+    },
+    "Exp151": {
+      "expected": "3 verhef tot die eksponent, 2 verhef tot die mag 2, end eksponent"
+    },
+    "Exp152": {
+      "expected": "3 verhef tot die eksponent, 2 x verhef tot die mag 2, end eksponent"
+    },
+    "Exp153": {
+      "expected": "3 verhef tot die eksponent, 2 verhef tot die mag 2, end eksponent"
+    },
+    "Exp154": {
+      "expected": "3 verhef tot die eksponent, 2 x verhef tot die mag 2, end eksponent"
+    },
+    "Exp155": {
+      "expected": "5 verhef tot die eksponent, 2 verhef tot die mag 3, end eksponent"
+    },
+    "Exp156": {
+      "expected": "5 verhef tot die eksponent, 2 x verhef tot die mag 3, end eksponent"
+    },
+    "Exp157": {
+      "expected": "3 verhef tot die eksponent, 2 verhef tot die mag 2, plus 1, end eksponent"
+    },
+    "Exp158": {
+      "expected": "3 verhef tot die eksponent, 2 verhef tot die mag 2, end eksponent, plus 1"
+    },
+    "Exp159": {
+      "expected": "2 verhef tot die eksponent, x verhef tot die mag 2, plus 3 x verhef tot die mag 3, end eksponent"
+    },
+    "Exp160": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 4, end eksponent"
+    },
+    "Exp161": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 4, plus 2, end eksponent"
+    },
+    "Exp162": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 4, end eksponent, plus 2"
+    },
+    "Exp163": {
+      "expected": "2 verhef tot die eksponent, x verhef tot die mag 4, end eksponent"
+    },
+    "Exp164": {
+      "expected": "2 verhef tot die eksponent, 10 verhef tot die mag x plus 3, end eksponent"
+    },
+    "Exp165": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 10, end eksponent"
+    },
+    "Exp166": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 10, plus 1, end eksponent"
+    },
+    "Exp167": {
+      "expected": "3 verhef tot die eksponent, 3 verhef tot die mag 10, end eksponent, plus 1"
+    },
+    "Exp168": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die mag 2, end eksponent"
+    },
+    "Exp169": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die mag 10, end eksponent"
+    },
+    "Exp170": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die mag y plus 2, end eksponent"
+    },
+    "Exp171": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die mag y, plus 2, end eksponent"
+    },
+    "Exp172": {
+      "expected": "3 verhef tot die eksponent, links hakkie, x plus 1, regs hakkie, verhef tot die mag y, end eksponent, plus 2"
+    },
+    "Exp173": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte x verhef tot die mag 2, end eksponent"
+    },
+    "Exp174": {
+      "expected": "e verhef tot die eksponent, negatiewe een helfte maal, links hakkie, die breuk met teller x minus my, en noemer sigma, regs hakkie, verhef tot die mag 2, end eksponent"
+    }
+  }
+}

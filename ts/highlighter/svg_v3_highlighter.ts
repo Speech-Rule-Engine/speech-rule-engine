@@ -56,7 +56,11 @@ export class SvgV3Highlighter extends SvgHighlighter {
       node.style.color = this.colorString().foreground;
       return info;
     }
-    const rect = DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    // This is a hack for v4.
+    const rect = (document ?? DomUtil).createElementNS(
+      'http://www.w3.org/2000/svg',
+      'rect'
+    );
     rect.setAttribute(
       'sre-highlighter-added', // Mark highlighting rect.
       'true'
@@ -76,8 +80,8 @@ export class SvgV3Highlighter extends SvgHighlighter {
     node.parentNode.insertBefore(rect, node);
     info = { node: node, foreground: node.getAttribute('fill') };
     if (node.nodeName === 'rect') {
-      const picker = new ColorPicker({ alpha: 0, color: 'black' });
-      node.setAttribute('fill', picker.rgba().foreground);
+      const picker = new ColorPicker({ alpha: 0, color: 'white' });
+      node.setAttribute('fill', picker.rgba().background);
     } else {
       node.setAttribute('fill', this.colorString().foreground);
     }

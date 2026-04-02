@@ -1,0 +1,53 @@
+{
+  "locale": "ko",
+  "name": "KoreanExtraFunction",
+  "type": "function",
+  "factory": "symbol",
+  "active": "ExtraSymbolsKorean",
+  "information": "Korean Extra Function tests.",
+  "tests": {
+    "ln-clearspeak-Log_LnAsNaturalLog": {
+      "key": "ln",
+      "domain": "clearspeak",
+      "style": "Log_LnAsNaturalLog",
+      "expected": "자연로그"
+    },
+    "arccos-clearspeak-Trig_TrigInverse": {
+      "key": "arccos",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "코싸인 역함수"
+    },
+    "arccot-clearspeak-Trig_TrigInverse": {
+      "key": "arccot",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "코탄젠트 역함수"
+    },
+    "arccsc-clearspeak-Trig_TrigInverse": {
+      "key": "arccsc",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "코시컨트 역함수"
+    },
+    "arcsec-clearspeak-Trig_TrigInverse": {
+      "key": "arcsec",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "시컨트 역함수"
+    },
+    "arcsin-clearspeak-Trig_TrigInverse": {
+      "key": "arcsin",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "싸인 역함수"
+    },
+    "arctan-clearspeak-Trig_TrigInverse": {
+      "key": "arctan",
+      "domain": "clearspeak",
+      "style": "Trig_TrigInverse",
+      "expected": "탄젠트 역함수"
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+{
+  "name": "Grundregeln",
+  "information": "LaTeX Manual LaTeX Grundregeln",
+  "base": "input/euro/Grundregeln.json",
+  "locale": "euro",
+  "modality": "braille",
+  "factory": "speech",
+  "domain": "default",
+  "active": "Augenbit",
+  "tests": {
+    "_comment0_": "Textzeichen der Tastatur verwenden, solange dies eben geht!",
+    "Textzeichen_0": {
+      "expected": "⠣⠀⠖⠭⠀⠶⠱"
+    },
+    "Textzeichen_1": {
+      "expected": "⠌⠭⠀⠤⠡⠌⠀⠶⠌⠡⠀⠤⠭⠌"
+    },
+    "Textzeichen_2": {
+      "expected": "⠝⠐⠀⠶⠝⠀⠔⠦⠝⠀⠤⠡⠴⠐"
+    },
+    "_comment1_": "Abweichungen von der Grundlinie",
+    "Abweichungen_0": {
+      "expected": "⠭⡮⠣"
+    },
+    "Abweichungen_1": {
+      "expected": "⠭⡮⠷⠡⠬⠾"
+    },
+    "Abweichungen_2": {
+      "expected": "⠁⡸⠡⠀⠖⠁⡸⠝"
+    },
+    "Abweichungen_3": {
+      "expected": "⠭⡮⠷⠝⠀⠖⠍⠾"
+    },
+    "Abweichungen_4": {
+      "expected": "⠁⡸⠷⠝⠀⠤⠡⠾"
+    },
+    "Abweichungen_5": {
+      "expected": "⠁⡸⠷⠡⠣⠾"
+    },
+    "_comment2_": "Mathematische Symbole, die es auf der Tastatur nicht gibt",
+    "Mathematische_0": {
+      "expected": "⠝⠀⡌⠞⠕⠀⡌⠊⠝⠋⠞⠽"
+    },
+    "Mathematische_1": {
+      "expected": "⠭⠀⡌⠝⠕⠞⠊⠝⡌⠷⠩⠆⠹⡌⠾"
+    },
+    "_comment3_": "Konstrukte, die in sich bereits flächig angeordnet sind",
+    "Konstrukte,_0": {
+      "expected": "⡌⠋⠗⠁⠉⠷⠁⠀⠖⠃⠾⠷⠁⠀⠤⠃⠾"
+    },
+    "Konstrukte,_1": {
+      "expected": "⡌⠎⠟⠗⠞⠷⠁⠀⠖⠃⠾"
+    },
+    "Konstrukte,_2": {
+      "expected": "⡌⠎⠥⠍⡸⠷⠝⠀⠶⠡⠾⡮⡌⠊⠝⠋⠞⠽⠀⡌⠋⠗⠁⠉⠷⠡⠾⠷⠣⡮⠝⠾⠶⠡"
+    },
+    "_comment4_": "Anpassungen an persönliche Bedürfnisse",
+    "Anpassungen_0": {
+      "expected": "⡌⠕⠧⠑⠗⠇⠊⠝⠑⠷⡁⠀⡌⠉⠥⠏⠀⡃⠾"
+    }
+  }
+}

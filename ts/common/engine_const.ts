@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @file Basic parameter values for the Engine.
+ * @file Basic constants and enums for the Engine that should never change.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

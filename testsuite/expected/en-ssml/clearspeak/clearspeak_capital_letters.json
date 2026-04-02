@@ -1,0 +1,89 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishClearspeakCapitalLetters",
+  "locale": "en",
+  "factory": "speechMarkup",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "English Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "_comment3_": " var speech = 'the fraction with numerator sine A, and denominator a,",
+      "_comment4_": " equals, the fraction with numerator sine B, and denominator b';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody> <mark name=\"4\"/> over <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"7\"/> sine <prosody pitch=\"+30%\"> <mark name=\"8\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> </prosody> <mark name=\"11\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "Cap002": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> equals <mark name=\"4\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\"/> squared <mark name=\"7\"/> plus <mark name=\"8\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"9\"/> squared <mark name=\"11\"/> minus <mark name=\"12\"/> 2 <mark name=\"13\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"14\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"15\"/> cosine <prosody pitch=\"+30%\"> <mark name=\"16\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> </prosody></speak>"
+    },
+    "Cap003": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> <mark name=\"2\"/> equals <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "Cap004": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">A</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> </prosody> </prosody></speak>"
+    },
+    "Cap005": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody> </prosody></speak>"
+    },
+    "Cap006": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">b</say-as> <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody> </prosody></speak>"
+    },
+    "Cap007": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <prosody pitch=\"+30%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">B</say-as> </prosody> <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "Cap008": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> angle <prosody pitch=\"+30%\"> <mark name=\"1\"/> <say-as interpret-as=\"character\">A</say-as> <mark name=\"2\"/> <say-as interpret-as=\"character\">B</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> </prosody></speak>"
+    },
+    "Cap009": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the measure of <mark name=\"1\"/> angle <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> <mark name=\"3\"/> <say-as interpret-as=\"character\">B</say-as> <mark name=\"4\"/> <say-as interpret-as=\"character\">C</say-as> </prosody> </prosody></speak>"
+    },
+    "Cap010": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the measure of <mark name=\"1\"/> angle <prosody pitch=\"+30%\"> <mark name=\"2\"/> <say-as interpret-as=\"character\">A</say-as> </prosody> </prosody></speak>"
+    },
+    "_comment5_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "_comment6_": " var speech = 'the fraction with numerator sine cap A, and denominator a,",
+      "_comment7_": " equals, the fraction with numerator sine cap B, and denominator b';",
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> cap A </prosody> <mark name=\"4\"/> over <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"6\"/> equals <break time=\"250ms\"/> <prosody rate=\"+25%\"> <mark name=\"7\"/> sine <mark name=\"8\"/> cap B </prosody> <mark name=\"11\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "Cap012": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"1\"/> squared <mark name=\"3\"/> equals <mark name=\"4\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\"/> squared <mark name=\"7\"/> plus <mark name=\"8\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"9\"/> squared <mark name=\"11\"/> minus <mark name=\"12\"/> 2 <mark name=\"13\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"14\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"15\"/> cosine <mark name=\"16\"/> cap C </prosody></speak>"
+    },
+    "Cap013": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> tangent <mark name=\"1\"/> cap A <mark name=\"2\"/> equals <break time=\"250ms\"/> <mark name=\"3\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"4\"/> over <say-as interpret-as=\"character\">b</say-as> </prosody></speak>"
+    },
+    "Cap014": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> cap A <break time=\"250ms\"/> <mark name=\"1\"/> cap B </prosody> </prosody></speak>"
+    },
+    "Cap015": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> cap A </prosody> </prosody></speak>"
+    },
+    "Cap016": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">b</say-as> <break time=\"250ms\"/> <mark name=\"1\"/> cap A </prosody> </prosody></speak>"
+    },
+    "Cap017": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <prosody rate=\"+25%\"> <mark name=\"0\"/> cap B <break time=\"250ms\"/> <mark name=\"1\"/> <say-as interpret-as=\"character\">a</say-as> </prosody> </prosody></speak>"
+    },
+    "Cap018": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> angle <mark name=\"1\"/> cap A <break time=\"250ms\"/> <mark name=\"2\"/> cap B <break time=\"250ms\"/> <mark name=\"3\"/> cap C </prosody></speak>"
+    },
+    "Cap019": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> the measure of <mark name=\"1\"/> angle <mark name=\"2\"/> cap A <break time=\"250ms\"/> <mark name=\"3\"/> cap B <break time=\"250ms\"/> <mark name=\"4\"/> cap C </prosody></speak>"
+    },
+    "Cap020": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"3\"/> the measure of <mark name=\"1\"/> angle <mark name=\"2\"/> cap A </prosody></speak>"
+    },
+    "Cap020a": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> angle <mark name=\"1\"/> cap A </prosody></speak>"
+    },
+    "_comment8_": " /**",
+    "_comment9_": "  * Testing ClearspeakEnglishClearspeakCapitalLetters Example Cap020 (extra)",
+    "_comment10_": "  */",
+    "_comment12_": "   var preference = 'Caps_SayCaps';",
+    "_comment13_": "   var mathml = '<math><mrow><mi>h</mi><mo>∠</mo><mi>A</mi></mrow></math>';",
+    "_comment14_": "   var speech = 'angle cap A';",
+    "_comment16_": " };"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "tests": {
+    "_comment0_": "Analysis",
+    "Analysis_0": {
+      "tex": "n \\to \\infty",
+      "speech": "n geht gegen unendlich",
+      "code": "n \\to \\infty",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"n \\to \\infty\" display=\"block\"><mi data-latex=\"n\">n</mi><mo accent=\"false\" stretchy=\"false\" data-latex=\"\\to\">&#x2192;</mo><mi mathvariant=\"normal\" data-latex=\"\\infty\">&#x221E;</mi></math>"
+    },
+    "Analysis_1": {
+      "tex": "\\lim_{h \\to 0}",
+      "speech": "Limes h gegen 0",
+      "code": "\\lim_{h \\to 0}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\lim_{h \\to 0}\" display=\"block\"><munder data-latex=\"\\lim_{h \\to 0}\"><mo data-mjx-texclass=\"OP\" movablelimits=\"true\" data-latex=\"\\lim\">lim</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{h\\to0}\"><mi data-latex=\"h\">h</mi><mo accent=\"false\" stretchy=\"false\" data-latex=\"\\to\">&#x2192;</mo><mn data-latex=\"0\">0</mn></mrow></munder></math>"
+    },
+    "Analysis_2": {
+      "tex": "\\lim_{x \\to x_0}",
+      "speech": "Limes x gegen x Index 0",
+      "code": "\\lim_{x \\to x_0}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\lim_{x \\to x_0}\" display=\"block\"><munder data-latex=\"\\lim_{x \\to x_0 }\"><mo data-mjx-texclass=\"OP\" movablelimits=\"true\" data-latex=\"\\lim\">lim</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{x\\to x_0}\"><mi data-latex=\"x\">x</mi><mo accent=\"false\" stretchy=\"false\" data-latex=\"\\to\">&#x2192;</mo><msub data-latex=\"x_0\"><mi data-latex=\"x\">x</mi><mn data-latex=\"0\">0</mn></msub></mrow></munder></math>"
+    },
+    "Analysis_3": {
+      "tex": "f\\ ' (x), f\\ ''(x)",
+      "speech": "f Strich von x, f zwei Strich von x",
+      "code": "f'(x), f''(x)",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"f\\ ' (x), f\\ ''(x)\" display=\"block\"><mi data-latex=\"f\">f</mi><msup><mtext data-latex=\"\\text{ }\">&#xA0;</mtext><mo data-mjx-alternate=\"1\">&#x2032;</mo></msup><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"x\">x</mi><mo data-latex=\")\" stretchy=\"false\">)</mo><mo data-latex=\",\">,</mo><mi data-latex=\"f\">f</mi><msup><mtext data-latex=\"\\text{ }\">&#xA0;</mtext><mo data-mjx-alternate=\"1\" data-latex=\"'\">&#x2033;</mo></msup><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"x\">x</mi><mo data-latex=\")\" stretchy=\"false\">)</mo></math>"
+    },
+    "Analysis_4": {
+      "tex": "\\sum_{i=0}^n A_n",
+      "speech": "Summe von i gleich 0 bis n über A Index n",
+      "code": "\\sum_{i =0}^n A_n",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sum_{i=0}^n A_n\" display=\"block\"><munderover data-latex=\"\\sum^n\"><mo data-mjx-texclass=\"OP\" data-latex=\"\\sum\">&#x2211;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"{i=0}\"><mi data-latex=\"i\">i</mi><mo data-latex=\"=\">=</mo><mn data-latex=\"0\">0</mn></mrow><mi data-latex=\"n\">n</mi></munderover><msub data-latex=\"A_n\"><mi data-latex=\"A\">A</mi><mi data-latex=\"n\">n</mi></msub></math>"
+    },
+    "Analysis_5": {
+      "tex": "\\int_a^b f(x) dx",
+      "speech": "Integral von a bis b über f von x dx",
+      "code": "\\int_a^b f(x) dx",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\int_a^b f(x) dx\" display=\"block\"><msubsup data-latex=\"\\int^b\"><mo data-mjx-texclass=\"OP\" data-latex=\"\\int\">&#x222B;</mo><mi data-latex=\"a\">a</mi><mi data-latex=\"b\">b</mi></msubsup><mi data-latex=\"f\">f</mi><mo data-latex=\"(\" stretchy=\"false\">(</mo><mi data-latex=\"x\">x</mi><mo data-latex=\")\" stretchy=\"false\">)</mo><mi data-latex=\"d\">d</mi><mi data-latex=\"x\">x</mi></math>"
+    },
+    "_comment1_": "Stochastik",
+    "Stochastik_0": {
+      "tex": "n!",
+      "speech": "n Fakultät",
+      "code": "n!",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"n!\" display=\"block\"><mi data-latex=\"n\">n</mi><mo data-latex=\"!\">!</mo></math>"
+    },
+    "Stochastik_1": {
+      "tex": "{n \\choose k}",
+      "speech": "Binomialkoeffizient n über k",
+      "code": "{ n \\choose k}  oder  \\binom{n}{k}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"{n \\choose k}\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"{n \\choose k}\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"OPEN\" data-latex=\"\\biggl (\"><mo minsize=\"2.047em\" maxsize=\"2.047em\">(</mo></mrow><mfrac linethickness=\"0\"><mi data-latex=\"n\">n</mi><mi data-latex=\"k\">k</mi></mfrac><mrow data-mjx-texclass=\"CLOSE\" data-latex=\"\\biggr )\"><mo minsize=\"2.047em\" maxsize=\"2.047em\">)</mo></mrow></mrow></mrow></math>"
+    },
+    "Stochastik_2": {
+      "tex": "\\sigma \\qquad  \\Omega",
+      "speech": "klein Sigma groß Omega",
+      "code": "\\sigma   \\Omega",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\sigma \\qquad  \\Omega\" display=\"block\"><mi data-latex=\"\\sigma\">&#x3C3;</mi><mstyle scriptlevel=\"0\" data-latex=\"\\qquad\"><mspace width=\"2em\"></mspace></mstyle><mi mathvariant=\"normal\" data-latex=\"\\Omega\">&#x3A9;</mi></math>"
+    },
+    "_comment2_": "Analytische Geometrie",
+    "Analytische_0": {
+      "tex": "\\vec{p} = \\begin{pmatrix} x; & y; & z-3 \\end{pmatrix}",
+      "speech": "Vektor p ist gleich Zeilenvektor x ;  y ; z-3 Vektorende",
+      "code": "\\vec{p} = \\begin{pmatrix} x; & y; & z-3 \\end{pmatrix}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\vec{p} = \\begin{pmatrix} x; &amp; y; &amp; z-3 \\end{pmatrix}\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vec{p}\"><mover><mi data-latex=\"p\">p</mi><mo stretchy=\"false\">&#x2192;</mo></mover></mrow><mo data-latex=\"=\">=</mo><mrow data-mjx-texclass=\"INNER\" data-latex-item=\"{pmatrix}\" data-latex=\"{pmatrix}\"><mo data-mjx-texclass=\"OPEN\">(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi data-latex=\"x\">x</mi><mo data-latex=\";\">;</mo></mtd><mtd><mi data-latex=\"y\">y</mi><mo data-latex=\";\">;</mo></mtd><mtd><mi data-latex=\"z\">z</mi><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"3\">3</mn></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></math>"
+    },
+    "Analytische_1": {
+      "tex": "\\vec{q} = \\begin{pmatrix} -5 \\\\ 0,5 \\\\ k+4 \\end{pmatrix}",
+      "speech": "Vektor q ist gleich Spaltenvektor -5  0,5 k+4 Vektorende",
+      "code": "\\vec{q} = \\begin{pmatrix} -5 \\\\ 0,5 \\\\ k+4 \\end{pmatrix}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\vec{q} = \\begin{pmatrix} -5 \\\\ 0,5 \\\\ k+4 \\end{pmatrix}\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vec{q}\"><mover><mi data-latex=\"q\">q</mi><mo stretchy=\"false\">&#x2192;</mo></mover></mrow><mo data-latex=\"=\">=</mo><mrow data-mjx-texclass=\"INNER\" data-latex-item=\"{pmatrix}\" data-latex=\"{pmatrix}\"><mo data-mjx-texclass=\"OPEN\">(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mo data-latex=\"-\">&#x2212;</mo><mn data-latex=\"5\">5</mn></mtd></mtr><mtr><mtd><mn data-latex=\"0\">0</mn><mo data-latex=\",\">,</mo><mn data-latex=\"5\">5</mn></mtd></mtr><mtr><mtd><mi data-latex=\"k\">k</mi><mo data-latex=\"+\">+</mo><mn data-latex=\"4\">4</mn></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></math>"
+    },
+    "Analytische_2": {
+      "tex": "\\vec{p} \\times \\vec{q}",
+      "speech": "Vektorprodukt (Kreuzprodukt) der Vektoren p und q",
+      "code": "\\vec{p} \\times \\vec{q}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\vec{p} \\times \\vec{q}\" display=\"block\"><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vec{p}\"><mover><mi data-latex=\"p\">p</mi><mo stretchy=\"false\">&#x2192;</mo></mover></mrow><mo data-latex=\"\\times\">&#xD7;</mo><mrow data-mjx-texclass=\"ORD\" data-latex=\"\\vec{q}\"><mover><mi data-latex=\"q\">q</mi><mo stretchy=\"false\">&#x2192;</mo></mover></mrow></math>"
+    },
+    "Analytische_3": {
+      "tex": "\\begin{pmatrix} a&b&c \\\\ d&e&f \\end{pmatrix}",
+      "speech": "2 Kreuz 3 Matrix  Zeilenanfang a b c Zeilenende Zeilenanfang d e f Zeilenende Matrixende",
+      "code": "\\begin{pmatrix} a & b & c \\\\ d & e & f \\end{pmatrix}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" data-latex=\"\\begin{pmatrix} a&amp;b&amp;c \\\\ d&amp;e&amp;f \\end{pmatrix}\" display=\"block\"><mrow data-mjx-texclass=\"INNER\" data-latex-item=\"{pmatrix}\" data-latex=\"\\begin{pmatrix} a&amp;b&amp;c \\\\ d&amp;e&amp;f \\end{pmatrix}\"><mo data-mjx-texclass=\"OPEN\">(</mo><mtable columnspacing=\"1em\" rowspacing=\"4pt\"><mtr><mtd><mi data-latex=\"a\">a</mi></mtd><mtd><mi data-latex=\"b\">b</mi></mtd><mtd><mi data-latex=\"c\">c</mi></mtd></mtr><mtr><mtd><mi data-latex=\"d\">d</mi></mtd><mtd><mi data-latex=\"e\">e</mi></mtd><mtd><mi data-latex=\"f\">f</mi></mtd></mtr></mtable><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></math>"
+    }
+  }
+}

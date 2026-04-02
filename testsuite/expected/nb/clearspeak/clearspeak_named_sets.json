@@ -1,0 +1,85 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "BokmalClearspeakNamedSets",
+  "locale": "nb",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "Bokmal Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakBokmal",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "NumSys001": {
+      "expected": "de reelle tallene"
+    },
+    "NumSys001a": {
+      "expected": "de reelle tallene"
+    },
+    "NumSys002": {
+      "expected": "de komplekse tallene"
+    },
+    "NumSys002a": {
+      "expected": "de komplekse tallene"
+    },
+    "NumSys003": {
+      "expected": "heltallene"
+    },
+    "NumSys003a": {
+      "expected": "heltallene"
+    },
+    "NumSys004": {
+      "expected": "de rasjonale tallene"
+    },
+    "NumSys004a": {
+      "expected": "de rasjonale tallene"
+    },
+    "NumSys005": {
+      "expected": "de naturlige tallene"
+    },
+    "NumSys005a": {
+      "expected": "de naturlige tallene"
+    },
+    "NumSys005_1": {
+      "expected": "de naturlige tallene med null"
+    },
+    "NumSys005_1a": {
+      "expected": "de naturlige tallene med null"
+    },
+    "NumSys006": {
+      "expected": "de positive heltallene"
+    },
+    "NumSys006a": {
+      "expected": "de positive heltallene"
+    },
+    "NumSys006_1": {
+      "expected": "de negative heltallene"
+    },
+    "NumSys006_1a": {
+      "expected": "de negative heltallene"
+    },
+    "NumSys007": {
+      "expected": "r-to"
+    },
+    "NumSys007a": {
+      "expected": "r-to"
+    },
+    "NumSys008": {
+      "expected": "z-tre"
+    },
+    "NumSys008a": {
+      "expected": "z-tre"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-uendelig"
+    },
+    "NumSys010a": {
+      "expected": "r-uendelig"
+    }
+  }
+}

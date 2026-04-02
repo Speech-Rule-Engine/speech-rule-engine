@@ -256,7 +256,7 @@ function numberToWordsGe(num: number, ordinal = false): string {
  */
 function numberToWords(num: number, ordinal = false): string {
   const word =
-    Engine.getInstance().subiso === 'alt'
+    Engine.getInstance().options.subiso === 'alt'
       ? numberToWordsGe(num, ordinal)
       : numberToWordsRo(num, ordinal);
   return word;

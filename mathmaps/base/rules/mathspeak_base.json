@@ -6,6 +6,14 @@
   "rules": [
     [
       "Rule",
+      "color",
+      "default",
+      "[t] \"\" (context:@color); [n] . (grammar:?noColor)",
+      "self::*[@color]",
+      "not(contains(@grammar, \"noColor\"))"
+    ],
+    [
+      "Rule",
       "direct-speech",
       "default",
       "[t] @ext-speech",
@@ -111,17 +119,8 @@
       "string-length(text())=1",
       "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
-      "@role!=\"unit\""
-    ],
-    [
-      "Alias",
-      "font",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font=\"normal\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
+      "@role!=\"unit\"",
+      "@role!=\"infty\""
     ],
     [
       "Precondition",

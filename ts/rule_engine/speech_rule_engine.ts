@@ -37,6 +37,7 @@ import { Span } from '../audio/span.js';
 import { Debugger } from '../common/debugger.js';
 import * as DomUtil from '../common/dom_util.js';
 import { Engine } from '../common/engine.js';
+import { Options } from '../common/options.js';
 import * as EngineConst from '../common/engine_const.js';
 import { evalXPath, updateEvaluator } from '../common/xpath_util.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
@@ -52,6 +53,7 @@ import { ActionType, SpeechRule } from './speech_rule.js';
 import { SpeechRuleContext } from './speech_rule_context.js';
 
 import { Trie } from '../indexing/trie.js';
+import { SpeechStructure } from './speech_structure.js';
 
 export class SpeechRuleEngine {
   // TODO (TS): Keeping this as a singleton for the time being.
@@ -68,6 +70,8 @@ export class SpeechRuleEngine {
   private evaluators_: {
     [key: string]: { [key: string]: (p1: Element) => AuditoryDescription[] };
   } = {};
+
+  public speechStructure: SpeechStructure = null;
 
   /**
    * @returns The Engine object.
@@ -128,17 +132,20 @@ export class SpeechRuleEngine {
    * no node is given.
    *
    * @param node The node to be evaluated.
+   * @param _clear Flag indicating if the speech structure should be cleared.
    * @returns A list of auditory descriptions
    *   for that node.
    */
-  public evaluateNode(node: Element): AuditoryDescription[] {
+  public evaluateNode(node: Element, _clear = false): AuditoryDescription[] {
     updateEvaluator(node);
+    if (!this.speechStructure || _clear) {
+      this.speechStructure = new SpeechStructure(node);
+    }
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
-      console.log(err);
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
@@ -157,8 +164,6 @@ export class SpeechRuleEngine {
     return allRules.map((rule) => rule.toString()).join('\n');
   }
 
-  // TODO (TS): Rewrite engine to use a feature vector and save the settings
-  //            this way. Currently we mess about with a lot of casting!
   /**
    * Runs a function in the temporary context of the speech rule engine.
    *
@@ -172,17 +177,19 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
-    const engine = Engine.getInstance() as any;
-    const save: { [feature: string]: string | boolean } = {};
-    for (const [key, val] of Object.entries(settings)) {
-      save[key] = engine[key];
-      engine[key] = val;
+    const engine = Engine.getInstance();
+    const save = engine.options as any;
+    const newOpt = new Options() as any;
+    for (const key of Options.BINARY_FEATURES) {
+      newOpt[key] = settings[key] ?? save[key];
     }
+    for (const key of Options.STRING_FEATURES) {
+      newOpt[key] = settings[key] ?? save[key];
+    }
+    engine.options = newOpt;
     engine.setDynamicCstr();
     const result = callback();
-    for (const [key, val] of Object.entries(save)) {
-      engine[key] = val;
-    }
+    engine.options = save;
     engine.setDynamicCstr();
     return result;
   }
@@ -304,30 +311,47 @@ export class SpeechRuleEngine {
   }
 
   /**
+   * Wrapper function to save computed speech.
+   *
+   * @param node The node to be evaluated.
+   * @returns A list of auditory descriptions for that node.
+   */
+  private evaluateTree_(node: Element): AuditoryDescription[] {
+    const result = this.evaluateTreeInternal_(node);
+    this.speechStructure.addNode(
+      node,
+      result,
+      Engine.getInstance().options.modality
+    );
+    return result;
+  }
+
+  /**
    * Applies rules recursively to compute the final speech object.
    *
    * @param node Node to apply the speech rule to.
    * @returns A list of Auditory descriptions.
    */
-  private evaluateTree_(node: Element): AuditoryDescription[] {
+  private evaluateTreeInternal_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
     let result: AuditoryDescription[];
-    Debugger.getInstance().output(
-      engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
-    );
+    Debugger.getInstance().generate(() => [node.toString()]);
     Grammar.getInstance().setAttribute(node);
     const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
-      if (engine.strict) {
+      if (engine.options.strict) {
         return [];
       }
-      result = this.getEvaluator(engine.locale, engine.modality)(node);
+      result = this.getEvaluator(
+        engine.options.locale,
+        engine.options.modality
+      )(node);
       if (node.attributes) {
         this.addPersonality_(result, {}, false, node);
       }
       return result;
     }
-    Debugger.getInstance().generateOutput(() => [
+    Debugger.getInstance().generate(() => [
       'Apply Rule:',
       rule.name,
       rule.dynamicCstr.toString(),
@@ -489,10 +513,10 @@ export class SpeechRuleEngine {
       if (descrs.length > 0) {
         descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
         result = result.concat(descrs);
-        if (i < nodes.length - 1) {
-          const text = sepClosure() as AuditoryDescription[];
-          result = result.concat(text);
-        }
+      }
+      if (i < nodes.length - 1) {
+        const text = sepClosure() as AuditoryDescription[];
+        result = result.concat(text);
       }
     }
     return result;
@@ -609,7 +633,7 @@ export class SpeechRuleEngine {
     if (descr.attributes['id'] === undefined) {
       descr.attributes['id'] = node.getAttribute('id');
     }
-    if (node.hasAttributes()) {
+    if (node.attributes?.length) {
       const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {
         const key = attrs[i].name;
@@ -663,7 +687,6 @@ export class SpeechRuleEngine {
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
     const dynamic = Engine.getInstance().dynamicCstr;
-    const strict = Engine.getInstance().strict;
     const trie = this.trie;
     const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);
@@ -699,7 +722,7 @@ export class SpeechRuleEngine {
           (dynamic as ClearspeakPreferences).preference
         );
         const def = DynamicCstr.DEFAULT_VALUES[axis];
-        if (!strict && value !== def) {
+        if (value !== def) {
           valueSet.push(def);
         }
         props[axis] = valueSet;
@@ -789,9 +812,12 @@ export class SpeechRuleEngine {
         r2.precondition.rank - r1.precondition.rank
       );
     });
-    Debugger.getInstance().generateOutput(
+    Debugger.getInstance().generate(
       (() => {
-        return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
+        return [
+          'Applicable Rules:',
+          ...rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')')
+        ];
       }).bind(this)
     );
     return rules[0];

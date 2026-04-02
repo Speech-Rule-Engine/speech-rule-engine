@@ -1,0 +1,152 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "HindiClearspeakFontCaps",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_font_caps.json",
+  "information": "Hindi Clearspeak Font tests with Caps preference.",
+  "domain": "clearspeak",
+  "locale": "hi",
+  "active": "ClearspeakHindiFont",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "expected": "कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "expected": "बोल्ड कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "expected": "कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "expected": "बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "expected": "लिपि कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "expected": "बोल्ड स्क्रिप्ट कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "expected": "फ़्राक्टुर कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "expected": "डबल-स्ट्रक कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "expected": "संस-सेरिफ़ कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "expected": "सैंस-सेरिफ़ इटैलिक कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "expected": "मोनोपेस कैपिटल ए"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "expected": "कैपिटल आल्फा"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "expected": "बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "expected": "कैपिटल आल्फा"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "expected": "बोल्ड इटैलिक कैपिटल आल्फा"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल आल्फा"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "expected": "सामान्य कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "expected": "बोल्ड कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "expected": "कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "expected": "बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "expected": "लिपि कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "expected": "बोल्ड स्क्रिप्ट कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "expected": "फ़्राक्टुर कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "expected": "डबल-स्ट्रक कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "expected": "बोल्ड फ़्रेक्टुर कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "expected": "संस-सेरिफ़ कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "expected": "सैंस-सेरिफ़ इटैलिक कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल ए"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "expected": "मोनोपेस कैपिटल ए"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "expected": "caligraphic कैपिटल ए"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "expected": "caligraphic-bold कैपिटल ए"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "expected": "caligraphic कैपिटल ए"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "expected": "caligraphic-bold कैपिटल ए"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "expected": "कैपिटल ए"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "expected": "सामान्य कैपिटल आल्फा"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "expected": "बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "expected": "कैपिटल आल्फा"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "expected": "बोल्ड इटैलिक कैपिटल आल्फा"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "expected": "संस-सेरिफ़ बोल्ड कैपिटल आल्फा"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "expected": "संस-सेरिफ़ बोल्ड इटैलिक कैपिटल आल्फा"
+    }
+  }
+}

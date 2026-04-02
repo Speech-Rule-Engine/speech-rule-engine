@@ -1,0 +1,707 @@
+{
+  "name": "AfrikaansMathspeakTensors",
+  "locale": "af",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_tensors.json",
+  "information": "Afrikaans Mathspeak Tensor tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakAfrikaans",
+  "exclude": [],
+  "compare": true,
+  "tests": {
+    "_comment1_": "Systematic testing of tensor rules.",
+    "_comment2_": " Tensor tests are named with the convention of including the indices that are",
+    "_comment3_": " present:",
+    "_comment4_": "   B      D",
+    "_comment5_": "      X      R",
+    "_comment6_": "   A      C",
+    "_comment7_": "  Where R is the rest.",
+    "_comment8_": "  Wrapping is indicated before R (without baseline) or after R (with baseline).",
+    "PartialTensorABCD_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d"
+    },
+    "PartialTensorABCD_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorABCD_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorABC_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c"
+    },
+    "PartialTensorABC_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c"
+    },
+    "PartialTensorABC_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c"
+    },
+    "PartialTensorABD_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Superskrif d"
+    },
+    "PartialTensorABD_brief": {
+      "expected": "Onderskrif a Sup b Basis x Sup d"
+    },
+    "PartialTensorABD_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Sup d"
+    },
+    "PartialTensorABDR_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Superskrif d Basislyn r"
+    },
+    "PartialTensorABDR_brief": {
+      "expected": "Onderskrif a Sup b Basis x Sup d Basis r"
+    },
+    "PartialTensorABDR_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Sup d Basis r"
+    },
+    "PartialTensorABDRootR_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorABDRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorABDRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorABDRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorABDRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorABDRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorABDFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorABDFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x Sup d Basis EndBreuk r"
+    },
+    "PartialTensorABDFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x Sup d Basis End breuk r"
+    },
+    "PartialTensorABDRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorABDRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x Sup d Basis r EndBreuk"
+    },
+    "PartialTensorABDRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x Sup d Basis r End breuk"
+    },
+    "PartialTensorAB_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x"
+    },
+    "PartialTensorAB_brief": {
+      "expected": "Onderskrif a Sup b Basis x"
+    },
+    "PartialTensorAB_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x"
+    },
+    "PartialTensorABR_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x r"
+    },
+    "PartialTensorABR_brief": {
+      "expected": "Onderskrif a Sup b Basis x r"
+    },
+    "PartialTensorABR_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x r"
+    },
+    "PartialTensorABRootR_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x End wortel r"
+    },
+    "PartialTensorABRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x End wortel r"
+    },
+    "PartialTensorABRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x End wortel r"
+    },
+    "PartialTensorABRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x r End wortel"
+    },
+    "PartialTensorABRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x r End wortel"
+    },
+    "PartialTensorABRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x r End wortel"
+    },
+    "PartialTensorABFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x EndBreuk r"
+    },
+    "PartialTensorABFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x EndBreuk r"
+    },
+    "PartialTensorABFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x End breuk r"
+    },
+    "PartialTensorABRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x r EndBreuk"
+    },
+    "PartialTensorABRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x r EndBreuk"
+    },
+    "PartialTensorABRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x r End breuk"
+    },
+    "PartialTensorABCR_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Basislyn r"
+    },
+    "PartialTensorABCR_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorABCR_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorABCDR_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r"
+    },
+    "PartialTensorABCDR_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorABCDR_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorABCDRoot_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d End wortel"
+    },
+    "PartialTensorABCDRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x Onderskrif c Sup d End wortel"
+    },
+    "PartialTensorABCDRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x Onderskrif c Sup d End wortel"
+    },
+    "PartialTensorABCDRootR_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorABCDRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorABCDRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorABCDRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorABCDRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorABCDRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorABCDFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d EndBreuk"
+    },
+    "PartialTensorABCDFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d EndBreuk"
+    },
+    "PartialTensorABCDFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d End breuk"
+    },
+    "PartialTensorABCDFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorABCDFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d Basis EndBreuk r"
+    },
+    "PartialTensorABCDFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d Basis End breuk r"
+    },
+    "PartialTensorABCDRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorABCDRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r EndBreuk"
+    },
+    "PartialTensorABCDRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Sup b Basis x Onderskrif c Sup d Basis r End breuk"
+    },
+    "_comment11_": "New completion",
+    "PartialTensorB_default": {
+      "expected": "Superskrif b Basislyn x"
+    },
+    "PartialTensorB_brief": {
+      "expected": "Sup b Basis x"
+    },
+    "PartialTensorB_sbrief": {
+      "expected": "Sup b Basis x"
+    },
+    "PartialTensorBR_default": {
+      "expected": "Superskrif b Basislyn x r"
+    },
+    "PartialTensorBR_brief": {
+      "expected": "Sup b Basis x r"
+    },
+    "PartialTensorBR_sbrief": {
+      "expected": "Sup b Basis x r"
+    },
+    "PartialTensorBRootR_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x End wortel r"
+    },
+    "PartialTensorBRootR_brief": {
+      "expected": "Begin wortel Sup b Basis x End wortel r"
+    },
+    "PartialTensorBRootR_sbrief": {
+      "expected": "Wortel Sup b Basis x End wortel r"
+    },
+    "PartialTensorBRRoot_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x r End wortel"
+    },
+    "PartialTensorBRRoot_brief": {
+      "expected": "Begin wortel Sup b Basis x r End wortel"
+    },
+    "PartialTensorBRRoot_sbrief": {
+      "expected": "Wortel Sup b Basis x r End wortel"
+    },
+    "PartialTensorBFracR_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x EndBreuk r"
+    },
+    "PartialTensorBFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x EndBreuk r"
+    },
+    "PartialTensorBFracR_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x End breuk r"
+    },
+    "PartialTensorBRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x r EndBreuk"
+    },
+    "PartialTensorBRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x r EndBreuk"
+    },
+    "PartialTensorBRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x r End breuk"
+    },
+    "PartialTensorBD_default": {
+      "expected": "Superskrif b Basislyn x Superskrif d"
+    },
+    "PartialTensorBD_brief": {
+      "expected": "Sup b Basis x Sup d"
+    },
+    "PartialTensorBD_sbrief": {
+      "expected": "Sup b Basis x Sup d"
+    },
+    "PartialTensorBDR_default": {
+      "expected": "Superskrif b Basislyn x Superskrif d Basislyn r"
+    },
+    "PartialTensorBDR_brief": {
+      "expected": "Sup b Basis x Sup d Basis r"
+    },
+    "PartialTensorBDR_sbrief": {
+      "expected": "Sup b Basis x Sup d Basis r"
+    },
+    "PartialTensorBDRootR_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorBDRootR_brief": {
+      "expected": "Begin wortel Sup b Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorBDRootR_sbrief": {
+      "expected": "Wortel Sup b Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorBDRRoot_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorBDRRoot_brief": {
+      "expected": "Begin wortel Sup b Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorBDRRoot_sbrief": {
+      "expected": "Wortel Sup b Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorBDFracR_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorBDFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Sup d Basis EndBreuk r"
+    },
+    "PartialTensorBDFracR_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Sup d Basis End breuk r"
+    },
+    "PartialTensorBDRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorBDRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Sup d Basis r EndBreuk"
+    },
+    "PartialTensorBDRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Sup d Basis r End breuk"
+    },
+    "PartialTensorBC_default": {
+      "expected": "Superskrif b Basislyn x Onderskrif c"
+    },
+    "PartialTensorBC_brief": {
+      "expected": "Sup b Basis x Onderskrif c"
+    },
+    "PartialTensorBC_sbrief": {
+      "expected": "Sup b Basis x Onderskrif c"
+    },
+    "PartialTensorBCR_default": {
+      "expected": "Superskrif b Basislyn x Onderskrif c Basislyn r"
+    },
+    "PartialTensorBCR_brief": {
+      "expected": "Sup b Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorBCR_sbrief": {
+      "expected": "Sup b Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorBCRootR_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Onderskrif c Basislyn End wortel r"
+    },
+    "PartialTensorBCRootR_brief": {
+      "expected": "Begin wortel Sup b Basis x Onderskrif c Basis End wortel r"
+    },
+    "PartialTensorBCRootR_sbrief": {
+      "expected": "Wortel Sup b Basis x Onderskrif c Basis End wortel r"
+    },
+    "PartialTensorBCRRoot_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Onderskrif c Basislyn r End wortel"
+    },
+    "PartialTensorBCRRoot_brief": {
+      "expected": "Begin wortel Sup b Basis x Onderskrif c Basis r End wortel"
+    },
+    "PartialTensorBCRRoot_sbrief": {
+      "expected": "Wortel Sup b Basis x Onderskrif c Basis r End wortel"
+    },
+    "PartialTensorBCFracR_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Onderskrif c Basislyn EndBreuk r"
+    },
+    "PartialTensorBCFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Onderskrif c Basis EndBreuk r"
+    },
+    "PartialTensorBCFracR_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Onderskrif c Basis End breuk r"
+    },
+    "PartialTensorBCRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Onderskrif c Basislyn r EndBreuk"
+    },
+    "PartialTensorBCRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Onderskrif c Basis r EndBreuk"
+    },
+    "PartialTensorBCRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Onderskrif c Basis r End breuk"
+    },
+    "PartialTensorBCD_default": {
+      "expected": "Superskrif b Basislyn x Onderskrif c Superskrif d"
+    },
+    "PartialTensorBCD_brief": {
+      "expected": "Sup b Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorBCD_sbrief": {
+      "expected": "Sup b Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorBCDR_default": {
+      "expected": "Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r"
+    },
+    "PartialTensorBCDR_brief": {
+      "expected": "Sup b Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorBCDR_sbrief": {
+      "expected": "Sup b Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorBCDRootR_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorBCDRootR_brief": {
+      "expected": "Begin wortel Sup b Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorBCDRootR_sbrief": {
+      "expected": "Wortel Sup b Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorBCDRRoot_default": {
+      "expected": "Begin wortel Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorBCDRRoot_brief": {
+      "expected": "Begin wortel Sup b Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorBCDRRoot_sbrief": {
+      "expected": "Wortel Sup b Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorBCDFracR_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorBCDFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Onderskrif c Sup d Basis EndBreuk r"
+    },
+    "PartialTensorBCDFracR_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Onderskrif c Sup d Basis End breuk r"
+    },
+    "PartialTensorBCDRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorBCDRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Sup b Basis x Onderskrif c Sup d Basis r EndBreuk"
+    },
+    "PartialTensorBCDRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Sup b Basis x Onderskrif c Sup d Basis r End breuk"
+    },
+    "PartialTensorA_default": {
+      "expected": "Onderskrif a Basislyn x"
+    },
+    "PartialTensorA_brief": {
+      "expected": "Onderskrif a Basis x"
+    },
+    "PartialTensorA_sbrief": {
+      "expected": "Onderskrif a Basis x"
+    },
+    "PartialTensorAR_default": {
+      "expected": "Onderskrif a Basislyn x r"
+    },
+    "PartialTensorAR_brief": {
+      "expected": "Onderskrif a Basis x r"
+    },
+    "PartialTensorAR_sbrief": {
+      "expected": "Onderskrif a Basis x r"
+    },
+    "PartialTensorARootR_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x End wortel r"
+    },
+    "PartialTensorARootR_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x End wortel r"
+    },
+    "PartialTensorARootR_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x End wortel r"
+    },
+    "PartialTensorARRoot_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x r End wortel"
+    },
+    "PartialTensorARRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x r End wortel"
+    },
+    "PartialTensorARRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x r End wortel"
+    },
+    "PartialTensorAFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x EndBreuk r"
+    },
+    "PartialTensorAFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x EndBreuk r"
+    },
+    "PartialTensorAFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x End breuk r"
+    },
+    "PartialTensorARFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x r EndBreuk"
+    },
+    "PartialTensorARFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x r EndBreuk"
+    },
+    "PartialTensorARFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x r End breuk"
+    },
+    "PartialTensorAD_default": {
+      "expected": "Onderskrif a Basislyn x Superskrif d"
+    },
+    "PartialTensorAD_brief": {
+      "expected": "Onderskrif a Basis x Sup d"
+    },
+    "PartialTensorAD_sbrief": {
+      "expected": "Onderskrif a Basis x Sup d"
+    },
+    "PartialTensorADR_default": {
+      "expected": "Onderskrif a Basislyn x Superskrif d Basislyn r"
+    },
+    "PartialTensorADR_brief": {
+      "expected": "Onderskrif a Basis x Sup d Basis r"
+    },
+    "PartialTensorADR_sbrief": {
+      "expected": "Onderskrif a Basis x Sup d Basis r"
+    },
+    "PartialTensorADRootR_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorADRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorADRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Sup d Basis End wortel r"
+    },
+    "PartialTensorADRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorADRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorADRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Sup d Basis r End wortel"
+    },
+    "PartialTensorADFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorADFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Sup d Basis EndBreuk r"
+    },
+    "PartialTensorADFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Sup d Basis End breuk r"
+    },
+    "PartialTensorADRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorADRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Sup d Basis r EndBreuk"
+    },
+    "PartialTensorADRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Sup d Basis r End breuk"
+    },
+    "PartialTensorAC_default": {
+      "expected": "Onderskrif a Basislyn x Onderskrif c"
+    },
+    "PartialTensorAC_brief": {
+      "expected": "Onderskrif a Basis x Onderskrif c"
+    },
+    "PartialTensorAC_sbrief": {
+      "expected": "Onderskrif a Basis x Onderskrif c"
+    },
+    "PartialTensorACR_default": {
+      "expected": "Onderskrif a Basislyn x Onderskrif c Basislyn r"
+    },
+    "PartialTensorACR_brief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorACR_sbrief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Basis r"
+    },
+    "PartialTensorACRootR_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Onderskrif c Basislyn End wortel r"
+    },
+    "PartialTensorACRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Onderskrif c Basis End wortel r"
+    },
+    "PartialTensorACRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Onderskrif c Basis End wortel r"
+    },
+    "PartialTensorACRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Onderskrif c Basislyn r End wortel"
+    },
+    "PartialTensorACRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Onderskrif c Basis r End wortel"
+    },
+    "PartialTensorACRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Onderskrif c Basis r End wortel"
+    },
+    "PartialTensorACFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Onderskrif c Basislyn EndBreuk r"
+    },
+    "PartialTensorACFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Onderskrif c Basis EndBreuk r"
+    },
+    "PartialTensorACFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Onderskrif c Basis End breuk r"
+    },
+    "PartialTensorACRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Onderskrif c Basislyn r EndBreuk"
+    },
+    "PartialTensorACRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Onderskrif c Basis r EndBreuk"
+    },
+    "PartialTensorACRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Onderskrif c Basis r End breuk"
+    },
+    "PartialTensorACD_default": {
+      "expected": "Onderskrif a Basislyn x Onderskrif c Superskrif d"
+    },
+    "PartialTensorACD_brief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorACD_sbrief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Sup d"
+    },
+    "PartialTensorACDR_default": {
+      "expected": "Onderskrif a Basislyn x Onderskrif c Superskrif d Basislyn r"
+    },
+    "PartialTensorACDR_brief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorACDR_sbrief": {
+      "expected": "Onderskrif a Basis x Onderskrif c Sup d Basis r"
+    },
+    "PartialTensorACDRootR_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Onderskrif c Superskrif d Basislyn End wortel r"
+    },
+    "PartialTensorACDRootR_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorACDRootR_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Onderskrif c Sup d Basis End wortel r"
+    },
+    "PartialTensorACDRRoot_default": {
+      "expected": "Begin wortel Onderskrif a Basislyn x Onderskrif c Superskrif d Basislyn r End wortel"
+    },
+    "PartialTensorACDRRoot_brief": {
+      "expected": "Begin wortel Onderskrif a Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorACDRRoot_sbrief": {
+      "expected": "Wortel Onderskrif a Basis x Onderskrif c Sup d Basis r End wortel"
+    },
+    "PartialTensorACDFracR_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Onderskrif c Superskrif d Basislyn EndBreuk r"
+    },
+    "PartialTensorACDFracR_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Onderskrif c Sup d Basis EndBreuk r"
+    },
+    "PartialTensorACDFracR_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Onderskrif c Sup d Basis End breuk r"
+    },
+    "PartialTensorACDRFrac_default": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basislyn x Onderskrif c Superskrif d Basislyn r EndBreuk"
+    },
+    "PartialTensorACDRFrac_brief": {
+      "expected": "BeginBreuk 1 Oor Onderskrif a Basis x Onderskrif c Sup d Basis r EndBreuk"
+    },
+    "PartialTensorACDRFrac_sbrief": {
+      "expected": "Breuk 1 Oor Onderskrif a Basis x Onderskrif c Sup d Basis r End breuk"
+    },
+    "_comment10_": "Rest",
+    "TensorMultiSimpleABC_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Onderskrif Superskrif l"
+    },
+    "TensorMultiSimpleABC_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Sup l"
+    },
+    "TensorMultiSimpleABC_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Sup l"
+    },
+    "TensorMultiSub_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Onderskrif Onderskrif l Superskrif d"
+    },
+    "TensorMultiSub_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Onderskrif l Sup d"
+    },
+    "TensorMultiSub_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Onderskrif l Sup d"
+    },
+    "TensorMultiSubSup_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Onderskrif Onderskrif l Onderskrif Onderskrif Superskrif k Onderskrif e Superskrif d"
+    },
+    "TensorMultiSubSup_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Onderskrif l Onderskrif Onderskrif Sup k Onderskrif e Sup d"
+    },
+    "TensorMultiSubSup_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Onderskrif l Onderskrif Onderskrif Sup k Onderskrif e Sup d"
+    },
+    "TensorMultiSimple_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Onderskrif Superskrif l Superskrif d"
+    },
+    "TensorMultiSimple_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Sup l Sup d"
+    },
+    "TensorMultiSimple_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Onderskrif Sup l Sup d"
+    },
+    "TensorMultiComplex_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c k Onderskrif Superskrif l Superskrif d"
+    },
+    "TensorMultiComplex_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c k Onderskrif Sup l Sup d"
+    },
+    "TensorMultiComplex_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c k Onderskrif Sup l Sup d"
+    },
+    "TwoTensors_default": {
+      "expected": "Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d Basislyn Onderskrif a Superskrif b Basislyn x Onderskrif c Superskrif d"
+    },
+    "TwoTensors_brief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d Basis Onderskrif a Sup b Basis x Onderskrif c Sup d"
+    },
+    "TwoTensors_sbrief": {
+      "expected": "Onderskrif a Sup b Basis x Onderskrif c Sup d Basis Onderskrif a Sup b Basis x Onderskrif c Sup d"
+    }
+  }
+}

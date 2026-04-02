@@ -23,7 +23,7 @@
  */
 
 import { Engine, SREError } from './engine.js';
-import * as EngineConst from '../common/engine_const.js';
+import * as EngineConst from './engine_const.js';
 import { SystemExternal } from './system_external.js';
 import * as XpathUtil from './xpath_util.js';
 
@@ -64,7 +64,7 @@ export function parseInput(input: string): Element {
   const allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
   const html = !!allValues;
   if (!clean_input) {
-    throw new Error('Empty input!');
+    throw new SREError('Empty input!');
   }
   try {
     const doc = dp.parseFromString(
@@ -73,7 +73,7 @@ export function parseInput(input: string): Element {
     );
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.xpath.currentDocument = doc;
-      return html ? doc.body.childNodes[0] : doc.documentElement;
+      return (html ? doc.body.childNodes[0] : doc.documentElement) as Element;
     }
     return doc.documentElement;
   } catch (err) {
@@ -83,7 +83,7 @@ export function parseInput(input: string): Element {
 
 // let extIdCount = 0;
 // function addMarkers(node: Element) {
-//   if (Engine.getInstance().automark && tagName(node) !== 'STREE') {
+//   if (Engine.getInstance().options.automark && tagName(node) !== 'STREE') {
 //     extIdCount = 0;
 //     addExtId(node);
 //   }

@@ -1,0 +1,261 @@
+{
+  "name": "NynorskClearspeakCollapse",
+  "locale": "nn",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "Nynorsk Clearspeak Collapse tests.",
+  "domain": "clearspeak",
+  "active": "CollapseNynorsk",
+  "exclude": [
+    "CollapsedAddition_brief",
+    "CollapsedAddition_sbrief",
+    "CollapsedBigop_brief",
+    "CollapsedBigop_sbrief",
+    "CollapsedBinomial_brief",
+    "CollapsedBinomial_sbrief",
+    "CollapsedCases_brief",
+    "CollapsedCases_sbrief",
+    "CollapsedCell_brief",
+    "CollapsedCell_sbrief",
+    "CollapsedContinuedFraction_brief",
+    "CollapsedContinuedFraction_sbrief",
+    "CollapsedDeterminant_brief",
+    "CollapsedDeterminant_sbrief",
+    "CollapsedFraction_brief",
+    "CollapsedFraction_sbrief",
+    "CollapsedFunction_brief",
+    "CollapsedFunction_sbrief",
+    "CollapsedIdentifier_brief",
+    "CollapsedIdentifier_sbrief",
+    "CollapsedInfixop_brief",
+    "CollapsedInfixop_sbrief",
+    "CollapsedIntegral_brief",
+    "CollapsedIntegral_sbrief",
+    "CollapsedLim_brief",
+    "CollapsedLim_sbrief",
+    "CollapsedLine_brief",
+    "CollapsedLine_sbrief",
+    "CollapsedMatrix_brief",
+    "CollapsedMatrix_sbrief",
+    "CollapsedMixedNumber_brief",
+    "CollapsedMixedNumber_sbrief",
+    "CollapsedMultiplication_brief",
+    "CollapsedMultiplication_sbrief",
+    "CollapsedMultirel_brief",
+    "CollapsedMultirel_sbrief",
+    "CollapsedNumber_brief",
+    "CollapsedNumber_sbrief",
+    "CollapsedPunctuated_brief",
+    "CollapsedPunctuated_sbrief",
+    "CollapsedRelation_brief",
+    "CollapsedRelation_sbrief",
+    "CollapsedRelationSeq_brief",
+    "CollapsedRelationSeq_sbrief",
+    "CollapsedRoot_brief",
+    "CollapsedRoot_sbrief",
+    "CollapsedRootNested_brief",
+    "CollapsedRootNested_sbrief",
+    "CollapsedRow_brief",
+    "CollapsedRow_sbrief",
+    "CollapsedRowvector_brief",
+    "CollapsedRowvector_sbrief",
+    "CollapsedSqrt_brief",
+    "CollapsedSqrt_sbrief",
+    "CollapsedSqrtNested_brief",
+    "CollapsedSqrtNested_sbrief",
+    "CollapsedSquarematrix_brief",
+    "CollapsedSquarematrix_sbrief",
+    "CollapsedSubscript_brief",
+    "CollapsedSubscript_sbrief",
+    "CollapsedSubsup_brief",
+    "CollapsedSubsup_sbrief",
+    "CollapsedSuperscript_brief",
+    "CollapsedSuperscript_sbrief",
+    "CollapsedTable_brief",
+    "CollapsedTable_sbrief",
+    "CollapsedText_brief",
+    "CollapsedText_sbrief",
+    "CollapsedVarAddition_brief",
+    "CollapsedVarAddition_sbrief",
+    "CollapsedVarCases_brief",
+    "CollapsedVarCases_sbrief",
+    "CollapsedVarDeterminant_brief",
+    "CollapsedVarDeterminant_sbrief",
+    "CollapsedVarMatrix_brief",
+    "CollapsedVarMatrix_sbrief",
+    "CollapsedVarMultiplication_brief",
+    "CollapsedVarMultiplication_sbrief",
+    "CollapsedVarMultirel_brief",
+    "CollapsedVarMultirel_sbrief",
+    "CollapsedVarPunctuated_brief",
+    "CollapsedVarPunctuated_sbrief",
+    "CollapsedVarRelation_brief",
+    "CollapsedVarRelation_sbrief",
+    "CollapsedVarVector_brief",
+    "CollapsedVarVector_sbrief",
+    "CollapsedVector_brief",
+    "CollapsedVector_sbrief"
+  ],
+  "compare": true,
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "kollapsa sum med 2 delsummar"
+    },
+    "CollapsedBigop_default": {
+      "expected": "kollapsa sum"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "kollapsa binomialkoeffisient"
+    },
+    "CollapsedCases_default": {
+      "expected": "kollapsa case-setning med 2 casar"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "kollapsa kjedebrøk"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "kollapsa 2 dimensjonal determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "kollapsa brøk"
+    },
+    "CollapsedFunction_default": {
+      "expected": "kollapsa funksjonsuttrykk"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "kollapsa lang identifikator"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "kollapsa divisjon med 2 element"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "kollapsa integral"
+    },
+    "CollapsedLim_default": {
+      "expected": "kollapsa grenseverdifunksjon"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "kollapsa 3 gangar 2 matrise"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "kollapsa langt blanda nummer"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "kollapsa produkt med 2 faktorar"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "kollapsa relasjonssekvens med 3 element"
+    },
+    "CollapsedNumber_default": {
+      "expected": "kollapsa langt nummer"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "kollapsa komma separert liste med lengde 3"
+    },
+    "CollapsedRelation_default": {
+      "expected": "kollapsa likhet"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "kollapsa likhet sekvens med 3 element"
+    },
+    "CollapsedRoot_default": {
+      "expected": "kollapsa rot med eksponent 3"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "kollapsa nøsta rot med eksponent 3"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "kollapsa 2 dimensjonal radvektor"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "kollapsa kvadratrot"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "kollapsa n-te rot"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "kollapsa 2 dimensjonal kvadratmatrise"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "kollapsa indeks"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "kollapsa potens med indeks"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "kollapsa potens"
+    },
+    "CollapsedTable_default": {
+      "expected": "kollapsa tabell med 2 radar og 2 kolonner"
+    },
+    "CollapsedText_default": {
+      "expected": "kollapsa tekst"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "kollapsa sum med variabelt tal på delsummar"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "kollapsa case-setning med variabelt tal på alternativ"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "kollapsa n-dimensjonal determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "kollapsa n gangar m-dimensjonal matrise"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "kollapsa produkt med variabelt tal på faktorar"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "kollapsa relasjonssekvens med variabelt antall element"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "kollapsa komma separert liste med variabel lengd"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "kollapsa likhet sekvens med variabelt tal på element"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "kollapsa n-dimensjonal vektor"
+    },
+    "CollapsedVector_default": {
+      "expected": "kollapsa 3 dimensjonal vektor"
+    },
+    "CollapsedVarSubtraction_default": {
+      "expected": "kollapsa subtraksjon med variabelt tal på element"
+    },
+    "CollapsedVarSubtraction_brief": {
+      "expected": "kollapsa subtraksjon med variabelt tal på element"
+    },
+    "CollapsedVarSubtraction_sbrief": {
+      "expected": "kollapsa subtraksjon med variabelt tal på element"
+    },
+    "CollapsedCountImplicit_default": {
+      "expected": "kollapsa produkt med 3 faktorar"
+    },
+    "CollapsedCountImplicit_brief": {
+      "expected": "kollapsa produkt med 3 faktorar"
+    },
+    "CollapsedCountImplicit_sbrief": {
+      "expected": "kollapsa produkt med 3 faktorar"
+    },
+    "CollapsedVarImplicit_default": {
+      "expected": "kollapsa produkt med variabelt tal på faktorar"
+    },
+    "CollapsedVarArrowRelation_default": {
+      "expected": "kollapsa pil sekvens med variabelt tal på element"
+    },
+    "CollapsedArrowRelation_default": {
+      "expected": "kollapsa pil"
+    },
+    "CollapsedVarRowvector_default": {
+      "expected": "kollapsa n-dimensjonal radvektor"
+    },
+    "CollapsedRootInside_default": {
+      "expected": "kollapsa rot med eksponent 3 slutteksponent a"
+    },
+    "CollapsedRootNestedInside_default": {
+      "expected": "kollapsa nøsta rot med eksponent 3 slutteksponent a"
+    }
+  }
+}

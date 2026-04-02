@@ -26,7 +26,7 @@ export class Debugger {
    * Whether the debugger is active.
    */
   private isActive_ = false;
-  private outputFunction_: (p1: string) => any = console.info;
+  private outputFunction: (p1: string) => any;
 
   private fileHandle: any = Promise.resolve();
 
@@ -75,7 +75,7 @@ export class Debugger {
    * @param func The function that generates the
    *      debug output.
    */
-  public generateOutput(func: () => string[]) {
+  public generate(func: () => string[]) {
     if (this.isActive_) {
       this.output_(func.apply(func, []));
     }
@@ -88,11 +88,15 @@ export class Debugger {
    *     debugger.
    */
   public exit(callback: () => any = () => {}) {
-    this.fileHandle.then(() => {
-      if (this.isActive_ && this.stream_) {
-        this.stream_.end('', '', callback);
-      }
-    });
+    if (this.stream_) {
+      this.fileHandle.then(() => {
+        if (this.isActive_ && this.stream_) {
+          this.stream_.end('', '', callback);
+          this.stream_ = null;
+        }
+      });
+    }
+    this.isActive_ = false;
   }
 
   /**
@@ -110,7 +114,7 @@ export class Debugger {
     this.fileHandle = SystemExternal.fs.promises.open(filename, 'w');
     this.fileHandle = this.fileHandle.then((handle: any) => {
       this.stream_ = handle.createWriteStream(filename);
-      this.outputFunction_ = function (...args: string[]) {
+      this.outputFunction = function (...args: string[]) {
         this.stream_.write(args.join(' '));
         this.stream_.write('\n');
       }.bind(this);
@@ -118,7 +122,7 @@ export class Debugger {
         'error',
         function (_error: Error) {
           console.info('Invalid log file. Debug information sent to console.');
-          this.outputFunction_ = console.info;
+          this.outputFunction = console.info;
         }.bind(this)
       );
       this.stream_.on('finish', function () {
@@ -133,18 +137,15 @@ export class Debugger {
    * @param outputList List of output strings.
    */
   private output_(outputList: string[]) {
-    if (console.info === this.outputFunction_) {
-      this.outputFunction_.apply(
-        console,
-        ['Speech Rule Engine Debugger:'].concat(outputList)
+    if (this.stream_) {
+      this.fileHandle.then(() =>
+        this.outputFunction.apply(
+          this.outputFunction,
+          ['Speech Rule Engine Debugger:'].concat(outputList)
+        )
       );
       return;
     }
-    this.fileHandle.then(() =>
-      this.outputFunction_.apply(
-        this.outputFunction_,
-        ['Speech Rule Engine Debugger:'].concat(outputList)
-      )
-    );
+    console.info(...['Speech Rule Engine Debugger:'].concat(outputList));
   }
 }

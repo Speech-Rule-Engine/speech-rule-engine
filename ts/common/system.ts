@@ -21,14 +21,20 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 
 import { Engine, EnginePromise, SREError } from './engine.js';
-import { setup } from './engine_setup.js';
+import { setupEngine as setup, engineSetup as engine } from './engine_setup.js';
 import * as EngineConst from './engine_const.js';
 import { KeyCode } from './event_util.js';
 import * as FileUtil from './file_util.js';
 import * as ProcessorFactory from './processor_factory.js';
+import { OptionsList, WorkerStructure } from './processor_factory.js';
 import { SystemExternal } from './system_external.js';
 import { Variables } from './variables.js';
 import { standardLoader } from '../speech_rules/math_map.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
+import * as DomUtil from './dom_util.js';
+
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 
 /**
  * Version number.
@@ -60,19 +66,14 @@ export async function setupEngine(feature: {
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  const engineFeatures = ['mode'].concat(
-    Engine.STRING_FEATURES,
-    Engine.BINARY_FEATURES
-  );
-  const engine = Engine.getInstance() as any;
-  const features: { [key: string]: string | boolean } = {};
-  engineFeatures.forEach(function (x) {
-    features[x] = engine[x];
-  });
-  features.json = SystemExternal.jsonPath;
-  features.xpath = SystemExternal.WGXpath;
-  features.rules = engine.ruleSets.slice();
-  return features;
+  return engine();
+}
+
+/**
+ * Reset the engine options setup.
+ */
+export function resetEngine() {
+  Engine.getInstance().reset();
 }
 
 /**
@@ -127,6 +128,17 @@ export function toSemantic(expr: string): Node {
 // TODO (TS): Define the correct JSONType somewhere.
 export function toJson(expr: string): any {
   return processString('json', expr);
+}
+
+/**
+ * Translate input expression into JSON version of the Semantic Tree that
+ * serializes the content nodes.
+ *
+ * @param expr Processes a given MathML expression for translation.
+ * @returns The semantic tree as Json.
+ */
+export function toVis(expr: string): any {
+  return processString('vis', expr);
 }
 
 /**
@@ -288,7 +300,7 @@ export function processFile(
       return processFileSync(processor, input, opt_output);
     default:
       throw new SREError(
-        `Can process files in ${Engine.getInstance().mode} mode`
+        `Cannot process files in ${Engine.getInstance().mode} mode`
       );
   }
 }
@@ -399,6 +411,146 @@ export function exit(opt_value?: number) {
 }
 
 /**
+ * Function to translate expression into speech structure, with all speech
+ * components for all nodes.
+ *
+ * @param expr Processes a given MathML expression for translation.
+ * @returns The json structure containing all speech mappings.
+ */
+export function toSpeechStructure(expr: string): string {
+  return processString('speechStructure', expr);
+}
+
+/**
+ *  Web worker related API methods.
+ */
+
+/**
+ * Compute speech structure for the expression.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerSpeech(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next rule set.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextRules(
+  expr: string,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next rules!
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options = SpeechGeneratorUtil.nextRules(options, styles);
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Computes the speech for the next style wrt to a particular node.
+ *
+ * @param expr The math expression.
+ * @param options The list of options.
+ * @param id Semantic id of the focused node.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerNextStyle(
+  expr: string,
+  options: OptionsList,
+  id: string
+): Promise<WorkerStructure> {
+  // TODO: Don't do anything if no next style!
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const styles = SpeechGeneratorUtil.toStyles(options);
+  options.style = SpeechGeneratorUtil.nextStyle(rebuilt.nodeDict[id], options);
+  styles[options.domain] = options.style;
+  options.domain2style = SpeechGeneratorUtil.fromStyles(styles);
+  return assembleWorkerStructure(mml, rebuilt.stree.xml(), options);
+}
+
+/**
+ * Compute clearspeak preferences for a locale.
+ *
+ * @param options The options containing the locale setting.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerLocalePreferences(
+  options: OptionsList
+): Promise<WorkerStructure> {
+  return ClearspeakPreferences.getLocalePreferences()[options.locale];
+}
+
+/**
+ * Compute clearspeak preference category for a node.
+ *
+ * @param expr The math expression.
+ * @param id The semantic id of a node in the expression to compute the category for.
+ * @returns The worker structure once the promise resolves.
+ */
+export async function workerRelevantPreferences(
+  expr: string,
+  id: string
+): Promise<string> {
+  const mml = DomUtil.parseInput(expr);
+  const rebuilt = new RebuildStree(mml);
+  const query =
+    rebuilt.stree.root.querySelectorAll((x) => x.id.toString() === id)[0] ??
+    rebuilt.stree.root;
+  return ClearspeakPreferences.relevantPreferences(query);
+}
+
+/**
+ * Computes the structure returnable to the worker, containing all necessary
+ * speech content to be attached.
+ *
+ * @param mml The math expression.
+ * @param sxml The element.
+ * @param options The list of options.
+ * @returns The worker structure once the promise resolves.
+ */
+async function assembleWorkerStructure(
+  mml: Element,
+  sxml: Element,
+  options: OptionsList
+): Promise<WorkerStructure> {
+  await setupEngine(options);
+  Engine.getInstance().options.automark = true;
+  const json: WorkerStructure = {};
+  ProcessorFactory.assembleSpeechStructure(json, mml, sxml, options);
+  if ((options as any).enableBraille === false) {
+    return json;
+  }
+  await setupEngine({
+    modality: 'braille',
+    locale: options.braille,
+    domain: 'default',
+    style: 'default'
+  });
+  const root = (sxml.childNodes[0] as Element)?.getAttribute('id');
+  json.braille = SpeechGeneratorUtil.computeBrailleStructure(sxml);
+  json.braillelabel = json.braille[root]['braille-none'];
+  return json;
+}
+
+/**
  * Returns the default locale path, depending on the mode of operation.
  *
  * @param locale The locale iso.
@@ -406,7 +558,7 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-if (SystemExternal.documentSupported) {
+if (SystemExternal.documentSupported || SystemExternal.webworker) {
   setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>

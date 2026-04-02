@@ -1,0 +1,424 @@
+{
+  "_comment0_": "With support from TextHelp.",
+  "name": "ItalianClearspeakRoots",
+  "locale": "it",
+  "compare": true,
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "Italian Clearspeak Roots rule tests.",
+  "active": "ClearspeakItalian",
+  "exclude": [],
+  "tests": {
+    "Root001": {
+      "expected": "radice quadrata di 2"
+    },
+    "Root002": {
+      "expected": "3 più radice quadrata di 2"
+    },
+    "Root003": {
+      "expected": "3 più o meno radice quadrata di 2"
+    },
+    "Root004": {
+      "expected": "3 meno più radice quadrata di 2"
+    },
+    "Root005": {
+      "expected": "meno radice quadrata di 2"
+    },
+    "Root006": {
+      "expected": "3 meno radice quadrata di 2"
+    },
+    "Root007": {
+      "expected": "3 più meno radice quadrata di 2"
+    },
+    "Root008": {
+      "expected": "3 meno meno radice quadrata di 2"
+    },
+    "Root009": {
+      "expected": "3 più, parentesi tonda aperta, meno radice quadrata di 2, parentesi tonda chiusa"
+    },
+    "Root010": {
+      "expected": "3 meno, parentesi tonda aperta, meno radice quadrata di 2, parentesi tonda chiusa"
+    },
+    "Root011": {
+      "expected": "radice quadrata di x più 1"
+    },
+    "Root011a": {
+      "expected": "radice quadrata di x, più 1"
+    },
+    "Root012": {
+      "expected": "meno radice quadrata di x"
+    },
+    "Root013": {
+      "expected": "parentesi tonda aperta, radice quadrata di x, parentesi tonda chiusa, quadrato"
+    },
+    "Root014": {
+      "expected": "meno, parentesi tonda aperta, radice quadrata di x, parentesi tonda chiusa, quadrato"
+    },
+    "Root015": {
+      "expected": "radice quadrata di x, quadrato"
+    },
+    "Root016": {
+      "expected": "radice quadrata di x quadrato"
+    },
+    "Root017": {
+      "expected": "radice quadrata di x quadrato più y quadrato"
+    },
+    "Root018": {
+      "expected": "radice quadrata di, x pedice 1, quadrato più, x pedice 2, quadrato"
+    },
+    "Root019": {
+      "expected": "radice quadrata di, parentesi tonda aperta, x pedice 2, meno, x pedice 1, parentesi tonda chiusa, quadrato più, parentesi tonda aperta, y pedice 2, meno, y pedice 1, parentesi tonda chiusa, quadrato"
+    },
+    "Root020": {
+      "expected": "radice quadrata di un mezzo"
+    },
+    "Root021": {
+      "expected": "radice quadrata di, 23 fratto 66"
+    },
+    "Root022": {
+      "expected": "radice quadrata di, frazione con numeratore x più 1, e denominatore 2 x, più 5"
+    },
+    "Root023": {
+      "expected": "frazione con numeratore meno b più o meno radice quadrata di b quadrato meno 4 a c, e denominatore 2 a"
+    },
+    "Root024": {
+      "expected": "più radice quadrata di 2"
+    },
+    "Root025": {
+      "expected": "3 più più radice quadrata di 2"
+    },
+    "Root026": {
+      "expected": "3 più o meno radice quadrata di 2"
+    },
+    "Root027": {
+      "expected": "3 meno più radice quadrata di 2"
+    },
+    "Root028": {
+      "expected": "meno radice quadrata di 2"
+    },
+    "Root029": {
+      "expected": "3 meno più radice quadrata di 2"
+    },
+    "Root030": {
+      "expected": "3 più meno radice quadrata di 2"
+    },
+    "Root031": {
+      "expected": "3 meno meno radice quadrata di 2"
+    },
+    "Root032": {
+      "expected": "3 più, parentesi tonda aperta, meno radice quadrata di 2, parentesi tonda chiusa"
+    },
+    "Root033": {
+      "expected": "3 meno, parentesi tonda aperta, meno radice quadrata di 2, parentesi tonda chiusa"
+    },
+    "Root034": {
+      "expected": "più radice quadrata di x più 1"
+    },
+    "Root034a": {
+      "expected": "più radice quadrata di x, più 1"
+    },
+    "Root035": {
+      "expected": "meno radice quadrata di x"
+    },
+    "Root036": {
+      "expected": "parentesi tonda aperta, più radice quadrata di x, parentesi tonda chiusa, quadrato"
+    },
+    "Root037": {
+      "expected": "parentesi tonda aperta, meno radice quadrata di x, parentesi tonda chiusa, quadrato"
+    },
+    "Root038": {
+      "expected": "meno, parentesi tonda aperta, più radice quadrata di x, parentesi tonda chiusa, quadrato"
+    },
+    "Root039": {
+      "expected": "più radice quadrata di x, quadrato"
+    },
+    "Root040": {
+      "expected": "più radice quadrata di x quadrato"
+    },
+    "Root041": {
+      "expected": "più radice quadrata di x quadrato più y quadrato"
+    },
+    "Root042": {
+      "expected": "più radice quadrata di, x pedice 1, quadrato più, x pedice 2, quadrato"
+    },
+    "Root043": {
+      "expected": "più radice quadrata di, parentesi tonda aperta, x pedice 2, meno, x pedice 1, parentesi tonda chiusa, quadrato più, parentesi tonda aperta, y pedice 2, meno, y pedice 1, parentesi tonda chiusa, quadrato"
+    },
+    "Root044": {
+      "expected": "più radice quadrata di un mezzo"
+    },
+    "Root045": {
+      "expected": "più radice quadrata di, 23 fratto 66"
+    },
+    "Root046": {
+      "expected": "più radice quadrata di, frazione con numeratore x più 1, e denominatore 2 x, più 5"
+    },
+    "Root047": {
+      "expected": "frazione con numeratore meno b più o meno radice quadrata di b quadrato meno 4 a c, e denominatore 2 a"
+    },
+    "Root048": {
+      "expected": "radice quadrata di 2, fine radice"
+    },
+    "Root049": {
+      "expected": "3 più radice quadrata di 2, fine radice"
+    },
+    "Root050": {
+      "expected": "3 più o meno radice quadrata di 2, fine radice"
+    },
+    "Root051": {
+      "expected": "3 meno più radice quadrata di 2, fine radice"
+    },
+    "Root052": {
+      "expected": "meno radice quadrata di 2, fine radice"
+    },
+    "Root053": {
+      "expected": "3 meno radice quadrata di 2, fine radice"
+    },
+    "Root054": {
+      "expected": "3 più meno radice quadrata di 2, fine radice"
+    },
+    "Root055": {
+      "expected": "3 meno meno radice quadrata di 2, fine radice"
+    },
+    "Root056": {
+      "expected": "3 più, parentesi tonda aperta, meno radice quadrata di 2, fine radice, parentesi tonda chiusa"
+    },
+    "Root057": {
+      "expected": "3 meno, parentesi tonda aperta, meno radice quadrata di 2, fine radice, parentesi tonda chiusa"
+    },
+    "Root058": {
+      "expected": "radice quadrata di x più 1, fine radice"
+    },
+    "Root058a": {
+      "expected": "radice quadrata di x, fine radice, più 1"
+    },
+    "Root059": {
+      "expected": "meno radice quadrata di x, fine radice"
+    },
+    "Root060": {
+      "expected": "parentesi tonda aperta, radice quadrata di x, fine radice, parentesi tonda chiusa, quadrato"
+    },
+    "Root061": {
+      "expected": "meno, parentesi tonda aperta, radice quadrata di x, fine radice, parentesi tonda chiusa, quadrato"
+    },
+    "Root062": {
+      "expected": "radice quadrata di x, fine radice, quadrato"
+    },
+    "Root063": {
+      "expected": "radice quadrata di x quadrato, fine radice"
+    },
+    "Root064": {
+      "expected": "radice quadrata di x quadrato più y quadrato, fine radice"
+    },
+    "Root065": {
+      "expected": "radice quadrata di, x pedice 1, quadrato più, x pedice 2, quadrato, fine radice"
+    },
+    "Root066": {
+      "expected": "radice quadrata di, parentesi tonda aperta, x pedice 2, meno, x pedice 1, parentesi tonda chiusa, quadrato più, parentesi tonda aperta, y pedice 2, meno, y pedice 1, parentesi tonda chiusa, quadrato, fine radice"
+    },
+    "Root067": {
+      "expected": "radice quadrata di un mezzo, fine radice"
+    },
+    "Root068": {
+      "expected": "radice quadrata di, 23 fratto 66, fine radice"
+    },
+    "Root069": {
+      "expected": "radice quadrata di, frazione con numeratore x più 1, e denominatore 2 x, più 5, fine radice"
+    },
+    "Root070": {
+      "expected": "frazione con numeratore meno b più o meno radice quadrata di b quadrato meno 4 a c, fine radice, e denominatore 2 a"
+    },
+    "Root071": {
+      "expected": "più radice quadrata di 2, fine radice"
+    },
+    "Root072": {
+      "expected": "3 più più radice quadrata di 2, fine radice"
+    },
+    "Root073": {
+      "expected": "3 più o meno radice quadrata di 2, fine radice"
+    },
+    "Root074": {
+      "expected": "3 meno più radice quadrata di 2, fine radice"
+    },
+    "Root075": {
+      "expected": "meno radice quadrata di 2, fine radice"
+    },
+    "Root076": {
+      "expected": "3 meno più radice quadrata di 2, fine radice"
+    },
+    "Root077": {
+      "expected": "3 più meno radice quadrata di 2, fine radice"
+    },
+    "Root078": {
+      "expected": "3 meno meno radice quadrata di 2, fine radice"
+    },
+    "Root079": {
+      "expected": "3 più, parentesi tonda aperta, meno radice quadrata di 2, fine radice, parentesi tonda chiusa"
+    },
+    "Root080": {
+      "expected": "3 meno, parentesi tonda aperta, meno radice quadrata di 2, fine radice, parentesi tonda chiusa"
+    },
+    "Root081": {
+      "expected": "più radice quadrata di x più 1, fine radice"
+    },
+    "Root081a": {
+      "expected": "più radice quadrata di x, fine radice, più 1"
+    },
+    "Root082": {
+      "expected": "meno radice quadrata di x, fine radice"
+    },
+    "Root083": {
+      "expected": "parentesi tonda aperta, più radice quadrata di x, fine radice, parentesi tonda chiusa, quadrato"
+    },
+    "Root084": {
+      "expected": "parentesi tonda aperta, meno radice quadrata di x, fine radice, parentesi tonda chiusa, quadrato"
+    },
+    "Root085": {
+      "expected": "più radice quadrata di x, fine radice, quadrato"
+    },
+    "Root086": {
+      "expected": "più radice quadrata di x quadrato, fine radice"
+    },
+    "Root087": {
+      "expected": "più radice quadrata di x quadrato più y quadrato, fine radice"
+    },
+    "Root088": {
+      "expected": "più radice quadrata di, x pedice 1, quadrato più, x pedice 2, quadrato, fine radice"
+    },
+    "Root089": {
+      "expected": "più radice quadrata di, parentesi tonda aperta, x pedice 2, meno, x pedice 1, parentesi tonda chiusa, quadrato più, parentesi tonda aperta, y pedice 2, meno, y pedice 1, parentesi tonda chiusa, quadrato, fine radice"
+    },
+    "Root090": {
+      "expected": "più radice quadrata di un mezzo, fine radice"
+    },
+    "Root091": {
+      "expected": "più radice quadrata di, 23 fratto 66, fine radice"
+    },
+    "Root092": {
+      "expected": "più radice quadrata di, frazione con numeratore x più 1, e denominatore 2 x, più 5, fine radice"
+    },
+    "Root093": {
+      "expected": "frazione con numeratore meno b più o meno radice quadrata di b quadrato meno 4 a c, fine radice, e denominatore 2 a"
+    },
+    "HighRoot001": {
+      "expected": "radice cubica di y"
+    },
+    "HighRoot002": {
+      "expected": "radice quarta di n"
+    },
+    "HighRoot003": {
+      "expected": "radice quinta di 35"
+    },
+    "HighRoot004": {
+      "expected": "radice nona di 146"
+    },
+    "HighRoot005": {
+      "expected": "radice n-esima di d"
+    },
+    "HighRoot006": {
+      "expected": "radice m-esima di 243"
+    },
+    "HighRoot007": {
+      "expected": "radice i-esima di 2 alla i-esima potenza"
+    },
+    "HighRoot008": {
+      "expected": "radice j-esima di 125"
+    },
+    "HighRoot009": {
+      "expected": "meno radice cubica di y"
+    },
+    "HighRoot010": {
+      "expected": "meno radice quarta di n"
+    },
+    "HighRoot011": {
+      "expected": "radice cubica di y, fine radice"
+    },
+    "HighRoot012": {
+      "expected": "radice quarta di n, fine radice"
+    },
+    "HighRoot013": {
+      "expected": "radice quinta di 35, fine radice"
+    },
+    "HighRoot014": {
+      "expected": "radice nona di 146, fine radice"
+    },
+    "HighRoot015": {
+      "expected": "radice n-esima di d, fine radice"
+    },
+    "HighRoot016": {
+      "expected": "radice m-esima di 243, fine radice"
+    },
+    "HighRoot017": {
+      "expected": "radice i-esima di 2 alla i-esima potenza, fine radice"
+    },
+    "HighRoot018": {
+      "expected": "radice j-esima di 125, fine radice"
+    },
+    "HighRoot019": {
+      "expected": "meno radice cubica di y, fine radice"
+    },
+    "HighRoot020": {
+      "expected": "meno radice quarta di n, fine radice"
+    },
+    "HighRoot021": {
+      "expected": "radice cubica di y"
+    },
+    "HighRoot022": {
+      "expected": "radice quarta di n"
+    },
+    "HighRoot023": {
+      "expected": "radice quinta di 35"
+    },
+    "HighRoot024": {
+      "expected": "radice nona di 146"
+    },
+    "HighRoot025": {
+      "expected": "radice n-esima di d"
+    },
+    "HighRoot026": {
+      "expected": "radice m-esima di 243"
+    },
+    "HighRoot027": {
+      "expected": "radice i-esima di 2 alla i-esima potenza"
+    },
+    "HighRoot028": {
+      "expected": "radice j-esima di 125"
+    },
+    "HighRoot029": {
+      "expected": "meno radice cubica di y"
+    },
+    "HighRoot030": {
+      "expected": "meno radice quarta di n"
+    },
+    "HighRoot031": {
+      "expected": "radice cubica di y, fine radice"
+    },
+    "HighRoot032": {
+      "expected": "radice quarta di n, fine radice"
+    },
+    "HighRoot033": {
+      "expected": "radice quinta di 35, fine radice"
+    },
+    "HighRoot034": {
+      "expected": "radice nona di 146, fine radice"
+    },
+    "HighRoot035": {
+      "expected": "radice n-esima di d, fine radice"
+    },
+    "HighRoot036": {
+      "expected": "radice m-esima di 243, fine radice"
+    },
+    "HighRoot037": {
+      "expected": "radice i-esima di 2 alla i-esima potenza, fine radice"
+    },
+    "HighRoot038": {
+      "expected": "radice j-esima di 125, fine radice"
+    },
+    "HighRoot039": {
+      "expected": "meno radice cubica di y, fine radice"
+    },
+    "HighRoot040": {
+      "expected": "meno radice quarta di n, fine radice"
+    }
+  }
+}
