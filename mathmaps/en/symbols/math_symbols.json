@@ -35,7 +35,7 @@
     "key": "0024",
     "mappings": {
       "default": {
-        "default": "dollar sign"
+        "default": "dollar"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "0025",
     "mappings": {
       "default": {
-        "default": "percent sign"
+        "default": "percent"
       }
     }
   },
@@ -245,7 +245,7 @@
     "key": "00A2",
     "mappings": {
       "default": {
-        "default": "cent sign"
+        "default": "cent"
       }
     }
   },
@@ -253,7 +253,7 @@
     "key": "00A3",
     "mappings": {
       "default": {
-        "default": "pound sign"
+        "default": "pound"
       }
     }
   },
@@ -261,7 +261,7 @@
     "key": "00A4",
     "mappings": {
       "default": {
-        "default": "currency sign"
+        "default": "currency"
       }
     }
   },
@@ -269,7 +269,7 @@
     "key": "00A5",
     "mappings": {
       "default": {
-        "default": "yen sign"
+        "default": "yen"
       }
     }
   },
@@ -285,7 +285,7 @@
     "key": "00A7",
     "mappings": {
       "default": {
-        "default": "section sign"
+        "default": "section"
       }
     }
   },
@@ -301,7 +301,7 @@
     "key": "00A9",
     "mappings": {
       "default": {
-        "default": "copyright sign"
+        "default": "copyright"
       }
     }
   },
@@ -325,7 +325,7 @@
     "key": "00AC",
     "mappings": {
       "default": {
-        "default": "not sign"
+        "default": "not"
       }
     }
   },
@@ -333,13 +333,13 @@
     "key": "00AE",
     "mappings": {
       "default": {
-        "default": "registered sign"
+        "default": "registered"
       },
       "mathspeak": {
-        "default": "registered trade mark sign"
+        "default": "registered trade mark"
       },
       "clearspeak": {
-        "default": "trade mark sign"
+        "default": "trade mark"
       }
     }
   },
@@ -382,7 +382,7 @@
     "key": "00B5",
     "mappings": {
       "default": {
-        "default": "micro sign"
+        "default": "micro"
       }
     }
   },
@@ -390,7 +390,7 @@
     "key": "00B6",
     "mappings": {
       "default": {
-        "default": "paragraph sign"
+        "default": "paragraph"
       }
     }
   },
@@ -453,7 +453,7 @@
     "key": "00F7",
     "mappings": {
       "default": {
-        "default": "division sign"
+        "default": "division"
       }
     }
   },
@@ -3401,7 +3401,7 @@
     "key": "2300",
     "mappings": {
       "default": {
-        "default": "diameter sign"
+        "default": "diameter"
       }
     }
   },
@@ -4727,7 +4727,7 @@
     "key": "2A26",
     "mappings": {
       "default": {
-        "default": "plus sign with tilde below"
+        "default": "plus with tilde below"
       }
     }
   },
@@ -4735,7 +4735,7 @@
     "key": "2A27",
     "mappings": {
       "default": {
-        "default": "plus sign with subscript two"
+        "default": "plus with subscript two"
       }
     }
   },
@@ -4743,7 +4743,7 @@
     "key": "2A28",
     "mappings": {
       "default": {
-        "default": "plus sign with black triangle"
+        "default": "plus with black triangle"
       }
     }
   },
@@ -4751,7 +4751,7 @@
     "key": "2A29",
     "mappings": {
       "default": {
-        "default": "minus sign with comma above"
+        "default": "minus with comma above"
       }
     }
   },
@@ -4759,7 +4759,7 @@
     "key": "2A2A",
     "mappings": {
       "default": {
-        "default": "minus sign with dot below"
+        "default": "minus with dot below"
       }
     }
   },
@@ -4767,7 +4767,7 @@
     "key": "2A2B",
     "mappings": {
       "default": {
-        "default": "minus sign with falling dots"
+        "default": "minus with falling dots"
       }
     }
   },
@@ -4775,7 +4775,7 @@
     "key": "2A2C",
     "mappings": {
       "default": {
-        "default": "minus sign with rising dots"
+        "default": "minus with rising dots"
       }
     }
   },
@@ -4783,7 +4783,7 @@
     "key": "2A2D",
     "mappings": {
       "default": {
-        "default": "plus sign in left half circle"
+        "default": "plus in left half circle"
       }
     }
   },
@@ -4791,7 +4791,7 @@
     "key": "2A2E",
     "mappings": {
       "default": {
-        "default": "plus sign in right half circle"
+        "default": "plus in right half circle"
       }
     }
   },
@@ -4807,7 +4807,7 @@
     "key": "2A30",
     "mappings": {
       "default": {
-        "default": "multiplication sign with dot above"
+        "default": "multiplication with dot above"
       }
     }
   },
@@ -4815,7 +4815,7 @@
     "key": "2A31",
     "mappings": {
       "default": {
-        "default": "multiplication sign with underbar"
+        "default": "multiplication with underbar"
       }
     }
   },
@@ -4839,7 +4839,7 @@
     "key": "2A34",
     "mappings": {
       "default": {
-        "default": "multiplication sign in left half circle"
+        "default": "multiplication in left half circle"
       }
     }
   },
@@ -4847,7 +4847,7 @@
     "key": "2A35",
     "mappings": {
       "default": {
-        "default": "multiplication sign in right half circle"
+        "default": "multiplication in right half circle"
       }
     }
   },
@@ -4855,7 +4855,7 @@
     "key": "2A36",
     "mappings": {
       "default": {
-        "default": "circled multiplication sign with circumflex accent"
+        "default": "circled multiplication with circumflex accent"
       }
     }
   },
@@ -4863,7 +4863,7 @@
     "key": "2A37",
     "mappings": {
       "default": {
-        "default": "multiplication sign in double circle"
+        "default": "multiplication in double circle"
       }
     }
   },
@@ -4879,7 +4879,7 @@
     "key": "2A39",
     "mappings": {
       "default": {
-        "default": "plus sign in triangle"
+        "default": "plus in triangle"
       }
     }
   },
@@ -4887,7 +4887,7 @@
     "key": "2A3A",
     "mappings": {
       "default": {
-        "default": "minus sign in triangle"
+        "default": "minus in triangle"
       }
     }
   },
@@ -4895,7 +4895,7 @@
     "key": "2A3B",
     "mappings": {
       "default": {
-        "default": "multiplication sign in triangle"
+        "default": "multiplication in triangle"
       }
     }
   },
@@ -5239,7 +5239,7 @@
     "key": "2A66",
     "mappings": {
       "default": {
-        "default": "equals sign with dot below"
+        "default": "equals with dot below"
       }
     }
   },
@@ -5375,7 +5375,7 @@
     "key": "2A77",
     "mappings": {
       "default": {
-        "default": "equals sign with two dots above and two dots below"
+        "default": "equals with two dots above and two dots below"
       }
     }
   },
@@ -5695,7 +5695,7 @@
     "key": "2A9F",
     "mappings": {
       "default": {
-        "default": "similar above less than above equals sign"
+        "default": "similar above less than above equals"
       }
     }
   },
@@ -5703,7 +5703,7 @@
     "key": "2AA0",
     "mappings": {
       "default": {
-        "default": "similar above greater than above equals sign"
+        "default": "similar above greater than above equals"
       }
     }
   },
@@ -5835,7 +5835,7 @@
     "key": "2AAF",
     "mappings": {
       "default": {
-        "default": "precedes above single line equals sign"
+        "default": "precedes above single line equals"
       }
     }
   },
@@ -5843,7 +5843,7 @@
     "key": "2AB0",
     "mappings": {
       "default": {
-        "default": "succeeds above single line equals sign"
+        "default": "succeeds above single line equals"
       }
     }
   },
@@ -5963,7 +5963,7 @@
     "key": "2ABF",
     "mappings": {
       "default": {
-        "default": "subset with plus sign below"
+        "default": "subset with plus below"
       }
     }
   },
@@ -5971,7 +5971,7 @@
     "key": "2AC0",
     "mappings": {
       "default": {
-        "default": "superset with plus sign below"
+        "default": "superset with plus below"
       }
     }
   },
@@ -5979,7 +5979,7 @@
     "key": "2AC1",
     "mappings": {
       "default": {
-        "default": "subset with multiplication sign below"
+        "default": "subset with multiplication below"
       }
     }
   },
@@ -5987,7 +5987,7 @@
     "key": "2AC2",
     "mappings": {
       "default": {
-        "default": "superset with multiplication sign below"
+        "default": "superset with multiplication below"
       }
     }
   },
@@ -6011,7 +6011,7 @@
     "key": "2AC5",
     "mappings": {
       "default": {
-        "default": "subset of above equals sign"
+        "default": "subset of above equals"
       }
     }
   },
@@ -6019,7 +6019,7 @@
     "key": "2AC6",
     "mappings": {
       "default": {
-        "default": "superset of above equals sign"
+        "default": "superset of above equals"
       }
     }
   },
@@ -6323,7 +6323,7 @@
     "key": "2AEC",
     "mappings": {
       "default": {
-        "default": "double stroke not sign"
+        "default": "double stroke not"
       }
     }
   },
@@ -6331,7 +6331,7 @@
     "key": "2AED",
     "mappings": {
       "default": {
-        "default": "reversed double stroke not sign"
+        "default": "reversed double stroke not"
       }
     }
   },
@@ -6710,7 +6710,7 @@
     "key": "FE5F",
     "mappings": {
       "default": {
-        "default": "small number sign"
+        "default": "small number"
       }
     }
   },
@@ -6734,7 +6734,7 @@
     "key": "FE62",
     "mappings": {
       "default": {
-        "default": "small plus sign"
+        "default": "small plus"
       }
     }
   },
@@ -6750,7 +6750,7 @@
     "key": "FE64",
     "mappings": {
       "default": {
-        "default": "small less than sign"
+        "default": "small less than"
       }
     }
   },
@@ -6758,7 +6758,7 @@
     "key": "FE65",
     "mappings": {
       "default": {
-        "default": "small greater than sign"
+        "default": "small greater than"
       }
     }
   },
@@ -6783,7 +6783,7 @@
     "key": "FE69",
     "mappings": {
       "default": {
-        "default": "small dollar sign"
+        "default": "small dollar"
       }
     }
   },
@@ -6791,7 +6791,7 @@
     "key": "FE6A",
     "mappings": {
       "default": {
-        "default": "small percent sign"
+        "default": "small percent"
       }
     }
   },
@@ -6823,7 +6823,7 @@
     "key": "FF03",
     "mappings": {
       "default": {
-        "default": "number sign"
+        "default": "number"
       }
     }
   },
@@ -6831,7 +6831,7 @@
     "key": "FF04",
     "mappings": {
       "default": {
-        "default": "dollar sign"
+        "default": "dollar"
       }
     }
   },
@@ -6839,7 +6839,7 @@
     "key": "FF05",
     "mappings": {
       "default": {
-        "default": "percent sign"
+        "default": "percent"
       }
     }
   },
@@ -6871,7 +6871,7 @@
     "key": "FF0B",
     "mappings": {
       "default": {
-        "default": "plus sign"
+        "default": "plus"
       }
     }
   },
@@ -7019,7 +7019,7 @@
     "key": "FFE0",
     "mappings": {
       "default": {
-        "default": "cent sign"
+        "default": "cent"
       }
     }
   },
@@ -7027,7 +7027,7 @@
     "key": "FFE1",
     "mappings": {
       "default": {
-        "default": "pound sign"
+        "default": "pound"
       }
     }
   },
@@ -7035,7 +7035,7 @@
     "key": "FFE2",
     "mappings": {
       "default": {
-        "default": "not sign"
+        "default": "not"
       }
     }
   },
@@ -7062,7 +7062,7 @@
     "key": "FFE5",
     "mappings": {
       "default": {
-        "default": "yen sign"
+        "default": "yen"
       }
     }
   },
@@ -7070,7 +7070,7 @@
     "key": "FFE6",
     "mappings": {
       "default": {
-        "default": "won sign"
+        "default": "won"
       }
     }
   },
