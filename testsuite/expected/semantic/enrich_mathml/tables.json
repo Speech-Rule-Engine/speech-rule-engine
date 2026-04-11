@@ -680,28 +680,28 @@
       "expected": "<math><mi type=\"identifier\" role=\"greekletter\" font=\"sans-serif-bold\" annotation=\"clearspeak:simple\" id=\"0\">𝝖</mi></math>"
     },
     "EmptyAccents_0": {
-      "expected": "<math><munderover type=\"underscore\" role=\"arrow\" embellished=\"relation\" id=\"3\" children=\"0,1\"><mo type=\"relation\" role=\"arrow\" annotation=\"empty:MUNDEROVER\" id=\"0\" parent=\"3\">→</mo><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></munderover></math>"
+      "expected": "<math><munderover type=\"underscore\" role=\"arrow\" embellished=\"relation\" id=\"3\" children=\"0,1\"><mo type=\"relation\" role=\"arrow\" id=\"0\" parent=\"3\">→</mo><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></munderover></math>"
     },
     "EmptyAccents_1": {
-      "expected": "<math><munderover type=\"overscore\" role=\"arrow\" embellished=\"relation\" id=\"3\" children=\"0,2\"><mo type=\"relation\" role=\"arrow\" annotation=\"empty:MUNDEROVER\" id=\"0\" parent=\"3\">→</mo><mrow/><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"3\">≅</mo></munderover></math>"
+      "expected": "<math><munderover type=\"overscore\" role=\"arrow\" embellished=\"relation\" id=\"3\" children=\"0,2\"><mo type=\"relation\" role=\"arrow\" id=\"0\" parent=\"3\">→</mo><mrow/><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"3\">≅</mo></munderover></math>"
     },
     "EmptyAccents_2": {
       "expected": "<math><munderover type=\"underover\" role=\"arrow\" embellished=\"relation\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mo type=\"relation\" role=\"arrow\" id=\"0\" parent=\"4\">→</mo><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"4\">≅</mo><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"4\">=</mo></munderover></math>"
     },
     "EmptyAccents_3": {
-      "expected": "<math><munderover type=\"underscore\" role=\"latinletter\" id=\"3\" children=\"0,1\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\" parent=\"3\">A</mi><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></munderover></math>"
+      "expected": "<math><munderover type=\"underscore\" role=\"latinletter\" id=\"3\" children=\"0,1\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">A</mi><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></munderover></math>"
     },
     "EmptyAccents_4": {
-      "expected": "<math><munderover type=\"overscore\" role=\"latinletter\" id=\"3\" children=\"0,2\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\" parent=\"3\">A</mi><mrow/><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"3\">≅</mo></munderover></math>"
+      "expected": "<math><munderover type=\"overscore\" role=\"latinletter\" id=\"3\" children=\"0,2\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"3\">A</mi><mrow/><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"3\">≅</mo></munderover></math>"
     },
     "EmptyAccents_5": {
       "expected": "<math><munderover type=\"underover\" role=\"latinletter\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\" parent=\"4\">A</mi><mo type=\"relation\" role=\"underaccent\" annotation=\"accent:equality\" id=\"1\" parent=\"4\">≅</mo><mo type=\"relation\" role=\"overaccent\" annotation=\"accent:equality\" id=\"2\" parent=\"4\">=</mo></munderover></math>"
     },
     "EmptyAccents_6": {
-      "expected": "<math><msubsup type=\"subscript\" role=\"close\" embellished=\"fence\" id=\"3\" children=\"0,1\"><mo type=\"fence\" role=\"close\" annotation=\"empty:MSUBSUP\" id=\"0\" parent=\"3\">)</mo><mo type=\"relation\" role=\"equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></msubsup></math>"
+      "expected": "<math><msubsup type=\"subscript\" role=\"close\" embellished=\"fence\" id=\"3\" children=\"0,1\"><mo type=\"fence\" role=\"close\" id=\"0\" parent=\"3\">)</mo><mo type=\"relation\" role=\"equality\" id=\"1\" parent=\"3\">≅</mo><mrow/></msubsup></math>"
     },
     "EmptyAccents_7": {
-      "expected": "<math><msubsup type=\"superscript\" role=\"close\" embellished=\"fence\" id=\"3\" children=\"0,2\"><mo type=\"fence\" role=\"close\" annotation=\"empty:MSUBSUP\" id=\"0\" parent=\"3\">)</mo><mrow/><mo type=\"relation\" role=\"equality\" id=\"2\" parent=\"3\">≅</mo></msubsup></math>"
+      "expected": "<math><msubsup type=\"superscript\" role=\"close\" embellished=\"fence\" id=\"3\" children=\"0,2\"><mo type=\"fence\" role=\"close\" id=\"0\" parent=\"3\">)</mo><mrow/><mo type=\"relation\" role=\"equality\" id=\"2\" parent=\"3\">≅</mo></msubsup></math>"
     },
     "EmptyAccents_8": {
       "expected": "<math><msubsup type=\"subsup\" role=\"close\" embellished=\"fence\" id=\"4\" children=\"0,1,2\" collapsed=\"(4 (3 0 1) 2)\"><mo type=\"fence\" role=\"close\" id=\"0\" parent=\"4\">)</mo><mo type=\"relation\" role=\"equality\" id=\"1\" parent=\"4\">≅</mo><mo type=\"relation\" role=\"equality\" id=\"2\" parent=\"4\">=</mo></msubsup></math>"

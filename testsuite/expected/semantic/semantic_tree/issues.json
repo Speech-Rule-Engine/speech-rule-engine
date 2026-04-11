@@ -217,6 +217,66 @@
     },
     "MJ_Issue_3453_1": {
       "expected": "<stree><punctuated role=\"text\" id=\"15\"><content><punctuation role=\"dummy\" id=\"14\">⁣</punctuation></content><children><text role=\"space\" annotation=\"clearspeak:unit\" id=\"0\"/><table role=\"unknown\" id=\"13\"><children><row role=\"table\" id=\"1\"/><row role=\"table\" id=\"12\"><children><cell role=\"table\" id=\"7\"><children><empty role=\"unknown\" id=\"6\"/></children></cell><cell role=\"table\" id=\"9\"><children><empty role=\"unknown\" id=\"8\"/></children></cell><cell role=\"table\" id=\"11\"><children><empty role=\"integer\" id=\"10\"/></children></cell></children></row></children></table></children></punctuated></stree>"
+    },
+    "Mj_Issue_3551_0": {
+      "expected": "<stree><subscript role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\" texclass=\"ORD\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\" texclass=\"ORD\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_1": {
+      "expected": "<stree><subscript role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_2": {
+      "expected": "<stree><subscript role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_3": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"6\"><children><subscript role=\"subsup\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></superscript></stree>"
+    },
+    "Mj_Issue_3551_4": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></superscript></stree>"
+    },
+    "Mj_Issue_3551_5": {
+      "expected": "<stree><subscript role=\"latinletter\" id=\"5\"><children><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_6": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"5\"><children><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></superscript></stree>"
+    },
+    "Mj_Issue_3551_7": {
+      "expected": "<stree><subscript role=\"latinletter\" id=\"5\"><children><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_8": {
+      "expected": "<stree><superscript role=\"latinletter\" id=\"5\"><children><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></superscript></stree>"
+    },
+    "Mj_Issue_3551_9": {
+      "expected": "<stree><subscript role=\"implicit\" id=\"6\"><children><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">b</identifier></children></subscript></stree>"
+    },
+    "Mj_Issue_3551_10": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\" texclass=\"ORD\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\" texclass=\"ORD\">b</identifier></children></underscore></stree>"
+    },
+    "Mj_Issue_3551_11": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></underscore></stree>"
+    },
+    "Mj_Issue_3551_12": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></underscore></stree>"
+    },
+    "Mj_Issue_3551_13": {
+      "expected": "<stree><overscore role=\"latinletter\" id=\"6\"><children><underscore role=\"underover\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></overscore></stree>"
+    },
+    "Mj_Issue_3551_14": {
+      "expected": "<stree><overscore role=\"latinletter\" id=\"5\"><children><overscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"overaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></overscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></overscore></stree>"
+    },
+    "Mj_Issue_3551_15": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"5\"><children><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></underscore></stree>"
+    },
+    "Mj_Issue_3551_16": {
+      "expected": "<stree><overscore role=\"latinletter\" id=\"5\"><children><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:overaccent\" id=\"1\">˙</punctuation></children></underscore><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></overscore></stree>"
+    },
+    "Mj_Issue_3551_17": {
+      "expected": "<stree><underscore role=\"latinletter\" id=\"5\"><children><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">b</identifier></children></underscore></stree>"
+    },
+    "Mj_Issue_3551_18": {
+      "expected": "<stree><overscore role=\"latinletter\" id=\"5\"><children><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">c</identifier></children></overscore></stree>"
+    },
+    "Mj_Issue_3551_19": {
+      "expected": "<stree><underscore role=\"implicit\" id=\"6\"><children><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">d</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">b</identifier></children></underscore></stree>"
     }
   }
 }

@@ -2478,10 +2478,10 @@
     "key": "2971",
     "mappings": {
       "default": {
-        "default": "equals sign above right arrow"
+        "default": "equals above right arrow"
       },
       "mathspeak": {
-        "sbrief": "equals sign above R arrow"
+        "sbrief": "equals above R arrow"
       }
     }
   },
@@ -3023,10 +3023,10 @@
     "key": "2B40",
     "mappings": {
       "default": {
-        "default": "equals sign above left arrow"
+        "default": "equals above left arrow"
       },
       "mathspeak": {
-        "sbrief": "equals sign above L arrow"
+        "sbrief": "equals above L arrow"
       }
     }
   },

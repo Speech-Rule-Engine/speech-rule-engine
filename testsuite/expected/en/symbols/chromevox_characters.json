@@ -7870,7 +7870,7 @@
       "expected": "right double arrow with rounded head"
     },
     "⥱": {
-      "expected": "equals sign above right arrow"
+      "expected": "equals above right arrow"
     },
     "⥲": {
       "expected": "tilde operator above right arrow"
@@ -8026,7 +8026,7 @@
       "expected": "wave arrow pointing directly left"
     },
     "⭀": {
-      "expected": "equals sign above left arrow"
+      "expected": "equals above left arrow"
     },
     "⭁": {
       "expected": "reverse tilde operator above left arrow"
@@ -9790,10 +9790,10 @@
       "expected": "number sign"
     },
     "$": {
-      "expected": "dollar sign"
+      "expected": "dollar"
     },
     "%": {
-      "expected": "percent sign"
+      "expected": "percent"
     },
     "&": {
       "expected": "ampersand"
@@ -9862,28 +9862,28 @@
       "expected": "inverted exclamation mark"
     },
     "¢": {
-      "expected": "cent sign"
+      "expected": "cent"
     },
     "£": {
-      "expected": "pound sign"
+      "expected": "pound"
     },
     "¤": {
-      "expected": "currency sign"
+      "expected": "currency"
     },
     "¥": {
-      "expected": "yen sign"
+      "expected": "yen"
     },
     "¦": {
       "expected": "broken vertical bar"
     },
     "§": {
-      "expected": "section sign"
+      "expected": "section"
     },
     "¨": {
       "expected": "two dots"
     },
     "©": {
-      "expected": "copyright sign"
+      "expected": "copyright"
     },
     "ª": {
       "expected": "feminine ordinal indicator"
@@ -9892,10 +9892,10 @@
       "expected": "left pointing guillemet"
     },
     "¬": {
-      "expected": "not sign"
+      "expected": "not"
     },
     "®": {
-      "expected": "registered sign"
+      "expected": "registered"
     },
     "¯": {
       "expected": "bar"
@@ -9910,10 +9910,10 @@
       "expected": "acute"
     },
     "µ": {
-      "expected": "micro sign"
+      "expected": "micro"
     },
     "¶": {
-      "expected": "paragraph sign"
+      "expected": "paragraph"
     },
     "·": {
       "expected": "dot"
@@ -9934,7 +9934,7 @@
       "expected": "times"
     },
     "÷": {
-      "expected": "division sign"
+      "expected": "division"
     },
     "˘": {
       "expected": "breve"
@@ -10969,7 +10969,7 @@
       "expected": "z notation bag membership"
     },
     "⌀": {
-      "expected": "diameter sign"
+      "expected": "diameter"
     },
     "⌂": {
       "expected": "house"
@@ -11455,40 +11455,40 @@
       "expected": "plus underdot"
     },
     "⨦": {
-      "expected": "plus sign with tilde below"
+      "expected": "plus with tilde below"
     },
     "⨧": {
-      "expected": "plus sign with subscript two"
+      "expected": "plus with subscript two"
     },
     "⨨": {
-      "expected": "plus sign with black triangle"
+      "expected": "plus with black triangle"
     },
     "⨩": {
-      "expected": "minus sign with comma above"
+      "expected": "minus with comma above"
     },
     "⨪": {
-      "expected": "minus sign with dot below"
+      "expected": "minus with dot below"
     },
     "⨫": {
-      "expected": "minus sign with falling dots"
+      "expected": "minus with falling dots"
     },
     "⨬": {
-      "expected": "minus sign with rising dots"
+      "expected": "minus with rising dots"
     },
     "⨭": {
-      "expected": "plus sign in left half circle"
+      "expected": "plus in left half circle"
     },
     "⨮": {
-      "expected": "plus sign in right half circle"
+      "expected": "plus in right half circle"
     },
     "⨯": {
       "expected": "vector or cross product"
     },
     "⨰": {
-      "expected": "multiplication sign with dot above"
+      "expected": "multiplication with dot above"
     },
     "⨱": {
-      "expected": "multiplication sign with underbar"
+      "expected": "multiplication with underbar"
     },
     "⨲": {
       "expected": "semidirect product with bottom closed"
@@ -11497,28 +11497,28 @@
       "expected": "smash product"
     },
     "⨴": {
-      "expected": "multiplication sign in left half circle"
+      "expected": "multiplication in left half circle"
     },
     "⨵": {
-      "expected": "multiplication sign in right half circle"
+      "expected": "multiplication in right half circle"
     },
     "⨶": {
-      "expected": "circled multiplication sign with circumflex accent"
+      "expected": "circled multiplication with circumflex accent"
     },
     "⨷": {
-      "expected": "multiplication sign in double circle"
+      "expected": "multiplication in double circle"
     },
     "⨸": {
       "expected": "circled division"
     },
     "⨹": {
-      "expected": "plus sign in triangle"
+      "expected": "plus in triangle"
     },
     "⨺": {
-      "expected": "minus sign in triangle"
+      "expected": "minus in triangle"
     },
     "⨻": {
-      "expected": "multiplication sign in triangle"
+      "expected": "multiplication in triangle"
     },
     "⨼": {
       "expected": "interior product"
@@ -11647,7 +11647,7 @@
       "expected": "z notation range antirestriction"
     },
     "⩦": {
-      "expected": "equals sign with dot below"
+      "expected": "equals with dot below"
     },
     "⩧": {
       "expected": "identical with dot above"
@@ -11698,7 +11698,7 @@
       "expected": "three consecutive equals"
     },
     "⩷": {
-      "expected": "equals sign with two dots above and two dots below"
+      "expected": "equals with two dots above and two dots below"
     },
     "⩸": {
       "expected": "equivalent with four dots above"
@@ -11818,10 +11818,10 @@
       "expected": "similar or greater than"
     },
     "⪟": {
-      "expected": "similar above less than above equals sign"
+      "expected": "similar above less than above equals"
     },
     "⪠": {
-      "expected": "similar above greater than above equals sign"
+      "expected": "similar above greater than above equals"
     },
     "⪡": {
       "expected": "double nested less than"
@@ -11866,10 +11866,10 @@
       "expected": "equals with bumpy above"
     },
     "⪯": {
-      "expected": "precedes above single line equals sign"
+      "expected": "precedes above single line equals"
     },
     "⪰": {
-      "expected": "succeeds above single line equals sign"
+      "expected": "succeeds above single line equals"
     },
     "⪱": {
       "expected": "precedes above single line not equals"
@@ -11914,16 +11914,16 @@
       "expected": "superset with dot"
     },
     "⪿": {
-      "expected": "subset with plus sign below"
+      "expected": "subset with plus below"
     },
     "⫀": {
-      "expected": "superset with plus sign below"
+      "expected": "superset with plus below"
     },
     "⫁": {
-      "expected": "subset with multiplication sign below"
+      "expected": "subset with multiplication below"
     },
     "⫂": {
-      "expected": "superset with multiplication sign below"
+      "expected": "superset with multiplication below"
     },
     "⫃": {
       "expected": "subset of or equals with dot above"
@@ -11932,10 +11932,10 @@
       "expected": "superset of or equals with dot above"
     },
     "⫅": {
-      "expected": "subset of above equals sign"
+      "expected": "subset of above equals"
     },
     "⫆": {
-      "expected": "superset of above equals sign"
+      "expected": "superset of above equals"
     },
     "⫇": {
       "expected": "subset of above tilde"
@@ -12049,10 +12049,10 @@
       "expected": "double up tack"
     },
     "⫬": {
-      "expected": "double stroke not sign"
+      "expected": "double stroke not"
     },
     "⫭": {
-      "expected": "reversed double stroke not sign"
+      "expected": "reversed double stroke not"
     },
     "⫮": {
       "expected": "does not divide with reversed negation slash"
@@ -12193,7 +12193,7 @@
       "expected": "small em dash"
     },
     "﹟": {
-      "expected": "small number sign"
+      "expected": "small number"
     },
     "﹠": {
       "expected": "small ampersand"
@@ -12202,16 +12202,16 @@
       "expected": "small asterisk"
     },
     "﹢": {
-      "expected": "small plus sign"
+      "expected": "small plus"
     },
     "﹣": {
       "expected": "small hyphen minus"
     },
     "﹤": {
-      "expected": "small less than sign"
+      "expected": "small less than"
     },
     "﹥": {
-      "expected": "small greater than sign"
+      "expected": "small greater than"
     },
     "﹦": {
       "expected": "small equals"
@@ -12220,10 +12220,10 @@
       "expected": "small backslash"
     },
     "﹩": {
-      "expected": "small dollar sign"
+      "expected": "small dollar"
     },
     "﹪": {
-      "expected": "small percent sign"
+      "expected": "small percent"
     },
     "﹫": {
       "expected": "small commercial at"
@@ -12235,13 +12235,13 @@
       "expected": "quotation mark"
     },
     "＃": {
-      "expected": "number sign"
+      "expected": "number"
     },
     "＄": {
-      "expected": "dollar sign"
+      "expected": "dollar"
     },
     "％": {
-      "expected": "percent sign"
+      "expected": "percent"
     },
     "＆": {
       "expected": "ampersand"
@@ -12253,7 +12253,7 @@
       "expected": "asterisk"
     },
     "＋": {
-      "expected": "plus sign"
+      "expected": "plus"
     },
     "，": {
       "expected": "comma"
@@ -12307,13 +12307,13 @@
       "expected": "tilde"
     },
     "￠": {
-      "expected": "cent sign"
+      "expected": "cent"
     },
     "￡": {
-      "expected": "pound sign"
+      "expected": "pound"
     },
     "￢": {
-      "expected": "not sign"
+      "expected": "not"
     },
     "￣": {
       "expected": "macron"
@@ -12322,10 +12322,10 @@
       "expected": "broken vertical bar"
     },
     "￥": {
-      "expected": "yen sign"
+      "expected": "yen"
     },
     "￦": {
-      "expected": "won sign"
+      "expected": "won"
     },
     "￨": {
       "expected": "halfwidth forms light vertical"

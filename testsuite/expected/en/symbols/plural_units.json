@@ -503,13 +503,6 @@
     },
     "T": {
       "expected": "tons"
-    },
-    "_commentAdded_": "Add for locale",
-    "MΩ": {
-      "expected": "megohms"
-    },
-    "kΩ": {
-      "expected": "kilohms"
     }
   }
 }
