@@ -327,7 +327,48 @@
     },
     "Mj_Issue_3551_19": {
       "input": "<munderover><mrow><mi>a</mi><mi>d</mi></mrow><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "issue_853": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_1": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_10": {
+      "input": "<mi>a</mi><mfrac><mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_11": {
+      "input": "<mi>a</mi><mfrac><mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_12": {
+      "input": "<mi>a</mi><mfrac><mrow><mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_13": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_2": {
+      "input": "<mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_3": {
+      "input": "<mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mo>--</mo></mrow>"
+    },
+    "issue_853_4": {
+      "input": "<mrow><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_5": {
+      "input": "<mrow><mrow><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_6": {
+      "input": "<mrow><mo>-</mo><mo>-</mo><mn>3</mn><mi>a</mi><mi>t</mi></mrow>"
+    },
+    "issue_853_7": {
+      "input": "<mfrac><mi>b</mi><mrow><mo>-</mo><mo>-</mo><mn>3</mn><mi>a</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>c</mi>"
+    },
+    "issue_853_8": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_9": {
+      "input": "<mi>a</mi><mfrac><mrow><mrow><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
     }
-
   }
 }
