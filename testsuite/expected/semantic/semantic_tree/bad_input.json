@@ -16,7 +16,7 @@
       "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">a</identifier></stree>"
     },
     "Layout_Underspec_3": {
-      "expected": "<stree><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:question\" id=\"1\">?</punctuation></children></underscore></stree>"
+      "expected": "<stree><underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"underaccent\" annotation=\"accent:question\" id=\"1\">?</punctuation></children></underscore></stree>"
     },
     "Layout_Underspec_4": {
       "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUB;clearspeak:simple\" id=\"0\">a</identifier></stree>"
@@ -28,7 +28,7 @@
       "expected": "<stree><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUBSUP;clearspeak:simple\" id=\"0\">a</identifier></stree>"
     },
     "Layout_Underspec_7": {
-      "expected": "<stree><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MSUBSUP;clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"question\" id=\"1\">?</punctuation></children></subscript></stree>"
+      "expected": "<stree><subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><punctuation role=\"question\" id=\"1\">?</punctuation></children></subscript></stree>"
     },
     "_comment_3": "Overspecified Layout Elements",
     "Layout_Overspec_0": {
@@ -79,7 +79,7 @@
       "expected": "<stree><function role=\"limit function\" font=\"normal\" annotation=\"empty:MUNDEROVER\" id=\"0\">lim</function></stree>"
     },
     "Limit_Underspec_3": {
-      "expected": "<stree><limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" annotation=\"empty:MUNDEROVER\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "Limit_Underspec_4": {
       "expected": "<stree><function role=\"limit function\" font=\"normal\" annotation=\"empty:MSUB\" id=\"0\">lim</function></stree>"
@@ -91,7 +91,7 @@
       "expected": "<stree><function role=\"limit function\" font=\"normal\" annotation=\"empty:MSUBSUP\" id=\"0\">lim</function></stree>"
     },
     "Limit_Underspec_7": {
-      "expected": "<stree><limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" annotation=\"empty:MSUBSUP\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "_comment_5a": "Overspecified Layout Elements",
     "Limit_Overspec_0": {
@@ -123,7 +123,7 @@
       "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MUNDEROVER\" id=\"0\">∑</largeop></stree>"
     },
     "Bigop_Underspec_3": {
-      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" annotation=\"empty:MUNDEROVER\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "Bigop_Underspec_4": {
       "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MSUB\" id=\"0\">∑</largeop></stree>"
@@ -135,7 +135,7 @@
       "expected": "<stree><largeop role=\"sum\" annotation=\"empty:MSUBSUP\" id=\"0\">∑</largeop></stree>"
     },
     "Bigop_Underspec_7": {
-      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" annotation=\"empty:MSUBSUP\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "_comment_7": "Underspecified Layout Elements with Integral",
     "Integral_Underspec_0": {
@@ -148,7 +148,7 @@
       "expected": "<stree><largeop role=\"integral\" annotation=\"empty:MUNDEROVER\" id=\"0\">∫</largeop></stree>"
     },
     "Integral_Underspec_3": {
-      "expected": "<stree><limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" annotation=\"empty:MUNDEROVER\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "Integral_Underspec_4": {
       "expected": "<stree><largeop role=\"integral\" annotation=\"empty:MSUB\" id=\"0\">∫</largeop></stree>"
@@ -160,7 +160,7 @@
       "expected": "<stree><largeop role=\"integral\" annotation=\"empty:MSUBSUP\" id=\"0\">∫</largeop></stree>"
     },
     "Integral_Underspec_7": {
-      "expected": "<stree><limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" annotation=\"empty:MSUBSUP\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
+      "expected": "<stree><limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier></children></limlower></stree>"
     },
     "_comment_8": "Underspecified Fraction",
     "Fraction_Underspec": {

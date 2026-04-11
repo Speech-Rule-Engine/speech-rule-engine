@@ -679,28 +679,28 @@
       "expected": "<stree><identifier role=\"greekletter\" font=\"sans-serif-bold\" annotation=\"clearspeak:simple\" id=\"0\">𝝖</identifier></stree>"
     },
     "EmptyAccents_0": {
-      "expected": "<stree><underscore role=\"arrow\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" annotation=\"empty:MUNDEROVER\" id=\"0\">→</relation><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore></stree>"
+      "expected": "<stree><underscore role=\"arrow\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" id=\"0\">→</relation><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore></stree>"
     },
     "EmptyAccents_1": {
-      "expected": "<stree><overscore role=\"arrow\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" annotation=\"empty:MUNDEROVER\" id=\"0\">→</relation><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">≅</relation></children></overscore></stree>"
+      "expected": "<stree><overscore role=\"arrow\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" id=\"0\">→</relation><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">≅</relation></children></overscore></stree>"
     },
     "EmptyAccents_2": {
       "expected": "<stree><overscore role=\"arrow\" embellished=\"relation\" id=\"4\"><children><underscore role=\"underover\" embellished=\"relation\" id=\"3\"><children><relation role=\"arrow\" id=\"0\">→</relation><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">=</relation></children></overscore></stree>"
     },
     "EmptyAccents_3": {
-      "expected": "<stree><underscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">A</identifier><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore></stree>"
+      "expected": "<stree><underscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore></stree>"
     },
     "EmptyAccents_4": {
-      "expected": "<stree><overscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"empty:MUNDEROVER;clearspeak:simple\" id=\"0\">A</identifier><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">≅</relation></children></overscore></stree>"
+      "expected": "<stree><overscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">≅</relation></children></overscore></stree>"
     },
     "EmptyAccents_5": {
       "expected": "<stree><overscore role=\"latinletter\" id=\"4\"><children><underscore role=\"underover\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier><relation role=\"underaccent\" annotation=\"accent:equality\" id=\"1\">≅</relation></children></underscore><relation role=\"overaccent\" annotation=\"accent:equality\" id=\"2\">=</relation></children></overscore></stree>"
     },
     "EmptyAccents_6": {
-      "expected": "<stree><subscript role=\"close\" embellished=\"fence\" id=\"3\"><children><fence role=\"close\" annotation=\"empty:MSUBSUP\" id=\"0\">)</fence><relation role=\"equality\" id=\"1\">≅</relation></children></subscript></stree>"
+      "expected": "<stree><subscript role=\"close\" embellished=\"fence\" id=\"3\"><children><fence role=\"close\" id=\"0\">)</fence><relation role=\"equality\" id=\"1\">≅</relation></children></subscript></stree>"
     },
     "EmptyAccents_7": {
-      "expected": "<stree><superscript role=\"close\" embellished=\"fence\" id=\"3\"><children><fence role=\"close\" annotation=\"empty:MSUBSUP\" id=\"0\">)</fence><relation role=\"equality\" id=\"2\">≅</relation></children></superscript></stree>"
+      "expected": "<stree><superscript role=\"close\" embellished=\"fence\" id=\"3\"><children><fence role=\"close\" id=\"0\">)</fence><relation role=\"equality\" id=\"2\">≅</relation></children></superscript></stree>"
     },
     "EmptyAccents_8": {
       "expected": "<stree><superscript role=\"close\" embellished=\"fence\" id=\"4\"><children><subscript role=\"subsup\" embellished=\"fence\" id=\"3\"><children><fence role=\"close\" id=\"0\">)</fence><relation role=\"equality\" id=\"1\">≅</relation></children></subscript><relation role=\"equality\" id=\"2\">=</relation></children></superscript></stree>"

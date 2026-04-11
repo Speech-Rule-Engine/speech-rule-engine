@@ -266,6 +266,68 @@
     },
     "MJ_Issue_3453_1": {
       "input": "<mrow><mrow><mspace width=\"4em\" /><mtable><mtr /><mtr><mtd columnalign=\"right\"><msup><mi></mi><mn></mn></msup><mo></mo><mi></mi></mtd><mtd columnalign=\"left\"><mo></mo></mtd><mtd columnalign=\"left\"><mn></mn></mtd></mtr></mtable></mrow></mrow>"
+    },
+    "Mj_Issue_3551_0": {
+      "tex": "\\dot{a}_{b}^{\\phantom{c}}",
+      "input": "<msubsup><mrow data-mjx-texclass=\"ORD\"><mover><mi>a</mi><mo>˙</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mphantom><mi>c</mi></mphantom></mrow></mrow></msubsup>"
+    },
+    "Mj_Issue_3551_1": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_2": {
+      "input": "<msubsup><mi>a</mi><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_3": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_4": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_5": {
+      "input": "<msubsup><munder><mi>a</mi><mo>˙</mo></munder><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_6": {
+      "input": "<msubsup><munder><mi>a</mi><mo>˙</mo></munder><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_7": {
+      "input": "<msubsup><msub><mi>a</mi><mi>d</mi></msub><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_8": {
+      "input": "<msubsup><msub><mi>a</mi><mi>d</mi></msub><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_9": {
+      "input": "<msubsup><mrow><mi>a</mi><mi>d</mi></mrow><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_10": {
+      "input": "<munderover><mrow data-mjx-texclass=\"ORD\"><mover><mi>a</mi><mo>˙</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mphantom><mi>c</mi></mphantom></mrow></mrow></munderover>"
+    },
+    "Mj_Issue_3551_11": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_12": {
+      "input": "<munderover><mi>a</mi><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_13": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_14": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_15": {
+      "input": "<munderover><munder><mi>a</mi><mo>˙</mo></munder><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_16": {
+      "input": "<munderover><munder><mi>a</mi><mo>˙</mo></munder><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_17": {
+      "input": "<munderover><msub><mi>a</mi><mi>d</mi></msub><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_18": {
+      "input": "<munderover><msub><mi>a</mi><mi>d</mi></msub><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_19": {
+      "input": "<munderover><mrow><mi>a</mi><mi>d</mi></mrow><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
     }
+
   }
 }
