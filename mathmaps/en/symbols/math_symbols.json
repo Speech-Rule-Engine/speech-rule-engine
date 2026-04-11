@@ -36,6 +36,9 @@
     "mappings": {
       "default": {
         "default": "dollar"
+      },
+      "mathspeak": {
+        "default": "dollar sign"
       }
     }
   },
@@ -6784,6 +6787,9 @@
     "mappings": {
       "default": {
         "default": "small dollar"
+      },
+      "mathspeak": {
+        "default": "small dollar sign"
       }
     }
   },
@@ -6832,6 +6838,9 @@
     "mappings": {
       "default": {
         "default": "dollar"
+      },
+      "mathspeak": {
+        "default": "dollar sign"
       }
     }
   },

@@ -9790,7 +9790,7 @@
       "expected": "number sign"
     },
     "$": {
-      "expected": "dollar"
+      "expected": "dollar sign"
     },
     "%": {
       "expected": "percent"
@@ -12220,7 +12220,7 @@
       "expected": "small backslash"
     },
     "﹩": {
-      "expected": "small dollar"
+      "expected": "small dollar sign"
     },
     "﹪": {
       "expected": "small percent"
@@ -12238,7 +12238,7 @@
       "expected": "number"
     },
     "＄": {
-      "expected": "dollar"
+      "expected": "dollar sign"
     },
     "％": {
       "expected": "percent"
