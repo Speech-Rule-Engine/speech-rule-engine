@@ -424,7 +424,7 @@
       "key": "⥱",
       "domain": "mathspeak",
       "style": "sbrief",
-      "expected": "equals sign above R arrow"
+      "expected": "equals above R arrow"
     },
     "2972-mathspeak-sbrief": {
       "key": "⥲",
@@ -6154,7 +6154,7 @@
       "key": "⭀",
       "domain": "mathspeak",
       "style": "sbrief",
-      "expected": "equals sign above L arrow"
+      "expected": "equals above L arrow"
     },
     "2B41-mathspeak-sbrief": {
       "key": "⭁",
