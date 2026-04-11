@@ -1456,11 +1456,11 @@ export class SemanticProcessor {
     }
     if (isEmpty(child1)) {
       return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUP : MMLTAGS.MOVER,
-              [annotateEmpty([mmlTag], children[0]), child2]];
+              [children[0], child2]];
     }
     if (isEmpty(child2)) {
       return [mmlTag === MMLTAGS.MSUBSUP ? MMLTAGS.MSUB : MMLTAGS.MUNDER,
-              [annotateEmpty([mmlTag], children[0]), child1]];
+              [children[0], child1]];
     }
     return [mmlTag, children];
   }
