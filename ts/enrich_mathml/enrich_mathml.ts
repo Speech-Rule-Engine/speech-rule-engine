@@ -117,9 +117,6 @@ export function walkTree(semantic: SemanticNode): Element {
     ]);
     return ascendNewNode(newNode);
   }
-  // console.log(semantic.toString());
-  // console.log(semantic.mathml.toString());
-  // console.log(semantic.mathmlTree ? semantic.mathmlTree.toString() : 'Nothing');
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
     if (!semantic.childNodes.length) {
