@@ -377,25 +377,14 @@ export function partitionNodes(
 
 
 export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) {
-
+  if (newNode.mathmlTree) return;
   const parentTrees = new Set<Element>();
   nodeList.forEach((x) => parentTrees.add(x.mathmlTree?.parentElement || null));
-
-  // console.log(10);
-  // nodeList.forEach(x => console.log(x.mathmlTree ? x.mathmlTree?.toString() : x.mathmlTree));
-  // nodeList.forEach(x => console.log(x.mathml?.toString()));
-  // console.log(11);
-  // parentTrees.forEach(x => console.log(x?.toString()));
-  // nodeList.forEach(x => console.log(x.mathmlTree));
 
   // Case 1: If all nodes have the same mathml tree parent, we can use that
   // for the new node.
   if (parentTrees.size === 1 && !parentTrees.has(null)) {
     const singleton = [...parentTrees][0];
-    // console.log(3);
-    // console.log(singleton);
-    // console.log(singleton.childNodes.length);
-    // console.log(nodeList.length);
     if (
       hasEmptyTag(singleton) &&
         singleton.childNodes.length === nodeList.length
@@ -425,9 +414,4 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
       return;
     }
   };
-
-  //   console.log(2);
-  // parentTrees.forEach(x => console.log(x?.toString()));
-  // console.log(7);
-  // console.log(newNode.mathmlTree?.toString());
 }
