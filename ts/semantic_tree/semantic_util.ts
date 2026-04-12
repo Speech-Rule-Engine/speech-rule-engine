@@ -375,7 +375,14 @@ export function partitionNodes(
   return { rel: rel, comp: comp };
 }
 
-
+/**
+ * Heuristic to find a mathml Tree for a newly introduced node. Tries to find
+ * something like an mrow which is "unused" and which contains all the given
+ * child nodes.
+ *
+ * @param newNode The newly introduced node.
+ * @param nodeList The child nodes.
+ */
 export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) {
   if (newNode.mathmlTree) return;
   const parentTrees = new Set<Element>();
