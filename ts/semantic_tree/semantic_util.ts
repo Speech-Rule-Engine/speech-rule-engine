@@ -374,3 +374,51 @@ export function partitionNodes(
   rel.pop();
   return { rel: rel, comp: comp };
 }
+
+/**
+ * Heuristic to find a mathml Tree for a newly introduced node. Tries to find
+ * something like an mrow which is "unused" and which contains all the given
+ * child nodes.
+ *
+ * @param newNode The newly introduced node.
+ * @param nodeList The child nodes.
+ */
+export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) {
+  if (newNode.mathmlTree) return;
+  const parentTrees = new Set<Element>();
+  nodeList.forEach((x) => parentTrees.add(x.mathmlTree?.parentElement || null));
+
+  // Case 1: If all nodes have the same mathml tree parent, we can use that
+  // for the new node.
+  if (parentTrees.size === 1 && !parentTrees.has(null)) {
+    const singleton = [...parentTrees][0];
+    if (
+      hasEmptyTag(singleton) &&
+        singleton.childNodes.length === nodeList.length
+    ) {
+      newNode.mathmlTree = singleton;
+      return;
+    }
+    return;
+  }
+
+  // Case 2: If all nodes that have a mathml tree have the same parent, and
+  // the top level nodes of the constituent mathml nodes have the same parent,
+  // we can use that as the mathml tree for the new node.
+  if (parentTrees.has(null) && parentTrees.size <= 2) {
+    parentTrees.delete(null);
+    newNode.mathml.forEach(x => {
+      if (x.parentElement && !newNode.mathml.includes(x)) {
+        parentTrees.add(x.parentElement);
+      }
+    });
+  }
+  if (parentTrees.size === 1 && !parentTrees.has(null)) {
+    const singleton = [...parentTrees][0];
+    if (hasEmptyTag(singleton)
+      && DomUtil.toArray(singleton.childNodes).every(x => newNode.mathml.includes(x))) {
+      newNode.mathmlTree = singleton;
+      return;
+    }
+  };
+}

@@ -147,7 +147,7 @@ export function walkTree(semantic: SemanticNode): Element {
     // Children should not all be empty.
     semantic.childNodes.forEach((child) => {
       if (!child.mathml.length) {
-        child.mathml = [createInvisibleOperator(child)];
+        child.addMathmlNodes([createInvisibleOperator(child)]);
       }
     });
   }
@@ -862,7 +862,7 @@ export function cloneContentNode(content: SemanticNode): Element {
   const clone = SETTINGS.implicit
     ? createInvisibleOperator(content)
     : EnrichAttr.addMrow();
-  content.mathml = [clone];
+  content.addMathmlNodes([clone]);
   return clone;
 }
 

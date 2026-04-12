@@ -408,7 +408,7 @@ export class SemanticProcessor {
       }
       const spacer = SemanticProcessor.getSpacer_(sibling);
       if (spacer && spacer !== mt2) {
-        op.mathml.push(spacer);
+        op.addMathmlNodes([spacer]);
         op.mathmlTree = spacer;
         op.role = SemanticRole.SPACE;
       }
@@ -996,7 +996,7 @@ export class SemanticProcessor {
     }
     fence.replaceChild(newFence, rewritten.fence);
     if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
-      fence.mathml.push(fence.mathmlTree);
+      fence.addMathmlNodes([fence.mathmlTree]);
     }
     return { node: rewritten.node, fence: fence };
   }
@@ -2005,6 +2005,7 @@ export class SemanticProcessor {
       op.parent = newNode;
     });
     newNode.contentNodes = operators;
+    // console.log(newNode.mathmlTree?.toString());
     return newNode;
   }
 
@@ -2107,6 +2108,17 @@ export class SemanticProcessor {
     if (nodeList.length > 1) {
       newNode.role = SemanticRole.MULTIOP;
     }
+    SemanticUtil.findMathmlTree(newNode, [inner, ...nodeList]);
+    return newNode;
+  }
+
+  private multiopNode_(operators: SemanticNode[]): SemanticNode {
+    const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      SemanticType.OPERATOR,
+      operators,
+      []);
+    newNode.role = SemanticRole.MULTIOP;
+    SemanticUtil.findMathmlTree(newNode, operators);
     return newNode;
   }
 
@@ -2570,7 +2582,8 @@ export class SemanticProcessor {
     }
     // Pathological case: only operators in row.
     if (nodes.length === 0) {
-      return SemanticProcessor.getInstance().prefixNode_(prefix.pop(), prefix);
+      // console.log(8);
+      return SemanticProcessor.getInstance().multiopNode_(prefix);
     }
     if (nodes.length === 1) {
       return SemanticProcessor.getInstance().prefixNode_(nodes[0], prefix);
@@ -3282,7 +3295,7 @@ export class SemanticProcessor {
       ofence.mathmlTree.nextSibling !== cfence.mathmlTree
        ) {
       childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
-      childNode.mathml = [ofence.mathmlTree.nextSibling as Element];
+      childNode.addMathmlNodes([ofence.mathmlTree.nextSibling as Element]);
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
@@ -3937,7 +3950,7 @@ export class SemanticProcessor {
     if (appl) {
       // TODO: Work out why we cannot just take appl.
       applNode.mathmlTree = appl.mathmlTree;
-      applNode.mathml = appl.mathml;
+      applNode.addMathmlNodes(appl.mathml);
       applNode.annotation = appl.annotation;
       applNode.attributes = appl.attributes;
       delete SemanticProcessor.getInstance().funcAppls[func.id];

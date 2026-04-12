@@ -124,6 +124,16 @@
     "PrePostfixOperators_7": {
       "input": "<mo>+</mo><mo>+</mo><mi>a</mi><mo>&#x2213;</mo><mo>+</mo><mi>b</mi><mo>+</mo><mo>&#x2213;</mo><mi>c</mi><mo>+</mo>"
     },
+    "_comment_prepost_0": " Pre and postfix tests with operators collated in mrow.",
+    "PrePostfixCollatedOperators_0": {
+      "input": "<mrow><mo>+</mo><mo>+</mo></mrow><mi>a</mi>"
+    },
+    "PrePostfixCollatedOperators_1": {
+      "input": "<mi>a</mi><mrow><mo>+</mo><mo>+</mo></mrow>"
+    },
+    "PrePostfixCollatedOperators_2": {
+      "input": "<mrow><mo>+</mo><mo>+</mo></mrow><mi>a</mi><mrow><mo>+</mo><mo>+</mo></mrow>"
+    },
     "_comment_19": " Test operator trees with single operator.",
     "_comment_20": " Single identifier.",
     "SingleOperators_0": {
