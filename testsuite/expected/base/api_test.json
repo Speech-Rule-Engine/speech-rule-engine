@@ -403,6 +403,46 @@
       "input": "square",
       "expected": "{\"0\":{\"speech-none\":\"x\",\"prefix-none\":\"Base\",\"postfix-none\":\"\",\"summary-none\":\"identifier\",\"speech-ssml\":\"<say-as interpret-as=\\\"character\\\">x</say-as>\",\"prefix-ssml\":\"Base\",\"postfix-ssml\":\"\",\"summary-ssml\":\"identifier\"},\"1\":{\"speech-none\":\"2\",\"prefix-none\":\"Exponent\",\"postfix-none\":\"\",\"summary-none\":\"number\",\"speech-ssml\":\"2\",\"prefix-ssml\":\"Exponent\",\"postfix-ssml\":\"\",\"summary-ssml\":\"number\"},\"2\":{\"speech-none\":\"x squared\",\"prefix-none\":\"\",\"postfix-none\":\"\",\"summary-none\":\"power\",\"speech-ssml\":\"<say-as interpret-as=\\\"character\\\">x</say-as> squared\",\"prefix-ssml\":\"\",\"postfix-ssml\":\"\",\"summary-ssml\":\"power\"}}",
       "json": true
+    },
+    "Number_0": {
+      "type": "number",
+      "input": "10",
+      "expected": "ten"
+    },
+    "Number_1": {
+      "type": "ordinal",
+      "input": "10",
+      "expected": "tenth"
+    },
+    "Number_2": {
+      "type": "numericOrdinal",
+      "input": "10",
+      "expected": "10th"
+    },
+    "Number_3": {
+      "type": "vulgar",
+      "input": "1/10",
+      "expected": "one tenth"
+    },
+    "Walker_0": {
+      "type": "walk",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "Walker_1": {
+      "type": "move",
+      "expected": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+    },
+    "Walker_2": {
+      "type": "move",
+      "input": "DOWN",
+      "move": true,
+      "expected": "x"
+    },
+    "Walker_3": {
+      "type": "move",
+      "input": "RIGHT",
+      "move": true,
+      "expected": "equals"
     }
   }
 }

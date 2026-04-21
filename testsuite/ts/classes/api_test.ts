@@ -180,7 +180,7 @@ export class ApiTest extends AbstractJsonTest {
    * the quadratic equation unless a different input is provided.
    */
   protected getSample(expr: Expression) {
-    return ApiTest.SAMPLES[expr] || ApiTest.SAMPLES[Expression.Quadratic];
+    return ApiTest.SAMPLES[expr] || (expr ?? ApiTest.SAMPLES[Expression.Quadratic]);
   }
 
   /**

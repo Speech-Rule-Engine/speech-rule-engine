@@ -18,6 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+/**
+ * This file is tested with the local api test, which does not work with github
+ * actions. Therefore, we ignore it for the coverage computation.
+ */
+
+/* istanbul ignore file */
+
 import * as FileUtil from '../common/file_util.js';
 import { Engine, SREError } from '../common/engine.js';
 import * as ProcessorFactory from '../common/processor_factory.js';
