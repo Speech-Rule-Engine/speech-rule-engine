@@ -28,14 +28,14 @@
     "#mathjax/*": "@mathjax/src/mjs/*"
   },
   "dependencies": {
-    "@jest/globals": "^30.2.0",
+    "@jest/globals": "^30.3.0",
+    "@mathjax/src": "^4.1.1",
     "@types/jest": "^30.0.0",
     "cross-env": "^10.1.0",
-    "firebase-admin": "^13.6.0",
-    "jest": "^30.2.0",
-    "@mathjax/src": "4.1.0",
-    "rimraf": "^6.1.2",
-    "ts-jest": "^29.4.6",
+    "firebase-admin": "^13.8.0",
+    "jest": "^30.3.0",
+    "rimraf": "^6.1.3",
+    "ts-jest": "^29.4.9",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "xml-js": "^1.6.11"
