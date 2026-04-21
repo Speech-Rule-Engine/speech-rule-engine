@@ -28,18 +28,28 @@ declare let global: any;
 declare let require: (name: string) => any;
 declare let process: any;
 declare const DedicatedWorkerGlobalScope: any;
-
+// Webpack sets __non_webpack_require__ to the real Node.js require on node targets
+// and leaves it undefined on browser targets, avoiding static bundling analysis.
+declare const __non_webpack_require__: ((name: string) => any) | undefined;
 const windowSupported = (() => !(typeof window === 'undefined'))();
 const documentSupported = (() =>
   windowSupported && !(typeof window.document === 'undefined'))();
 const webworker = (() =>
   !(typeof DedicatedWorkerGlobalScope === 'undefined'))();
-const nodeRequire = () => {
-  try {
-    return eval('require');
-  } catch (_err) {
-    return (_file: string) => null as any;
+const nodeRequire = (): any => {
+  if (typeof __non_webpack_require__ !== 'undefined') {
+    return __non_webpack_require__;
   }
+  // process.versions.node is defined in real Node.js but not in webpack's
+  // browser process polyfill, so this distinguishes the two environments.
+  if (
+    typeof process !== 'undefined' &&
+      process.versions?.node != null &&
+      typeof require !== 'undefined'
+  ) {
+    return require;
+  }
+  return (_file: string) => null as any;
 };
 
 export const SystemExternal: any = {
