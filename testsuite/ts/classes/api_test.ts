@@ -327,7 +327,7 @@ export class WorkerTest extends ApiTest {
     const options = Object.assign({}, feature, ApiTest.SETUP);
     await System.setupEngine(options);
     const sxml = semanticMathmlSync(sample, options as any);
-    let promise = (System as any)[func](sxml.toString(), options);
+    let promise = (System.worker as any)[func](sxml.toString(), options);
     promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
     let output = await promise;
     output = output

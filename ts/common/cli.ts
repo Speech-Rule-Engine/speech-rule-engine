@@ -187,7 +187,7 @@ export class Cli {
     EnginePromise.getall().then(() => {
       this.runProcessors_(
         (proc, file) =>
-          this.output.write(System.processFile(proc, file) + '\n'),
+          this.output.write(System.file.processFile(proc, file) + '\n'),
         input
       );
     });

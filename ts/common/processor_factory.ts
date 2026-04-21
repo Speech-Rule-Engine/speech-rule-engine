@@ -137,6 +137,18 @@ export function keypress(name: string, expr: KeyCode | string): string {
     : processor.print(data);
 }
 
+/**
+ * Processes an input string with the given processor.
+ *
+ * @param processor The name of the processor to call.
+ * @param input The input string.
+ * @returns The computed data structure.
+ * @template T
+ */
+export function processString<T>(processor: string, input: string): T {
+  return process(processor, input);
+}
+
 //  semantic: XML of semantic tree.
 set(
   new Processor<Element>('semantic', {
