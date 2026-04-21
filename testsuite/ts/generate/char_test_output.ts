@@ -275,7 +275,7 @@ export async function testFromBase(locale: string, kind: SymbolType): Promise<tu
  * @returns The JSON content.
  */
 function loadMathmaps(locale: string): tu.JsonTest {
-  const file = System.localePath(locale);
+  const file = System.file.localePath(locale);
   return JSON.parse(fs.readFileSync(file, { encoding: 'utf8' }));
 }
 
