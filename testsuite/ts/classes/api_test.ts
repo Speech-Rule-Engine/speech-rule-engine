@@ -321,13 +321,16 @@ export class WorkerTest extends ApiTest {
     result: string | null,
     feature: FeatureVector,
     json: boolean,
-    _move: boolean
+    locale: boolean
   ) {
     const sample = this.getSample(input);
     const options = Object.assign({}, feature, ApiTest.SETUP);
+    if (locale) {
+      options.locale = input;
+    }
     await System.setupEngine(options);
-    const sxml = semanticMathmlSync(sample, options as any);
-    let promise = (System.worker as any)[func](sxml.toString(), options);
+    const sxml = locale ? '' : semanticMathmlSync(sample, options as any);
+    let promise = (System.worker as any)[func](locale ? options : sxml.toString(), options);
     promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
     let output = await promise;
     output = output
