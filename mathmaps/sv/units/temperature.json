@@ -3,20 +3,20 @@
     "locale": "sv"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
-        "default": "Fahrenheit",
-        "plural": "Fahrenheit"
+        "default": "Grader Fahrenheit",
+        "plural": "Grader Fahrenheit"
       }
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
-        "default": "Celsius",
-        "plural": "Celsius"
+        "default": "Grader Celsius",
+        "plural": "Grader Celsius"
       }
     }
   },

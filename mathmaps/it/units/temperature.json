@@ -3,20 +3,20 @@
     "locale": "it"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
-        "plural": "gradi fahrenheit",
-        "default": "grado fahrenheit"
+        "plural": "Gradi Fahrenheit",
+        "default": "Grado Fahrenheit"
       }
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
-        "plural": "gradi celsius",
-        "default": "grado celsius"
+        "plural": "Gradi Celsius",
+        "default": "Grado Celsius"
       }
     }
   },
@@ -24,8 +24,8 @@
     "key": "K",
     "mappings": {
       "default": {
-        "plural": "kelvin",
-        "default": "kelvin"
+        "plural": "Kelvin",
+        "default": "Kelvin"
       }
     }
   }

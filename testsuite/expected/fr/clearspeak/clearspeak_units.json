@@ -67,7 +67,7 @@
       "expected": "kiloohms"
     },
     "UnitsSingle_4": {
-      "expected": "celcius"
+      "expected": "Celsius"
     },
     "UnitsSimple_0": {
       "expected": "minimum de minutes"
