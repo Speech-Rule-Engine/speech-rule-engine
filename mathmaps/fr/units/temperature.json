@@ -3,18 +3,20 @@
     "locale": "fr"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
-        "default": "farad"
+        "default": "Degré Fahrenheit",
+        "plural": "Degrés Fahrenheit"
       }
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
-        "default": "celcius"
+        "default": "Degré Celsius",
+        "plural": "Degrés Celsius"
       }
     }
   },
@@ -22,7 +24,7 @@
     "key": "K",
     "mappings": {
       "default": {
-        "default": "kelvin"
+        "default": "Kelvin"
       }
     }
   }

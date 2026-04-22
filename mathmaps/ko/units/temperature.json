@@ -5,8 +5,8 @@
       "default": "화씨"
     }
   },
-  "key": "F",
-  "names": ["F", "F.", "\u00B0F", "Fahrenheit"]
+  "key": "°F",
+  "names": ["°F", "\u00B0F", "Fahrenheit"]
 },
  {"category": "temperature",
   "mappings": {
@@ -15,8 +15,8 @@
       "alternative": "섭씨"
     }
   },
-  "key": "C",
-  "names": ["C", "\u00B0C", "Celsius", "Centigrade"]
+  "key": "°C",
+  "names": ["°C", "\u00B0C", "Celsius", "Centigrade"]
 },
  {"category": "temperature",
   "mappings": {

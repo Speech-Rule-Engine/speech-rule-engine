@@ -322,19 +322,19 @@
       "expected": "kilometers per hour"
     },
     "F": {
-      "expected": "Fahrenheit"
+      "expected": "Farads"
     },
     "F.": {
-      "expected": "Fahrenheit"
+      "expected": "Farads"
     },
     "°F": {
-      "expected": "Fahrenheit"
+      "expected": "Degrees Fahrenheit"
     },
     "C": {
-      "expected": "Celsius"
+      "expected": "Coulombs"
     },
     "°C": {
-      "expected": "Celsius"
+      "expected": "Degrees Celsius"
     },
     "K": {
       "expected": "Kelvin"

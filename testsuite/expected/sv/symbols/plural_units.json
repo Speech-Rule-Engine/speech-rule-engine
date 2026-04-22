@@ -323,25 +323,25 @@
       "expected": "kilometer per timme"
     },
     "F": {
-      "expected": "Fahrenheit"
+      "expected": "Farad"
     },
     "F.": {
-      "expected": "Fahrenheit"
+      "expected": "Farad"
     },
     "°F": {
-      "expected": "Fahrenheit"
+      "expected": "Grader Fahrenheit"
     },
     "C": {
-      "expected": "Celsius"
+      "expected": "Coulomb"
     },
     "°C": {
-      "expected": "Celsius"
+      "expected": "Grader Celsius"
     },
     "K": {
-      "expected": "kelvin"
+      "expected": "Kelvin"
     },
     "°K": {
-      "expected": "kelvin"
+      "expected": "Kelvin"
     },
     "″": {
       "expected": "sekunder"

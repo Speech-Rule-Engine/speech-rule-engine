@@ -322,19 +322,19 @@
       "expected": "chilometri orari"
     },
     "F": {
-      "expected": "gradi fahrenheit"
+      "expected": "Farad"
     },
     "F.": {
-      "expected": "gradi fahrenheit"
+      "expected": "Farad"
     },
     "°F": {
-      "expected": "gradi fahrenheit"
+      "expected": "Gradi Fahrenheit"
     },
     "C": {
-      "expected": "gradi celsius"
+      "expected": "Coulomb"
     },
     "°C": {
-      "expected": "gradi celsius"
+      "expected": "Gradi Celsius"
     },
     "K": {
       "expected": "kelvin"
