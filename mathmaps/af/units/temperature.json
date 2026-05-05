@@ -3,7 +3,7 @@
     "locale": "af"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
         "default": "Fahrenheit",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
         "default": "Selsius",

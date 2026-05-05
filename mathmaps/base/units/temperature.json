@@ -3,19 +3,16 @@
     "locale": "base"
   },
   {
-    "key": "F",
+    "key": "°F",
     "category": "temperature",
     "names": [
-      "F",
-      "F.",
       "°F"
     ]
   },
   {
-    "key": "C",
+    "key": "°C",
     "category": "temperature",
     "names": [
-      "C",
       "°C"
     ]
   },
@@ -23,8 +20,7 @@
     "key": "K",
     "category": "temperature",
     "names": [
-      "K",
-      "°K"
+      "K"
     ]
   }
 ]
