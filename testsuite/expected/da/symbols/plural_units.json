@@ -323,19 +323,16 @@
       "expected": "kilometer i timen"
     },
     "F": {
-      "expected": "Fahrenheit"
-    },
-    "F.": {
-      "expected": "Fahrenheit"
+      "expected": "Farads"
     },
     "°F": {
-      "expected": "Fahrenheit"
+      "expected": "Grader Fahrenheit"
     },
     "C": {
-      "expected": "Celsius"
+      "expected": "Coulombs"
     },
     "°C": {
-      "expected": "Celsius"
+      "expected": "Grader Celsius"
     },
     "K": {
       "expected": "Kelvin"

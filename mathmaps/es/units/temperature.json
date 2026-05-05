@@ -3,7 +3,7 @@
     "locale": "es"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
         "default": "grado Fahrenheit",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
         "default": "centígrado"

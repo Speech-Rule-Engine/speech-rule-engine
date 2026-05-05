@@ -3,7 +3,7 @@
     "locale": "de"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
         "default": "Grad Fahrenheit"
@@ -11,7 +11,7 @@
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
         "default": "Grad Celsius"

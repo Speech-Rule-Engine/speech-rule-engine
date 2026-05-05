@@ -3,7 +3,7 @@
     "locale": "hi"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
         "default": "फेरनहाइट"
@@ -11,7 +11,7 @@
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
         "default": "सेल्शियस"

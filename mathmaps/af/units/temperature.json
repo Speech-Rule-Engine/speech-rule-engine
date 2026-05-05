@@ -3,16 +3,16 @@
     "locale": "af"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
-        "default": "Fahrenheit",
-        "plural": "Fahrenheit"
+        "default": "Degree Fahrenheit",
+        "plural": "Degrees Fahrenheit"
       }
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
         "default": "Selsius",

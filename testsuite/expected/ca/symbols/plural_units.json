@@ -325,9 +325,6 @@
     "F": {
       "expected": "graus Fahrenheit"
     },
-    "F.": {
-      "expected": "graus Fahrenheit"
-    },
     "°F": {
       "expected": "graus Fahrenheit"
     },

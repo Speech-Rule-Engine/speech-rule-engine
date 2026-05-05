@@ -3,18 +3,18 @@
     "locale": "nn"
   },
   {
-    "key": "F",
+    "key": "°F",
     "mappings": {
       "default": {
-        "default": "Fahrenheit"
+        "default": "Grader Fahrenheit"
       }
     }
   },
   {
-    "key": "C",
+    "key": "°C",
     "mappings": {
       "default": {
-        "default": "Celsius"
+        "default": "Grader Celsius"
       }
     }
   },

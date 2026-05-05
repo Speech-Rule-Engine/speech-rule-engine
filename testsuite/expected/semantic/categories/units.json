@@ -298,16 +298,13 @@
       "expected": "speed"
     },
     "F": {
-      "expected": "temperature"
-    },
-    "F.": {
-      "expected": "temperature"
+      "expected": "other"
     },
     "°F": {
       "expected": "temperature"
     },
     "C": {
-      "expected": "temperature"
+      "expected": "other"
     },
     "°C": {
       "expected": "temperature"

@@ -322,16 +322,13 @@
       "expected": "Kilometer pro Stunde"
     },
     "F": {
-      "expected": "Grad Fahrenheit"
-    },
-    "F.": {
-      "expected": "Grad Fahrenheit"
+      "expected": "Farad"
     },
     "°F": {
       "expected": "Grad Fahrenheit"
     },
     "C": {
-      "expected": "Grad Celsius"
+      "expected": "Coulomb"
     },
     "°C": {
       "expected": "Grad Celsius"

@@ -321,25 +321,22 @@
       "expected": "chilometro orario"
     },
     "F": {
-      "expected": "grado fahrenheit"
-    },
-    "F.": {
-      "expected": "grado fahrenheit"
+      "expected": "Farad"
     },
     "°F": {
-      "expected": "grado fahrenheit"
+      "expected": "Grado Fahrenheit"
     },
     "C": {
-      "expected": "grado celsius"
+      "expected": "Coulomb"
     },
     "°C": {
-      "expected": "grado celsius"
+      "expected": "Grado Celsius"
     },
     "K": {
-      "expected": "kelvin"
+      "expected": "Kelvin"
     },
     "°K": {
-      "expected": "kelvin"
+      "expected": "Kelvin"
     },
     "″": {
       "expected": "secondo"
