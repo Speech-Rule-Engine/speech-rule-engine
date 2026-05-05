@@ -119,7 +119,7 @@
       "expected": "kilohms"
     },
     "UnitsSingle_4": {
-      "expected": "Celsius"
+      "expected": "Degree Celsius"
     },
     "UnitsSimple_0": {
       "expected": "min minutes"

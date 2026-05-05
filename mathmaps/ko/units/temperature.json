@@ -6,7 +6,7 @@
     }
   },
   "key": "°F",
-  "names": ["°F", "\u00B0F", "Fahrenheit"]
+  "names": ["°F", "\u00B0F", "Degree Fahrenheit"]
 },
  {"category": "temperature",
   "mappings": {
@@ -16,7 +16,7 @@
     }
   },
   "key": "°C",
-  "names": ["°C", "\u00B0C", "Celsius", "Centigrade"]
+  "names": ["°C", "\u00B0C", "Degree Celsius", "Centigrade"]
 },
  {"category": "temperature",
   "mappings": {

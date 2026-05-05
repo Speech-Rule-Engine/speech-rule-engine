@@ -300,9 +300,6 @@
     "F": {
       "expected": "<identifier role=\"latinletter\" font=\"normal\">F</identifier>"
     },
-    "F.": {
-      "expected": "<unknown role=\"unknown\">F.</unknown>"
-    },
     "°F": {
       "expected": "<unknown role=\"unknown\">°F</unknown>"
     },

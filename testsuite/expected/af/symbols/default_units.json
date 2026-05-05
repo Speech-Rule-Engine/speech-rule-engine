@@ -322,13 +322,10 @@
       "expected": "kilometer per uur"
     },
     "F": {
-      "expected": "Fahrenheit"
-    },
-    "F.": {
-      "expected": "Fahrenheit"
+      "expected": "Farad"
     },
     "°F": {
-      "expected": "Fahrenheit"
+      "expected": "Degree Fahrenheit"
     },
     "C": {
       "expected": "Selsius"

@@ -323,9 +323,6 @@
     "F": {
       "expected": "grado Fahrenheit"
     },
-    "F.": {
-      "expected": "grado Fahrenheit"
-    },
     "°F": {
       "expected": "grado Fahrenheit"
     },

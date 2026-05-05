@@ -6,8 +6,8 @@
     "key": "°F",
     "mappings": {
       "default": {
-        "default": "Fahrenheit",
-        "plural": "Fahrenheit"
+        "default": "Degree Fahrenheit",
+        "plural": "Degrees Fahrenheit"
       }
     }
   },

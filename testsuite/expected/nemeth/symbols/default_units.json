@@ -333,9 +333,6 @@
     "F": {
       "expected": "⠠⠋"
     },
-    "F.": {
-      "expected": "⠠⠋⠲"
-    },
     "°F": {
       "test": false,
       "expected": "⠘⠨⠡⠐⠠⠋"

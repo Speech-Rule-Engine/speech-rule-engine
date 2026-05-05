@@ -21,7 +21,7 @@
       "expected": "kilohms"
     },
     "UnitsSingle_4": {
-      "expected": "Celsius"
+      "expected": "Degree Celsius"
     },
     "_comment0_": " In the following default is the verbose version of MathSpeak.",
     "UnitsSimple_0": {

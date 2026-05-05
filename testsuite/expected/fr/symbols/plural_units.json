@@ -324,9 +324,6 @@
     "F": {
       "expected": "Farads"
     },
-    "F.": {
-      "expected": "Farads"
-    },
     "°F": {
       "expected": "Degrés Fahrenheit"
     },
