@@ -1,0 +1,132 @@
+{
+  "tests": {
+    "MJ_Issue_3453_0": {
+      "input": "<mtable><mtr /><mtr><mtd></mtd><mtd></mtd></mtr></mtable>"
+    },
+    "MJ_Issue_3453_1": {
+      "input": "<mrow><mrow><mspace width=\"4em\" /><mtable><mtr /><mtr><mtd columnalign=\"right\"><msup><mi></mi><mn></mn></msup><mo></mo><mi></mi></mtd><mtd columnalign=\"left\"><mo></mo></mtd><mtd columnalign=\"left\"><mn></mn></mtd></mtr></mtable></mrow></mrow>"
+    },
+    "Mj_Issue_3551_0": {
+      "tex": "\\dot{a}_{b}^{\\phantom{c}}",
+      "input": "<msubsup><mrow data-mjx-texclass=\"ORD\"><mover><mi>a</mi><mo>˙</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mphantom><mi>c</mi></mphantom></mrow></mrow></msubsup>"
+    },
+    "Mj_Issue_3551_1": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_2": {
+      "input": "<msubsup><mi>a</mi><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_3": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_4": {
+      "input": "<msubsup><mover><mi>a</mi><mo>˙</mo></mover><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_5": {
+      "input": "<msubsup><munder><mi>a</mi><mo>˙</mo></munder><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_6": {
+      "input": "<msubsup><munder><mi>a</mi><mo>˙</mo></munder><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_7": {
+      "input": "<msubsup><msub><mi>a</mi><mi>d</mi></msub><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_8": {
+      "input": "<msubsup><msub><mi>a</mi><mi>d</mi></msub><mphantom><mi>b</mi></mphantom><mi>c</mi></msubsup>"
+    },
+    "Mj_Issue_3551_9": {
+      "input": "<msubsup><mrow><mi>a</mi><mi>d</mi></mrow><mi>b</mi><mphantom><mi>c</mi></mphantom></msubsup>"
+    },
+    "Mj_Issue_3551_10": {
+      "input": "<munderover><mrow data-mjx-texclass=\"ORD\"><mover><mi>a</mi><mo>˙</mo></mover></mrow><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mphantom><mi>c</mi></mphantom></mrow></mrow></munderover>"
+    },
+    "Mj_Issue_3551_11": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_12": {
+      "input": "<munderover><mi>a</mi><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_13": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mi>b</mi><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_14": {
+      "input": "<munderover><mover><mi>a</mi><mo>˙</mo></mover><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_15": {
+      "input": "<munderover><munder><mi>a</mi><mo>˙</mo></munder><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_16": {
+      "input": "<munderover><munder><mi>a</mi><mo>˙</mo></munder><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_17": {
+      "input": "<munderover><msub><mi>a</mi><mi>d</mi></msub><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "Mj_Issue_3551_18": {
+      "input": "<munderover><msub><mi>a</mi><mi>d</mi></msub><mphantom><mi>b</mi></mphantom><mi>c</mi></munderover>"
+    },
+    "Mj_Issue_3551_19": {
+      "input": "<munderover><mrow><mi>a</mi><mi>d</mi></mrow><mi>b</mi><mphantom><mi>c</mi></mphantom></munderover>"
+    },
+    "issue_853": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_1": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_10": {
+      "input": "<mi>a</mi><mfrac><mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_11": {
+      "input": "<mi>a</mi><mfrac><mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_12": {
+      "input": "<mi>a</mi><mfrac><mrow><mrow><mo>-</mo><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_13": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_2": {
+      "input": "<mrow><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_3": {
+      "input": "<mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow><mo>--</mo></mrow>"
+    },
+    "issue_853_4": {
+      "input": "<mrow><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_5": {
+      "input": "<mrow><mrow><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow>"
+    },
+    "issue_853_6": {
+      "input": "<mrow><mo>-</mo><mo>-</mo><mn>3</mn><mi>a</mi><mi>t</mi></mrow>"
+    },
+    "issue_853_7": {
+      "input": "<mfrac><mi>b</mi><mrow><mo>-</mo><mo>-</mo><mn>3</mn><mi>a</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>c</mi>"
+    },
+    "issue_853_8": {
+      "input": "<mi>a</mi><mfrac><mrow><mo>-</mo><mo>-</mo><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_853_9": {
+      "input": "<mi>a</mi><mfrac><mrow><mrow><mo>-</mo><mo>-</mo></mrow><mn>3</mn><mrow><mi>a</mi><mi>t</mi></mrow></mrow><mn>2</mn></mfrac><mo>+</mo><mn>2</mn>"
+    },
+    "issue_mj_3557": {
+      "input": "<mi>c</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi/><mo>∨</mo></msup></mrow><mi mathvariant=\"normal\">Δ</mi>"
+    },
+    "issue_mj_3558": {
+      "input": "<mtable displaystyle=\"true\"><mlabeledtr><mtd id=\"mjx-eqn:A.18\"><mtext>(</mtext><mtext>A.18</mtext><mtext>)</mtext></mtd><mtd><mrow data-mjx-texclass=\"ORD\"><mo>−</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.623em\" maxsize=\"1.623em\">(</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.623em\" maxsize=\"1.623em\">)</mo></mrow><mo>+</mo><mo>∑</mo><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.623em\" maxsize=\"1.623em\">(</mo></mrow><mrow data-mjx-texclass=\"ORD\"><mo minsize=\"1.623em\" maxsize=\"1.623em\">)</mo></mrow></mtd></mlabeledtr></mtable>"
+    },
+    "issue_mj_3570": {
+      "input": "<mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mi>A</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi/><mo>=</mo><mi>B</mi><mo>+</mo><mrow data-mjx-texclass=\"ORD\"/></mstyle></mtd></mtr><mtr><mtd/><mtd><mstyle indentshift=\"2em\"><mspace width=\"1em\"/><mi>C</mi></mstyle></mtd></mtr></mtable>"
+    },
+    "issue_mj_3571": {
+      "input": "<mspace width=\"2em\"/><mi>◻</mi>"
+    },
+    "issue_mj_3573": {
+      "input": "<mi>h</mi><mo stretchy=\"false\">[</mo><mi>m</mi><mi>a</mi><mi>s</mi><mi>k</mi><mo stretchy=\"false\">]</mo><mrow data-mjx-texclass=\"REL\"><mo>−</mo></mrow><mo>=</mo>"
+    },
+    "issue_mj_group1": {
+      "tex": "\\begin{alignat*}{1}x{}^2&\\end{alignat*}",
+      "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mi>x</mi><msup><mrow data-mjx-texclass=\"ORD\"></mrow><mn>2</mn></msup></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mtr></mtable></math>"
+    }
+  }
+}
