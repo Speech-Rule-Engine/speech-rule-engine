@@ -204,10 +204,14 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     } else {
       // Case of a 'meaningful' row, even if they are empty.
       const snode = SemanticHeuristics.run('function_from_identifiers', node);
+      const parsed = this.parseList(children);
+      // In mstyle, empty elements (e.g., <mi/>) are explicit alignment placeholders
+      // and must not be filtered by row().
+      const preserveEmpty = DomUtil.tagName(node) === MMLTAGS.MSTYLE;
       newNode =
         snode && snode !== node
           ? snode
-          : SemanticProcessor.getInstance().row(this.parseList(children));
+          : SemanticProcessor.getInstance().row(parsed, preserveEmpty);
     }
     newNode.mathml.unshift(node);
     return newNode;

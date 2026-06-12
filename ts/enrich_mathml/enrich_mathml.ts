@@ -38,6 +38,7 @@ import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import * as EnrichAttr from './enrich_attr.js';
 import { getCase } from './enrich_case.js';
+import { SREError } from '../common/engine.js';
 
 /**
  * Object containing settings for the semantic enrichment.
@@ -172,7 +173,18 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = parentNode(attached);
+      const attachedParent = parentNode(attached);
+      // If attachedParent is an ancestor of semantic.mathmlTree, using it as the
+      // container would create a DOM cycle when the parent semantic node later
+      // tries to insert semantic.mathmlTree into a new mrow inside attachedParent.
+      // Only apply this fallback when semantic has a parent (root nodes safely
+      // use attachedParent directly since no ancestor processing will follow).
+      if (attachedParent && semantic.parent && isDescendant(newNode, attachedParent)) {
+        Debugger.getInstance().output('Walktree Case 2.1.fallback');
+        newNode = getInnerNode(newNode);
+      } else {
+        newNode = attachedParent;
+      }
     } else {
       Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
@@ -439,7 +451,9 @@ function mergeChildren(
     return;
   }
   let oldCounter = 0;
+  let _debugMerge = 0;
   while (newChildren.length) {
+    if (++_debugMerge > 10000) { throw new SREError('mergeChildren infinite loop'); }
     const newChild = newChildren[0] as Element;
     if (
       oldChildren[oldCounter] === newChild ||
@@ -509,12 +523,16 @@ function mergeChildren(
 function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let parent = oldChild;
   let next = parentNode(parent);
+  let _debugCount = 0;
   while (
     next &&
     isFirstChild(next, parent) &&
     !parent.hasAttribute('AuxiliaryImplicit') &&
     next !== node
   ) {
+    if (++_debugCount > 200) {
+      throw new SREError(`insertNewChild loop: next=${(next as Element)?.tagName} parent=${(parent as Element)?.tagName}`);
+    }
     parent = next;
     next = parentNode(parent);
   }
@@ -568,7 +586,11 @@ function isDescendant(child: Element, node: Element): boolean {
   if (!child) {
     return false;
   }
+  let _descCount = 0;
   do {
+    if (++_descCount > 500) {
+      throw new SREError(`isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`);
+    }
     child = parentNode(child);
     if (child === node) {
       return true;
@@ -708,7 +730,11 @@ function pathToRoot(
 ): Element[] {
   const test = opt_test || ((_x) => false);
   const path = [node];
+  let _debugCount = 0;
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
+    if (++_debugCount > 200) {
+      throw new SREError(`pathToRoot infinite loop at ${node.tagName} parent=${(node.parentNode as Element)?.tagName}`);
+    }
     node = parentNode(node);
     path.unshift(node);
   }
@@ -719,16 +745,39 @@ function pathToRoot(
  * Checks if a LCA of two nodes is valid. It takes the penultimate node in the
  * paths of the original nodes to the LCA and sees if they have no siblings.  In
  * case they have siblings, we can not simply replace the LCA with the node
- * comprising the children.
+ * comprising the children. Ignorable siblings (empty tags without semantic
+ * annotations) are skipped.
  *
  * @param left Left path element.
  * @param right Right path element.
  * @returns True if valid LCA. False if either left or right empty or
- *     there exist siblings further to the left or right.
+ *     there exist non-ignorable siblings further to the left or right.
  */
 function validLca(left: Element, right: Element): boolean {
-  // TODO (sorge) Here we have to account for ignored tags.
-  return !!(left && right && !left.previousSibling && !right.nextSibling);
+  return !!(left && right &&
+    !hasSiblingInDirection(left, 'previousSibling') &&
+    !hasSiblingInDirection(right, 'nextSibling'));
+}
+
+/**
+ * Checks if a node has a non-ignorable sibling in a given direction.
+ *
+ * @param node The node to check.
+ * @param direction Either 'previousSibling' or 'nextSibling'.
+ * @returns True if there is a non-ignorable sibling in that direction.
+ */
+function hasSiblingInDirection(
+  node: Element,
+  direction: 'previousSibling' | 'nextSibling'
+): boolean {
+  let sib = node[direction] as Element;
+  while (sib) {
+    if (!isIgnorable(sib)) {
+      return true;
+    }
+    sib = sib[direction] as Element;
+  }
+  return false;
 }
 
 /**
@@ -744,11 +793,15 @@ function validLca(left: Element, right: Element): boolean {
  * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
-  let empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
+  const empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
     && semantic.getAnnotation('empty');
+  let _debugCount = 0;
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
+    if (++_debugCount > 100) {
+      throw new SREError(`ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`);
+    }
     newNode = parentNode(newNode);
   }
   return newNode;

@@ -110,7 +110,7 @@ const EMPTYTAGS: string[] = [
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT];
+const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT, MMLTAGS.MSPACE];
 
 /**
  * List of potential attributes that should be used as speech directly.
