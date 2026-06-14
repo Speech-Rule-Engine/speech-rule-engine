@@ -1,3 +1,7 @@
 packages:
   - 'testsuite'
   - 'l10n'
+allowBuilds:
+  '@firebase/util': false
+  protobufjs: false
+  unrs-resolver: false
