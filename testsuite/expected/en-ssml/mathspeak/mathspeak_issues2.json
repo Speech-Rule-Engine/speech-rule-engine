@@ -185,34 +185,6 @@
     "EncloseRightbar": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\" kind=\"LAST\"/> vertical bar </prosody></speak>"
     },
-    "_comment_": " mglyph is ignored!",
-    "Issue279_0": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
-    },
-    "Issue279_1": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 3.1 .10 right parenthesis <break time=\"300ms\"/> <mark name=\"4\"/> EndLabel <break time=\"200ms\"/> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
-    },
-    "Issue320_0": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential </prosody></speak>"
-    },
-    "Issue320_1": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> factorial </prosody></speak>"
-    },
-    "Issue320_2": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> minus <mark name=\"1\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
-    },
-    "Issue320_3": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> plus <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
-    },
-    "Issue320_4": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> sine <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
-    },
-    "Issue320_5": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> partial differential <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
-    },
-    "Issue320_6": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left parenthesis <mark name=\"9\"/> StartFraction <mark name=\"1\"/> partial differential <mark name=\"2\"/> squared <mark name=\"8\"/> Over <mark name=\"4\"/> partial differential <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"9\" kind=\"LAST\"/> EndFraction <mark name=\"10\"/> plus <mark name=\"19\"/> StartFraction <mark name=\"11\"/> partial differential <mark name=\"12\"/> squared <mark name=\"18\"/> Over <mark name=\"14\"/> partial differential <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> squared <mark name=\"19\" kind=\"LAST\"/> EndFraction <mark name=\"20\"/> right parenthesis <mark name=\"23\"/> StartAbsoluteValue <mark name=\"24\"/> phi <mark name=\"25\"/> left parenthesis <mark name=\"26\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"27\"/> plus <mark name=\"28\"/> normal <say-as interpret-as=\"character\">i</say-as> <mark name=\"29\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"30\"/> right parenthesis <mark name=\"31\"/> EndAbsoluteValue <mark name=\"39\"/> squared <mark name=\"41\"/> equals <mark name=\"42\"/> 0 </prosody></speak>"
-    },
     "LatinMathfonts_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> German upper A </prosody></speak>"
     },
@@ -266,6 +238,33 @@
     },
     "GreekMathfonts_4": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sans serif bold italic upper Alpha </prosody></speak>"
+    },
+    "Issue279_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\">  </prosody></speak>"
+    },
+    "Issue279_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"5\"/> StartLayout <mark name=\"4\"/> 1st Row  with Label <mark name=\"0\"/> left parenthesis 3.1 .10 right parenthesis <break time=\"300ms\"/> <mark name=\"4\"/> EndLabel <break time=\"200ms\"/> <mark name=\"5\" kind=\"LAST\"/> EndLayout </prosody></speak>"
+    },
+    "Issue320_0": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential </prosody></speak>"
+    },
+    "Issue320_1": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> factorial </prosody></speak>"
+    },
+    "Issue320_2": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> minus <mark name=\"1\"/> minus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_3": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> plus <mark name=\"1\"/> plus <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_4": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> sine <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_5": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> partial differential <mark name=\"1\"/> partial differential <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> </prosody></speak>"
+    },
+    "Issue320_6": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> left parenthesis <mark name=\"9\"/> StartFraction <mark name=\"1\"/> partial differential <mark name=\"2\"/> squared <mark name=\"8\"/> Over <mark name=\"4\"/> partial differential <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> squared <mark name=\"9\" kind=\"LAST\"/> EndFraction <mark name=\"10\"/> plus <mark name=\"19\"/> StartFraction <mark name=\"11\"/> partial differential <mark name=\"12\"/> squared <mark name=\"18\"/> Over <mark name=\"14\"/> partial differential <mark name=\"15\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"16\"/> squared <mark name=\"19\" kind=\"LAST\"/> EndFraction <mark name=\"20\"/> right parenthesis <mark name=\"23\"/> StartAbsoluteValue <mark name=\"24\"/> phi <mark name=\"25\"/> left parenthesis <mark name=\"26\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"27\"/> plus <mark name=\"28\"/> normal <say-as interpret-as=\"character\">i</say-as> <mark name=\"29\"/> <say-as interpret-as=\"character\">y</say-as> <mark name=\"30\"/> right parenthesis <mark name=\"31\"/> EndAbsoluteValue <mark name=\"39\"/> squared <mark name=\"41\"/> equals <mark name=\"42\"/> 0 </prosody></speak>"
     },
     "Prime_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> prime </prosody></speak>"
@@ -324,6 +323,9 @@
     "Prime_18": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> six prime </prosody></speak>"
     },
+    "Prime_19": {
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> prime <mark name=\"2\"/> double prime </prosody></speak>"
+    },
     "LimBoth_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"8\"/> ModifyingAbove <mark name=\"6\"/> ModifyingBelow <mark name=\"1\"/> sigma summation <mark name=\"2\"/> Underscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\"/> Overscript 2 <mark name=\"4\" kind=\"LAST\"/> Endscripts <mark name=\"5\"/> With bar <mark name=\"7\"/> With tilde </prosody></speak>"
     },
@@ -375,9 +377,6 @@
     "Issue_442_3": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> 9 <mark name=\"1\"/> divided by <mark name=\"2\"/> 3 </prosody></speak>"
     },
-    "Prime_19": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"1\"/> prime <mark name=\"2\"/> double prime </prosody></speak>"
-    },
     "issue_728_0": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> mol </prosody></speak>"
     },
@@ -385,7 +384,7 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"1\"/> mol <mark name=\"2\"/> 1 </prosody></speak>"
     },
     "issue_767_0": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> upper A <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"2\" kind=\"LAST\"/> Baseline <mark name=\"3\"/> vertical bar <mark name=\"9\"/> Subscript <mark name=\"4\"/> kernel <mark name=\"5\"/> upper P <mark name=\"6\"/> Sub Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"7\" kind=\"LAST\"/> Subscript <mark name=\"10\" kind=\"LAST\"/> Baseline </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> upper A <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"2\" kind=\"LAST\"/> Baseline <mark name=\"3\"/> vertical bar <mark name=\"12\"/> Subscript <mark name=\"4\"/> kernel <mark name=\"8\"/> upper P <mark name=\"9\"/> Sub Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"10\" kind=\"LAST\"/> Subscript <mark name=\"13\" kind=\"LAST\"/> Baseline </prosody></speak>"
     },
     "issue_767_1": {
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> upper A <mark name=\"1\"/> Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"2\" kind=\"LAST\"/> Baseline <mark name=\"3\"/> vertical bar <mark name=\"14\"/> Subscript <mark name=\"4\"/> <say-as interpret-as=\"character\">a</say-as> <mark name=\"5\"/> <say-as interpret-as=\"character\">b</say-as> <mark name=\"6\"/> <say-as interpret-as=\"character\">c</say-as> <mark name=\"10\"/> upper P <mark name=\"11\"/> Sub Subscript <say-as interpret-as=\"character\">n</say-as> <mark name=\"12\" kind=\"LAST\"/> Subscript <mark name=\"15\" kind=\"LAST\"/> Baseline </prosody></speak>"
@@ -397,7 +396,7 @@
       "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> <say-as interpret-as=\"character\">s</say-as> <mark name=\"1\"/> <say-as interpret-as=\"character\">i</say-as> <mark name=\"2\"/> <say-as interpret-as=\"character\">n</say-as> <mark name=\"3\"/> left parenthesis <mark name=\"4\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"5\"/> right parenthesis </prosody></speak>"
     },
     "issue_767_4": {
-      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"1\"/> left parenthesis <mark name=\"2\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"3\"/> right parenthesis </prosody></speak>"
+      "expected": "<?xml version=\"1.0\"?><speak version=\"1.1\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xml:lang=\"en\"><prosody rate=\"100%\"> <mark name=\"0\"/> sine <mark name=\"4\"/> left parenthesis <mark name=\"5\"/> <say-as interpret-as=\"character\">x</say-as> <mark name=\"6\"/> right parenthesis </prosody></speak>"
     }
   }
 }
