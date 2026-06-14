@@ -179,7 +179,10 @@ export function walkTree(semantic: SemanticNode): Element {
       // tries to insert semantic.mathmlTree into a new mrow inside attachedParent.
       // Only apply this fallback when semantic has a parent (root nodes safely
       // use attachedParent directly since no ancestor processing will follow).
-      if (attachedParent && semantic.parent && isDescendant(newNode, attachedParent)) {
+      // Exception: when attached === newNode, the child ascended up to the
+      // mathmlTree itself; using attachedParent (its DOM parent) is safe and
+      // avoids overwriting attributes set on inner nodes by child walkTree calls.
+      if (attachedParent && semantic.parent && attached !== newNode && isDescendant(newNode, attachedParent)) {
         Debugger.getInstance().output('Walktree Case 2.1.fallback');
         newNode = getInnerNode(newNode);
       } else {
