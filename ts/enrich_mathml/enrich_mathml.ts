@@ -499,8 +499,21 @@ function mergeChildren(
         // different than the one of node. newChild should be inserted before
         // the next, which can then be skipped. Since the parentNode is
         // different than node we replace it.
-        node = parentNode(nextChild);
-        insertBefore(node, newChild, nextChild);
+        let insertTarget = parentNode(nextChild);
+        let refChild: Element = nextChild;
+        // Don't insert inside a structurally fixed element (mfrac, msup, etc.)
+        // whose children carry positional meaning. Climb up until we find a
+        // container that can safely receive an extra child.
+        while (
+          insertTarget &&
+            insertTarget !== node &&
+            SemanticUtil.isStructuralParent(insertTarget)
+        ) {
+          refChild = insertTarget;
+          insertTarget = parentNode(insertTarget);
+        }
+        node = insertTarget;
+        insertBefore(node, newChild, refChild);
         newChildren.shift();
         newChildren.shift();
         continue;

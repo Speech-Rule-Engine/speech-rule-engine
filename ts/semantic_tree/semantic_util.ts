@@ -107,6 +107,22 @@ const EMPTYTAGS: string[] = [
 ];
 
 /**
+ * MathML elements whose children have fixed positional semantics. Inserting an
+ * extra child inside one of these would corrupt the structure when re-parsed.
+ */
+const STRUCTURAL: string[] = [
+  MMLTAGS.MFRAC,
+  MMLTAGS.MSUP,
+  MMLTAGS.MSUB,
+  MMLTAGS.MSUBSUP,
+  MMLTAGS.MOVER,
+  MMLTAGS.MUNDER,
+  MMLTAGS.MUNDEROVER,
+  MMLTAGS.MROOT,
+  MMLTAGS.MMULTISCRIPTS
+];
+
+/**
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
@@ -183,6 +199,16 @@ export function isOrphanedGlyph(node: Element): boolean {
     DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
+}
+
+/**
+ * Checks if an element is a node with a structural parent tag.
+ *
+ * @param node The node to check.
+ * @returns True if element is a structural parent node.
+ */
+export function isStructuralParent(node: Element): boolean {
+  return STRUCTURAL.includes(DomUtil.tagName(node));
 }
 
 /**
