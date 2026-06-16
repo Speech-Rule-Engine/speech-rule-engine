@@ -3,5 +3,5 @@
   "tests": "ALL",
   "information": "Rebuild enriched issues2 tests.",
   "base": "input/semantic/issues2.json",
-  "exclude": ["issue_mj_3557", "issue_mj_3573_0", "issue_mj_3573_1"]
+  "exclude": ["issue_mj_3557"]
 }
