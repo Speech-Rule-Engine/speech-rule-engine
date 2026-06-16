@@ -376,6 +376,8 @@ export class RebuildStree {
   private setParent(id: string, snode: SemanticNode): SemanticNode {
     const mml = WalkerUtil.getBySemanticId(this.mathml, id);
     if (!mml) {
+      // This case should not happen, but can cause OOM errors in the wild.
+      //
       // ID referenced in attributes but has no DOM element in the enriched
       // MathML (e.g. collapsed nodes or shared-element content nodes). Create
       // a placeholder so the tree can be assembled without crashing.

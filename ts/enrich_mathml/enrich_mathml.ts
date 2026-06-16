@@ -206,6 +206,7 @@ export function walkTree(semantic: SemanticNode): Element {
           newNode = innerNode;
         }
       } else {
+        // This should be unreachable.
         newNode = attachedParent;
       }
     } else {
