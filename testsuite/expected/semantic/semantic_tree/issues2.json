@@ -131,6 +131,9 @@
     },
     "issue_mj_group1": {
       "expected": "<stree><table role=\"unknown\" id=\"7\"><children><row role=\"table\" id=\"6\"><children><cell role=\"table\" id=\"4\"><children><superscript role=\"identifier\" annotation=\"collapsed:identifier\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">x</identifier><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple\" id=\"2\">2</number></children></superscript></children></cell><cell role=\"table\" id=\"5\"/></children></row></children></table></stree>"
+    },
+    "issue_mj_group2": {
+      "expected": "<stree><relseq role=\"equality\" id=\"8\">=<content><relation role=\"equality\" id=\"3\">=</relation></content><children><prefixop role=\"prefix operator\" font=\"normal\" id=\"6\">∇<content><operator role=\"prefix operator\" font=\"normal\" id=\"0\" texclass=\"ORD\">∇</operator></content><children><fenced role=\"leftright\" annotation=\"fences:paren\" id=\"5\"><content><fence role=\"open\" id=\"1\">(</fence><fence role=\"close\" id=\"2\">)</fence></content><children><empty role=\"unknown\" id=\"4\"/></children></fenced></children></prefixop><empty role=\"unknown\" id=\"7\"/></children></relseq></stree>"
     }
   }
 }

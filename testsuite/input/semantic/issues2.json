@@ -130,6 +130,10 @@
     "issue_mj_group1": {
       "tex": "\\begin{alignat*}{1}x{}^2&\\end{alignat*}",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mi>x</mi><msup><mrow data-mjx-texclass=\"ORD\"></mrow><mn>2</mn></msup></mtd><mtd><mstyle indentshift=\"2em\"></mstyle></mtd></mtr></mtable></math>"
+    },
+    "issue_mj_group2": {
+      "tex": "{\\nabla}()=",
+      "input": "<math><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">&#x2207;</mi></mrow><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">)</mo><mo>=</mo></math>"
     }
   }
 }
