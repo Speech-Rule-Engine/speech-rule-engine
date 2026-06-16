@@ -25,6 +25,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { Debugger } from '../common/debugger.js';
 import { Options } from '../common/options.js';
 
 import { annotate } from './semantic_annotations.js';
@@ -38,6 +39,41 @@ import * as SemanticPred from './semantic_pred.js';
 import './semantic_heuristics.js';
 import './special_annotators.js';
 import { SemanticProcessor } from './semantic_processor.js';
+
+/**
+ * Debug helper: walks the semantic tree and flags MathML elements that are
+ * referenced as `mathmlTree` by more than one semantic node. Only called via
+ * `Debugger.generate`, so the tree walk itself is skipped unless debug mode
+ * is active.
+ *
+ * @param root The root of the semantic tree to check.
+ * @returns Debug messages, one per MathML element shared by multiple nodes.
+ */
+function checkDuplicateMathmlTrees(root: SemanticNode): string[] {
+  const seen = new Map<Element, Set<SemanticNode>>();
+  const visit = (node: SemanticNode) => {
+    if (node.mathmlTree) {
+      const nodes = seen.get(node.mathmlTree) || new Set<SemanticNode>();
+      nodes.add(node);
+      seen.set(node.mathmlTree, nodes);
+    }
+    node.childNodes.forEach(visit);
+    node.contentNodes.forEach(visit);
+  };
+  visit(root);
+  const messages: string[] = [];
+  for (const [mathmlTree, nodes] of seen) {
+    if (nodes.size > 1) {
+      messages.push(
+        `DUPLICATE mathmlTree: ${DomUtil.tagName(mathmlTree)} shared by ` +
+          Array.from(nodes)
+            .map((n) => `${n.id}:${n.type}:${n.role}`)
+            .join(', ')
+      );
+    }
+  }
+  return messages;
+}
 
 export class SemanticTree {
   /**
@@ -152,6 +188,7 @@ export class SemanticTree {
     unitVisitor.visit(this.root, {});
 
     annotate(this.root);
+    Debugger.getInstance().generate(() => checkDuplicateMathmlTrees(this.root));
   }
 
   /**
