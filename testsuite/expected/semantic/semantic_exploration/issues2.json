@@ -677,13 +677,35 @@
         ]
       ]
     },
-    "issue_mj_3571": {
+    "issue_mj_3571_0": {
       "expected": [
         3,
         0,
         1,
         2
       ]
+    },
+    "issue_mj_3571_1": {
+      "expected": 1
+    },
+    "issue_mj_3571_2": {
+      "expected": [
+        4,
+        3,
+        1,
+        2
+      ]
+    },
+    "issue_mj_3571_3": {
+      "expected": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    "issue_mj_3571_4": {
+      "expected": 1
     },
     "issue_mj_3573_0": {
       "expected": [

@@ -417,24 +417,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private space_(node: Element, children: Element[]): SemanticNode {
-    const width = node.getAttribute('width');
-    const match = width && width.match(/[a-z]*$/);
-    if (!match) {
-      return this.empty_(node, children);
-    }
-    const sizes: { [key: string]: number } = {
-      cm: 0.4,
-      pc: 0.5,
-      em: 0.5,
-      ex: 1,
-      in: 0.15,
-      pt: 5,
-      mm: 5
-    };
-    const unit = match[0];
-    const measure = parseFloat(width.slice(0, match.index));
-    const size = sizes[unit];
-    if (!size || isNaN(measure) || measure < size) {
+    if (!SemanticUtil.meaningfulSpace(node)) {
       return this.empty_(node, children);
     }
     const newNode = this.getFactory().makeUnprocessed(node);

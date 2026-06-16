@@ -908,6 +908,7 @@ function isIgnorable(node: Element): boolean {
   if (
     (!SemanticUtil.hasEmptyTag(node) && children.length) ||
     SemanticUtil.hasDisplayTag(node) ||
+    SemanticUtil.meaningfulSpace(node) ||
     node.hasAttribute(EnrichAttr.Attribute.TYPE) ||
     SemanticUtil.isOrphanedGlyph(node)
   ) {

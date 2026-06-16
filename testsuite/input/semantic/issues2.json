@@ -118,8 +118,20 @@
     "issue_mj_3570": {
       "input": "<mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mi>A</mi></mtd><mtd><mstyle indentshift=\"2em\"><mi/><mo>=</mo><mi>B</mi><mo>+</mo><mrow data-mjx-texclass=\"ORD\"/></mstyle></mtd></mtr><mtr><mtd/><mtd><mstyle indentshift=\"2em\"><mspace width=\"1em\"/><mi>C</mi></mstyle></mtd></mtr></mtable>"
     },
-    "issue_mj_3571": {
+    "issue_mj_3571_0": {
       "input": "<mspace width=\"2em\"/><mi>◻</mi>"
+    },
+    "issue_mj_3571_1": {
+      "input": "<mspace/><mi>◻</mi>"
+    },
+    "issue_mj_3571_2": {
+      "input": "<mspace/><mi>◻</mi><mspace width=\"2em\"/>"
+    },
+    "issue_mj_3571_3": {
+      "input": "<mspace width=\"2em\"/><mi>◻</mi><mspace width=\"2em\"/>"
+    },
+    "issue_mj_3571_4": {
+      "input": "<mspace/><mi>◻</mi><mspace/>"
     },
     "issue_mj_3573_0": {
       "input": "<mi>h</mi><mo stretchy=\"false\">[</mo><mi>m</mi><mi>a</mi><mi>s</mi><mi>k</mi><mo stretchy=\"false\">]</mo><mrow data-mjx-texclass=\"REL\"><mo>−</mo></mrow><mo>=</mo>"

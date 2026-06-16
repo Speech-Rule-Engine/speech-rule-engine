@@ -120,8 +120,20 @@
     "issue_mj_3570": {
       "expected": "<stree><table role=\"unknown\" id=\"17\"><children><row role=\"table\" id=\"9\"><children><cell role=\"table\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></cell><cell role=\"table\" id=\"8\"><children><relseq role=\"equality\" id=\"7\">=<content><relation role=\"equality\" id=\"3\">=</relation></content><children><empty role=\"unknown\" id=\"2\"/><postfixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"5\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">B</identifier></children></postfixop></children></relseq></children></cell></children></row><row role=\"table\" id=\"16\"><children><cell role=\"table\" id=\"10\"/><cell role=\"table\" id=\"15\"><children><punctuated role=\"text\" id=\"14\"><content><punctuation role=\"dummy\" id=\"13\">⁣</punctuation></content><children><text role=\"space\" annotation=\"clearspeak:unit\" id=\"11\"/><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"12\">C</identifier></children></punctuated></children></cell></children></row></children></table></stree>"
     },
-    "issue_mj_3571": {
+    "issue_mj_3571_0": {
       "expected": "<stree><relseq role=\"geometry\" id=\"3\">◻<content><relation role=\"geometry\" id=\"1\">◻</relation></content><children><text role=\"space\" annotation=\"factor:relation;clearspeak:unit\" id=\"0\"/><empty role=\"unknown\" id=\"2\"/></children></relseq></stree>"
+    },
+    "issue_mj_3571_1": {
+      "expected": "<stree><relation role=\"geometry\" id=\"1\">◻</relation></stree>"
+    },
+    "issue_mj_3571_2": {
+      "expected": "<stree><relseq role=\"geometry\" id=\"4\">◻<content><relation role=\"geometry\" id=\"1\">◻</relation></content><children><empty role=\"unknown\" id=\"3\"/><text role=\"space\" annotation=\"factor:relation;clearspeak:unit\" id=\"2\"/></children></relseq></stree>"
+    },
+    "issue_mj_3571_3": {
+      "expected": "<stree><relseq role=\"geometry\" id=\"3\">◻<content><relation role=\"geometry\" id=\"1\">◻</relation></content><children><text role=\"space\" annotation=\"factor:relation;clearspeak:unit\" id=\"0\"/><text role=\"space\" annotation=\"factor:relation;clearspeak:unit\" id=\"2\"/></children></relseq></stree>"
+    },
+    "issue_mj_3571_4": {
+      "expected": "<stree><relation role=\"geometry\" id=\"1\">◻</relation></stree>"
     },
     "issue_mj_3573_0": {
       "expected": "<stree><relseq role=\"equality\" id=\"18\">=<content><relation role=\"equality\" id=\"8\">=</relation></content><children><postfixop role=\"subtraction\" id=\"16\">−<content><operator role=\"subtraction\" id=\"7\" texclass=\"REL\">−</operator></content><children><appl role=\"simple function\" id=\"15\"><content><punctuation role=\"application\" id=\"14\">⁡</punctuation><identifier role=\"simple function\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">h</identifier></content><children><identifier role=\"simple function\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">h</identifier><fenced role=\"leftright\" annotation=\"fences:bracket\" id=\"13\"><content><fence role=\"open\" id=\"1\">[</fence><fence role=\"close\" id=\"6\">]</fence></content><children><infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"12\">⁢<content><operator role=\"multiplication\" id=\"9\">⁢</operator><operator role=\"multiplication\" id=\"10\">⁢</operator><operator role=\"multiplication\" id=\"11\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">m</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">s</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">k</identifier></children></infixop></children></fenced></children></appl></children></postfixop><empty role=\"unknown\" id=\"17\"/></children></relseq></stree>"

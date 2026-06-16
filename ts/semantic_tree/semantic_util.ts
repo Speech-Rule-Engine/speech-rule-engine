@@ -126,7 +126,7 @@ const STRUCTURAL: string[] = [
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
-const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT, MMLTAGS.MSPACE];
+const DISPLAYTAGS: string[] = [MMLTAGS.MROOT, MMLTAGS.MSQRT];
 
 /**
  * List of potential attributes that should be used as speech directly.
@@ -473,4 +473,37 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
       return;
     }
   }
+}
+
+/**
+ * Test if node is a mspace element and has a meaningful size.
+ *
+ * @param node The node to test.
+ * @returns True if the size is large enough to warrant semantic meaning.
+ */
+export function meaningfulSpace(node: Element): boolean {
+  if (!node || DomUtil.tagName(node) !== MMLTAGS.MSPACE) {
+    return false;
+  }
+    const width = node.getAttribute('width');
+    const match = width && width.match(/[a-z]*$/);
+    if (!match) {
+      return false;
+    }
+    const sizes: { [key: string]: number } = {
+      cm: 0.4,
+      pc: 0.5,
+      em: 0.5,
+      ex: 1,
+      in: 0.15,
+      pt: 5,
+      mm: 5
+    };
+    const unit = match[0];
+    const measure = parseFloat(width.slice(0, match.index));
+    const size = sizes[unit];
+    if (!size || isNaN(measure) || measure < size) {
+      return false;
+    }
+  return true;
 }
