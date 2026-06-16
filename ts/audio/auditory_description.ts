@@ -175,7 +175,7 @@ export class AuditoryList extends Set<AuditoryItem> {
   }
 
   /**
-   * @yields Iterator of the list.
+   * @yields {SetIterator<AuditoryItem>} Iterator of the list.
    */
   public *[Symbol.iterator](): SetIterator<AuditoryItem> {
     let current = this.anchor.next;

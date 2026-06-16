@@ -585,6 +585,12 @@ export abstract class BaseRuleStore
     return generator ? (generator() as string[]) : [cstr];
   }
 
+  /**
+   * Prepares constraint string for parsing by adding the locale and modality.
+   *
+   * @param cstr The constraint string.
+   * @returns The prepared constraint string.
+   */
   private preParseCstr(cstr: string): string {
     const match = cstr.match('\(.+\)\\.\(.+\)');
     return this.locale +

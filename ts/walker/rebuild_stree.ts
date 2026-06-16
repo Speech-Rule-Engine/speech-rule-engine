@@ -390,6 +390,13 @@ export class RebuildStree {
     return sn;
   }
 
+  /**
+   * Tests if a node is empty or a phantom node.
+   *
+   * @param snode The semantic node.
+   * @param node The mml node.
+   * @returns True if the node is empty or a phantom node.
+   */
   private isEmpty(snode: SemanticNode, node?: Element): boolean {
     if (snode.type === SemanticType.EMPTY) {
       return true;

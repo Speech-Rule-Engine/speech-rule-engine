@@ -1432,7 +1432,7 @@ export class SemanticProcessor {
    * @param mmlTag The tag name of the original node.
    * @param children The children of the
    *     original node.
-   * @param length
+   * @param length The number of children to be considered.
    * @returns The newly created limit node.
    */
   private cleanLimitNode(
@@ -2115,6 +2115,12 @@ export class SemanticProcessor {
     return newNode;
   }
 
+  /**
+   * Creates a node of type MULTIOP by collapsing the given node list into one.
+   * 
+   * @param operators The list of operator nodes.
+   * @returns The new multiop node.
+   */
   private multiopNode_(operators: SemanticNode[]): SemanticNode {
     const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.OPERATOR,

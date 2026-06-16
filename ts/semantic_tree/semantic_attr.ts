@@ -1341,6 +1341,12 @@ function initFences() {
   addFenceSecondary(floor, SemanticSecondary.FLOOR);
 }
 
+/**
+ * Adds secondary semantic meaning of some fence entries.
+ *
+ * @param codes The fence codes.
+ * @param meaning The secondary meaning to assign.
+ */
 function addFenceSecondary(codes: string[], meaning: SemanticSecondary) {
   for (const code of codes) {
     const symbol = String.fromCodePoint(parseInt(code, 16));
