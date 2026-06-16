@@ -121,8 +121,11 @@
     "issue_mj_3571": {
       "input": "<mspace width=\"2em\"/><mi>◻</mi>"
     },
-    "issue_mj_3573": {
+    "issue_mj_3573_0": {
       "input": "<mi>h</mi><mo stretchy=\"false\">[</mo><mi>m</mi><mi>a</mi><mi>s</mi><mi>k</mi><mo stretchy=\"false\">]</mo><mrow data-mjx-texclass=\"REL\"><mo>−</mo></mrow><mo>=</mo>"
+    },
+    "issue_mj_3573_1": {
+      "input": "<mi>h</mi><mo stretchy=\"false\">[</mo><mo stretchy=\"false\">]</mo><mrow data-mjx-texclass=\"REL\"><mo>−</mo></mrow><mo>=</mo>"
     },
     "issue_mj_group1": {
       "tex": "\\begin{alignat*}{1}x{}^2&\\end{alignat*}",

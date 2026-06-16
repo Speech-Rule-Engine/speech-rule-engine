@@ -185,14 +185,15 @@ export function walkTree(semantic: SemanticNode): Element {
       if (attachedParent && semantic.parent && attached !== newNode && isDescendant(newNode, attachedParent)) {
         Debugger.getInstance().output('Walktree Case 2.1.fallback');
         const innerNode = getInnerNode(newNode);
-        // If this is a structural element (msup, msub, etc.) and getInnerNode
-        // descended into a child that was already annotated by an earlier
-        // walkTree call (e.g. a collapsed-identifier superscript whose exponent
-        // was enriched as a standalone operator), keep the structural parent as
-        // the annotation target but merge children relative to its DOM parent
-        // so the absorbed base element isn't physically inserted as an extra child.
-        if (SemanticUtil.isStructuralParent(newNode) &&
-            innerNode !== newNode &&
+        // If getInnerNode descended into a child that was already annotated by
+        // an earlier walkTree call (e.g. a collapsed-identifier superscript
+        // whose exponent was enriched as a standalone operator, or a postfix
+        // operator whose content node is the sole child of a texclass mrow),
+        // collapsing onto it would overwrite and lose that existing
+        // annotation. Keep newNode itself as the annotation target instead,
+        // merging children relative to its DOM parent so nothing gets
+        // physically inserted as an extra/illegal child of newNode.
+        if (innerNode !== newNode &&
             innerNode.hasAttribute(EnrichAttr.Attribute.ID)) {
           mergeChildren(parentNode(newNode) || newNode, childrenList, semantic);
           if (!IDS.has(semantic.id)) {
