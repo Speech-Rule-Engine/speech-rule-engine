@@ -184,7 +184,26 @@ export function walkTree(semantic: SemanticNode): Element {
       // avoids overwriting attributes set on inner nodes by child walkTree calls.
       if (attachedParent && semantic.parent && attached !== newNode && isDescendant(newNode, attachedParent)) {
         Debugger.getInstance().output('Walktree Case 2.1.fallback');
-        newNode = getInnerNode(newNode);
+        const innerNode = getInnerNode(newNode);
+        // If this is a structural element (msup, msub, etc.) and getInnerNode
+        // descended into a child that was already annotated by an earlier
+        // walkTree call (e.g. a collapsed-identifier superscript whose exponent
+        // was enriched as a standalone operator), keep the structural parent as
+        // the annotation target but merge children relative to its DOM parent
+        // so the absorbed base element isn't physically inserted as an extra child.
+        if (SemanticUtil.isStructuralParent(newNode) &&
+            innerNode !== newNode &&
+            innerNode.hasAttribute(EnrichAttr.Attribute.ID)) {
+          mergeChildren(parentNode(newNode) || newNode, childrenList, semantic);
+          if (!IDS.has(semantic.id)) {
+            IDS.set(semantic.id, true);
+            EnrichAttr.setAttributes(newNode, semantic);
+          }
+          Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
+          return ascendNewNode(newNode, semantic);
+        } else {
+          newNode = innerNode;
+        }
       } else {
         newNode = attachedParent;
       }
