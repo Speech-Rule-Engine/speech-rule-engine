@@ -402,6 +402,22 @@ export function partitionNodes(
 }
 
 /**
+ * Checks if a node has an ancestor contained in the given set.
+ *
+ * @param node The node to check.
+ * @param ancestors The candidate ancestor elements.
+ * @returns True if some strict ancestor of node is in ancestors.
+ */
+function hasAncestorIn(node: Element, ancestors: Set<Element>): boolean {
+  let parent = node.parentElement;
+  while (parent) {
+    if (ancestors.has(parent)) return true;
+    parent = parent.parentElement;
+  }
+  return false;
+}
+
+/**
  * Heuristic to find a mathml Tree for a newly introduced node. Tries to find
  * something like an mrow which is "unused" and which contains all the given
  * child nodes.
@@ -428,14 +444,24 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
     return;
   }
 
-  // Case 2: If all nodes that have a mathml tree have the same parent, and
-  // the top level nodes of the constituent mathml nodes have the same parent,
-  // we can use that as the mathml tree for the new node.
+  // Case 2: Some nodes do not yet have a mathml tree of their own (e.g.,
+  // newly synthesised nodes). If the nodes that do have one agree on a
+  // parent, and the constituent mathml elements of the remaining nodes (if
+  // any) also live under that same parent, we can use it for the new node.
+  // Only the topmost elements of such a node's mathml are considered: if one
+  // of its elements is a descendant of another (e.g. a row that already
+  // accounts for its own leaves), the descendant is subsumed and must not be
+  // used to introduce an unrelated parent into the candidate set.
   if (parentTrees.has(null) && parentTrees.size <= 2) {
     parentTrees.delete(null);
-    newNode.mathml.forEach(x => {
-      if (x.parentElement && !newNode.mathml.includes(x)) {
-        parentTrees.add(x.parentElement);
+    nodeList.forEach((x) => {
+      if (!x.mathmlTree) {
+        const elements = new Set(x.mathml);
+        x.mathml.forEach((m) => {
+          if (m.parentElement && !hasAncestorIn(m, elements)) {
+            parentTrees.add(m.parentElement);
+          }
+        });
       }
     });
   }
@@ -446,5 +472,5 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
       newNode.mathmlTree = singleton;
       return;
     }
-  };
+  }
 }
