@@ -41,6 +41,28 @@ import { getCase } from './enrich_case.js';
 import { SREError } from '../common/engine.js';
 
 /**
+ * Creates a guard against runaway loops in the tree-walking helpers below.
+ * Call the returned function once per iteration; it throws once `limit`
+ * iterations have been exceeded.
+ *
+ * Note, this is temporary to avoid page crashes in MathJax!
+ *
+ * @param limit Maximum number of iterations to allow.
+ * @param message Error message, or a function computing one lazily from the
+ *     loop's current state (useful since that state is only known at the
+ *     call site).
+ * @returns A function to invoke on every loop iteration.
+ */
+function loopGuard(limit: number, message: string | (() => string)): () => void {
+  let count = 0;
+  return () => {
+    if (++count > limit) {
+      throw new SREError(typeof message === 'function' ? message() : message);
+    }
+  };
+}
+
+/**
  * Object containing settings for the semantic enrichment.
  */
 const SETTINGS: {
@@ -475,9 +497,12 @@ function mergeChildren(
     return;
   }
   let oldCounter = 0;
-  let _debugMerge = 0;
+  // Bounds the number of children mergeChildren can shift/insert; expressions
+  // with thousands of children are already pathological, so this is well
+  // above any legitimate input.
+  const guard = loopGuard(200, 'mergeChildren infinite loop');
   while (newChildren.length) {
-    if (++_debugMerge > 10000) { throw new SREError('mergeChildren infinite loop'); }
+    guard();
     const newChild = newChildren[0] as Element;
     if (
       oldChildren[oldCounter] === newChild ||
@@ -560,16 +585,19 @@ function mergeChildren(
 function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let parent = oldChild;
   let next = parentNode(parent);
-  let _debugCount = 0;
+  // Bounds the ascent toward the root; real MathML nesting depth stays well
+  // under this, so reaching it indicates a parent-pointer cycle.
+  const guard = loopGuard(
+    200,
+    () => `insertNewChild loop: next=${(next as Element)?.tagName} parent=${(parent as Element)?.tagName}`
+  );
   while (
     next &&
     isFirstChild(next, parent) &&
     !parent.hasAttribute('AuxiliaryImplicit') &&
     next !== node
   ) {
-    if (++_debugCount > 200) {
-      throw new SREError(`insertNewChild loop: next=${(next as Element)?.tagName} parent=${(parent as Element)?.tagName}`);
-    }
+    guard();
     parent = next;
     next = parentNode(parent);
   }
@@ -623,11 +651,14 @@ function isDescendant(child: Element, node: Element): boolean {
   if (!child) {
     return false;
   }
-  let _descCount = 0;
+  // Bounds the ascent toward the root; allows more headroom than the other
+  // ascent guards since callers may pass deeply nested intermediate nodes.
+  const guard = loopGuard(
+    200,
+    () => `isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`
+  );
   do {
-    if (++_descCount > 500) {
-      throw new SREError(`isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`);
-    }
+    guard();
     child = parentNode(child);
     if (child === node) {
       return true;
@@ -767,11 +798,14 @@ function pathToRoot(
 ): Element[] {
   const test = opt_test || ((_x) => false);
   const path = [node];
-  let _debugCount = 0;
+  // Bounds the ascent toward the root; real MathML nesting depth stays well
+  // under this, so reaching it indicates a parent-pointer cycle.
+  const guard = loopGuard(
+    200,
+    () => `pathToRoot infinite loop at ${node.tagName} parent=${(node.parentNode as Element)?.tagName}`
+  );
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
-    if (++_debugCount > 200) {
-      throw new SREError(`pathToRoot infinite loop at ${node.tagName} parent=${(node.parentNode as Element)?.tagName}`);
-    }
+    guard();
     node = parentNode(node);
     path.unshift(node);
   }
@@ -832,13 +866,16 @@ function hasSiblingInDirection(
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
   const empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
     && semantic.getAnnotation('empty');
-  let _debugCount = 0;
+  // Bounds the ascent toward the root; tighter than the other ascent guards
+  // since ascendNewNode only ever climbs through single-child wrapper nodes.
+  const guard = loopGuard(
+    200,
+    () => `ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`
+  );
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
-    if (++_debugCount > 100) {
-      throw new SREError(`ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`);
-    }
+    guard();
     newNode = parentNode(newNode);
   }
   return newNode;
