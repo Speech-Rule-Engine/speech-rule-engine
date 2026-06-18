@@ -5,17 +5,18 @@
     "RuleEngine": {
       "type": "toSpeech",
       "input": "<mo>=</mo>",
-      "expected": "5",
+      "expected": "6",
       "strings": {
-        "1": ["<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"],
-        "2": ["Applicable Rules:", "stree(en.speech.mathspeak.default)"],
-        "3": ["Apply Rule:", "stree", "en.speech.mathspeak.default", "<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"]
+        "1": [],
+        "2": ["<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"],
+        "3": ["Applicable Rules:", "stree(en.speech.mathspeak.default)"],
+        "4": ["Apply Rule:", "stree", "en.speech.mathspeak.default", "<stree><relation role=\"equality\" annotation=\"depth:1\" id=\"0\">=</relation></stree>"]
       }
     },
     "JuxtaHeuristics1": {
       "type": "toSemantic",
       "input": "<math><mrow><mi>a</mi><mo>&#x2062;</mo><mi>b</mi><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>d</mi><mi>e</mi></mrow></math>",
-      "expected": "4",
+      "expected": "5",
       "strings": {
         "1": ["Juxta Heuristic Case 8"],
         "2": ["Juxta Heuristic Case 2"],
@@ -26,18 +27,18 @@
     "Enrichment1": {
       "type": "toEnriched",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\"><mlabeledtr><mtd><mtext>(*)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr><mtr><mtd><mi>E</mi></mtd><mtd><mi></mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>a</mi><mi>a</mi></msubsup><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mi>d</mi><mi>x</mi></mtd></mtr></mtable></math>",
-      "expected": "148",
+      "expected": "149",
       "strings": {
-        "6": ["Walktree Case 0"],
-        "7": ["Walktree Case 0.1"],
-        "9": ["Walktree Case 2"],
-        "10": ["Walktree Case 2.1"],
-        "11": ["WALKING END: ", "<cell role=\"label\" annotation=\"depth:3\" id=\"1\"><children><text role=\"label\" annotation=\"depth:4\" id=\"0\">(*)</text></children></cell>"],
-        "100": ["Walktree Case 0"],
-        "101": ["Walktree Case 0.1"],
-        "123": ["Walktree Case 1"],
-        "124": ["Walktree Case 1.1"],
-        "125": ["Walktree Case 1.1.1"]
+        "7": ["Walktree Case 0"],
+        "8": ["Walktree Case 0.1"],
+        "10": ["Walktree Case 2"],
+        "11": ["Walktree Case 2.1"],
+        "12": ["WALKING END (5): ", "<cell role=\"label\" annotation=\"depth:3\" id=\"1\"><children><text role=\"label\" annotation=\"depth:4\" id=\"0\">(*)</text></children></cell>"],
+        "101": ["Walktree Case 0"],
+        "102": ["Walktree Case 0.1"],
+        "124": ["Walktree Case 1"],
+        "125": ["Walktree Case 1.1"],
+        "126": ["Walktree Case 1.1.1"]
       }
     }
   }

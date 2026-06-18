@@ -375,11 +375,28 @@ export class RebuildStree {
    */
   private setParent(id: string, snode: SemanticNode): SemanticNode {
     const mml = WalkerUtil.getBySemanticId(this.mathml, id);
+    if (!mml) {
+      // This case should not happen, but can cause OOM errors in the wild.
+      //
+      // ID referenced in attributes but has no DOM element in the enriched
+      // MathML (e.g. collapsed nodes or shared-element content nodes). Create
+      // a placeholder so the tree can be assembled without crashing.
+      const sn = this.createNode(parseInt(id, 10));
+      sn.parent = snode;
+      return sn;
+    }
     const sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;
   }
 
+  /**
+   * Tests if a node is empty or a phantom node.
+   *
+   * @param snode The semantic node.
+   * @param node The mml node.
+   * @returns True if the node is empty or a phantom node.
+   */
   private isEmpty(snode: SemanticNode, node?: Element): boolean {
     if (snode.type === SemanticType.EMPTY) {
       return true;

@@ -38,6 +38,29 @@ import { MMLTAGS } from '../semantic_tree/semantic_util.js';
 
 import * as EnrichAttr from './enrich_attr.js';
 import { getCase } from './enrich_case.js';
+import { SREError } from '../common/engine.js';
+
+/**
+ * Creates a guard against runaway loops in the tree-walking helpers below.
+ * Call the returned function once per iteration; it throws once `limit`
+ * iterations have been exceeded.
+ *
+ * Note, this is temporary to avoid page crashes in MathJax!
+ *
+ * @param limit Maximum number of iterations to allow.
+ * @param message Error message, or a function computing one lazily from the
+ *     loop's current state (useful since that state is only known at the
+ *     call site).
+ * @returns A function to invoke on every loop iteration.
+ */
+function loopGuard(limit: number, message: string | (() => string)): () => void {
+  let count = 0;
+  return () => {
+    if (++count > limit) {
+      throw new SREError(typeof message === 'function' ? message() : message);
+    }
+  };
+}
 
 /**
  * Object containing settings for the semantic enrichment.
@@ -112,7 +135,7 @@ export function walkTree(semantic: SemanticNode): Element {
   if (specialCase) {
     newNode = specialCase.getMathml();
     Debugger.getInstance().generate(() => [
-      'WALKING END: ',
+      'WALKING END (1): ',
       semantic.toString()
     ]);
     return ascendNewNode(newNode);
@@ -124,7 +147,7 @@ export function walkTree(semantic: SemanticNode): Element {
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
       Debugger.getInstance().generate(() => [
-        'WALKING END: ',
+        'WALKING END (2): ',
         semantic.toString()
       ]);
       return ascendNewNode(newNode);
@@ -139,7 +162,7 @@ export function walkTree(semantic: SemanticNode): Element {
       EnrichAttr.setAttributes(newNode, semantic);
       newNode.appendChild(walkTree(fchild));
       Debugger.getInstance().generate(() => [
-        'WALKING END: ',
+        'WALKING END (3): ',
         semantic.toString()
       ]);
       return ascendNewNode(newNode);
@@ -172,7 +195,42 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = parentNode(attached);
+      const attachedParent = parentNode(attached);
+      // If attachedParent is an ancestor of semantic.mathmlTree, using it as the
+      // container would create a DOM cycle when the parent semantic node later
+      // tries to insert semantic.mathmlTree into a new mrow inside attachedParent.
+      // Only apply this fallback when semantic has a parent (root nodes safely
+      // use attachedParent directly since no ancestor processing will follow).
+      // Exception: when attached === newNode, the child ascended up to the
+      // mathmlTree itself; using attachedParent (its DOM parent) is safe and
+      // avoids overwriting attributes set on inner nodes by child walkTree calls.
+      if (attachedParent && semantic.parent && attached !== newNode && isDescendant(newNode, attachedParent)) {
+        Debugger.getInstance().output('Walktree Case 2.1.fallback');
+        const innerNode = getInnerNode(newNode);
+        // If getInnerNode descended into a child that was already annotated by
+        // an earlier walkTree call (e.g. a collapsed-identifier superscript
+        // whose exponent was enriched as a standalone operator, or a postfix
+        // operator whose content node is the sole child of a texclass mrow),
+        // collapsing onto it would overwrite and lose that existing
+        // annotation. Keep newNode itself as the annotation target instead,
+        // merging children relative to its DOM parent so nothing gets
+        // physically inserted as an extra/illegal child of newNode.
+        if (innerNode !== newNode &&
+            innerNode.hasAttribute(EnrichAttr.Attribute.ID)) {
+          mergeChildren(parentNode(newNode) || newNode, childrenList, semantic);
+          if (!IDS.has(semantic.id)) {
+            IDS.set(semantic.id, true);
+            EnrichAttr.setAttributes(newNode, semantic);
+          }
+          Debugger.getInstance().generate(() => ['WALKING END (4): ', semantic.toString()]);
+          return ascendNewNode(newNode, semantic);
+        } else {
+          newNode = innerNode;
+        }
+      } else {
+        // This should be unreachable.
+        newNode = attachedParent;
+      }
     } else {
       Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
@@ -183,7 +241,7 @@ export function walkTree(semantic: SemanticNode): Element {
     IDS.set(semantic.id, true);
     EnrichAttr.setAttributes(newNode, semantic);
   }
-  Debugger.getInstance().generate(() => ['WALKING END: ', semantic.toString()]);
+  Debugger.getInstance().generate(() => ['WALKING END (5): ', semantic.toString()]);
   return ascendNewNode(newNode, semantic);
 }
 
@@ -439,7 +497,12 @@ function mergeChildren(
     return;
   }
   let oldCounter = 0;
+  // Bounds the number of children mergeChildren can shift/insert; expressions
+  // with thousands of children are already pathological, so this is well
+  // above any legitimate input.
+  const guard = loopGuard(200, 'mergeChildren infinite loop');
   while (newChildren.length) {
+    guard();
     const newChild = newChildren[0] as Element;
     if (
       oldChildren[oldCounter] === newChild ||
@@ -482,8 +545,21 @@ function mergeChildren(
         // different than the one of node. newChild should be inserted before
         // the next, which can then be skipped. Since the parentNode is
         // different than node we replace it.
-        node = parentNode(nextChild);
-        insertBefore(node, newChild, nextChild);
+        let insertTarget = parentNode(nextChild);
+        let refChild: Element = nextChild;
+        // Don't insert inside a structurally fixed element (mfrac, msup, etc.)
+        // whose children carry positional meaning. Climb up until we find a
+        // container that can safely receive an extra child.
+        while (
+          insertTarget &&
+            insertTarget !== node &&
+            SemanticUtil.isStructuralParent(insertTarget)
+        ) {
+          refChild = insertTarget;
+          insertTarget = parentNode(insertTarget);
+        }
+        node = insertTarget;
+        insertBefore(node, newChild, refChild);
         newChildren.shift();
         newChildren.shift();
         continue;
@@ -509,12 +585,19 @@ function mergeChildren(
 function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   let parent = oldChild;
   let next = parentNode(parent);
+  // Bounds the ascent toward the root; real MathML nesting depth stays well
+  // under this, so reaching it indicates a parent-pointer cycle.
+  const guard = loopGuard(
+    200,
+    () => `insertNewChild loop: next=${(next as Element)?.tagName} parent=${(parent as Element)?.tagName}`
+  );
   while (
     next &&
     isFirstChild(next, parent) &&
     !parent.hasAttribute('AuxiliaryImplicit') &&
     next !== node
   ) {
+    guard();
     parent = next;
     next = parentNode(parent);
   }
@@ -568,7 +651,14 @@ function isDescendant(child: Element, node: Element): boolean {
   if (!child) {
     return false;
   }
+  // Bounds the ascent toward the root; allows more headroom than the other
+  // ascent guards since callers may pass deeply nested intermediate nodes.
+  const guard = loopGuard(
+    200,
+    () => `isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`
+  );
   do {
+    guard();
     child = parentNode(child);
     if (child === node) {
       return true;
@@ -708,7 +798,14 @@ function pathToRoot(
 ): Element[] {
   const test = opt_test || ((_x) => false);
   const path = [node];
+  // Bounds the ascent toward the root; real MathML nesting depth stays well
+  // under this, so reaching it indicates a parent-pointer cycle.
+  const guard = loopGuard(
+    200,
+    () => `pathToRoot infinite loop at ${node.tagName} parent=${(node.parentNode as Element)?.tagName}`
+  );
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
+    guard();
     node = parentNode(node);
     path.unshift(node);
   }
@@ -719,16 +816,39 @@ function pathToRoot(
  * Checks if a LCA of two nodes is valid. It takes the penultimate node in the
  * paths of the original nodes to the LCA and sees if they have no siblings.  In
  * case they have siblings, we can not simply replace the LCA with the node
- * comprising the children.
+ * comprising the children. Ignorable siblings (empty tags without semantic
+ * annotations) are skipped.
  *
  * @param left Left path element.
  * @param right Right path element.
  * @returns True if valid LCA. False if either left or right empty or
- *     there exist siblings further to the left or right.
+ *     there exist non-ignorable siblings further to the left or right.
  */
 function validLca(left: Element, right: Element): boolean {
-  // TODO (sorge) Here we have to account for ignored tags.
-  return !!(left && right && !left.previousSibling && !right.nextSibling);
+  return !!(left && right &&
+    !hasSiblingInDirection(left, 'previousSibling') &&
+    !hasSiblingInDirection(right, 'nextSibling'));
+}
+
+/**
+ * Checks if a node has a non-ignorable sibling in a given direction.
+ *
+ * @param node The node to check.
+ * @param direction Either 'previousSibling' or 'nextSibling'.
+ * @returns True if there is a non-ignorable sibling in that direction.
+ */
+function hasSiblingInDirection(
+  node: Element,
+  direction: 'previousSibling' | 'nextSibling'
+): boolean {
+  let sib = node[direction] as Element;
+  while (sib) {
+    if (!isIgnorable(sib)) {
+      return true;
+    }
+    sib = sib[direction] as Element;
+  }
+  return false;
 }
 
 /**
@@ -744,11 +864,18 @@ function validLca(left: Element, right: Element): boolean {
  * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
-  let empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
+  const empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
     && semantic.getAnnotation('empty');
+  // Bounds the ascent toward the root; tighter than the other ascent guards
+  // since ascendNewNode only ever climbs through single-child wrapper nodes.
+  const guard = loopGuard(
+    200,
+    () => `ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`
+  );
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
+    guard();
     newNode = parentNode(newNode);
   }
   return newNode;
@@ -818,6 +945,7 @@ function isIgnorable(node: Element): boolean {
   if (
     (!SemanticUtil.hasEmptyTag(node) && children.length) ||
     SemanticUtil.hasDisplayTag(node) ||
+    SemanticUtil.meaningfulSpace(node) ||
     node.hasAttribute(EnrichAttr.Attribute.TYPE) ||
     SemanticUtil.isOrphanedGlyph(node)
   ) {

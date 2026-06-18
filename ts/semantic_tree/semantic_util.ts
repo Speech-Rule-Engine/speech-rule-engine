@@ -107,6 +107,22 @@ const EMPTYTAGS: string[] = [
 ];
 
 /**
+ * MathML elements whose children have fixed positional semantics. Inserting an
+ * extra child inside one of these would corrupt the structure when re-parsed.
+ */
+const STRUCTURAL: string[] = [
+  MMLTAGS.MFRAC,
+  MMLTAGS.MSUP,
+  MMLTAGS.MSUB,
+  MMLTAGS.MSUBSUP,
+  MMLTAGS.MOVER,
+  MMLTAGS.MUNDER,
+  MMLTAGS.MUNDEROVER,
+  MMLTAGS.MROOT,
+  MMLTAGS.MMULTISCRIPTS
+];
+
+/**
  * List of MathML Tags that draw something and can therefore not be ignored if
  * they have no children.
  */
@@ -183,6 +199,16 @@ export function isOrphanedGlyph(node: Element): boolean {
     DomUtil.tagName(node) === MMLTAGS.MGLYPH &&
     !hasLeafTag(node.parentNode as Element)
   );
+}
+
+/**
+ * Checks if an element is a node with a structural parent tag.
+ *
+ * @param node The node to check.
+ * @returns True if element is a structural parent node.
+ */
+export function isStructuralParent(node: Element): boolean {
+  return STRUCTURAL.includes(DomUtil.tagName(node));
 }
 
 /**
@@ -376,6 +402,22 @@ export function partitionNodes(
 }
 
 /**
+ * Checks if a node has an ancestor contained in the given set.
+ *
+ * @param node The node to check.
+ * @param ancestors The candidate ancestor elements.
+ * @returns True if some strict ancestor of node is in ancestors.
+ */
+function hasAncestorIn(node: Element, ancestors: Set<Element>): boolean {
+  let parent = node.parentElement;
+  while (parent) {
+    if (ancestors.has(parent)) return true;
+    parent = parent.parentElement;
+  }
+  return false;
+}
+
+/**
  * Heuristic to find a mathml Tree for a newly introduced node. Tries to find
  * something like an mrow which is "unused" and which contains all the given
  * child nodes.
@@ -402,14 +444,24 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
     return;
   }
 
-  // Case 2: If all nodes that have a mathml tree have the same parent, and
-  // the top level nodes of the constituent mathml nodes have the same parent,
-  // we can use that as the mathml tree for the new node.
+  // Case 2: Some nodes do not yet have a mathml tree of their own (e.g.,
+  // newly synthesised nodes). If the nodes that do have one agree on a
+  // parent, and the constituent mathml elements of the remaining nodes (if
+  // any) also live under that same parent, we can use it for the new node.
+  // Only the topmost elements of such a node's mathml are considered: if one
+  // of its elements is a descendant of another (e.g. a row that already
+  // accounts for its own leaves), the descendant is subsumed and must not be
+  // used to introduce an unrelated parent into the candidate set.
   if (parentTrees.has(null) && parentTrees.size <= 2) {
     parentTrees.delete(null);
-    newNode.mathml.forEach(x => {
-      if (x.parentElement && !newNode.mathml.includes(x)) {
-        parentTrees.add(x.parentElement);
+    nodeList.forEach((x) => {
+      if (!x.mathmlTree) {
+        const elements = new Set(x.mathml);
+        x.mathml.forEach((m) => {
+          if (m.parentElement && !hasAncestorIn(m, elements)) {
+            parentTrees.add(m.parentElement);
+          }
+        });
       }
     });
   }
@@ -420,5 +472,38 @@ export function findMathmlTree(newNode: SemanticNode, nodeList: SemanticNode[]) 
       newNode.mathmlTree = singleton;
       return;
     }
-  };
+  }
+}
+
+/**
+ * Test if node is a mspace element and has a meaningful size.
+ *
+ * @param node The node to test.
+ * @returns True if the size is large enough to warrant semantic meaning.
+ */
+export function meaningfulSpace(node: Element): boolean {
+  if (!node || DomUtil.tagName(node) !== MMLTAGS.MSPACE) {
+    return false;
+  }
+    const width = node.getAttribute('width');
+    const match = width && width.match(/[a-z]*$/);
+    if (!match) {
+      return false;
+    }
+    const sizes: { [key: string]: number } = {
+      cm: 0.4,
+      pc: 0.5,
+      em: 0.5,
+      ex: 1,
+      in: 0.15,
+      pt: 5,
+      mm: 5
+    };
+    const unit = match[0];
+    const measure = parseFloat(width.slice(0, match.index));
+    const size = sizes[unit];
+    if (!size || isNaN(measure) || measure < size) {
+      return false;
+    }
+  return true;
 }

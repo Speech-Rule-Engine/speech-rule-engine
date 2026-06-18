@@ -268,6 +268,12 @@ set(
 
 type JSON = any;
 
+/**
+ * Rewrites the JSON tree to combine content and children nodes.
+ *
+ * @param node The JSON node to rewrite.
+ * @returns The rewritten JSON node.
+ */
 function rewriteJson(node: JSON): JSON {
   if (!node.children) {
     return node;

@@ -1,0 +1,7 @@
+{
+  "factory": "rebuildEnriched",
+  "tests": "ALL",
+  "information": "Rebuild enriched issues2 tests.",
+  "base": "input/semantic/issues2.json",
+  "exclude": ["issue_mj_3557"]
+}

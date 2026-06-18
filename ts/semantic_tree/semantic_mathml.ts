@@ -204,10 +204,14 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     } else {
       // Case of a 'meaningful' row, even if they are empty.
       const snode = SemanticHeuristics.run('function_from_identifiers', node);
+      const parsed = this.parseList(children);
+      // In mstyle, empty elements (e.g., <mi/>) are explicit alignment placeholders
+      // and must not be filtered by row().
+      const preserveEmpty = DomUtil.tagName(node) === MMLTAGS.MSTYLE;
       newNode =
         snode && snode !== node
           ? snode
-          : SemanticProcessor.getInstance().row(this.parseList(children));
+          : SemanticProcessor.getInstance().row(parsed, preserveEmpty);
     }
     newNode.mathml.unshift(node);
     return newNode;
@@ -413,24 +417,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @returns The newly created semantic node.
    */
   private space_(node: Element, children: Element[]): SemanticNode {
-    const width = node.getAttribute('width');
-    const match = width && width.match(/[a-z]*$/);
-    if (!match) {
-      return this.empty_(node, children);
-    }
-    const sizes: { [key: string]: number } = {
-      cm: 0.4,
-      pc: 0.5,
-      em: 0.5,
-      ex: 1,
-      in: 0.15,
-      pt: 5,
-      mm: 5
-    };
-    const unit = match[0];
-    const measure = parseFloat(width.slice(0, match.index));
-    const size = sizes[unit];
-    if (!size || isNaN(measure) || measure < size) {
+    if (!SemanticUtil.meaningfulSpace(node)) {
       return this.empty_(node, children);
     }
     const newNode = this.getFactory().makeUnprocessed(node);

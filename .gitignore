@@ -15,3 +15,5 @@ js/
 cjs/
 *.min
 *.sh
+testsuite/tests/
+

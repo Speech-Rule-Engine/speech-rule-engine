@@ -1289,12 +1289,14 @@ export class SemanticProcessor {
    * term tree.
    *
    * @param nodes The list of nodes.
+   * @param preserveEmpty Preserve empty nodes usually generated for layout.
    * @returns The root node of the syntax tree.
    */
-  public row(nodes: SemanticNode[]): SemanticNode {
+  public row(nodes: SemanticNode[], preserveEmpty: boolean = false): SemanticNode {
     nodes = nodes.filter(function (x) {
       return !SemanticPred.isType(x, SemanticType.EMPTY) ||
-        x.hasAnnotation('empty', 'MFENCED');
+        x.hasAnnotation('empty', 'MFENCED') ||
+        preserveEmpty;
     });
     if (nodes.length === 0) {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
@@ -1323,7 +1325,7 @@ export class SemanticProcessor {
     }
     let center = children[0];
     // Initial breaking point for cleanup.
-    let {length: breaking} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    const {length: breaking} = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
     children = children.slice(0, breaking + 1);
     [mmlTag, children] =
       SemanticProcessor.getInstance().cleanLimitNode(mmlTag, children, breaking);
@@ -1351,7 +1353,7 @@ export class SemanticProcessor {
           SemanticPred.isAccent(children[1]) &&
           SemanticPred.isAccent(children[2]))
       ) {
-        let result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+        const result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
         return SemanticProcessor.getInstance().accentNode_(
           center,
           children,
@@ -1430,6 +1432,7 @@ export class SemanticProcessor {
    * @param mmlTag The tag name of the original node.
    * @param children The children of the
    *     original node.
+   * @param length The number of children to be considered.
    * @returns The newly created limit node.
    */
   private cleanLimitNode(
@@ -2112,6 +2115,12 @@ export class SemanticProcessor {
     return newNode;
   }
 
+  /**
+   * Creates a node of type MULTIOP by collapsing the given node list into one.
+   * 
+   * @param operators The list of operator nodes.
+   * @returns The new multiop node.
+   */
   private multiopNode_(operators: SemanticNode[]): SemanticNode {
     const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.OPERATOR,
@@ -2218,8 +2227,8 @@ export class SemanticProcessor {
 
   /**
    * Combines oddly expressed scripts. I.e.
-   *  *  an empty superscript with an identifier/number or subscript.
-   *  *  an empty subscript with an identifier/number
+   *  an empty superscript with an identifier/number or subscript.
+   *  an empty subscript with an identifier/number
    *
    * @param nodes The list of nodes.
    * @returns The new list of nodes.
@@ -2804,7 +2813,7 @@ export class SemanticProcessor {
       !SemanticPred.isImplicit(lastChild)
     ) {
       lastRoot = lastChild;
-      lastChild = lastRoot.childNodes[root.childNodes.length - 1];
+      lastChild = lastRoot.childNodes[lastRoot.childNodes.length - 1];
     }
     const newNode = SemanticProcessor.getInstance().infixNode_(
       [lastRoot.childNodes.pop(), node],
@@ -2840,7 +2849,7 @@ export class SemanticProcessor {
       !SemanticPred.isImplicit(lastChild)
     ) {
       lastRoot = lastChild;
-      lastChild = lastRoot.childNodes[root.childNodes.length - 1];
+      lastChild = lastRoot.childNodes[lastRoot.childNodes.length - 1];
     }
     const newNode = SemanticProcessor.getInstance().infixNode_(
       [lastRoot.childNodes.pop(), node],
@@ -4240,7 +4249,7 @@ function isTrivialTable(multiline: SemanticNode) {
  * tag. This is important for enrichment, where that particular tag needs to be
  * "jumped over" during ascend when adding new nodes, like implicit multiplication.
  *
- * @param tag The tag.
+ * @param tags The tags.
  * @param node The node that's annotated.
  * @returns The node for pipelining.
  */
