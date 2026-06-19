@@ -861,18 +861,23 @@ function hasSiblingInDirection(
  *     given tag is skipped. This is important for elements like `a_{}b_{}`,
  *     where empty subscripts are omitted, but newly added implicit times
  *     elements need to be added between the msubs and not before the `b`.
+ *     It also bounds the ascent: climbing is allowed up to and including
+ *     `semantic.parent.mathmlTree` (the enclosing semantic node's own
+ *     anchor), but never past it. Without this ceiling, a chain of
+ *     redundant single-child wrapper elements lets the ascent escape into
+ *     the parent's ancestors, which walkTree then mistakes for an unrelated
+ *     branch of the tree.
  * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Element {
   const empty = semantic && !semantic.hasAnnotation('empty', 'MFENCED')
     && semantic.getAnnotation('empty');
-  // Bounds the ascent toward the root; tighter than the other ascent guards
-  // since ascendNewNode only ever climbs through single-child wrapper nodes.
+  const ceiling = semantic?.parent?.mathmlTree;
   const guard = loopGuard(
     200,
     () => `ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`
   );
-  while (!SemanticUtil.hasMathTag(newNode) &&
+  while (newNode !== ceiling && !SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
     guard();
