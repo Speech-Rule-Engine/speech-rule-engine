@@ -40,6 +40,8 @@ import * as EnrichAttr from './enrich_attr.js';
 import { getCase } from './enrich_case.js';
 import { SREError } from '../common/engine.js';
 
+
+const LOOP_LIMIT = 10000;
 /**
  * Creates a guard against runaway loops in the tree-walking helpers below.
  * Call the returned function once per iteration; it throws once `limit`
@@ -500,7 +502,7 @@ function mergeChildren(
   // Bounds the number of children mergeChildren can shift/insert; expressions
   // with thousands of children are already pathological, so this is well
   // above any legitimate input.
-  const guard = loopGuard(200, 'mergeChildren infinite loop');
+  const guard = loopGuard(LOOP_LIMIT, 'mergeChildren infinite loop');
   while (newChildren.length) {
     guard();
     const newChild = newChildren[0] as Element;
@@ -588,7 +590,7 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
   // Bounds the ascent toward the root; real MathML nesting depth stays well
   // under this, so reaching it indicates a parent-pointer cycle.
   const guard = loopGuard(
-    200,
+    LOOP_LIMIT,
     () => `insertNewChild loop: next=${(next as Element)?.tagName} parent=${(parent as Element)?.tagName}`
   );
   while (
@@ -654,7 +656,7 @@ function isDescendant(child: Element, node: Element): boolean {
   // Bounds the ascent toward the root; allows more headroom than the other
   // ascent guards since callers may pass deeply nested intermediate nodes.
   const guard = loopGuard(
-    200,
+    LOOP_LIMIT,
     () => `isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`
   );
   do {
@@ -801,7 +803,7 @@ function pathToRoot(
   // Bounds the ascent toward the root; real MathML nesting depth stays well
   // under this, so reaching it indicates a parent-pointer cycle.
   const guard = loopGuard(
-    200,
+    LOOP_LIMIT,
     () => `pathToRoot infinite loop at ${node.tagName} parent=${(node.parentNode as Element)?.tagName}`
   );
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
@@ -869,7 +871,7 @@ export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Elemen
   // Bounds the ascent toward the root; tighter than the other ascent guards
   // since ascendNewNode only ever climbs through single-child wrapper nodes.
   const guard = loopGuard(
-    200,
+    LOOP_LIMIT,
     () => `ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`
   );
   while (!SemanticUtil.hasMathTag(newNode) &&
