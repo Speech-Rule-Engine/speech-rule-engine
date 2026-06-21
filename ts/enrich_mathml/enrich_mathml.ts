@@ -293,7 +293,7 @@ export function introduceNewLayer(
       if (node) {
         Debugger.getInstance().output('Walktree Case 1.1.1.0');
         let oldChildren = childrenSubset(parentNode(node), children);
-        oldChildren = specialPostfixCase(semantic, oldChildren);
+        specialPostfixCase(semantic, oldChildren);
         DomUtil.replaceNode(node, newNode);
         oldChildren.forEach(function (x) {
           newNode.appendChild(x);
@@ -321,15 +321,12 @@ export function introduceNewLayer(
  *    sibling.
  */
 function specialPostfixCase(semantic: SemanticNode, children: Element[]) {
-  if (semantic.type !== 'postfixop') {
-    return children;
-  }
+  if (semantic.type !== 'postfixop') return;
   const last = children[children.length - 1];
   const sibling = last.nextSibling as Element;
   if (sibling && SemanticUtil.ordRow(sibling)) {
-    return [...children, sibling];
+    children.push(sibling);
   }
-  return children;
 }
 
 /**
