@@ -291,12 +291,15 @@ export function introduceNewLayer(
       Debugger.getInstance().output('Walktree Case 1.1.1');
       const node = attachedElement(children);
       if (node) {
-        const oldChildren = childrenSubset(parentNode(node), children);
+        Debugger.getInstance().output('Walktree Case 1.1.1.0');
+        let oldChildren = childrenSubset(parentNode(node), children);
+        oldChildren = specialPostfixCase(semantic, oldChildren);
         DomUtil.replaceNode(node, newNode);
         oldChildren.forEach(function (x) {
           newNode.appendChild(x);
         });
       } else {
+      Debugger.getInstance().output('Walktree Case 1.1.1.1');
         moveSemanticAttributes(newNode, children[0]);
         newNode = children[0];
       }
@@ -306,6 +309,27 @@ export function introduceNewLayer(
     semantic.mathmlTree = newNode;
   }
   return newNode as Element;
+}
+
+/**
+ * In case we have a postfix operator but also a following empty row element
+ * that represents an ordinal, this is included in the children to avoid any
+ * visual issues, since the postfix operatore is effectively a binary operator.
+ *
+ * @param semantic The semantic node.
+ * @param children The set of mml children, which is possibly expanded by one
+ *    sibling.
+ */
+function specialPostfixCase(semantic: SemanticNode, children: Element[]) {
+  if (semantic.type !== 'postfixop') {
+    return children;
+  }
+  const last = children[children.length - 1];
+  const sibling = last.nextSibling as Element;
+  if (sibling && SemanticUtil.ordRow(sibling)) {
+    return [...children, sibling];
+  }
+  return children;
 }
 
 /**
