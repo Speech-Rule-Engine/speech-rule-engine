@@ -1,6 +1,4 @@
 {
-  "name": "sre-tests",
-  "version": "1.0.0",
   "description": "Speech Rule Engine tests with Jest",
   "directories": {
     "test": "tests"
