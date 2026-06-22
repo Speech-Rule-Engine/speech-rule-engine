@@ -239,6 +239,18 @@ export function purgeNodes(nodes: Element[]): Element[] {
 }
 
 /**
+ * Check if an empty row element presents an omitted ordinal.
+ *
+ * @param node The node to test.
+ * @returns True if the node is an mrow ordinal without children.
+ */
+export function ordRow(node: Element): boolean {
+  return DomUtil.tagName(node) === MMLTAGS.MROW &&
+    node.getAttribute('data-mjx-texclass') === 'ORD' &&
+    node.childNodes.length === 0;
+}
+
+/**
  * Determines if an attribute represents zero or negative length.
  *
  * @param length The lenght value.

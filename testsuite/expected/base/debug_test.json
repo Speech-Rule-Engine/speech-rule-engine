@@ -27,18 +27,21 @@
     "Enrichment1": {
       "type": "toEnriched",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\"><mlabeledtr><mtd><mtext>(*)</mtext></mtd><mtd><mi>a</mi></mtd><mtd><mi></mi><mo>=</mo><mi>b</mi></mtd></mlabeledtr><mtr><mtd><mi>E</mi></mtd><mtd><mi></mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msubsup><mo data-mjx-texclass=\"OP\">&#x222B;</mo><mi>a</mi><mi>a</mi></msubsup><mi>x</mi><mstyle scriptlevel=\"0\"><mspace width=\"0.167em\"></mspace></mstyle><mi>d</mi><mi>x</mi></mtd></mtr></mtable></math>",
-      "expected": "149",
+      "expected": "155",
       "strings": {
         "7": ["Walktree Case 0"],
         "8": ["Walktree Case 0.1"],
         "10": ["Walktree Case 2"],
         "11": ["Walktree Case 2.1"],
         "12": ["WALKING END (5): ", "<cell role=\"label\" annotation=\"depth:3\" id=\"1\"><children><text role=\"label\" annotation=\"depth:4\" id=\"0\">(*)</text></children></cell>"],
-        "101": ["Walktree Case 0"],
-        "102": ["Walktree Case 0.1"],
-        "124": ["Walktree Case 1"],
-        "125": ["Walktree Case 1.1"],
-        "126": ["Walktree Case 1.1.1"]
+        "101": ["WALKING END (2): ", "<largeop role=\"integral\" annotation=\"depth:8\" id=\"20\" texclass=\"OP\">∫</largeop>"],
+        "102": ["WALKING START: ", "<identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:8\" id=\"21\">a</identifier>"],
+        "103": ["Walktree Case 0"],
+        "104": ["Walktree Case 0.1"],
+        "131": ["Walktree Case 1"],
+        "132": ["Walktree Case 1.1"],
+        "133": ["Walktree Case 1.1.1"],
+        "134": ["Walktree Case 1.1.1.0"]
       }
     }
   }
