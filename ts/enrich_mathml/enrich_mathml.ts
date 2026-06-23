@@ -897,7 +897,15 @@ export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Elemen
   );
   while (!SemanticUtil.hasMathTag(newNode) &&
     (unitChild(newNode) ||
-      (empty && newNode.parentNode && empty.includes(parentNode(newNode).tagName?.toUpperCase())))) {
+      (empty && newNode.parentNode &&
+        empty.includes(parentNode(newNode).tagName?.toUpperCase()) &&
+        // Only jump over a script element if its script slot was actually the
+        // omitted empty one, i.e. node is the parent's sole meaningful child.
+        // Without this an embellished operator with an empty inner script
+        // (e.g. ↭_{}) would also skip over a real outer script of the same tag
+        // (the `_p` in ↭_{}_p), ascending too far - up to the <math> root - and
+        // ultimately creating a cyclic MathML tree during enrichment.
+        onlyChild(newNode)))) {
     guard();
     newNode = parentNode(newNode);
   }
@@ -943,6 +951,24 @@ function descendNode(node: Element): Element {
 function unitChild(node: Element): boolean {
   const parent = parentNode(node);
   if (!parent || !SemanticUtil.hasEmptyTag(parent)) {
+    return false;
+  }
+  return onlyChild(node);
+}
+
+/**
+ * Checks if the node is the only meaningful child of its parent, that is, all
+ * its siblings are ignorable (e.g., an omitted empty script). In contrast to
+ * `unitChild` this does not require the parent itself to be an empty layout
+ * tag, so it can be used to recognise a script element (msub, msup, ...) whose
+ * script slot was elided as empty.
+ *
+ * @param node The node to be tested.
+ * @returns True if node is the only non-ignorable child of its parent.
+ */
+function onlyChild(node: Element): boolean {
+  const parent = parentNode(node);
+  if (!parent) {
     return false;
   }
   return DomUtil.toArray(parent.childNodes).every(function (child) {
