@@ -21,7 +21,12 @@
     "prepare": "node tests.config.js",
     "build": "pnpm clean; pnpm prepare && pnpm compile",
     "clean": "pnpm rimraf dist js tests coverage",
-    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest",
+    "=============================================================================== smoke": "",
+    "smoke": "pnpm smoke:sync && pnpm smoke:async",
+    "smoke:sync": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --config jest.smoke.config.mjs smoke/sync.smoke.test.ts",
+    "smoke:async": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --config jest.smoke.config.mjs smoke/async.smoke.test.ts",
+    "smoke:browser": "NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest --config jest.smoke.config.mjs smoke/browser.smoke.test.ts"
   },
   "imports": {
     "#js/*": "./sources/*",
@@ -43,5 +48,13 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "5.9.3",
     "xml-js": "^1.6.11"
+  },
+  "peerDependencies": {
+    "playwright": "^1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
   }
 }
