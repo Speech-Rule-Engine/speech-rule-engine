@@ -177,6 +177,9 @@
     },
     "issue_876_1": {
       "expected": "<math><msub type=\"subscript\" role=\"arrow\" embellished=\"relation\" id=\"3\" children=\"0,2\"><mrow data-mjx-texclass=\"REL\"><msub><mo type=\"relation\" role=\"arrow\" annotation=\"empty:MSUB\" id=\"0\" parent=\"3\">↭</mo><mrow/></msub></mrow><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\">p</mi></msub></math>"
+    },
+    "issue_876_2": {
+      "expected": ""
     }
   }
 }
