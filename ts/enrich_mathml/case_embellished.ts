@@ -196,8 +196,35 @@ export class CaseEmbellished extends AbstractEnrichCase {
     sibling = sibling === this.fencedMml ? sibling : this.fencedMml;
     while (sibling && sibling !== this.cfenceMml) {
       this.fencedMmlNodes.push(sibling as Element);
+      // The closing fence can be embellished (e.g. `|_k^{}`), so its bare fence
+      // operator sits nested inside this sibling rather than being the sibling
+      // itself. Once we have included the sibling that contains it, stop -
+      // otherwise the walk overshoots past the closing fence and pulls trailing
+      // siblings (e.g. a following factor) into the fenced layer, reordering the
+      // expression.
+      if (CaseEmbellished.contains_(sibling as Element, this.cfenceMml)) {
+        break;
+      }
       sibling = sibling.nextSibling;
     }
+  }
+
+  /**
+   * Checks whether the subtree rooted at `node` contains `descendant`.
+   *
+   * @param node The potential ancestor (subtree root).
+   * @param descendant The node to look for.
+   * @returns True if `descendant` is `node` or a descendant of it.
+   */
+  private static contains_(node: Element, descendant: Element): boolean {
+    let current: Node = descendant;
+    while (current) {
+      if (current === node) {
+        return true;
+      }
+      current = current.parentNode;
+    }
+    return false;
   }
 
   /**
@@ -347,8 +374,15 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let newNode = addMrow();
     DomUtil.replaceNode(this.fencedMml as Element, newNode);
     this.fencedMmlNodes.forEach((node) => newNode.appendChild(node));
-    newNode.insertBefore(fullOfence, this.fencedMml);
-    newNode.appendChild(fullCfence);
+    // Safety net: if a fence ascended to an ancestor of the new layer (e.g. up
+    // to <math> for an embellished fence with empty content), attaching it here
+    // would create a DOM cycle and hang enrichment. Skip rather than crash.
+    if (!EnrichMathml.createsCycle(newNode, fullOfence)) {
+      newNode.insertBefore(fullOfence, this.fencedMml);
+    }
+    if (!EnrichMathml.createsCycle(newNode, fullCfence)) {
+      newNode.appendChild(fullCfence);
+    }
     // The case of top element math.
     if (!newNode.parentNode) {
       const mrow = addMrow();

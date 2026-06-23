@@ -140,7 +140,11 @@ export function walkTree(semantic: SemanticNode): Element {
       'WALKING END (1): ',
       semantic.toString()
     ]);
-    return ascendNewNode(newNode);
+    // Pass the semantic node so a non-root special case (e.g. an embellished
+    // fence with empty content) is prevented from ascending onto the <math>
+    // root, which would otherwise be inserted as its own descendant by the
+    // enclosing node - a cycle that hangs enrichment.
+    return ascendNewNode(newNode, semantic);
   }
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
@@ -515,7 +519,9 @@ function mergeChildren(
       : DomUtil.toArray(node.childNodes);
   if (!oldChildren.length) {
     newChildren.forEach(function (x) {
-      node.appendChild(x);
+      if (!createsCycle(node, x)) {
+        node.appendChild(x);
+      }
     });
     return;
   }
@@ -639,11 +645,30 @@ function insertNewChild(node: Element, oldChild: Element, newChild: Element) {
  * @param oldChild The reference before which newChild is inserted.
  */
 function insertBefore(node: Element, newChild: Element, oldChild: Element) {
+  if (createsCycle(node, newChild)) {
+    return;
+  }
   if (DomUtil.tagName(node) !== MMLTAGS.MACTION) {
     node.insertBefore(newChild, oldChild);
     return;
   }
   insertBefore(parentNode(node), newChild, node);
+}
+
+/**
+ * Defensive check used before attaching `newChild` under `node`: inserting a
+ * node into one of its own descendants (or into itself) creates a DOM cycle,
+ * which makes subsequent tree walks (e.g. serialization) allocate unboundedly
+ * and hang. The targeted ascent guards above should prevent this, but as the
+ * enrichment rewrites the tree in many places this acts as a final safety net
+ * so a residual cycle degrades to a skipped insertion rather than an OOM.
+ *
+ * @param node The prospective parent.
+ * @param newChild The node about to be inserted.
+ * @returns True if the insertion would create a cycle.
+ */
+export function createsCycle(node: Element, newChild: Element): boolean {
+  return node === newChild || isDescendant(node, newChild);
 }
 
 /**
@@ -895,7 +920,14 @@ export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Elemen
     LOOP_LIMIT,
     () => `ascendNewNode infinite loop at ${newNode.tagName} parent=${(newNode.parentNode as Element)?.tagName}`
   );
+  // A non-root semantic node must never ascend onto the <math> root: doing so
+  // lets an enclosing node later insert <math> as its own descendant, i.e. a
+  // DOM cycle. This bites embellished fences with empty fenced content / empty
+  // scripts, whose enriched result is a sole-child wrapper chain all the way up
+  // to the root (so `unitChild` would otherwise climb to <math>).
+  const keepRoot = !!(semantic && semantic.parent);
   while (!SemanticUtil.hasMathTag(newNode) &&
+    !(keepRoot && SemanticUtil.hasMathTag(parentNode(newNode))) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode &&
         empty.includes(parentNode(newNode).tagName?.toUpperCase()) &&
