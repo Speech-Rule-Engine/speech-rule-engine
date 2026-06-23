@@ -2008,7 +2008,6 @@ export class SemanticProcessor {
       op.parent = newNode;
     });
     newNode.contentNodes = operators;
-    // console.log(newNode.mathmlTree?.toString());
     return newNode;
   }
 
@@ -2591,7 +2590,6 @@ export class SemanticProcessor {
     }
     // Pathological case: only operators in row.
     if (nodes.length === 0) {
-      // console.log(8);
       return SemanticProcessor.getInstance().multiopNode_(prefix);
     }
     if (nodes.length === 1) {
@@ -3301,7 +3299,7 @@ export class SemanticProcessor {
     // This is from MJ Issue #3028
     if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
       !childNode.mathmlTree && ofence.mathmlTree &&
-      ofence.mathmlTree.nextSibling !== cfence.mathmlTree
+      !isDescendant(cfence.mathmlTree, ofence.mathmlTree.nextSibling as Element)
        ) {
       childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
       childNode.addMathmlNodes([ofence.mathmlTree.nextSibling as Element]);
@@ -4257,3 +4255,24 @@ function annotateEmpty(tags: string[], node: SemanticNode) {
   tags.forEach((tag) => node.addAnnotation('empty', tag));
   return node;
 }
+
+/**
+ * Checks if one node is a proper descendant of another.
+ *
+ * @param child The potential descendant node.
+ * @param node The potential ancestor node.
+ * @returns True if child is a descendant of node.
+ */
+function isDescendant(child: Element, node: Element): boolean {
+  if (!child) {
+    return false;
+  }
+  while (child && DomUtil.tagName(child) !== 'MATH') {
+    if (child === node) {
+      return true;
+    }
+    child = child.parentNode as Element;
+  }
+  return false;
+}
+
