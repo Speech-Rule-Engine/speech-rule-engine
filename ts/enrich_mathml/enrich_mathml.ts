@@ -1034,7 +1034,15 @@ export function addCollapsedAttribute(node: Element, collapsed: Sexp) {
  */
 export function cloneContentNode(content: SemanticNode): Element {
   if (content.mathml.length) {
-    return walkTree(content);
+    // Ascend over an omitted empty script wrapper: an embellished content
+    // operator with a collapsed empty script (e.g. the operator ∂ in ∂_{})
+    // must surface as the wrapping script element, not the bare inner node.
+    // Otherwise it stays nested inside that wrapper, and the surrounding layer
+    // (e.g. a prefixop or an embellished fence) gets attached inside the
+    // wrapper, producing a misplaced - and ultimately cyclic - MathML tree.
+    // Unlike base children, a content node never owns the wrapper as the
+    // mathmlTree of an ancestor, so ascending here is safe.
+    return ascendNewNode(walkTree(content), content);
   }
   const clone = SETTINGS.implicit
     ? createInvisibleOperator(content)
