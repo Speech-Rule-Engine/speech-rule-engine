@@ -179,6 +179,13 @@
     "issue_mj_group2": {
       "tex": "{\\nabla}()=",
       "input": "<math><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">&#x2207;</mi></mrow><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">)</mo><mo>=</mo></math>"
+    },
+    "issue_876": {
+      "tex": "\\begin{equation*}a\\mathrel{\\leftrightsquigarrow _{\\mathrm{}}}_{\\mathrm{p}}b\\Longleftrightarrow a\\mathrel{\\rightsquigarrow _{\\mathrm{p}}}b\\mathrel{\\rightsquigarrow _{\\mathrm{p}}}a.\\end{equation*}",
+      "input": "<math><mi>a</mi><msub><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21AD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow></mrow></msub></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub><mi>b</mi><mo stretchy=\"false\">&#x27FA;</mo><mi>a</mi><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21DD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub></mrow><mi>b</mi><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21DD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub></mrow><mi>a</mi><mo>.</mo></math>"
+    },
+    "issue_876_1": {
+      "input": "<math><msub><mrow data-mjx-texclass=\"REL\"><msub><mo>↭</mo><mrow/></msub></mrow><mi>p</mi></msub></math>"
     }
   }
 }
