@@ -34,35 +34,10 @@ import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as SemanticUtil from '../semantic_tree/semantic_util.js';
-import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import { MMLTAGS, loopGuard, LOOP_LIMIT } from '../semantic_tree/semantic_util.js';
 
 import * as EnrichAttr from './enrich_attr.js';
 import { getCase } from './enrich_case.js';
-import { SREError } from '../common/engine.js';
-
-
-const LOOP_LIMIT = 10000;
-/**
- * Creates a guard against runaway loops in the tree-walking helpers below.
- * Call the returned function once per iteration; it throws once `limit`
- * iterations have been exceeded.
- *
- * Note, this is temporary to avoid page crashes in MathJax!
- *
- * @param limit Maximum number of iterations to allow.
- * @param message Error message, or a function computing one lazily from the
- *     loop's current state (useful since that state is only known at the
- *     call site).
- * @returns A function to invoke on every loop iteration.
- */
-function loopGuard(limit: number, message: string | (() => string)): () => void {
-  let count = 0;
-  return () => {
-    if (++count > limit) {
-      throw new SREError(typeof message === 'function' ? message() : message);
-    }
-  };
-}
 
 /**
  * Object containing settings for the semantic enrichment.
