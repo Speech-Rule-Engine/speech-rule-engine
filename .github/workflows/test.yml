@@ -85,8 +85,45 @@ jobs:
           name: coverage-${{ matrix.block }}
           path: coverage/coverage-final.json
 
+  unit:
+    needs: setup
+    runs-on: ubuntu-latest
+    name: SRE jests tests for ${{ matrix.block }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'latest'
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 'latest'
+          run_install: false
+
+      - name: Downloading the build
+        uses: actions/download-artifact@v4
+        with:
+          name: sre-library
+
+      - name: Set up tests
+        run: |
+          pnpm -r i --ignore-scripts
+
+      - name: Run unit tests
+        run: pnpm test:action unit-tests --coverageReporters=json
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-unit
+          path: coverage/coverage-final.json
+
   combine-coverage:
-    needs: test
+    needs: [test, unit]
     runs-on: ubuntu-latest
     name: Combine Coverage Reports
     steps:

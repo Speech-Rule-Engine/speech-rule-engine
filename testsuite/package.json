@@ -10,6 +10,7 @@
     "test:files": "pnpm test --silent --testPathPatterns tests/json",
     "test:actions": "pnpm test --silent --testPathPatterns tests/actions",
     "test:output": "pnpm test --silent --testPathPatterns tests/output",
+    "test:unit": "pnpm test --silent --testPathPatterns unit-tests",
     "test:analytics": "pnpm rimraf analysis; pnpm test --silent --testPathPatterns tests/analyse; pnpm test:allrules",
     "test:allrules": "export SRE_JSON_PATH=../lib/mathmaps; echo \"import('./js/module_loader.js').then((m) => m.loadPromise('at')).then(m => m.default.outputAllRules())\" | node ",
     "analyse:tries": "export SRE_JSON_PATH=../lib/mathmaps; echo \"import('./js/module_loader.js').then((m) => m.loadPromise('atrie')).then(m => m.default.output())\" | node ",

@@ -20,6 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util.js';
+import { SREError } from '../common/engine.js';
 
 import { SemanticNode } from './semantic_node.js';
 
@@ -209,6 +210,62 @@ export function isOrphanedGlyph(node: Element): boolean {
  */
 export function isStructuralParent(node: Element): boolean {
   return STRUCTURAL.includes(DomUtil.tagName(node));
+}
+
+/**
+ * Default upper bound for {@link loopGuard}. Real MathML nesting depth stays
+ * well below this, so exceeding it indicates a malformed (cyclic) DOM.
+ */
+export const LOOP_LIMIT = 10000;
+
+/**
+ * Creates a guard against runaway loops in tree-walking helpers. Call the
+ * returned function once per iteration; it throws once `limit` iterations have
+ * been exceeded.
+ *
+ * Note, this is temporary to avoid page crashes in MathJax!
+ *
+ * @param limit Maximum number of iterations to allow.
+ * @param message Error message, or a function computing one lazily from the
+ *     loop's current state (useful since that state is only known at the
+ *     call site).
+ * @returns A function to invoke on every loop iteration.
+ */
+export function loopGuard(
+  limit: number,
+  message: string | (() => string)
+): () => void {
+  let count = 0;
+  return () => {
+    if (++count > limit) {
+      throw new SREError(typeof message === 'function' ? message() : message);
+    }
+  };
+}
+
+/**
+ * Checks if one node is a proper descendant of another, i.e. `node` is a strict
+ * ancestor of `descendant`. The walk is guarded so a malformed, cyclic DOM
+ * cannot cause an infinite loop.
+ *
+ * @param descendant The potential descendant node.
+ * @param node The potential ancestor node.
+ * @returns True if descendant is a proper descendant of node.
+ */
+export function isDescendant(descendant: Element, node: Element): boolean {
+  if (!descendant) {
+    return false;
+  }
+  const guard = loopGuard(LOOP_LIMIT, 'isDescendant cycle');
+  let current = descendant.parentNode as Element;
+  while (current) {
+    guard();
+    if (current === node) {
+      return true;
+    }
+    current = current.parentNode as Element;
+  }
+  return false;
 }
 
 /**

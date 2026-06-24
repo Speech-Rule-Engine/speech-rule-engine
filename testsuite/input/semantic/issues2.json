@@ -179,6 +179,41 @@
     "issue_mj_group2": {
       "tex": "{\\nabla}()=",
       "input": "<math><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">&#x2207;</mi></mrow><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">)</mo><mo>=</mo></math>"
+    },
+    "issue_876": {
+      "tex": "\\begin{equation*}a\\mathrel{\\leftrightsquigarrow _{\\mathrm{}}}_{\\mathrm{p}}b\\Longleftrightarrow a\\mathrel{\\rightsquigarrow _{\\mathrm{p}}}b\\mathrel{\\rightsquigarrow _{\\mathrm{p}}}a.\\end{equation*}",
+      "input": "<math><mi>a</mi><msub><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21AD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"></mrow></mrow></msub></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub><mi>b</mi><mo stretchy=\"false\">&#x27FA;</mo><mi>a</mi><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21DD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub></mrow><mi>b</mi><mrow data-mjx-texclass=\"REL\"><msub><mo stretchy=\"false\">&#x21DD;</mo><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">p</mi></mrow></mrow></msub></mrow><mi>a</mi><mo>.</mo></math>"
+    },
+    "issue_876_1": {
+      "input": "<math><msub><mrow data-mjx-texclass=\"REL\"><msub><mo>↭</mo><mrow/></msub></mrow><mi>p</mi></msub></math>"
+    },
+    "issue_876_2": {
+      "tex": "\\begin{align*} \\| \\partial _{} S \\|_{k-1,\\flat } &\\leq | \\partial _{} S - \\partial _{} ( S - \\partial _{} Q ) |_{k-1} + |S - \\partial _{} Q|_{k} = |S - \\partial _{} Q|_{k} \\leq \\| S \\|_{k,\\flat } + {\\epsilon }. \\end{align*}",
+      "input": "<math><mtable displaystyle=\"true\" columnalign=\"right left\" columnspacing=\"0em\" rowspacing=\"3pt\" data-break-align=\"bottom top\"><mtr><mtd><mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\">&#x2016;</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>S</mi><msub><mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\">&#x2016;</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>&#x2212;</mo><mn>1</mn><mo>,</mo><mi mathvariant=\"normal\">&#x266D;</mi></mrow></msub></mtd><mtd><mstyle indentshift=\"2em\"><mi></mi><mo>&#x2264;</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>S</mi><mo>&#x2212;</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mo stretchy=\"false\">(</mo><mi>S</mi><mo>&#x2212;</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>Q</mi><mo stretchy=\"false\">)</mo><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub><mo>+</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>S</mi><mo>&#x2212;</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>Q</mi><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msub><mo>=</mo><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mi>S</mi><mo>&#x2212;</mo><msub><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>Q</mi><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msub><mo>&#x2264;</mo><mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\">&#x2016;</mo><mi>S</mi><msub><mo data-mjx-texclass=\"ORD\" fence=\"false\" stretchy=\"false\">&#x2016;</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi><mo>,</mo><mi mathvariant=\"normal\">&#x266D;</mi></mrow></msub><mo>+</mo><mrow data-mjx-texclass=\"ORD\"><mi>&#x3F5;</mi></mrow><mo>.</mo></mstyle></mtd></mtr></mtable></math>"
+    },
+    "issue_876_3": {
+      "tex": "| {|_{k}}^{} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><msup><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"></mrow></msup><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
+    },
+    "issue_876_4": {
+      "tex": "| {|_{k}} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msub></mrow><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
+    },
+    "issue_876_5": {
+      "tex": "| {|^{k}}_{} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><msub><mrow data-mjx-texclass=\"ORD\"><msup><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
+    },
+    "issue_876_6": {
+      "tex": "| {|^{k}} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><msup><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msup></mrow><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
+    },
+    "issue_876_7": {
+      "tex": "| {|_{k}}_{} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><msub><mrow data-mjx-texclass=\"ORD\"><msub><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msub></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msub><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
+    },
+    "issue_876_8": {
+      "tex": "| {|^{k}}^{} S |",
+      "input": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><msup><mrow data-mjx-texclass=\"ORD\"><msup><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo><mrow data-mjx-texclass=\"ORD\"><mi>k</mi></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"></mrow></msup><mi>S</mi><mo data-mjx-texclass=\"ORD\" stretchy=\"false\">|</mo></math>"
     }
   }
 }
