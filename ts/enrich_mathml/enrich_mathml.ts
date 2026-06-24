@@ -296,7 +296,7 @@ export function introduceNewLayer(
       const node = attachedElement(children);
       if (node) {
         Debugger.getInstance().output('Walktree Case 1.1.1.0');
-        let oldChildren = childrenSubset(parentNode(node), children);
+        const oldChildren = childrenSubset(parentNode(node), children);
         specialPostfixCase(semantic, oldChildren);
         DomUtil.replaceNode(node, newNode);
         oldChildren.forEach(function (x) {
