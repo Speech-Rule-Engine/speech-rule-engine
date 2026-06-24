@@ -123,7 +123,7 @@ jobs:
           path: coverage/coverage-final.json
 
   combine-coverage:
-    needs: test
+    needs: test unit
     runs-on: ubuntu-latest
     name: Combine Coverage Reports
     steps:
