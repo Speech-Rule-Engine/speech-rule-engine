@@ -73,7 +73,7 @@ jobs:
           pnpm -r i --ignore-scripts
 
       - name: Run tests for all
-        run: pnpm test:action tests/actions/ --coverageReporters=json
+        run: pnpm test:action tests/actions/ unit-tests --coverageReporters=json
 
       - name: Upload to Codecov
         uses: codecov/codecov-action@v5

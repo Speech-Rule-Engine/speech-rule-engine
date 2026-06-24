@@ -43,6 +43,48 @@
         "133": ["Walktree Case 1.1.1"],
         "134": ["Walktree Case 1.1.1.0"]
       }
+    },
+    "Matrices_0": {
+      "type": "toEnriched",
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">A</mi><mo>=</mo><mo>[</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow>",
+      "expected": "67",
+      "strings": {
+        "64": ["WALKING END (1): ", "<matrix role=\"squarematrix\" annotation=\"depth:2\" id=\"13\"><content><fence role=\"open\" annotation=\"depth:3\" id=\"2\">[</fence><fence role=\"close\" annotation=\"depth:3\" id=\"14\">]</fence></content><children><row role=\"squarematrix\" annotation=\"depth:3\" id=\"7\"><children><cell role=\"squarematrix\" annotation=\"depth:4\" id=\"4\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:5\" id=\"3\">0</number></children></cell><cell role=\"squarematrix\" annotation=\"depth:4\" id=\"6\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:5\" id=\"5\">1</number></children></cell></children></row><row role=\"squarematrix\" annotation=\"depth:3\" id=\"12\"><children><cell role=\"squarematrix\" annotation=\"depth:4\" id=\"9\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:5\" id=\"8\">2</number></children></cell><cell role=\"squarematrix\" annotation=\"depth:4\" id=\"11\"><children><number role=\"integer\" font=\"normal\" annotation=\"clearspeak:simple;depth:5\" id=\"10\">3</number></children></cell></children></row></children></matrix>"]
+      }
+    },
+    "Sqrt_Display_1": {
+      "type": "toEnriched",
+      "input": "<math><msqrt></msqrt><mi>a</mi></math>",
+      "expected": "18",
+      "strings": {
+        "6": ["Walktree Case 0.2"],
+        "11": ["WALKING END (3): ", "<sqrt role=\"unknown\" annotation=\"depth:2\" id=\"1\"><children><empty role=\"unknown\" annotation=\"depth:3\" id=\"0\"/></children></sqrt>"]
+      }
+    },
+    "issue_mj_3557": {
+      "type": "toEnriched",
+      "input": "<math><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><msup><mi/><mo>∨</mo></msup></mrow><mi mathvariant=\"normal\">Δ</mi></math>",
+      "expected": "26",
+      "strings": {
+        "15": ["Walktree Case 2.1.fallback"],
+        "16": ["WALKING END (4): ", "<superscript role=\"identifier\" annotation=\"collapsed:identifier;depth:2\" id=\"3\" texclass=\"ORD\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple;depth:3\" id=\"0\">c</identifier><operator role=\"addition\" annotation=\"depth:3\" id=\"2\">∨</operator></children></superscript>"]
+      }
+    },
+    "empty_4": {
+      "type": "toEnriched",
+      "input": "<math><msubsup><mi>a</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msubsup><msubsup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup></math>",
+      "expected": "30",
+      "strings": {
+        "11": ["Walktree Case 2.2"]
+      }
+    },
+    "Matrix_Inner": {
+      "type": "toEnriched",
+      "input": "<math><mrow><mtable><mtr><mtd><mrow><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></mrow></mtd></mtr></mtable></mrow></math>",
+      "expected": "21",
+      "strings": {
+        "19": ["Walktree Case 1.1.0"]
+      }
     }
   }
 }

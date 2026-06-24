@@ -31,7 +31,8 @@ const config = {
   ],
   testEnvironment: "node",
   testMatch: [
-    "**/tests/**/*.test.ts"
+    "**/tests/**/*.test.ts",
+    "**/unit-tests/**/*.test.ts"
   ],
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
