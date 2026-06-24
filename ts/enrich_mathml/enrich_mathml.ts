@@ -210,7 +210,7 @@ export function walkTree(semantic: SemanticNode): Element {
       // Exception: when attached === newNode, the child ascended up to the
       // mathmlTree itself; using attachedParent (its DOM parent) is safe and
       // avoids overwriting attributes set on inner nodes by child walkTree calls.
-      if (attachedParent && semantic.parent && attached !== newNode && isDescendant(newNode, attachedParent)) {
+      if (attachedParent && semantic.parent && attached !== newNode && SemanticUtil.isDescendant(newNode, attachedParent)) {
         Debugger.getInstance().output('Walktree Case 2.1.fallback');
         const innerNode = getInnerNode(newNode);
         // If getInnerNode descended into a child that was already annotated by
@@ -550,7 +550,7 @@ function mergeChildren(
       oldCounter++;
       continue;
     }
-    if (isDescendant(newChild, node)) {
+    if (SemanticUtil.isDescendant(newChild, node)) {
       // newChild is an existing descendant of the node, i.e., somewhere beneath
       // but not contained in oldChildren. No need to rearrange.
       newChildren.shift();
@@ -668,7 +668,7 @@ function insertBefore(node: Element, newChild: Element, oldChild: Element) {
  * @returns True if the insertion would create a cycle.
  */
 export function createsCycle(node: Element, newChild: Element): boolean {
-  return node === newChild || isDescendant(node, newChild);
+  return node === newChild || SemanticUtil.isDescendant(node, newChild);
 }
 
 /**
@@ -688,32 +688,6 @@ function isFirstChild(node: Element, child: Element) {
   return node.childNodes[selection - 1] === child;
 }
 
-/**
- * Checks if one node is a proper descendant of another.
- *
- * @param child The potential descendant node.
- * @param node The potential ancestor node.
- * @returns True if child is a descendant of node.
- */
-function isDescendant(child: Element, node: Element): boolean {
-  if (!child) {
-    return false;
-  }
-  // Bounds the ascent toward the root; allows more headroom than the other
-  // ascent guards since callers may pass deeply nested intermediate nodes.
-  const guard = loopGuard(
-    LOOP_LIMIT,
-    () => `isDescendant cycle: ${(child as Element)?.tagName} parent=${((child as Element)?.parentNode as Element)?.tagName}`
-  );
-  do {
-    guard();
-    child = parentNode(child);
-    if (child === node) {
-      return true;
-    }
-  } while (child);
-  return false;
-}
 
 /**
  * Checks if both old and new Node are invisible function applications and if

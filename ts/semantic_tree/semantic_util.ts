@@ -212,6 +212,34 @@ export function isStructuralParent(node: Element): boolean {
 }
 
 /**
+ * Upper bound on the ancestor walk in {@link isDescendant}.
+ */
+const DESCENDANT_LIMIT = 10000;
+
+/**
+ * Checks if one node is a proper descendant of another, i.e. `node` is a strict
+ * ancestor of `descendant`. Contains a temporary(?) cycle bound.
+ *
+ * @param descendant The potential descendant node.
+ * @param node The potential ancestor node.
+ * @returns True if descendant is a proper descendant of node.
+ */
+export function isDescendant(descendant: Element, node: Element): boolean {
+  if (!descendant) {
+    return false;
+  }
+  let current = descendant.parentNode as Element;
+  let count = 0;
+  while (current && count++ < DESCENDANT_LIMIT) {
+    if (current === node) {
+      return true;
+    }
+    current = current.parentNode as Element;
+  }
+  return false;
+}
+
+/**
  * Removes elements from a list of MathML nodes that are either to be ignored
  * or ignored if they have empty children. Observe that this is currently not
  * recursive, i.e. will not take care of pathological cases, where content is

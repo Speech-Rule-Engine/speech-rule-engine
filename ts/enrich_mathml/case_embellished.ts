@@ -25,6 +25,7 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import * as SemanticUtil from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import { CaseDoubleScript } from './case_double_script.js';
@@ -202,29 +203,11 @@ export class CaseEmbellished extends AbstractEnrichCase {
       // otherwise the walk overshoots past the closing fence and pulls trailing
       // siblings (e.g. a following factor) into the fenced layer, reordering the
       // expression.
-      if (CaseEmbellished.contains_(sibling as Element, this.cfenceMml)) {
+      if (SemanticUtil.isDescendant(this.cfenceMml, sibling as Element)) {
         break;
       }
       sibling = sibling.nextSibling;
     }
-  }
-
-  /**
-   * Checks whether the subtree rooted at `node` contains `descendant`.
-   *
-   * @param node The potential ancestor (subtree root).
-   * @param descendant The node to look for.
-   * @returns True if `descendant` is `node` or a descendant of it.
-   */
-  private static contains_(node: Element, descendant: Element): boolean {
-    let current: Node = descendant;
-    while (current) {
-      if (current === node) {
-        return true;
-      }
-      current = current.parentNode;
-    }
-    return false;
   }
 
   /**

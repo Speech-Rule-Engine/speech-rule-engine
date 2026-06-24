@@ -3297,12 +3297,17 @@ export class SemanticProcessor {
     const childNode = SemanticProcessor.getInstance().row(content);
     // Special case that we have ignored an empty input node.
     // This is from MJ Issue #3028
+    const osibling = ofence.mathmlTree?.nextSibling as Element;
     if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
       !childNode.mathmlTree && ofence.mathmlTree &&
-      !isDescendant(cfence.mathmlTree, ofence.mathmlTree.nextSibling as Element)
+      // The empty input node only borrows the open fence's sibling when that
+      // sibling is not (or does not contain) the closing fence, otherwise the
+      // closing fence itself would be misclaimed as the fenced content.
+      cfence.mathmlTree !== osibling &&
+      !SemanticUtil.isDescendant(cfence.mathmlTree, osibling)
        ) {
-      childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
-      childNode.addMathmlNodes([ofence.mathmlTree.nextSibling as Element]);
+      childNode.mathmlTree = osibling;
+      childNode.addMathmlNodes([osibling]);
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
@@ -4254,25 +4259,5 @@ function isTrivialTable(multiline: SemanticNode) {
 function annotateEmpty(tags: string[], node: SemanticNode) {
   tags.forEach((tag) => node.addAnnotation('empty', tag));
   return node;
-}
-
-/**
- * Checks if one node is a proper descendant of another.
- *
- * @param child The potential descendant node.
- * @param node The potential ancestor node.
- * @returns True if child is a descendant of node.
- */
-function isDescendant(child: Element, node: Element): boolean {
-  if (!child) {
-    return false;
-  }
-  while (child && DomUtil.tagName(child) !== 'MATH') {
-    if (child === node) {
-      return true;
-    }
-    child = child.parentNode as Element;
-  }
-  return false;
 }
 
