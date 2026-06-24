@@ -25,6 +25,7 @@ import {
 } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { MMLTAGS } from '../semantic_tree/semantic_util.js';
+import * as SemanticUtil from '../semantic_tree/semantic_util.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import { CaseDoubleScript } from './case_double_script.js';
@@ -196,6 +197,15 @@ export class CaseEmbellished extends AbstractEnrichCase {
     sibling = sibling === this.fencedMml ? sibling : this.fencedMml;
     while (sibling && sibling !== this.cfenceMml) {
       this.fencedMmlNodes.push(sibling as Element);
+      // The closing fence can be embellished (e.g. `|_k^{}`), so its bare fence
+      // operator sits nested inside this sibling rather than being the sibling
+      // itself. Once we have included the sibling that contains it, stop -
+      // otherwise the walk overshoots past the closing fence and pulls trailing
+      // siblings (e.g. a following factor) into the fenced layer, reordering the
+      // expression.
+      if (SemanticUtil.isDescendant(this.cfenceMml, sibling as Element)) {
+        break;
+      }
       sibling = sibling.nextSibling;
     }
   }
@@ -347,8 +357,15 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let newNode = addMrow();
     DomUtil.replaceNode(this.fencedMml as Element, newNode);
     this.fencedMmlNodes.forEach((node) => newNode.appendChild(node));
-    newNode.insertBefore(fullOfence, this.fencedMml);
-    newNode.appendChild(fullCfence);
+    // Safety net: if a fence ascended to an ancestor of the new layer (e.g. up
+    // to <math> for an embellished fence with empty content), attaching it here
+    // would create a DOM cycle and hang enrichment. Skip rather than crash.
+    if (!EnrichMathml.createsCycle(newNode, fullOfence)) {
+      newNode.insertBefore(fullOfence, this.fencedMml);
+    }
+    if (!EnrichMathml.createsCycle(newNode, fullCfence)) {
+      newNode.appendChild(fullCfence);
+    }
     // The case of top element math.
     if (!newNode.parentNode) {
       const mrow = addMrow();

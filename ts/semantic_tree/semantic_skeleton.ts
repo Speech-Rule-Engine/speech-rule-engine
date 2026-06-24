@@ -20,9 +20,9 @@
  */
 
 import * as BaseUtil from '../common/base_util.js';
+import * as DomUtil from '../common/dom_util.js';
 import { Options } from '../common/options.js';
 
-import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr.js';
 import { SemanticType, SemanticRole } from './semantic_meaning.js';
 import { SemanticNode } from './semantic_node.js';
@@ -144,8 +144,18 @@ export class SemanticSkeleton {
     tree: SemanticTree,
     options: Options
   ): SemanticSkeleton {
+    const idMap = new Map<string, Element>();
+    if (mml.hasAttribute(EnrichAttribute.ID)) {
+      idMap.set(mml.getAttribute(EnrichAttribute.ID), mml);
+    }
+    for (const elem of DomUtil.querySelectorAllByAttr(
+      mml,
+      EnrichAttribute.ID
+    )) {
+      idMap.set(elem.getAttribute(EnrichAttribute.ID), elem);
+    }
     return new SemanticSkeleton(
-      SemanticSkeleton.tree_(mml, tree.root, options)
+      SemanticSkeleton.tree_(idMap, tree.root, options)
     );
   }
 
@@ -270,7 +280,8 @@ export class SemanticSkeleton {
    * given node; folding together content and child nodes in a "syntactic"
    * manner.
    *
-   * @param mml A mml node to add a structure to.
+   * @param idMap A map from semantic node ids to their corresponding mml
+   *     elements.
    * @param node A semantic node.
    * @param options The system options.
    * @param level The level in the tree, used for aria-level.
@@ -279,7 +290,7 @@ export class SemanticSkeleton {
    * @returns The sexp structure.
    */
   private static tree_(
-    mml: Element,
+    idMap: Map<string, Element>,
     node: SemanticNode,
     options: Options,
     level = 0,
@@ -291,11 +302,7 @@ export class SemanticSkeleton {
     }
     const id = node.id;
     const skeleton = [id];
-    XpathUtil.updateEvaluator(mml);
-    const mmlChild = XpathUtil.evalXPath(
-      `.//self::*[@${EnrichAttribute.ID}=${id}]`,
-      mml
-    )[0] as Element;
+    const mmlChild = idMap.get(id.toString());
     if (!node.childNodes.length) {
       SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, options);
       return node.id;
@@ -303,12 +310,8 @@ export class SemanticSkeleton {
     const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
       node.type,
       node.role,
-      node.contentNodes.map(function (x) {
-        return x;
-      }),
-      node.childNodes.map(function (x) {
-        return x;
-      })
+      node.contentNodes,
+      node.childNodes
     );
     if (mmlChild) {
       SemanticSkeleton.addOwns_(mmlChild, children);
@@ -319,7 +322,7 @@ export class SemanticSkeleton {
       i++
     ) {
       skeleton.push(
-        SemanticSkeleton.tree_(mml, child, options, level + 1, i + 1, l) as any
+        SemanticSkeleton.tree_(idMap, child, options, level + 1, i + 1, l) as any
       );
     }
     SemanticSkeleton.addAria(mmlChild, level, posinset, setsize, options);

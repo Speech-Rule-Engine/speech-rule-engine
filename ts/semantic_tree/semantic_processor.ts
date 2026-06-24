@@ -2008,7 +2008,6 @@ export class SemanticProcessor {
       op.parent = newNode;
     });
     newNode.contentNodes = operators;
-    // console.log(newNode.mathmlTree?.toString());
     return newNode;
   }
 
@@ -2591,7 +2590,6 @@ export class SemanticProcessor {
     }
     // Pathological case: only operators in row.
     if (nodes.length === 0) {
-      // console.log(8);
       return SemanticProcessor.getInstance().multiopNode_(prefix);
     }
     if (nodes.length === 1) {
@@ -3299,12 +3297,17 @@ export class SemanticProcessor {
     const childNode = SemanticProcessor.getInstance().row(content);
     // Special case that we have ignored an empty input node.
     // This is from MJ Issue #3028
+    const osibling = ofence.mathmlTree?.nextSibling as Element;
     if (SemanticPred.isType(childNode, SemanticType.EMPTY) &&
       !childNode.mathmlTree && ofence.mathmlTree &&
-      ofence.mathmlTree.nextSibling !== cfence.mathmlTree
+      // The empty input node only borrows the open fence's sibling when that
+      // sibling is not (or does not contain) the closing fence, otherwise the
+      // closing fence itself would be misclaimed as the fenced content.
+      cfence.mathmlTree !== osibling &&
+      !SemanticUtil.isDescendant(cfence.mathmlTree, osibling)
        ) {
-      childNode.mathmlTree = ofence.mathmlTree.nextSibling as Element;
-      childNode.addMathmlNodes([ofence.mathmlTree.nextSibling as Element]);
+      childNode.mathmlTree = osibling;
+      childNode.addMathmlNodes([osibling]);
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.FENCED,
@@ -4257,3 +4260,4 @@ function annotateEmpty(tags: string[], node: SemanticNode) {
   tags.forEach((tag) => node.addAnnotation('empty', tag));
   return node;
 }
+
