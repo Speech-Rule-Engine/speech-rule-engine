@@ -206,10 +206,10 @@ export function walkTree(semantic: SemanticNode): Element {
           Debugger.getInstance().generate(() => ['WALKING END (4): ', semantic.toString()]);
           return ascendNewNode(newNode, semantic);
         } else {
+          // TODO: This should be unreachable.
           newNode = innerNode;
         }
       } else {
-        // This should be unreachable.
         newNode = attachedParent;
       }
     } else {
@@ -278,7 +278,8 @@ export function introduceNewLayer(
           newNode.appendChild(x);
         });
       } else {
-      Debugger.getInstance().output('Walktree Case 1.1.1.1');
+        // TODO: This should be unreachable.
+        Debugger.getInstance().output('Walktree Case 1.1.1.1');
         moveSemanticAttributes(newNode, children[0]);
         newNode = children[0];
       }
@@ -326,6 +327,7 @@ function introduceLayerAboveLca(
   let innerNode = descendNode(lca);
   // Case if lca is actually the MathML root node.
   if (SemanticUtil.hasMathTag(innerNode)) {
+    // TODO: This should be unreachable.
     Debugger.getInstance().output('Walktree Case 1.1.0.0');
     moveSemanticAttributes(innerNode, mrow);
     DomUtil.toArray(innerNode.childNodes).forEach(function (x) {
