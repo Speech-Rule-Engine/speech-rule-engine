@@ -312,8 +312,16 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let parent = null;
     let caller;
     if (mmlTag === MMLTAGS.MSUBSUP) {
-      parent = semantic.childNodes[0];
-      caller = CaseDoubleScript;
+      // Only a genuine double script - whose base is a subsup node - is
+      // rewritten via CaseDoubleScript. When a script has collapsed (e.g. an
+      // empty `_{}` on an embellished fence like `‖x‖_{}^2` leaves an msubsup
+      // that is semantically a single script), childNodes[0] is not a SUBSUP
+      // node, and CaseDoubleScript would read non-existent sub/sup children.
+      // Fall through to the generic embellishment handling in that case.
+      if (semantic.childNodes[0]?.role === SemanticRole.SUBSUP) {
+        parent = semantic.childNodes[0];
+        caller = CaseDoubleScript;
+      }
     } else if (mmlTag === MMLTAGS.MMULTISCRIPTS) {
       if (
         semantic.type === SemanticType.SUPERSCRIPT ||
