@@ -2,6 +2,7 @@
   "extends": "../tsconfig.json",
   "compileOnSave": true,
   "compilerOptions": {
+    "rootDir": "./ts",
     "outDir": "./js",
     "module": "nodenext",
     "moduleResolution": "nodenext",

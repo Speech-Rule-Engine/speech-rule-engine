@@ -26,7 +26,7 @@
       "#src/*": ["./src/*"],
       "#helpers": ["./src/index.js"]
     },
-    "rootDir": ".",
+    "rootDir": "./ts",
     "outDir": "./js"
   },
   "include": ["ts/**/*"],
