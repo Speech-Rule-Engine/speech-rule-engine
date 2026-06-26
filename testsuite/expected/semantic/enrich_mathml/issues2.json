@@ -198,6 +198,45 @@
     },
     "issue_876_8": {
       "expected": "<math><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" type=\"fence\" role=\"neutral\" id=\"0\" parent=\"8\" attributes=\"texclass:ORD\">|</mo><mrow added=\"true\" type=\"punctuated\" role=\"endpunct\" id=\"11\" children=\"10,6\" content=\"6\"><mrow added=\"true\" type=\"infixop\" role=\"implicit\" annotation=\"clearspeak:unit\" id=\"10\" children=\"3,5\" content=\"9\" parent=\"11\"><msup><msup type=\"superscript\" role=\"neutral\" annotation=\"empty:MSUP\" fencepointer=\"1\" id=\"3\" children=\"8,2\" parent=\"10\" attributes=\"texclass:ORD\"><mrow added=\"true\" type=\"fenced\" role=\"neutral\" id=\"8\" children=\"7\" content=\"0,1\" parent=\"3\"><mrow added=\"true\" type=\"empty\" role=\"unknown\" id=\"7\" parent=\"8\"/><mrow data-mjx-texclass=\"ORD\"><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" type=\"fence\" role=\"neutral\" id=\"1\" parent=\"8\" attributes=\"texclass:ORD\">|</mo></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\" parent=\"3\" attributes=\"texclass:ORD\">k</mi></mrow></msup><mrow data-mjx-texclass=\"ORD\"/></msup><mo type=\"operator\" role=\"multiplication\" id=\"9\" parent=\"10\" added=\"true\" operator=\"infixop,⁢\">⁢</mo><mi type=\"identifier\" role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\" parent=\"10\">S</mi></mrow><mo data-mjx-texclass=\"ORD\" stretchy=\"false\" type=\"punctuation\" role=\"vbar\" id=\"6\" parent=\"11\" attributes=\"texclass:ORD\" operator=\"punctuated\">|</mo></mrow></math>"
+    },
+    "issue_882_00": {
+      "expected": ""
+    },
+    "issue_882_01": {
+      "expected": ""
+    },
+    "issue_882_02": {
+      "expected": ""
+    },
+    "issue_882_03": {
+      "expected": ""
+    },
+    "issue_882_04": {
+      "expected": ""
+    },
+    "issue_882_05": {
+      "expected": ""
+    },
+    "issue_882_06": {
+      "expected": ""
+    },
+    "issue_882_07": {
+      "expected": ""
+    },
+    "issue_882_08": {
+      "expected": ""
+    },
+    "issue_882_09": {
+      "expected": ""
+    },
+    "issue_882_10": {
+      "expected": ""
+    },
+    "issue_882_11": {
+      "expected": ""
+    },
+    "issue_882_12": {
+      "expected": ""
     }
   }
 }
