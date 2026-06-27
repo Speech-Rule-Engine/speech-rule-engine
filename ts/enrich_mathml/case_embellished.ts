@@ -147,7 +147,15 @@ export class CaseEmbellished extends AbstractEnrichCase {
   public getMathml() {
     this.getFenced_();
     // This is the first fenced node, but there can be more than one!
-    this.fencedMml = EnrichMathml.walkTree(this.fenced as SemanticNode);
+    // Ascend with the fenced semantic node so that a collapsed empty script on
+    // the content (e.g. `(L_{})^2`, where the `L_{}` msub carries empty:MSUB)
+    // surfaces as its wrapping script element. Otherwise only the bare inner
+    // node is taken as the fenced content and the now-empty wrapper is left
+    // behind, ending up misplaced around the embellished fence.
+    this.fencedMml = EnrichMathml.ascendNewNode(
+      EnrichMathml.walkTree(this.fenced as SemanticNode),
+      this.fenced as SemanticNode
+    );
     this.getFencesMml_();
     if (this.fenced.type === SemanticType.EMPTY && !this.fencedMml.parentNode) {
       // Fenced element is empty and new. Insert it before the closing fence so
