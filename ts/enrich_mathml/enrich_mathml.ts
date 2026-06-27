@@ -131,7 +131,13 @@ export function walkTree(semantic: SemanticNode): Element {
         'WALKING END (2): ',
         semantic.toString()
       ]);
-      return ascendNewNode(newNode);
+      // Only pass the semantic node when the leaf carries a collapsed empty
+      // script to jump over (e.g. the `∂` in `∂^{}`, the `Sub` in `Sub_{}`), so
+      // it surfaces as its wrapping script element. Other leaves keep their
+      // original, ceiling-free ascent so unrelated cases stay unaffected.
+      const emptyScript = semantic.getAnnotation('empty').length &&
+        !semantic.hasAnnotation('empty', 'MFENCED');
+      return ascendNewNode(newNode, emptyScript ? semantic : undefined);
     }
     const fchild = semantic.childNodes[0];
     if (
@@ -886,6 +892,14 @@ export function ascendNewNode(newNode: Element, semantic?: SemanticNode): Elemen
     !(keepRoot && SemanticUtil.hasMathTag(parentNode(newNode))) &&
     (unitChild(newNode) ||
       (empty && newNode.parentNode &&
+        // Only jump over an empty script wrapper that lies on the way up to the
+        // enclosing node's element (the ceiling). For the base of a collapsed
+        // script like `a_{}` the `ceiling` (the subscript node's mathmlTree) is
+        // a disjoint subtree, so `a` must stay put rather than ascend onto its
+        // own msub (which belongs to the collapsed subscript); whereas the `∂`
+        // in `(.. \frac{∂^{}}{..} ..)` is inside its mfrac ceiling and should
+        // surface as the `∂^{}` msup.
+        (!ceiling || SemanticUtil.isDescendant(newNode, ceiling)) &&
         empty.includes(parentNode(newNode).tagName?.toUpperCase()) &&
         // Only jump over a script element if its script slot was actually the
         // omitted empty one, i.e. node is the parent's sole meaningful child.
