@@ -609,7 +609,7 @@ export class SemanticNode {
     for (let i = 0, l = attributes.length; i < l; i++) {
       const [key, ...values] = attributes[i].split(':');
       if (key) {
-        this.attributes[key] = values.join('').replace(/\\0003B/g, ';');
+        this.attributes[key] = values.join(':').replace(/\\0003B/g, ';');
       }
     }
   }

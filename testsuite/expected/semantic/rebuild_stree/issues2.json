@@ -2,6 +2,5 @@
   "factory": "rebuild",
   "tests": "ALL",
   "information": "Rebuild stree issues2 tests.",
-  "base": "input/semantic/issues2.json",
-  "exclude": ["issue_882_11"]
+  "base": "input/semantic/issues2.json"
 }
