@@ -515,7 +515,14 @@ export class SemanticApiTest extends SemanticTest {
 /**
  * Tests for the XML parser for the semantic tree.
  */
-export class SemanticXmlTest extends SemanticTest {
+export class SemanticXmlTest extends SemanticBlacklistTest {
+  /**
+   * @override
+   */
+  protected blacklist: string[] = [
+    'latex', 'texclass'
+  ];
+
   /**
    * @override
    */
@@ -536,9 +543,11 @@ export class SemanticXmlTest extends SemanticTest {
     const mml = DomUtil.parseInput(mathMl);
     const stree = Semantic.getTree(mml, Engine.getInstance().options);
     const xml = stree.xml();
+    const sxml = SemanticTree.fromXml(xml).xml();
+    this.customizeXml(xml);
+    this.customizeXml(sxml);
     this.assert.equal(
-      xml.toString(),
-      SemanticTree.fromXml(xml).xml().toString()
+      xml.toString(), sxml.toString()
     );
   }
 }

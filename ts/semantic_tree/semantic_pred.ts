@@ -534,8 +534,14 @@ function isRightBrace(node: SemanticNode): boolean {
  * @returns True if the node is a set.
  */
 export function isSetNode(node: SemanticNode): boolean {
+  // Resolve embellishment so that an embellished brace (e.g. the `}` in
+  // `{...}_N`, where the closing fence is a subscript node) is still recognised
+  // as a brace. Otherwise the classification of `{...}` depends on whether its
+  // fences happen to be embellished, which breaks round-tripping of the
+  // enriched MathML.
   return (
-    isLeftBrace(node.contentNodes[0]) && isRightBrace(node.contentNodes[1])
+    isLeftBrace(getEmbellishedInner(node.contentNodes[0])) &&
+    isRightBrace(getEmbellishedInner(node.contentNodes[1]))
   );
 }
 
