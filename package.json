@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "5.0.0-rc.3",
+  "version": "5.0.0-rc.4",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "bin": {
     "sre": "bin/sre"
