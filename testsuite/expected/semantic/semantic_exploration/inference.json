@@ -1,0 +1,257 @@
+{
+  "factory": "semanticExploration",
+  "information": "Semantic exploration inference tests.",
+  "base": "input/common/inference.json",
+  "tests": {
+    "NoLabel_0": {
+      "expected": [
+        7,
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    "NoLabel_1": {
+      "expected": [
+        7,
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    "Premise_0": {
+      "expected": [
+        6,
+        [
+          5,
+          2
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "Premise_1": {
+      "expected": [
+        8,
+        [
+          7,
+          4
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "Axiom": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "EmptyAxiom": {
+      "expected": [
+        1,
+        0
+      ]
+    },
+    "RightLabel_0": {
+      "expected": [
+        9,
+        [
+          8,
+          5
+        ],
+        [
+          7,
+          [
+            3,
+            2
+          ]
+        ]
+      ]
+    },
+    "RightLabel_1": {
+      "expected": [
+        11,
+        [
+          10,
+          7
+        ],
+        [
+          9,
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ]
+    },
+    "RightLabel_2": {
+      "expected": [
+        13,
+        [
+          12,
+          9
+        ],
+        [
+          11,
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      ]
+    },
+    "LeftLabel_0": {
+      "expected": [
+        9,
+        [
+          8,
+          5
+        ],
+        [
+          7,
+          [
+            3,
+            2
+          ]
+        ]
+      ]
+    },
+    "LeftLabel_1": {
+      "expected": [
+        11,
+        [
+          10,
+          7
+        ],
+        [
+          9,
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ]
+    },
+    "LeftLabel_2": {
+      "expected": [
+        13,
+        [
+          12,
+          9
+        ],
+        [
+          11,
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            6
+          ]
+        ]
+      ]
+    },
+    "Premises_0": {
+      "expected": [
+        7,
+        [
+          6,
+          3
+        ],
+        [
+          5,
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    "Premises_1": {
+      "expected": [
+        9,
+        [
+          8,
+          5
+        ],
+        [
+          7,
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      ]
+    },
+    "Premises_2": {
+      "expected": [
+        11,
+        [
+          10,
+          7
+        ],
+        [
+          9,
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      ]
+    }
+  }
+}

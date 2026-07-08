@@ -1,0 +1,6 @@
+{
+  "factory": "semanticApi",
+  "tests": "ALL",
+  "information": "Semantic api inference tests.",
+  "base": "input/common/inference.json"
+}
