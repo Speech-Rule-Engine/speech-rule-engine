@@ -18,12 +18,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util.js';
 import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 import { AbstractEnrichCase } from './abstract_enrich_case.js';
 import * as EnrichMathml from './enrich_mathml.js';
-import { setAttributes } from './enrich_attr.js';
+import { Attribute, EnrichAttributes, setAttributes } from './enrich_attr.js';
 
 export class CaseProof extends AbstractEnrichCase {
   /**
@@ -61,8 +62,25 @@ export class CaseProof extends AbstractEnrichCase {
       return this.mml;
     }
     this.semantic.contentNodes.forEach(function (x) {
-      EnrichMathml.walkTree(x as SemanticNode);
+      const walked = EnrichMathml.walkTree(x as SemanticNode);
       // TODO: This needs to be done more principled.
+      // The walk can annotate a sole-child wrapper element above the label's
+      // own mathmlTree. As the label is annotated on its mathmlTree below,
+      // remove such stray annotations, so the semantic id is not duplicated
+      // in the enriched expression.
+      const strays = DomUtil.querySelectorAllByAttrValue(
+        walked,
+        Attribute.ID,
+        x.id.toString()
+      );
+      if (walked.getAttribute(Attribute.ID) === x.id.toString()) {
+        strays.unshift(walked);
+      }
+      strays.forEach((stray) => {
+        if (stray !== x.mathmlTree) {
+          EnrichAttributes.forEach((attr) => stray.removeAttribute(attr));
+        }
+      });
       setAttributes(x.mathmlTree as Element, x);
     });
     this.semantic.childNodes.forEach(function (x) {

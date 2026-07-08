@@ -147,7 +147,24 @@ export function walkTree(semantic: SemanticNode): Element {
       Debugger.getInstance().output('Walktree Case 0.2');
       newNode = semantic.mathml[0] as Element;
       EnrichAttr.setAttributes(newNode, semantic);
-      newNode.appendChild(walkTree(fchild));
+      const newChild = walkTree(fchild);
+      // An empty child consisting of a sole-child wrapper chain (e.g. the
+      // mstyle of an empty proof label) can ascend onto newNode or one of its
+      // ancestors. It is then already in place and appending it would create
+      // a DOM cycle.
+      if (
+        newChild !== newNode &&
+        !SemanticUtil.isDescendant(newNode, newChild)
+      ) {
+        newNode.appendChild(newChild);
+      } else if (
+        newNode.getAttribute(EnrichAttr.Attribute.ID) === fchild.id.toString()
+      ) {
+        // Both semantic nodes share the element: the child's walk has
+        // overwritten the annotation, so the children pointer left from
+        // stamping `semantic` would make the element claim itself as a child.
+        newNode.removeAttribute(EnrichAttr.Attribute.CHILDREN);
+      }
       Debugger.getInstance().generate(() => [
         'WALKING END (3): ',
         semantic.toString()
