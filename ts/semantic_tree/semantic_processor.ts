@@ -1720,30 +1720,31 @@ export class SemanticProcessor {
     semantics: { [key: string]: string },
     parse: (p1: Element[]) => SemanticNode[]
   ): SemanticNode {
-    if (!semantics['inference'] && !semantics['axiom']) {
-      console.log('Noise');
-    }
-    // do some preprocessing!
-    // Put in an invisible comma!
-    // Axiom case!
     if (semantics['axiom']) {
       let axiom;
       if (semantics['sequent']) {
         axiom = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.INFERENCE,
-          [SemanticProcessor.getInstance().getSequent(node.childNodes[0], parse)],
-          []);
-        } else {
-          const cleaned = SemanticProcessor.getInstance().cleanInference(
-            node.childNodes);
-          axiom = cleaned.length
-            ? SemanticProcessor.getInstance().factory_.makeBranchNode(
+          [
+            SemanticProcessor.getInstance().getSequent(
+              node.childNodes[0],
+              parse
+            )
+          ],
+          []
+        );
+      } else {
+        const cleaned = SemanticProcessor.getInstance().cleanInference(
+          node.childNodes
+        );
+        axiom = cleaned.length
+          ? SemanticProcessor.getInstance().factory_.makeBranchNode(
               SemanticType.INFERENCE,
               parse(cleaned),
               []
             )
-            : SemanticProcessor.getInstance().factory_.makeEmptyNode();
-        }
+          : SemanticProcessor.getInstance().factory_.makeEmptyNode();
+      }
       axiom.role = SemanticRole.AXIOM;
       axiom.mathmlTree = node;
       return axiom;
@@ -1780,13 +1781,11 @@ export class SemanticProcessor {
         [],
         parse
       );
-      const inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      return SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.INFERENCE,
         [formulas.conclusion, formulas.premises],
         []
       );
-      // Setting role
-      return inference;
     }
     const label = semantics['labelledRule'];
     const children = DomUtil.toArray(node.childNodes);
@@ -1794,7 +1793,6 @@ export class SemanticProcessor {
     if (label === 'left' || label === 'both') {
       content.push(
         SemanticProcessor.getInstance().getLabel(
-          node,
           children,
           parse,
           SemanticRole.LEFT
@@ -1804,7 +1802,6 @@ export class SemanticProcessor {
     if (label === 'right' || label === 'both') {
       content.push(
         SemanticProcessor.getInstance().getLabel(
-          node,
           children,
           parse,
           SemanticRole.RIGHT
@@ -1821,7 +1818,6 @@ export class SemanticProcessor {
       [formulas.conclusion, formulas.premises],
       content
     );
-    // Setting role
     inference.mathmlTree = node;
     return inference;
   }
@@ -1829,15 +1825,13 @@ export class SemanticProcessor {
   /**
    * Parses the label of an inference rule.
    *
-   * @param _node The inference node.
-   * @param children The node's children containing the label.
+   * @param children The inference node's children containing the label.
    * @param parse The
    *     current semantic parser for list of nodes.
    * @param side The side the label is on.
    * @returns The semantic node for the label.
    */
   public getLabel(
-    _node: Element,
     children: Element[],
     parse: (p1: Element[]) => SemanticNode[],
     side: string
@@ -1861,7 +1855,7 @@ export class SemanticProcessor {
    * Retrieves and parses premises and conclusion of an inference rule.
    *
    * @param node The inference rule node.
-   * @param children The node's children containing.
+   * @param children The node's children containing the formulas.
    * @param parse The
    *     current semantic parser for list of nodes.
    * @returns A pair
@@ -1880,27 +1874,27 @@ export class SemanticProcessor {
     const concRow = up ? inf.childNodes[0] : inf.childNodes[1];
     const premTable = premRow.childNodes[0].childNodes[0];
     const topRow = DomUtil.toArray(premTable.childNodes[0].childNodes);
-    const premNodes = [];
-    let i = 1;
-    for (const cell of topRow) {
-      if (i % 2) {
-        premNodes.push(cell.childNodes[0]);
-      }
-      i++;
-    }
+    // Every second cell is a spacer column.
+    const premNodes = topRow
+      .filter((_cell, index) => !(index % 2))
+      .map((cell) => cell.childNodes[0]);
     const premises = premNodes.map((prem) => {
       const psem = SemanticProcessor.getSemantics(prem);
       // Sequent axioms are handled by the axiom case in the proof method,
       // which the parser dispatches to.
-      return psem && psem['sequent'] && !psem['axiom'] ?
-        SemanticProcessor.getInstance().getSequent(prem.childNodes[0], parse) :
-        parse([prem])[0];
+      return psem && psem['sequent'] && !psem['axiom']
+        ? SemanticProcessor.getInstance().getSequent(prem.childNodes[0], parse)
+        : parse([prem])[0];
     });
     const concs = DomUtil.toArray(concRow.childNodes[0].childNodes);
     const fsem = SemanticProcessor.getSemantics(concs[0]);
-    const conclusion = fsem && fsem['sequent'] ?
-      SemanticProcessor.getInstance().getSequent(concs[0].childNodes[0], parse) :
-      parse(concs)[0];
+    const conclusion =
+      fsem && fsem['sequent']
+        ? SemanticProcessor.getInstance().getSequent(
+            concs[0].childNodes[0],
+            parse
+          )
+        : parse(concs)[0];
     const prem = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.PREMISES,
       premises,
@@ -1917,7 +1911,7 @@ export class SemanticProcessor {
   }
 
   /**
-   * Find a inference element nested in a row.
+   * Finds an inference element nested in a row.
    *
    * @param nodes A node list.
    * @param semantic A semantic key.
@@ -1942,26 +1936,30 @@ export class SemanticProcessor {
    * Cleans and assembles sequent nodes.
    *
    * @param node The sequent node.
+   * @param parse The
+   *     current semantic parser for list of nodes.
    * @returns The semantic node for the sequent, with empty nodes if necessary.
    */
-  public getSequent(node: Node, parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
-    const clean = (x: NodeList) => {
-      const cleaned = SemanticProcessor.getInstance().cleanInference(x);
+  public getSequent(
+    node: Node,
+    parse: (p1: Element[]) => SemanticNode[]
+  ): SemanticNode {
+    const clean = (nodes: NodeList) => {
+      const cleaned = SemanticProcessor.getInstance().cleanInference(nodes);
       return SemanticProcessor.getInstance().row(parse(cleaned));
-    }
+    };
     const getChildren = (index: number) => {
       const child = node.childNodes[index];
-      const result =  child ?
-        clean(child.childNodes) :
-        SemanticProcessor.getInstance().factory_.makeEmptyNode();
-      return result;
-    }
+      return child
+        ? clean(child.childNodes)
+        : SemanticProcessor.getInstance().factory_.makeEmptyNode();
+    };
     const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.RELSEQ,
       [getChildren(0), getChildren(2)],
       [getChildren(1)]
     );
-    newNode.role = SemanticRole.SEQUENT
+    newNode.role = SemanticRole.SEQUENT;
     newNode.mathmlTree = node as Element;
     return newNode;
   }
