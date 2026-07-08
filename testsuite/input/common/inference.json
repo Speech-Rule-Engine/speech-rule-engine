@@ -51,17 +51,65 @@
     "Premises_0": {
       "tex": "\\begin{prooftree}\\AXC{$A$}\\UIC{$X$}\\end{prooftree}",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>A</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>X</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></math>",
-      "steps": ["DOWN", "RIGHT"]
+      "steps": [
+        "DOWN",
+        "RIGHT"
+      ]
     },
     "Premises_1": {
       "tex": "\\begin{prooftree}\\AXC{$A$}\\AXC{$B$}\\BIC{$X$}\\end{prooftree}",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:2;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>A</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd><mtd></mtd><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>B</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>X</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></math>",
-      "steps": ["DOWN", "RIGHT"]
+      "steps": [
+        "DOWN",
+        "RIGHT"
+      ]
     },
     "Premises_2": {
       "tex": "\\begin{prooftree}\\AXC{$A$}\\AXC{$B$}\\AXC{$C$}\\TIC{$X$}\\end{prooftree}",
       "input": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:3;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>A</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd><mtd></mtd><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>B</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd><mtd></mtd><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>C</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>X</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></math>",
-      "steps": ["DOWN", "RIGHT"]
+      "steps": [
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    "Sequent_00": {
+      "tex": "\\begin{prooftree}\\Axiom$A\\fCenter A$\\LeftLabel{Weakening}\\RightLabel{}\\UnaryInf$X\\fCenter X$\\end{prooftree}"
+    },
+    "Sequent_01": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A \\fCenter B$\\end{prooftree}"
+    },
+    "Sequent_02": {
+      "tex": "\\def\\fCenter{\\vdash}\\Axiom$A\\fCenterA$\\DisplayProof"
+    },
+    "Sequent_03": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A,B \\fCenter C$\\UnaryInf$A \\fCenter B,C$\\end{prooftree}"
+    },
+    "Sequent_04": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A,B,Q,R \\fCenter C$\\UnaryInf$A \\fCenter B,C$\\UnaryInf$\\fCenter A,B,C,D,E$\\end{prooftree}"
+    },
+    "Sequent_05": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A,B,Q,R \\fCenter C$\\RightLabel{X}\\UnaryInf$A \\fCenter B,C$\\RightLabel{Y}\\UnaryInf$\\fCenter A,B,C$\\end{prooftree}"
+    },
+    "Sequent_06": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A,B \\fCenter C$\\UnaryInfC{intermediate}\\UnaryInf$A \\fCenter B,C,D,E$\\end{prooftree}"
+    },
+    "Sequent_07": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\AxiomC{$P$}\\AxiomC{$Q$}\\BinaryInf$A,B,Q,R \\fCenter C$\\UnaryInf$A \\fCenter B,C$\\UnaryInf$\\fCenter A,B,C$\\end{prooftree}"
+    },
+    "Sequent_08": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$\\fCenter A$\\Axiom$B \\fCenter C,D$\\UnaryInf$B,X,Y,Z \\fCenter C$\\BinaryInf$A,B \\fCenter C$\\end{prooftree}"
+    },
+    "Sequent_09": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\rootAtTop\\Axiom$A,B,Q,R \\fCenter C$\\UnaryInf$A \\fCenter B,C$\\UnaryInf$\\fCenter A,B,C$\\end{prooftree}"
+    },
+    "Sequent_10": {
+      "tex": "\\def\\fCenter{\\vdash}\\begin{prooftree}\\Axiom$A \\fCenter B$\\UnaryInf$A,B \\fCenter C$\\UnaryInf$A,B,C,D \\fCenter E$\\UnaryInf$A,B,C,D,E,F \\fCenter G$\\end{prooftree}"
+    },
+    "Sequent_11": {
+      "tex": "\\def\\fCenter{\\vdash}\\Axiom$A,B,Q \\fCenter C$\\UnaryInf$A \\fCenter B,C$\\UnaryInf$\\fCenter A,B,C$\\DP"
+    },
+    "Sequent_12": {
+      "tex": "\\def\\fCenter{\\vdash}\\AX$A \\fCenter B$\\AX$C \\fCenter D$\\BI$E \\fCenter F$\\DP"
     }
   }
 }
