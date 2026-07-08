@@ -1888,14 +1888,17 @@ export class SemanticProcessor {
       }
       i++;
     }
-    const premises = premNodes.map((node) =>
-      SemanticProcessor.getSemantics(node)['sequent'] ?
-      SemanticProcessor.getInstance().getSequent(node, parse) :
-      parse(node)[0]);
+    const premises = premNodes.map((prem) => {
+      const psem = SemanticProcessor.getSemantics(prem);
+      return psem && psem['sequent'] ?
+        // TODO: Here is the axiom missing. This should be consolidated with the axiom case above.
+        SemanticProcessor.getInstance().getSequent(prem.childNodes[0], parse) :
+        parse([prem])[0];
+    });
     const concs = DomUtil.toArray(concRow.childNodes[0].childNodes);
     const fsem = SemanticProcessor.getSemantics(concs[0]);
     const conclusion = fsem && fsem['sequent'] ?
-      SemanticProcessor.getInstance().getSequent(concs[0], parse) :
+      SemanticProcessor.getInstance().getSequent(concs[0].childNodes[0], parse) :
       parse(concs)[0];
     const prem = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.PREMISES,
