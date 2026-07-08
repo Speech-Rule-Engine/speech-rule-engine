@@ -1727,16 +1727,23 @@ export class SemanticProcessor {
     // Put in an invisible comma!
     // Axiom case!
     if (semantics['axiom']) {
-      const cleaned = SemanticProcessor.getInstance().cleanInference(
-        node.childNodes
-      );
-      const axiom = cleaned.length
-        ? SemanticProcessor.getInstance().factory_.makeBranchNode(
-            SemanticType.INFERENCE,
-            parse(cleaned),
-            []
-          )
-        : SemanticProcessor.getInstance().factory_.makeEmptyNode();
+      let axiom;
+      if (semantics['sequent']) {
+        axiom = SemanticProcessor.getInstance().factory_.makeBranchNode(
+          SemanticType.INFERENCE,
+          [SemanticProcessor.getInstance().getSequent(node.childNodes[0], parse)],
+          []);
+        } else {
+          const cleaned = SemanticProcessor.getInstance().cleanInference(
+            node.childNodes);
+          axiom = cleaned.length
+            ? SemanticProcessor.getInstance().factory_.makeBranchNode(
+              SemanticType.INFERENCE,
+              parse(cleaned),
+              []
+            )
+            : SemanticProcessor.getInstance().factory_.makeEmptyNode();
+        }
       axiom.role = SemanticRole.AXIOM;
       axiom.mathmlTree = node;
       return axiom;
@@ -1881,10 +1888,14 @@ export class SemanticProcessor {
       }
       i++;
     }
-    const premises = parse(premNodes);
-    const conclusion = parse(
-      DomUtil.toArray(concRow.childNodes[0].childNodes)
-    )[0];
+    const premises = premNodes.map((node) =>
+      SemanticProcessor.getSemantics(node)['sequent'] ?
+      SemanticProcessor.getInstance().getSequent(node, parse) :
+      parse(node)[0]);
+    const concs = DomUtil.toArray(concRow.childNodes[0].childNodes);
+    const conclusion = SemanticProcessor.getSemantics(concs[0])['sequent'] ?
+      SemanticProcessor.getInstance().getSequent(concs[0], parse) :
+      parse(concs)[0];
     const prem = SemanticProcessor.getInstance().factory_.makeBranchNode(
       SemanticType.PREMISES,
       premises,
@@ -1920,6 +1931,34 @@ export class SemanticProcessor {
       0,
       opt_value
     );
+  }
+
+  /**
+   * Cleans and assembles sequent nodes.
+   *
+   * @param node The sequent node.
+   * @returns The semantic node for the sequent, with empty nodes if necessary.
+   */
+  public getSequent(node: Node, parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
+    const clean = (x: NodeList) => {
+      const cleaned = SemanticProcessor.getInstance().cleanInference(x);
+      return SemanticProcessor.getInstance().row(parse(cleaned));
+    }
+    const getChildren = (index: number) => {
+      const child = node.childNodes[index];
+      const result =  child ?
+        clean(child.childNodes) :
+        SemanticProcessor.getInstance().factory_.makeEmptyNode();
+      return result;
+    }
+    const newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      SemanticType.RELSEQ,
+      [getChildren(0), getChildren(2)],
+      [getChildren(1)]
+    );
+    newNode.role = SemanticRole.SEQUENT
+    newNode.mathmlTree = node as Element;
+    return newNode;
   }
 
   /**
@@ -2116,7 +2155,7 @@ export class SemanticProcessor {
 
   /**
    * Creates a node of type MULTIOP by collapsing the given node list into one.
-   * 
+   *
    * @param operators The list of operator nodes.
    * @returns The new multiop node.
    */
@@ -4260,4 +4299,3 @@ function annotateEmpty(tags: string[], node: SemanticNode) {
   tags.forEach((tag) => node.addAnnotation('empty', tag));
   return node;
 }
-

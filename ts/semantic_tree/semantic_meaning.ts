@@ -274,6 +274,7 @@ enum Roles {
 
   AXIOM = 'axiom',
   LOGIC = 'logic',
+  SEQUENT = 'sequent',
 
   // General
   UNKNOWN = 'unknown',
