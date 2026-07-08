@@ -1893,7 +1893,8 @@ export class SemanticProcessor {
       SemanticProcessor.getInstance().getSequent(node, parse) :
       parse(node)[0]);
     const concs = DomUtil.toArray(concRow.childNodes[0].childNodes);
-    const conclusion = SemanticProcessor.getSemantics(concs[0])['sequent'] ?
+    const fsem = SemanticProcessor.getSemantics(concs[0]);
+    const conclusion = fsem && fsem['sequent'] ?
       SemanticProcessor.getInstance().getSequent(concs[0], parse) :
       parse(concs)[0];
     const prem = SemanticProcessor.getInstance().factory_.makeBranchNode(
