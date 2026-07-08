@@ -1890,8 +1890,9 @@ export class SemanticProcessor {
     }
     const premises = premNodes.map((prem) => {
       const psem = SemanticProcessor.getSemantics(prem);
-      return psem && psem['sequent'] ?
-        // TODO: Here is the axiom missing. This should be consolidated with the axiom case above.
+      // Sequent axioms are handled by the axiom case in the proof method,
+      // which the parser dispatches to.
+      return psem && psem['sequent'] && !psem['axiom'] ?
         SemanticProcessor.getInstance().getSequent(prem.childNodes[0], parse) :
         parse([prem])[0];
     });
