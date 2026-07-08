@@ -55,6 +55,18 @@ const mockOpen: any = jest.fn((_filename: string, _mode: string) => {
     createWriteStream: mockCreateWriteStream,
   })});
 
+// Originals of the globally patched methods. They are restored after each
+// test, as the patches would otherwise leak into unrelated test suites that
+// run in the same jest worker process.
+const originalFs = {
+  readFileSync: SystemExternal.fs.readFileSync,
+  writeFileSync: SystemExternal.fs.writeFileSync,
+  readFile: SystemExternal.fs.promises.readFile,
+  writeFile: SystemExternal.fs.promises.writeFile,
+  open: SystemExternal.fs.promises.open
+};
+const originalConsoleInfo = console.info;
+
 
 // Some standard expressions.
 enum Expression {
@@ -297,6 +309,12 @@ export class ApiFileTest extends ApiTest {
    * @override
    */
   public async tearDownTest(): Promise<string> {
+    SystemExternal.fs.readFileSync = originalFs.readFileSync;
+    SystemExternal.fs.writeFileSync = originalFs.writeFileSync;
+    SystemExternal.fs.promises.readFile = originalFs.readFile;
+    SystemExternal.fs.promises.writeFile = originalFs.writeFile;
+    SystemExternal.fs.promises.open = originalFs.open;
+    console.info = originalConsoleInfo;
     jest.clearAllMocks();
     return super.tearDownTest();
   }
