@@ -1,0 +1,6 @@
+{
+  "factory": "semanticXml",
+  "tests": "ALL",
+  "information": "Semantic xml inference tests.",
+  "base": "input/common/inference.json"
+}

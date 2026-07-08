@@ -1,0 +1,52 @@
+{
+  "factory": "stree",
+  "information": "Semantic tree inference tests.",
+  "base": "input/common/inference.json",
+  "tests": {
+    "NoLabel_0": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "NoLabel_1": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "Premise_0": {
+      "expected": "<stree><inference role=\"proof\" id=\"6\"><children><conclusion role=\"final\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"4\"><children><empty role=\"axiom\" id=\"0\"/></children></premises></children></inference></stree>"
+    },
+    "Premise_1": {
+      "expected": "<stree><inference role=\"proof\" id=\"8\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"6\"><children><empty role=\"axiom\" id=\"2\"/></children></premises></children></inference></stree>"
+    },
+    "Axiom": {
+      "expected": "<stree><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></stree>"
+    },
+    "EmptyAxiom": {
+      "expected": "<stree><inference role=\"axiom\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></inference></stree>"
+    },
+    "RightLabel_0": {
+      "expected": "<stree><inference role=\"proof\" id=\"9\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"7\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "RightLabel_1": {
+      "expected": "<stree><inference role=\"proof\" id=\"11\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"10\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"7\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"9\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference><inference role=\"axiom\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">B</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "RightLabel_2": {
+      "expected": "<stree><inference role=\"proof\" id=\"13\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"12\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"11\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference><inference role=\"axiom\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">B</identifier></children></inference><inference role=\"axiom\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"6\">C</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "LeftLabel_0": {
+      "expected": "<stree><inference role=\"proof\" id=\"9\"><content><rulelabel role=\"left\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"7\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "LeftLabel_1": {
+      "expected": "<stree><inference role=\"proof\" id=\"11\"><content><rulelabel role=\"left\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"10\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"7\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"9\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference><inference role=\"axiom\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">B</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "LeftLabel_2": {
+      "expected": "<stree><inference role=\"proof\" id=\"13\"><content><rulelabel role=\"left\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"12\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"9\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"11\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference><inference role=\"axiom\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">B</identifier></children></inference><inference role=\"axiom\" id=\"7\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"6\">C</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "Premises_0": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "Premises_1": {
+      "expected": "<stree><inference role=\"proof\" id=\"9\"><children><conclusion role=\"final\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"7\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">B</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "Premises_2": {
+      "expected": "<stree><inference role=\"proof\" id=\"11\"><children><conclusion role=\"final\" id=\"10\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"7\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"9\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">B</identifier></children></inference><inference role=\"axiom\" id=\"5\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"4\">C</identifier></children></inference></children></premises></children></inference></stree>"
+    }
+  }
+}
