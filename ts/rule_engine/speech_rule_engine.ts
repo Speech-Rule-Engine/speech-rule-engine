@@ -45,7 +45,12 @@ import * as SpeechRules from '../speech_rules/speech_rules.js';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores.js';
 import { BaseRuleStore } from './base_rule_store.js';
 import { RulesJson } from './base_rule_store.js';
-import { BrailleStore, EuroStore } from './braille_store.js';
+import {
+  BrailleStore,
+  EuroStore,
+  UebStore,
+  cleanupUeb
+} from './braille_store.js';
 import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr.js';
 import { Grammar, State as GrammarState } from './grammar.js';
 import { MathStore } from './math_store.js';
@@ -72,6 +77,12 @@ export class SpeechRuleEngine {
   } = {};
 
   public speechStructure: SpeechStructure = null;
+
+  /**
+   * Depth of public node evaluations, including evaluations from rule context
+   * functions.
+   */
+  private evaluationDepth_ = 0;
 
   /**
    * @returns The Engine object.
@@ -143,11 +154,14 @@ export class SpeechRuleEngine {
     }
     const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
+    this.evaluationDepth_++;
     try {
       result = this.evaluateNode_(node);
     } catch (err) {
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
+    } finally {
+      this.evaluationDepth_--;
     }
     const timeOut = new Date().getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
@@ -306,7 +320,14 @@ export class SpeechRuleEngine {
     // Update the preferences of the dynamic constraint.
     this.updateConstraint_();
     let result = this.evaluateTree_(node);
-    result = processAnnotations(result);
+    const options = Engine.getInstance().options;
+    if (
+      this.evaluationDepth_ === 1 ||
+      options.modality !== 'braille' ||
+      options.locale !== 'ueb'
+    ) {
+      result = processAnnotations(result);
+    }
     return result;
   }
 
@@ -840,6 +861,9 @@ function getStore(locale: string, modality: string): BaseRuleStore {
   if (modality === 'braille' && locale === 'euro') {
     return new EuroStore();
   }
+  if (modality === 'braille' && locale === 'ueb') {
+    return new UebStore();
+  }
   if (modality === 'braille') {
     return new BrailleStore();
   }
@@ -892,6 +916,20 @@ const punctuationMarks = ['⠆', '⠒', '⠲', '⠦', '⠴', '⠄'];
 function processAnnotations(
   descrs: AuditoryDescription[]
 ): AuditoryDescription[] {
+  if (
+    Engine.getInstance().options.modality === 'braille' &&
+    Engine.getInstance().options.locale === 'ueb'
+  ) {
+    const text = descrs.map((descr) => descr.text).join('');
+    return text
+      ? [
+          AuditoryDescription.create(
+            { text: cleanupUeb(text) },
+            { adjust: true, translate: false }
+          )
+        ]
+      : [];
+  }
   const alist = new AuditoryList(descrs);
   for (const item of alist.annotations) {
     const descr = item.data;
