@@ -20,6 +20,7 @@ import * as DomUtil from '#js/common/dom_util.js';
 import * as System from '#js/common/system.js';
 import { SpeechRuleEngine } from '#js/rule_engine/speech_rule_engine.js';
 import { Grammar } from '#js/rule_engine/grammar.js';
+import { cleanupUeb } from '#js/rule_engine/braille_store.js';
 import * as AuralRendering from '#js/audio/aural_rendering.js';
 import { AuditoryDescription } from '#js/audio/auditory_description.js';
 
@@ -83,7 +84,10 @@ export class SymbolTest extends SpeechTest {
         )
       ];
     }
-    return AuralRendering.finalize(AuralRendering.markup(descrs));
+    const result = AuralRendering.finalize(AuralRendering.markup(descrs));
+    return this.locale === 'ueb' && this.modality === 'braille'
+      ? cleanupUeb(result)
+      : result;
   }
 
   /**
