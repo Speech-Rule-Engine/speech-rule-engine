@@ -54,6 +54,81 @@
     },
     "Premises_2": {
       "expected": "1. præmis  aksiom stort A 2. præmis  aksiom stort B 3. præmis  aksiom stort C"
+    },
+    "Sequent_00": {
+      "expected": "inferensregel label Weakening label med konklusion stort X lodret streg efterfulgt af vandret streg stort X og 1 præmis"
+    },
+    "Sequent_01": {
+      "expected": "aksiom stort A lodret streg efterfulgt af vandret streg stort B"
+    },
+    "Sequent_02": {
+      "expected": "aksiom stort A lodret streg efterfulgt af vandret streg stort A"
+    },
+    "Sequent_03": {
+      "expected": "inferensregel med konklusion stort A lodret streg efterfulgt af vandret streg stort B komma stort C og 1 præmis"
+    },
+    "Sequent_04": {
+      "expected": "inferensregel med konklusion lodret streg efterfulgt af vandret streg stort A komma stort B komma stort C komma stort D komma stort E og 1 præmis"
+    },
+    "Sequent_05": {
+      "expected": "inferensregel label stort Y med konklusion lodret streg efterfulgt af vandret streg stort A komma stort B komma stort C og 1 præmis"
+    },
+    "Sequent_06": {
+      "expected": "inferensregel med konklusion stort A lodret streg efterfulgt af vandret streg stort B komma stort C komma stort D komma stort E og 1 præmis"
+    },
+    "Sequent_07": {
+      "expected": "inferensregel med konklusion lodret streg efterfulgt af vandret streg stort A komma stort B komma stort C og 1 præmis"
+    },
+    "Sequent_08": {
+      "expected": "inferensregel med konklusion stort A komma stort B lodret streg efterfulgt af vandret streg stort C og 2 præmisser"
+    },
+    "Sequent_09": {
+      "expected": "inferensregel med konklusion lodret streg efterfulgt af vandret streg stort A komma stort B komma stort C og 1 præmis"
+    },
+    "Sequent_10": {
+      "expected": "inferensregel med konklusion stort A komma stort B komma stort C komma stort D komma stort E komma stort F lodret streg efterfulgt af vandret streg stort G og 1 præmis"
+    },
+    "Sequent_11": {
+      "expected": "inferensregel med konklusion lodret streg efterfulgt af vandret streg stort A komma stort B komma stort C og 1 præmis"
+    },
+    "Sequent_12": {
+      "expected": "inferensregel med konklusion stort E lodret streg efterfulgt af vandret streg stort F og 2 præmisser"
+    },
+    "Sequent_13": {
+      "expected": "inferensregel med konklusion stort B og 2 præmisser"
+    },
+    "ZeroPremiseCells": {
+      "expected": "inferensregel med konklusion stort X og 0 præmis"
+    },
+    "LabelLeadingSpace": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "LabelTooDeep": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "LabelMissing": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "TableMissingAttr": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "aksiom stort A lodret streg efterfulgt af vandret streg"
+    },
+    "TableNoSemantics": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "TableNestedShallow": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "TableTooDeep": {
+      "expected": "inferensregel med konklusion og 0 præmis"
+    },
+    "TableLeadingSpace": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "NoTableAtAll": {
+      "expected": "inferensregel med konklusion og 0 præmis"
     }
   }
 }

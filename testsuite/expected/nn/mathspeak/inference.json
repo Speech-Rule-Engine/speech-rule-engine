@@ -54,6 +54,81 @@
     },
     "Premises_2": {
       "expected": "1. premiss  aksiom stor bokstav A 2. premiss  aksiom stor bokstav B 3. premiss  aksiom stor bokstav C"
+    },
+    "Sequent_00": {
+      "expected": "slutningsregel etikett Weakening etikett med konklusjon stor bokstav X høgrestift stor bokstav X og 1 premiss"
+    },
+    "Sequent_01": {
+      "expected": "aksiom stor bokstav A høgrestift stor bokstav B"
+    },
+    "Sequent_02": {
+      "expected": "aksiom stor bokstav A høgrestift stor bokstav A"
+    },
+    "Sequent_03": {
+      "expected": "slutningsregel med konklusjon stor bokstav A høgrestift stor bokstav B komma stor bokstav C og 1 premiss"
+    },
+    "Sequent_04": {
+      "expected": "slutningsregel med konklusjon høgrestift stor bokstav A komma stor bokstav B komma stor bokstav C komma stor bokstav D komma stor bokstav E og 1 premiss"
+    },
+    "Sequent_05": {
+      "expected": "slutningsregel etikett stor bokstav Y med konklusjon høgrestift stor bokstav A komma stor bokstav B komma stor bokstav C og 1 premiss"
+    },
+    "Sequent_06": {
+      "expected": "slutningsregel med konklusjon stor bokstav A høgrestift stor bokstav B komma stor bokstav C komma stor bokstav D komma stor bokstav E og 1 premiss"
+    },
+    "Sequent_07": {
+      "expected": "slutningsregel med konklusjon høgrestift stor bokstav A komma stor bokstav B komma stor bokstav C og 1 premiss"
+    },
+    "Sequent_08": {
+      "expected": "slutningsregel med konklusjon stor bokstav A komma stor bokstav B høgrestift stor bokstav C og 2 premissar"
+    },
+    "Sequent_09": {
+      "expected": "slutningsregel med konklusjon høgrestift stor bokstav A komma stor bokstav B komma stor bokstav C og 1 premiss"
+    },
+    "Sequent_10": {
+      "expected": "slutningsregel med konklusjon stor bokstav A komma stor bokstav B komma stor bokstav C komma stor bokstav D komma stor bokstav E komma stor bokstav F høgrestift stor bokstav G og 1 premiss"
+    },
+    "Sequent_11": {
+      "expected": "slutningsregel med konklusjon høgrestift stor bokstav A komma stor bokstav B komma stor bokstav C og 1 premiss"
+    },
+    "Sequent_12": {
+      "expected": "slutningsregel med konklusjon stor bokstav E høgrestift stor bokstav F og 2 premissar"
+    },
+    "Sequent_13": {
+      "expected": "slutningsregel med konklusjon stor bokstav B og 2 premissar"
+    },
+    "ZeroPremiseCells": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 0 premiss"
+    },
+    "LabelLeadingSpace": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "LabelTooDeep": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "LabelMissing": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableMissingAttr": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "aksiom stor bokstav A høgrestift"
+    },
+    "TableNoSemantics": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableNestedShallow": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableTooDeep": {
+      "expected": "slutningsregel med konklusjon og 0 premiss"
+    },
+    "TableLeadingSpace": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "NoTableAtAll": {
+      "expected": "slutningsregel med konklusjon og 0 premiss"
     }
   }
 }

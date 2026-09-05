@@ -53,6 +53,81 @@
     },
     "Premises_2": {
       "expected": "첫번째 전제  공리 대문자 A 두번째 전제  공리 대문자 B 세번째 전제  공리 대문자 C"
+    },
+    "Sequent_00": {
+      "expected": "추론 규칙 꼬리표 Weakening 꼬리표 결론은 대문자 X 오른 턴스틸 대문자 X 이고 전제는 1 개"
+    },
+    "Sequent_01": {
+      "expected": "공리 대문자 A 오른 턴스틸 대문자 B"
+    },
+    "Sequent_02": {
+      "expected": "공리 대문자 A 오른 턴스틸 대문자 A"
+    },
+    "Sequent_03": {
+      "expected": "추론 규칙 결론은 대문자 A 오른 턴스틸 대문자 B 콤마 대문자 C 이고 전제는 1 개"
+    },
+    "Sequent_04": {
+      "expected": "추론 규칙 결론은 오른 턴스틸 대문자 A 콤마 대문자 B 콤마 대문자 C 콤마 대문자 D 콤마 대문자 E 이고 전제는 1 개"
+    },
+    "Sequent_05": {
+      "expected": "추론 규칙 꼬리표 대문자 Y 결론은 오른 턴스틸 대문자 A 콤마 대문자 B 콤마 대문자 C 이고 전제는 1 개"
+    },
+    "Sequent_06": {
+      "expected": "추론 규칙 결론은 대문자 A 오른 턴스틸 대문자 B 콤마 대문자 C 콤마 대문자 D 콤마 대문자 E 이고 전제는 1 개"
+    },
+    "Sequent_07": {
+      "expected": "추론 규칙 결론은 오른 턴스틸 대문자 A 콤마 대문자 B 콤마 대문자 C 이고 전제는 1 개"
+    },
+    "Sequent_08": {
+      "expected": "추론 규칙 결론은 대문자 A 콤마 대문자 B 오른 턴스틸 대문자 C 이고 전제는 2 개"
+    },
+    "Sequent_09": {
+      "expected": "추론 규칙 결론은 오른 턴스틸 대문자 A 콤마 대문자 B 콤마 대문자 C 이고 전제는 1 개"
+    },
+    "Sequent_10": {
+      "expected": "추론 규칙 결론은 대문자 A 콤마 대문자 B 콤마 대문자 C 콤마 대문자 D 콤마 대문자 E 콤마 대문자 F 오른 턴스틸 대문자 G 이고 전제는 1 개"
+    },
+    "Sequent_11": {
+      "expected": "추론 규칙 결론은 오른 턴스틸 대문자 A 콤마 대문자 B 콤마 대문자 C 이고 전제는 1 개"
+    },
+    "Sequent_12": {
+      "expected": "추론 규칙 결론은 대문자 E 오른 턴스틸 대문자 F 이고 전제는 2 개"
+    },
+    "Sequent_13": {
+      "expected": "추론 규칙 결론은 대문자 B 이고 전제는 2 개"
+    },
+    "ZeroPremiseCells": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 0 개"
+    },
+    "LabelLeadingSpace": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "LabelTooDeep": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "LabelMissing": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "TableMissingAttr": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "공리 대문자 A 오른 턴스틸"
+    },
+    "TableNoSemantics": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "TableNestedShallow": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "TableTooDeep": {
+      "expected": "추론 규칙 결론은 이고 전제는 0 개"
+    },
+    "TableLeadingSpace": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "NoTableAtAll": {
+      "expected": "추론 규칙 결론은 이고 전제는 0 개"
     }
   }
 }

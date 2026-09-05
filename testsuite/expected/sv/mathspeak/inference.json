@@ -54,6 +54,81 @@
     },
     "Premises_2": {
       "expected": "1:a premiss  axiom stort A 2:a premiss  axiom stort B 3:e premiss  axiom stort C"
+    },
+    "Sequent_00": {
+      "expected": "slutledningsregel etikett Weakening etikett med slutsats stort X höger tack stort X och 1 premisser"
+    },
+    "Sequent_01": {
+      "expected": "axiom stort A höger tack stort B"
+    },
+    "Sequent_02": {
+      "expected": "axiom stort A höger tack stort A"
+    },
+    "Sequent_03": {
+      "expected": "slutledningsregel med slutsats stort A höger tack stort B komma stort C och 1 premisser"
+    },
+    "Sequent_04": {
+      "expected": "slutledningsregel med slutsats höger tack stort A komma stort B komma stort C komma stort D komma stort E och 1 premisser"
+    },
+    "Sequent_05": {
+      "expected": "slutledningsregel etikett stort Y med slutsats höger tack stort A komma stort B komma stort C och 1 premisser"
+    },
+    "Sequent_06": {
+      "expected": "slutledningsregel med slutsats stort A höger tack stort B komma stort C komma stort D komma stort E och 1 premisser"
+    },
+    "Sequent_07": {
+      "expected": "slutledningsregel med slutsats höger tack stort A komma stort B komma stort C och 1 premisser"
+    },
+    "Sequent_08": {
+      "expected": "slutledningsregel med slutsats stort A komma stort B höger tack stort C och 2 premisser"
+    },
+    "Sequent_09": {
+      "expected": "slutledningsregel med slutsats höger tack stort A komma stort B komma stort C och 1 premisser"
+    },
+    "Sequent_10": {
+      "expected": "slutledningsregel med slutsats stort A komma stort B komma stort C komma stort D komma stort E komma stort F höger tack stort G och 1 premisser"
+    },
+    "Sequent_11": {
+      "expected": "slutledningsregel med slutsats höger tack stort A komma stort B komma stort C och 1 premisser"
+    },
+    "Sequent_12": {
+      "expected": "slutledningsregel med slutsats stort E höger tack stort F och 2 premisser"
+    },
+    "Sequent_13": {
+      "expected": "slutledningsregel med slutsats stort B och 2 premisser"
+    },
+    "ZeroPremiseCells": {
+      "expected": "slutledningsregel med slutsats stort X och 0 premisser"
+    },
+    "LabelLeadingSpace": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "LabelTooDeep": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "LabelMissing": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "TableMissingAttr": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "axiom stort A höger tack"
+    },
+    "TableNoSemantics": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "TableNestedShallow": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "TableTooDeep": {
+      "expected": "slutledningsregel med slutsats och 0 premisser"
+    },
+    "TableLeadingSpace": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "NoTableAtAll": {
+      "expected": "slutledningsregel med slutsats och 0 premisser"
     }
   }
 }

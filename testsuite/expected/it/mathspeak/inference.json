@@ -53,6 +53,81 @@
     },
     "Premises_2": {
       "expected": "1a premise  assioma A maiuscola 2a premise  assioma B maiuscola 3a premise  assioma C maiuscola"
+    },
+    "Sequent_00": {
+      "expected": "regola di inferenza etichetta Weakening etichetta con conclusione X maiuscola tornello X maiuscola e 1 premessa"
+    },
+    "Sequent_01": {
+      "expected": "assioma A maiuscola tornello B maiuscola"
+    },
+    "Sequent_02": {
+      "expected": "assioma A maiuscola tornello A maiuscola"
+    },
+    "Sequent_03": {
+      "expected": "regola di inferenza con conclusione A maiuscola tornello B maiuscola virgola C maiuscola e 1 premessa"
+    },
+    "Sequent_04": {
+      "expected": "regola di inferenza con conclusione tornello A maiuscola virgola B maiuscola virgola C maiuscola virgola D maiuscola virgola E maiuscola e 1 premessa"
+    },
+    "Sequent_05": {
+      "expected": "regola di inferenza etichetta Y maiuscola con conclusione tornello A maiuscola virgola B maiuscola virgola C maiuscola e 1 premessa"
+    },
+    "Sequent_06": {
+      "expected": "regola di inferenza con conclusione A maiuscola tornello B maiuscola virgola C maiuscola virgola D maiuscola virgola E maiuscola e 1 premessa"
+    },
+    "Sequent_07": {
+      "expected": "regola di inferenza con conclusione tornello A maiuscola virgola B maiuscola virgola C maiuscola e 1 premessa"
+    },
+    "Sequent_08": {
+      "expected": "regola di inferenza con conclusione A maiuscola virgola B maiuscola tornello C maiuscola e 2 premesse"
+    },
+    "Sequent_09": {
+      "expected": "regola di inferenza con conclusione tornello A maiuscola virgola B maiuscola virgola C maiuscola e 1 premessa"
+    },
+    "Sequent_10": {
+      "expected": "regola di inferenza con conclusione A maiuscola virgola B maiuscola virgola C maiuscola virgola D maiuscola virgola E maiuscola virgola F maiuscola tornello G maiuscola e 1 premessa"
+    },
+    "Sequent_11": {
+      "expected": "regola di inferenza con conclusione tornello A maiuscola virgola B maiuscola virgola C maiuscola e 1 premessa"
+    },
+    "Sequent_12": {
+      "expected": "regola di inferenza con conclusione E maiuscola tornello F maiuscola e 2 premesse"
+    },
+    "Sequent_13": {
+      "expected": "regola di inferenza con conclusione B maiuscola e 2 premesse"
+    },
+    "ZeroPremiseCells": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 0 premessa"
+    },
+    "LabelLeadingSpace": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "LabelTooDeep": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "LabelMissing": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "TableMissingAttr": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "assioma A maiuscola tornello"
+    },
+    "TableNoSemantics": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "TableNestedShallow": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "TableTooDeep": {
+      "expected": "regola di inferenza con conclusione e 0 premessa"
+    },
+    "TableLeadingSpace": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "NoTableAtAll": {
+      "expected": "regola di inferenza con conclusione e 0 premessa"
     }
   }
 }
