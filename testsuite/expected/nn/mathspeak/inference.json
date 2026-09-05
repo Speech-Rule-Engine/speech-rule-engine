@@ -122,7 +122,13 @@
       "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
     },
     "TableTooDeep": {
-      "expected": "slutningsregel med konklusjon og 1 premiss"
+      "expected": "slutningsregel med konklusjon og 0 premiss"
+    },
+    "TableLeadingSpace": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "NoTableAtAll": {
+      "expected": "slutningsregel med konklusjon og 0 premiss"
     }
   }
 }
