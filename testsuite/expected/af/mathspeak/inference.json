@@ -117,6 +117,12 @@
     },
     "TableNoSemantics": {
       "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "TableNestedShallow": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "TableTooDeep": {
+      "expected": "afleidingsreël met gevolgtrekking en 1 uitgangspunt"
     }
   }
 }

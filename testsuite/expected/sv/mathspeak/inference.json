@@ -117,6 +117,12 @@
     },
     "TableNoSemantics": {
       "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "TableNestedShallow": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "TableTooDeep": {
+      "expected": "slutledningsregel med slutsats och 1 premisser"
     }
   }
 }

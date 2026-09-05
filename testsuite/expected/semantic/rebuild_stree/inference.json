@@ -2,5 +2,8 @@
   "factory": "rebuild",
   "tests": "ALL",
   "information": "Rebuild stree inference tests.",
-  "base": "input/common/inference.json"
+  "base": "input/common/inference.json",
+  "exclude": [
+    "TableTooDeep"
+  ]
 }

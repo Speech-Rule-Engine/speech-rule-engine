@@ -117,6 +117,12 @@
     },
     "TableNoSemantics": {
       "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableNestedShallow": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableTooDeep": {
+      "expected": "slutningsregel med konklusjon og 1 premiss"
     }
   }
 }

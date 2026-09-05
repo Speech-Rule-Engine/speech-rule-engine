@@ -110,6 +110,12 @@
     },
     "TableNoSemantics": {
       "expected": "<stree><inference role=\"proof\" id=\"9\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"7\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "TableNestedShallow": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "TableTooDeep": {
+      "expected": "<stree><inference role=\"proof\" id=\"10\"><children><conclusion role=\"final\" id=\"9\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"7\">N</text></children></conclusion><premises role=\"unknown\" id=\"8\"><children><row role=\"table\" id=\"6\"><children><cell role=\"table\" id=\"5\"><children><multiline role=\"unknown\" id=\"4\"><children><line role=\"multiline\" id=\"3\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></line></children></multiline></children></cell></children></row></children></premises></children></inference></stree>"
     }
   }
 }
