@@ -98,6 +98,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "추론 규칙 결론은 대문자 X 이고 전제는 0 개"
+    },
+    "LabelLeadingSpace": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "LabelTooDeep": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "LabelMissing": {
+      "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
     }
   }
 }

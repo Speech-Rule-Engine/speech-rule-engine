@@ -98,6 +98,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "regola di inferenza con conclusione X maiuscola e 0 premessa"
+    },
+    "LabelLeadingSpace": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "LabelTooDeep": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "LabelMissing": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
     }
   }
 }

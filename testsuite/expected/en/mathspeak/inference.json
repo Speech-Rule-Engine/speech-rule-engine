@@ -98,6 +98,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "inference rule with conclusion upper X and 0 premise"
+    },
+    "LabelLeadingSpace": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "LabelTooDeep": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "LabelMissing": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
     }
   }
 }

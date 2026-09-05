@@ -99,6 +99,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "slutledningsregel med slutsats stort X och 0 premisser"
+    },
+    "LabelLeadingSpace": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "LabelTooDeep": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "LabelMissing": {
+      "expected": "slutledningsregel med slutsats stort X och 1 premisser"
     }
   }
 }
