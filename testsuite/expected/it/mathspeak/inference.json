@@ -113,6 +113,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "assioma A maiuscola tornello"
+    },
+    "TableNoSemantics": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
     }
   }
 }

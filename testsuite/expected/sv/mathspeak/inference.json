@@ -114,6 +114,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "axiom stort A höger tack"
+    },
+    "TableNoSemantics": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
     }
   }
 }
