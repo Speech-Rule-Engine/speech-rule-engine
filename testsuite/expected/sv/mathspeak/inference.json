@@ -122,7 +122,13 @@
       "expected": "slutledningsregel med slutsats stort X och 1 premisser"
     },
     "TableTooDeep": {
-      "expected": "slutledningsregel med slutsats och 1 premisser"
+      "expected": "slutledningsregel med slutsats och 0 premisser"
+    },
+    "TableLeadingSpace": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "NoTableAtAll": {
+      "expected": "slutledningsregel med slutsats och 0 premisser"
     }
   }
 }

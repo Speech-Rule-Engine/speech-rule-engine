@@ -121,7 +121,13 @@
       "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
     },
     "TableTooDeep": {
-      "expected": "Schlussregel mit Folgerung aus 1 Prämisse"
+      "expected": "Schlussregel mit Folgerung aus 0 Prämisse"
+    },
+    "TableLeadingSpace": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "NoTableAtAll": {
+      "expected": "Schlussregel mit Folgerung aus 0 Prämisse"
     }
   }
 }

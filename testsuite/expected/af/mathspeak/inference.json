@@ -122,7 +122,13 @@
       "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
     },
     "TableTooDeep": {
-      "expected": "afleidingsreël met gevolgtrekking en 1 uitgangspunt"
+      "expected": "afleidingsreël met gevolgtrekking en 0 uitgangspunt"
+    },
+    "TableLeadingSpace": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "NoTableAtAll": {
+      "expected": "afleidingsreël met gevolgtrekking en 0 uitgangspunt"
     }
   }
 }

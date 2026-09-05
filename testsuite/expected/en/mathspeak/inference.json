@@ -121,7 +121,13 @@
       "expected": "inference rule with conclusion upper X and 1 premise"
     },
     "TableTooDeep": {
-      "expected": "inference rule with conclusion and 1 premise"
+      "expected": "inference rule with conclusion and 0 premise"
+    },
+    "TableLeadingSpace": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "NoTableAtAll": {
+      "expected": "inference rule with conclusion and 0 premise"
     }
   }
 }

@@ -122,7 +122,13 @@
       "expected": "inferensregel med konklusion stort X og 1 præmis"
     },
     "TableTooDeep": {
-      "expected": "inferensregel med konklusion og 1 præmis"
+      "expected": "inferensregel med konklusion og 0 præmis"
+    },
+    "TableLeadingSpace": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "NoTableAtAll": {
+      "expected": "inferensregel med konklusion og 0 præmis"
     }
   }
 }
