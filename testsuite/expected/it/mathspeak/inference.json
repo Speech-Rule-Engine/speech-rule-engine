@@ -116,6 +116,12 @@
     },
     "TableNoSemantics": {
       "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "TableNestedShallow": {
+      "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "TableTooDeep": {
+      "expected": "regola di inferenza con conclusione e 1 premessa"
     }
   }
 }

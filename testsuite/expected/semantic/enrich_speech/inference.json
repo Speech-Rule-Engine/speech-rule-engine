@@ -2,5 +2,8 @@
   "factory": "enrichSpeech",
   "tests": "ALL",
   "information": "Enrich speech inference tests.",
-  "base": "input/common/inference.json"
+  "base": "input/common/inference.json",
+  "exclude": [
+    "TableTooDeep"
+  ]
 }

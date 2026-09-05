@@ -116,6 +116,12 @@
     },
     "TableNoSemantics": {
       "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "TableNestedShallow": {
+      "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "TableTooDeep": {
+      "expected": "inference rule with conclusion and 1 premise"
     }
   }
 }

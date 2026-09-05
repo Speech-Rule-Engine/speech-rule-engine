@@ -116,6 +116,12 @@
     },
     "TableNoSemantics": {
       "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "TableNestedShallow": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "TableTooDeep": {
+      "expected": "Schlussregel mit Folgerung aus 1 Prämisse"
     }
   }
 }

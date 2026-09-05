@@ -117,6 +117,12 @@
     },
     "TableNoSemantics": {
       "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "TableNestedShallow": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "TableTooDeep": {
+      "expected": "inferensregel med konklusion og 1 præmis"
     }
   }
 }

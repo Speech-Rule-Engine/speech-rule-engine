@@ -163,7 +163,7 @@ export class SemanticProofParser {
   ): { conclusion: SemanticNode; premises: SemanticNode } {
     const inf = children.length
       ? this.findNestedRow(children, 'inferenceRule') ||
-        children.find((child) => DomUtil.tagName(child) === MMLTAGS.MTABLE) ||
+        this.findTable(children) ||
         node
       : node;
     const up = getSemantics(inf)['inferenceRule'] === 'up';
@@ -241,6 +241,34 @@ export class SemanticProofParser {
       }
       if (findSemantics(node, semantic, value)) {
         return node;
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Searches the given row of elements for the first mtable, e.g., as a
+   * fallback when the inference-rule table can't be identified by its
+   * semantics key. Ignores space elements and descends at most 3 levels.
+   *
+   * @param nodes A node list.
+   * @param level The current nesting level.
+   * @returns The first mtable found in the row.
+   */
+  private findTable(nodes: Element[], level: number = 0): Element {
+    if (level > 3) {
+      return null;
+    }
+    for (let i = 0, node; (node = nodes[i]); i++) {
+      const tag = DomUtil.tagName(node);
+      if (tag === MMLTAGS.MSPACE) {
+        continue;
+      }
+      if (tag === MMLTAGS.MTABLE) {
+        return node;
+      }
+      if (tag === MMLTAGS.MROW) {
+        return this.findTable(DomUtil.toArray(node.childNodes), level + 1);
       }
     }
     return null;
