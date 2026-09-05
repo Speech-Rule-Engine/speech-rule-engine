@@ -107,6 +107,12 @@
     },
     "LabelMissing": {
       "expected": "추론 규칙 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "TableMissingAttr": {
+      "expected": "추론 규칙 꼬리표 대문자 N 결론은 대문자 X 이고 전제는 1 개"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "공리 대문자 A 오른 턴스틸"
     }
   }
 }

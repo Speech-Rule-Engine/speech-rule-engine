@@ -108,6 +108,12 @@
     },
     "LabelMissing": {
       "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "TableMissingAttr": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "aksioom hoofletter A regter spyker"
     }
   }
 }

@@ -108,6 +108,12 @@
     },
     "LabelMissing": {
       "expected": "slutledningsregel med slutsats stort X och 1 premisser"
+    },
+    "TableMissingAttr": {
+      "expected": "slutledningsregel etikett stort N med slutsats stort X och 1 premisser"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "axiom stort A höger tack"
     }
   }
 }

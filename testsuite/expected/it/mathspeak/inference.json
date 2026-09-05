@@ -107,6 +107,12 @@
     },
     "LabelMissing": {
       "expected": "regola di inferenza con conclusione X maiuscola e 1 premessa"
+    },
+    "TableMissingAttr": {
+      "expected": "regola di inferenza etichetta N maiuscola con conclusione X maiuscola e 1 premessa"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "assioma A maiuscola tornello"
     }
   }
 }

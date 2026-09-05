@@ -108,6 +108,12 @@
     },
     "LabelMissing": {
       "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "TableMissingAttr": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "aksiom stor bokstav A høgrestift"
     }
   }
 }
