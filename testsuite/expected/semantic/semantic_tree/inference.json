@@ -92,6 +92,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "<stree><inference role=\"proof\" id=\"3\"><children><conclusion role=\"final\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"1\"/></children></inference></stree>"
+    },
+    "LabelLeadingSpace": {
+      "expected": "<stree><inference role=\"proof\" id=\"9\"><content><rulelabel role=\"right\" id=\"1\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"0\">N</text></children></rulelabel></content><children><conclusion role=\"final\" id=\"8\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"5\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"7\"><children><inference role=\"axiom\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "LabelTooDeep": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
+    },
+    "LabelMissing": {
+      "expected": "<stree><inference role=\"proof\" id=\"7\"><children><conclusion role=\"final\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"5\"><children><inference role=\"axiom\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">A</identifier></children></inference></children></premises></children></inference></stree>"
     }
   }
 }
