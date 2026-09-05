@@ -114,6 +114,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "aksiom stort A lodret streg efterfulgt af vandret streg"
+    },
+    "TableNoSemantics": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
     }
   }
 }

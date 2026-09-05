@@ -114,6 +114,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "aksioom hoofletter A regter spyker"
+    },
+    "TableNoSemantics": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
     }
   }
 }

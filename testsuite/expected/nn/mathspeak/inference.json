@@ -114,6 +114,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "aksiom stor bokstav A høgrestift"
+    },
+    "TableNoSemantics": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
     }
   }
 }

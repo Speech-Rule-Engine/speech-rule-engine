@@ -113,6 +113,9 @@
     },
     "SequentMissingSuccedent": {
       "expected": "axiom upper A right tack"
+    },
+    "TableNoSemantics": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
     }
   }
 }
