@@ -162,7 +162,9 @@ export class SemanticProofParser {
     children: Element[]
   ): { conclusion: SemanticNode; premises: SemanticNode } {
     const inf = children.length
-      ? this.findNestedRow(children, 'inferenceRule') || node
+      ? this.findNestedRow(children, 'inferenceRule') ||
+        children.find((child) => DomUtil.tagName(child) === MMLTAGS.MTABLE) ||
+        node
       : node;
     const up = getSemantics(inf)['inferenceRule'] === 'up';
     const premRow = up ? inf.childNodes[1] : inf.childNodes[0];

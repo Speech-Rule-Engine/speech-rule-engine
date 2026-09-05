@@ -143,6 +143,14 @@
     "LabelMissing": {
       "__comment__": "Hand-crafted MathML; no LaTeX source. Based on RightLabel_0, with the mpadded label element present but lacking a bspr_prooflabel semantics attribute, so findNestedRow finds nothing. The label is dropped rather than found; the rule itself parses normally.",
       "input": "<mrow semantics=\"bspr_labelledRule:right;bspr_inference:1;bspr_proof:true\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>A</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>X</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable><mpadded height=\"+.5em\" width=\"+.5em\" voffset=\"-.15em\"><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>N</mtext></mstyle></mpadded></mrow>"
+    },
+    "TableMissingAttr": {
+      "__comment__": "Hand-crafted MathML; no LaTeX source. Based on RightLabel_0, with the inference-rule mtable carrying an unrelated semantics attribute instead of bspr_inferenceRule, so findNestedRow can't identify it by key. getFormulas falls back to a plain tag search for the <mtable>, which finds it correctly.",
+      "input": "<mrow semantics=\"bspr_labelledRule:right;bspr_inference:1;bspr_proof:true\"><mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_other:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>A</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mi>X</mi></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable><mpadded height=\"+.5em\" width=\"+.5em\" voffset=\"-.15em\" semantics=\"bspr_prooflabel:right\"><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>N</mtext></mstyle></mpadded></mrow>"
+    },
+    "SequentMissingSuccedent": {
+      "__comment__": "Hand-crafted MathML; no LaTeX source. A sequent axiom row with only two cells (antecedent, turnstile) -- the succedent cell is missing entirely, not just empty, so getSequent falls back to an empty node for it.",
+      "input": "<mtable columnspacing=\".5ex\" columnalign=\"center 2\" semantics=\"bspr_sequent:true;bspr_axiom:true;bspr_proof:true\"><mtr><mtd><mi>A</mi></mtd><mtd><mo>&#x22A2;</mo></mtd></mtr></mtable>"
     }
   }
 }
