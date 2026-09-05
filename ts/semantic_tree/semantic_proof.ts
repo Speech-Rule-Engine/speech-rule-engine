@@ -162,10 +162,14 @@ export class SemanticProofParser {
     children: Element[]
   ): { conclusion: SemanticNode; premises: SemanticNode } {
     const inf = children.length
-      ? this.findNestedRow(children, 'inferenceRule') ||
-        this.findTable(children) ||
-        node
+      ? this.findNestedRow(children, 'inferenceRule') || this.findTable(children)
       : node;
+    if (!inf) {
+      return {
+        conclusion: this.factory.makeEmptyNode(),
+        premises: this.factory.makeEmptyNode()
+      };
+    }
     const up = getSemantics(inf)['inferenceRule'] === 'up';
     const premRow = up ? inf.childNodes[1] : inf.childNodes[0];
     const concRow = up ? inf.childNodes[0] : inf.childNodes[1];

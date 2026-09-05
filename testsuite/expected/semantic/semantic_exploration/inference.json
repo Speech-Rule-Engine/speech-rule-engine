@@ -1044,30 +1044,32 @@
     },
     "TableTooDeep": {
       "expected": [
-        10,
-        [
-          9,
-          7
-        ],
+        2,
+        0,
+        1
+      ]
+    },
+    "TableLeadingSpace": {
+      "expected": [
+        9,
         [
           8,
+          5
+        ],
+        [
+          7,
           [
-            6,
-            [
-              5,
-              [
-                4,
-                [
-                  3,
-                  [
-                    1,
-                    0
-                  ]
-                ]
-              ]
-            ]
+            3,
+            2
           ]
         ]
+      ]
+    },
+    "NoTableAtAll": {
+      "expected": [
+        2,
+        0,
+        1
       ]
     }
   }
