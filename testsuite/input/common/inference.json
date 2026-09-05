@@ -127,6 +127,10 @@
     "Sequent_13": {
       "tex": "\\Axiom$C\\fCenter C$\\AxiomC{A}\\BinaryInfC{B}\\DisplayProof",
       "input": "<mtable align=\"top 2\" rowlines=\"solid\" framespacing=\"0 0\" semantics=\"bspr_inferenceRule:down;bspr_inference:2;bspr_proof:true\"><mtr><mtd><mtable framespacing=\"0 0\"><mtr><mtd rowalign=\"bottom\"><mtable columnspacing=\".5ex\" columnalign=\"center 2\" semantics=\"bspr_sequent:true;bspr_axiom:true\"><mtr><mtd><mi>C</mi></mtd><mtd><mo>&#x22A2;</mo></mtd><mtd><mi>C</mi></mtd></mtr></mtable></mtd><mtd></mtd><mtd rowalign=\"bottom\"><mrow semantics=\"bspr_axiom:true\"><mspace width=\".5ex\"></mspace><mstyle><mtext>A</mtext></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mspace width=\".5ex\"></mspace><mstyle><mtext>B</mtext></mstyle><mspace width=\".5ex\"></mspace></mrow></mtd></mtr></mtable>"
+    },
+    "ZeroPremiseCells": {
+      "tex": "Hand-crafted MathML; no LaTeX source. The premises row has no <mtd> cells at all (rather than bussproofs' usual single, possibly empty, premise cell), so the premises node's semantic child list is genuinely empty. Regression test for CaseProof.getMathml's no-children early return.",
+      "input": "<mtable semantics=\"bspr_inferenceRule:down;bspr_inference:1;bspr_proof:true\"><mtr><mtd><mtable><mtr></mtr></mtable></mtd></mtr><mtr><mtd><mrow><mi>X</mi></mrow></mtd></mtr></mtable>"
     }
   }
 }

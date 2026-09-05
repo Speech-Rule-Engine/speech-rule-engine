@@ -53,6 +53,51 @@
     },
     "Premises_2": {
       "expected": "1. Prämisse  Axiom großes A 2. Prämisse  Axiom großes B 3. Prämisse  Axiom großes C"
+    },
+    "Sequent_00": {
+      "expected": "Schlussregel Regel Weakening Regel mit Folgerung großes X ergibt großes X aus 1 Prämisse"
+    },
+    "Sequent_01": {
+      "expected": "Axiom großes A ergibt großes B"
+    },
+    "Sequent_02": {
+      "expected": "Axiom großes A ergibt großes A"
+    },
+    "Sequent_03": {
+      "expected": "Schlussregel mit Folgerung großes A ergibt großes B Komma großes C aus 1 Prämisse"
+    },
+    "Sequent_04": {
+      "expected": "Schlussregel mit Folgerung ergibt großes A Komma großes B Komma großes C Komma großes D Komma großes E aus 1 Prämisse"
+    },
+    "Sequent_05": {
+      "expected": "Schlussregel Regel großes Y mit Folgerung ergibt großes A Komma großes B Komma großes C aus 1 Prämisse"
+    },
+    "Sequent_06": {
+      "expected": "Schlussregel mit Folgerung großes A ergibt großes B Komma großes C Komma großes D Komma großes E aus 1 Prämisse"
+    },
+    "Sequent_07": {
+      "expected": "Schlussregel mit Folgerung ergibt großes A Komma großes B Komma großes C aus 1 Prämisse"
+    },
+    "Sequent_08": {
+      "expected": "Schlussregel mit Folgerung großes A Komma großes B ergibt großes C aus 2 Prämissen"
+    },
+    "Sequent_09": {
+      "expected": "Schlussregel mit Folgerung ergibt großes A Komma großes B Komma großes C aus 1 Prämisse"
+    },
+    "Sequent_10": {
+      "expected": "Schlussregel mit Folgerung großes A Komma großes B Komma großes C Komma großes D Komma großes E Komma großes F ergibt großes G aus 1 Prämisse"
+    },
+    "Sequent_11": {
+      "expected": "Schlussregel mit Folgerung ergibt großes A Komma großes B Komma großes C aus 1 Prämisse"
+    },
+    "Sequent_12": {
+      "expected": "Schlussregel mit Folgerung großes E ergibt großes F aus 2 Prämissen"
+    },
+    "Sequent_13": {
+      "expected": "Schlussregel mit Folgerung großes B aus 2 Prämissen"
+    },
+    "ZeroPremiseCells": {
+      "expected": "Schlussregel mit Folgerung großes X aus 0 Prämisse"
     }
   }
 }
