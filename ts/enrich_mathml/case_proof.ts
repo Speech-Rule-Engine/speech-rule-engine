@@ -59,6 +59,7 @@ export class CaseProof extends AbstractEnrichCase {
    */
   public getMathml() {
     if (!this.semantic.childNodes.length) {
+      setAttributes(this.mml, this.semantic);
       return this.mml;
     }
     this.semantic.contentNodes.forEach(function (x) {
