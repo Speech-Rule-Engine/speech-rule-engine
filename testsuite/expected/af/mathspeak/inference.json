@@ -99,6 +99,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "afleidingsreël met gevolgtrekking hoofletter X en 0 uitgangspunt"
+    },
+    "LabelLeadingSpace": {
+      "expected": "afleidingsreël opskrif hoofletter N met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "LabelTooDeep": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
+    },
+    "LabelMissing": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 1 uitgangspunt"
     }
   }
 }

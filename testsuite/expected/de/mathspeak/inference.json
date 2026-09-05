@@ -98,6 +98,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "Schlussregel mit Folgerung großes X aus 0 Prämisse"
+    },
+    "LabelLeadingSpace": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "LabelTooDeep": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "LabelMissing": {
+      "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
     }
   }
 }

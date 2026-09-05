@@ -99,6 +99,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "inferensregel med konklusion stort X og 0 præmis"
+    },
+    "LabelLeadingSpace": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "LabelTooDeep": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "LabelMissing": {
+      "expected": "inferensregel med konklusion stort X og 1 præmis"
     }
   }
 }

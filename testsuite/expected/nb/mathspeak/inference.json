@@ -99,6 +99,15 @@
     },
     "ZeroPremiseCells": {
       "expected": "slutningsregel med konklusjon stor bokstav X og 0 premiss"
+    },
+    "LabelLeadingSpace": {
+      "expected": "slutningsregel etikett stor bokstav N med konklusjon stor bokstav X og 1 premiss"
+    },
+    "LabelTooDeep": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
+    },
+    "LabelMissing": {
+      "expected": "slutningsregel med konklusjon stor bokstav X og 1 premiss"
     }
   }
 }
