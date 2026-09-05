@@ -113,7 +113,8 @@ export class SemanticProofParser {
     const children = DomUtil.toArray(node.childNodes);
     const content = [SemanticRole.LEFT, SemanticRole.RIGHT]
       .filter((side) => label === side || label === 'both')
-      .map((side) => this.getLabel(children, side));
+      .map((side) => this.getLabel(children, side))
+      .filter((sem) => sem);
     const formulas = this.getFormulas(node, children);
     const inference = this.factory.makeBranchNode(
       SemanticType.INFERENCE,
@@ -129,10 +130,16 @@ export class SemanticProofParser {
    *
    * @param children The inference node's children containing the label.
    * @param side The side the label is on.
-   * @returns The semantic node for the label.
+   * @returns The semantic node for the label, or null if none was found.
    */
-  private getLabel(children: Element[], side: SemanticRole): SemanticNode {
+  private getLabel(
+    children: Element[],
+    side: SemanticRole
+  ): SemanticNode | null {
     const label = this.findNestedRow(children, 'prooflabel', side);
+    if (!label) {
+      return null;
+    }
     const sem = this.factory.makeBranchNode(
       SemanticType.RULELABEL,
       this.parse(DomUtil.toArray(label.childNodes)),
@@ -155,7 +162,7 @@ export class SemanticProofParser {
     children: Element[]
   ): { conclusion: SemanticNode; premises: SemanticNode } {
     const inf = children.length
-      ? this.findNestedRow(children, 'inferenceRule')
+      ? this.findNestedRow(children, 'inferenceRule') || node
       : node;
     const up = getSemantics(inf)['inferenceRule'] === 'up';
     const premRow = up ? inf.childNodes[1] : inf.childNodes[0];
