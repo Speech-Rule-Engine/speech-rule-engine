@@ -317,7 +317,7 @@ function removePrefix(name: string): string {
  */
 function getSemantics(node: Element): Semantics {
   const semantics = node.getAttribute('semantics');
-  return semantics ? separateSemantics(semantics) : null;
+  return semantics ? separateSemantics(semantics) : {};
 }
 
 /**
