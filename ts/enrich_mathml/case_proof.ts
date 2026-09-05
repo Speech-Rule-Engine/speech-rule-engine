@@ -87,13 +87,6 @@ export class CaseProof extends AbstractEnrichCase {
       EnrichMathml.walkTree(x as SemanticNode);
     });
     setAttributes(this.mml, this.semantic);
-    // TODO: The obsolete parent pointer is related to the issue above.
-    if (
-      this.mml.getAttribute('data-semantic-id') ===
-      this.mml.getAttribute('data-semantic-parent')
-    ) {
-      this.mml.removeAttribute('data-semantic-parent');
-    }
     return this.mml;
   }
 }

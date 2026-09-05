@@ -54,6 +54,51 @@
     },
     "Premises_2": {
       "expected": "1. uitgangspunt  aksioom hoofletter A 2. uitgangspunt  aksioom hoofletter B 3. uitgangspunt  aksioom hoofletter C"
+    },
+    "Sequent_00": {
+      "expected": "afleidingsreël opskrif Weakening opskrif met gevolgtrekking hoofletter X regter spyker hoofletter X en 1 uitgangspunt"
+    },
+    "Sequent_01": {
+      "expected": "aksioom hoofletter A regter spyker hoofletter B"
+    },
+    "Sequent_02": {
+      "expected": "aksioom hoofletter A regter spyker hoofletter A"
+    },
+    "Sequent_03": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter A regter spyker hoofletter B komma hoofletter C en 1 uitgangspunt"
+    },
+    "Sequent_04": {
+      "expected": "afleidingsreël met gevolgtrekking regter spyker hoofletter A komma hoofletter B komma hoofletter C komma hoofletter D komma hoofletter E en 1 uitgangspunt"
+    },
+    "Sequent_05": {
+      "expected": "afleidingsreël opskrif hoofletter Y met gevolgtrekking regter spyker hoofletter A komma hoofletter B komma hoofletter C en 1 uitgangspunt"
+    },
+    "Sequent_06": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter A regter spyker hoofletter B komma hoofletter C komma hoofletter D komma hoofletter E en 1 uitgangspunt"
+    },
+    "Sequent_07": {
+      "expected": "afleidingsreël met gevolgtrekking regter spyker hoofletter A komma hoofletter B komma hoofletter C en 1 uitgangspunt"
+    },
+    "Sequent_08": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter A komma hoofletter B regter spyker hoofletter C en 2 uitgangspunte"
+    },
+    "Sequent_09": {
+      "expected": "afleidingsreël met gevolgtrekking regter spyker hoofletter A komma hoofletter B komma hoofletter C en 1 uitgangspunt"
+    },
+    "Sequent_10": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter A komma hoofletter B komma hoofletter C komma hoofletter D komma hoofletter E komma hoofletter F regter spyker hoofletter G en 1 uitgangspunt"
+    },
+    "Sequent_11": {
+      "expected": "afleidingsreël met gevolgtrekking regter spyker hoofletter A komma hoofletter B komma hoofletter C en 1 uitgangspunt"
+    },
+    "Sequent_12": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter E regter spyker hoofletter F en 2 uitgangspunte"
+    },
+    "Sequent_13": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter B en 2 uitgangspunte"
+    },
+    "ZeroPremiseCells": {
+      "expected": "afleidingsreël met gevolgtrekking hoofletter X en 0 uitgangspunt"
     }
   }
 }

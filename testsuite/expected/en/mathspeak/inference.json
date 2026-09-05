@@ -53,6 +53,51 @@
     },
     "Premises_2": {
       "expected": "1st premise  axiom upper A 2nd premise  axiom upper B 3rd premise  axiom upper C"
+    },
+    "Sequent_00": {
+      "expected": "inference rule label Weakening label with conclusion upper X right tack upper X and 1 premise"
+    },
+    "Sequent_01": {
+      "expected": "axiom upper A right tack upper B"
+    },
+    "Sequent_02": {
+      "expected": "axiom upper A right tack upper A"
+    },
+    "Sequent_03": {
+      "expected": "inference rule with conclusion upper A right tack upper B comma upper C and 1 premise"
+    },
+    "Sequent_04": {
+      "expected": "inference rule with conclusion right tack upper A comma upper B comma upper C comma upper D comma upper E and 1 premise"
+    },
+    "Sequent_05": {
+      "expected": "inference rule label upper Y with conclusion right tack upper A comma upper B comma upper C and 1 premise"
+    },
+    "Sequent_06": {
+      "expected": "inference rule with conclusion upper A right tack upper B comma upper C comma upper D comma upper E and 1 premise"
+    },
+    "Sequent_07": {
+      "expected": "inference rule with conclusion right tack upper A comma upper B comma upper C and 1 premise"
+    },
+    "Sequent_08": {
+      "expected": "inference rule with conclusion upper A comma upper B right tack upper C and 2 premises"
+    },
+    "Sequent_09": {
+      "expected": "inference rule with conclusion right tack upper A comma upper B comma upper C and 1 premise"
+    },
+    "Sequent_10": {
+      "expected": "inference rule with conclusion upper A comma upper B comma upper C comma upper D comma upper E comma upper F right tack upper G and 1 premise"
+    },
+    "Sequent_11": {
+      "expected": "inference rule with conclusion right tack upper A comma upper B comma upper C and 1 premise"
+    },
+    "Sequent_12": {
+      "expected": "inference rule with conclusion upper E right tack upper F and 2 premises"
+    },
+    "Sequent_13": {
+      "expected": "inference rule with conclusion upper B and 2 premises"
+    },
+    "ZeroPremiseCells": {
+      "expected": "inference rule with conclusion upper X and 0 premise"
     }
   }
 }

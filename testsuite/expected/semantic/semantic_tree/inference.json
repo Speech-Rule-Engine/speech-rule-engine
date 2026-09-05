@@ -89,6 +89,9 @@
     },
     "Sequent_13": {
       "expected": "<stree><inference role=\"proof\" id=\"12\"><children><conclusion role=\"final\" id=\"11\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"8\">B</text></children></conclusion><premises role=\"unknown\" id=\"10\"><children><inference role=\"axiom\" id=\"4\"><children><relseq role=\"sequent\" id=\"3\"><content><relation role=\"logic\" id=\"2\">⊢</relation></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">C</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">C</identifier></children></relseq></children></inference><inference role=\"axiom\" id=\"6\"><children><text role=\"latinletter\" font=\"normal\" annotation=\"clearspeak:unit\" id=\"5\">A</text></children></inference></children></premises></children></inference></stree>"
+    },
+    "ZeroPremiseCells": {
+      "expected": "<stree><inference role=\"proof\" id=\"3\"><children><conclusion role=\"final\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">X</identifier></children></conclusion><premises role=\"unknown\" id=\"1\"/></children></inference></stree>"
     }
   }
 }
