@@ -107,6 +107,12 @@
     },
     "LabelMissing": {
       "expected": "inference rule with conclusion upper X and 1 premise"
+    },
+    "TableMissingAttr": {
+      "expected": "inference rule label upper N with conclusion upper X and 1 premise"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "axiom upper A right tack"
     }
   }
 }

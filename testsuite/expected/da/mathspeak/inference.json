@@ -108,6 +108,12 @@
     },
     "LabelMissing": {
       "expected": "inferensregel med konklusion stort X og 1 præmis"
+    },
+    "TableMissingAttr": {
+      "expected": "inferensregel label stort N med konklusion stort X og 1 præmis"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "aksiom stort A lodret streg efterfulgt af vandret streg"
     }
   }
 }

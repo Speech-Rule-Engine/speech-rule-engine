@@ -107,6 +107,12 @@
     },
     "LabelMissing": {
       "expected": "Schlussregel mit Folgerung großes X aus 1 Prämisse"
+    },
+    "TableMissingAttr": {
+      "expected": "Schlussregel Regel großes N mit Folgerung großes X aus 1 Prämisse"
+    },
+    "SequentMissingSuccedent": {
+      "expected": "Axiom großes A ergibt"
     }
   }
 }
