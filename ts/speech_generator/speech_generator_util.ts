@@ -22,6 +22,7 @@
 import { AuditoryDescription } from '../audio/auditory_description.js';
 import * as AuralRendering from '../audio/aural_rendering.js';
 import * as DomUtil from '../common/dom_util.js';
+import { Engine } from '../common/engine.js';
 import * as XpathUtil from '../common/xpath_util.js';
 import { Attribute } from '../enrich_mathml/enrich_attr.js';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
@@ -31,6 +32,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node.js';
 import { SemanticTree } from '../semantic_tree/semantic_tree.js';
 import * as WalkerUtil from '../walker/walker_util.js';
 import * as EngineConst from '../common/engine_const.js';
+import { cleanupUeb } from '../rule_engine/braille_store.js';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
 import {
   addPreference,
@@ -453,7 +455,9 @@ export function computeSpeechStructure(sxml: Element) {
   computeSpeech(sxml, true);
   const structure = SpeechRuleEngine.getInstance().speechStructure;
   completeModalities(structure);
-  return structure.json(['none', 'ssml']);
+  const json = structure.json(['none', 'ssml']);
+  cleanupUebBrailleStructure(json);
+  return json;
 }
 
 /**
@@ -466,7 +470,28 @@ export function computeBrailleStructure(sxml: Element) {
   computeSpeech(sxml, true);
   const structure = SpeechRuleEngine.getInstance().speechStructure;
   structure.completeModality('braille', computeSpeech);
-  return structure.json(['none']);
+  const json = structure.json(['none']);
+  cleanupUebBrailleStructure(json);
+  return json;
+}
+
+/**
+ * Cleans raw UEB marker strings in serialized braille structures.
+ *
+ * @param json The speech structure JSON.
+ */
+function cleanupUebBrailleStructure(json: {
+  [id: string]: { [key: string]: string };
+}) {
+  if (Engine.getInstance().options.locale === 'ueb') {
+    for (const value of Object.values(json)) {
+      for (const key of Object.keys(value)) {
+        if (key.startsWith('braille-')) {
+          value[key] = cleanupUeb(value[key]);
+        }
+      }
+    }
+  }
 }
 
 /**

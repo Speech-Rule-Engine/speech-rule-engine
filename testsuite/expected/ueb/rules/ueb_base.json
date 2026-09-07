@@ -1,0 +1,131 @@
+{
+  "name": "UebBase",
+  "factory": "speech",
+  "base": "input/ueb/ueb_base.json",
+  "information": "UEB basic braille tests.",
+  "domain": "default",
+  "locale": "ueb",
+  "modality": "braille",
+  "active": "UebBase",
+  "actual": false,
+  "exclude": [],
+  "tests": {
+    "identifier": {
+      "expected": "⠰⠭"
+    },
+    "number": {
+      "expected": "⠼⠁"
+    },
+    "multi_digit_number": {
+      "expected": "⠼⠁⠃"
+    },
+    "number_relation_letter": {
+      "expected": "⠼⠁⠀⠐⠶⠀⠰⠃"
+    },
+    "binary_operator": {
+      "expected": "⠭⠐⠖⠽"
+    },
+    "relation": {
+      "expected": "⠰⠭⠀⠐⠶⠀⠼⠁"
+    },
+    "fraction": {
+      "expected": "⠰⠰⠷⠭⠨⠌⠽⠾"
+    },
+    "sqrt": {
+      "expected": "⠰⠰⠩⠭⠬"
+    },
+    "superscript": {
+      "expected": "⠭⠰⠔⠼⠃"
+    },
+    "subscript": {
+      "expected": "⠭⠰⠢⠼⠁"
+    },
+    "parentheses": {
+      "expected": "⠐⠣⠰⠭⠐⠜"
+    },
+    "parenthesized_shortform_letter": {
+      "expected": "⠐⠣⠰⠃⠐⠜"
+    },
+    "capital_word": {
+      "expected": "⠠⠠⠁⠃⠉⠙"
+    },
+    "decimal_number": {
+      "expected": "⠼⠓⠲⠊⠉"
+    },
+    "simple_fraction": {
+      "expected": "⠼⠑⠌⠓"
+    },
+    "mixed_number": {
+      "expected": "⠼⠃⠼⠁⠌⠃"
+    },
+    "function_subscript": {
+      "expected": "⠰⠰⠇⠕⠛⠢⠭⠽"
+    },
+    "bold_inline_number": {
+      "expected": "⠼⠋⠛⠘⠆⠼⠓⠙⠑"
+    },
+    "bold_number_node": {
+      "expected": "⠼⠋⠛⠘⠂⠼⠓⠙⠑"
+    },
+    "numeric_fraction_rows": {
+      "expected": "⠼⠑⠲⠛⠌⠃⠂⠚⠚⠚"
+    },
+    "nested_superscript": {
+      "expected": "⠰⠰⠑⠔⠣⠭⠔⠼⠃⠜"
+    },
+    "nested_subscript": {
+      "expected": "⠰⠰⠠⠏⠢⠣⠭⠢⠊⠜"
+    },
+    "square_omission": {
+      "expected": "⠼⠉⠫⠼⠙⠱⠼⠛⠀⠐⠶⠀⠼⠁⠚"
+    },
+    "cube_root": {
+      "expected": "⠰⠰⠩⠔⠼⠉⠼⠓⠬⠀⠐⠶⠀⠼⠃"
+    },
+    "left_prescript": {
+      "expected": "⠰⠢⠼⠊⠃⠔⠼⠃⠉⠓⠠⠥"
+    },
+    "log_variable_spacing": {
+      "expected": "⠇⠕⠛⠀⠰⠽"
+    },
+    "implicit_function_spacing": {
+      "expected": "⠰⠭⠀⠎⠔⠼⠋⠚"
+    },
+    "set_collection": {
+      "expected": "⠠⠁⠀⠐⠶⠀⠸⠣⠼⠁⠂⠀⠼⠃⠂⠀⠼⠉⠂⠀⠼⠙⠸⠜"
+    },
+    "prime_function": {
+      "expected": "⠋⠰⠶⠐⠣⠭⠐⠜"
+    },
+    "binomial_vector": {
+      "expected": "⠐⠣⠝⠰⠻⠗⠐⠜"
+    },
+    "summation_limits": {
+      "expected": "⠰⠰⠠⠨⠎⠨⠢⠣⠭⠐⠶⠼⠁⠜⠨⠔⠝⠭⠢⠊⠔⠼⠃"
+    },
+    "word_symbol_xor": {
+      "expected": "⠰⠰⠏⠈⠖⠠⠱⠟"
+    },
+    "quantifier_element_spacing": {
+      "expected": "⠰⠰⠰⠘⠁⠽⠀⠘⠑⠀⠠⠽⠀⠘⠢⠭⠀⠘⠑⠀⠠⠭⠰⠄"
+    },
+    "overbar_fraction_passage": {
+      "expected": "⠰⠰⠰⠭⠱⠀⠐⠶⠀⠷⠼⠁⠚⠐⠖⠼⠁⠁⠐⠖⠼⠁⠃⠨⠌⠼⠉⠾⠰⠄"
+    },
+    "chemical_parenthesized_subscript": {
+      "expected": "⠰⠰⠠⠉⠁⠐⠣⠠⠕⠠⠓⠐⠜⠢⠼⠃"
+    },
+    "chemical_grouped_charge": {
+      "expected": "⠠⠎⠠⠕⠰⠢⠼⠙⠔⠣⠐⠤⠐⠤⠜"
+    },
+    "chemical_oxidation_state": {
+      "expected": "⠰⠰⠠⠋⠑⠔⠣⠠⠠⠊⠊⠊⠜⠠⠉⠇⠢⠼⠉"
+    },
+    "caps_passage_products": {
+      "expected": "⠠⠠⠠⠏⠟⠐⠖⠟⠗⠀⠐⠶⠀⠗⠎⠐⠖⠟⠗⠠⠄"
+    },
+    "empty_mrow": {
+      "expected": ""
+    }
+  }
+}
