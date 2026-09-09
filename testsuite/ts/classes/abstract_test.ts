@@ -48,6 +48,7 @@ export abstract class AbstractTest {
   public assert: {
     equal: (expected: any, actual: any) => void;
     deepEqual: (expected: any, actual: any) => void;
+    snapshot: (actual: any, name?: string) => void;
     fail: () => void;
   } = this.getAssert();
 
@@ -64,6 +65,15 @@ export abstract class AbstractTest {
         ? assert.deepStrictEqual
         : (actual: any, expected: any) => {
           expect(actual).toEqual(expected);
+        },
+      snapshot: !this._jest
+        ? () => {}
+        : (actual: any, name?: string) => {
+          if (name) {
+            expect(actual).toMatchSnapshot(name);
+          } else {
+            expect(actual).toMatchSnapshot();
+          }
         },
       fail: assert.fail
     };
@@ -128,6 +138,11 @@ export abstract class AbstractJsonTest extends AbstractTest {
    * An information string.
    */
   public information = '';
+
+  /**
+   * Whether to use snapshot mode for assertions.
+   */
+  public snapshotMode = false;
 
   private prepared = false;
   private jsonFile = '';
