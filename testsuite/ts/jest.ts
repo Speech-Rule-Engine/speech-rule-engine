@@ -1,5 +1,6 @@
 import AnalyticsTest from './analytics/analytics_test.js';
 import { get } from './classes/test_factory.js';
+import * as SnapshotStore from './base/snapshot_store.js';
 import { jest, describe, beforeAll, afterAll, test } from '@jest/globals';
 
 /**
@@ -30,6 +31,9 @@ export function runJsonTest(file: string, snapshotMode?: boolean) {
     });
     afterAll(() => {
       testcases.tearDownTest();
+      if (testcases.snapshotMode) {
+        SnapshotStore.flush(file);
+      }
       global.gc && global.gc();
       jest.restoreAllMocks();
     });
@@ -39,6 +43,7 @@ export function runJsonTest(file: string, snapshotMode?: boolean) {
       }
       test(testcase.name, async () => {
         AnalyticsTest.currentTestcase = testcase.name;
+        testcases.currentTestName = testcase.name;
         await testcases.method.bind(testcases).apply(null, testcases.pick(testcase));
       });
     }

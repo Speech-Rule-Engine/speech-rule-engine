@@ -55,7 +55,11 @@ export class SymbolTest extends SpeechTest {
     const actual = this.getSpeech(text);
     const expected = this.actual ? actual : answer;
     this.appendRuleExample(text, expected, style, this.domain);
-    this.assert.equal(actual, expected);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   /**

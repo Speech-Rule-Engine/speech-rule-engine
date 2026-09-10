@@ -342,10 +342,14 @@ export class SemanticTreeTest extends SemanticBlacklistTest {
     const dp = new SystemExternal.xmldom.DOMParser();
     const xml = dp.parseFromString(
       this.prepareStree(sml), SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
-    this.assert.equal(
-      xmls.serializeToString(sxml),
-      xmls.serializeToString(xml)
-    );
+    if (this.snapshotMode) {
+      this.assert.snapshot(xmls.serializeToString(sxml));
+    } else {
+      this.assert.equal(
+        xmls.serializeToString(sxml),
+        xmls.serializeToString(xml)
+      );
+    }
   }
 
   /**

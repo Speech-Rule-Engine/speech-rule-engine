@@ -92,7 +92,11 @@ export class WalkerTest extends AbstractJsonTest {
     if (move) {
       this.walker.move(Key.get(move));
     }
-    this.assert.equal(this.walker.speech(), result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(this.walker.speech());
+    } else {
+      this.assert.equal(this.walker.speech(), result);
+    }
   }
 
   /**
