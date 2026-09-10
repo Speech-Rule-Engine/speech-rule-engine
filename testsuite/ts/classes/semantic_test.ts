@@ -396,15 +396,19 @@ export class EnrichMathmlTest extends SemanticBlacklistTest {
   public executeTest(mml: string, smml: string) {
     const mathMl = Enrich.prepareMmlString(mml);
     const node = Enrich.semanticMathmlSync(mathMl, Engine.getInstance().options);
-    const dp = new SystemExternal.xmldom.DOMParser();
-    const xml = dp.parseFromString(
-      smml ? smml : '<math/>',
-      SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
     const xmls = new SystemExternal.xmldom.XMLSerializer();
     this.customizeXml(node);
     this.appendExamples('', mml);
     const cleaned = removeAttributePrefix(xmls.serializeToString(node));
-    this.assert.equal(cleaned, xmls.serializeToString(xml));
+    if (this.snapshotMode) {
+      this.assert.snapshot(cleaned);
+    } else {
+      const dp = new SystemExternal.xmldom.DOMParser();
+      const xml = dp.parseFromString(
+        smml ? smml : '<math/>',
+        SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
+      this.assert.equal(cleaned, xmls.serializeToString(xml));
+    }
   }
 }
 
