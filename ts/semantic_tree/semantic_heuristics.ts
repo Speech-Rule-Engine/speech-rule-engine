@@ -1069,3 +1069,321 @@ SemanticHeuristics.add(
     }
   )
 );
+
+// The idea of the heuristic is to combine factors as much as possible instead
+// of creating implicit operations. Concretely:
+// * If an element is followed by a prefix operation, that operation is
+//   turned into an infix operation using the prefix operator, with the
+//   element becoming its new left operand. A sequence of elements preceding
+//   the prefix operation is first combined into an implicit node.
+// * If a postfix operation precedes an element, that operation is turned
+//   into an infix operation using the postfix operator, with the element
+//   becoming its new right operand. A sequence of elements following the
+//   postfix operation is first combined into an implicit node.
+// * If an element precedes or follows an infix operation, it is combined
+//   with the first, respectively last, child of that infix operation: Simply
+//   via implicit multiplication, unless that child is itself a prefix,
+//   respectively postfix, operation, in which case it is treated as above.
+SemanticHeuristics.add(
+  new SemanticMultiHeuristic(
+    'combine_implicit',
+    (nodes: SemanticNode[]) => combineImplicit(nodes),
+    (nodes: SemanticNode[]) => nodes.some(isCombinable)
+  )
+);
+
+/**
+ * Operator symbols that are invisible and merely mark juxtaposition (e.g.,
+ * implicit multiplication or function application) rather than a genuine
+ * prefix, postfix or infix operation.
+ */
+const INVISIBLE_OPERATORS = new Set<string>([
+  NamedSymbol.invisibleTimes,
+  NamedSymbol.invisiblePlus,
+  NamedSymbol.invisibleComma,
+  NamedSymbol.functionApplication
+]);
+
+/**
+ * Checks whether none of a node's operator content is one of the invisible
+ * juxtaposition markers.
+ *
+ * @param node The node to test.
+ * @returns True if the node's operator content is entirely visible.
+ */
+function isVisibleOperator(node: SemanticNode): boolean {
+  return node.contentNodes.every(
+    (content) => !INVISIBLE_OPERATORS.has(content.textContent)
+  );
+}
+
+/**
+ * Checks whether a node is a "genuine" infix operation, i.e., excludes
+ * implicit (juxtaposed) multiplications and unit products, which are handled
+ * by their own dedicated heuristics (e.g., combine_juxtaposition) and are not
+ * the kind of infix operation this heuristic should merge elements into.
+ *
+ * @param node The node to test.
+ * @returns True if the node is an infix operation that is not implicit.
+ */
+function isRealInfix(node: SemanticNode): boolean {
+  return (
+    SemanticPred.isType(node, SemanticType.INFIXOP) &&
+    !SemanticPred.isImplicit(node) &&
+    isVisibleOperator(node)
+  );
+}
+
+/**
+ * Checks whether a node is a genuine (i.e., not merely juxtaposing) prefix
+ * operation.
+ *
+ * @param node The node to test.
+ * @returns True if the node is a prefix operation with visible operator.
+ */
+function isRealPrefix(node: SemanticNode): boolean {
+  return (
+    SemanticPred.isType(node, SemanticType.PREFIXOP) && isVisibleOperator(node)
+  );
+}
+
+/**
+ * Checks whether a node is a genuine (i.e., not merely juxtaposing) postfix
+ * operation.
+ *
+ * @param node The node to test.
+ * @returns True if the node is a postfix operation with visible operator.
+ */
+function isRealPostfix(node: SemanticNode): boolean {
+  return (
+    SemanticPred.isType(node, SemanticType.POSTFIXOP) &&
+    isVisibleOperator(node)
+  );
+}
+
+/**
+ * Checks whether a node is a prefix, postfix or infix operation, i.e., one of
+ * the operator-carrying structures the combine_implicit heuristic can merge
+ * with neighbouring elements.
+ *
+ * @param node The node to test.
+ * @returns True if the node is a prefix, postfix or infix operation.
+ */
+function isCombinable(node: SemanticNode): boolean {
+  return isRealPrefix(node) || isRealPostfix(node) || isRealInfix(node);
+}
+
+/**
+ * Turns a list of operator content nodes into a single operator node,
+ * combining multiple operators into one multi-character operator if
+ * necessary.
+ *
+ * @param content The list of operator content nodes.
+ * @returns The single operator node representing the content.
+ */
+function combineImplicitOperator(content: SemanticNode[]): SemanticNode {
+  return content.length === 1
+    ? content[0]
+    : SemanticProcessor.getInstance()['multiopNode_'](content);
+}
+
+/**
+ * Turns a prefix operation into an infix operation by using its operator and
+ * attaching the given node as the new left operand.
+ * Example: left = a, node = prefixop(+, y) results in infixop(+, [a, y]).
+ *
+ * @param left The new left operand.
+ * @param node The prefix operation.
+ * @returns The new infix operation.
+ */
+function prefixToInfix(left: SemanticNode, node: SemanticNode): SemanticNode {
+  const op = combineImplicitOperator(node.contentNodes);
+  return SemanticProcessor.getInstance()['infixNode_'](
+    [left, node.childNodes[0]],
+    op
+  );
+}
+
+/**
+ * Turns a postfix operation into an infix operation by using its operator and
+ * attaching the given node as the new right operand.
+ * Example: node = postfixop(z, +), right = b results in infixop(+, [z, b]).
+ *
+ * @param node The postfix operation.
+ * @param right The new right operand.
+ * @returns The new infix operation.
+ */
+function postfixToInfix(node: SemanticNode, right: SemanticNode): SemanticNode {
+  const op = combineImplicitOperator(node.contentNodes);
+  return SemanticProcessor.getInstance()['infixNode_'](
+    [node.childNodes[0], right],
+    op
+  );
+}
+
+/**
+ * Inserts a new node at the first or last position of an infix operation.
+ * Flattens the new node into the infix operation's operator/operand lists if
+ * it is itself an infix operation with the exact same, single operator as
+ * the one adjoining the given position. Otherwise the new node simply
+ * becomes the new first/last child.
+ *
+ * @param outer The infix operation to extend.
+ * @param position Whether to insert at the 'first' or 'last' position.
+ * @param node The new node to insert.
+ */
+function insertIntoInfix(
+  outer: SemanticNode,
+  position: 'first' | 'last',
+  node: SemanticNode
+) {
+  const atStart = position === 'first';
+  const boundary = atStart
+    ? outer.contentNodes[0]
+    : outer.contentNodes[outer.contentNodes.length - 1];
+  if (
+    SemanticPred.isType(node, SemanticType.INFIXOP) &&
+    node.contentNodes.length === 1 &&
+    node.contentNodes[0].equals(boundary)
+  ) {
+    outer.contentNodes = atStart
+      ? node.contentNodes.concat(outer.contentNodes)
+      : outer.contentNodes.concat(node.contentNodes);
+    outer.childNodes = atStart
+      ? node.childNodes.concat(outer.childNodes.slice(1))
+      : outer.childNodes.slice(0, -1).concat(node.childNodes);
+  } else if (atStart) {
+    outer.childNodes[0] = node;
+  } else {
+    outer.childNodes[outer.childNodes.length - 1] = node;
+  }
+  outer.childNodes.forEach((x) => (x.parent = outer));
+  outer.contentNodes.forEach((x) => (x.parent = outer));
+  outer.addMathmlNodes(node.mathml);
+}
+
+/**
+ * Combines an element with the infix operation that follows it: If the
+ * infix operation's first child is a prefix operation, it is turned into an
+ * infix operation using that prefix's operator (recursing into the same
+ * rule that handles an element followed by a prefix operation). Otherwise
+ * the element is simply combined with the first child via implicit
+ * multiplication.
+ *
+ * @param left The preceding element.
+ * @param infix The infix operation.
+ */
+function mergeLeft(left: SemanticNode, infix: SemanticNode) {
+  const first = infix.childNodes[0];
+  const replacement = isRealPrefix(first)
+    ? prefixToInfix(left, first)
+    : SemanticProcessor.getInstance().implicitNode([left, first]);
+  insertIntoInfix(infix, 'first', replacement);
+}
+
+/**
+ * Combines an element with the infix operation that precedes it: If the
+ * infix operation's last child is a postfix operation, it is turned into an
+ * infix operation using that postfix's operator (recursing into the same
+ * rule that handles a postfix operation followed by an element). Otherwise
+ * the element is simply combined with the last child via implicit
+ * multiplication.
+ *
+ * @param infix The infix operation.
+ * @param right The following element.
+ */
+function mergeRight(infix: SemanticNode, right: SemanticNode) {
+  const last = infix.childNodes[infix.childNodes.length - 1];
+  const replacement = isRealPostfix(last)
+    ? postfixToInfix(last, right)
+    : SemanticProcessor.getInstance().implicitNode([last, right]);
+  insertIntoInfix(infix, 'last', replacement);
+}
+
+/**
+ * Collects and combines a contiguous run of elements into a single node,
+ * using implicit multiplication if there is more than one.
+ *
+ * @param elements The list of elements.
+ * @returns The combined node, or null if the list was empty.
+ */
+function collapseRun(elements: SemanticNode[]): SemanticNode | null {
+  if (!elements.length) return null;
+  return elements.length === 1
+    ? elements[0]
+    : SemanticProcessor.getInstance().implicitNode(elements);
+}
+
+/**
+ * Combines factors as much as possible instead of leaving them to be turned
+ * into implicit (multiplicative) operations, by merging elements into
+ * neighbouring prefix, postfix and infix operations as described above.
+ * Rewrites the given list of nodes destructively.
+ *
+ * @param nodes The list of nodes.
+ */
+function combineImplicit(nodes: SemanticNode[]) {
+  const result: SemanticNode[] = [];
+  let run: SemanticNode[] = [];
+
+  const flushRun = (): SemanticNode | null => {
+    const combined = collapseRun(run);
+    run = [];
+    return combined;
+  };
+
+  const collectFollowing = (from: number): [SemanticNode[], number] => {
+    const elements: SemanticNode[] = [];
+    let j = from;
+    while (j < nodes.length && !isCombinable(nodes[j])) {
+      elements.push(nodes[j]);
+      j++;
+    }
+    return [elements, j];
+  };
+
+  for (let i = 0; i < nodes.length; i++) {
+    const node = nodes[i];
+
+    if (isRealPrefix(node)) {
+      const left = flushRun();
+      result.push(left ? prefixToInfix(left, node) : node);
+      continue;
+    }
+
+    if (isRealPostfix(node)) {
+      // Elements preceding a postfix operation remain ordinary factors.
+      const left = flushRun();
+      if (left) result.push(left);
+      const [following, next] = collectFollowing(i + 1);
+      const right = collapseRun(following);
+      result.push(right ? postfixToInfix(node, right) : node);
+      i = next - 1;
+      continue;
+    }
+
+    if (isRealInfix(node)) {
+      const left = flushRun();
+      if (left) {
+        mergeLeft(left, node);
+      }
+      const [following, next] = collectFollowing(i + 1);
+      const right = collapseRun(following);
+      if (right) {
+        mergeRight(node, right);
+      }
+      result.push(node);
+      i = next - 1;
+      continue;
+    }
+
+    run.push(node);
+  }
+
+  const trailing = flushRun();
+  if (trailing) {
+    result.push(trailing);
+  }
+
+  nodes.splice(0, nodes.length, ...result);
+}
