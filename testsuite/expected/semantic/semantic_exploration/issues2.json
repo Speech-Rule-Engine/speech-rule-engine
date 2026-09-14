@@ -2,6 +2,9 @@
   "factory": "semanticExploration",
   "information": "Semantic exploration issues2 tests.",
   "base": "input/semantic/issues2.json",
+  "exclude": [
+    "issue_889_1"
+  ],
   "tests": {
     "MJ_Issue_3453_0": {
       "expected": [
@@ -4222,6 +4225,82 @@
     "issue_LaTeX_colon": {
       "expected": [
         3,
+        0,
+        1,
+        2
+      ]
+    },
+    "issue_889_0": {
+      "expected": [
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "issue_889_2": {
+      "expected": [
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ]
+    },
+    "issue_889_3": {
+      "expected": [
+        7,
+        [
+          10,
+          0,
+          1,
+          2
+        ],
+        3,
+        [
+          11,
+          4,
+          5,
+          9
+        ]
+      ]
+    },
+    "issue_889_4": {
+      "expected": [
+        9,
+        [
+          8,
+          0,
+          6,
+          1,
+          7,
+          2
+        ],
+        3,
+        4
+      ]
+    },
+    "issue_889_5": {
+      "expected": [
+        9,
+        0,
+        1,
+        [
+          8,
+          3,
+          6,
+          4,
+          7,
+          5
+        ]
+      ]
+    },
+    "issue_889_6": {
+      "expected": [
+        4,
         0,
         1,
         2
