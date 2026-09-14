@@ -1158,6 +1158,7 @@ export class SemanticProcessor {
    * @returns The new branch node.
    */
   public implicitNode(nodes: SemanticNode[]): SemanticNode {
+    SemanticHeuristics.run('combine_implicit', nodes);
     nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
     nodes = SemanticProcessor.getInstance().combineUnits_(nodes);
     nodes = SemanticProcessor.getInstance().combineScripts_(nodes);
