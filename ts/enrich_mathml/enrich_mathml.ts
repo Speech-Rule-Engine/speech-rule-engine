@@ -282,7 +282,8 @@ export function introduceNewLayer(
   if (
     info !== lcaType.VALID ||
     !SemanticUtil.hasEmptyTag(newNode) ||
-    (!newNode.parentNode && semantic.parent)
+    (semantic.parent &&
+      (!newNode.parentNode || SemanticUtil.hasMathTag(newNode)))
   ) {
     Debugger.getInstance().output('Walktree Case 1.1');
     newNode = EnrichAttr.addMrow();
@@ -300,6 +301,19 @@ export function introduceNewLayer(
         oldChildren.forEach(function (x) {
           newNode.appendChild(x);
         });
+        if (info === lcaType.VALID && SemanticUtil.hasMathTag(lca.node as Element)) {
+          // The LCA was the math root itself, reused here only because of the
+          // math-tag check above: this node's content is a proper subset of
+          // the root's, so some of its children (e.g., ones a heuristic
+          // combined from an unrelated sibling container) may not have been
+          // picked up by childrenSubset. Relocate them into the new layer
+          // too, in their intended order.
+          children.forEach(function (x) {
+            if (x.parentNode !== newNode && !createsCycle(newNode, x)) {
+              newNode.appendChild(x);
+            }
+          });
+        }
       } else {
         // TODO: This should be unreachable.
         Debugger.getInstance().output('Walktree Case 1.1.1.1');
