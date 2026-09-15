@@ -2,9 +2,6 @@
   "factory": "semanticExploration",
   "information": "Semantic exploration issues2 tests.",
   "base": "input/semantic/issues2.json",
-  "exclude": [
-    "issue_889_1"
-  ],
   "tests": {
     "MJ_Issue_3453_0": {
       "expected": [
@@ -4236,6 +4233,19 @@
         0,
         1,
         2
+      ]
+    },
+    "issue_889_1": {
+      "expected": [
+        4,
+        [
+          6,
+          0,
+          5,
+          1
+        ],
+        2,
+        3
       ]
     },
     "issue_889_2": {
