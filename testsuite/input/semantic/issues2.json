@@ -351,6 +351,39 @@
     },
     "issue_889_10": {
       "input": "<mi>a</mi><mrow><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi><mi>c</mi><mi>d</mi><mrow><mo>+</mo><mi>z</mi><mo>-</mo></mrow>"
+    },
+    "issue_889_0_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi></mrow>"
+    },
+    "issue_889_1_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mi>y</mi><mo>+</mo><mi>z</mi></mrow>"
+    },
+    "issue_889_2_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>+</mo></mrow><mi>b</mi>"
+    },
+    "issue_889_3_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi><mo>-</mo><mi>z</mi><mo>+</mo></mrow><mi>b</mi>"
+    },
+    "issue_889_4_ord": {
+      "input": "<mi>a</mi><mi>b</mi><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi></mrow>"
+    },
+    "issue_889_5_ord": {
+      "input": "<mrow data-mjx-texclass=\"ORD\"><mi>y</mi><mo>-</mo></mrow><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "issue_889_6_ord": {
+      "input": "<mi>x</mi><maction><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi></mrow><mrow><mo>&#x2212;</mo><mi>y</mi></mrow></maction>"
+    },
+    "issue_889_7_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi></mrow><mi>b</mi>"
+    },
+    "issue_889_8_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi>"
+    },
+    "issue_889_9_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi><mi>c</mi><mi>d</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>z</mi></mrow>"
+    },
+    "issue_889_10_ord": {
+      "input": "<mi>a</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi><mi>c</mi><mi>d</mi><mrow data-mjx-texclass=\"ORD\"><mo>+</mo><mi>z</mi><mo>-</mo></mrow>"
     }
   }
 }

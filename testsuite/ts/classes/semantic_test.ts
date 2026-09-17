@@ -683,6 +683,7 @@ export class SemanticHeuristicTest extends SemanticTreeTest {
 
   private optional: string[] = ['domain', 'modality'];
   private saveOptional: Map<string, string> = new Map();
+  private saveFlags: Map<string, boolean> = new Map();
 
   /**
    * @override
@@ -695,6 +696,9 @@ export class SemanticHeuristicTest extends SemanticTreeTest {
     // Optional
     this.pickFields.push('domain');
     this.pickFields.push('modality');
+    // Optional overrides of SemanticHeuristics.flags (e.g., {"ord": false})
+    // for the duration of this test only.
+    this.pickFields.push('flags');
   }
 
   /**
@@ -702,6 +706,7 @@ export class SemanticHeuristicTest extends SemanticTreeTest {
    */
   public method() {
     this.setOptional();
+    this.setFlags();
     const heuristic = this.field('heuristic');
     SemanticHeuristics.blacklist[heuristic] = true;
     this.executeTest(
@@ -715,7 +720,26 @@ export class SemanticHeuristicTest extends SemanticTreeTest {
       this.field('expectedW'),
       this.field('brief')
     );
+    this.unsetFlags();
     this.unsetOptional();
+  }
+
+  private setFlags() {
+    const flags = this.field('flags') as { [key: string]: boolean };
+    if (!flags) {
+      return;
+    }
+    for (const [key, value] of Object.entries(flags)) {
+      this.saveFlags.set(key, SemanticHeuristics.flags[key]);
+      SemanticHeuristics.flags[key] = value;
+    }
+  }
+
+  private unsetFlags() {
+    for (const [key, value] of this.saveFlags.entries()) {
+      SemanticHeuristics.flags[key] = value;
+      this.saveFlags.delete(key);
+    }
   }
 
   private setOptional() {
