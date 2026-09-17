@@ -339,6 +339,18 @@
     },
     "issue_889_6": {
       "input": "<mi>x</mi><maction><mrow><mo>+</mo><mi>y</mi></mrow><mrow><mo>&#x2212;</mo><mi>y</mi></mrow></maction>"
+    },
+    "issue_889_7": {
+      "input": "<mi>a</mi><mrow><mo>+</mo><mi>y</mi></mrow><mi>b</mi>"
+    },
+    "issue_889_8": {
+      "input": "<mi>a</mi><mrow><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi>"
+    },
+    "issue_889_9": {
+      "input": "<mi>a</mi><mrow><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi><mi>c</mi><mi>d</mi><mrow><mo>+</mo><mi>z</mi></mrow>"
+    },
+    "issue_889_10": {
+      "input": "<mi>a</mi><mrow><mo>+</mo><mi>y</mi><mo>+</mo></mrow><mi>b</mi><mi>c</mi><mi>d</mi><mrow><mo>+</mo><mi>z</mi><mo>-</mo></mrow>"
     }
   }
 }
