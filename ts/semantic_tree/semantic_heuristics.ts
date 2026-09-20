@@ -1312,6 +1312,10 @@ function wrapRightmostOperand(
     node.childNodes[idx] = wrapped;
     wrapped.parent = node;
     node.addMathmlNodes(wrapped.mathml);
+    // node is being unwrapped from its original prefix/postfix container
+    // (which is discarded here) and returned as the new top of this
+    // subtree, so its inherited parent pointer is now stale.
+    node.parent = null;
     return node;
   }
   return SemanticProcessor.getInstance()['postfixNode_'](node, [op]);
@@ -1334,6 +1338,10 @@ function wrapLeftmostOperand(
     node.childNodes[0] = wrapped;
     wrapped.parent = node;
     node.addMathmlNodes(wrapped.mathml);
+    // node is being unwrapped from its original prefix/postfix container
+    // (which is discarded here) and returned as the new top of this
+    // subtree, so its inherited parent pointer is now stale.
+    node.parent = null;
     return node;
   }
   return SemanticProcessor.getInstance()['prefixNode_'](node, [op]);
