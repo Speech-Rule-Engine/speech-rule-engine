@@ -279,6 +279,15 @@
       "heuristic": "combine_implicit",
       "expectedW": "<infixop role=\"subtraction\" id=\"4\">-<content><operator role=\"subtraction\" id=\"2\">-</operator></content><children><prefixop role=\"positive\" id=\"9\">+<content><operator role=\"addition\" id=\"0\">+</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">y</identifier></children></prefixop><infixop role=\"implicit\" annotation=\"clearspeak:simple;clearspeak:unit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">z</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"6\">b</identifier></children></infixop></children></infixop>",
       "expectedO": "<infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"8\">⁢<content><operator role=\"multiplication\" id=\"7\">⁢</operator></content><children><prefixop role=\"positive\" id=\"5\">+<content><operator role=\"addition\" id=\"0\">+</operator></content><children><infixop role=\"subtraction\" id=\"4\">-<content><operator role=\"subtraction\" id=\"2\">-</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">y</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"3\">z</identifier></children></infixop></children></prefixop><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"6\">b</identifier></children></infixop>"
+    },
+    "combine_implicit_forced_noop_no_crash": {
+      "input": "<mi>a</mi><mi>b</mi><mi>c</mi>",
+      "heuristic": "combine_implicit",
+      "flags": {
+        "combine_implicit": true
+      },
+      "expectedW": "<infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">c</identifier></children></infixop>",
+      "expectedO": "<infixop role=\"implicit\" annotation=\"clearspeak:unit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" annotation=\"clearspeak:simple\" id=\"2\">c</identifier></children></infixop>"
     }
   }
 }

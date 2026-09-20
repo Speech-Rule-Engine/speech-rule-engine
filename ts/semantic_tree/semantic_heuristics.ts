@@ -1483,9 +1483,26 @@ function collapseRun(elements: SemanticNode[]): SemanticNode | null {
  * follows it, so that runs of combinable nodes chain together correctly.
  * Rewrites the given list of nodes destructively.
  *
+ * Mirrors this heuristic's own applicability predicate as an explicit guard,
+ * rather than relying solely on the external check in
+ * `SemanticHeuristics.run`: if no element is combinable there is nothing to
+ * do, and bailing out immediately avoids collapsing the untouched list via
+ * `collapseRun`, which would otherwise call back into
+ * `SemanticProcessor.implicitNode` (and hence this heuristic again) on the
+ * exact same, still entirely non-combinable list. Under normal operation
+ * that self-invocation is caught by the very applicability check duplicated
+ * here and is a no-op; but if this heuristic is ever force-enabled (e.g. via
+ * `SemanticHeuristics.flags.combine_implicit = true`, as the test suite's
+ * `flags` override can do), the external check no longer applies to that
+ * inner call either, and the two calls recurse into each other indefinitely
+ * until the stack overflows.
+ *
  * @param nodes The list of nodes.
  */
 function combineImplicit(nodes: SemanticNode[]) {
+  if (!nodes.some(isCombinable)) {
+    return;
+  }
   const result: SemanticNode[] = [];
   let run: SemanticNode[] = [];
 
@@ -1525,11 +1542,6 @@ function combineImplicit(nodes: SemanticNode[]) {
       i = next - 1;
     }
     result.push(current);
-  }
-
-  const trailing = collapseRun(run);
-  if (trailing) {
-    result.push(trailing);
   }
 
   nodes.splice(0, nodes.length, ...result);
