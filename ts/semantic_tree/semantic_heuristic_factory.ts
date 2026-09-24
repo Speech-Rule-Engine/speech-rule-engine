@@ -48,7 +48,8 @@ export const SemanticHeuristics = {
   flags: {
     combine_juxtaposition: true,
     convert_juxtaposition: true,
-    multioperator: true
+    multioperator: true,
+    ord: true
   } as { [key: string]: boolean },
 
   /**
