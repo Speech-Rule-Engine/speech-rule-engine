@@ -150,7 +150,11 @@ export class SpeechTest extends AbstractExamples {
     const actual = this.getSpeech(mathMl);
     const expected = this.actual ? actual : answer;
     this.appendRuleExample(mathMl, expected, style);
-    this.assert.equal(actual, expected);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   /**

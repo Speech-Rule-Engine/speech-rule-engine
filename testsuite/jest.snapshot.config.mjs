@@ -1,6 +1,15 @@
 /**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
+ * Jest configuration for snapshot testing.
+ *
+ * This config is used ONLY for generating/updating snapshots.
+ * It runs tests from the canonical tests/json/ directory only.
+ *
+ * Usage:
+ *   npx jest --config jest.snapshot.config.mjs --updateSnapshot
+ *   USE_SNAPSHOTS=true npm run test:snapshots:update
+ *
+ * Snapshots are stored in: tests/json/__snapshots__/
+ * This avoids duplication across json/, analyse/, actions/, output/ directories.
  */
 
 import * as path from 'path';
@@ -26,14 +35,14 @@ const config = {
   coverageProvider: "v8",
   coveragePathIgnorePatterns: ["node_modules", "testsuite"],
   testPathIgnorePatterns: [
-    "tests/json/nemeth",
-    "tests/actions/nemeth"
+    "tests/json/nemeth"
   ],
-  testEnvironment: "node",
+  // IMPORTANT: Only run tests from tests/json/ to avoid duplicate snapshots
   testMatch: [
-    "**/tests/**/*.test.ts",
+    "**/tests/json/**/*.test.ts",
     "**/unit-tests/**/*.test.ts"
   ],
+  testEnvironment: "node",
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/',
