@@ -37,6 +37,7 @@ import { nb } from './locales/locale_nb.js';
 import { nemeth } from './locales/locale_nemeth.js';
 import { nn } from './locales/locale_nn.js';
 import { sv } from './locales/locale_sv.js';
+import { ueb } from './locales/locale_ueb.js';
 import { Locale, LOCALE } from './locale.js';
 
 export const locales: { [key: string]: () => Locale } = {
@@ -54,7 +55,8 @@ export const locales: { [key: string]: () => Locale } = {
   nb: nb,
   nn: nn,
   sv: sv,
-  nemeth: nemeth
+  nemeth: nemeth,
+  ueb: ueb
 };
 
 /**

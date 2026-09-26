@@ -36,7 +36,7 @@ import { Variables } from '#js/common/variables.js';
  * @param exclude The excluded locales.
  * @param locale Source locale (defaults to `en`).
  */
-export async function copyAllLocales(source: string, exclude = ['nemeth', 'euro'], locale = 'en') {
+export async function copyAllLocales(source: string, exclude = ['nemeth', 'euro', 'ueb'], locale = 'en') {
   const orig = Variables.LOCALES.get(locale);
   for (const [iso, lang] of Variables.LOCALES.entries()) {
     if (!exclude.includes(iso) && iso !== locale) {

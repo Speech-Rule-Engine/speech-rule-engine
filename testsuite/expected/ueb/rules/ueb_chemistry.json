@@ -1,0 +1,29 @@
+{
+  "name": "UebChemistry",
+  "factory": "speech",
+  "base": "input/ueb/ueb_chemistry.json",
+  "information": "Advanced UEB chemistry regression tests derived from MathCAT 0.7.5.",
+  "domain": "default",
+  "locale": "ueb",
+  "modality": "braille",
+  "active": "UebChemistry",
+  "actual": false,
+  "exclude": [],
+  "tests": {
+    "left_prescript_electron_configuration": {
+      "expected": "⠼⠙⠰⠙⠔⠼⠊⠼⠑⠎⠔⠼⠃⠀⠰⠔⠼⠃⠠⠙⠢⠣⠼⠑⠸⠌⠼⠃⠜"
+    },
+    "reaction_arrow": {
+      "expected": "⠰⠰⠰⠼⠃⠠⠝⠁⠠⠕⠠⠓⠐⠖⠠⠓⠢⠼⠃⠠⠎⠠⠕⠢⠼⠙⠀⠳⠕⠀⠠⠝⠁⠢⠼⠃⠠⠎⠠⠕⠢⠼⠙⠐⠖⠼⠃⠠⠓⠢⠼⠃⠠⠕⠰⠄"
+    },
+    "underover_reaction_arrow": {
+      "expected": "⠰⠰⠰⠠⠝⠢⠼⠃⠀⠳⠕⠨⠢⠣⠠⠓⠁⠃⠑⠗⠀⠏⠗⠕⠉⠑⠎⠎⠜⠨⠔⠣⠠⠓⠢⠼⠃⠜⠀⠠⠝⠠⠓⠢⠼⠉⠰⠄"
+    },
+    "state_spacing": {
+      "expected": "⠰⠰⠰⠠⠓⠢⠼⠃⠀⠐⠣⠛⠐⠜⠐⠖⠠⠊⠢⠼⠃⠀⠐⠣⠎⠐⠜⠀⠐⠶⠀⠼⠃⠠⠓⠠⠊⠀⠐⠣⠛⠐⠜⠰⠄"
+    },
+    "equilibrium_arrow": {
+      "expected": "⠰⠰⠰⠠⠏⠃⠔⠣⠐⠖⠐⠖⠜⠐⠖⠼⠃⠰⠑⠀⠘⠸⠶⠀⠠⠏⠃⠰⠄"
+    }
+  }
+}

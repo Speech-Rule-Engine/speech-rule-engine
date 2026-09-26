@@ -26,6 +26,7 @@ import * as AuralRendering from '#js/audio/aural_rendering.js';
 import { AuditoryDescription } from '#js/audio/auditory_description.js';
 import { SemanticMap } from '#js/semantic_tree/semantic_attr.js';
 import { SpeechRuleEngine } from '#js/rule_engine/speech_rule_engine.js';
+import { cleanupUeb } from '#js/rule_engine/braille_store.js';
 import * as DomUtil from '#js/common/dom_util.js';
 
 import * as fs from 'fs';
@@ -52,6 +53,7 @@ const TYPES = new Map([
   [SymbolType.FUNCTIONS, 'function']
 ]);
 const NemethFire = true;
+const BrailleLocales = new Set(['nemeth', 'ueb']);
 
 /**
  * Loads the base file.
@@ -105,7 +107,8 @@ async function getCharOutput(
         )
       ];
     }
-    return AuralRendering.finalize(AuralRendering.markup(descrs));
+    const result = AuralRendering.finalize(AuralRendering.markup(descrs));
+    return loc === 'ueb' && modality === 'braille' ? cleanupUeb(result) : result;
 }
 
 /**
@@ -166,7 +169,8 @@ const AllConstraints: { [loc: string]: string[] } = {
   nn: ['default', 'mathspeak', 'clearspeak'],
   nb: ['default', 'mathspeak', 'clearspeak'],
   sv: ['default', 'mathspeak', 'clearspeak'],
-  nemeth: ['default']
+  nemeth: ['default'],
+  ueb: ['default']
 };
 
 /**
@@ -183,7 +187,7 @@ async function testOutput(locale: string, keys: string[], kind: SymbolType): Pro
   if (!constraints) {
     return {};
   }
-  const modality = locale === 'nemeth' ? 'braille' : 'speech';
+  const modality = BrailleLocales.has(locale) ? 'braille' : 'speech';
   const unit = modality === 'speech' && isUnitTest(kind);
   if (unit) {
     constraints = ['default', 'default'];
@@ -226,6 +230,7 @@ function initialJsonFile(loc: string, dom: string, kind: SymbolType, style?: str
     name: `${tu.TestUtil.capitalize(dom)}${tu.TestUtil.capitalize(singular)}`,
     domain: 'default',
     locale: loc,
+    modality: BrailleLocales.has(loc) ? 'braille' : 'speech',
     style: 'default',
     active: `${tu.TestUtil.capitalize(dom)}Symbols${Variables.LOCALES.get(loc)}`,
     type: singular,
@@ -302,7 +307,7 @@ export async function testOutputFromExtras(
   kind: SymbolType,
   dir = '/tmp'
 ) {
-  if (isUnitTest(kind) || locale === 'nemeth' || locale === 'euro') {
+  if (isUnitTest(kind) || locale === 'nemeth' || locale === 'euro' || locale === 'ueb') {
     return;
   }
   return testFromExtras(locale, kind).then((output) => {
@@ -843,7 +848,7 @@ export function alphabetsExpected(locale: string) {
   if (!constraints) {
     return;
   }
-  const modality = locale === 'nemeth' ? 'braille' : 'speech';
+  const modality = BrailleLocales.has(locale) ? 'braille' : 'speech';
   const loc = Variables.LOCALES.get(locale);
   for (const dom of constraints) {
     if (dom === 'default' && modality === 'speech') continue;
