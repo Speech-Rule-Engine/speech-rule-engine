@@ -648,10 +648,12 @@ export class SemanticMapTest extends AbstractJsonTest {
       input = input.match(/ ([^ ]+)$/)[1];
     }
     const sec = this.field('secondary') || this.field('expected');
-    this.assert.deepEqual(
-      SemanticMap[this.map].get(input, sec),
-      this.field('expected')
-    );
+    const actual = SemanticMap[this.map].get(input, sec);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.deepEqual(actual, this.field('expected'));
+    }
   }
 
 }
