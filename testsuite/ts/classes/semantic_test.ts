@@ -586,10 +586,11 @@ export class SemanticMeaningTest extends SemanticTest {
     const meaning = this.factory.makeContentNode(name);
     meaning.id = 0;
     const output = meaning.toString().replace(/ id=\"0\"/, '');
-    this.assert.equal(
-      output,
-      expected
-    );
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, expected);
+    }
   }
 
 }
@@ -679,7 +680,12 @@ export class CategoryTest extends AbstractJsonTest {
   public method() {
     const kind = this.baseTests.type || this.jsonTests.type || 'character';
     const name = this.field('name') + (kind === 'unit' ? ':unit' : '');
-    this.assert.equal(lookupCategory(name), this.field('expected'));
+    const actual = lookupCategory(name);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, this.field('expected'));
+    }
   }
 
 }
