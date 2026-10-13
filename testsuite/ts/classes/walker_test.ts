@@ -188,7 +188,12 @@ export class ExplorationTest extends AbstractJsonTest {
         { renderer: 'NativeMML'}),
       emml.toString()
     );
-    this.assert.equal(ExplorationTest.dfs(this.walker), expected);
+    const actual = ExplorationTest.dfs(this.walker);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   private static dfs(walker: Walker) {
