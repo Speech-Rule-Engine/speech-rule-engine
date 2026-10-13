@@ -1,0 +1,15 @@
+{
+  "Analysis_0 1": "n Pfeil nach rechts unendlich",
+  "Analysis_1 1": "Limes über h Pfeil nach rechts 0",
+  "Analysis_2 1": "Limes über x Pfeil nach rechts, x Index 0",
+  "Analysis_3 1": "f von Strich mal x, Komma, f von zwei Strich mal x",
+  "Analysis_4 1": "Summe von i ist gleich 0 bis n, über, A Index n",
+  "Analysis_5 1": "das Integral von a bis b, über f von x, d x",
+  "Analytische_0 1": "p Pfeil nach rechts ist gleich die 1 mal 3 Zeilenmatrize. Spalte 1: x Strichpunkt Spalte 2: y Strichpunkt Spalte 3: z minus 3",
+  "Analytische_1 1": "q Pfeil nach rechts ist gleich die 3 mal 1 Spaltenmatrize. Zeile 1: minus 5 Zeile 2: 0 Komma 5 Zeile 3: k plus 4",
+  "Analytische_2 1": "p Pfeil nach rechts mal q Pfeil nach rechts",
+  "Analytische_3 1": "die 2 mal 3 Matrize. Zeile 1: a, b, c Zeile 2: d, e, f",
+  "Stochastik_0 1": "n Fakultät",
+  "Stochastik_1 1": "die 2 mal 1 Spaltenmatrize. n, k",
+  "Stochastik_2 1": "sigma Ohm"
+}
