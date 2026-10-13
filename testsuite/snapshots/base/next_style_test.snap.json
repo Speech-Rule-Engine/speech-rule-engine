@@ -1,0 +1,267 @@
+{
+  "Abs01 1": [
+    "AbsoluteValue_AbsEnd",
+    "AbsoluteValue_Cardinality",
+    "AbsoluteValue_Determinant",
+    "AbsoluteValue_Auto"
+  ],
+  "Angle_0_Angle 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Bar001 1": [
+    "Bar_Conjugate",
+    "Bar_Auto"
+  ],
+  "Braille 1": [
+    "default"
+  ],
+  "Cap001 1": [
+    "Caps_SayCaps",
+    "Caps_Auto"
+  ],
+  "CompositeFunctionFences 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Currency001 1": [
+    "Currency_Position",
+    "Currency_Prefix",
+    "Currency_Auto"
+  ],
+  "Dot001 1": [
+    "MultsymbolDot_Dot",
+    "MultsymbolDot_Auto"
+  ],
+  "Ellipses001 1": [
+    "Ellipses_AndSoOn",
+    "Ellipses_Auto"
+  ],
+  "Enclose_0 1": [
+    "Enclosed_EndEnclose",
+    "Enclosed_Auto"
+  ],
+  "Exp001 1": [
+    "Exponent_AfterPower",
+    "Exponent_Ordinal",
+    "Exponent_OrdinalPower",
+    "Exponent_Auto"
+  ],
+  "ExponentLatinCap 1": [
+    "Exponent_AfterPower",
+    "Exponent_Ordinal",
+    "Exponent_OrdinalPower",
+    "Exponent_Auto"
+  ],
+  "Frac001 1": [
+    "Fraction_EndFrac",
+    "Fraction_FracOver",
+    "Fraction_General",
+    "Fraction_GeneralEndFrac",
+    "Fraction_Ordinal",
+    "Fraction_Over",
+    "Fraction_OverEndFrac",
+    "Fraction_Per",
+    "Fraction_Auto"
+  ],
+  "Function001 1": [
+    "Functions_None",
+    "Functions_Auto"
+  ],
+  "Function007 1": [
+    "Functions_None",
+    "Functions_Auto"
+  ],
+  "ImpTimes001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "In_set_0 1": [
+    "Sets_SilentBracket",
+    "Sets_woAll",
+    "Sets_Auto"
+  ],
+  "Issue230_1 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Issue_689_3 1": [
+    "Matrix_Combinatoric",
+    "Matrix_EndMatrix",
+    "Matrix_EndVector",
+    "Matrix_SilentColNum",
+    "Matrix_SpeakColNum",
+    "Matrix_Vector",
+    "Matrix_Auto"
+  ],
+  "LatinMathfontsUpperCaps_0 1": [
+    "Caps_SayCaps",
+    "Caps_Auto"
+  ],
+  "Log001 1": [
+    "Log_LnAsNaturalLog",
+    "Log_Auto"
+  ],
+  "Log002 1": [
+    "Log_LnAsNaturalLog",
+    "Log_Auto"
+  ],
+  "Mathspeak 1": [
+    "brief",
+    "sbrief",
+    "default"
+  ],
+  "Matrix001 1": [
+    "Matrix_Combinatoric",
+    "Matrix_EndMatrix",
+    "Matrix_EndVector",
+    "Matrix_SilentColNum",
+    "Matrix_SpeakColNum",
+    "Matrix_Vector",
+    "Matrix_Auto"
+  ],
+  "MembSym001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Metric01 1": [
+    "AbsoluteValue_AbsEnd",
+    "AbsoluteValue_Cardinality",
+    "AbsoluteValue_Determinant",
+    "AbsoluteValue_Auto"
+  ],
+  "MultiLines_0 1": [
+    "MultiLineOverview_None",
+    "MultiLineOverview_Auto"
+  ],
+  "Multiline001 1": [
+    "MultiLineOverview_None",
+    "MultiLineOverview_Auto"
+  ],
+  "Multiline016 1": [
+    "MultiLineOverview_None",
+    "MultiLineOverview_Auto"
+  ],
+  "Multiline020 1": [
+    "MultiLineOverview_None",
+    "MultiLineOverview_Auto"
+  ],
+  "NamedSet_0 1": [
+    "Exponent_AfterPower",
+    "Exponent_Ordinal",
+    "Exponent_OrdinalPower",
+    "Exponent_Auto"
+  ],
+  "NestedRoots_3 1": [
+    "Roots_PosNegSqRoot",
+    "Roots_PosNegSqRootEnd",
+    "Roots_RootEnd",
+    "Roots_Auto"
+  ],
+  "NumSys001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Paren001 1": [
+    "Paren_CoordPoint",
+    "Paren_Interval",
+    "Paren_Silent",
+    "Paren_Speak",
+    "Paren_SpeakNestingLevel",
+    "Paren_Auto"
+  ],
+  "Preferences_in_0 1": [
+    "SetMemberSymbol_Belongs",
+    "SetMemberSymbol_Element",
+    "SetMemberSymbol_Member",
+    "SetMemberSymbol_In",
+    "SetMemberSymbol_Auto"
+  ],
+  "Prime001 1": [
+    "Prime_Angle",
+    "Prime_Length",
+    "Prime_Auto"
+  ],
+  "Root001 1": [
+    "Roots_PosNegSqRoot",
+    "Roots_PosNegSqRootEnd",
+    "Roots_RootEnd",
+    "Roots_Auto"
+  ],
+  "Root002 1": [
+    "Roots_PosNegSqRoot",
+    "Roots_PosNegSqRootEnd",
+    "Roots_RootEnd",
+    "Roots_Auto"
+  ],
+  "Set001 1": [
+    "Sets_SilentBracket",
+    "Sets_woAll",
+    "Sets_Auto"
+  ],
+  "SetMemb001 1": [
+    "Sets_SilentBracket",
+    "Sets_woAll",
+    "Sets_Auto"
+  ],
+  "Set_1 1": [
+    "Sets_SilentBracket",
+    "Sets_woAll",
+    "Sets_Auto"
+  ],
+  "Sum001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Triangle 1": [
+    "TriangleSymbol_Delta",
+    "TriangleSymbol_Auto"
+  ],
+  "Triangle001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "Trig001 1": [
+    "Trig_ArcTrig",
+    "Trig_TrigInverse",
+    "Trig_Auto"
+  ],
+  "Trig002 1": [
+    "Trig_ArcTrig",
+    "Trig_TrigInverse",
+    "Trig_Auto"
+  ],
+  "VectorEndDeterminant 1": [
+    "Matrix_Combinatoric",
+    "Matrix_EndMatrix",
+    "Matrix_EndVector",
+    "Matrix_SilentColNum",
+    "Matrix_SpeakColNum",
+    "Matrix_Vector",
+    "Matrix_Auto"
+  ],
+  "VertLine001 1": [
+    "ImpliedTimes_MoreImpliedTimes",
+    "ImpliedTimes_None",
+    "ImpliedTimes_Auto"
+  ],
+  "VertLine_SuchThat 1": [
+    "VerticalLine_Divides",
+    "VerticalLine_Given",
+    "VerticalLine_SuchThat",
+    "VerticalLine_Auto"
+  ],
+  "X001 1": [
+    "MultsymbolX_By",
+    "MultsymbolX_Cross",
+    "MultsymbolX_Auto"
+  ]
+}

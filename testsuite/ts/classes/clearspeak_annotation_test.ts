@@ -50,10 +50,12 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
       '<math xmlns="http://www.w3.org/1998/Math/MathML">' + mml + '</math>';
     const semantic = Semantic.getTreeFromString(mathMl, Engine.getInstance().options);
     this.annotator.annotate(semantic.root);
-    this.assert.equal(
-      semantic.root.hasAnnotation('clearspeak', 'simple'),
-      expected
-    );
+    const actual = semantic.root.hasAnnotation('clearspeak', 'simple');
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   /**
@@ -81,12 +83,14 @@ export class ClearspeakPreferencesTest extends AbstractJsonTest {
     const mathMl =
       '<math xmlns="http://www.w3.org/1998/Math/MathML">' + mml + '</math>';
     const semantic = Semantic.getTreeFromString(mathMl, Engine.getInstance().options);
-    this.assert.equal(
-      ClearspeakPreferences.relevantPreferences(
-        (id == null) ? semantic.root :
-          semantic.root.querySelectorAll((x) => x.id === id)[0]),
-      expected
-    );
+    const actual = ClearspeakPreferences.relevantPreferences(
+      (id == null) ? semantic.root :
+        semantic.root.querySelectorAll((x) => x.id === id)[0]);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   /**
@@ -142,7 +146,12 @@ export class NextStyleTest extends AbstractJsonTest {
       domain: this.field('domain') || this.domain
     });
     generator.computeRebuilt(emml);
-    this.assert.deepEqual(this.styleSequence(generator, id), expected);
+    const actual = this.styleSequence(generator, id);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.deepEqual(actual, expected);
+    }
   }
 
   private styleSequence(generator: DummySpeechGenerator, id: number) {

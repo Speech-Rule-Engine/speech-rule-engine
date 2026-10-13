@@ -123,8 +123,13 @@ export function flush(jsonFile: string) {
  */
 export function assertSnapshot(jsonFile: string, key: string, actual: unknown) {
   const store = load(jsonFile);
+  // `undefined` is silently dropped by JSON.stringify, so a testcase whose
+  // value is legitimately `undefined` (e.g. a void API call) would vanish
+  // from the store on flush and never be written. Normalize to `null`,
+  // which round-trips through JSON, on both the record and compare paths.
+  const value = actual === undefined ? null : actual;
   if (updateSnapshots) {
-    store[key] = actual;
+    store[key] = value;
     dirty.add(storeFile(jsonFile));
     expect(actual).toEqual(actual);
     return;
@@ -135,5 +140,5 @@ export function assertSnapshot(jsonFile: string, key: string, actual: unknown) {
         'Run `pnpm test:snapshots:update` to create one.'
     );
   }
-  expect(actual).toEqual(store[key]);
+  expect(value).toEqual(store[key]);
 }

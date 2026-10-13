@@ -1,0 +1,9 @@
+{
+  "Html4Entities_0 1": "<a xmlns=\"http://www.w3.org/1999/xhtml\">É</a>",
+  "Html4Entities_1 1": "<a xmlns=\"http://www.w3.org/1999/xhtml\">Î</a>",
+  "Html5Entities_0 1": "<a xmlns=\"http://www.w3.org/1999/xhtml\">⩂</a>",
+  "Html5Entities_1 1": "<a xmlns=\"http://www.w3.org/1999/xhtml\">⊊︀</a>",
+  "Html5Entities_2 1": "<a xmlns=\"http://www.w3.org/1999/xhtml\">𝔙</a>",
+  "XmlEntities_0 1": "<a>&lt;</a>",
+  "XmlEntities_1 1": "<a>&amp;</a>"
+}
