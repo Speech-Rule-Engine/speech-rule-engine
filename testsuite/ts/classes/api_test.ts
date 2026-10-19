@@ -221,7 +221,11 @@ export class ApiTest extends AbstractJsonTest {
         ? JSON.stringify(output)
         : output.toString()
       : output;
-    this.assert.equal(output, result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, result);
+    }
   }
 
   /**
@@ -284,7 +288,12 @@ export class ApiFileTest extends ApiTest {
     let promise = (System.file as any)[func]('input', 'output');
     promise.catch((err: Error) => console.log(`THIS PROMISE ERROR: ${err}`));
     let output = await promise;
-    this.assert.equal(output.toString(), result);
+    const actual = output.toString();
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, result);
+    }
   }
 
   private async syncTest(func: string, sample: string, result: string) {
@@ -292,7 +301,11 @@ export class ApiFileTest extends ApiTest {
     SystemExternal.fs.readFileSync = jest.fn((_file: string) => sample);
     SystemExternal.fs.writeFileSync = jest.fn();
     let output = (System.file as any)[func]('input', 'output');
-    this.assert.equal(output, result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, result);
+    }
   }
 
   /**
@@ -356,7 +369,11 @@ export class WorkerTest extends ApiTest {
         ? JSON.stringify(output)
         : output.toString()
       : output;
-    this.assert.equal(output, result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, result);
+    }
   }
 
   /**

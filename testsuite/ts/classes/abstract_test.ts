@@ -18,7 +18,18 @@
 
 import * as assert from 'assert';
 import * as tu from '../base/test_util.js';
+import * as SnapshotStore from '../base/snapshot_store.js';
 import { expect } from '@jest/globals';
+
+/**
+ * The assertion methods available to a test case.
+ */
+export type AssertMethods = {
+  equal: (expected: any, actual: any) => void;
+  deepEqual: (expected: any, actual: any) => void;
+  snapshot: (actual: any, name?: string) => void;
+  fail: () => void;
+};
 
 export abstract class AbstractTest {
 
@@ -45,16 +56,12 @@ export abstract class AbstractTest {
   /**
    * The assertion package.
    */
-  public assert: {
-    equal: (expected: any, actual: any) => void;
-    deepEqual: (expected: any, actual: any) => void;
-    fail: () => void;
-  } = this.getAssert();
+  public assert: AssertMethods = this.getAssert();
 
   /**
    * Sets the assertion methods for executing tests.
    */
-  private getAssert() {
+  protected getAssert(): AssertMethods {
     return {
       equal:
       !this._jest
@@ -64,6 +71,14 @@ export abstract class AbstractTest {
         ? assert.deepStrictEqual
         : (actual: any, expected: any) => {
           expect(actual).toEqual(expected);
+        },
+      snapshot: !this._jest
+        ? () => {}
+        : () => {
+          throw new Error(
+            'Snapshot assertions require AbstractJsonTest, which knows ' +
+              'the fixture a testcase came from.'
+          );
         },
       fail: assert.fail
     };
@@ -129,9 +144,51 @@ export abstract class AbstractJsonTest extends AbstractTest {
    */
   public information = '';
 
+  /**
+   * Whether to use snapshot mode for assertions.
+   */
+  public snapshotMode = false;
+
+  /**
+   * The JSON fixture this instance was built from, relative to `expected/`.
+   * Set externally by the test factory. This is the stable identity used to
+   * key the shared snapshot store, since the same fixture is executed from
+   * several differently-shaped generated test files (json/actions/output/
+   * analyse).
+   */
+  public jsonFile = '';
+
+  /**
+   * Name of the testcase currently executing, set by the test runner before
+   * `method()` is invoked. Combined with jsonFile to key the snapshot store.
+   */
+  public currentTestName = '';
+
+  /**
+   * Per-testcase occurrence counters, to disambiguate multiple snapshot
+   * assertions made for the same testcase name (e.g., a test class that
+   * calls `executeTest()` more than once per case).
+   */
+  private snapshotCounters = new Map<string, number>();
+
   private prepared = false;
-  private jsonFile = '';
   private baseFile = '';
+
+  /**
+   * @override
+   */
+  protected getAssert(): AssertMethods {
+    const base = super.getAssert();
+    return {
+      ...base,
+      snapshot: (actual: any) => {
+        const name = this.currentTestName || 'unnamed';
+        const n = (this.snapshotCounters.get(name) || 0) + 1;
+        this.snapshotCounters.set(name, n);
+        SnapshotStore.assertSnapshot(this.jsonFile, `${name} ${n}`, actual);
+      }
+    };
+  }
 
   /**
    * Picks arguments from a JSON element.

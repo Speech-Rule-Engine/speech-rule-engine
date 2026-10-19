@@ -1,0 +1,19 @@
+{
+  "Step_0 1": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+  "Step_1 1": "equality",
+  "Step_10 1": "equals",
+  "Step_11 1": "x",
+  "Step_12 1": "x",
+  "Step_13 1": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+  "Step_14 1": "x",
+  "Step_15 1": "identifier",
+  "Step_16 1": "x equals StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+  "Step_2 1": "x",
+  "Step_3 1": "equals",
+  "Step_4 1": "StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction",
+  "Step_5 1": "Level 1 collapsible",
+  "Step_6 1": "fraction",
+  "Step_7 1": "Numerator negative b plus or minus StartRoot b squared minus 4 a c EndRoot",
+  "Step_8 1": "Level 2 Numerator",
+  "Step_9 1": "StartFraction negative b plus or minus StartRoot b squared minus 4 a c EndRoot Over 2 a EndFraction"
+}

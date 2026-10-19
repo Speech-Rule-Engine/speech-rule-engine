@@ -30,7 +30,12 @@ export class HtmlTest extends AbstractJsonTest {
    */
   public entitiesTest(xml: string, result: string) {
     const parsed = DomUtil.parseInput(xml);
-    this.assert.equal(parsed.toString(), result);
+    const actual = parsed.toString();
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, result);
+    }
   }
 
   /**
@@ -65,8 +70,12 @@ export class XpathTest extends AbstractJsonTest {
     query: string
   ) {
     const parsed = DomUtil.parseInput(xml);
-    const actual = (XpathUtil as any)[kind](query, parsed);
-    this.assert.equal(actual.toString(), result.toString());
+    const actual = (XpathUtil as any)[kind](query, parsed).toString();
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, result.toString());
+    }
   }
 
   /**

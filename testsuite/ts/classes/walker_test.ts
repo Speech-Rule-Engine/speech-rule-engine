@@ -92,7 +92,11 @@ export class WalkerTest extends AbstractJsonTest {
     if (move) {
       this.walker.move(Key.get(move));
     }
-    this.assert.equal(this.walker.speech(), result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(this.walker.speech());
+    } else {
+      this.assert.equal(this.walker.speech(), result);
+    }
   }
 
   /**
@@ -184,7 +188,12 @@ export class ExplorationTest extends AbstractJsonTest {
         { renderer: 'NativeMML'}),
       emml.toString()
     );
-    this.assert.equal(ExplorationTest.dfs(this.walker), expected);
+    const actual = ExplorationTest.dfs(this.walker);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
+    }
   }
 
   private static dfs(walker: Walker) {

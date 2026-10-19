@@ -342,10 +342,14 @@ export class SemanticTreeTest extends SemanticBlacklistTest {
     const dp = new SystemExternal.xmldom.DOMParser();
     const xml = dp.parseFromString(
       this.prepareStree(sml), SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
-    this.assert.equal(
-      xmls.serializeToString(sxml),
-      xmls.serializeToString(xml)
-    );
+    if (this.snapshotMode) {
+      this.assert.snapshot(xmls.serializeToString(sxml));
+    } else {
+      this.assert.equal(
+        xmls.serializeToString(sxml),
+        xmls.serializeToString(xml)
+      );
+    }
   }
 
   /**
@@ -392,15 +396,19 @@ export class EnrichMathmlTest extends SemanticBlacklistTest {
   public executeTest(mml: string, smml: string) {
     const mathMl = Enrich.prepareMmlString(mml);
     const node = Enrich.semanticMathmlSync(mathMl, Engine.getInstance().options);
-    const dp = new SystemExternal.xmldom.DOMParser();
-    const xml = dp.parseFromString(
-      smml ? smml : '<math/>',
-      SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
     const xmls = new SystemExternal.xmldom.XMLSerializer();
     this.customizeXml(node);
     this.appendExamples('', mml);
     const cleaned = removeAttributePrefix(xmls.serializeToString(node));
-    this.assert.equal(cleaned, xmls.serializeToString(xml));
+    if (this.snapshotMode) {
+      this.assert.snapshot(cleaned);
+    } else {
+      const dp = new SystemExternal.xmldom.DOMParser();
+      const xml = dp.parseFromString(
+        smml ? smml : '<math/>',
+        SystemExternal.xmldom.MIME_TYPE.XML_TEXT);
+      this.assert.equal(cleaned, xmls.serializeToString(xml));
+    }
   }
 }
 
@@ -578,10 +586,11 @@ export class SemanticMeaningTest extends SemanticTest {
     const meaning = this.factory.makeContentNode(name);
     meaning.id = 0;
     const output = meaning.toString().replace(/ id=\"0\"/, '');
-    this.assert.equal(
-      output,
-      expected
-    );
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, expected);
+    }
   }
 
 }
@@ -639,10 +648,12 @@ export class SemanticMapTest extends AbstractJsonTest {
       input = input.match(/ ([^ ]+)$/)[1];
     }
     const sec = this.field('secondary') || this.field('expected');
-    this.assert.deepEqual(
-      SemanticMap[this.map].get(input, sec),
-      this.field('expected')
-    );
+    const actual = SemanticMap[this.map].get(input, sec);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.deepEqual(actual, this.field('expected'));
+    }
   }
 
 }
@@ -671,7 +682,12 @@ export class CategoryTest extends AbstractJsonTest {
   public method() {
     const kind = this.baseTests.type || this.jsonTests.type || 'character';
     const name = this.field('name') + (kind === 'unit' ? ':unit' : '');
-    this.assert.equal(lookupCategory(name), this.field('expected'));
+    const actual = lookupCategory(name);
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, this.field('expected'));
+    }
   }
 
 }

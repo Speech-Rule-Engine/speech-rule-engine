@@ -1,0 +1,196 @@
+{
+  "AttributesList_0 1": [
+    "context:\"node\"",
+    "pitch:0.5"
+  ],
+  "AttributesList_1 1": [
+    "ctxtfunc:element",
+    "separator:\"plus\"",
+    "volume:0.5"
+  ],
+  "AttributesString_0 1": "(ctxtfunc:element, separator:\"plus\", volume:0.5)",
+  "AttributesString_1 1": "(context:\"node\", pitch:0.5, difference)",
+  "AttributesString_2 1": "(context:\"node\", grammar:font:annotation=\"unit\")",
+  "AttributesString_3 1": "(grammar:font:annotation=\"unit\")",
+  "Attributes_0 1": {
+    "ctxtfunc": "element",
+    "separator": "\"plus\"",
+    "volume": "0.5"
+  },
+  "Attributes_1 1": {
+    "context": "\"node\"",
+    "pitch": "0.5",
+    "difference": "true"
+  },
+  "Attributes_2 1": {
+    "context": "\"node\"",
+    "grammar": {
+      "font": true,
+      "annotation": "\"unit\""
+    }
+  },
+  "Attributes_3 1": {
+    "grammar": {
+      "font": true,
+      "annotation": "\"unit\""
+    }
+  },
+  "Attributes_4 1": {
+    "context": "\"node\"",
+    "pitch": "0.5",
+    "difference": "true"
+  },
+  "ComplexComponentsString_5 1": "[m] ./* (ctxtfunc:element, separator:\"plus\", volume:0.5)",
+  "ComplexComponentsString_6 1": "[n] ./*[1] (context:\"node\", pitch:0.5)",
+  "ComplexComponentsString_7 1": "[n] ./*[1] (context:\"node\", grammar:font:annotation=\"unit\")",
+  "ComplexComponentsString_8 1": "[n] ./*[1] (grammar:font:annotation=\"unit\")",
+  "ComplexComponents_5 1": {
+    "type": "MULTI",
+    "content": "./*",
+    "attributes": {
+      "ctxtfunc": "element",
+      "separator": "\"plus\"",
+      "volume": "0.5"
+    }
+  },
+  "ComplexComponents_6 1": {
+    "type": "NODE",
+    "content": "./*[1]",
+    "attributes": {
+      "context": "\"node\"",
+      "pitch": "0.5"
+    }
+  },
+  "ComplexComponents_7 1": {
+    "type": "NODE",
+    "content": "./*[1]",
+    "attributes": {
+      "context": "\"node\""
+    },
+    "grammar": {
+      "font": true,
+      "annotation": "\"unit\""
+    }
+  },
+  "ComplexComponents_8 1": {
+    "type": "NODE",
+    "content": "./*[1]",
+    "grammar": {
+      "font": true,
+      "annotation": "\"unit\""
+    }
+  },
+  "GrammarString_0 1": "font:annotation=\"unit\"",
+  "GrammarString_1 1": "!font:annotation=@unit",
+  "Grammar_0 1": {
+    "font": true,
+    "annotation": "\"unit\""
+  },
+  "Grammar_1 1": {
+    "font": false,
+    "annotation": "@unit"
+  },
+  "Grammar_2 1": {
+    "font": false,
+    "annotation": "@unit"
+  },
+  "RulesString_0 1": "[t] \"Square root of\"; [n] ./*[1] (rate:0.2); [p] (pause:400)",
+  "RulesString_1 1": "[n] ./*[1]/*[1]/*[1]; [t] \"sub\" (span:./*[1]/*[3]/*[1]); [n] ./*[1]/*[3]/*[1] (pitch:-0.35); [p] (pause:200); [t] \"super\" (span:./*[1]/*[2]/*[1]); [n] ./*[1]/*[2]/*[1] (pitch:0.35); [p] (pause:300)",
+  "Rules_0 1": [
+    {
+      "type": "TEXT",
+      "content": "\"Square root of\""
+    },
+    {
+      "type": "NODE",
+      "content": "./*[1]",
+      "attributes": {
+        "rate": "0.2"
+      }
+    },
+    {
+      "type": "PERSONALITY",
+      "attributes": {
+        "pause": "400"
+      }
+    }
+  ],
+  "Rules_1 1": [
+    {
+      "type": "NODE",
+      "content": "./*[1]/*[1]/*[1]"
+    },
+    {
+      "type": "TEXT",
+      "content": "\"sub\"",
+      "attributes": {
+        "span": "./*[1]/*[3]/*[1]"
+      }
+    },
+    {
+      "type": "NODE",
+      "content": "./*[1]/*[3]/*[1]",
+      "attributes": {
+        "pitch": "-0.35"
+      }
+    },
+    {
+      "type": "PERSONALITY",
+      "attributes": {
+        "pause": "200"
+      }
+    },
+    {
+      "type": "TEXT",
+      "content": "\"super\"",
+      "attributes": {
+        "span": "./*[1]/*[2]/*[1]"
+      }
+    },
+    {
+      "type": "NODE",
+      "content": "./*[1]/*[2]/*[1]",
+      "attributes": {
+        "pitch": "0.35"
+      }
+    },
+    {
+      "type": "PERSONALITY",
+      "attributes": {
+        "pause": "300"
+      }
+    }
+  ],
+  "SeparatorsInStrings_0 1": "[t] \"matrix; 3 by 3\"; [n] ./*[1]",
+  "SeparatorsInStrings_1 1": "[t] \"matrix; 3;\"\"by 3\"; [n] ./*[1]",
+  "SeparatorsInStrings_2 1": "[t] \"matrix; by 3\"; [n] ./*[1] (context:\"where, who; why, when\", separator:@separator)",
+  "SeparatorsInStrings_3 1": "[t] \"matrix; by 3\"",
+  "SeparatorsInStrings_4 1": "\"where, who; why, when\"",
+  "SimpleComponentsString_0 1": "[m] ./*",
+  "SimpleComponentsString_1 1": "[n] ./*[1]",
+  "SimpleComponentsString_2 1": "[p] (pause:200)",
+  "SimpleComponentsString_3 1": "[t] \"super\"",
+  "SimpleComponentsString_4 1": "[t] text()",
+  "SimpleComponents_0 1": {
+    "type": "MULTI",
+    "content": "./*"
+  },
+  "SimpleComponents_1 1": {
+    "type": "NODE",
+    "content": "./*[1]"
+  },
+  "SimpleComponents_2 1": {
+    "type": "PERSONALITY",
+    "attributes": {
+      "pause": "200"
+    }
+  },
+  "SimpleComponents_3 1": {
+    "type": "TEXT",
+    "content": "\"super\""
+  },
+  "SimpleComponents_4 1": {
+    "type": "TEXT",
+    "content": "text()"
+  }
+}

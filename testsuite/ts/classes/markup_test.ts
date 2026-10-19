@@ -112,7 +112,11 @@ export class MarkupTest extends AbstractJsonTest {
     System.setupEngine(features)
     const descrs = System.toDescription(expr);
     const output = AuralRendering.markup(descrs);
-    this.assert.equal(output, result);
+    if (this.snapshotMode) {
+      this.assert.snapshot(output);
+    } else {
+      this.assert.equal(output, result);
+    }
   }
 
   /**
