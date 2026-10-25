@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@xmldom/xmldom':
-        specifier: ^0.9.10
+        specifier: ^0.9.12
         version: 0.9.12
       commander:
         specifier: ^14.0.3
@@ -4827,7 +4827,8 @@ snapshots:
 
   fs.realpath@1.0.0: {}
 
-  fsevents@2.3.2: {}
+  fsevents@2.3.2:
+    optional: true
 
   fsevents@2.3.3:
     optional: true
