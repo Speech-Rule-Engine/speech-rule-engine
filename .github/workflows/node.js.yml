@@ -15,13 +15,15 @@ jobs:
     name: Compile SRE with locales
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
+      - uses: pnpm/setup@v3
+        name: Install pnpm and Node.js
         with:
-          version: 8
-          run_install: false
+          version: 12
+          runtime: node@26
+          cache: true
+          install: false
 
       - name: Setup Speech Rule Engine
         run: pnpm i; pnpm build; pnpm commonjs; pnpm postcommonjs
@@ -45,13 +47,15 @@ jobs:
     name: SRE jests tests for ${{ matrix.block }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
+      - uses: pnpm/setup@v3
+        name: Install pnpm and Node.js
         with:
-          version: 8
-          run_install: false
+          version: 12
+          runtime: node@26
+          cache: true
+          install: false
 
       - name: Downloading the build
         uses: actions/download-artifact@v4.1.7
@@ -62,6 +66,7 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
+          cp pnpm-workspace.yaml sre-tests
           pnpm i --ignore-scripts
           cd sre-tests; git checkout v4.1.2; ln -fsn .. speech-rule-engine; pnpm i; sudo chmod -R 777 .;
 
