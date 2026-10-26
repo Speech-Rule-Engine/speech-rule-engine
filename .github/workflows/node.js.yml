@@ -63,7 +63,7 @@ jobs:
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
           pnpm i --ignore-scripts
-          cd sre-tests; ln -fsn .. speech-rule-engine; pnpm i; sudo chmod -R 777 .;
+          cd sre-tests; git checkout v4.1.2; ln -fsn .. speech-rule-engine; pnpm i; sudo chmod -R 777 .;
 
       - name: Run tests for ${{ matrix.block }}
         run: pnpm run actionTest js/actions/${{ matrix.block }}.test.js
