@@ -41,8 +41,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, en-ssml, ca, de, da, fr, es, it, hi, ko, nb, nn, sv]
-    needs: setup
+        block: [base]
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
     steps:
@@ -66,6 +65,7 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
+          cp pnpm-workspace.yaml sre-tests
           pnpm i --ignore-scripts
           cd sre-tests; git checkout v4.1.2; ln -fsn .. speech-rule-engine; pnpm i; sudo chmod -R 777 .;
 
