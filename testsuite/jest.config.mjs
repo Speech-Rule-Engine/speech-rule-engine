@@ -39,6 +39,10 @@ const config = {
     prefix: '<rootDir>/',
   }),
   setupFiles:  ["./lib/require.mjs"],
+  snapshotFormat: {
+    escapeString: false,
+    printBasicPrototype: false,
+  },
   transform: {
     "^.+\\.tsx?$": [
       'ts-jest',

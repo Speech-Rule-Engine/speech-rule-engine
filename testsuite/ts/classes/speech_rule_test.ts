@@ -82,7 +82,14 @@ export class SpeechRuleTest extends AbstractJsonTest {
       if (!toString) {
         this.assert.fail();
       }
-      this.assert.equal(toString(received), this.field('expected'));
+      const actual = toString(received);
+      if (this.snapshotMode) {
+        this.assert.snapshot(actual);
+      } else {
+        this.assert.equal(actual, this.field('expected'));
+      }
+    } else if (this.snapshotMode) {
+      this.assert.snapshot(JSON.parse(JSON.stringify(received)));
     } else {
       this.assertStructEquals(received, this.field('expected'));
     }

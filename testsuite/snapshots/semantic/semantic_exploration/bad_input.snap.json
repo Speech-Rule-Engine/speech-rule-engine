@@ -1,0 +1,291 @@
+{
+  "Bigop_Underspec_0 1": 0,
+  "Bigop_Underspec_1 1": 0,
+  "Bigop_Underspec_2 1": 0,
+  "Bigop_Underspec_3 1": [
+    2,
+    0,
+    1
+  ],
+  "Bigop_Underspec_4 1": 0,
+  "Bigop_Underspec_5 1": 0,
+  "Bigop_Underspec_6 1": 0,
+  "Bigop_Underspec_7 1": [
+    2,
+    0,
+    1
+  ],
+  "Fraction_Empty 1": 0,
+  "Fraction_Overspec 1": [
+    2,
+    0,
+    1
+  ],
+  "Fraction_Underspec 1": [
+    2,
+    0,
+    1
+  ],
+  "Integral_Underspec_0 1": 0,
+  "Integral_Underspec_1 1": 0,
+  "Integral_Underspec_2 1": 0,
+  "Integral_Underspec_3 1": [
+    2,
+    0,
+    1
+  ],
+  "Integral_Underspec_4 1": 0,
+  "Integral_Underspec_5 1": 0,
+  "Integral_Underspec_6 1": 0,
+  "Integral_Underspec_7 1": [
+    2,
+    0,
+    1
+  ],
+  "Layout_Empty_0 1": 0,
+  "Layout_Empty_1 1": 0,
+  "Layout_Empty_2 1": 0,
+  "Layout_Empty_3 1": 0,
+  "Layout_Empty_4 1": 0,
+  "Layout_Empty_5 1": 0,
+  "Layout_Overspec_0 1": [
+    3,
+    0,
+    1
+  ],
+  "Layout_Overspec_1 1": [
+    3,
+    0,
+    1
+  ],
+  "Layout_Overspec_2 1": [
+    5,
+    0,
+    1,
+    2
+  ],
+  "Layout_Overspec_3 1": [
+    3,
+    0,
+    1
+  ],
+  "Layout_Overspec_4 1": [
+    3,
+    0,
+    1
+  ],
+  "Layout_Overspec_5 1": [
+    5,
+    0,
+    1,
+    2
+  ],
+  "Layout_Underspec_0 1": 0,
+  "Layout_Underspec_1 1": 0,
+  "Layout_Underspec_2 1": 0,
+  "Layout_Underspec_3 1": [
+    2,
+    0,
+    1
+  ],
+  "Layout_Underspec_4 1": 0,
+  "Layout_Underspec_5 1": 0,
+  "Layout_Underspec_6 1": 0,
+  "Layout_Underspec_7 1": [
+    2,
+    0,
+    1
+  ],
+  "Limit_Overspec_0 1": [
+    3,
+    0,
+    1
+  ],
+  "Limit_Overspec_1 1": [
+    3,
+    0,
+    1
+  ],
+  "Limit_Overspec_2 1": [
+    4,
+    0,
+    1,
+    2
+  ],
+  "Limit_Overspec_3 1": [
+    3,
+    0,
+    1
+  ],
+  "Limit_Overspec_4 1": [
+    3,
+    0,
+    1
+  ],
+  "Limit_Overspec_5 1": [
+    4,
+    0,
+    1,
+    2
+  ],
+  "Limit_Underspec_0 1": 0,
+  "Limit_Underspec_1 1": 0,
+  "Limit_Underspec_2 1": 0,
+  "Limit_Underspec_3 1": [
+    2,
+    0,
+    1
+  ],
+  "Limit_Underspec_4 1": 0,
+  "Limit_Underspec_5 1": 0,
+  "Limit_Underspec_6 1": 0,
+  "Limit_Underspec_7 1": [
+    2,
+    0,
+    1
+  ],
+  "Orphaned_Glyph_0 1": 0,
+  "Orphaned_Glyph_1 1": [
+    3,
+    0,
+    2,
+    1
+  ],
+  "Orphaned_Glyph_2 1": [
+    3,
+    0,
+    2,
+    1
+  ],
+  "Orphaned_Glyph_3 1": [
+    6,
+    [
+      5,
+      0,
+      4,
+      1
+    ],
+    2,
+    3
+  ],
+  "Orphaned_Glyph_4 1": [
+    4,
+    [
+      1,
+      0
+    ],
+    3,
+    2
+  ],
+  "Root_Display_0 1": [
+    4,
+    [
+      1,
+      0
+    ],
+    3,
+    2
+  ],
+  "Root_Display_1 1": [
+    7,
+    [
+      6,
+      [
+        1,
+        0
+      ],
+      5,
+      2
+    ],
+    3,
+    4
+  ],
+  "Root_Display_2 1": [
+    4,
+    [
+      1,
+      0
+    ],
+    3,
+    2
+  ],
+  "Root_Empty 1": [
+    1,
+    0
+  ],
+  "Root_Overspec 1": [
+    2,
+    0,
+    1
+  ],
+  "Root_Underspec 1": [
+    1,
+    0
+  ],
+  "Rubbish_0 1": 0,
+  "Rubbish_1 1": 0,
+  "Rubbish_10 1": [
+    1,
+    0
+  ],
+  "Rubbish_11 1": [
+    1,
+    0
+  ],
+  "Rubbish_2 1": 0,
+  "Rubbish_3 1": 0,
+  "Rubbish_4 1": 0,
+  "Rubbish_5 1": 0,
+  "Rubbish_6 1": [
+    1,
+    0
+  ],
+  "Rubbish_7 1": [
+    1,
+    0
+  ],
+  "Rubbish_8 1": [
+    1,
+    0
+  ],
+  "Rubbish_9 1": [
+    1,
+    0
+  ],
+  "Sqrt_Display_0 1": [
+    1,
+    0
+  ],
+  "Sqrt_Display_1 1": [
+    4,
+    [
+      1,
+      0
+    ],
+    3,
+    2
+  ],
+  "Sqrt_Display_2 1": [
+    7,
+    [
+      6,
+      [
+        1,
+        0
+      ],
+      5,
+      2
+    ],
+    3,
+    4
+  ],
+  "Sqrt_Display_3 1": [
+    4,
+    [
+      1,
+      0
+    ],
+    3,
+    2
+  ]
+}

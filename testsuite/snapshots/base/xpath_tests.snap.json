@@ -1,0 +1,11 @@
+{
+  "XpathBoolean_0 1": "true",
+  "XpathBoolean_1 1": "false",
+  "XpathBoolean_2 1": "true",
+  "XpathEvaluate_0 1": "<b>c</b>",
+  "XpathEvaluate_1 1": "c",
+  "XpathEvaluate_2 1": "<d>e</d>",
+  "XpathString_0 1": "1",
+  "XpathString_1 1": "2",
+  "XpathString_2 1": "e"
+}

@@ -43,15 +43,21 @@ export class ColorPickerTest extends AbstractJsonTest {
    */
   public executeTest(color: Color, expected: string, kind?: string) {
     const picker = new ColorPicker(color);
+    let actual: string;
     switch (kind) {
       case 'hex':
-        this.assert.equal(picker.hex().background, expected);
+        actual = picker.hex().background;
         break;
       case 'rgb':
-        this.assert.equal(picker.rgb().background, expected);
+        actual = picker.rgb().background;
         break;
       default:
-        this.assert.equal(picker.rgba().background, expected);
+        actual = picker.rgba().background;
+    }
+    if (this.snapshotMode) {
+      this.assert.snapshot(actual);
+    } else {
+      this.assert.equal(actual, expected);
     }
   }
 
