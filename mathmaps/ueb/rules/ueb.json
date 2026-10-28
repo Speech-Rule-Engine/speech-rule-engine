@@ -1,0 +1,681 @@
+{
+  "locale": "ueb",
+  "modality": "braille",
+  "domain": "default",
+  "rules": [
+    ["Rule", "stree", "default", "[n] ./*[1]", "self::stree"],
+    [
+      "Rule",
+      "direct-speech",
+      "default",
+      "[t] @ext-speech (grammar:literal)",
+      "self::*[@ext-speech]",
+      "priority=Infinity"
+    ],
+    ["Rule", "row", "default", "[m] children/*", "self::row"],
+    [
+      "Rule",
+      "omission-space-start",
+      "default",
+      "[t] \"⠬\"",
+      "self::text[@role=\"space\"]",
+      "following-sibling::*[1][self::text[@role=\"space\"]]"
+    ],
+    [
+      "Rule",
+      "omission-space-continuation",
+      "default",
+      "[t] \"\"",
+      "self::text[@role=\"space\"]",
+      "preceding-sibling::*[1][self::text[@role=\"space\"]]"
+    ],
+    ["Rule", "space", "default", "[t] \"W\"", "self::text[@role=\"space\"]"],
+    [
+      "Rule",
+      "dummy-punctuation",
+      "default",
+      "[t] \"\"",
+      "self::punctuation[@role=\"dummy\"]"
+    ],
+    [
+      "Rule",
+      "prime-punctuation",
+      "default",
+      "[t] \"1⠶\"",
+      "self::punctuation[@role=\"prime\"]"
+    ],
+    ["Rule", "and-text", "default", "[t] \"⠯\"", "self::*[text()=\"and\"]"],
+    ["Rule", "in-text", "default", "[t] \"⠔\"", "self::*[text()=\"in\"]"],
+    [
+      "Rule",
+      "speed-text",
+      "default",
+      "[t] \"⠎⠏⠑⠫\"",
+      "self::text[text()=\"speed\"]"
+    ],
+    [
+      "Rule",
+      "sin-greek-function",
+      "default",
+      "[t] \"⠎⠊⠝\"",
+      "self::function[text()=\"sin\"]",
+      "following-sibling::*[1][self::identifier[@role=\"greekletter\"]]",
+      "following-sibling::*[1][text()=\"β\"]"
+    ],
+    [
+      "Rule",
+      "bold-number-continued",
+      "default",
+      "[t] \"Bw\"; [n] text(); [t] \"Be\"",
+      "self::number[@font=\"bold\"]",
+      "following-sibling::*"
+    ],
+    [
+      "Rule",
+      "bold-number",
+      "default",
+      "[t] \"Bw\"; [n] text()",
+      "self::number[@font=\"bold\"]"
+    ],
+    [
+      "Rule",
+      "roman-number",
+      "default",
+      "[t] \"1\"; [n] text()",
+      "self::number[@role=\"othernumber\"]"
+    ],
+    [
+      "Rule",
+      "set-sequence-comma",
+      "default",
+      "[t] \"N⠂W\"",
+      "self::punctuation[@role=\"comma\"]",
+      "ancestor::fenced[@role=\"set collection\"]",
+      "preceding-sibling::*[1][self::number]",
+      "following-sibling::*"
+    ],
+    [
+      "Rule",
+      "set-nonnumeric-comma",
+      "default",
+      "[t] \"⠂W\"",
+      "self::punctuation[@role=\"comma\"]",
+      "ancestor::fenced[@role=\"set collection\"]",
+      "following-sibling::*"
+    ],
+    [
+      "Rule",
+      "numeric-sequence-comma",
+      "default",
+      "[t] \"N⠂\"",
+      "self::punctuation[@role=\"comma\"]",
+      "parent::*/parent::*[@role=\"sequence\"]",
+      "not(ancestor::fenced[@role=\"set collection\"])",
+      "preceding-sibling::*[1][self::number]",
+      "following-sibling::*[1][self::number]"
+    ],
+    [
+      "Rule",
+      "numeric-sequence-fullstop",
+      "default",
+      "[t] \"N⠲\"",
+      "self::punctuation[@role=\"fullstop\"]",
+      "parent::*/parent::*[@role=\"sequence\"]",
+      "preceding-sibling::*[1][self::number or self::infixop or self::relseq or self::punctuated]",
+      "following-sibling::*[1][self::number or self::infixop or self::relseq or self::punctuated]"
+    ],
+    [
+      "Rule",
+      "square-relation",
+      "default",
+      "[t] \"⠫⠼⠙t\"",
+      "self::relation[@role=\"geometry\"]",
+      "text()=\"□\""
+    ],
+    [
+      "Rule",
+      "square-set-relation",
+      "default",
+      "[t] \"1⠫⠼⠙t\"",
+      "self::relation[@role=\"geometry\"]",
+      "text()=\"□\"",
+      "ancestor::fenced[@role=\"set collection\"]"
+    ],
+    [
+      "Rule",
+      "triangle-relation",
+      "default",
+      "[t] \"1⠫⠼⠉\"",
+      "self::relation[@role=\"geometry\"]",
+      "text()=\"△\"",
+      "parent::*/following-sibling::children/*[2][self::infixop]"
+    ],
+    [
+      "Rule",
+      "square-diagonal-relation",
+      "default",
+      "[t] \"⠨⠫⠼⠙\"",
+      "self::relation[@role=\"geometry\"]",
+      "text()=\"▧\""
+    ],
+    [
+      "Rule",
+      "word-symbol-questioned-equals",
+      "default",
+      "[t] \"⠰⠰⠦⠻⠐⠶\"",
+      "self::relation[@role=\"equality\"]",
+      "text()=\"≟\""
+    ],
+    [
+      "Rule",
+      "limit-arrow-relation",
+      "default",
+      "[t] \"1⠳⠕\"",
+      "self::relation[@role=\"arrow\"]",
+      "ancestor::limlower or ancestor::limboth or ancestor::limupper"
+    ],
+    [
+      "Rule",
+      "arrow-relation",
+      "default",
+      "[t] \"1⠳⠕\"",
+      "self::relation[@role=\"arrow\"]"
+    ],
+    [
+      "Rule",
+      "underover-arrow",
+      "default",
+      "[n] children/*[1]/children/*[1]; [t] \"⠨⠢1⠣\"; [n] children/*[1]/children/*[2]; [t] \"1⠜⠨⠔1⠣\"; [n] children/*[2]; [t] \"1⠜\"",
+      "self::overscore[@role=\"arrow\"]",
+      "children/*[1][self::underscore[@role=\"underover\"]]",
+      "children/*[1]/children/*[1][self::relation[@role=\"arrow\"]]"
+    ],
+    [
+      "Rule",
+      "equilibrium-arrow",
+      "default",
+      "[t] \"W1⠘⠸⠶W\"",
+      "self::overscore[@role=\"arrow\"]",
+      "children/*[1][self::relseq[@role=\"arrow\"]]",
+      "children/*[2][self::relseq[@role=\"arrow\"]]",
+      "children/*[1]/content/*[1][text()=\"↽\"]",
+      "children/*[2]/content/*[1][text()=\"⇀\"]"
+    ],
+    [
+      "Rule",
+      "colon-before-relation",
+      "default",
+      "[t] \"⠒W\"",
+      "self::punctuation[@role=\"colon\"]",
+      "not(preceding-sibling::*[1][self::number])",
+      "following-sibling::*[1][self::relseq]"
+    ],
+    [
+      "Rule",
+      "double-colon-punctuation",
+      "default",
+      "[t] \"W⠒⠒W\"",
+      "self::punctuation[@role=\"colon\"]",
+      "text()=\"::\""
+    ],
+    [
+      "Rule",
+      "tilde-relation",
+      "default",
+      "[t] \"⠈⠔\"",
+      "self::relation",
+      "text()=\"~\""
+    ],
+    [
+      "Rule",
+      "double-tilde-relation",
+      "default",
+      "[t] \"⠈⠔⠈⠔\"",
+      "self::relation",
+      "text()=\"~~\""
+    ],
+    [
+      "Rule",
+      "vbar-punctuation",
+      "default",
+      "[t] \"W⠸⠳W\"",
+      "self::punctuation[@role=\"vbar\"]"
+    ],
+    [
+      "Rule",
+      "real-fraktur",
+      "default",
+      "[t] \"⠈⠆1CL⠗\"",
+      "self::identifier[@font=\"fraktur\"]",
+      "text()=\"ℜ\""
+    ],
+    [
+      "Rule",
+      "fraktur-identifier",
+      "default",
+      "[t] \"⠈⠆1\"; [n] text()",
+      "self::identifier[@font=\"fraktur\"]"
+    ],
+    [
+      "Rule",
+      "single-letter-unit",
+      "default",
+      "[t] \"⠰\"; [n] text()",
+      "self::identifier[@role=\"latinletter\"]",
+      "string-length(text())=1",
+      "@font=\"italic\"",
+      "parent::*/parent::*[@role=\"text\"]",
+      "preceding-sibling::*[1][self::text[@role=\"space\"]]"
+    ],
+    [
+      "Rule",
+      "punctuated-omission-end",
+      "default",
+      "[n] children/*[1]; [t] \"W\"; [n] children/*[2]",
+      "self::punctuated[@role=\"endpunct\"]",
+      "children/*[1][self::relseq]",
+      "children/*[1]/children/*[last()][self::empty]",
+      "children/*[2][self::punctuation[@role=\"dash\" or @role=\"question\"]]"
+    ],
+    [
+      "Rule",
+      "punctuated-end",
+      "default",
+      "[m] children/*",
+      "self::punctuated[@role=\"endpunct\"]"
+    ],
+    [
+      "Rule",
+      "punctuated-sequence",
+      "default",
+      "[m] children/*",
+      "self::punctuated[@role=\"sequence\"]"
+    ],
+    [
+      "Rule",
+      "punctuated-text",
+      "default",
+      "[m] children/*",
+      "self::punctuated[@role=\"text\"]"
+    ],
+    [
+      "Rule",
+      "prefix-tilde-relation",
+      "default",
+      "[n] content/*[1]; [n] children/*[2]",
+      "self::relseq",
+      "children/*[1][self::empty]",
+      "content/*[1][text()=\"~\" or text()=\"~~\"]"
+    ],
+    [
+      "Rule",
+      "function-application",
+      "default",
+      "[m] children/* (sepFunc:CTFuebApplicationIterator)",
+      "self::appl"
+    ],
+    ["Rule", "bigop", "default", "[m] children/*", "self::bigop"],
+    ["Rule", "integral", "default", "[m] children/*", "self::integral"],
+    [
+      "Rule",
+      "limboth-integral",
+      "default",
+      "[n] children/*[1]; [t] \"1⠢\"; [n] children/*[2]; [t] \"1⠔\"; [n] children/*[3]",
+      "self::limboth[@role=\"integral\"]"
+    ],
+    [
+      "Rule",
+      "limboth",
+      "default",
+      "[n] children/*[1]; [t] \"⠨⠢1⠣\"; [n] children/*[2]; [t] \"1⠜⠨⠔\"; [n] children/*[3]",
+      "self::limboth"
+    ],
+    [
+      "Rule",
+      "limlower",
+      "default",
+      "[n] children/*[1]; [t] \"⠨⠢1⠣\"; [n] children/*[2]; [t] \"1⠜\"",
+      "self::limlower"
+    ],
+    ["Precondition", "binary-operation", "default", "self::infixop"],
+    ["Alias", "binary-operation", "self::relseq"],
+    ["Alias", "binary-operation", "self::multirel"],
+    [
+      "Action",
+      "binary-operation",
+      "[m] children/* (sepFunc:CTFuebContentIterator);"
+    ],
+    [
+      "Rule",
+      "prefix-operation",
+      "default",
+      "[m] content/*; [n] children/*[1]",
+      "self::prefixop"
+    ],
+    [
+      "Rule",
+      "postfix-operation",
+      "default",
+      "[n] children/*[1]; [m] content/*",
+      "self::postfixop"
+    ],
+    [
+      "Rule",
+      "fences-open-close",
+      "default",
+      "[n] content/*[1]; [m] children/*; [n] content/*[2]",
+      "self::fenced"
+    ],
+    ["Rule", "line", "default", "[m] children/*", "self::line"],
+    [
+      "Rule",
+      "binomial-vector",
+      "default",
+      "[n] content/*[1]; [n] children/*[1]; [t] \"1⠻\"; [n] children/*[2]; [n] content/*[2]",
+      "self::vector[@role=\"binomial\"]"
+    ],
+    [
+      "Rule",
+      "overscore-bar",
+      "default",
+      "[n] children/*[1]; [t] \"⠱\"",
+      "self::overscore",
+      "contains(children/*[2]/@annotation, \"accent:bar\")"
+    ],
+    [
+      "Rule",
+      "overscore-bar-grouped-base",
+      "default",
+      "[t] \"1⠣\"; [n] children/*[1]; [t] \"1⠜⠱\"",
+      "self::overscore",
+      "contains(children/*[2]/@annotation, \"accent:bar\")",
+      "children/*[1][self::superscript or self::subscript or self::infixop or self::relseq or self::multirel]"
+    ],
+    [
+      "Rule",
+      "overscore-leftrightarrow",
+      "default",
+      "[t] \"1⠣\"; [n] children/*[1]; [t] \"1⠜⠨⠔⠳⠺⠗⠕\"",
+      "self::overscore",
+      "children/*[2][@role=\"overaccent\" and text()=\"↔\"]"
+    ],
+    [
+      "Rule",
+      "underscore-bar",
+      "default",
+      "[t] \"1⠣\"; [n] children/*[1]; [t] \"1⠜⠠⠱\"",
+      "self::underscore",
+      "contains(children/*[2]/@annotation, \"accent:bar\")"
+    ],
+    [
+      "Rule",
+      "enclose-bottom",
+      "default",
+      "[t] \"1⠣\"; [n] children/*[1]; [t] \"1⠜⠠⠱\"",
+      "self::enclose[@role=\"bottom\"]"
+    ],
+    [
+      "Rule",
+      "overscore-dot-number",
+      "default",
+      "[t] \"1⠣\"; [n] children/*[1]; [t] \"1⠜⠘⠲\"",
+      "self::overscore",
+      "children/*[1][self::number]",
+      "children/*[2][text()=\".\" or text()=\"·\" or text()=\"˙\"]"
+    ],
+    [
+      "Rule",
+      "overscore-dot",
+      "default",
+      "[n] children/*[1]; [t] \"⠘⠲\"",
+      "self::overscore",
+      "children/*[2][text()=\".\" or text()=\"·\" or text()=\"˙\"]"
+    ],
+    [
+      "Rule",
+      "overscore-double-dot",
+      "default",
+      "[n] children/*[1]; [t] \"⠨⠔1⠣⠲⠲1⠜\"",
+      "self::overscore",
+      "children/*[2][text()=\"¨\"]"
+    ],
+    [
+      "Rule",
+      "overscore-hat",
+      "default",
+      "[t] \"o\"; [n] children/*[1]; [t] \"1⠐⠱\"",
+      "self::overscore",
+      "children/*[2][text()=\"^\"]"
+    ],
+    [
+      "Rule",
+      "overscore-arrow",
+      "default",
+      "[n] children/*[1]; [t] \"1⠘⠱\"",
+      "self::overscore",
+      "children/*[2][@role=\"overaccent\" and text()=\"→\"]"
+    ],
+    [
+      "Rule",
+      "underscore-arrow",
+      "default",
+      "[n] children/*[1]; [t] \"1⠠⠘⠱\"",
+      "self::underscore",
+      "children/*[2][@role=\"underaccent\" and text()=\"→\"]"
+    ],
+    [
+      "Rule",
+      "mixed-number",
+      "default",
+      "[n] children/*[1]; [t] \"#\"; [n] children/*[2]",
+      "self::number[@role=\"mixed\"]"
+    ],
+    [
+      "Rule",
+      "empty-in-structure",
+      "default",
+      "[t] \"⠬\"",
+      "self::empty",
+      "parent::*/parent::*[self::fraction or self::sqrt or self::root]"
+    ],
+    [
+      "Rule",
+      "simple-number-fraction",
+      "default",
+      "[n] children/*[1]; [t] \"N⠌\"; [n] children/*[2]",
+      "self::fraction[@role=\"vulgar\"]",
+      "children/*[2][not(self::empty)]"
+    ],
+    [
+      "Rule",
+      "simple-number-fraction-sequence",
+      "default",
+      "[n] children/*[1]; [t] \"N⠌\"; [m] children/*[2]/children/*",
+      "self::fraction",
+      "children/*[1][self::number]",
+      "children/*[2][self::punctuated[@role=\"sequence\"]]",
+      "not(children/*[2]/children/*[not(self::number or self::punctuation[@role=\"comma\" or @role=\"fullstop\"])])"
+    ],
+    [
+      "Rule",
+      "simple-number-fraction-sequences",
+      "default",
+      "[m] children/*[1]/children/*; [t] \"N⠌\"; [m] children/*[2]/children/*",
+      "self::fraction",
+      "children/*[1][self::punctuated[@role=\"sequence\"]]",
+      "children/*[2][self::punctuated[@role=\"sequence\"]]",
+      "not(children/*[1]/children/*[not(self::number or self::punctuation[@role=\"comma\" or @role=\"fullstop\"])])",
+      "not(children/*[2]/children/*[not(self::number or self::punctuation[@role=\"comma\" or @role=\"fullstop\"])])"
+    ],
+    [
+      "Rule",
+      "fraction",
+      "default",
+      "[t] \"1⠷\"; [n] children/*[1]; [t] \"1⠨⠌\"; [n] children/*[2]; [t] \"1⠾\"",
+      "self::fraction"
+    ],
+    [
+      "Rule",
+      "sqrt",
+      "default",
+      "[t] \"1⠩\"; [m] children/*; [t] \"1⠬\"",
+      "self::sqrt"
+    ],
+    [
+      "Rule",
+      "root-grouped-index",
+      "default",
+      "[t] \"1⠩1⠔1⠣\"; [n] children/*[1]; [t] \"1⠜#\"; [n] children/*[2]; [t] \"1⠬\"",
+      "self::root",
+      "children/*[1][not(self::number)]",
+      "children/*[1][not(self::identifier) or string-length(text())>1]"
+    ],
+    [
+      "Rule",
+      "root",
+      "default",
+      "[t] \"1⠩1⠔\"; [n] children/*[1]; [t] \"#\"; [n] children/*[2]; [t] \"1⠬\"",
+      "self::root"
+    ],
+    [
+      "Rule",
+      "tensor-leftsub-leftsuper",
+      "default",
+      "[t] \"1⠢\"; [n] children/*[@role=\"leftsub\"]; [t] \"1⠔\"; [n] children/*[@role=\"leftsuper\"]; [n] children/*[1]; [t] \"#\"",
+      "self::tensor",
+      "children/*[@role=\"leftsub\"][not(self::empty)]",
+      "children/*[@role=\"leftsuper\"][not(self::empty)]",
+      "children/*[@role=\"rightsub\"][self::empty]",
+      "children/*[@role=\"rightsuper\"][self::empty]"
+    ],
+    [
+      "Rule",
+      "tensor-leftsuper",
+      "default",
+      "[t] \"1⠔\"; [n] children/*[@role=\"leftsuper\"]; [n] children/*[1]; [t] \"#\"",
+      "self::tensor",
+      "children/*[@role=\"leftsub\"][self::empty]",
+      "children/*[@role=\"leftsuper\"][not(self::empty)]",
+      "children/*[@role=\"rightsub\"][self::empty]",
+      "children/*[@role=\"rightsuper\"][self::empty]"
+    ],
+    [
+      "Rule",
+      "tensor-rightsub",
+      "default",
+      "[n] children/*[1]; [t] \"1⠢\"; [n] children/*[@role=\"rightsub\"]; [t] \"#\"",
+      "self::tensor",
+      "children/*[@role=\"leftsub\"][self::empty]",
+      "children/*[@role=\"leftsuper\"][self::empty]",
+      "children/*[@role=\"rightsub\"][not(self::empty)]",
+      "children/*[@role=\"rightsuper\"][self::empty]"
+    ],
+    [
+      "Rule",
+      "tensor-rightsuper",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔\"; [n] children/*[@role=\"rightsuper\"]; [t] \"#\"",
+      "self::tensor",
+      "children/*[@role=\"leftsub\"][self::empty]",
+      "children/*[@role=\"leftsuper\"][self::empty]",
+      "children/*[@role=\"rightsub\"][self::empty]",
+      "children/*[@role=\"rightsuper\"][not(self::empty)]"
+    ],
+    [
+      "Rule",
+      "subscript",
+      "default",
+      "[n] children/*[1]; [t] \"1⠢\"; [n] children/*[2]; [t] \"#\"",
+      "self::subscript"
+    ],
+    [
+      "Rule",
+      "subscript-grouped",
+      "default",
+      "[n] children/*[1]; [t] \"1⠢1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::subscript",
+      "children/*[2][self::prefixop or self::subscript or self::superscript or self::infixop or self::relseq or self::multirel]"
+    ],
+    [
+      "Rule",
+      "superscript-prime",
+      "default",
+      "[n] children/*[1]; [n] children/*[2]",
+      "self::superscript",
+      "children/*[2][self::punctuation[@role=\"prime\"]]"
+    ],
+    [
+      "Rule",
+      "superscript-overscore-exponent",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript",
+      "children/*[2][self::overscore]"
+    ],
+    [
+      "Rule",
+      "superscript-subscript-base-grouped",
+      "default",
+      "[n] children/*[1]/children/*[1]; [t] \"1⠢\"; [n] children/*[1]/children/*[2]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript",
+      "children/*[1][self::subscript]",
+      "children/*[2][self::operator[@role=\"multiop\"] or self::identifier[string-length(text())>1]]"
+    ],
+    [
+      "Rule",
+      "superscript-subscript-base",
+      "default",
+      "[n] children/*[1]/children/*[1]; [t] \"1⠢\"; [n] children/*[1]/children/*[2]; [t] \"1⠔\"; [n] children/*[2]; [t] \"#\"",
+      "self::superscript",
+      "children/*[1][self::subscript]"
+    ],
+    [
+      "Rule",
+      "superscript-grouped-identifier",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript",
+      "children/*[2][self::operator[@role=\"multiop\"] or self::identifier[string-length(text())>1]]"
+    ],
+    [
+      "Rule",
+      "superscript",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔\"; [n] children/*[2]; [t] \"#\"",
+      "self::superscript"
+    ],
+    [
+      "Rule",
+      "superscript-unknown-grouped",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript[@role=\"unknown\"]",
+      "children/*[2][self::operator[@role=\"multiop\"] or self::identifier[string-length(text())>1]]"
+    ],
+    [
+      "Rule",
+      "superscript-unknown",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔\"; [n] children/*[2]; [t] \"#\"",
+      "self::superscript[@role=\"unknown\"]"
+    ],
+    [
+      "Rule",
+      "unit-superscript-prefix",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript",
+      "children/*[1][self::identifier]",
+      "children/*[2][self::prefixop]",
+      "preceding-sibling::*[1][self::text[@role=\"space\"]]"
+    ],
+    [
+      "Rule",
+      "superscript-grouped",
+      "default",
+      "[n] children/*[1]; [t] \"1⠔1⠣\"; [n] children/*[2]; [t] \"1⠜#\"",
+      "self::superscript",
+      "children/*[2][self::prefixop or self::subscript or self::superscript or self::infixop or self::relseq or self::multirel]"
+    ]
+  ]
+}

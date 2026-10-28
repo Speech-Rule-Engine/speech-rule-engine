@@ -26,6 +26,7 @@ import * as MathspeakUtil from './mathspeak_util.js';
 import * as NemethUtil from './nemeth_util.js';
 import * as NumbersUtil from './numbers_util.js';
 import * as SpeechRules from './speech_rules.js';
+import * as UebUtil from './ueb_util.js';
 
 /**
  * Adds the custom functions for the prefix rules.
@@ -93,4 +94,8 @@ export function BrailleRules() {
   );
 
   SpeechRules.addStore('euro.braille.default', 'nemeth.braille.default', {});
+  SpeechRules.addStore('ueb.braille.default', 'nemeth.braille.default', {
+    CTFuebApplicationIterator: UebUtil.applicationIterator,
+    CTFuebContentIterator: UebUtil.contentIterator
+  });
 }

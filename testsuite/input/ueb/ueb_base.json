@@ -1,0 +1,163 @@
+{
+  "domain": "default",
+  "modality": "braille",
+  "actual": true,
+  "tests": {
+    "identifier": {
+      "test": true,
+      "input": "<mi>x</mi>"
+    },
+    "number": {
+      "test": true,
+      "input": "<mn>1</mn>"
+    },
+    "multi_digit_number": {
+      "test": true,
+      "input": "<mn>12</mn>"
+    },
+    "number_relation_letter": {
+      "test": true,
+      "input": "<mn>1</mn><mo>=</mo><mi>b</mi>"
+    },
+    "binary_operator": {
+      "test": true,
+      "input": "<mi>x</mi><mo>+</mo><mi>y</mi>"
+    },
+    "relation": {
+      "test": true,
+      "input": "<mi>x</mi><mo>=</mo><mn>1</mn>"
+    },
+    "fraction": {
+      "test": true,
+      "input": "<mfrac><mi>x</mi><mi>y</mi></mfrac>"
+    },
+    "sqrt": {
+      "test": true,
+      "input": "<msqrt><mi>x</mi></msqrt>"
+    },
+    "superscript": {
+      "test": true,
+      "input": "<msup><mi>x</mi><mn>2</mn></msup>"
+    },
+    "subscript": {
+      "test": true,
+      "input": "<msub><mi>x</mi><mn>1</mn></msub>"
+    },
+    "parentheses": {
+      "test": true,
+      "input": "<mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow>"
+    },
+    "parenthesized_shortform_letter": {
+      "test": true,
+      "input": "<mrow><mo>(</mo><mi>b</mi><mo>)</mo></mrow>"
+    },
+    "capital_word": {
+      "test": true,
+      "input": "<mi>ABCD</mi>"
+    },
+    "decimal_number": {
+      "test": true,
+      "input": "<mn>8.93</mn>"
+    },
+    "simple_fraction": {
+      "test": true,
+      "input": "<mfrac><mn>5</mn><mn>8</mn></mfrac>"
+    },
+    "mixed_number": {
+      "test": true,
+      "input": "<mn>2</mn><mfrac bevelled='true'><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "function_subscript": {
+      "test": true,
+      "input": "<msub><mi>log</mi><mi>x</mi></msub><mi>y</mi>"
+    },
+    "bold_inline_number": {
+      "test": true,
+      "input": "<mn>67𝟖45</mn>"
+    },
+    "bold_number_node": {
+      "test": true,
+      "input": "<mn>67</mn><mn mathvariant='bold'>845</mn>"
+    },
+    "numeric_fraction_rows": {
+      "test": true,
+      "input": "<mfrac><mrow><mn>5</mn><mo>.</mo><mn>7</mn></mrow><mrow><mn>2</mn><mo>,</mo><mn>000</mn></mrow></mfrac>"
+    },
+    "nested_superscript": {
+      "test": true,
+      "input": "<msup><mi>e</mi><msup><mi>x</mi><mn>2</mn></msup></msup>"
+    },
+    "nested_subscript": {
+      "test": true,
+      "input": "<msub><mi>P</mi><msub><mi>x</mi><mi>i</mi></msub></msub>"
+    },
+    "square_omission": {
+      "test": true,
+      "input": "<mn>3</mn><mo>&#x25A1;</mo><mn>7</mn><mo>=</mo><mn>10</mn>"
+    },
+    "cube_root": {
+      "test": true,
+      "input": "<mroot><mn>8</mn><mn>3</mn></mroot><mo>=</mo><mn>2</mn>"
+    },
+    "left_prescript": {
+      "test": true,
+      "input": "<mmultiscripts><mi>U</mi><mprescripts/><mn>92</mn><mn>238</mn></mmultiscripts>"
+    },
+    "log_variable_spacing": {
+      "test": true,
+      "input": "<mi>log</mi><mi>y</mi>"
+    },
+    "implicit_function_spacing": {
+      "test": true,
+      "input": "<mi>x</mi><mi>sin</mi><mn>60</mn>"
+    },
+    "set_collection": {
+      "test": true,
+      "input": "<mi>A</mi><mo>=</mo><mfenced open='{' close='}'><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn></mrow></mfenced>"
+    },
+    "prime_function": {
+      "test": true,
+      "input": "<mi>f</mi><mo>'</mo><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "binomial_vector": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness='0'><mi>n</mi><mi>r</mi></mfrac></mfenced>"
+    },
+    "summation_limits": {
+      "test": true,
+      "input": "<munderover><mo>&#x2211;</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup>"
+    },
+    "word_symbol_xor": {
+      "test": true,
+      "input": "<mi>p</mi><mo>&#x22bb;</mo><mi>q</mi>"
+    },
+    "quantifier_element_spacing": {
+      "test": true,
+      "input": "<mi mathvariant='normal'>&#x2200;</mi><mi>y</mi><mo>&#x2208;</mo><mi>Y</mi><mstyle scriptlevel='0'><mspace width='0.278em'/></mstyle><mi mathvariant='normal'>&#x2203;</mi><mi>x</mi><mo>&#x2208;</mo><mi>X</mi>"
+    },
+    "overbar_fraction_passage": {
+      "test": true,
+      "input": "<mover><mi>x</mi><mo>_</mo></mover><mo>=</mo><mfrac><mrow><mn>10</mn><mo>+</mo><mn>11</mn><mo>+</mo><mn>12</mn></mrow><mn>3</mn></mfrac>"
+    },
+    "chemical_parenthesized_subscript": {
+      "test": true,
+      "input": "<mi>Ca</mi><msub><mrow><mo>(</mo><mi>OH</mi><mo>)</mo></mrow><mn>2</mn></msub>"
+    },
+    "chemical_grouped_charge": {
+      "test": true,
+      "input": "<mi mathvariant='normal'>S</mi><mmultiscripts><mi mathvariant='normal'>O</mi><mn>4</mn><mrow><mo>-</mo><mo>-</mo></mrow></mmultiscripts>"
+    },
+    "chemical_oxidation_state": {
+      "test": true,
+      "input": "<mmultiscripts><mi>Fe</mi><none/><mi>III</mi></mmultiscripts><mmultiscripts><mi>Cl</mi><mn>3</mn><none/></mmultiscripts>"
+    },
+    "caps_passage_products": {
+      "test": true,
+      "input": "<mi>P</mi><mo>⁢</mo><mi>Q</mi><mo>+</mo><mi>Q</mi><mo>⁢</mo><mi>R</mi><mo>=</mo><mi>R</mi><mo>⁢</mo><mi>S</mi><mo>+</mo><mi>Q</mi><mo>⁢</mo><mi>R</mi>"
+    },
+    "empty_mrow": {
+      "test": true,
+      "input": "<mrow></mrow>"
+    }
+  }
+}
