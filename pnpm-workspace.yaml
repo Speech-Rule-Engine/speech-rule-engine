@@ -3,5 +3,6 @@ packages:
   - 'l10n'
 allowBuilds:
   '@firebase/util': false
+  '@parcel/watcher': false
   protobufjs: false
   unrs-resolver: false
