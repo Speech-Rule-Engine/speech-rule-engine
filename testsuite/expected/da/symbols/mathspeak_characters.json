@@ -9806,13 +9806,13 @@
       "expected": "gange"
     },
     "+": {
-      "expected": "plustegn"
+      "expected": "plus"
     },
     ",": {
       "expected": "komma"
     },
     "-": {
-      "expected": "minustegn"
+      "expected": "minus"
     },
     ".": {
       "expected": "prik"
@@ -9830,7 +9830,7 @@
       "expected": "mindre end"
     },
     "=": {
-      "expected": "lig med"
+      "expected": "er lig med"
     },
     ">": {
       "expected": "større end"
@@ -9878,13 +9878,13 @@
       "expected": "brudt bar"
     },
     "§": {
-      "expected": "paragraf tegn"
+      "expected": "paragraftegn"
     },
     "¨": {
       "expected": "omlyd"
     },
     "©": {
-      "expected": "kopieringstegn"
+      "expected": "copyrighttegn"
     },
     "ª": {
       "expected": "feminin ordinal indikator"
@@ -9914,7 +9914,7 @@
       "expected": "mikro symbol"
     },
     "¶": {
-      "expected": "paragraf tegn"
+      "expected": "afsnitstegn"
     },
     "·": {
       "expected": "prik"
@@ -9986,10 +9986,10 @@
       "expected": "dobbelt understregning"
     },
     "‘": {
-      "expected": "venstre citat tegn"
+      "expected": "venstre enkelt anførselstegn"
     },
     "’": {
-      "expected": "højre citat tegn"
+      "expected": "højre enkelt anførselstegn"
     },
     "‚": {
       "expected": "lavt enkelt citat symbol"
@@ -9998,10 +9998,10 @@
       "expected": "venstre, omvendt enkelt anførselstegn"
     },
     "“": {
-      "expected": "venstre citat tegn"
+      "expected": "venstre anførselstegn"
     },
     "”": {
-      "expected": "højre citat tegn"
+      "expected": "højre anførselstegn"
     },
     "„": {
       "expected": "lavt dobbelt citat symbol"
@@ -10034,10 +10034,10 @@
       "expected": "orddelingspunkt"
     },
     "‰": {
-      "expected": "promille tegn"
+      "expected": "promille"
     },
     "‱": {
-      "expected": "per ti tusinde tegn"
+      "expected": "per titusinde"
     },
     "′": {
       "expected": "mærke"
@@ -10259,7 +10259,7 @@
       "expected": "sum"
     },
     "−": {
-      "expected": "minustegn"
+      "expected": "minus"
     },
     "∓": {
       "expected": "minus plus"
@@ -10793,7 +10793,7 @@
       "expected": "diamant operator"
     },
     "⋅": {
-      "expected": "prik"
+      "expected": "gange"
     },
     "⋆": {
       "expected": "stjerne"
@@ -12233,7 +12233,7 @@
       "expected": "udråbstegn"
     },
     "＂": {
-      "expected": "spørgsmålstegn"
+      "expected": "anførselstegn"
     },
     "＃": {
       "expected": "nummertegn"

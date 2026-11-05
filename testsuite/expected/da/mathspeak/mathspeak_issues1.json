@@ -46,13 +46,13 @@
       "expected": "30 grader"
     },
     "MixedIdentifier_default": {
-      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+      "expected": "stort S I stort O normal 2 plus 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plus 2 stort H normal 2 stort O normal"
     },
     "MixedIdentifier_brief": {
-      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+      "expected": "stort S I stort O normal 2 plus 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plus 2 stort H normal 2 stort O normal"
     },
     "MixedIdentifier_sbrief": {
-      "expected": "stort S I stort O normal 2 plustegn 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plustegn 2 stort H normal 2 stort O normal"
+      "expected": "stort S I stort O normal 2 plus 6 stort H normal stort F normal højrevendt pil stort H normal 2 stort S I stort F normal 6 plus 2 stort H normal 2 stort O normal"
     },
     "ParenSuper_default": {
       "expected": "venstre parantes a højre parantes kvadreret"
@@ -82,13 +82,13 @@
       "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med c 2 h Hævet 4 minus 2 s"
     },
     "SupBaseMultirel_default": {
-      "expected": "c 1 h Hævet 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Hævet 4 minus 2 s"
+      "expected": "c 1 h Hævet 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med c 2 h Hævet 4 minus 2 s"
     },
     "SupBaseMultirel_brief": {
-      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Hævet 4 minus 2 s"
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med c 2 h Hævet 4 minus 2 s"
     },
     "SupBaseMultirel_sbrief": {
-      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med c 2 h Hævet 4 minus 2 s"
+      "expected": "c 1 h Hævet 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk er lig med c 2 h Hævet 4 minus 2 s"
     },
     "SubBaseRelseq_default": {
       "expected": "h Sænket s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s"
@@ -100,13 +100,13 @@
       "expected": "h Sænket s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med h Sænket s"
     },
     "SubBaseMultirel_default": {
-      "expected": "h Sænket s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s"
+      "expected": "h Sænket s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med h Sænket s"
     },
     "SubBaseMultirel_brief": {
-      "expected": "h Sænket s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s"
+      "expected": "h Sænket s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med h Sænket s"
     },
     "SubBaseMultirel_sbrief": {
-      "expected": "h Sænket s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med h Sænket s"
+      "expected": "h Sænket s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk er lig med h Sænket s"
     },
     "SubSuperBaseRelseq_default": {
       "expected": "h Sænket s Hævet t Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk mindre end eller lig med h Sænket s Hævet t"
@@ -118,22 +118,22 @@
       "expected": "h Sænket s Hævet t Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med h Sænket s Hævet t"
     },
     "SubSuperBaseMultirel_default": {
-      "expected": "h Sænket s Hævet t Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s Hævet t"
+      "expected": "h Sænket s Hævet t Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med h Sænket s Hævet t"
     },
     "SubSuperBaseMultirel_brief": {
-      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med h Sænket s Hævet t"
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med h Sænket s Hævet t"
     },
     "SubSuperBaseMultirel_sbrief": {
-      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med h Sænket s Hævet t"
+      "expected": "h Sænket s Hævet t Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk er lig med h Sænket s Hævet t"
     },
     "SquareWithText_default": {
-      "expected": "Start Brøk area of triangle Over area of square Slut Brøk lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
+      "expected": "Start Brøk area of triangle Over area of square Slut Brøk er lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
     },
     "SquareWithText_brief": {
-      "expected": "Start Brøk area of triangle Over area of square Slut Brøk lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
+      "expected": "Start Brøk area of triangle Over area of square Slut Brøk er lig med Start Brøk 1 unit kvadreret Over 16 units i tredje Slut Brøk"
     },
     "SquareWithText_sbrief": {
-      "expected": "Brøk area of triangle Over area of square SlutBrøk lig med Brøk 1 unit kvadreret Over 16 units i tredje SlutBrøk"
+      "expected": "Brøk area of triangle Over area of square SlutBrøk er lig med Brøk 1 unit kvadreret Over 16 units i tredje SlutBrøk"
     },
     "FootnoteWithText_default": {
       "expected": "area of triangle area of square Hævet 1 Grundlinje 1 unit Hævet 2 Grundlinje 16 units Hævet 3"
