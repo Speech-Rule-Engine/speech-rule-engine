@@ -109,7 +109,7 @@
       "expected": "stort C dobbeltstreget"
     },
     "LimitLower0_default": {
-      "expected": "SymbolUnder grænseværdi Med understreget Undertekst a lig med 5 Undertekst b lig med 3"
+      "expected": "SymbolUnder grænseværdi Med understreget Undertekst a er lig med 5 Undertekst b er lig med 3"
     },
     "LimitLower1_default": {
       "expected": "grænseværdi Undertekst n Overtekst 2 Overtekst x"
@@ -127,13 +127,13 @@
       "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk mindre end eller lig med c 2 h Sænket 4 minus 2 s"
     },
     "SubBaseMultirel_default": {
-      "expected": "c 1 h Sænket 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Sænket 4 minus 2 s"
+      "expected": "c 1 h Sænket 4 minus 2 s Grundlinje mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med c 2 h Sænket 4 minus 2 s"
     },
     "SubBaseMultirel_brief": {
-      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk lig med c 2 h Sænket 4 minus 2 s"
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Start Brøk 1 Over 2 stort T Slut Brøk er lig med c 2 h Sænket 4 minus 2 s"
     },
     "SubBaseMultirel_sbrief": {
-      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk lig med c 2 h Sænket 4 minus 2 s"
+      "expected": "c 1 h Sænket 4 minus 2 s Basis mindre end eller lig med Brøk 1 Over 2 stort T SlutBrøk er lig med c 2 h Sænket 4 minus 2 s"
     }
   }
 }

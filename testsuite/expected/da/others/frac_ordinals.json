@@ -11,10 +11,10 @@
       "expected": "nuledel"
     },
     "Number_1": {
-      "expected": "hele"
+      "expected": "hel"
     },
     "Number_2": {
-      "expected": "halve"
+      "expected": "halv"
     },
     "Number_3": {
       "expected": "tredjedel"

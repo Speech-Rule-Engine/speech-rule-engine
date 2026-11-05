@@ -129,7 +129,7 @@
       "expected": "3 kilometer"
     },
     "UnitsSimple_2": {
-      "expected": "kilometer plustegn sekunder"
+      "expected": "kilometer plus sekunder"
     },
     "UnitsSuperscript_0": {
       "expected": "kilometer kvadreret"
@@ -213,34 +213,34 @@
       "expected": "meter sekunder liter"
     },
     "issue_364_1": {
-      "expected": "63360 tommer lig med 63360 tommer lig med 63360 dobbelt mærke lig med 63360 inches lig med 5280 fod lig med 5280 fod lig med 5280 mærke lig med 5280 feet lig med 1760 yards lig med 1760 yards lig med 1760 yards lig med 1 mil lig med 1 mil lig med 1 mile"
+      "expected": "63360 tommer er lig med 63360 tommer er lig med 63360 dobbelt mærke er lig med 63360 inches er lig med 5280 fod er lig med 5280 fod er lig med 5280 mærke er lig med 5280 feet er lig med 1760 yards er lig med 1760 yards er lig med 1760 yards er lig med 1 mil er lig med 1 mil er lig med 1 mile"
     },
     "issue_364_2": {
-      "expected": "8000 links lig med 8000 links lig med 8000 links lig med 320 stænger lig med 320 stænger lig med 320 rods lig med 80 kæder lig med 80 kæder lig med 80 chains lig med 8 furlong lig med 8 furlong lig med 8 furlongs lig med 1 mil lig med 1 mil lig med 1 mile"
+      "expected": "8000 links er lig med 8000 links er lig med 8000 links er lig med 320 stænger er lig med 320 stænger er lig med 320 rods er lig med 80 kæder er lig med 80 kæder er lig med 80 chains er lig med 8 furlong er lig med 8 furlong er lig med 8 furlongs er lig med 1 mil er lig med 1 mil er lig med 1 mile"
     },
     "issue_364_3": {
-      "expected": "43560 kvadratfod lig med 43560 kvadratfod lig med 43560 fod kvadreret lig med 43560 mærke kvadreret lig med 43560 square feet lig med 4840 kvadratyard lig med 4840 kvadratyard lig med 4840 yards kvadreret lig med 4840 square yards lig med 160 kvadratrødder lig med 160 kvadratrødder lig med 160 stænger kvadreret lig med 160 square rods lig med 1 acres lig med 1 acres lig med 1 acre lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil lig med Start Brøk 1 Over 640 Slut Brøk mil kvadreret lig med Start Brøk 1 Over 640 Slut Brøk square miles"
+      "expected": "43560 kvadratfod er lig med 43560 kvadratfod er lig med 43560 fod kvadreret er lig med 43560 mærke kvadreret er lig med 43560 square feet er lig med 4840 kvadratyard er lig med 4840 kvadratyard er lig med 4840 yards kvadreret er lig med 4840 square yards er lig med 160 kvadratrødder er lig med 160 kvadratrødder er lig med 160 stænger kvadreret er lig med 160 square rods er lig med 1 acres er lig med 1 acres er lig med 1 acre er lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil er lig med Start Brøk 1 Over 640 Slut Brøk kvadratmil er lig med Start Brøk 1 Over 640 Slut Brøk mil kvadreret er lig med Start Brøk 1 Over 640 Slut Brøk square miles"
     },
     "issue_364_4": {
-      "expected": "46656 kubiktommer lig med 46656 kubiktommer lig med 46656 tommer i tredje lig med 46656 dobbelt mærke i tredje lig med 46656 cubic inches lig med 27 kubikfod lig med 27 kubikfod lig med 27 fod i tredje lig med 27 mærke i tredje lig med 27 cubic feet lig med 1 kubikyards lig med 1 kubikyards lig med 1 yards i tredje lig med 1 cubic yard"
+      "expected": "46656 kubiktommer er lig med 46656 kubiktommer er lig med 46656 tommer i tredje er lig med 46656 dobbelt mærke i tredje er lig med 46656 cubic inches er lig med 27 kubikfod er lig med 27 kubikfod er lig med 27 fod i tredje er lig med 27 mærke i tredje er lig med 27 cubic feet er lig med 1 kubikyards er lig med 1 kubikyards er lig med 1 yards i tredje er lig med 1 cubic yard"
     },
     "issue_364_5": {
-      "expected": "1024 fluid drams lig med 1024 fluid drams lig med 1024 fluid drams lig med 768 teskeer lig med 768 teskeer lig med 768 teaspoons lig med 256 spiseskeer lig med 256 spiseskeer lig med 256 tablespoons lig med 128 flydende ounces lig med 128 flydende ounces lig med 128 fluid ounces lig med 16 kopper lig med 16 kopper lig med 16 cups lig med 8 pints lig med 8 pints lig med 8 pints lig med 4 quarts lig med 4 quarts lig med 4 quarts lig med 1 gallons lig med 1 gallons lig med 1 gallon"
+      "expected": "1024 fluid drams er lig med 1024 fluid drams er lig med 1024 fluid drams er lig med 768 teskeer er lig med 768 teskeer er lig med 768 teaspoons er lig med 256 spiseskeer er lig med 256 spiseskeer er lig med 256 tablespoons er lig med 128 flydende ounces er lig med 128 flydende ounces er lig med 128 fluid ounces er lig med 16 kopper er lig med 16 kopper er lig med 16 cups er lig med 8 pints er lig med 8 pints er lig med 8 pints er lig med 4 quarts er lig med 4 quarts er lig med 4 quarts er lig med 1 gallons er lig med 1 gallons er lig med 1 gallon"
     },
     "issue_364_6": {
-      "expected": "256 dram lig med 256 dram lig med 256 drams lig med 16 ounces lig med 16 ounces lig med 16 ounces lig med 1 # lig med 1 pund lig med 1 pund lig med 1 pounds lig med 100 hektokilogram lig med 100 hektokilogram lig med 100 hundredweights lig med 2000 tons"
+      "expected": "256 dram er lig med 256 dram er lig med 256 drams er lig med 16 ounces er lig med 16 ounces er lig med 16 ounces er lig med 1 # er lig med 1 pund er lig med 1 pund er lig med 1 pounds er lig med 100 hektokilogram er lig med 100 hektokilogram er lig med 100 hundredweights er lig med 2000 tons"
     },
     "issue_366": {
-      "expected": "63360 tommer lig med 63360 tommer lig med 63360 dobbelt mærke lig med 63360 inches lig med 5280 fod lig med 5280 fod lig med 5280 mærke lig med 5280 feet lig med 1760 yards lig med 1760 yards lig med 1760 yards lig med 1 mil lig med 1 mil lig med 1 mile"
+      "expected": "63360 tommer er lig med 63360 tommer er lig med 63360 dobbelt mærke er lig med 63360 inches er lig med 5280 fod er lig med 5280 fod er lig med 5280 mærke er lig med 5280 feet er lig med 1760 yards er lig med 1760 yards er lig med 1760 yards er lig med 1 mil er lig med 1 mil er lig med 1 mile"
     },
     "testSample_13_1_2_var0": {
-      "expected": "1 joule lig med 1 kilogram prik meter kvadreret prik sekunder Hævet negativ 2"
+      "expected": "1 joule er lig med 1 kilogram prik meter kvadreret prik sekunder Hævet negativ 2"
     },
     "testSample_13_1_2_var1": {
-      "expected": "1 joule lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
+      "expected": "1 joule er lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
     },
     "testSample_13_1_2_var2": {
-      "expected": "1 joule lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
+      "expected": "1 joule er lig med 1 kilogram meter kvadreret sekunder Hævet negativ 2"
     },
     "unit_cube": {
       "expected": "tommer i tredje"
@@ -273,10 +273,10 @@
       "expected": "3 kilometer 1 kilogram sekunder kvadreret joule"
     },
     "UnitMultiple": {
-      "expected": "1 kilometer sekunder plustegn 2 kilometer sekunder plustegn 0 kilometer sekunder plustegn a kilometer sekunder plustegn"
+      "expected": "1 kilometer sekunder plus 2 kilometer sekunder plus 0 kilometer sekunder plus a kilometer sekunder plus"
     },
     "UnitMultitude": {
-      "expected": "1 kilometer plustegn 2 kilometer plustegn 0 kilometer plustegn a kilometer"
+      "expected": "1 kilometer plus 2 kilometer plus 0 kilometer plus a kilometer"
     },
     "UnitNumb_0": {
       "expected": "1 to tredjedele kilogram"
@@ -288,7 +288,7 @@
       "expected": "1 kilometer 2 kilogram kilometer"
     },
     "UnitTriple": {
-      "expected": "1 kilometer kilogram sekunder plustegn 2 kilometer kilogram sekunder plustegn 0 kilometer kilogram sekunder plustegn a kilometer kilogram sekunder plustegn"
+      "expected": "1 kilometer kilogram sekunder plus 2 kilometer kilogram sekunder plus 0 kilometer kilogram sekunder plus a kilometer kilogram sekunder plus"
     },
     "CurrencySingular_0_default": {
       "expected": "1 dollars"
@@ -309,16 +309,16 @@
       "expected": "dollars 2"
     },
     "CurrencyMultitude_0_default": {
-      "expected": "1 dollars plustegn 2 dollars plustegn 0 dollars plustegn a dollars"
+      "expected": "1 dollars plus 2 dollars plus 0 dollars plus a dollars"
     },
     "CurrencyMultitude_1_default": {
-      "expected": "1 dollars plustegn dollars 2 plustegn 0 dollars plustegn dollars a"
+      "expected": "1 dollars plus dollars 2 plus 0 dollars plus dollars a"
     },
     "CurrencyMultitude_2_default": {
-      "expected": "1 euro plustegn 2 euro plustegn 0 euro plustegn a euro"
+      "expected": "1 euro plus 2 euro plus 0 euro plus a euro"
     },
     "CurrencyMultitude_3_default": {
-      "expected": "1 pund plustegn 2 pund plustegn 0 pund plustegn a pund"
+      "expected": "1 pund plus 2 pund plus 0 pund plus a pund"
     }
   }
 }

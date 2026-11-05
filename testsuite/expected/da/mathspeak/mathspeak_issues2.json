@@ -10,46 +10,46 @@
   "compare": true,
   "tests": {
     "MathspeakRoots_0": {
-      "expected": "StartRod a SlutRot"
+      "expected": "StartRod a SlutRod"
     },
     "MathspeakRoots_1": {
-      "expected": "RodEksponent 2 StartRod a SlutRot"
+      "expected": "RodEksponent 2 StartRod a SlutRod"
     },
     "MathspeakRoots_2": {
-      "expected": "RodEksponent 3 StartRod a SlutRot"
+      "expected": "RodEksponent 3 StartRod a SlutRod"
     },
     "MathspeakRoots_3": {
-      "expected": "RodEksponent 4 StartRod a SlutRot"
+      "expected": "RodEksponent 4 StartRod a SlutRod"
     },
     "MathspeakRoots_4": {
-      "expected": "IndlejretStartRod StartRod a SlutRot IndlejretSlutRot"
+      "expected": "IndlejretStartRod StartRod a SlutRod IndlejretSlutRod"
     },
     "MathspeakRoots_5": {
-      "expected": "IndlejretDobbeltStartRod IndlejretStartRod StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltStartRod IndlejretStartRod StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "MathspeakRoots_6": {
-      "expected": "IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot"
+      "expected": "IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRod IndlejretSlutRod"
     },
     "MathspeakRoots_7": {
-      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 2 IndlejretStartRod RodEksponent 2 StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "MathspeakRoots_8": {
-      "expected": "IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot"
+      "expected": "IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRod IndlejretSlutRod"
     },
     "MathspeakRoots_9": {
-      "expected": "IndlejretDobbeltRodEksponent 3 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltRodEksponent 3 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 3 StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "MathspeakRoots_10": {
-      "expected": "IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot"
+      "expected": "IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRod IndlejretSlutRod"
     },
     "MathspeakRoots_11": {
-      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 4 IndlejretStartRod RodEksponent 4 StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "MathspeakRoots_12": {
-      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 4 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltRodEksponent 2 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 4 StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "MathspeakRoots_13": {
-      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 2 StartRod a SlutRot IndlejretSlutRot IndlejretDobbeltSlutRot"
+      "expected": "IndlejretDobbeltRodEksponent 4 IndlejretDobbeltStartRod IndlejretRodEksponent 3 IndlejretStartRod RodEksponent 2 StartRod a SlutRod IndlejretSlutRod IndlejretDobbeltSlutRod"
     },
     "HtmlEntities_0": {
       "expected": "mindre end"
@@ -94,7 +94,7 @@
       "expected": "5"
     },
     "NegativeVulgarFraction_0": {
-      "expected": "en halve minus fem attendedele"
+      "expected": "en halv minus fem attendedele"
     },
     "NegativeVulgarFraction_1": {
       "expected": "minus Start Brøk 5,2 Over a Slut Brøk"
@@ -103,7 +103,7 @@
       "expected": "minus Start Brøk 5,2 Over 18 Slut Brøk"
     },
     "TrivialStuff_0": {
-      "expected": "a lig med b"
+      "expected": "a er lig med b"
     },
     "TrivialStuff_1": {
       "expected": "anførselstegn"
@@ -169,10 +169,10 @@
       "expected": "mindre end eller lig med 2"
     },
     "RelationsWithEmpty_1": {
-      "expected": "lig med 2 lig med"
+      "expected": "er lig med 2 er lig med"
     },
     "RelationsWithEmpty_2": {
-      "expected": "mindre end eller lig med 2 lig med"
+      "expected": "mindre end eller lig med 2 er lig med"
     },
     "RelationsWithEmpty_3": {
       "expected": "StartLayout 1. Række 1. Kolonne 1 2. Kolonne mindre end eller lig med 2 SlutLayout"
@@ -256,7 +256,7 @@
       "expected": "minus minus x"
     },
     "Issue320_3": {
-      "expected": "plustegn plustegn x"
+      "expected": "plus plus x"
     },
     "Issue320_4": {
       "expected": "sinus sinus x"
@@ -265,7 +265,7 @@
       "expected": "partielle afledte partielle afledte x"
     },
     "Issue320_6": {
-      "expected": "venstre parantes Start Brøk partielle afledte kvadreret Over partielle afledte x kvadreret Slut Brøk plustegn Start Brøk partielle afledte kvadreret Over partielle afledte y kvadreret Slut Brøk højre parantes StartNumeriskVærdi phi venstre parantes x plustegn I normal y højre parantes SlutNumeriskVærdi kvadreret lig med 0"
+      "expected": "venstre parantes Start Brøk partielle afledte kvadreret Over partielle afledte x kvadreret Slut Brøk plus Start Brøk partielle afledte kvadreret Over partielle afledte y kvadreret Slut Brøk højre parantes StartNumeriskVærdi phi venstre parantes x plus I normal y højre parantes SlutNumeriskVærdi kvadreret er lig med 0"
     },
     "Prime_0": {
       "expected": "x mærke"

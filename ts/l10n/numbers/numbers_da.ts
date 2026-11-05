@@ -114,10 +114,10 @@ function numberToWords(num: number, ordinal = false): string {
  */
 function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
-    return plural ? 'hel' : 'hele';
+    return plural ? 'hele' : 'hel';
   }
   if (num === 2) {
-    return plural ? 'halv' : 'halve';
+    return plural ? 'halve' : 'halv';
   }
   return wordOrdinal(num) + (plural ? 'dele' : 'del');
 }

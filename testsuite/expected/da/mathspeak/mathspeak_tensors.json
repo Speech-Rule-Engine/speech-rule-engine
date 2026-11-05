@@ -46,22 +46,22 @@
       "expected": "Sænket a Hævet b Basis x Hævet d Basis r"
     },
     "PartialTensorABDRootR_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorABDRootR_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x Hævet d Basis SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorABDRootR_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x Hævet d Basis SlutRot r"
+      "expected": "Rod Sænket a Hævet b Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorABDRRoot_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorABDRRoot_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x Hævet d Basis r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorABDRRoot_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x Hævet d Basis r SlutRot"
+      "expected": "Rod Sænket a Hævet b Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorABDFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Hævet b Grundlinje x Hævet d Grundlinje Slut Brøk r"
@@ -100,22 +100,22 @@
       "expected": "Sænket a Hævet b Basis x r"
     },
     "PartialTensorABRootR_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x SlutRod r"
     },
     "PartialTensorABRootR_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Basis x SlutRod r"
     },
     "PartialTensorABRootR_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x SlutRot r"
+      "expected": "Rod Sænket a Hævet b Basis x SlutRod r"
     },
     "PartialTensorABRRoot_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x r SlutRod"
     },
     "PartialTensorABRRoot_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Basis x r SlutRod"
     },
     "PartialTensorABRRoot_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x r SlutRot"
+      "expected": "Rod Sænket a Hævet b Basis x r SlutRod"
     },
     "PartialTensorABFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Hævet b Grundlinje x Slut Brøk r"
@@ -154,31 +154,31 @@
       "expected": "Sænket a Hævet b Basis x Sænket c Hævet d Basis r"
     },
     "PartialTensorABCDRoot_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d SlutRot"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d SlutRod"
     },
     "PartialTensorABCDRoot_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d SlutRot"
+      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d SlutRod"
     },
     "PartialTensorABCDRoot_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d SlutRot"
+      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d SlutRod"
     },
     "PartialTensorABCDRootR_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorABCDRootR_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorABCDRootR_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorABCDRRoot_default": {
-      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Grundlinje x Sænket c Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorABCDRRoot_brief": {
-      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "StartRod Sænket a Hævet b Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorABCDRRoot_sbrief": {
-      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "Rod Sænket a Hævet b Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorABCDFrac_default": {
       "expected": "Start Brøk 1 Over Sænket a Hævet b Grundlinje x Sænket c Hævet d Slut Brøk"
@@ -226,22 +226,22 @@
       "expected": "Hævet b Basis x r"
     },
     "PartialTensorBRootR_default": {
-      "expected": "StartRod Hævet b Grundlinje x SlutRot r"
+      "expected": "StartRod Hævet b Grundlinje x SlutRod r"
     },
     "PartialTensorBRootR_brief": {
-      "expected": "StartRod Hævet b Basis x SlutRot r"
+      "expected": "StartRod Hævet b Basis x SlutRod r"
     },
     "PartialTensorBRootR_sbrief": {
-      "expected": "Rod Hævet b Basis x SlutRot r"
+      "expected": "Rod Hævet b Basis x SlutRod r"
     },
     "PartialTensorBRRoot_default": {
-      "expected": "StartRod Hævet b Grundlinje x r SlutRot"
+      "expected": "StartRod Hævet b Grundlinje x r SlutRod"
     },
     "PartialTensorBRRoot_brief": {
-      "expected": "StartRod Hævet b Basis x r SlutRot"
+      "expected": "StartRod Hævet b Basis x r SlutRod"
     },
     "PartialTensorBRRoot_sbrief": {
-      "expected": "Rod Hævet b Basis x r SlutRot"
+      "expected": "Rod Hævet b Basis x r SlutRod"
     },
     "PartialTensorBFracR_default": {
       "expected": "Start Brøk 1 Over Hævet b Grundlinje x Slut Brøk r"
@@ -280,22 +280,22 @@
       "expected": "Hævet b Basis x Hævet d Basis r"
     },
     "PartialTensorBDRootR_default": {
-      "expected": "StartRod Hævet b Grundlinje x Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Hævet b Grundlinje x Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorBDRootR_brief": {
-      "expected": "StartRod Hævet b Basis x Hævet d Basis SlutRot r"
+      "expected": "StartRod Hævet b Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorBDRootR_sbrief": {
-      "expected": "Rod Hævet b Basis x Hævet d Basis SlutRot r"
+      "expected": "Rod Hævet b Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorBDRRoot_default": {
-      "expected": "StartRod Hævet b Grundlinje x Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Hævet b Grundlinje x Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorBDRRoot_brief": {
-      "expected": "StartRod Hævet b Basis x Hævet d Basis r SlutRot"
+      "expected": "StartRod Hævet b Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorBDRRoot_sbrief": {
-      "expected": "Rod Hævet b Basis x Hævet d Basis r SlutRot"
+      "expected": "Rod Hævet b Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorBDFracR_default": {
       "expected": "Start Brøk 1 Over Hævet b Grundlinje x Hævet d Grundlinje Slut Brøk r"
@@ -334,22 +334,22 @@
       "expected": "Hævet b Basis x Sænket c Basis r"
     },
     "PartialTensorBCRootR_default": {
-      "expected": "StartRod Hævet b Grundlinje x Sænket c Grundlinje SlutRot r"
+      "expected": "StartRod Hævet b Grundlinje x Sænket c Grundlinje SlutRod r"
     },
     "PartialTensorBCRootR_brief": {
-      "expected": "StartRod Hævet b Basis x Sænket c Basis SlutRot r"
+      "expected": "StartRod Hævet b Basis x Sænket c Basis SlutRod r"
     },
     "PartialTensorBCRootR_sbrief": {
-      "expected": "Rod Hævet b Basis x Sænket c Basis SlutRot r"
+      "expected": "Rod Hævet b Basis x Sænket c Basis SlutRod r"
     },
     "PartialTensorBCRRoot_default": {
-      "expected": "StartRod Hævet b Grundlinje x Sænket c Grundlinje r SlutRot"
+      "expected": "StartRod Hævet b Grundlinje x Sænket c Grundlinje r SlutRod"
     },
     "PartialTensorBCRRoot_brief": {
-      "expected": "StartRod Hævet b Basis x Sænket c Basis r SlutRot"
+      "expected": "StartRod Hævet b Basis x Sænket c Basis r SlutRod"
     },
     "PartialTensorBCRRoot_sbrief": {
-      "expected": "Rod Hævet b Basis x Sænket c Basis r SlutRot"
+      "expected": "Rod Hævet b Basis x Sænket c Basis r SlutRod"
     },
     "PartialTensorBCFracR_default": {
       "expected": "Start Brøk 1 Over Hævet b Grundlinje x Sænket c Grundlinje Slut Brøk r"
@@ -388,22 +388,22 @@
       "expected": "Hævet b Basis x Sænket c Hævet d Basis r"
     },
     "PartialTensorBCDRootR_default": {
-      "expected": "StartRod Hævet b Grundlinje x Sænket c Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Hævet b Grundlinje x Sænket c Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorBCDRootR_brief": {
-      "expected": "StartRod Hævet b Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "StartRod Hævet b Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorBCDRootR_sbrief": {
-      "expected": "Rod Hævet b Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "Rod Hævet b Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorBCDRRoot_default": {
-      "expected": "StartRod Hævet b Grundlinje x Sænket c Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Hævet b Grundlinje x Sænket c Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorBCDRRoot_brief": {
-      "expected": "StartRod Hævet b Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "StartRod Hævet b Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorBCDRRoot_sbrief": {
-      "expected": "Rod Hævet b Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "Rod Hævet b Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorBCDFracR_default": {
       "expected": "Start Brøk 1 Over Hævet b Grundlinje x Sænket c Hævet d Grundlinje Slut Brøk r"
@@ -442,22 +442,22 @@
       "expected": "Sænket a Basis x r"
     },
     "PartialTensorARootR_default": {
-      "expected": "StartRod Sænket a Grundlinje x SlutRot r"
+      "expected": "StartRod Sænket a Grundlinje x SlutRod r"
     },
     "PartialTensorARootR_brief": {
-      "expected": "StartRod Sænket a Basis x SlutRot r"
+      "expected": "StartRod Sænket a Basis x SlutRod r"
     },
     "PartialTensorARootR_sbrief": {
-      "expected": "Rod Sænket a Basis x SlutRot r"
+      "expected": "Rod Sænket a Basis x SlutRod r"
     },
     "PartialTensorARRoot_default": {
-      "expected": "StartRod Sænket a Grundlinje x r SlutRot"
+      "expected": "StartRod Sænket a Grundlinje x r SlutRod"
     },
     "PartialTensorARRoot_brief": {
-      "expected": "StartRod Sænket a Basis x r SlutRot"
+      "expected": "StartRod Sænket a Basis x r SlutRod"
     },
     "PartialTensorARRoot_sbrief": {
-      "expected": "Rod Sænket a Basis x r SlutRot"
+      "expected": "Rod Sænket a Basis x r SlutRod"
     },
     "PartialTensorAFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Grundlinje x Slut Brøk r"
@@ -496,22 +496,22 @@
       "expected": "Sænket a Basis x Hævet d Basis r"
     },
     "PartialTensorADRootR_default": {
-      "expected": "StartRod Sænket a Grundlinje x Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Sænket a Grundlinje x Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorADRootR_brief": {
-      "expected": "StartRod Sænket a Basis x Hævet d Basis SlutRot r"
+      "expected": "StartRod Sænket a Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorADRootR_sbrief": {
-      "expected": "Rod Sænket a Basis x Hævet d Basis SlutRot r"
+      "expected": "Rod Sænket a Basis x Hævet d Basis SlutRod r"
     },
     "PartialTensorADRRoot_default": {
-      "expected": "StartRod Sænket a Grundlinje x Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Sænket a Grundlinje x Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorADRRoot_brief": {
-      "expected": "StartRod Sænket a Basis x Hævet d Basis r SlutRot"
+      "expected": "StartRod Sænket a Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorADRRoot_sbrief": {
-      "expected": "Rod Sænket a Basis x Hævet d Basis r SlutRot"
+      "expected": "Rod Sænket a Basis x Hævet d Basis r SlutRod"
     },
     "PartialTensorADFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Grundlinje x Hævet d Grundlinje Slut Brøk r"
@@ -550,22 +550,22 @@
       "expected": "Sænket a Basis x Sænket c Basis r"
     },
     "PartialTensorACRootR_default": {
-      "expected": "StartRod Sænket a Grundlinje x Sænket c Grundlinje SlutRot r"
+      "expected": "StartRod Sænket a Grundlinje x Sænket c Grundlinje SlutRod r"
     },
     "PartialTensorACRootR_brief": {
-      "expected": "StartRod Sænket a Basis x Sænket c Basis SlutRot r"
+      "expected": "StartRod Sænket a Basis x Sænket c Basis SlutRod r"
     },
     "PartialTensorACRootR_sbrief": {
-      "expected": "Rod Sænket a Basis x Sænket c Basis SlutRot r"
+      "expected": "Rod Sænket a Basis x Sænket c Basis SlutRod r"
     },
     "PartialTensorACRRoot_default": {
-      "expected": "StartRod Sænket a Grundlinje x Sænket c Grundlinje r SlutRot"
+      "expected": "StartRod Sænket a Grundlinje x Sænket c Grundlinje r SlutRod"
     },
     "PartialTensorACRRoot_brief": {
-      "expected": "StartRod Sænket a Basis x Sænket c Basis r SlutRot"
+      "expected": "StartRod Sænket a Basis x Sænket c Basis r SlutRod"
     },
     "PartialTensorACRRoot_sbrief": {
-      "expected": "Rod Sænket a Basis x Sænket c Basis r SlutRot"
+      "expected": "Rod Sænket a Basis x Sænket c Basis r SlutRod"
     },
     "PartialTensorACFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Grundlinje x Sænket c Grundlinje Slut Brøk r"
@@ -604,22 +604,22 @@
       "expected": "Sænket a Basis x Sænket c Hævet d Basis r"
     },
     "PartialTensorACDRootR_default": {
-      "expected": "StartRod Sænket a Grundlinje x Sænket c Hævet d Grundlinje SlutRot r"
+      "expected": "StartRod Sænket a Grundlinje x Sænket c Hævet d Grundlinje SlutRod r"
     },
     "PartialTensorACDRootR_brief": {
-      "expected": "StartRod Sænket a Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "StartRod Sænket a Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorACDRootR_sbrief": {
-      "expected": "Rod Sænket a Basis x Sænket c Hævet d Basis SlutRot r"
+      "expected": "Rod Sænket a Basis x Sænket c Hævet d Basis SlutRod r"
     },
     "PartialTensorACDRRoot_default": {
-      "expected": "StartRod Sænket a Grundlinje x Sænket c Hævet d Grundlinje r SlutRot"
+      "expected": "StartRod Sænket a Grundlinje x Sænket c Hævet d Grundlinje r SlutRod"
     },
     "PartialTensorACDRRoot_brief": {
-      "expected": "StartRod Sænket a Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "StartRod Sænket a Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorACDRRoot_sbrief": {
-      "expected": "Rod Sænket a Basis x Sænket c Hævet d Basis r SlutRot"
+      "expected": "Rod Sænket a Basis x Sænket c Hævet d Basis r SlutRod"
     },
     "PartialTensorACDFracR_default": {
       "expected": "Start Brøk 1 Over Sænket a Grundlinje x Sænket c Hævet d Grundlinje Slut Brøk r"
