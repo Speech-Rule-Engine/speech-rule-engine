@@ -70,7 +70,7 @@
     "key": "002B",
     "mappings": {
       "default": {
-        "default": "plustegn"
+        "default": "plus"
       }
     }
   },
@@ -86,7 +86,7 @@
     "key": "002D",
     "mappings": {
       "default": {
-        "default": "minustegn"
+        "default": "minus"
       }
     }
   },
@@ -134,7 +134,7 @@
     "key": "003D",
     "mappings": {
       "default": {
-        "default": "lig med"
+        "default": "er lig med"
       }
     }
   },
@@ -262,7 +262,7 @@
     "key": "00A7",
     "mappings": {
       "default": {
-        "default": "paragraf tegn"
+        "default": "paragraftegn"
       }
     }
   },
@@ -278,7 +278,7 @@
     "key": "00A9",
     "mappings": {
       "default": {
-        "default": "kopieringstegn"
+        "default": "copyrighttegn"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "00B6",
     "mappings": {
       "default": {
-        "default": "paragraf tegn"
+        "default": "afsnitstegn"
       }
     }
   },
@@ -550,7 +550,7 @@
     "key": "2018",
     "mappings": {
       "default": {
-        "default": "venstre citat tegn"
+        "default": "venstre enkelt anførselstegn"
       }
     }
   },
@@ -558,7 +558,7 @@
     "key": "2019",
     "mappings": {
       "default": {
-        "default": "højre citat tegn"
+        "default": "højre enkelt anførselstegn"
       }
     }
   },
@@ -582,7 +582,7 @@
     "key": "201C",
     "mappings": {
       "default": {
-        "default": "venstre citat tegn"
+        "default": "venstre anførselstegn"
       }
     }
   },
@@ -590,7 +590,7 @@
     "key": "201D",
     "mappings": {
       "default": {
-        "default": "højre citat tegn"
+        "default": "højre anførselstegn"
       }
     }
   },
@@ -678,7 +678,7 @@
     "key": "2030",
     "mappings": {
       "default": {
-        "default": "promille tegn"
+        "default": "promille"
       }
     }
   },
@@ -686,7 +686,7 @@
     "key": "2031",
     "mappings": {
       "default": {
-        "default": "per ti tusinde tegn"
+        "default": "per titusinde"
       }
     }
   },
@@ -1278,7 +1278,7 @@
     "key": "2212",
     "mappings": {
       "default": {
-        "default": "minustegn"
+        "default": "minus"
       }
     }
   },
@@ -2702,7 +2702,7 @@
     "key": "22C5",
     "mappings": {
       "default": {
-        "default": "prik"
+        "default": "gange"
       }
     }
   },
@@ -6542,7 +6542,7 @@
     "key": "FF02",
     "mappings": {
       "default": {
-        "default": "spørgsmålstegn"
+        "default": "anførselstegn"
       }
     }
   },
