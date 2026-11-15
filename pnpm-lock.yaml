@@ -2334,8 +2334,8 @@ packages:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  node-forge@1.4.0:
-    resolution: {integrity: sha512-LarFH0+6VfriEhqMMcLX2F7SwSXeWwnEAJEsYm5QKWchiVYVvJyV9v7UDvUv+w5HO23ZpQTXDv/GxdDdMyOuoQ==}
+  node-forge@1.4.3:
+    resolution: {integrity: sha512-P6wzfh6t70avmV8FrVEAd/36sOPJQ+hkaJVX1Laap9J/77m7M0eyozDvc8SwnDf4P7MP94gwbAAo0rg3YVXT+g==}
     engines: {node: '>= 6.13.0'}
 
   node-int64@0.4.0:
@@ -4788,7 +4788,7 @@ snapshots:
       google-auth-library: 10.6.2(supports-color@8.1.1)
       jsonwebtoken: 9.0.3
       jwks-rsa: 3.2.2(supports-color@8.1.1)
-      node-forge: 1.4.0
+      node-forge: 1.4.3
       uuid: 11.1.0
     optionalDependencies:
       '@google-cloud/firestore': 7.11.6(supports-color@8.1.1)
@@ -4827,8 +4827,7 @@ snapshots:
 
   fs.realpath@1.0.0: {}
 
-  fsevents@2.3.2:
-    optional: true
+  fsevents@2.3.2: {}
 
   fsevents@2.3.3:
     optional: true
@@ -5718,7 +5717,7 @@ snapshots:
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
 
-  node-forge@1.4.0: {}
+  node-forge@1.4.3: {}
 
   node-int64@0.4.0: {}
 
